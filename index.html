@@ -2,6 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 <meta name="viewport" content="initial-scale=0.6, user-scalable=no">
+<title>Camping Cecilia</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5"></script>
 <!--<script src="vue.js"></script>-->
@@ -13,8 +14,8 @@
     --secondary-color: #536390;
     --font-color: #424242;
     --bg-color: #fff;
-    --search-primary-color:#c9c9c9;
-    --search-border-color: #424242;
+    --search-primary-color:#f1f1f1;
+    --search-border-color: #666666;
     --colore-check-eroi:green;
 }
 
@@ -216,29 +217,55 @@ span.heroImgList {
   
   
 .search_hero_area {
+  position:relative;
+  display:inline;
+  text-align: center;
+  padding-right: 5%;
+
 }
 .search_hero_filter {
-  background-color: var(--search-primary-color); /* Green */
+  background-color: var(--search-primary-color); /*  */
   border: none;
   text-align: center;
+  font-size:20px;
   color: var(--font-color);
   width: 50px;
   height: 50px;
-  padding: 15px 8px;
+  padding: 10px 8px;
   text-align: center;
   text-decoration: none;
-  position: static;
+  position: relative;
+  top:0px;
   display: inline-block;
   font-size: 10px;
   border-style: ridge;
   border-width: thin;
   border-color: var(--search-border-color);
+  vertical-align: top;
 } 
-  
+.search_hero_filter div { /* per il testo dei tasti */
+  text-align: center;
+  vertical-align: center;
+  font-size:18px;
+  max-height:20px;
+  height:100%;
+}
+.search_hero_filter input { /* Casella di testo */
+  text-align: center;
+  font-size:20px;
+}
+.search_hero_filter img { /* per le immagini dei tasti */
+  text-align: center;
+  height:70%;
+}
+.search_hero_filter.active { /* tasto premuto*/
+  background-color: var(--search-border-color);
+  color: white;
+} 
 
 .box_advanced_settings {
 	background: var(--search-primary-color);
-  color: var(--font-color);
+        color: var(--font-color);
 	border-radius: 15px;
 }
 
@@ -430,21 +457,96 @@ span.heroImgList {
   
 </style>
 </head>
-<body>
+<body onload="app.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'})">
   <div id="app"><!-- vue.js -->
     <div id="welcome" style="display: '';">
-        <h2>Benvenuto su Epic 7 Camp Simulator<br><font style="color:red;">Modalità offline</font></h2>
+        <h2> __USERNAME_VALUE__ benvenuto su Epic 7 Camp Simulator</h2>
     </div>
     <div id="add_window" style="display:none;">
-      <h2>Aggiungi <input style="padding-top: 7px;padding-bottom: 7px;width:250px;" type="text" id="inputInTuttiGliEroi" onkeyup="cercaEroe('lista_hero_disponibili')" placeholder="Cerca eroe..." title="Type in a name"></h2>
-      
+      <h2><span style="position:relative;top:10px;vertical-align: middle">Aggiungi </span><input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" placeholder="Cerca eroe..." title="Type in a name"></h2>
+      <!--<h2>Aggiungi <input style="padding-top: 7px;padding-bottom: 7px;width:250px;" type="text" id="inputInTuttiGliEroi" onkeyup="cercaEroe('lista_hero_disponibili')" placeholder="Cerca eroe..." title="Type in a name"></h2>
+      -->
+       <!-- Pulsanti filtro eroi -->
+      <div style="display:inline-block;width:100%;height:100%;">
+        <div class="search_hero_area" style="" id="filter_all_rarity">
+          <button class="search_hero_filter active" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="3">
+            <div><i>3</i><img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/star.png" /></div>
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="4">
+            <div><i>4</i><img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/star.png" /></div>
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="5">
+            <div><i>5</i><img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/star.png" /></div>
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter active" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="fire">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Fire.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="ice">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Ice.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="earth">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Earth.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="light">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Light.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="dark">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Dark.png">
+          </button>
+        </div>
+        <br><br>
+        <div class="search_hero_area">
+          <button class="search_hero_filter active" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="knight">
+            <!-- <span>knight</span> -->
+          <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Knight.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="warrior">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Warrior.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="thief">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Thief.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="ranger">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Ranger.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="mage">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Mage.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="soul-weaver">
+            <img src="https://epic7x.com/wp-content/themes/epic-seven/assets/img/Soul%20Weaver.png">
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter" name="filter_gia_aggiunti" onclick=app.filtroTuttiGliEroi(this) value="false">
+            <div style="max-height:20px;"><i class="fa fa-eye"></i></div>
+          </button><!--
+          --><button class="search_hero_filter active" name="filter_gia_aggiunti" onclick=app.filtroTuttiGliEroi(this) value="true"> <!-- di default nascondi eroi già aggiunti -->
+            <div style="max-height:20px;"><i class="fa fa-eye-slash"></i></div>
+          </button>
+        </div>
+      </div>
+      <!-- fine pulsanti filtro eroi -->
+
+
+
         <table id="lista_hero_disponibili">
           <tr>
             <td>
               <span v-for="key in displayList" class="heroImgList">
-                <!--<div class="fa fa-check-circle top-left" v-bind:style="'font-size:38px;color:green;display:' + isInTeam(key.name)"></div>-->
-                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + key.id + '_s.png'" style="width:70px" v-on:click="app.addHero(key.name)" v-bind:alt="key.name" v-bind:titolo="key.name"/>
-                <div class="top-left" v-bind:style="'font-size:38px;display:' + isInTeam(key.name)">✔</div>
+                <!--<div class="fa fa-check-circle top-left" v-bind:style="'font-size:38px;color:green;display:' + isInTeam(thisHeroData(key).name)"></div>-->
+                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px" v-on:click="addHero(thisHeroData(key).name)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
+                <div class="top-left" v-bind:style="'font-size:38px;display:' + isInTeam(thisHeroData(key).name)">✔</div>
               </span>
             </td>
           </tr>
@@ -569,8 +671,8 @@ span.heroImgList {
     <div id="toolbar" class="icon-bar">
       <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
       <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil" aria-hidden="true"></i></span>
-      <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')">&#9876;</span>
-      <span id="icon-bar_calculate_window" onclick="app.calcolaRisultati(); setWindow('calculate_window');" style="height:100%;font-size:30px;">
+      <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')" style="height:100%;font-size:31px;">&#9876;</span>
+      <span id="icon-bar_calculate_window" onclick="app.calcolaRisultati(); setWindow('calculate_window');" style="height:100%;font-size:36px;max-height:65.5px;">
         Calcola
         <!--<i class="fa fa-free-code-camp" aria-hidden="true"></i>Calcola-->
       </span>
@@ -641,7 +743,8 @@ span.heroImgList {
           break;
       };  
     };
-    
+
+
     function logout() {
         $.ajax({
           type: 'POST',
@@ -663,7 +766,7 @@ span.heroImgList {
                   function cercaEroe(table) {
                     var input, filter, table, tr, hero1, i, txtValue;
                     if (table == "lista_hero_disponibili") input = document.getElementById("inputInTuttiGliEroi")
-		                else if (table == "myHeroes") input = document.getElementById("inputInMyHeroes");
+		    else if (table == "myHeroes") input = document.getElementById("inputInMyHeroes");
                     filter = input.value.toLowerCase().replace(/ +/g," ");
                     table = document.getElementById(table);
                     hero1 = table.getElementsByTagName("span");
@@ -693,7 +796,7 @@ span.heroImgList {
               heroList: HeroDB,
               buffList: {"stic_debuf_impossible":"Immunity","stic_att_up":"Attack up","stic_att_up2":"Attack up (Greater)","stic_def_up":"Defense up","stic_speed_up":"Speed up","stic_dodge_up":"Evasion","stic_protect":"Barrier","stic_cri_up":"Crit chance up","stic_cridmg_up":"Crit damage up","stic_crires_up":"Crit Resistance","stic_invincible":"Invincibility","stic_endure":"Skill nullifier","stic_heal":"Continuous Healing","stic_hide":"Stealth","stic_immortality":"Immortality","stic_reflect":"Reflect","stic_counter":"Counter"},
               debuffList: {"stic_def_dn":"Def down","stic_speed_dn":"Speed down","stic_att_dn":"Attack down","stic_blind":"Blind","stic_dodge_dn":"Evasion down","stic_sign":"Target","stic_buf_impossible":"Unbuffable","stic_heal_impossible":"Unhealable","stic_stun":"Stun","stic_provoke":"Provoke","stic_nail":"Magic Nail","stic_silence":"Silence","stic_sleep":"Sleep","stic_blood":"Bleed","stic_dot":"Poison","stic_blaze":"Burn","stic_vampire":"Vampire","stic_bomb":"Bomb"},
-              displayList: HeroDB,
+              displayList: Object.keys(HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))}),
               myHeroesList: JSON.parse(heroesArray),
               locked: [],
               classe: [],
@@ -710,15 +813,19 @@ span.heroImgList {
           heroId: function (hero) {
             return this.heroList[hero].id;
           },
+	  thisHeroData: function(hero) {
+	    return this.heroList[hero]
+	  },
           capitalize: function(string) {
-              return string[0].toUpperCase() + string.slice(1).replace(/-/gi," "); 
-          },
+             return string[0].toUpperCase() + string.slice(1).replace(/-/gi," "); 
+      	  },
           updateUserData: function() { // aggiorna i dati sul server
             localStorage.setItem('Heroes', JSON.stringify(this.myHeroesList) );
           },
           addHero: function (hero) {
             if (!this.myHeroesList.includes(hero)) {
               this.myHeroesList.push(hero);
+	      this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
               app.updateUserData();
             }
           },
@@ -727,27 +834,56 @@ span.heroImgList {
 	    if (this.locked.includes(hero)) { // lock
 		this.locked.splice(this.locked.indexOf(hero), 1)
 	    };
+	    this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
             app.updateUserData();
           },
 	  isInTeam: function(hero) {
-            if (this.myHeroesList.includes(hero)) {
-              return ''
-            } else return "none";
+      		if (this.myHeroesList.includes(hero)) {
+        		return ''
+      		} else return "none";
 	  },
 	  isLocked: function(hero) {
-            if (this.locked.includes(hero)) {
-              return ""
-            } else return "none";
-	  },
-	  lockHero: function(hero) {
-            if (!this.locked.includes(hero)) { // lock
-              if (this.locked.length < 4) {
-		this.locked.push(hero);
-              } else {}
+      		if (this.locked.includes(hero)) {
+        		return ""
+      		} else return "none";
+	   },
+   	   lockHero: function(hero) {
+   	   if (!this.locked.includes(hero)) { // lock
+ 	       if (this.locked.length < 4) {
+		      this.locked.push(hero);
+ 	       } else {}
 	    } else { // già locked -> sblocca
-		this.locked.splice(this.locked.indexOf(hero), 1)
+		    this.locked.splice(this.locked.indexOf(hero), 1)
 	    };
           },
+	  filtroTuttiGliEroi: function (button) { 
+		this.displayList = Object.keys(HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
+		var filtro = {};
+		if (button.className == "search_hero_filter") filtro["ricerca"] = document.getElementById("inputInTuttiGliEroi").value; // ottieni il testo digitato nella casella
+		if (filtro.ricerca == undefined) filtro.ricerca = "";
+		var pulsanti = document.getElementsByClassName(button.className);
+		for (var i = 0; i < pulsanti.length; i++) {
+			if (pulsanti[i].className.indexOf("active") != -1) {
+				filtro[pulsanti[i].name] = pulsanti[i].value;
+				if (pulsanti[i].name == button.name) pulsanti[i].className = button.className; // rimuove la class "active"
+			};
+		};
+		button.className += " active"; // attiva questo pulsante
+		filtro[button.name] = button.value; // attualizza il filtro
+		//imposta la nuova array da visualizzare
+		for (var i = 0; i < this.displayList.length;i++) {
+			if ((HeroDB[this.displayList[i]].classType != filtro.filter_class && filtro.filter_class != "*") || 
+			    (HeroDB[this.displayList[i]].element != filtro.filter_element && filtro.filter_element != "*") || 
+			    (HeroDB[this.displayList[i]].rarity != filtro.filter_rarity && filtro.filter_rarity != "*") ||
+			    (filtro.filter_gia_aggiunti == "true" && this.myHeroesList.includes(this.displayList[i])) ||
+			    (this.displayList[i].toLowerCase().indexOf(filtro.ricerca.toLowerCase()) == -1)
+			) {
+			   this.displayList.splice(this.displayList.indexOf(this.displayList[i]), 1);
+			   i--
+			};
+ 		};
+
+	  },
           nuovoCampSimulatorTeam2: function(inputTeam) {
             let pg1 = inputTeam[0];
             let pg2 = inputTeam[1];
