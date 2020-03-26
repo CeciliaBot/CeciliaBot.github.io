@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta name="viewport" content="initial-scale=0.6, user-scalable=no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5"></script>
+<!--<script src="vue.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --search-primary-color:#f1f1f1;
+    --search-border-color: #666666;
+    --colore-check-eroi:green;
+}
+
+  /* variabili del tema*/
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #A1AEBD;
+    --bg-color: #252B35;
+    --search-primary-color:#1e2126;
+    --search-border-color: #131417;
+    --colore-check-eroi:red;
+}
+  
+  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color); /* font color */
+}
+
+
+
+/* Full-width input fields */
+  
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button_login {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button_login:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.button_login_cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+  
+div.toolbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border: 3px solid #73AD21;
+}
+  
+span.heroImgList {
+    position: relative;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-weight: bold;
+    font-size:24px;
+    color: #221461;
+    /*The change*/
+    display:inline-block; /*or display:block;*/
+}
+.heroImgList:hover,
+.heroImgList:focus {
+  background-color:#ddd;
+  cursor: pointer;
+}
+.heroInTeam {
+  background-color:green;
+}
+  
+/* The Close Button (x) */
+.removeHero {
+  position: relative;
+  top: 0;
+  color: #A1AEBD;
+  font-size: 20px;
+  font-weight: bold;
+}
+.removeHero:hover,
+.removeHero:focus {
+  color: red;
+  cursor: pointer;
+}
+                  .center {
+                    max-width: 800px;
+                    margin: auto;
+                  }
+                  .topics {
+                    text-align:center; 
+                    font-family:sans-serif;
+                    font-size:16px
+                  }
+  
+  
+  
+.search_hero_area {
+  position:relative;
+  display:inline-block;
+  text-align: center;
+  padding-right: 5%;
+  padding-bottom: 18px;
+
+}
+.search_hero_filter {
+  background-color: var(--search-primary-color); /*  */
+  border: none;
+  text-align: center;
+  font-size:20px;
+  color: var(--font-color);
+  width: 50px;
+  height: 50px;
+  padding: 10px 8px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  top:0px;
+  display: inline-block;
+  font-size: 10px;
+  border-style: ridge;
+  border-width: thin;
+  border-color: var(--search-border-color);
+  vertical-align: top;
+} 
+.search_hero_filter div { /* per il testo dei tasti */
+  text-align: center;
+  vertical-align: center;
+  font-size:18px;
+  max-height:20px;
+  height:100%;
+}
+.search_hero_filter input { /* Casella di testo */
+  text-align: center;
+  font-size:20px;
+}
+.search_hero_filter img { /* per le immagini dei tasti */
+  text-align: center;
+  height:70%;
+}
+.search_hero_filter.active { /* tasto premuto*/
+  background-color: var(--search-border-color);
+  color: white;
+} 
+
+.box_advanced_settings {
+	background: var(--search-primary-color);
+  color: var(--font-color);
+	border-radius: 15px;
+}
+
+  
+  
+  
+  
+.icon-bar {
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #555;
+}
+
+.icon-bar span {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar span:hover {
+  background-color: #000;
+}
+
+.active-icon-bar {
+  background-color: #4CAF50;
+}
+  
+  
+  
+  
+                  /* dark mode old */
+                  /*body { 
+                    background-color: #252B35;
+                    color: #A1AEBD;
+                  }
+                  .light-mode {
+                    background-color: white;
+                    color: black;
+                  }
+                  */
+  
+                  .topics {
+                    text-align:center; 
+                    font-family:sans-serif;
+                    font-size:16px
+                  }
+
+
+
+
+                  .switch {
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 35px;
+                  }
+
+                  /* Hide default HTML checkbox */
+                  .switch input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                  }
+
+                  /* The slider */
+                  .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ccc;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                  }
+
+                  .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: white;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                  }
+
+                  input:checked + .slider {
+                    background-color: #2196F3;
+                  }
+
+                  input:focus + .slider {
+                    box-shadow: 0 0 1px #2196F3;
+                  }
+
+                  input:checked + .slider:before {
+                    -webkit-transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                  }
+
+                  /* Rounded sliders */
+                  .slider.round {
+                    border-radius: 34px;
+                  }
+
+                  .slider.round:before {
+                    border-radius: 50%;
+                  }
+
+  
+/* Lock icon */
+.top-right {
+  position: absolute;
+  top: 2px;
+  right: 7px;
+}
+.top-left {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  color: var(--colore-check-eroi);
+}
+.center_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ 
+  
+  
+.label {
+  padding: 12px;
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.label::before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked+.label {
+  border-color: #ddd;
+}
+
+:checked+.label::before {
+  content: "✓";
+  /*background-color: grey;*/
+  background-color: green;
+  transform: scale(1);
+}
+
+
+/* display as list */
+.displaylistTable {
+  width:100%;
+  max-width: 700px;
+  border-spacing:10px;
+}
+.displaylistTable tr {
+  padding: 20px;
+}
+.displayListTable td {
+  display:inline;
+}
+.displaylistTable tr div {
+  height: 110px;
+  width: 100%;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.displaylistTable tr img {
+   position:relative;
+   width:70px;
+   vertical-align: middle;
+   left:10px;
+   top:13px;
+}
+.displaylistTable tr span {
+  position:relative;
+  padding-left: 10px;
+  top:17px;
+}
+.displaylistTable tr:nth-child(odd) div {
+  background-color: var(--search-primary-color);
+  color: var(--font-color);
+  border-radius: 15px;
+}
+
+.displaylistTable tr div:hover {
+  background-color: var(--search-border-color);
+  color: white;
+  border-radius: 15px;
+}
+
+.displaylistTableIcons {
+  font-size:38px;
+  /*color: var(--colore-check-eroi);*/
+  float: right;
+  padding:10px;
+  position:relative;
+  top:35px;
+  right:20px;
+}
+
+.displaylistTableIcons:hover {
+  color: white;
+}
+
+</style>
+</head>
+<body onload="app.impostaLingua(); app.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes')">
+  <div id="app"><!-- vue.js -->
+    <div id="welcome" style="display: '';">
+        <h2>{{strings.messaggio_di_benvenuto}}<br><font color="red">Data by EpicSevenDB</font></h2>
+    </div>
+    <div id="add_window" style="display:none;">
+      <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} </span>
+	<input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" placeholder="Search..." title="Type in a name">
+          <div id="pulsanti_display_add_window" style="display:inline">
+          <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
+            <div><i class="fa fa-th-large"></i></div>
+          </button><!--
+          --><button class="search_hero_filter" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="list">
+            <div><i class="fa fa-th-list"></i></div>
+          </button>
+         </div>
+	</h2>
+       <!-- Pulsanti filtro eroi -->
+      <div style="display:inline-block;width:100%;height:100%;">
+        <div class="search_hero_area" id="filter_all_rarity">
+          <button class="search_hero_filter active" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="3">
+            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="4">
+            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="5">
+            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter active" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="fire">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="ice">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="wind">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="light">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="dark">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png">
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter active" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="knight">
+            <!-- <span>knight</span> -->
+          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="warrior">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="assassin">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="ranger">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="mage">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="manauser">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png">
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter" name="filter_gia_aggiunti" onclick=app.filtroTuttiGliEroi(this) value="false">
+            <div style="max-height:20px;"><i class="fa fa-eye"></i></div>
+          </button><!--
+          --><button class="search_hero_filter active" name="filter_gia_aggiunti" onclick=app.filtroTuttiGliEroi(this) value="true"> <!-- di default nascondi eroi già aggiunti -->
+            <div style="max-height:20px;"><i class="fa fa-eye-slash"></i></div>
+          </button>
+        </div>
+      </div>
+      <!-- fine pulsanti filtro eroi -->
+
+      <!-- display tutti gli eroi -->
+       <template v-if="displayStyle === 'grid'"> <!-- grid -->
+        <table id="lista_hero_disponibili">
+          <tr>
+            <td>
+              <span v-for="key in displayList" class="heroImgList">
+                <!--<div class="fa fa-check-circle top-left" v-bind:style="'font-size:38px;color:green;display:' + isInTeam(thisHeroData(key).name)"></div>-->
+                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px" v-on:click="addHero(thisHeroData(key).name)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
+                <div class="top-left" v-bind:style="'font-size:38px;display:' + isInTeam(thisHeroData(key).name)">✔</div>
+              </span>
+            </td>
+          </tr>
+         </table>
+	      </template>
+        <template v-else-if="displayStyle === 'list'">  <!-- Lista -->
+         <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
+          <tr v-for="key in displayList">
+            <td>
+              <div>
+                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key).name)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
+		            <span>{{ thisHeroData(key).name }}</span>
+		            <template v-if="isInTeam(thisHeroData(key).name) === 'none'">  <!-- già aggiunto -->
+                  <span v-on:click="addHero(thisHeroData(key).name)" class="fa fa-plus displaylistTableIcons">   </span>
+                </template>
+		            <template v-else> <!-- aggiungi -->
+                  <span class="fa fa-check-circle displaylistTableIcons"></span>
+                </template>
+              </div>
+            </td>
+          </tr>
+         </table>
+        </template>
+
+
+	<br><br><br><br> <!-- -->
+    </div>
+    <div id="manage_window" style="display:none;">
+      <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.i_tuoi_eroi}}          <font style="position:relative;top:0;color:red;font-size:12px;">({{rosterLength}})</font></span>
+          <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInMyHeroes" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" placeholder="Search..." title="Type in a name">
+          <div id = "pulsanti_display_manage_window" style="display:inline">
+          <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="grid">
+            <div><i class="fa fa-th-large"></i></div>
+          </button><!--
+          --><button class="search_hero_filter" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="list">
+            <div><i class="fa fa-th-list"></i></div>
+          </button>
+          </div>
+	</h2>
+       <!-- Pulsanti filtro eroi -->
+      <div style="display:inline-block;width:100%;height:100%;">
+        <div class="search_hero_area" id="filter_all_rarity">
+          <button class="search_hero_filter active" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="3">
+            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="4">
+            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="5">
+            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter active" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="fire">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="ice">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="wind">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="light">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="dark">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png">
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter active" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
+            <div>All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="knight">
+            <!-- <span>knight</span> -->
+          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="warrior">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="assassin">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="ranger">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="mage">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png">
+          </button><!-- 
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="manauser">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png">
+          </button>
+        </div>
+        <div class="search_hero_area">
+          <button class="search_hero_filter active" name="filter_locked_only" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="false">
+            <div style="max-height:20px;">All</div>
+          </button><!--
+          --><button class="search_hero_filter" name="filter_locked_only" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="true"> <!-- di default nascondi eroi già aggiunti -->
+            <div style="max-height:20px;"><i class="fa fa-lock"></i></div>
+          </button>
+        </div>
+      </div>
+      <!-- fine pulsanti filtro eroi -->
+
+
+       <template v-if="displayStyle === 'grid'">  <!-- grid -->
+        <table id="myHeroes">
+          <tr>
+            <td>
+              <span v-for="key in displayMyHeroes" class="heroImgList">
+                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(key) + '_s.png'" style="width:70px" v-on:click="app.lockHero(key)" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(key)" class="removeHero" v-bind:title="'Remove ' + key">×</span>
+		            <div class="top-right" v-bind:style="'display:' + isLocked(key)"  v-on:click="app.lockHero(key)">&#128274;</div>
+              </span>
+            </td>
+          </tr>
+      </table>
+      </template>
+        <template v-else-if="displayStyle === 'list'">  <!-- Lista -->
+         <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
+          <tr v-for="key in displayMyHeroes">
+            <td>
+              <div>
+                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key).name)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
+		             <span>{{ thisHeroData(key).name }}</span>
+                 <span v-on:click="app.removeHero(thisHeroData(key).name)" class="fa fa-trash displaylistTableIcons" aria-hidden="true"></span>
+		             <template v-if="isLocked(thisHeroData(key).name) === 'none'">  <!-- non lockato -->
+                   <span class="fa fa-unlock-alt displaylistTableIcons" v-on:click="app.lockHero(key)"></span>
+                 </template>
+		             <template v-else> <!-- simbolo lock -->
+                   <span class="fa fa-lock displaylistTableIcons" style="color:blue;" v-on:click="app.lockHero(key)"></span>
+                 </template>
+              </div>
+            </td>
+          </tr>
+         </table>
+        </template>
+
+
+
+      <br><br><br><br> <!-- -->
+    </div>
+  <div id="advanced_window" style="display:none;"> <!-- Watcher aggiorna automaticamente i dati -->
+	  <h2>{{strings.impostazioni_avanzate}}</h2>
+		<input type="checkbox" id="AoE" name="AoE" value="AoE" onclick="app.aggiornaImposatazioniAvanzate()">
+		<label for="AoE">{{strings.deve_contenere_AoE}}</label><br>
+		<input type="checkbox" id="noS1debuffs" name="noS1debuffs" value="noS1debuffs" onclick="app.aggiornaImposatazioniAvanzate()">
+		<label for="noS1debuffs">{{strings.no_s1_debuffs}}</label><br>
+		<input type="checkbox" id="noDebuffs" name="noDebuffs" value="noDebuffs" onclick="app.aggiornaImposatazioniAvanzate()">
+		<label for="noDebuffs">{{strings.no_debuffs}}</label><br><br>
+    <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
+      <center>{{strings.classe}}</center>
+        <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Knight</p></label>
+
+        <input type="checkbox" id="checkbox_thief" name="classe" value="assassin" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Thief</p></label>
+
+        <input type="checkbox" id="checkbox_warrior" name="classe" value="warrior" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Warrior</p></label>
+      
+        <input type="checkbox" id="checkbox_ranger" name="classe" value="ranger" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Ranger</p></label>
+      
+        <input type="checkbox" id="checkbox_mage" name="classe" value="mage" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Mage</p></label>
+      
+        <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-35px;text-align:center;">Soul Weaver</p></label>
+    </div>
+    <br><br>
+    <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
+      <center>{{strings.elemento}}</center>
+        <input type="checkbox" id="checkbox_fire" name="elemento" value="fire" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_fire" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Fire</p></label>
+
+        <input type="checkbox" id="checkbox_ice" name="elemento" value="ice" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_ice" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Ice</p></label>
+
+        <input type="checkbox" id="checkbox_earth" name="elemento" value="wind" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_earth" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Earth</p></label>
+      
+        <input type="checkbox" id="checkbox_light" name="elemento" value="light" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_light" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Light</p></label>
+      
+        <input type="checkbox" id="checkbox_dark" name="elemento" value="dark" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label for="checkbox_dark" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Dark</p></label>
+      
+    </div>
+    <br><br>
+    <div id="advanced_buff" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
+      <center>Buff:</center>
+      <span v-for="(value,key) in buffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:200px;padding-bottom:10px;">
+        <input type="checkbox" v-bind:id="'checkbox_'+ key" name="buff" v-bind:value="value.id" style="position:relative;top:0px;display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0px;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" /></label>
+        <p>{{value.name}}</p>
+      </span>
+    </div>
+    <br><br>
+    <div id="advanced_debuff" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
+      <center>Debuff:</center>
+      <span v-for="(value,key) in debuffList" style="display:inline-block;text-align:center;padding-bottom:10px;">
+        <input type="checkbox" v-bind:id="'checkbox_'+ key" name="debuff" v-bind:value="value.id" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
+        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" /></label>
+        <p style="position:relative;">{{value.name}}</p>
+      </span>
+    </div>
+    <br><br><br><br><br> <!-- -->
+  </div>
+  <div id="calculate_window" class="center" style="display:none;">
+        <h2>{{strings.risultati}}</h2>
+        <table>
+          <tbody>
+            <th></th>
+            <th colspan="4">Team</th>
+            <th>Topics</th>
+            <th>Morale</th>
+          </tbody>
+          <tbody>
+            <tr v-for="(item, index) in risultati">
+              <td width="4%" style="padding-top: 30px;padding-bottom: 30px;">{{index+1}}</td>
+              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[0]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/></td>
+              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[1]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
+              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[2]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
+              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[3]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
+              <td class="topics"><b>{{item.migliorPG1}}</b>: <i>{{capitalize(item.opzioneMigliore1)}}</i><br><b>{{item.migliorPG2}}</b>: <i>{{capitalize(item.opzioneMigliore2)}}</i></td>
+              <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
+            </tr>
+          </tbody>
+        </table>
+	<br><br><br><br> <!-- -->
+    </div>
+    <div id="settings_window" style="display:none;">
+      <h2>{{strings.impostazioni}}</h2><br>
+      <span style="position:relative;top:8px;">Night mode: </span>
+                                <label class="switch" style="position: relative">
+                                  <input type="checkbox" id="darkModeCheck" name="darkModeCheck" onchange="toggleCheck()">
+                                  <span class="slider round"></span>
+                                </label>
+    </div>
+    <div id="toolbar" class="icon-bar"> <!-- nascondi toolbar durante il calcolo -->
+      <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
+      <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil" aria-hidden="true"></i></span>
+      <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')"><!--&#9876;--><i class="fa fa-book" aria-hidden="true"></i></span>
+      <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="height:100%;font-size:36px;max-height:65.5px;">
+        <!--Calcola-->
+        <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" style="position:relative;top:-5px;margin-bottom:-10px;height:40px;" />
+      </span>
+      <span id="icon-bar_settings_window" onclick="setWindow('settings_window')"><!--&#9881;--><i class="fa fa-cog"></i></span>
+    </div>
+     <!-- Mostra durante il calcolo -->
+      <div  v-show="isLoadingResults" id="loading_camp_results">
+        <div class="center_img box_advanced_settings" style="height:200px;width:200px">
+          <div class="center_img" style="text-align:center;"> 
+            <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px"/>
+            <!--<i class="fa fa-cog fa-spin" style="font-size:30px"></i><br> -->
+            {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
+          </div>
+        </div>
+      </div>
+    <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="height:100%;width:100%"> <!-- non è neccessario settare inizializzaione = true -->
+      <div class="center_img" style="text-align:center;"> 
+        <i class="fa fa-cog fa-spin" style="font-size:70px"></i>
+        <div>
+          Loading...
+        </div>
+      </div>
+    </div>
+  </div><!-- div id = app -->
+
+
+  <script>
+
+    function toggleCheck() {
+        if (document.getElementById("darkModeCheck").checked === true) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); // salva preferenza per future visite
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light'); // salva preferenza per future visite
+        }    
+    };
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+            var checkBoxes = $("input[name=darkModeCheck]");
+            checkBoxes.attr('checked', true);
+        }
+    }
+    
+    
+    
+    function setWindow(current) {
+      document.getElementById('welcome').style.display='none';
+      document.getElementById('add_window').style.display='none';
+      document.getElementById('manage_window').style.display='none';
+      document.getElementById('advanced_window').style.display='none';
+      document.getElementById('calculate_window').style.display='none';
+      document.getElementById('settings_window').style.display='none';
+      //toolbar
+      document.getElementById("icon-bar_add_window").className = "";
+      document.getElementById("icon-bar_manage_window").className = "";
+      document.getElementById("icon-bar_advanced_window").className = "";
+      document.getElementById("icon-bar_calculate_window").className = "";
+      document.getElementById("icon-bar_settings_window").className = "";
+                              
+      switch (current) {
+        case 'add_window':
+          document.getElementById('add_window').style.display='block';
+          document.getElementById("icon-bar_add_window").className = "active-icon-bar";
+          break;
+        case 'manage_window':
+          document.getElementById('manage_window').style.display='block';
+          document.getElementById("icon-bar_manage_window").className = "active-icon-bar";
+          break;
+        case 'advanced_window':
+          document.getElementById('advanced_window').style.display='block';
+          document.getElementById("icon-bar_advanced_window").className = "active-icon-bar";
+          break;
+        case 'calculate_window':
+          document.getElementById('calculate_window').style.display='block';
+          document.getElementById("icon-bar_calculate_window").className = "active-icon-bar";
+          break;
+        case 'settings_window':
+          document.getElementById('settings_window').style.display='block';
+          document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
+          break;
+      };  
+    };
+
+
+    function logout() {
+        $.ajax({
+          type: 'POST',
+          contentType: 'application/json',
+          url: "logout",
+          data: "",
+          success: function(html) {
+            window.location.href='/'
+          },
+          error: function(html) {
+            // in caso di errore
+          }
+        });
+        event.preventDefault();
+    };
+
+    var HeroDB = {"Aramintha":{"id":"c1048","_id":"aramintha","name":"Aramintha","rarity":5,"role":"mage","attribute":"fire","camping":{"personalities":["Alcoholic","Extrovert"],"topics":["Food Story","Complain"],"values":{"Criticism":2,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":5,"Heroic Cheer":6,"Sad Memory":0,"Joyful Memory":5,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":4,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":5,"Complain":2,"Belief":4,"Interesting Story":5}},"common":[],"buffs":["1"],"debuffs":["31","27","31","31","20"],"skills":[{"common":[],"buff":[],"debuff":["31"]},{"common":[],"buff":["1"],"debuff":["27","31"]},{"common":[],"buff":[],"debuff":["31","20"]}]},"Ambitious Tywin":{"id":"c2042","_id":"ambitious-tywin","name":"Ambitious Tywin","rarity":5,"role":"knight","attribute":"light","camping":{"personalities":["Envious","Selfish"],"topics":["Self-Indulgent","Food Story"],"values":{"Criticism":6,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":3,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":1,"Unique Comment":1,"Self-Indulgent":0,"Occult":2,"Myth":4,"Bizarre Story":0,"Food Story":2,"Horror Story":3,"Gossip":3,"Dream":3,"Advice":0,"Complain":1,"Belief":6,"Interesting Story":1}},"common":[{"_id":"56","id":"56","icon":null,"type":"common","name":"Soul Steal","effect":"Removes Soul from the target. This effect is unaffected by Hit or Effect Resistance."}],"buffs":[],"debuffs":["25","19"],"skills":[{"common":["56"],"buff":[],"debuff":["25"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["19"]}]},"Charles":{"id":"c1027","_id":"charles","name":"Charles","rarity":5,"role":"knight","attribute":"wind","camping":{"personalities":["Loyal","Religious"],"topics":["Joyful Memory","Dream"],"values":{"Criticism":0,"Reality Check":1,"Heroic Tale":3,"Comforting Cheer":6,"Cute Cheer":1,"Heroic Cheer":7,"Sad Memory":7,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":4,"Complain":1,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["1"],"debuffs":["17"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]}]},"Basar":{"id":"c1053","_id":"basar","name":"Basar","rarity":5,"role":"mage","attribute":"wind","camping":{"personalities":["Realistic","Extrovert"],"topics":["Heroic Tale","Reality Check"],"values":{"Criticism":3,"Reality Check":3,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":1,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":1,"Horror Story":5,"Gossip":3,"Dream":0,"Advice":4,"Complain":0,"Belief":3,"Interesting Story":1}},"common":[{"_id":"36","id":"36","icon":null,"type":"common","name":"Transfer","effect":"Transfers debuffs from the caster to the target."}],"buffs":[],"debuffs":["c1053_r","22","17"],"skills":[{"common":["36"],"buff":[],"debuff":["c1053_r"]},{"common":[],"buff":[],"debuff":["22","17"]},{"common":[],"buff":[],"debuff":[]}]},"Baal & Sezan":{"id":"c1015","_id":"baal-sezan","name":"Baal & Sezan","rarity":5,"role":"mage","attribute":"fire","camping":{"personalities":["Psychopath","Loyal"],"topics":["Joyful Memory","Bizarre Story"],"values":{"Criticism":2,"Reality Check":3,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":1,"Heroic Cheer":2,"Sad Memory":7,"Joyful Memory":2,"Happy Memory":0,"Unique Comment":5,"Self-Indulgent":0,"Occult":1,"Myth":0,"Bizarre Story":4,"Food Story":0,"Horror Story":5,"Gossip":0,"Dream":3,"Advice":5,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["24","19","27"],"skills":[{"common":[],"buff":[],"debuff":["24"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["19","27"]}]},"Judge Kise":{"id":"c2006","_id":"judge-kise","name":"Judge Kise","rarity":5,"role":"warrior","attribute":"light","camping":{"personalities":["Realistic","Cool-Headed"],"topics":["Comforting Cheer","Sad Memory"],"values":{"Criticism":5,"Reality Check":5,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":2,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":0,"Horror Story":2,"Gossip":1,"Dream":0,"Advice":2,"Complain":0,"Belief":2,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Fallen Cecilia":{"id":"c2002","_id":"fallen-cecilia","name":"Fallen Cecilia","rarity":5,"role":"knight","attribute":"dark","camping":{"personalities":["Envious","Traumatized"],"topics":["Horror Story","Food Story"],"values":{"Criticism":6,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":3,"Sad Memory":2,"Joyful Memory":4,"Happy Memory":1,"Unique Comment":4,"Self-Indulgent":3,"Occult":5,"Myth":4,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":8,"Interesting Story":2}},"common":[],"buffs":["5","46"],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":["46"],"debuff":[]}]},"Kise":{"id":"c1006","_id":"kise","name":"Kise","rarity":5,"role":"assassin","attribute":"ice","camping":{"personalities":["Natural","Cool-Headed"],"topics":["Sad Memory","Reality Check"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":2,"Heroic Cheer":2,"Sad Memory":2,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":2,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":1,"Dream":2,"Advice":1,"Complain":1,"Belief":1,"Interesting Story":2}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."}],"buffs":["15","15","5"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":["34"],"buff":["15"],"debuff":[]},{"common":[],"buff":["15","5"],"debuff":[]}]},"Elena":{"id":"c1091","_id":"elena","name":"Elena","rarity":5,"role":"manauser","attribute":"ice","camping":{"personalities":["Religious","Pessimistic"],"topics":["Advice","Myth"],"values":{"Criticism":0,"Reality Check":3,"Heroic Tale":0,"Comforting Cheer":8,"Cute Cheer":0,"Heroic Cheer":1,"Sad Memory":2,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":0,"Occult":1,"Myth":0,"Bizarre Story":1,"Food Story":0,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":2,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["6"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["6"],"debuff":[]}]},"Charlotte":{"id":"c1009","_id":"charlotte","name":"Charlotte","rarity":5,"role":"knight","attribute":"fire","camping":{"personalities":["Arrogant","Heroism"],"topics":["Heroic Cheer","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":8,"Comforting Cheer":6,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":0,"Occult":3,"Myth":8,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":5,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["1","2"],"debuffs":["17","27"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":["1","2"],"debuff":[]},{"common":[],"buff":[],"debuff":["27"]}]},"Faithless Lidica":{"id":"c2046","_id":"faithless-lidica","name":"Faithless Lidica","rarity":5,"role":"ranger","attribute":"light","camping":{"personalities":["Individualistic","Traumatized"],"topics":["Sad Memory","Reality Check"],"values":{"Criticism":5,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":2,"Heroic Cheer":2,"Sad Memory":4,"Joyful Memory":6,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":1,"Occult":3,"Myth":0,"Bizarre Story":0,"Food Story":1,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":0,"Complain":0,"Belief":6,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Tamarinne":{"id":"c1067","_id":"tamarinne","name":"Tamarinne","rarity":5,"role":"manauser","attribute":"fire","camping":{"personalities":["Introvert","Hard Worker"],"topics":["Cute Cheer","Complain"],"values":{"Criticism":1,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":8,"Cute Cheer":5,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":5,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":2,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":5,"Complain":0,"Belief":4,"Interesting Story":3}},"common":[{"_id":"33","id":"33","icon":null,"type":"common","name":"Dual Attack","effect":"Chance to attack an enemy with basic skill after an ally has attacked them with basic skill, unless unable to act. Cannot be triggered by counterattacks."}],"buffs":["1","43"],"debuffs":[],"skills":[{"common":["33"],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]},{"common":[],"buff":["43"],"debuff":[]}]},"Ravi":{"id":"c1019","_id":"ravi","name":"Ravi","rarity":5,"role":"warrior","attribute":"fire","camping":{"personalities":["Arrogant","Psychopath"],"topics":["Self-Indulgent","Food Story"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":0,"Sad Memory":4,"Joyful Memory":0,"Happy Memory":0,"Unique Comment":5,"Self-Indulgent":0,"Occult":6,"Myth":2,"Bizarre Story":2,"Food Story":0,"Horror Story":3,"Gossip":0,"Dream":2,"Advice":6,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Lilias":{"id":"c1089","_id":"lilias","name":"Lilias","rarity":5,"role":"knight","attribute":"fire","camping":{"personalities":["Extrovert","Envious"],"topics":["Heroic Cheer","Myth"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":5,"Heroic Cheer":6,"Sad Memory":0,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":4,"Occult":3,"Myth":5,"Bizarre Story":2,"Food Story":3,"Horror Story":3,"Gossip":2,"Dream":5,"Advice":0,"Complain":0,"Belief":4,"Interesting Story":3}},"common":[{"_id":"33","id":"33","icon":null,"type":"common","name":"Dual Attack","effect":"Chance to attack an enemy with basic skill after an ally has attacked them with basic skill, unless unable to act. Cannot be triggered by counterattacks."}],"buffs":["5"],"debuffs":["25"],"skills":[{"common":["33"],"buff":[],"debuff":[]},{"common":[],"buff":["5"],"debuff":["25"]},{"common":[],"buff":[],"debuff":[]}]},"Cerise":{"id":"c1081","_id":"cerise","name":"Cerise","rarity":5,"role":"ranger","attribute":"ice","camping":{"personalities":["Realistic","Heroism"],"topics":["Reality Check","Horror Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":2,"Horror Story":4,"Gossip":0,"Dream":0,"Advice":4,"Complain":0,"Belief":1,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["20","19","61"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":["19","61"]}]},"Krau":{"id":"c1070","_id":"krau","name":"Krau","rarity":5,"role":"knight","attribute":"ice","camping":{"personalities":["Extrovert","Alcoholic"],"topics":["Criticism","Food Story"],"values":{"Criticism":2,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":5,"Heroic Cheer":6,"Sad Memory":0,"Joyful Memory":5,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":4,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":5,"Complain":2,"Belief":4,"Interesting Story":5}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."}],"buffs":["2"],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":["2"],"debuff":[]},{"common":["34"],"buff":[],"debuff":[]}]},"Apocalypse Ravi":{"id":"c2019","_id":"apocalypse-ravi","name":"Apocalypse Ravi","rarity":5,"role":"warrior","attribute":"dark","camping":{"personalities":["Arrogant","Psychopath"],"topics":["Heroic Tale","Myth"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":0,"Sad Memory":4,"Joyful Memory":0,"Happy Memory":0,"Unique Comment":5,"Self-Indulgent":0,"Occult":6,"Myth":2,"Bizarre Story":2,"Food Story":0,"Horror Story":3,"Gossip":0,"Dream":2,"Advice":6,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["46"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["46"],"debuff":[]}]},"Arbiter Vildred":{"id":"c2007","_id":"arbiter-vildred","name":"Arbiter Vildred","rarity":5,"role":"assassin","attribute":"dark","camping":{"personalities":["Realistic","Envious"],"topics":["Criticism","Self-Indulgent"],"values":{"Criticism":6,"Reality Check":3,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":5,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":1,"Unique Comment":1,"Self-Indulgent":1,"Occult":1,"Myth":3,"Bizarre Story":0,"Food Story":2,"Horror Story":2,"Gossip":1,"Dream":0,"Advice":0,"Complain":0,"Belief":5,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["22"]}]},"Sage Baal & Sezan":{"id":"c2015","_id":"sage-baal-sezan","name":"Sage Baal & Sezan","rarity":5,"role":"mage","attribute":"light","camping":{"personalities":["Academic","Envious"],"topics":["Horror Story","Joyful Memory"],"values":{"Criticism":5,"Reality Check":2,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":4,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":1,"Unique Comment":0,"Self-Indulgent":7,"Occult":5,"Myth":9,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":2,"Dream":3,"Advice":0,"Complain":0,"Belief":3,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["21","21"],"skills":[{"common":[],"buff":[],"debuff":["21"]},{"common":[],"buff":[],"debuff":["21"]},{"common":[],"buff":[],"debuff":[]}]},"Blaze Dingo":{"id":"c2021","_id":"blaze-dingo","name":"Blaze Dingo","rarity":4,"role":"manauser","attribute":"light","camping":{"personalities":["Arrogant","Heroism"],"topics":["Self-Indulgent","Food Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":8,"Comforting Cheer":6,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":0,"Occult":3,"Myth":8,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":5,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["6","1"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["6","1"],"debuff":[]}]},"Sigret":{"id":"c1072","_id":"sigret","name":"Sigret","rarity":5,"role":"warrior","attribute":"ice","camping":{"personalities":["Cool-Headed","Indifferent"],"topics":["Advice","Occult"],"values":{"Criticism":2,"Reality Check":2,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":0,"Unique Comment":4,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":0,"Dream":0,"Advice":0,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."}],"buffs":[],"debuffs":["32","27","32"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":["27","32"]},{"common":["34"],"buff":[],"debuff":[]}]},"Watcher Schuri":{"id":"c2020","_id":"watcher-schuri","name":"Watcher Schuri","rarity":4,"role":"ranger","attribute":"light","camping":{"personalities":["Altruistic","Optimistic"],"topics":["Unique Comment","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":7,"Happy Memory":5,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":5,"Complain":2,"Belief":0,"Interesting Story":3}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."}],"buffs":["3"],"debuffs":["26"],"skills":[{"common":[],"buff":[],"debuff":["26"]},{"common":[],"buff":["3"],"debuff":[]},{"common":["34"],"buff":[],"debuff":[]}]},"Baiken":{"id":"c1093","_id":"baiken","name":"Baiken","rarity":5,"role":"assassin","attribute":"wind","camping":{"personalities":["Traumatized","Free"],"topics":["Food Story","Belief"],"values":{"Criticism":4,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":1,"Sad Memory":4,"Joyful Memory":4,"Happy Memory":1,"Unique Comment":5,"Self-Indulgent":2,"Occult":4,"Myth":1,"Bizarre Story":0,"Food Story":1,"Horror Story":1,"Gossip":0,"Dream":6,"Advice":0,"Complain":0,"Belief":4,"Interesting Story":6}},"common":[{"_id":"51","id":"51","icon":null,"type":"common","name":"Detonate","effect":"Inflicts damage by activating any DoT effects inflicted on the enemy. Damage is proportional to the number of turns and number of effects."}],"buffs":[],"debuffs":["32","32","32"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":["32"]},{"common":["51"],"buff":[],"debuff":["32"]}]},"Mercedes":{"id":"c1005","_id":"mercedes","name":"Mercedes","rarity":4,"role":"mage","attribute":"fire","camping":{"personalities":["Traumatized","Hard Worker"],"topics":["Reality Check","Happy Memory"],"values":{"Criticism":5,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":2,"Cute Cheer":3,"Heroic Cheer":2,"Sad Memory":6,"Joyful Memory":6,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":3,"Myth":0,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":6,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Vildred":{"id":"c1007","_id":"vildred","name":"Vildred","rarity":5,"role":"assassin","attribute":"wind","camping":{"personalities":["Loyal","Heroism"],"topics":["Belief","Horror Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":2,"Heroic Cheer":8,"Sad Memory":6,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":4,"Horror Story":2,"Gossip":0,"Dream":3,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["1"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Alencia":{"id":"c1100","_id":"alencia","name":"Alencia","rarity":5,"role":"warrior","attribute":"wind","camping":{"personalities":["Cool-Headed","Arrogant"],"topics":["Belief","Complain"],"values":{"Criticism":7,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":4,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":0,"Advice":3,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["59"],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":["59"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Haste":{"id":"c1039","_id":"haste","name":"Haste","rarity":5,"role":"assassin","attribute":"fire","camping":{"personalities":["Individualistic","Pessimistic"],"topics":["Reality Check","Complain"],"values":{"Criticism":5,"Reality Check":5,"Heroic Tale":0,"Comforting Cheer":7,"Cute Cheer":0,"Heroic Cheer":1,"Sad Memory":0,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":0,"Self-Indulgent":0,"Occult":4,"Myth":0,"Bizarre Story":1,"Food Story":0,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":2,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["32","32","32"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":["32"]}]},"Romann":{"id":"c1043","_id":"romann","name":"Romann","rarity":4,"role":"mage","attribute":"ice","camping":{"personalities":["Indifferent","Cool-Headed"],"topics":["Complain","Dream"],"values":{"Criticism":2,"Reality Check":2,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":0,"Unique Comment":4,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":0,"Dream":0,"Advice":0,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Khawana":{"id":"c1086","_id":"khawana","name":"Khawana","rarity":4,"role":"assassin","attribute":"fire","camping":{"personalities":["Optimistic","Individualistic"],"topics":["Joyful Memory","Cute Cheer"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":2,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":2,"Joyful Memory":7,"Happy Memory":4,"Unique Comment":3,"Self-Indulgent":1,"Occult":1,"Myth":1,"Bizarre Story":0,"Food Story":4,"Horror Story":1,"Gossip":0,"Dream":4,"Advice":2,"Complain":3,"Belief":3,"Interesting Story":3}},"common":[],"buffs":["1","46"],"debuffs":["32","20"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":["1","46"],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Cecilia":{"id":"c1002","_id":"cecilia","name":"Cecilia","rarity":5,"role":"knight","attribute":"fire","camping":{"personalities":["Altruistic","Indifferent"],"topics":["Joyful Memory","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":4,"Heroic Cheer":2,"Sad Memory":5,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":1,"Dream":3,"Advice":5,"Complain":1,"Belief":0,"Interesting Story":2}},"common":[],"buffs":["12","5"],"debuffs":["18","17","25"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":["12","5"],"debuff":["25"]}]},"Angelica":{"id":"c1062","_id":"angelica","name":"Angelica","rarity":4,"role":"manauser","attribute":"ice","camping":{"personalities":["Realistic","Natural"],"topics":["Myth","Comforting Cheer"],"values":{"Criticism":1,"Reality Check":1,"Heroic Tale":1,"Comforting Cheer":2,"Cute Cheer":3,"Heroic Cheer":4,"Sad Memory":2,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":1,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":2,"Dream":0,"Advice":3,"Complain":1,"Belief":3,"Interesting Story":0}},"common":[],"buffs":["12","5"],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["12","5"],"debuff":[]}]},"Tempest Surin":{"id":"c2065","_id":"tempest-surin","name":"Tempest Surin","rarity":4,"role":"assassin","attribute":"light","camping":{"personalities":["Heroism","Realistic"],"topics":["Belief","Complain"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":2,"Horror Story":4,"Gossip":0,"Dream":0,"Advice":4,"Complain":0,"Belief":1,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["32","29"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["29"]}]},"Crozet":{"id":"c1036","_id":"crozet","name":"Crozet","rarity":4,"role":"knight","attribute":"ice","camping":{"personalities":["Loyal","Religious"],"topics":["Reality Check","Dream"],"values":{"Criticism":0,"Reality Check":1,"Heroic Tale":3,"Comforting Cheer":6,"Cute Cheer":1,"Heroic Cheer":7,"Sad Memory":7,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":4,"Complain":1,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["5","2"],"debuffs":["17","25"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":["5","2"],"debuff":[]},{"common":[],"buff":[],"debuff":["25"]}]},"Destina":{"id":"c2022","_id":"destina","name":"Destina","rarity":5,"role":"manauser","attribute":"wind","camping":{"personalities":["Cool-Headed","Optimistic"],"topics":["Sad Memory","Heroic Cheer"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":3,"Sad Memory":1,"Joyful Memory":5,"Happy Memory":2,"Unique Comment":6,"Self-Indulgent":1,"Occult":1,"Myth":1,"Bizarre Story":1,"Food Story":3,"Horror Story":1,"Gossip":1,"Dream":2,"Advice":0,"Complain":1,"Belief":2,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Serila":{"id":"c1040","_id":"serila","name":"Serila","rarity":4,"role":"mage","attribute":"fire","camping":{"personalities":["Realistic","Envious"],"topics":["Happy Memory","Self-Indulgent"],"values":{"Criticism":6,"Reality Check":3,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":5,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":1,"Unique Comment":1,"Self-Indulgent":1,"Occult":1,"Myth":3,"Bizarre Story":0,"Food Story":2,"Horror Story":2,"Gossip":1,"Dream":0,"Advice":0,"Complain":0,"Belief":5,"Interesting Story":0}},"common":[],"buffs":["1"],"debuffs":["18","17","31"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":["1"],"debuff":["17"]},{"common":[],"buff":[],"debuff":["31"]}]},"Seaside Bellona":{"id":"c5071","_id":"seaside-bellona","name":"Seaside Bellona","rarity":5,"role":"ranger","attribute":"ice","camping":{"personalities":["Optimistic","Free"],"topics":["Food Story","Interesting Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":1,"Cute Cheer":5,"Heroic Cheer":4,"Sad Memory":2,"Joyful Memory":5,"Happy Memory":3,"Unique Comment":5,"Self-Indulgent":2,"Occult":2,"Myth":2,"Bizarre Story":3,"Food Story":4,"Horror Story":2,"Gossip":2,"Dream":6,"Advice":1,"Complain":2,"Belief":1,"Interesting Story":7}},"common":[],"buffs":[],"debuffs":["26","18","29","27"],"skills":[{"common":[],"buff":[],"debuff":["26"]},{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":["29","27"]}]},"Little Queen Charlotte":{"id":"c2009","_id":"little-queen-charlotte","name":"Little Queen Charlotte","rarity":5,"role":"warrior","attribute":"light","camping":{"personalities":["Heroism","Envious"],"topics":["Belief","Reality Check"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":3,"Heroic Cheer":6,"Sad Memory":2,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":3,"Self-Indulgent":1,"Occult":2,"Myth":7,"Bizarre Story":0,"Food Story":4,"Horror Story":2,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":2}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."}],"buffs":["12"],"debuffs":[],"skills":[{"common":[],"buff":["12"],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":["34"],"buff":[],"debuff":[]}]},"Ken":{"id":"c1047","_id":"ken","name":"Ken","rarity":5,"role":"warrior","attribute":"fire","camping":{"personalities":["Heroism","Extrovert"],"topics":["Dream","Food Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":6,"Sad Memory":1,"Joyful Memory":6,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":1,"Occult":1,"Myth":4,"Bizarre Story":0,"Food Story":3,"Horror Story":5,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":3}},"common":[],"buffs":["41","3","41","41"],"debuffs":["18","31","18","20"],"skills":[{"common":[],"buff":["41"],"debuff":["18","31"]},{"common":[],"buff":["3","41"],"debuff":["18"]},{"common":[],"buff":["41"],"debuff":["20"]}]},"Specimen Sez":{"id":"c2038","_id":"specimen-sez","name":"Specimen Sez","rarity":5,"role":"assassin","attribute":"light","camping":{"personalities":["Obsessive","Psychopath"],"topics":["Self-Indulgent","Belief"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":2,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":1,"Joyful Memory":0,"Happy Memory":0,"Unique Comment":8,"Self-Indulgent":0,"Occult":4,"Myth":0,"Bizarre Story":10,"Food Story":0,"Horror Story":8,"Gossip":0,"Dream":4,"Advice":5,"Complain":0,"Belief":6,"Interesting Story":1}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."},{"_id":"52","id":"52","icon":null,"type":"common","name":"Extinction","effect":"The target cannot revive when killed by this skill."}],"buffs":[],"debuffs":["20","20","20"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":["20"]},{"common":["52","34"],"buff":[],"debuff":["20"]}]},"Chloe":{"id":"c1049","_id":"chloe","name":"Chloe","rarity":5,"role":"warrior","attribute":"ice","camping":{"personalities":["Cherub","Natural"],"topics":["Dream","Unique Comment"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":4,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":4,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":0,"Self-Indulgent":4,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":8,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":2,"Complain":2,"Belief":1,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["30","30","20","30"],"skills":[{"common":[],"buff":[],"debuff":["30"]},{"common":[],"buff":[],"debuff":["30"]},{"common":[],"buff":[],"debuff":["20","30"]}]},"Iseria":{"id":"c1024","_id":"iseria","name":"Iseria","rarity":5,"role":"ranger","attribute":"wind","camping":{"personalities":["Hot and Cold","Loyal"],"topics":["Sad Memory","Advice"],"values":{"Criticism":0,"Reality Check":1,"Heroic Tale":3,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":3,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["18","29","18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["29","18"]}]},"Leo":{"id":"c1029","_id":"leo","name":"Leo","rarity":4,"role":"ranger","attribute":"wind","camping":{"personalities":["Heroism","Extrovert"],"topics":["Dream","Gossip"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":6,"Sad Memory":1,"Joyful Memory":6,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":1,"Occult":1,"Myth":4,"Bizarre Story":0,"Food Story":3,"Horror Story":5,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["20","18","20"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":["20"]}]},"Troublemaker Crozet":{"id":"c2036","_id":"troublemaker-crozet","name":"Troublemaker Crozet","rarity":4,"role":"knight","attribute":"dark","camping":{"personalities":["Alcoholic","Free"],"topics":["Self-Indulgent","Advice"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":4,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":2,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":3,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":1,"Dream":6,"Advice":4,"Complain":3,"Belief":2,"Interesting Story":8}},"common":[],"buffs":["2"],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["2"],"debuff":[]}]},"Sez":{"id":"c1038","_id":"sez","name":"Sez","rarity":5,"role":"assassin","attribute":"ice","camping":{"personalities":["Psychopath","Indifferent"],"topics":["Sad Memory","Reality Check"],"values":{"Criticism":3,"Reality Check":2,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":4,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":6,"Self-Indulgent":1,"Occult":3,"Myth":0,"Bizarre Story":5,"Food Story":1,"Horror Story":3,"Gossip":0,"Dream":2,"Advice":3,"Complain":0,"Belief":3,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["27","27"],"skills":[{"common":[],"buff":[],"debuff":["27"]},{"common":[],"buff":[],"debuff":["27"]},{"common":[],"buff":[],"debuff":[]}]},"Kayron":{"id":"c1023","_id":"kayron","name":"Kayron","rarity":5,"role":"assassin","attribute":"fire","camping":{"personalities":["Arrogant","Selfish"],"topics":["Criticism","Myth"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":3,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":3,"Horror Story":1,"Gossip":2,"Dream":0,"Advice":3,"Complain":1,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["14"],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":["14"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Chaos Inquisitor":{"id":"c4001","_id":"chaos-inquisitor","name":"Chaos Inquisitor","rarity":3,"role":"knight","attribute":"fire","camping":{"personalities":["Traumatized","Loyal"],"topics":["Heroic Tale","Belief"],"values":{"Criticism":2,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":0,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":5,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":0,"Occult":1,"Myth":1,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Sol":{"id":"c1092","_id":"sol","name":"Sol","rarity":5,"role":"warrior","attribute":"fire","camping":{"personalities":["Individualistic","Realistic"],"topics":["Reality Check","Sad Memory"],"values":{"Criticism":5,"Reality Check":5,"Heroic Tale":0,"Comforting Cheer":2,"Cute Cheer":2,"Heroic Cheer":4,"Sad Memory":1,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":1,"Horror Story":2,"Gossip":0,"Dream":0,"Advice":4,"Complain":2,"Belief":3,"Interesting Story":0}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":[],"debuffs":["28"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":["35"],"buff":[],"debuff":["28"]},{"common":[],"buff":[],"debuff":[]}]},"Dizzy":{"id":"c1094","_id":"dizzy","name":"Dizzy","rarity":5,"role":"mage","attribute":"ice","camping":{"personalities":["Altruistic","Cherub"],"topics":["Advice","Happy Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":5,"Cute Cheer":5,"Heroic Cheer":4,"Sad Memory":7,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":6,"Complain":2,"Belief":0,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["20","19","17","22"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["19","17","22"]}]},"Elson":{"id":"c3054","_id":"elson","name":"Elson","rarity":3,"role":"manauser","attribute":"light","camping":{"personalities":["Introvert","Altruistic"],"topics":["Reality Check","Comforting Cheer"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":5,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":1,"Food Story":0,"Horror Story":0,"Gossip":4,"Dream":4,"Advice":8,"Complain":0,"Belief":0,"Interesting Story":3}},"common":[],"buffs":["2"],"debuffs":["17"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["2"],"debuff":[]}]},"Blood Blade Karin":{"id":"c2011","_id":"blood-blade-karin","name":"Blood Blade Karin","rarity":4,"role":"assassin","attribute":"dark","camping":{"personalities":["Arrogant","Psychopath"],"topics":["Self-Indulgent","Food Story"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":0,"Sad Memory":4,"Joyful Memory":0,"Happy Memory":0,"Unique Comment":5,"Self-Indulgent":0,"Occult":6,"Myth":2,"Bizarre Story":2,"Food Story":0,"Horror Story":3,"Gossip":0,"Dream":2,"Advice":6,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Researcher Carrot":{"id":"c4051","_id":"researcher-carrot","name":"Researcher Carrot","rarity":3,"role":"mage","attribute":"fire","camping":{"personalities":["Cool-Headed","Hard Worker"],"topics":["Reality Check","Horror Story"],"values":{"Criticism":4,"Reality Check":3,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":2,"Heroic Cheer":2,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":2,"Complain":0,"Belief":1,"Interesting Story":2}},"common":[{"_id":"51","id":"51","icon":null,"type":"common","name":"Detonate","effect":"Inflicts damage by activating any DoT effects inflicted on the enemy. Damage is proportional to the number of turns and number of effects."}],"buffs":["5"],"debuffs":["19","31","31","31"],"skills":[{"common":["51"],"buff":[],"debuff":["19","31"]},{"common":[],"buff":["5"],"debuff":["31"]},{"common":[],"buff":[],"debuff":["31"]}]},"Azalea":{"id":"c3031","_id":"azalea","name":"Azalea","rarity":3,"role":"warrior","attribute":"fire","camping":{"personalities":["Envious","Heroism"],"topics":["Heroic Tale","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":3,"Heroic Cheer":6,"Sad Memory":2,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":3,"Self-Indulgent":1,"Occult":2,"Myth":7,"Bizarre Story":0,"Food Story":4,"Horror Story":2,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["25","19"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":[],"debuff":["19"]}]},"Bellona":{"id":"c1071","_id":"bellona","name":"Bellona","rarity":5,"role":"ranger","attribute":"wind","camping":{"personalities":["Free","Envious"],"topics":["Happy Memory","Interesting Story"],"values":{"Criticism":4,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":3,"Occult":3,"Myth":5,"Bizarre Story":2,"Food Story":3,"Horror Story":1,"Gossip":1,"Dream":7,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":6}},"common":[],"buffs":[],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Kluri":{"id":"c3003","_id":"kluri","name":"Kluri","rarity":3,"role":"knight","attribute":"wind","camping":{"personalities":["MISSING_TRANSLATION_VALUE(c_pers_31_escapism)","Indifferent"],"topics":["Unique Comment","Belief"],"values":{"Criticism":2,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":3,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":2,"Self-Indulgent":0,"Occult":2,"Myth":0,"Bizarre Story":0,"Food Story":6,"Horror Story":0,"Gossip":1,"Dream":0,"Advice":2,"Complain":2,"Belief":0,"Interesting Story":4}},"common":[],"buffs":[],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["25"]}]},"Shooting Star Achates":{"id":"c2017","_id":"shooting-star-achates","name":"Shooting Star Achates","rarity":4,"role":"manauser","attribute":"dark","camping":{"personalities":["Cherub","Free"],"topics":["Unique Comment","Interesting Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":4,"Heroic Cheer":3,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":2,"Self-Indulgent":3,"Occult":0,"Myth":3,"Bizarre Story":1,"Food Story":5,"Horror Story":0,"Gossip":2,"Dream":6,"Advice":2,"Complain":2,"Belief":0,"Interesting Story":6}},"common":[],"buffs":["c2017_r"],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":["c2017_r"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Rin":{"id":"c1054","_id":"rin","name":"Rin","rarity":4,"role":"manauser","attribute":"wind","camping":{"personalities":["Traumatized","Extrovert"],"topics":["Reality Check","Comforting Cheer"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":3,"Sad Memory":1,"Joyful Memory":6,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":3,"Occult":4,"Myth":1,"Bizarre Story":0,"Food Story":1,"Horror Story":3,"Gossip":0,"Dream":4,"Advice":0,"Complain":0,"Belief":6,"Interesting Story":3}},"common":[],"buffs":["c1054_r"],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":["c1054_r"],"debuff":[]}]},"Rose":{"id":"c1003","_id":"rose","name":"Rose","rarity":4,"role":"knight","attribute":"ice","camping":{"personalities":["Arrogant","Heroism"],"topics":["Self-Indulgent","Dream"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":8,"Comforting Cheer":6,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":0,"Occult":3,"Myth":8,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":5,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["2","5","1"],"debuffs":["25"],"skills":[{"common":[],"buff":["2"],"debuff":["25"]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]}]},"Desert Jewel Basar":{"id":"c2053","_id":"desert-jewel-basar","name":"Desert Jewel Basar","rarity":5,"role":"manauser","attribute":"light","camping":{"personalities":["Narcissist","MISSING_TRANSLATION_VALUE(c_pers_31_escapism)"],"topics":["Complain","Self-Indulgent"],"values":{"Criticism":5,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":8,"Cute Cheer":7,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":2,"Dream":2,"Advice":4,"Complain":0,"Belief":1,"Interesting Story":4}},"common":[],"buffs":[],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Captain Rikoris":{"id":"c4034","_id":"captain-rikoris","name":"Captain Rikoris","rarity":3,"role":"warrior","attribute":"light","camping":{"personalities":["Academic","Optimistic"],"topics":["Belief","Joyful Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":1,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":6,"Occult":4,"Myth":6,"Bizarre Story":1,"Food Story":3,"Horror Story":0,"Gossip":3,"Dream":2,"Advice":1,"Complain":2,"Belief":2,"Interesting Story":4}},"common":[],"buffs":["3","3"],"debuffs":["18","20"],"skills":[{"common":[],"buff":["3"],"debuff":["18"]},{"common":[],"buff":["3"],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Zeno":{"id":"c1083","_id":"zeno","name":"Zeno","rarity":5,"role":"mage","attribute":"ice","camping":{"personalities":["Arrogant","Envious"],"topics":["Self-Indulgent","Occult"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":7,"Comforting Cheer":1,"Cute Cheer":6,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":0,"Occult":5,"Myth":9,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":1,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["20","28"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["28"]}]},"Celeste":{"id":"c3064","_id":"celeste","name":"Celeste","rarity":3,"role":"ranger","attribute":"light","camping":{"personalities":["Hard Worker","Cool-Headed"],"topics":["Food Story","Comforting Cheer"],"values":{"Criticism":4,"Reality Check":3,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":2,"Heroic Cheer":2,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":2,"Complain":0,"Belief":1,"Interesting Story":2}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":[],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":[]},{"common":["35"],"buff":[],"debuff":[]}]},"General Purrgis":{"id":"c2035","_id":"general-purrgis","name":"General Purrgis","rarity":4,"role":"warrior","attribute":"light","camping":{"personalities":["Loyal","Altruistic"],"topics":["Heroic Tale","Horror Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":7,"Sad Memory":8,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":7,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["25","20"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Cermia":{"id":"c1079","_id":"cermia","name":"Cermia","rarity":5,"role":"warrior","attribute":"fire","camping":{"personalities":["Envious","Free"],"topics":["Heroic Cheer","Complain"],"values":{"Criticism":4,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":3,"Occult":3,"Myth":5,"Bizarre Story":2,"Food Story":3,"Horror Story":1,"Gossip":1,"Dream":7,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":6}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."},{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":[],"debuffs":["27"],"skills":[{"common":[],"buff":[],"debuff":["27"]},{"common":["35"],"buff":[],"debuff":[]},{"common":["34"],"buff":[],"debuff":[]}]},"Batisse":{"id":"c3095","_id":"batisse","name":"Batisse","rarity":3,"role":"warrior","attribute":"dark","camping":{"personalities":["Envious","Psychopath"],"topics":["Joyful Memory","Occult"],"values":{"Criticism":6,"Reality Check":2,"Heroic Tale":0,"Comforting Cheer":1,"Cute Cheer":2,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":6,"Self-Indulgent":3,"Occult":5,"Myth":1,"Bizarre Story":5,"Food Story":0,"Horror Story":5,"Gossip":0,"Dream":5,"Advice":1,"Complain":0,"Belief":6,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["17","17","17","18"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":["17","18"]}]},"Yuna":{"id":"c1030","_id":"yuna","name":"Yuna","rarity":5,"role":"ranger","attribute":"ice","camping":{"personalities":["Academic","Extrovert"],"topics":["Bizarre Story","Complain"],"values":{"Criticism":2,"Reality Check":2,"Heroic Tale":3,"Comforting Cheer":4,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":7,"Occult":4,"Myth":6,"Bizarre Story":2,"Food Story":1,"Horror Story":0,"Gossip":4,"Dream":2,"Advice":3,"Complain":1,"Belief":1,"Interesting Story":4}},"common":[],"buffs":["1"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Lorina":{"id":"c3035","_id":"lorina","name":"Lorina","rarity":3,"role":"warrior","attribute":"dark","camping":{"personalities":["Altruistic","Hard Worker"],"topics":["Dream","Heroic Cheer"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":8,"Cute Cheer":5,"Heroic Cheer":4,"Sad Memory":8,"Joyful Memory":6,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":6,"Advice":7,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Enott":{"id":"c3022","_id":"enott","name":"Enott","rarity":3,"role":"warrior","attribute":"ice","camping":{"personalities":["Selfish","Arrogant"],"topics":["Self-Indulgent","Heroic Tale"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":3,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":3,"Horror Story":1,"Gossip":2,"Dream":0,"Advice":3,"Complain":1,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["1"],"debuffs":["32","18","29"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":["18","29"]},{"common":[],"buff":["1"],"debuff":[]}]},"Achates":{"id":"c1017","_id":"achates","name":"Achates","rarity":4,"role":"manauser","attribute":"fire","camping":{"personalities":["Introvert","Altruistic"],"topics":["Comforting Cheer","Myth"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":5,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":1,"Food Story":0,"Horror Story":0,"Gossip":4,"Dream":4,"Advice":8,"Complain":0,"Belief":0,"Interesting Story":3}},"common":[],"buffs":["5"],"debuffs":["17"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Crimson Armin":{"id":"c2008","_id":"crimson-armin","name":"Crimson Armin","rarity":4,"role":"knight","attribute":"light","camping":{"personalities":["Cherub","Envious"],"topics":["Cute Cheer","Happy Memory"],"values":{"Criticism":1,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":1,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":4,"Occult":1,"Myth":6,"Bizarre Story":0,"Food Story":6,"Horror Story":0,"Gossip":1,"Dream":5,"Advice":0,"Complain":0,"Belief":3,"Interesting Story":2}},"common":[],"buffs":["12"],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["12"],"debuff":[]}]},"Roaming Warrior Leo":{"id":"c2029","_id":"roaming-warrior-leo","name":"Roaming Warrior Leo","rarity":4,"role":"ranger","attribute":"dark","camping":{"personalities":["Pessimistic","Free"],"topics":["Reality Check","Food Story"],"values":{"Criticism":4,"Reality Check":2,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":0,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":1,"Self-Indulgent":0,"Occult":5,"Myth":0,"Bizarre Story":5,"Food Story":0,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":1,"Complain":0,"Belief":0,"Interesting Story":6}},"common":[],"buffs":[],"debuffs":["17","53"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["53"]}]},"Pearlhorizon":{"id":"c3073","_id":"pearlhorizon","name":"Pearlhorizon","rarity":3,"role":"mage","attribute":"wind","camping":{"personalities":["Individualistic","Psychopath"],"topics":["Cute Cheer","Unique Comment"],"values":{"Criticism":5,"Reality Check":4,"Heroic Tale":0,"Comforting Cheer":5,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":5,"Joyful Memory":3,"Happy Memory":0,"Unique Comment":5,"Self-Indulgent":1,"Occult":3,"Myth":0,"Bizarre Story":3,"Food Story":0,"Horror Story":5,"Gossip":0,"Dream":4,"Advice":5,"Complain":0,"Belief":4,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["22","21","20","21"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":["21"]},{"common":[],"buff":[],"debuff":["20","21"]}]},"Requiemroar":{"id":"c3075","_id":"requiemroar","name":"Requiemroar","rarity":3,"role":"manauser","attribute":"dark","camping":{"personalities":["Free","Psychopath"],"topics":["Advice","Complain"],"values":{"Criticism":4,"Reality Check":1,"Heroic Tale":0,"Comforting Cheer":4,"Cute Cheer":2,"Heroic Cheer":0,"Sad Memory":5,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":7,"Self-Indulgent":2,"Occult":4,"Myth":0,"Bizarre Story":7,"Food Story":0,"Horror Story":6,"Gossip":0,"Dream":6,"Advice":4,"Complain":0,"Belief":2,"Interesting Story":6}},"common":[],"buffs":[],"debuffs":["17","18"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Roozid":{"id":"c3013","_id":"roozid","name":"Roozid","rarity":3,"role":"assassin","attribute":"wind","camping":{"personalities":["Altruistic","Optimistic"],"topics":["Sad Memory","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":7,"Happy Memory":5,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":5,"Complain":2,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["19","17"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]}]},"Gloomyrain":{"id":"c3074","_id":"gloomyrain","name":"Gloomyrain","rarity":3,"role":"mage","attribute":"light","camping":{"personalities":["Individualistic","Psychopath"],"topics":["Bizarre Story","Dream"],"values":{"Criticism":5,"Reality Check":4,"Heroic Tale":0,"Comforting Cheer":5,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":5,"Joyful Memory":3,"Happy Memory":0,"Unique Comment":5,"Self-Indulgent":1,"Occult":3,"Myth":0,"Bizarre Story":3,"Food Story":0,"Horror Story":5,"Gossip":0,"Dream":4,"Advice":5,"Complain":0,"Belief":4,"Interesting Story":2}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."},{"_id":"36","id":"36","icon":null,"type":"common","name":"Transfer","effect":"Transfers debuffs from the caster to the target."}],"buffs":[],"debuffs":["20","21","25"],"skills":[{"common":["35"],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20","21","25"]},{"common":["36"],"buff":[],"debuff":[]}]},"Surin":{"id":"c1065","_id":"surin","name":"Surin","rarity":4,"role":"assassin","attribute":"fire","camping":{"personalities":["Altruistic","Optimistic"],"topics":["Advice","Sad Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":7,"Happy Memory":5,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":5,"Complain":2,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["32","17","32","32"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":["17","32"]},{"common":[],"buff":[],"debuff":["32"]}]},"Taranor Royal Guard":{"id":"c3002","_id":"taranor-royal-guard","name":"Taranor Royal Guard","rarity":3,"role":"knight","attribute":"ice","camping":{"personalities":["Loyal","Hard Worker"],"topics":["Belief","Advice"],"values":{"Criticism":1,"Reality Check":2,"Heroic Tale":5,"Comforting Cheer":8,"Cute Cheer":3,"Heroic Cheer":7,"Sad Memory":6,"Joyful Memory":5,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Eaton":{"id":"c3094","_id":"eaton","name":"Eaton","rarity":3,"role":"knight","attribute":"light","camping":{"personalities":["Hard Worker","Optimistic"],"topics":["Food Story","Unique Comment"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":5,"Cute Cheer":5,"Heroic Cheer":5,"Sad Memory":4,"Joyful Memory":7,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":1,"Myth":1,"Bizarre Story":1,"Food Story":6,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":2,"Complain":0,"Belief":3,"Interesting Story":3}},"common":[],"buffs":["5"],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["5"],"debuff":[]}]},"Corvus":{"id":"c1012","_id":"corvus","name":"Corvus","rarity":4,"role":"warrior","attribute":"fire","camping":{"personalities":["Religious","Extrovert"],"topics":["Heroic Tale","Criticism"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":6,"Cute Cheer":3,"Heroic Cheer":5,"Sad Memory":2,"Joyful Memory":5,"Happy Memory":4,"Unique Comment":2,"Self-Indulgent":2,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":2,"Horror Story":3,"Gossip":1,"Dream":4,"Advice":4,"Complain":2,"Belief":4,"Interesting Story":2}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."},{"_id":"36","id":"36","icon":null,"type":"common","name":"Transfer","effect":"Transfers debuffs from the caster to the target."}],"buffs":["55"],"debuffs":["20","20"],"skills":[{"common":["36"],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":["20"]},{"common":["35"],"buff":["55"],"debuff":[]}]},"Karin":{"id":"c1011","_id":"karin","name":"Karin","rarity":4,"role":"assassin","attribute":"ice","camping":{"personalities":["Natural","Optimistic"],"topics":["Cute Cheer","Food Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":2,"Cute Cheer":5,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":6,"Happy Memory":4,"Unique Comment":3,"Self-Indulgent":3,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":7,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":1,"Complain":2,"Belief":3,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":[]}]},"Maid Chloe":{"id":"c2049","_id":"maid-chloe","name":"Maid Chloe","rarity":5,"role":"manauser","attribute":"light","camping":{"personalities":["Optimistic","Natural"],"topics":["Comforting Cheer","Food Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":2,"Cute Cheer":5,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":6,"Happy Memory":4,"Unique Comment":3,"Self-Indulgent":3,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":7,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":1,"Complain":2,"Belief":3,"Interesting Story":3}},"common":[],"buffs":["16"],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["16"],"debuff":[]}]},"Champion Zerato":{"id":"c2010","_id":"champion-zerato","name":"Champion Zerato","rarity":4,"role":"mage","attribute":"dark","camping":{"personalities":["Envious","Arrogant"],"topics":["Heroic Tale","Self-Indulgent"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":7,"Comforting Cheer":1,"Cute Cheer":6,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":0,"Occult":5,"Myth":9,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":1,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[{"_id":"36","id":"36","icon":null,"type":"common","name":"Transfer","effect":"Transfers debuffs from the caster to the target."}],"buffs":["2"],"debuffs":["20","21","22","18","17"],"skills":[{"common":["36"],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20","21","22"]},{"common":[],"buff":["2"],"debuff":["18","17"]}]},"Vivian":{"id":"c1088","_id":"vivian","name":"Vivian","rarity":5,"role":"mage","attribute":"wind","camping":{"personalities":["Academic","Arrogant"],"topics":["Myth","Criticism"],"values":{"Criticism":7,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":4,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":0,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":2,"Occult":6,"Myth":10,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":1,"Dream":0,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["44","1","12"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["44","1","12"],"debuff":[]}]},"Martial Artist Ken":{"id":"c2047","_id":"martial-artist-ken","name":"Martial Artist Ken","rarity":5,"role":"warrior","attribute":"dark","camping":{"personalities":["Selfish","Envious"],"topics":["Heroic Tale","Heroic Cheer"],"values":{"Criticism":6,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":3,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":1,"Unique Comment":1,"Self-Indulgent":0,"Occult":2,"Myth":4,"Bizarre Story":0,"Food Story":2,"Horror Story":3,"Gossip":3,"Dream":3,"Advice":0,"Complain":1,"Belief":6,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["17","18"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Kawerik":{"id":"c1073","_id":"kawerik","name":"Kawerik","rarity":5,"role":"mage","attribute":"fire","camping":{"personalities":["Traumatized","Realistic"],"topics":["Sad Memory","Horror Story"],"values":{"Criticism":6,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":2,"Heroic Cheer":2,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":2,"Myth":0,"Bizarre Story":0,"Food Story":0,"Horror Story":2,"Gossip":0,"Dream":0,"Advice":0,"Complain":0,"Belief":7,"Interesting Story":0}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."}],"buffs":["3"],"debuffs":["28"],"skills":[{"common":[],"buff":[],"debuff":["28"]},{"common":[],"buff":[],"debuff":[]},{"common":["34"],"buff":["3"],"debuff":[]}]},"Righteous Thief Roozid":{"id":"c4013","_id":"righteous-thief-roozid","name":"Righteous Thief Roozid","rarity":3,"role":"assassin","attribute":"wind","camping":{"personalities":["Altruistic","Heroism"],"topics":["Advice","Belief"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":8,"Joyful Memory":6,"Happy Memory":6,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":7,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":["11"],"debuffs":["19","17"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":["11"],"debuff":[]}]},"Specter Tenebria":{"id":"c2050","_id":"specter-tenebria","name":"Specter Tenebria","rarity":5,"role":"mage","attribute":"dark","camping":{"personalities":["Psychopath","Obsessive"],"topics":["Joyful Memory","Belief"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":2,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":1,"Joyful Memory":0,"Happy Memory":0,"Unique Comment":8,"Self-Indulgent":0,"Occult":4,"Myth":0,"Bizarre Story":10,"Food Story":0,"Horror Story":8,"Gossip":0,"Dream":4,"Advice":5,"Complain":0,"Belief":6,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["24","20"],"skills":[{"common":[],"buff":[],"debuff":["24"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Challenger Dominiel":{"id":"c2037","_id":"challenger-dominiel","name":"Challenger Dominiel","rarity":4,"role":"mage","attribute":"dark","camping":{"personalities":["Extrovert","Envious"],"topics":["Heroic Tale","Dream"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":5,"Heroic Cheer":6,"Sad Memory":0,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":4,"Occult":3,"Myth":5,"Bizarre Story":2,"Food Story":3,"Horror Story":3,"Gossip":2,"Dream":5,"Advice":0,"Complain":0,"Belief":4,"Interesting Story":3}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":["4"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":["35"],"buff":["4"],"debuff":[]}]},"Yufine":{"id":"c1016","_id":"yufine","name":"Yufine","rarity":5,"role":"warrior","attribute":"wind","camping":{"personalities":["Optimistic","Extrovert"],"topics":["Cute Cheer","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":6,"Sad Memory":0,"Joyful Memory":7,"Happy Memory":4,"Unique Comment":3,"Self-Indulgent":3,"Occult":2,"Myth":2,"Bizarre Story":3,"Food Story":4,"Horror Story":4,"Gossip":3,"Dream":4,"Advice":2,"Complain":1,"Belief":3,"Interesting Story":4}},"common":[],"buffs":["1","3"],"debuffs":["18","28","20"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":["1","3"],"debuff":["28"]},{"common":[],"buff":[],"debuff":["20"]}]},"Jena":{"id":"c3052","_id":"jena","name":"Jena","rarity":3,"role":"mage","attribute":"ice","camping":{"personalities":["Religious","Cool-Headed"],"topics":["Myth","Advice"],"values":{"Criticism":0,"Reality Check":2,"Heroic Tale":0,"Comforting Cheer":1,"Cute Cheer":0,"Heroic Cheer":2,"Sad Memory":4,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":5,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":1,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":2,"Complain":2,"Belief":3,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["17","22"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":["22"]}]},"Lilibet":{"id":"c1095","_id":"lilibet","name":"Lilibet","rarity":5,"role":"warrior","attribute":"wind","camping":{"personalities":["Free","Traumatized"],"topics":["Sad Memory","Joyful Memory"],"values":{"Criticism":4,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":1,"Sad Memory":4,"Joyful Memory":4,"Happy Memory":1,"Unique Comment":5,"Self-Indulgent":2,"Occult":4,"Myth":1,"Bizarre Story":0,"Food Story":1,"Horror Story":1,"Gossip":0,"Dream":6,"Advice":0,"Complain":0,"Belief":4,"Interesting Story":6}},"common":[{"_id":"52","id":"52","icon":null,"type":"common","name":"Extinction","effect":"The target cannot revive when killed by this skill."}],"buffs":["46"],"debuffs":["29","32"],"skills":[{"common":[],"buff":[],"debuff":["29"]},{"common":[],"buff":[],"debuff":["32"]},{"common":["52"],"buff":["46"],"debuff":[]}]},"Tenebria":{"id":"c1050","_id":"tenebria","name":"Tenebria","rarity":5,"role":"mage","attribute":"fire","camping":{"personalities":["Psychopath","Obsessive"],"topics":["Dream","Joyful Memory"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":2,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":1,"Joyful Memory":0,"Happy Memory":0,"Unique Comment":8,"Self-Indulgent":0,"Occult":4,"Myth":0,"Bizarre Story":10,"Food Story":0,"Horror Story":8,"Gossip":0,"Dream":4,"Advice":5,"Complain":0,"Belief":6,"Interesting Story":1}},"common":[],"buffs":["1"],"debuffs":["21","19","18","21"],"skills":[{"common":[],"buff":[],"debuff":["21"]},{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":["1"],"debuff":["18","21"]}]},"Mirsa":{"id":"c3014","_id":"mirsa","name":"Mirsa","rarity":3,"role":"assassin","attribute":"light","camping":{"personalities":["Cool-Headed","Realistic"],"topics":["Gossip","Interesting Story"],"values":{"Criticism":5,"Reality Check":5,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":2,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":0,"Horror Story":2,"Gossip":1,"Dream":0,"Advice":2,"Complain":0,"Belief":2,"Interesting Story":0}},"common":[],"buffs":["3"],"debuffs":["19","28"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":["3"],"debuff":[]},{"common":[],"buff":[],"debuff":["28"]}]},"Cidd":{"id":"c1014","_id":"cidd","name":"Cidd","rarity":4,"role":"assassin","attribute":"wind","camping":{"personalities":["Traumatized","Extrovert"],"topics":["Complain","Bizarre Story"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":3,"Sad Memory":1,"Joyful Memory":6,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":3,"Occult":4,"Myth":1,"Bizarre Story":0,"Food Story":1,"Horror Story":3,"Gossip":0,"Dream":4,"Advice":0,"Complain":0,"Belief":6,"Interesting Story":3}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":["3","3"],"debuffs":["18"],"skills":[{"common":[],"buff":["3"],"debuff":[]},{"common":[],"buff":["3"],"debuff":["18"]},{"common":["35"],"buff":[],"debuff":[]}]},"Luna":{"id":"c1066","_id":"luna","name":"Luna","rarity":5,"role":"warrior","attribute":"ice","camping":{"personalities":["Realistic","Cool-Headed"],"topics":["Criticism","Sad Memory"],"values":{"Criticism":5,"Reality Check":5,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":2,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":0,"Horror Story":2,"Gossip":1,"Dream":0,"Advice":2,"Complain":0,"Belief":2,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Commander Lorina":{"id":"c4035","_id":"commander-lorina","name":"Commander Lorina","rarity":3,"role":"warrior","attribute":"dark","camping":{"personalities":["Altruistic","Hard Worker"],"topics":["Dream","Heroic Cheer"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":8,"Cute Cheer":5,"Heroic Cheer":4,"Sad Memory":8,"Joyful Memory":6,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":6,"Advice":7,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Taranor Guard":{"id":"c3032","_id":"taranor-guard","name":"Taranor Guard","rarity":3,"role":"warrior","attribute":"ice","camping":{"personalities":["Heroism","Loyal"],"topics":["Heroic Cheer","Horror Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":2,"Heroic Cheer":8,"Sad Memory":6,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":4,"Horror Story":2,"Gossip":0,"Dream":3,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[{"_id":"33","id":"33","icon":null,"type":"common","name":"Dual Attack","effect":"Chance to attack an enemy with basic skill after an ally has attacked them with basic skill, unless unable to act. Cannot be triggered by counterattacks."}],"buffs":[],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":["33"],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Purrgis":{"id":"c1035","_id":"purrgis","name":"Purrgis","rarity":4,"role":"warrior","attribute":"wind","camping":{"personalities":["Selfish","Envious"],"topics":["Sad Memory","Horror Story"],"values":{"Criticism":6,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":3,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":1,"Unique Comment":1,"Self-Indulgent":0,"Occult":2,"Myth":4,"Bizarre Story":0,"Food Story":2,"Horror Story":3,"Gossip":3,"Dream":3,"Advice":0,"Complain":1,"Belief":6,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["19","20","20"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":["20"]}]},"Gunther":{"id":"c3024","_id":"gunther","name":"Gunther","rarity":3,"role":"warrior","attribute":"light","camping":{"personalities":["Alcoholic","Loyal"],"topics":["Heroic Tale","Interesting Story"],"values":{"Criticism":1,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":3,"Heroic Cheer":8,"Sad Memory":4,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":5,"Complain":1,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["32","20"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Lidica":{"id":"c1046","_id":"lidica","name":"Lidica","rarity":5,"role":"ranger","attribute":"fire","camping":{"personalities":["Religious","Optimistic"],"topics":["Joyful Memory","Sad Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":3,"Cute Cheer":3,"Heroic Cheer":5,"Sad Memory":5,"Joyful Memory":6,"Happy Memory":4,"Unique Comment":5,"Self-Indulgent":1,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":4,"Horror Story":1,"Gossip":0,"Dream":4,"Advice":2,"Complain":3,"Belief":5,"Interesting Story":2}},"common":[],"buffs":["46"],"debuffs":["22","19","27"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":["46"],"debuff":["19","27"]}]},"Violet":{"id":"c1074","_id":"violet","name":"Violet","rarity":5,"role":"assassin","attribute":"wind","camping":{"personalities":["Narcissist","Extrovert"],"topics":["Heroic Tale","Sad Memory"],"values":{"Criticism":3,"Reality Check":3,"Heroic Tale":6,"Comforting Cheer":8,"Cute Cheer":8,"Heroic Cheer":6,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":2,"Self-Indulgent":2,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":1,"Horror Story":0,"Gossip":3,"Dream":4,"Advice":4,"Complain":0,"Belief":5,"Interesting Story":3}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":[],"debuffs":["17"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":["35"],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Benevolent Romann":{"id":"c2043","_id":"benevolent-romann","name":"Benevolent Romann","rarity":4,"role":"mage","attribute":"light","camping":{"personalities":["Cool-Headed","Heroism"],"topics":["Reality Check","Criticism"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":1,"Cute Cheer":1,"Heroic Cheer":3,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":5,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":2,"Horror Story":2,"Gossip":0,"Dream":2,"Advice":2,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["28"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["28"]}]},"Celestial Mercedes":{"id":"c2005","_id":"celestial-mercedes","name":"Celestial Mercedes","rarity":4,"role":"mage","attribute":"dark","camping":{"personalities":["Realistic","Academic"],"topics":["Belief","Myth"],"values":{"Criticism":5,"Reality Check":5,"Heroic Tale":0,"Comforting Cheer":1,"Cute Cheer":2,"Heroic Cheer":3,"Sad Memory":0,"Joyful Memory":0,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":4,"Occult":2,"Myth":4,"Bizarre Story":0,"Food Story":0,"Horror Story":0,"Gossip":3,"Dream":0,"Advice":3,"Complain":1,"Belief":2,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["27"],"skills":[{"common":[],"buff":[],"debuff":["27"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Melissa":{"id":"c1096","_id":"melissa","name":"Melissa","rarity":5,"role":"mage","attribute":"fire","camping":{"personalities":["Envious","Arrogant"],"topics":["Occult","Food Story"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":7,"Comforting Cheer":1,"Cute Cheer":6,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":0,"Occult":5,"Myth":9,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":1,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["14"],"debuffs":["27","54"],"skills":[{"common":[],"buff":[],"debuff":["27"]},{"common":[],"buff":["14"],"debuff":[]},{"common":[],"buff":[],"debuff":["54"]}]},"Luluca":{"id":"c1082","_id":"luluca","name":"Luluca","rarity":5,"role":"mage","attribute":"ice","camping":{"personalities":["Hot and Cold","Arrogant"],"topics":["Advice","Sad Memory"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":6,"Cute Cheer":7,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":2,"Happy Memory":4,"Unique Comment":1,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["2","5"],"debuffs":["18","18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":["2","5"],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Guider Aither":{"id":"c2018","_id":"guider-aither","name":"Guider Aither","rarity":4,"role":"mage","attribute":"light","camping":{"personalities":["Free","Extrovert"],"topics":["Gossip","Bizarre Story"],"values":{"Criticism":1,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":4,"Cute Cheer":5,"Heroic Cheer":4,"Sad Memory":0,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":2,"Self-Indulgent":3,"Occult":2,"Myth":2,"Bizarre Story":4,"Food Story":2,"Horror Story":4,"Gossip":3,"Dream":6,"Advice":3,"Complain":1,"Belief":0,"Interesting Story":7}},"common":[],"buffs":["5"],"debuffs":["19"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Tywin":{"id":"c1042","_id":"tywin","name":"Tywin","rarity":5,"role":"knight","attribute":"ice","camping":{"personalities":["Loyal","Altruistic"],"topics":["Advice","Happy Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":7,"Sad Memory":8,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":7,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["1","4","2"],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1","4"],"debuff":[]},{"common":[],"buff":["2"],"debuff":["18"]}]},"Silver Blade Aramintha":{"id":"c2048","_id":"silver-blade-aramintha","name":"Silver Blade Aramintha","rarity":5,"role":"mage","attribute":"light","camping":{"personalities":["Altruistic","Optimistic"],"topics":["Interesting Story","Comforting Cheer"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":7,"Happy Memory":5,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":5,"Complain":2,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["31","31","31"],"skills":[{"common":[],"buff":[],"debuff":["31"]},{"common":[],"buff":[],"debuff":["31"]},{"common":[],"buff":[],"debuff":["31"]}]},"Fighter Maya":{"id":"c2032","_id":"fighter-maya","name":"Fighter Maya","rarity":4,"role":"knight","attribute":"light","camping":{"personalities":["Obsessive","Extrovert"],"topics":["Joyful Memory","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":2,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":1,"Unique Comment":3,"Self-Indulgent":1,"Occult":2,"Myth":1,"Bizarre Story":7,"Food Story":1,"Horror Story":6,"Gossip":2,"Dream":4,"Advice":4,"Complain":0,"Belief":4,"Interesting Story":2}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":["2"],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":["2"],"debuff":[]},{"common":["35"],"buff":[],"debuff":[]}]},"Clarissa":{"id":"c1028","_id":"clarissa","name":"Clarissa","rarity":4,"role":"warrior","attribute":"ice","camping":{"personalities":["Religious","Obsessive"],"topics":["Heroic Tale","Cute Cheer"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":2,"Cute Cheer":1,"Heroic Cheer":3,"Sad Memory":1,"Joyful Memory":2,"Happy Memory":1,"Unique Comment":5,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":3,"Food Story":1,"Horror Story":3,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":6,"Interesting Story":0}},"common":[],"buffs":["38"],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":["38"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Kiris":{"id":"c3063","_id":"kiris","name":"Kiris","rarity":3,"role":"ranger","attribute":"wind","camping":{"personalities":["Traumatized","Indifferent"],"topics":["Advice","Reality Check"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":2,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":0,"Unique Comment":4,"Self-Indulgent":1,"Occult":3,"Myth":0,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":0,"Complain":0,"Belief":5,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["24","24"],"skills":[{"common":[],"buff":[],"debuff":["24"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["24"]}]},"Auxiliary Lots":{"id":"c2031","_id":"auxiliary-lots","name":"Auxiliary Lots","rarity":4,"role":"mage","attribute":"dark","camping":{"personalities":["Heroism","Individualistic"],"topics":["Dream","Complain"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":5,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":4,"Joyful Memory":6,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":3,"Horror Story":2,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":["1"],"debuffs":["28"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]},{"common":[],"buff":[],"debuff":["28"]}]},"Coli":{"id":"c1033","_id":"coli","name":"Coli","rarity":4,"role":"assassin","attribute":"ice","camping":{"personalities":["Loyal","Envious"],"topics":["Heroic Tale","Gossip"],"values":{"Criticism":2,"Reality Check":1,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":3,"Heroic Cheer":8,"Sad Memory":2,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":5,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":0,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["15","15","5","15"],"debuffs":[],"skills":[{"common":[],"buff":["15"],"debuff":[]},{"common":[],"buff":["15","5"],"debuff":[]},{"common":[],"buff":["15"],"debuff":[]}]},"Ains":{"id":"c3093","_id":"ains","name":"Ains","rarity":3,"role":"warrior","attribute":"wind","camping":{"personalities":["Selfish","Arrogant"],"topics":["Happy Memory","Self-Indulgent"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":3,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":3,"Horror Story":1,"Gossip":2,"Dream":0,"Advice":3,"Complain":1,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["7"],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Ruele of Light":{"id":"c1022","_id":"ruele-of-light","name":"Ruele of Light","rarity":5,"role":"manauser","attribute":"light","camping":{"personalities":["Altruistic","Optimistic"],"topics":["Comforting Cheer","Unique Comment"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":7,"Happy Memory":5,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":5,"Complain":2,"Belief":0,"Interesting Story":3}},"common":[],"buffs":["5","6"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":["6"],"debuff":[]}]},"Ras":{"id":"c1001","_id":"ras","name":"Ras","rarity":3,"role":"knight","attribute":"fire","camping":{"personalities":["Heroism","Altruistic"],"topics":["Sad Memory","Dream"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":8,"Joyful Memory":6,"Happy Memory":6,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":7,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[{"_id":"33","id":"33","icon":null,"type":"common","name":"Dual Attack","effect":"Chance to attack an enemy with basic skill after an ally has attacked them with basic skill, unless unable to act. Cannot be triggered by counterattacks."}],"buffs":["2"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":["33"],"buff":[],"debuff":[]},{"common":[],"buff":["2"],"debuff":[]}]},"Zerato":{"id":"c1010","_id":"zerato","name":"Zerato","rarity":4,"role":"mage","attribute":"ice","camping":{"personalities":["Optimistic","Indifferent"],"topics":["Self-Indulgent","Complain"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":3,"Sad Memory":1,"Joyful Memory":5,"Happy Memory":2,"Unique Comment":4,"Self-Indulgent":1,"Occult":1,"Myth":1,"Bizarre Story":1,"Food Story":7,"Horror Story":0,"Gossip":1,"Dream":2,"Advice":0,"Complain":1,"Belief":2,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["19","20"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Carmainerose":{"id":"c3071","_id":"carmainerose","name":"Carmainerose","rarity":3,"role":"mage","attribute":"fire","camping":{"personalities":["Arrogant","Selfish"],"topics":["Dream","Horror Story"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":3,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":3,"Horror Story":1,"Gossip":2,"Dream":0,"Advice":3,"Complain":1,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["1","2"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1","2"],"debuff":[]}]},"Kitty Clarissa":{"id":"c2028","_id":"kitty-clarissa","name":"Kitty Clarissa","rarity":4,"role":"warrior","attribute":"dark","camping":{"personalities":["Free","Cherub"],"topics":["Cute Cheer","Happy Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":4,"Heroic Cheer":3,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":2,"Self-Indulgent":3,"Occult":0,"Myth":3,"Bizarre Story":1,"Food Story":5,"Horror Story":0,"Gossip":2,"Dream":6,"Advice":2,"Complain":2,"Belief":0,"Interesting Story":6}},"common":[{"_id":"35","id":"35","icon":null,"type":"common","name":"Extra Turn","effect":"Grants an extra turn."}],"buffs":["42","42","42","12"],"debuffs":["27"],"skills":[{"common":[],"buff":["42"],"debuff":[]},{"common":[],"buff":["42"],"debuff":["27"]},{"common":["35"],"buff":["42","12"],"debuff":[]}]},"Assassin Coli":{"id":"c2033","_id":"assassin-coli","name":"Assassin Coli","rarity":4,"role":"assassin","attribute":"dark","camping":{"personalities":["Individualistic","Obsessive"],"topics":["Reality Check","Gossip"],"values":{"Criticism":2,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":1,"Cute Cheer":2,"Heroic Cheer":3,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":1,"Unique Comment":3,"Self-Indulgent":0,"Occult":1,"Myth":0,"Bizarre Story":3,"Food Story":1,"Horror Story":3,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":4,"Interesting Story":1}},"common":[],"buffs":["15","3","1","15"],"debuffs":["28"],"skills":[{"common":[],"buff":["15","3"],"debuff":[]},{"common":[],"buff":["1","15"],"debuff":[]},{"common":[],"buff":[],"debuff":["28"]}]},"Shadow Rose":{"id":"c2003","_id":"shadow-rose","name":"Shadow Rose","rarity":4,"role":"knight","attribute":"dark","camping":{"personalities":["Selfish","Obsessive"],"topics":["Dream","Advice"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":2,"Heroic Cheer":1,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":1,"Myth":0,"Bizarre Story":5,"Food Story":0,"Horror Story":6,"Gossip":3,"Dream":2,"Advice":2,"Complain":0,"Belief":6,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["18","27","18"],"skills":[{"common":[],"buff":[],"debuff":["18","27"]},{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":[]}]},"Adlay":{"id":"c3043","_id":"adlay","name":"Adlay","rarity":3,"role":"mage","attribute":"wind","camping":{"personalities":["Envious","Heroism"],"topics":["Heroic Tale","Self-Indulgent"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":3,"Heroic Cheer":6,"Sad Memory":2,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":3,"Self-Indulgent":1,"Occult":2,"Myth":7,"Bizarre Story":0,"Food Story":4,"Horror Story":2,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Otillie":{"id":"c3045","_id":"otillie","name":"Otillie","rarity":3,"role":"mage","attribute":"dark","camping":{"personalities":["Altruistic","Cool-Headed"],"topics":["Sad Memory","Complain"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":1,"Cute Cheer":3,"Heroic Cheer":2,"Sad Memory":5,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":0,"Horror Story":0,"Gossip":1,"Dream":3,"Advice":5,"Complain":1,"Belief":0,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["27","28"],"skills":[{"common":[],"buff":[],"debuff":["27"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["28"]}]},"Angelic Montmorancy":{"id":"c4042","_id":"angelic-montmorancy","name":"Angelic Montmorancy","rarity":3,"role":"manauser","attribute":"ice","camping":{"personalities":["Cherub","Religious"],"topics":["Comforting Cheer","Sad Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":5,"Cute Cheer":2,"Heroic Cheer":4,"Sad Memory":6,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":2,"Self-Indulgent":2,"Occult":0,"Myth":5,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":3,"Complain":3,"Belief":3,"Interesting Story":1}},"common":[],"buffs":["12"],"debuffs":["21"],"skills":[{"common":[],"buff":[],"debuff":["21"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["12"],"debuff":[]}]},"Arowell":{"id":"c3004","_id":"arowell","name":"Arowell","rarity":3,"role":"knight","attribute":"light","camping":{"personalities":["Individualistic","Cool-Headed"],"topics":["Sad Memory","Dream"],"values":{"Criticism":4,"Reality Check":4,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":2,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":1,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":2,"Complain":2,"Belief":1,"Interesting Story":2}},"common":[],"buffs":["5"],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Silk":{"id":"c1004","_id":"silk","name":"Silk","rarity":4,"role":"ranger","attribute":"wind","camping":{"personalities":["Introvert","Hard Worker"],"topics":["Food Story","Happy Memory"],"values":{"Criticism":1,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":8,"Cute Cheer":5,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":5,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":2,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":5,"Complain":0,"Belief":4,"Interesting Story":3}},"common":[],"buffs":["3"],"debuffs":["19"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["3"],"debuff":["19"]}]},"Furious":{"id":"c1087","_id":"furious","name":"Furious","rarity":4,"role":"ranger","attribute":"ice","camping":{"personalities":["Realistic","Loyal"],"topics":["Reality Check","Heroic Cheer"],"values":{"Criticism":2,"Reality Check":4,"Heroic Tale":2,"Comforting Cheer":3,"Cute Cheer":2,"Heroic Cheer":7,"Sad Memory":3,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":2,"Horror Story":2,"Gossip":0,"Dream":0,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["4"],"debuffs":["31","18"],"skills":[{"common":[],"buff":[],"debuff":["31"]},{"common":[],"buff":["4"],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Helga":{"id":"c3023","_id":"helga","name":"Helga","rarity":3,"role":"warrior","attribute":"wind","camping":{"personalities":["Arrogant","Hard Worker"],"topics":["Belief","Advice"],"values":{"Criticism":7,"Reality Check":0,"Heroic Tale":7,"Comforting Cheer":8,"Cute Cheer":6,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":6,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":5,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["1"],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]}]},"Rikoris":{"id":"c3034","_id":"rikoris","name":"Rikoris","rarity":3,"role":"warrior","attribute":"light","camping":{"personalities":["Hot and Cold","Indifferent"],"topics":["Reality Check","Complain"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":3,"Cute Cheer":4,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":1,"Dream":2,"Advice":1,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":["3","3"],"debuffs":["18"],"skills":[{"common":[],"buff":["3"],"debuff":["18"]},{"common":[],"buff":["3"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Hazel":{"id":"c3041","_id":"hazel","name":"Hazel","rarity":3,"role":"manauser","attribute":"fire","camping":{"personalities":["Loyal","Academic"],"topics":["Heroic Tale","Happy Memory"],"values":{"Criticism":1,"Reality Check":3,"Heroic Tale":3,"Comforting Cheer":4,"Cute Cheer":2,"Heroic Cheer":6,"Sad Memory":3,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":3,"Occult":1,"Myth":6,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":1,"Advice":3,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":["1"],"debuffs":["27"],"skills":[{"common":[],"buff":[],"debuff":["27"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]}]},"Pavel":{"id":"c1080","_id":"pavel","name":"Pavel","rarity":5,"role":"ranger","attribute":"wind","camping":{"personalities":["Loyal","Cool-Headed"],"topics":["Belief","Heroic Tale"],"values":{"Criticism":1,"Reality Check":3,"Heroic Tale":3,"Comforting Cheer":1,"Cute Cheer":1,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":1,"Advice":2,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Hurado":{"id":"c3055","_id":"hurado","name":"Hurado","rarity":3,"role":"mage","attribute":"dark","camping":{"personalities":["Altruistic","Optimistic"],"topics":["Advice","Gossip"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":7,"Happy Memory":5,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":5,"Complain":2,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["28"],"skills":[{"common":[],"buff":[],"debuff":["28"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Carrot":{"id":"c3051","_id":"carrot","name":"Carrot","rarity":3,"role":"mage","attribute":"fire","camping":{"personalities":["Cool-Headed","Realistic"],"topics":["Complain","Advice"],"values":{"Criticism":5,"Reality Check":5,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":2,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":0,"Horror Story":2,"Gossip":1,"Dream":0,"Advice":2,"Complain":0,"Belief":2,"Interesting Story":0}},"common":[{"_id":"51","id":"51","icon":null,"type":"common","name":"Detonate","effect":"Inflicts damage by activating any DoT effects inflicted on the enemy. Damage is proportional to the number of turns and number of effects."}],"buffs":["5"],"debuffs":["19","31","31","31"],"skills":[{"common":["51"],"buff":[],"debuff":["19","31"]},{"common":[],"buff":["5"],"debuff":["31"]},{"common":[],"buff":[],"debuff":["31"]}]},"Judith":{"id":"c3011","_id":"judith","name":"Judith","rarity":3,"role":"assassin","attribute":"fire","camping":{"personalities":["Individualistic","Extrovert"],"topics":["Advice","Joyful Memory"],"values":{"Criticism":2,"Reality Check":2,"Heroic Tale":3,"Comforting Cheer":5,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":0,"Joyful Memory":6,"Happy Memory":4,"Unique Comment":0,"Self-Indulgent":2,"Occult":1,"Myth":1,"Bizarre Story":0,"Food Story":2,"Horror Story":3,"Gossip":0,"Dream":4,"Advice":4,"Complain":2,"Belief":2,"Interesting Story":3}},"common":[],"buffs":["15","15"],"debuffs":["20"],"skills":[{"common":[],"buff":["15"],"debuff":["20"]},{"common":[],"buff":["15"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Kikirat v2":{"id":"c3084","_id":"kikirat-v2","name":"Kikirat v2","rarity":3,"role":"knight","attribute":"light","camping":{"topics":["Belief","Unique Comment"]},"common":[],"buffs":[],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["22"]}]},"Hataan":{"id":"c3091","_id":"hataan","name":"Hataan","rarity":3,"role":"assassin","attribute":"fire","camping":{"personalities":["Traumatized","Pessimistic"],"topics":["Reality Check","Belief"],"values":{"Criticism":6,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":2,"Cute Cheer":0,"Heroic Cheer":0,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":1,"Unique Comment":2,"Self-Indulgent":0,"Occult":7,"Myth":0,"Bizarre Story":1,"Food Story":0,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":2}},"common":[],"buffs":["1"],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]}]},"Bask":{"id":"c3006","_id":"bask","name":"Bask","rarity":3,"role":"knight","attribute":"ice","camping":{"personalities":["Individualistic","Envious"],"topics":["Belief","Sad Memory"],"values":{"Criticism":5,"Reality Check":2,"Heroic Tale":2,"Comforting Cheer":0,"Cute Cheer":3,"Heroic Cheer":5,"Sad Memory":0,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":2,"Occult":2,"Myth":4,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":4,"Interesting Story":2}},"common":[],"buffs":["12"],"debuffs":["17"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["12"],"debuff":[]}]},"Rima":{"id":"c3062","_id":"rima","name":"Rima","rarity":3,"role":"ranger","attribute":"ice","camping":{"personalities":["Traumatized","Extrovert"],"topics":["Sad Memory","Gossip"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":3,"Sad Memory":1,"Joyful Memory":6,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":3,"Occult":4,"Myth":1,"Bizarre Story":0,"Food Story":1,"Horror Story":3,"Gossip":0,"Dream":4,"Advice":0,"Complain":0,"Belief":6,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["21"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["21"]},{"common":[],"buff":[],"debuff":[]}]},"Maya":{"id":"c1032","_id":"maya","name":"Maya","rarity":4,"role":"knight","attribute":"fire","camping":{"personalities":["Loyal","Extrovert"],"topics":["Joyful Memory","Horror Story"],"values":{"Criticism":0,"Reality Check":1,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":8,"Sad Memory":1,"Joyful Memory":5,"Happy Memory":4,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":1,"Food Story":3,"Horror Story":3,"Gossip":0,"Dream":3,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":["2"],"debuffs":["20","20","17","25"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":["2"],"debuff":["17","25"]}]},"Mistychain":{"id":"c3072","_id":"mistychain","name":"Mistychain","rarity":3,"role":"mage","attribute":"ice","camping":{"personalities":["Narcissist","Selfish"],"topics":["Advice","Self-Indulgent"],"values":{"Criticism":6,"Reality Check":3,"Heroic Tale":3,"Comforting Cheer":5,"Cute Cheer":6,"Heroic Cheer":3,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":0,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":0,"Horror Story":0,"Gossip":4,"Dream":2,"Advice":2,"Complain":1,"Belief":7,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["17","27"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["17","27"]},{"common":[],"buff":[],"debuff":[]}]},"Aither":{"id":"c1018","_id":"aither","name":"Aither","rarity":3,"role":"manauser","attribute":"ice","camping":{"personalities":["Cherub","Natural"],"topics":["Heroic Tale","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":4,"Comforting Cheer":4,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":4,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":0,"Self-Indulgent":4,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":8,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":2,"Complain":2,"Belief":1,"Interesting Story":2}},"common":[],"buffs":["5"],"debuffs":["19"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["5"],"debuff":[]}]},"Nemunas":{"id":"c3061","_id":"nemunas","name":"Nemunas","rarity":3,"role":"ranger","attribute":"fire","camping":{"personalities":["Introvert","Natural"],"topics":["Comforting Cheer","Complain"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":5,"Cute Cheer":5,"Heroic Cheer":5,"Sad Memory":2,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":1,"Food Story":4,"Horror Story":0,"Gossip":4,"Dream":3,"Advice":4,"Complain":0,"Belief":4,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":[]}]},"Jecht":{"id":"c3053","_id":"jecht","name":"Jecht","rarity":3,"role":"manauser","attribute":"wind","camping":{"personalities":["Heroism","Hard Worker"],"topics":["Criticism","Happy Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":8,"Cute Cheer":3,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":6,"Happy Memory":0,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":5,"Horror Story":1,"Gossip":0,"Dream":5,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":2}},"common":[],"buffs":["11"],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["11"],"debuff":[]}]},"Chaos Sect Axe":{"id":"c4025","_id":"chaos-sect-axe","name":"Chaos Sect Axe","rarity":3,"role":"warrior","attribute":"dark","camping":{"personalities":["Religious","Envious"],"topics":["Reality Check","Gossip"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":1,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":3,"Self-Indulgent":2,"Occult":0,"Myth":7,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":6,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["32","18"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Diene":{"id":"c1076","_id":"diene","name":"Diene","rarity":5,"role":"manauser","attribute":"ice","camping":{"personalities":["Altruistic","Religious"],"topics":["Reality Check","Happy Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":3,"Heroic Cheer":4,"Sad Memory":9,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":0,"Occult":0,"Myth":4,"Bizarre Story":0,"Food Story":1,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":7,"Complain":3,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["5","1"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]}]},"Sven":{"id":"c3015","_id":"sven","name":"Sven","rarity":3,"role":"assassin","attribute":"dark","camping":{"personalities":["Heroism","Extrovert"],"topics":["Dream","Gossip"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":6,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":6,"Sad Memory":1,"Joyful Memory":6,"Happy Memory":5,"Unique Comment":2,"Self-Indulgent":1,"Occult":1,"Myth":4,"Bizarre Story":0,"Food Story":3,"Horror Story":5,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":3}},"common":[],"buffs":["1","14"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1","14"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Cartuja":{"id":"c1013","_id":"cartuja","name":"Cartuja","rarity":4,"role":"warrior","attribute":"wind","camping":{"personalities":["Loyal","Altruistic"],"topics":["Criticism","Sad Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":6,"Cute Cheer":4,"Heroic Cheer":7,"Sad Memory":8,"Joyful Memory":5,"Happy Memory":5,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":2,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":7,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["2"],"debuffs":["18","17"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["2"],"debuff":["17"]}]},"Schuri":{"id":"c1020","_id":"schuri","name":"Schuri","rarity":4,"role":"ranger","attribute":"fire","camping":{"personalities":["Envious","Hard Worker"],"topics":["Complain","Horror Story"],"values":{"Criticism":5,"Reality Check":1,"Heroic Tale":4,"Comforting Cheer":3,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":2,"Joyful Memory":4,"Happy Memory":0,"Unique Comment":1,"Self-Indulgent":0,"Occult":2,"Myth":4,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":6,"Advice":0,"Complain":0,"Belief":4,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["24"],"skills":[{"common":[],"buff":[],"debuff":["24"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Falconer Kluri":{"id":"c4003","_id":"falconer-kluri","name":"Falconer Kluri","rarity":3,"role":"knight","attribute":"wind","camping":{"personalities":["MISSING_TRANSLATION_VALUE(c_pers_31_escapism)","Indifferent"],"topics":["Unique Comment","Belief"],"values":{"Criticism":2,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":3,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":2,"Self-Indulgent":0,"Occult":2,"Myth":0,"Bizarre Story":0,"Food Story":6,"Horror Story":0,"Gossip":1,"Dream":0,"Advice":2,"Complain":2,"Belief":0,"Interesting Story":4}},"common":[],"buffs":[],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["25"]}]},"Alexa":{"id":"c3012","_id":"alexa","name":"Alexa","rarity":3,"role":"assassin","attribute":"ice","camping":{"personalities":["Loyal","Hard Worker"],"topics":["Reality Check","Happy Memory"],"values":{"Criticism":1,"Reality Check":2,"Heroic Tale":5,"Comforting Cheer":8,"Cute Cheer":3,"Heroic Cheer":7,"Sad Memory":6,"Joyful Memory":5,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":4,"Advice":4,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["24"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["24"]},{"common":[],"buff":[],"debuff":[]}]},"Khawazu":{"id":"c1085","_id":"khawazu","name":"Khawazu","rarity":4,"role":"warrior","attribute":"fire","camping":{"personalities":["Narcissist","Optimistic"],"topics":["Heroic Tale","Self-Indulgent"],"values":{"Criticism":1,"Reality Check":1,"Heroic Tale":6,"Comforting Cheer":5,"Cute Cheer":8,"Heroic Cheer":6,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":5,"Self-Indulgent":1,"Occult":0,"Myth":3,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":2,"Complain":0,"Belief":6,"Interesting Story":3}},"common":[],"buffs":["1"],"debuffs":["31","18","27"],"skills":[{"common":[],"buff":[],"debuff":["31"]},{"common":[],"buff":["1"],"debuff":[]},{"common":[],"buff":[],"debuff":["18","27"]}]},"Tieria":{"id":"c3021","_id":"tieria","name":"Tieria","rarity":3,"role":"warrior","attribute":"fire","camping":{"personalities":["Individualistic","Indifferent"],"topics":["Happy Memory","Gossip"],"values":{"Criticism":2,"Reality Check":2,"Heroic Tale":1,"Comforting Cheer":2,"Cute Cheer":2,"Heroic Cheer":2,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":2,"Complain":2,"Belief":1,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Mercenary Helga":{"id":"c4023","_id":"mercenary-helga","name":"Mercenary Helga","rarity":3,"role":"warrior","attribute":"wind","camping":{"personalities":["Arrogant","Hard Worker"],"topics":["Belief","Advice"],"values":{"Criticism":7,"Reality Check":0,"Heroic Tale":7,"Comforting Cheer":8,"Cute Cheer":6,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":0,"Unique Comment":0,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":6,"Horror Story":0,"Gossip":0,"Dream":3,"Advice":5,"Complain":0,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["1","60"],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1","60"],"debuff":[]}]},"Doris":{"id":"c3044","_id":"doris","name":"Doris","rarity":3,"role":"manauser","attribute":"light","camping":{"personalities":["Introvert","Cool-Headed"],"topics":["Reality Check","Happy Memory"],"values":{"Criticism":1,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":1,"Cute Cheer":3,"Heroic Cheer":3,"Sad Memory":0,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":2,"Food Story":0,"Horror Story":0,"Gossip":3,"Dream":1,"Advice":3,"Complain":0,"Belief":3,"Interesting Story":3}},"common":[],"buffs":["11","2"],"debuffs":["22"],"skills":[{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":["11","2"],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Church of Ilryos Axe":{"id":"c3025","_id":"church-of-ilryos-axe","name":"Church of Ilryos Axe","rarity":3,"role":"warrior","attribute":"dark","camping":{"personalities":["Religious","Envious"],"topics":["Reality Check","Gossip"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":2,"Comforting Cheer":1,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":3,"Self-Indulgent":2,"Occult":0,"Myth":7,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":0,"Complain":0,"Belief":6,"Interesting Story":1}},"common":[],"buffs":[],"debuffs":["32","18"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Assassin Cartuja":{"id":"c2013","_id":"assassin-cartuja","name":"Assassin Cartuja","rarity":4,"role":"warrior","attribute":"dark","camping":{"personalities":["Altruistic","Optimistic"],"topics":["Reality Check","Food Story"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":6,"Heroic Cheer":5,"Sad Memory":6,"Joyful Memory":7,"Happy Memory":5,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":3,"Horror Story":0,"Gossip":2,"Dream":5,"Advice":5,"Complain":2,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["32","20"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Mascot Hazel":{"id":"c4041","_id":"mascot-hazel","name":"Mascot Hazel","rarity":3,"role":"manauser","attribute":"fire","camping":{"personalities":["Arrogant","Selfish"],"topics":["Complain","Reality Check"],"values":{"Criticism":8,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":3,"Cute Cheer":5,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":3,"Myth":5,"Bizarre Story":0,"Food Story":3,"Horror Story":1,"Gossip":2,"Dream":0,"Advice":3,"Complain":1,"Belief":0,"Interesting Story":0}},"common":[],"buffs":["1","44"],"debuffs":["27"],"skills":[{"common":[],"buff":[],"debuff":["27"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1","44"],"debuff":[]}]},"Pyllis":{"id":"c3005","_id":"pyllis","name":"Pyllis","rarity":3,"role":"knight","attribute":"dark","camping":{"personalities":["Loyal","Indifferent"],"topics":["Dream","Joyful Memory"],"values":{"Criticism":0,"Reality Check":1,"Heroic Tale":4,"Comforting Cheer":3,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":3,"Happy Memory":2,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":6,"Horror Story":0,"Gossip":0,"Dream":1,"Advice":2,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[],"buffs":["2","5"],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":["2"],"debuff":[]},{"common":[],"buff":["5"],"debuff":[]}]},"Wanderer Silk":{"id":"c2004","_id":"wanderer-silk","name":"Wanderer Silk","rarity":4,"role":"ranger","attribute":"light","camping":{"personalities":["Narcissist","Hot and Cold"],"topics":["Self-Indulgent","Advice"],"values":{"Criticism":1,"Reality Check":3,"Heroic Tale":3,"Comforting Cheer":8,"Cute Cheer":8,"Heroic Cheer":3,"Sad Memory":3,"Joyful Memory":2,"Happy Memory":2,"Unique Comment":3,"Self-Indulgent":0,"Occult":0,"Myth":2,"Bizarre Story":0,"Food Story":0,"Horror Story":0,"Gossip":2,"Dream":4,"Advice":3,"Complain":0,"Belief":4,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["32","28"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["28"]}]},"Dingo":{"id":"c1021","_id":"dingo","name":"Dingo","rarity":4,"role":"warrior","attribute":"fire","camping":{"personalities":["Individualistic","Indifferent"],"topics":["Bizarre Story","Food Story"],"values":{"Criticism":2,"Reality Check":2,"Heroic Tale":1,"Comforting Cheer":2,"Cute Cheer":2,"Heroic Cheer":2,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":5,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":2,"Complain":2,"Belief":1,"Interesting Story":2}},"common":[],"buffs":["4"],"debuffs":["32","31","32"],"skills":[{"common":[],"buff":[],"debuff":["32"]},{"common":[],"buff":[],"debuff":["31","32"]},{"common":[],"buff":["4"],"debuff":[]}]},"Mucacha":{"id":"c3033","_id":"mucacha","name":"Mucacha","rarity":3,"role":"warrior","attribute":"wind","camping":{"personalities":["Loyal","Selfish"],"topics":["Belief","Complain"],"values":{"Criticism":2,"Reality Check":1,"Heroic Tale":3,"Comforting Cheer":3,"Cute Cheer":2,"Heroic Cheer":5,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":2,"Horror Story":3,"Gossip":0,"Dream":1,"Advice":2,"Complain":2,"Belief":0,"Interesting Story":0}},"common":[],"buffs":[],"debuffs":["18"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":["18"]}]},"Montmorancy":{"id":"c3042","_id":"montmorancy","name":"Montmorancy","rarity":3,"role":"manauser","attribute":"ice","camping":{"personalities":["Introvert","Cherub"],"topics":["Comforting Cheer","Dream"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":5,"Cute Cheer":5,"Heroic Cheer":5,"Sad Memory":2,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":3,"Bizarre Story":1,"Food Story":4,"Horror Story":0,"Gossip":4,"Dream":3,"Advice":4,"Complain":0,"Belief":3,"Interesting Story":3}},"common":[],"buffs":["12"],"debuffs":["21"],"skills":[{"common":[],"buff":[],"debuff":["21"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["12"],"debuff":[]}]},"All-Rounder Wanda":{"id":"c4065","_id":"allrounder-wanda","name":"All-Rounder Wanda","rarity":3,"role":"ranger","attribute":"dark","camping":{"personalities":["Free","Optimistic"],"topics":["Interesting Story","Self-Indulgent"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":1,"Cute Cheer":5,"Heroic Cheer":4,"Sad Memory":2,"Joyful Memory":5,"Happy Memory":3,"Unique Comment":5,"Self-Indulgent":2,"Occult":2,"Myth":2,"Bizarre Story":3,"Food Story":4,"Horror Story":2,"Gossip":2,"Dream":6,"Advice":1,"Complain":2,"Belief":1,"Interesting Story":7}},"common":[],"buffs":[],"debuffs":["26","26","27","20"],"skills":[{"common":[],"buff":[],"debuff":["26"]},{"common":[],"buff":[],"debuff":["26"]},{"common":[],"buff":[],"debuff":["27","20"]}]},"Crescent Moon Rin":{"id":"c2054","_id":"crescent-moon-rin","name":"Crescent Moon Rin","rarity":4,"role":"assassin","attribute":"dark","camping":{"personalities":["Free","Hot and Cold"],"topics":["Self-Indulgent","Gossip"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":4,"Cute Cheer":5,"Heroic Cheer":1,"Sad Memory":4,"Joyful Memory":3,"Happy Memory":3,"Unique Comment":3,"Self-Indulgent":0,"Occult":1,"Myth":1,"Bizarre Story":2,"Food Story":1,"Horror Story":0,"Gossip":2,"Dream":6,"Advice":2,"Complain":0,"Belief":0,"Interesting Story":6}},"common":[],"buffs":["c1054_r","12"],"debuffs":[],"skills":[{"common":[],"buff":["c1054_r"],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["12"],"debuff":[]}]},"Armin":{"id":"c1008","_id":"armin","name":"Armin","rarity":4,"role":"knight","attribute":"wind","camping":{"personalities":["Extrovert","Envious"],"topics":["Heroic Tale","Gossip"],"values":{"Criticism":3,"Reality Check":0,"Heroic Tale":5,"Comforting Cheer":1,"Cute Cheer":5,"Heroic Cheer":6,"Sad Memory":0,"Joyful Memory":4,"Happy Memory":3,"Unique Comment":1,"Self-Indulgent":4,"Occult":3,"Myth":5,"Bizarre Story":2,"Food Story":3,"Horror Story":3,"Gossip":2,"Dream":5,"Advice":0,"Complain":0,"Belief":4,"Interesting Story":3}},"common":[],"buffs":["5"],"debuffs":["20","22"],"skills":[{"common":[],"buff":[],"debuff":["20"]},{"common":[],"buff":[],"debuff":["22"]},{"common":[],"buff":["5"],"debuff":[]}]},"Wanda":{"id":"c3065","_id":"wanda","name":"Wanda","rarity":3,"role":"ranger","attribute":"dark","camping":{"personalities":["Selfish","MISSING_TRANSLATION_VALUE(c_pers_31_escapism)"],"topics":["Unique Comment","Complain"],"values":{"Criticism":5,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":3,"Cute Cheer":3,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":5,"Happy Memory":2,"Unique Comment":1,"Self-Indulgent":0,"Occult":2,"Myth":0,"Bizarre Story":0,"Food Story":2,"Horror Story":1,"Gossip":4,"Dream":0,"Advice":2,"Complain":5,"Belief":0,"Interesting Story":3}},"common":[],"buffs":[],"debuffs":["26","26","20"],"skills":[{"common":[],"buff":[],"debuff":["26"]},{"common":[],"buff":[],"debuff":["26"]},{"common":[],"buff":[],"debuff":["20"]}]},"Butcher Corps Inquisitor":{"id":"c3001","_id":"butcher-corps-inquisitor","name":"Butcher Corps Inquisitor","rarity":3,"role":"knight","attribute":"fire","camping":{"personalities":["Psychopath","Envious"],"topics":["Advice","Reality Check"],"values":{"Criticism":6,"Reality Check":2,"Heroic Tale":0,"Comforting Cheer":1,"Cute Cheer":2,"Heroic Cheer":0,"Sad Memory":3,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":6,"Self-Indulgent":3,"Occult":5,"Myth":1,"Bizarre Story":5,"Food Story":0,"Horror Story":5,"Gossip":0,"Dream":5,"Advice":1,"Complain":0,"Belief":6,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Ludwig":{"id":"c1069","_id":"ludwig","name":"Ludwig","rarity":5,"role":"mage","attribute":"wind","camping":{"personalities":["Introvert","Hot and Cold"],"topics":["Food Story","Complain"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":6,"Cute Cheer":6,"Heroic Cheer":3,"Sad Memory":3,"Joyful Memory":4,"Happy Memory":4,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":2,"Food Story":0,"Horror Story":0,"Gossip":4,"Dream":3,"Advice":4,"Complain":0,"Belief":3,"Interesting Story":3}},"common":[{"_id":"34","id":"34","icon":null,"type":"common","name":"Penetrate","effect":"Ignores the target's Defense when inflicting damage."}],"buffs":["6","6","5"],"debuffs":["20"],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["6"],"debuff":["20"]},{"common":["34"],"buff":["6","5"],"debuff":[]}]},"Dominiel":{"id":"c1037","_id":"dominiel","name":"Dominiel","rarity":4,"role":"mage","attribute":"ice","camping":{"personalities":["Introvert","Individualistic"],"topics":["Reality Check","Dream"],"values":{"Criticism":1,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":5,"Cute Cheer":4,"Heroic Cheer":5,"Sad Memory":1,"Joyful Memory":5,"Happy Memory":4,"Unique Comment":0,"Self-Indulgent":0,"Occult":0,"Myth":1,"Bizarre Story":0,"Food Story":1,"Horror Story":0,"Gossip":1,"Dream":3,"Advice":5,"Complain":0,"Belief":4,"Interesting Story":3}},"common":[],"buffs":["5"],"debuffs":["19","20"],"skills":[{"common":[],"buff":[],"debuff":["19"]},{"common":[],"buff":["5"],"debuff":[]},{"common":[],"buff":[],"debuff":["20"]}]},"Assassin Cidd":{"id":"c2014","_id":"assassin-cidd","name":"Assassin Cidd","rarity":4,"role":"assassin","attribute":"dark","camping":{"personalities":["Glutton","Indifferent"],"topics":["Sad Memory","Heroic Tale"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":1,"Comforting Cheer":0,"Cute Cheer":1,"Heroic Cheer":0,"Sad Memory":0,"Joyful Memory":1,"Happy Memory":0,"Unique Comment":1,"Self-Indulgent":0,"Occult":0,"Myth":0,"Bizarre Story":0,"Food Story":4,"Horror Story":0,"Gossip":0,"Dream":0,"Advice":0,"Complain":0,"Belief":0,"Interesting Story":1}},"common":[{"_id":"56","id":"56","icon":null,"type":"common","name":"Soul Steal","effect":"Removes Soul from the target. This effect is unaffected by Hit or Effect Resistance."}],"buffs":["1","10"],"debuffs":["18","28"],"skills":[{"common":[],"buff":[],"debuff":["18"]},{"common":[],"buff":["1"],"debuff":[]},{"common":["56"],"buff":["10"],"debuff":["28"]}]},"Dark Corvus":{"id":"c2012","_id":"dark-corvus","name":"Dark Corvus","rarity":5,"role":"warrior","attribute":"dark","camping":{"personalities":["Traumatized","Pessimistic"],"topics":["Criticism","Belief"],"values":{"Criticism":6,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":2,"Cute Cheer":0,"Heroic Cheer":0,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":1,"Unique Comment":2,"Self-Indulgent":0,"Occult":7,"Myth":0,"Bizarre Story":1,"Food Story":0,"Horror Story":0,"Gossip":0,"Dream":2,"Advice":0,"Complain":0,"Belief":2,"Interesting Story":2}},"common":[],"buffs":[],"debuffs":["25"],"skills":[{"common":[],"buff":[],"debuff":["25"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]}]},"Lena":{"id":"c3092","_id":"lena","name":"Lena","rarity":3,"role":"warrior","attribute":"ice","camping":{"personalities":["Academic","Optimistic"],"topics":["Advice","Joyful Memory"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":3,"Comforting Cheer":1,"Cute Cheer":4,"Heroic Cheer":4,"Sad Memory":1,"Joyful Memory":4,"Happy Memory":2,"Unique Comment":0,"Self-Indulgent":6,"Occult":4,"Myth":6,"Bizarre Story":1,"Food Story":3,"Horror Story":0,"Gossip":3,"Dream":2,"Advice":1,"Complain":2,"Belief":2,"Interesting Story":4}},"common":[],"buffs":["1"],"debuffs":[],"skills":[{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["1"],"debuff":[]}]},"Lots":{"id":"c1031","_id":"lots","name":"Lots","rarity":4,"role":"manauser","attribute":"wind","camping":{"personalities":["Traumatized","Altruistic"],"topics":["Comforting Cheer","Advice"],"values":{"Criticism":0,"Reality Check":0,"Heroic Tale":0,"Comforting Cheer":0,"Cute Cheer":4,"Heroic Cheer":2,"Sad Memory":8,"Joyful Memory":6,"Happy Memory":3,"Unique Comment":3,"Self-Indulgent":0,"Occult":2,"Myth":1,"Bizarre Story":0,"Food Story":0,"Horror Story":0,"Gossip":0,"Dream":5,"Advice":3,"Complain":0,"Belief":2,"Interesting Story":2}},"common":[],"buffs":["11"],"debuffs":["17"],"skills":[{"common":[],"buff":[],"debuff":["17"]},{"common":[],"buff":[],"debuff":[]},{"common":[],"buff":["11"],"debuff":[]}]}}
+    var EveryHeroArray = Object.keys(HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
+    var heroesArray = localStorage.getItem('Heroes') ? localStorage.getItem('Heroes') : '{}';
+    heroesArray = JSON.parse(heroesArray);
+    if (heroesArray.constructor === Array) heroesArray = {};
+    var AoEHeroes = ["Kawerik","Cerise","Specter Tenebria","Tempest Surin","Pavel","Ambitious Tywin","Alencia","Benevolent Romann","Elena","Cecilia","Vildred","Charlotte","Baal & Sezan","Yufine","Ravi","Kayron","Charles","Yuna","Sez","Haste","Tywin","Lidica","Aramintha","Tenebria","Basar","Tamarinne","Ludwig","Bellona","Luluca","Zeno","Vivian","Lilias","Dizzy","Faithless Lididca","Fallen Cecilia","Judge Kise","Arbiter Vildred","Sage Baal & Sezan","Specimen Sez","Martial Artist Ken","Silver Blade Aramintha","Desert Jewel Basar","Seaside Bellona","Silk","Mercedes","Armin","Zerato","Corvus","Cartuja","Schuri","Dingo","Clarissa","Leo","Purrgis","Crozet","Dominiel","Romann","Khawana","Shadow Rose","Celestial Mercedes","Champion Zerato","Blood Blade Karin","Watcher Schuri","Blaze Dingo","Kitty Clariss","Roaming Warrior Leo","Auxiliary Lots","General Purrgis","Ras","Sven","Church of Ilryos Axe","Rikoris","Adlay","Carrot","Jena","Jecht","Elson","Hurado","Kiris","Celeste","Pearlhorizon","Gloomyrain","Kikirat v2","Chaos Sect Axe","Captain Rikoris","Researcher Carrot","Lena"];
+    var app = new Vue({
+        el: '#app',
+        data: function () {
+            return {
+              strings: {},
+              heroList: HeroDB,
+              buffList: {
+                "stic_debuf_impossible": {"name": "Immunity", "id": 12},
+                "stic_att_up": {"name": "Attack up", "id": 1},
+                "stic_att_up2": {"name": "Attack up (Greater)", "id": 44},
+                "stic_def_up": {"name": "Defense up", "id": 2},
+                "stic_speed_up": {"name": "Speed up", "id": 3},
+                "stic_dodge_up": {"name": "Evasion", "id": 10},
+                "stic_protect": {"name": "Barrier", "id": 5},
+                "stic_cri_up": {"name": "Crit chance up", "id": 4},
+                "stic_cridmg_up": {"name": "Crit damage up", "id": 9},
+                "stic_crires_up": {"name": "Crit Resistance", "id": 40},
+                "stic_invincible": {"name": "Invincibility", "id": 6},
+                "stic_endure": {"name": "Skill nullifier", "id": 46},
+                "stic_heal": {"name": "Continuous Healing", "id": 11},
+                "stic_hide": {"name": "Stealth", "id": 15},
+                "stic_immortality": {"name": "Immortality", "id": 14},
+                "stic_reflect": {"name": "Reflect", "id": 13},
+                "stic_counter": {"name": "Counter", "id": 7}
+              },
+              debuffList: {"stic_def_dn": {"name": "Def down", "id": 18},
+                "stic_speed_dn": {"name": "Speed down", "id": 19},
+                "stic_att_dn": {"name": "Attack down", "id": 17},
+                "stic_blind": {"name": "Blind", "id": 22},
+                "stic_target": {"name": "Target", "id": 26},
+                "stic_buf_impossible": {"name": "Unbuffable", "id": 29},
+                "stic_heal_impossible": {"name": "Unhealable", "id": 27},
+                "stic_stun": {"name": "Stun", "id": 20},
+                "stic_provoke": {"name": "Provoke", "id": 25},
+                "stic_silence": {"name": "Silence", "id": 28},
+                "stic_sleep": {"name": "Sleep", "id": 21},
+                "stic_blood": {"name": "Bleed", "id": 32},
+                "stic_dot": {"name": "Poison", "id": 24},
+                "stic_blaze": {"name": "Burn", "id": 31},
+                "stic_vampire": {"name": "Vampire", "id": 23},
+                "stic_bomb": {"name": "Bomb", "id": 53}
+              },
+              displayList: [],
+              myHeroesList: heroesArray,
+              displayMyHeroes: Object.keys(heroesArray),
+              rosterLength: Object.keys(heroesArray).length,
+              locked: [],
+              classe: [],
+              elemento: [],
+              debuffs: [],
+              buffs: [],
+              AoE: false,
+              noS1debuffs: false,
+              noDebuffs:  false,
+              risultati: [],
+	      displayStyle: "grid",
+	      isLoadingResults: false,
+              inizializzazione: false, //nascondi tutto durante il caricamento iniziale di vue
+              numeroCombinazioniPossibili: "/"
+            }
+        },
+        methods: {
+          heroId: function (hero) {
+            return this.heroList[hero].id;
+          },
+          thisHeroData: function(hero) {
+            return this.heroList[hero]
+          },
+          capitalize: function(string) {
+              return string[0].toUpperCase() + string.slice(1).replace(/-/gi," "); 
+          },
+          updateUserData: function() { // aggiorna i dati sul server
+            localStorage.setItem('Heroes', JSON.stringify(this.myHeroesList) );
+          },
+          addHero: function (hero) {
+            if (!this.myHeroesList[hero]) {
+              //this.myHeroesList.push(hero);
+              this.myHeroesList[hero] = HeroDB[hero]; // aggiunge l'object del nuovo eroe
+              this.rosterLength +=1; // usa per indicare a vue che qualcosa è cambiato
+              this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+              this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}, "MyHeroes"); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+                    app.updateUserData();
+            }
+          },
+          removeHero: function (hero) {
+            //this.myHeroesList.splice(this.myHeroesList.indexOf(hero), 1);
+            delete this.myHeroesList[hero];
+            this.rosterLength -=1; // usa per indicare a vue che qualcosa è cambiato
+            if (this.locked.includes(hero)) { // lock
+               this.locked.splice(this.locked.indexOf(hero), 1)
+            };
+            this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+            this.displayMyHeroes.splice(this.displayMyHeroes.indexOf(hero), 1); // rimuovi dalla display list dei miei eroi se presente (sempre presente)
+            app.updateUserData();
+          },
+          isInTeam: function(hero) {
+                if (this.myHeroesList[hero]) {
+                  return ''
+                } else return "none";
+          },
+          isLocked: function(hero) {
+                if (this.locked.includes(hero)) {
+                  return ""
+                } else return "none";
+          },
+          lockHero: function(hero) {
+             if (!this.locked.includes(hero)) { // lock
+               if (this.locked.length < 4) {
+                this.locked.push(hero);
+               } else {}
+            } else { // già locked -> sblocca
+              this.locked.splice(this.locked.indexOf(hero), 1)
+            };
+                },
+            setDisplayStyle: function(layout, sezione) {
+                  var add_window = document.getElementById("pulsanti_display_add_window").getElementsByClassName("search_hero_filter");
+                  add_window[0].className = "search_hero_filter";
+                  add_window[1].className = "search_hero_filter";
+                  var manage_window = document.getElementById("pulsanti_display_manage_window").getElementsByClassName("search_hero_filter");
+                  manage_window[0].className = "search_hero_filter";
+                  manage_window[1].className = "search_hero_filter";
+                  if (layout.value == "grid") {
+                     add_window[0].className += " active";
+                     manage_window[0].className += " active";
+                  } else if (layout.value == "list") {
+                     add_window[1].className += " active";
+                     manage_window[1].className += " active";
+                  };
+                  this.displayStyle = layout.value;
+                },
+          filtroTuttiGliEroi: function (button, listToModify) { 
+            var tmpArray, pulsantiIn, filtro = {};
+                       if (listToModify === "AllHeroes" || listToModify == undefined)  { 
+                            tmpArray = EveryHeroArray.slice(); // slice per creare una copia e non modificare l'originale
+                            pulsantiIn = document.getElementById("add_window"); // determina in che sezione sono i pulsanti
+                            if (button.className == "search_hero_filter") filtro["ricerca"] = document.getElementById("inputInTuttiGliEroi").value; // ottieni il testo digitato nella casella
+                        } else if (listToModify === "MyHeroes")  { 
+                            tmpArray = Object.keys(this.myHeroesList);
+                            if (button.className == "search_hero_filter") filtro["ricerca"] =  document.getElementById("inputInMyHeroes").value; // ottieni il testo digitato nella casella
+                            pulsantiIn = document.getElementById("manage_window"); // determina in che sezione sono i pulsanti
+                        };
+            if (filtro.ricerca == undefined) filtro.ricerca = "";
+            var pulsanti = pulsantiIn.getElementsByClassName(button.className);
+            for (var i = 0; i < pulsanti.length; i++) {
+              if (pulsanti[i].className.indexOf("active") != -1) {
+                filtro[pulsanti[i].name] = pulsanti[i].value;
+                if (pulsanti[i].name == button.name) pulsanti[i].className = button.className; // rimuove la class "active"
+              };
+            };
+            button.className += " active"; // attiva questo pulsante
+            filtro[button.name] = button.value; // attualizza il filtro
+            //imposta la nuova array da visualizzare
+            for (var i = 0; i < tmpArray.length;i++) {
+              if ((HeroDB[tmpArray[i]].role != filtro.filter_class && filtro.filter_class != "*") || 
+                  (HeroDB[tmpArray[i]].attribute != filtro.filter_element && filtro.filter_element != "*") || 
+                  (HeroDB[tmpArray[i]].rarity != filtro.filter_rarity && filtro.filter_rarity != "*") ||
+                  (filtro.filter_gia_aggiunti == "true" && this.myHeroesList[tmpArray[i]] ) ||
+                  (tmpArray[i].toLowerCase().indexOf(filtro.ricerca.toLowerCase()) == -1)
+              ) {
+                 tmpArray.splice(tmpArray.indexOf(tmpArray[i]), 1);
+                 i--
+              };
+            };
+            if (listToModify === "AllHeroes" || listToModify == undefined)  { 
+                            this.displayList = tmpArray;
+                            //tmpArray.length = 0;
+                        } else if (listToModify === "MyHeroes")  { 
+                            if (filtro["filter_locked_only"] == "true") tmpArray = this.locked;
+                            this.displayMyHeroes = tmpArray;
+                            //tmpArray.length = 0;
+                        };
+
+          },
+          aggiornaImposatazioniAvanzate: function () {
+                this.classe = [];
+                this.elemento = [];
+                this.debuffs = [];
+                this.buffs = [];
+
+                //Raccogli le impostazioni avanzate
+                var classi = document.getElementsByName("classe");
+                var elemento_checkbox = document.getElementsByName("elemento");
+                var debuffs_checkbox = document.getElementsByName("debuff");
+                var buffs_checkbox = document.getElementsByName("buff");
+                for(var i = 0; i < classi.length; i++)  
+                {  
+                    if (classi[i].checked) this.classe.push(classi[i].value);
+                }; 
+                for(var i = 0; i < elemento_checkbox.length; i++)  
+                {  
+                    if (elemento_checkbox[i].checked) this.elemento.push(elemento_checkbox[i].value);
+                }; 
+                for(var i = 0; i < debuffs_checkbox.length; i++)  
+                {  
+                    if (debuffs_checkbox[i].checked) this.debuffs.push(debuffs_checkbox[i].value);
+                }; 
+                for(var i = 0; i < buffs_checkbox.length; i++)  
+                {  
+                    if (buffs_checkbox[i].checked) this.buffs.push(buffs_checkbox[i].value);
+                }; 
+
+                if ($('#AoE').is(":checked"))
+                {
+                this.AoE = true;
+                } else this.AoE = false;
+
+                if ($('#noS1debuffs').is(":checked"))
+                {
+                this.noS1debuffs = true;
+                } else this.noS1debuffs = false;
+
+                if ($('#noDebuffs').is(":checked"))
+                {
+                this.noDebuffs = true;
+                } else this.noDebuffs = false;
+            },
+            nuovoCampSimulatorTeam2: function(inputTeam) {
+              let pg1 = inputTeam[0];
+              let pg2 = inputTeam[1];
+              let pg3 = inputTeam[2];
+              let pg4 = inputTeam[3];
+
+              var tabConTagNome = [
+              {personaggio: HeroDB[pg1].name, opzione: HeroDB[pg1].camping.topics[0],risultato: HeroDB[pg2].camping.values[HeroDB[pg1].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg1]. camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg1].camping.topics[0]]},
+                    {personaggio: HeroDB[pg1].name, opzione: HeroDB[pg1].camping.topics[1],risultato: HeroDB[pg2].camping.values[HeroDB[pg1].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg1].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg1].camping.topics[1]]},
+                    {personaggio: HeroDB[pg2].name, opzione: HeroDB[pg2].camping.topics[0],risultato: HeroDB[pg1].camping.values[HeroDB[pg2].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg2].camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg2].camping.topics[0]]},
+                    {personaggio: HeroDB[pg2].name, opzione: HeroDB[pg2].camping.topics[1],risultato: HeroDB[pg1].camping.values[HeroDB[pg2].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg2].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg2].camping.topics[1]]},
+                    {personaggio: HeroDB[pg3].name, opzione: HeroDB[pg3].camping.topics[0],risultato: HeroDB[pg1].camping.values[HeroDB[pg3].camping.topics[0]]+HeroDB[pg2].camping.values[HeroDB[pg3].camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg3].camping.topics[0]]},
+                    {personaggio: HeroDB[pg3].name, opzione: HeroDB[pg3].camping.topics[1],risultato: HeroDB[pg1].camping.values[HeroDB[pg3].camping.topics[1]]+HeroDB[pg2].camping.values[HeroDB[pg3].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg3].camping.topics[1]]},
+                    {personaggio: HeroDB[pg4].name, opzione: HeroDB[pg4].camping.topics[0],risultato: HeroDB[pg1].camping.values[HeroDB[pg4].camping.topics[0]]+HeroDB[pg2].camping.values[HeroDB[pg4].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg4].camping.topics[0]]},
+                    {personaggio: HeroDB[pg4].name, opzione: HeroDB[pg4].camping.topics[1],risultato: HeroDB[pg1].camping.values[HeroDB[pg4].camping.topics[1]]+HeroDB[pg2].camping.values[HeroDB[pg4].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg4].camping.topics[1]]}
+              ];
+
+
+              //Ordina per risultato				   
+              tabConTagNome.sort(function(a, b) {
+                  return ((a.risultato > b.risultato) ? -1 : ((a.risultato == b.risultato) ? 0 : 1));
+              });   
+
+               while (tabConTagNome[0].opzione === tabConTagNome[1].opzione) {
+                  tabConTagNome.splice(1, 1);
+               };
+                var campMiglioreRisultato1 = tabConTagNome[0].risultato;
+                var campNomeMigliorScelta1 = tabConTagNome[0].opzione;
+                var campMigliorePG1 = tabConTagNome[0].personaggio;
+
+                var campMiglioreRisultato2 = tabConTagNome[1].risultato;
+                var campNomeMigliorScelta2 = tabConTagNome[1].opzione;
+                var campMigliorePG2 = tabConTagNome[1].personaggio;
+
+                 var moraleTotaleGuadagnato = campMiglioreRisultato1 + campMiglioreRisultato2;
+
+              let soluzioni = {}; 
+                  soluzioni.morale = moraleTotaleGuadagnato;
+                  soluzioni.opzioneMigliore1 = campNomeMigliorScelta1;
+                  soluzioni.risultatoScelta1 = campMiglioreRisultato1;
+                  soluzioni.opzioneMigliore2 = campNomeMigliorScelta2;
+                  soluzioni.risultatoScelta2 = campMiglioreRisultato2;
+                  soluzioni.migliorPG1 = campMigliorePG1;
+                  soluzioni.migliorPG2 = campMigliorePG2;
+                  soluzioni.team = [HeroDB[pg1].name,HeroDB[pg2].name,HeroDB[pg3].name,HeroDB[pg4].name];
+              return soluzioni;
+            }, 
+            impostaLingua: function () {
+              var language = window.navigator.userLanguage || window.navigator.language;
+              if (language == "it-IT") {
+                this.strings = {
+                  messaggio_di_benvenuto: "Benvenuto su Epic 7 Camp Simulator",
+                  aggiungi: "Aggiungi ",
+                  i_tuoi_eroi: "I tuoi eroi",
+                  cerca_eroe: "Cerca eroe...",
+                  impostazioni_avanzate: "Impostazioni avanzate",
+                  deve_contenere_AoE: "Team deve contenere AoE",
+                  no_s1_debuffs: "No S1 Debuffs (Esclusi: Provoke, Sleep e Stun)",
+                  no_debuffs: "No Debuffs (Except: Provoke, Sleep e Stun)",
+                  classe: "Classe:",
+                  elemento: "Elemento:",
+                  possibili_combinazioni: "Possibili combinazioni:",
+                  risultati: "Risultati",
+                  impostazioni: "Impostazioni"
+                };
+              } else {
+                this.strings = {
+                  messaggio_di_benvenuto: "Welcome to Epic Seven Camp simulator",
+                  aggiungi: "Add hero ",
+                  i_tuoi_eroi: "Your heroes",
+                  cerca_eroe: "Search..",
+                  impostazioni_avanzate: "Advanced settings",
+                  deve_contenere_AoE: "Team must have AoE",
+                  no_s1_debuffs: "No S1 Debuffs (Except: Provoke, Sleep e Stun)",
+                  no_debuffs: "No Debuffs (Except: Provoke, Sleep e Stun)",
+                  classe: "Class:",
+                  elemento: "Element:",
+                  possibili_combinazioni: "Combinations:",
+                  risultati: "Results",
+                  impostazioni: "Settings"
+                };
+              };
+            }
+    },
+    computed: {
+          calcolaRisultati: function () { // in computed per evitare di calcolare 2 volte il risultato se non si è cambiato niente
+           //resetta per un nuovo calcolo
+           this.risultati = [];
+           if (Object.keys(this.myHeroesList).length > 3) {
+            this.isLoadingResults = true; // mostra animazione di caricamento
+            //Richiama questi valori per far capire a vue di ricalcolare se sono cambiati
+            this.rosterLength;
+            this.classe;
+            this.elemento;
+            this.debuffs;
+            this.buffs;
+            this.AoE;
+            this.noS1debuffs;
+            this.noDebuffs;
+            var campList = Object.keys(this.myHeroesList);
+                        if (this.locked.length > 0 ) {
+                          for (var i = 0; i< this.locked.length; i++){
+                              campList.splice( campList.indexOf(this.locked[i]),1);
+                            };
+                        };
+
+            this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
+            setTimeout(() => {
+                            Combinatorics.bigCombination(campList,4-this.locked.length).forEach(teamComb => {
+                            if (teamComb.length>4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
+                            var team = [].concat(teamComb, this.locked);
+                            let elementoFiltro = teamComb;
+                            let elementoRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat();
+                            let buffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat();
+                            let debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat();
+                            let S1debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].skills[0].debuff }).flat();
+                            let classeRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat();
+                            let AoE_inTeam = AoEHeroes.some(i => elementoFiltro.includes(i));
+                            if (this.locked.every(i => team.includes(i)) &&
+                                this.classe.every(i => classeRisultati.includes(i)) && 
+                                this.elemento.every(i => elementoRisultati.includes(i)) &&
+                                this.debuffs.every(i => debuffsRisultati.includes(i)) &&
+                                this.buffs.every(i => buffsRisultati.includes(i)) &&
+                                (this.AoE === false || (this.AoE === true && AoE_inTeam )) &&
+                                (this.noS1debuffs === false || (this.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != "20" && team != "25" && team != "21"}).length === 0)) &&
+                                (this.noDebuffs === false || (this.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != "20" && team != "25" && team != "21"}).length === 0)  )
+                            ){
+                                if (this.risultati.length < 200) {
+                                  this.risultati.push(app.nuovoCampSimulatorTeam2(team));
+                                  this.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                                } else {
+                                      let risultatoDiQuestoTeam = app.nuovoCampSimulatorTeam2(team)
+                                      this.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});	 
+                                      if  (risultatoDiQuestoTeam.morale > this.risultati[this.risultati.length-1].morale) this.risultati.unshift(risultatoDiQuestoTeam),this.risultati.splice(200);
+                                };
+                             };
+            });
+            this.risultati.sort(function (a,b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0: 1))}); // riordina l'ultimo elemento aggiunto
+
+            this.isLoadingResults = false;
+          }, 10); // attendi 10 ms prima di iniziare l'operazione
+        };
+      }
+  }, // computed
+  watcher: {
+    }
+});
+              
+  </script>
+</body>
+</html>
