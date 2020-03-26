@@ -1269,6 +1269,7 @@ span.heroImgList {
     },
     computed: {
           calcolaRisultati: function () { // in computed per evitare di calcolare 2 volte il risultato se non si è cambiato niente
+           if (myHeroesList.length > 3) {
             this.isLoadingResults = true; // mostra animazione di caricamento
             //resetta per un nuovo calcolo
             this.risultati = [];
@@ -1323,6 +1324,7 @@ span.heroImgList {
 
             this.isLoadingResults = false;
           }, 10); // attendi 10 ms prima di iniziare l'operazione
+        };
       }
   }, // computed
   watcher: {
