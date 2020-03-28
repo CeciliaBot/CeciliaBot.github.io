@@ -59,7 +59,7 @@ input[type=text], input[type=password] {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .button_login:hover {
@@ -67,9 +67,10 @@ input[type=text], input[type=password] {
 }
 
 /* Extra styles for the cancel button */
-.button_login_cancelbtn {
+.button_cancelbtn {
   width: auto;
-  padding: 10px 18px;
+  padding: 14px 20px;
+  margin: 8px 0;
   border: none;
   color: white;
   cursor: pointer;
@@ -515,6 +516,51 @@ span.heroImgList {
   color: white;
 }
 
+
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein_snackbar 0.5s, fadeout_snackbar 0.5s 2.5s;
+  animation: fadein_snackbar 0.5s, fadeout_snackbar 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein_snackbar {
+  from {top: 0; opacity: 0;} 
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein_snackbar {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout_snackbar {
+  from {top: 30px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout_snackbar {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+
 </style>
 </head>
 <body onload="app.impostaLingua(); app.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes')">
@@ -524,6 +570,11 @@ span.heroImgList {
         <br><br>
         What's new:<br>
         <ul>
+          <li style="color:#007FFF">
+            Now you can save your results:<br>
+            In the results window tap/click <i class="fa fa-floppy-o" aria-hidden="true"></i>  , in the modal window type a name for that specific camp and click "Save".<br>
+            Your saved camps will appear in the <i class="fa fa-cog" aria-hidden="true"></i>  settings window where you can view and delete them.
+          </li>
           <li>At boot a web worker will be generated and will handle team calculations, this will prevent your browser from displaying the message "This page is not responding".<br>
           This tool can calculate all 35.208.615 possible combinations without crashing (it has low RAM usage during calculation) but it will require a long time (13-17 minutes, locking a hero 20 seconds);
         </li>
@@ -531,9 +582,10 @@ span.heroImgList {
         <br><br>
         Todo:
         <ul>
-          <li>Add the possibility to save a specific result and check it any time</li>
+          <li></li>
         </ul>
         <br><br><br><br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
+        <br><br><br><br>
     </div>
     <div id="add_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} </span>
@@ -852,7 +904,8 @@ span.heroImgList {
           </tbody>
           <tbody>
             <tr v-for="(item, index) in risultati">
-              <td width="4%" style="padding-top: 30px;padding-bottom: 30px;">{{index+1}}</td>
+              <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index)"><i class="fa fa-floppy-o" aria-hidden="true" style="font-size:30px;"></i>
+                <br>{{index+1}}</td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[0]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[1]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[2]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
@@ -862,15 +915,37 @@ span.heroImgList {
             </tr>
           </tbody>
         </table>
-	<br><br><br><br> <!-- -->
+        <br><br><br><br> <!-- -->
     </div>
     <div id="settings_window" style="display:none;">
       <h2>{{strings.impostazioni}}</h2><br>
-      <span style="position:relative;top:8px;">Night mode: </span>
-                                <label class="switch" style="position: relative">
-                                  <input type="checkbox" id="darkModeCheck" name="darkModeCheck" onchange="toggleCheck()">
-                                  <span class="slider round"></span>
-                                </label>
+      <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
+        <tr v-for="key in displaySavedCamps" style="max-height:55px">
+          <td v-on:click="mostraRisultatoSalvato(key)" style="max-height:550px">
+            <div style="max-height:55px">
+              <span>{{key}}<span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="max-height:55px">
+              <span>
+              Night mode
+              </span>
+              <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
+                <label class="switch" style="position:absolute;">
+                  <input type="checkbox" id="darkModeCheck" name="darkModeCheck" onchange="toggleCheck()">
+                  <i class="slider round"></i>
+                </label>
+              </i>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+
+
     </div>
     <div id="toolbar" class="icon-bar"> <!-- nascondi toolbar durante il calcolo -->
       <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
@@ -882,6 +957,7 @@ span.heroImgList {
       </span>
       <span id="icon-bar_settings_window" onclick="setWindow('settings_window')"><!--&#9881;--><i class="fa fa-cog"></i></span>
     </div>
+
      <!-- Mostra durante il calcolo -->
       <div  v-show="isLoadingResults" id="loading_camp_results">
         <div style="opacity: 0.3;filter: alpha(opacity=30);height:100%;width:100%;position:fixed;"></div> <!-- prevent user from changing menu -->
@@ -901,6 +977,7 @@ span.heroImgList {
         </div>
       </div>
     </div>
+    <div id="snackbar"></div> <!-- messaggio avvisi -->
   </div><!-- div id = app -->
 
 
@@ -967,25 +1044,19 @@ span.heroImgList {
       };  
     };
 
+  $(function() {
+    $('#saveCamp').submit(function(event) {
+      var $form = $(this);
+      var campName = $('#camp_name', $form).val();
+      console.log(campName)
+      console.log($form)
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    });
+  });
 
-    function logout() {
-        $.ajax({
-          type: 'POST',
-          contentType: 'application/json',
-          url: "logout",
-          data: "",
-          success: function(html) {
-            window.location.href='/'
-          },
-          error: function(html) {
-            // in caso di errore
-          }
-        });
-        event.preventDefault();
-    };
-
-
-  <!-- google --> 
+  
+  // google 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -1053,6 +1124,8 @@ span.heroImgList {
               noS1debuffs: false,
               noDebuffs:  false,
               risultati: [],
+              savedCamps: JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}"),
+              displaySavedCamps: Object.keys(JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}")),
 	            displayStyle: "grid",
 	            isLoadingResults: false,
               inizializzazione: false, //nascondi tutto durante il caricamento iniziale di vue
@@ -1111,8 +1184,92 @@ span.heroImgList {
             } else { // già locked -> sblocca
               this.locked.splice(this.locked.indexOf(hero), 1)
             };
-                },
-            setDisplayStyle: function(layout, sezione) {
+          },
+          mostraSalvaRisultato: function (n) {
+            $( "#calculate_window" ).append(`
+              <div id="saveCamp" class="modal" style="padding-top: 60px;display:block;">
+                <form class="modal-content animate" id="saveCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
+                  <div class="imgcontainer">
+                    <p>Morale: ` + this.risultati[n].morale + `</p>
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[0]].id + `_s.png" style="height:55px;width:55px;">
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[1]].id + `_s.png" style="height:55px;width:55px;">
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[2]].id + `_s.png" style="height:55px;width:55px;">
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[3]].id + `_s.png" style="height:55px;width:55px;">
+                    <p>` + 
+                      this.risultati[n].migliorPG1 + `: <i>`+ this.risultati[n].opzioneMigliore1 + `</i><br>` +
+                      this.risultati[n].migliorPG2 + `: <i>`+ this.risultati[n].opzioneMigliore2 +
+                    `</i></p>
+                  </div>
+                  <div id="campSavingError" style="text-align:center;color:red;"></div>
+                  <div class="container">
+                    <label for="camp_name"><b>Camp name</b></label>
+                    <input type="text" placeholder="Your camp's name" name="camp_name" id="camp_name" required="">
+                    <button type="button" onclick="app.salvaRisultato(` + n + `)" class="button_login">Save</button>
+                    <button type="button" onclick="$('#saveCamp').remove()" class="button_cancelbtn">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            `);
+          },
+          salvaRisultato: function (n) {
+            var $form = $("#saveCamp");
+            var campName = $('#camp_name', $form).val().replace(/  +/g,"").trim();
+            if (campName && campName != "") {
+              if (!this.savedCamps[campName]) {
+                this.savedCamps[campName] = this.risultati[n];
+                $('#saveCamp').remove();
+                localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
+                this.displaySavedCamps = Object.keys(this.savedCamps); // aggionra la lista da visulizzare
+
+                $( "#snackbar" ).text(campName + ` saved successfully!`);
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+              } else {
+                $("#campSavingError").text(`You are already using this name!`);
+              };
+            } else {
+              $("#campSavingError").text(`Name is required!`);
+            }; 
+          },
+          eliminaRisultatoSalvato: function (campName) {
+            try {
+                delete this.savedCamps[campName];
+                $('#savedCamp').remove();
+                localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
+                this.displaySavedCamps = Object.keys(this.savedCamps); // aggionra la lista da visulizzare
+                $( "#snackbar" ).text(campName + ` deleted!`);
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            } catch {
+              console.log("Error while removing camp")
+            };
+          },
+          mostraRisultatoSalvato: function (campName) {
+            $( "#settings_window" ).append(`
+              <div id="savedCamp" class="modal" style="padding-top: 60px;display:block;">
+                <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
+                  <div class="imgcontainer">
+                    <span onclick="app.eliminaRisultatoSalvato('` + campName + `')"><i class="fa fa-trash close" style="color: var(--font-color);"></i></span>
+                    <p>Morale: ` + this.savedCamps[campName].morale + `</p>
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png" style="height:55px;width:55px;">
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png" style="height:55px;width:55px;">
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png" style="height:55px;width:55px;">
+                    <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png" style="height:55px;width:55px;">
+                    <p>` + 
+                      this.savedCamps[campName].migliorPG1 + `: <i>`+ this.savedCamps[campName].opzioneMigliore1 + `</i><br>` +
+                      this.savedCamps[campName].migliorPG2 + `: <i>`+ this.savedCamps[campName].opzioneMigliore2 +
+                    `</i></p>
+                  </div>
+                  <div class="container">
+                    <button type="button" onclick="$('#savedCamp').remove()" class="button_cancelbtn">Back</button>
+                  </div>
+                </form>
+              </div>
+            `);
+          },
+          setDisplayStyle: function(layout, sezione) {
                   var add_window = document.getElementById("pulsanti_display_add_window").getElementsByClassName("search_hero_filter");
                   add_window[0].className = "search_hero_filter";
                   add_window[1].className = "search_hero_filter";

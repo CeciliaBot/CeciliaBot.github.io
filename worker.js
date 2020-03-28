@@ -86,6 +86,5 @@ onmessage = function(e) {
                              };
             });
             e.risultati.sort(function (a,b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0: 1))}); // riordina l'ultimo elemento aggiunto
-            console.log(e.risultati)
             postMessage(e.risultati);
 }
