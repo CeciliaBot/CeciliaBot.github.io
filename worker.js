@@ -113,6 +113,7 @@ onmessage = function(e) {
                             if (tmp.includes(campList[i]) ) {campList.splice(i, 1);i--}
                         };
                         if ( (e.cartesianLock.length + e.locked.length) < 5 ) {
+                            if (campList.length < 1 ) campList = ["1"]; // evita errore RangeError
                             c = printCombos(e.cartesianLock);
                             c.forEach( (cartesianLocked) => {
                                     Combinatorics.bigCombination(campList,4-e.locked.length-cartesianLocked.length).forEach(teamComb => {
