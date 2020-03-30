@@ -2,6 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 <meta name="viewport" content="initial-scale=0.6, user-scalable=no">
+<title>E7 Camp Simulator</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5"></script>
 <!--<script src="vue.js"></script>-->
@@ -584,6 +585,11 @@ span.heroImgList {
         <br><br>
         What's new:<br>
         <ul>
+          <li>
+            Added Notifications in settings:<br>
+            Enable to recive a notification when the page is done calculating results.<br>
+            This function is useful if you are on PC and have a large roster, this page will only sand the notification if the page is in background and will not send you any other kind of notification!
+          </li>
           <li style="color:rgb(0, 255, 136)">
             Added Multi-lock:<br>
             Add your heroes to one of the 4 slots (each slot is a space in your team), if you add 2 or more heroes into the same slot only one of them will be in each team!
@@ -970,6 +976,21 @@ span.heroImgList {
             </div>
           </td>
         </tr>
+        <tr>
+          <td>
+            <div style="max-height:55px">
+              <span>
+              Enable notifications (PC)
+              </span>
+              <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
+                <label class="switch" style="position:absolute;">
+                  <input type="checkbox" id="notifications_toggle" name="notifications_toggle" onchange="askNotificationPermission()">
+                  <i class="slider round"></i>
+                </label>
+              </i>
+            </div>
+          </td>
+        </tr>
       </table>
 
 
@@ -1072,16 +1093,64 @@ span.heroImgList {
       };  
     };
 
-  $(function() {
-    $('#saveCamp').submit(function(event) {
-      var $form = $(this);
-      var campName = $('#camp_name', $form).val();
-      console.log(campName)
-      console.log($form)
-      event.preventDefault();
-      event.stopImmediatePropagation();
-    });
-  });
+  var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+  // NOTIFICATION
+  function checkNotificationPromise() {
+    try {
+      Notification.requestPermission().then();
+    } catch(e) {
+      return false;
+    }
+
+    return true;
+  }
+  var riceviNotifiche = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : '{"notification":false}').notification;
+
+  if (riceviNotifiche === true) {
+    var checkBoxes = $("#notifications_toggle");
+    checkBoxes.attr('checked', true);
+  };
+  function switchNotifiche() {
+    if ('permissions' in navigator) {
+          if (riceviNotifiche == true) {
+            riceviNotifiche = false;
+            document.getElementById("notifications_toggle").checked = false;
+          } else {
+            riceviNotifiche = true;
+            document.getElementById("notifications_toggle").checked = true;
+          };
+          app.writeSettings();
+    };
+  };
+
+function askNotificationPermission() {
+  // Chiedi il permesso
+  function handlePermission(permission) {
+    // Conserva l'informazione
+    if(!('permission' in Notification)) {
+      Notification.permission = permission;
+    }
+    if (permission == "granted") {
+      switchNotifiche();
+    } else document.getElementById("notifications_toggle").checked = false;
+  };
+
+  // Controlla se il browser supporta notifiche
+  if (!(Notification)) {
+    console.log("This browser does not support notifications.");
+  } else {
+        if(checkNotificationPromise()) {
+          Notification.requestPermission()
+          .then((permission) => {
+            handlePermission(permission);
+          });
+        } else {
+          Notification.requestPermission(function(permission) {
+            handlePermission(permission);
+          });
+        };
+  };
+};
 
 
   // google 
@@ -1215,6 +1284,9 @@ span.heroImgList {
             } else { // già locked -> sblocca
               this.locked.splice(this.locked.indexOf(hero), 1)
             };
+          },
+          writeSettings: function() {
+            localStorage.setItem('Settings', JSON.stringify({notification: riceviNotifiche}) );
           },
           showAddCartesian_lock: function (n) {
             var eroiSelezionabili = "";
@@ -1515,7 +1587,12 @@ span.heroImgList {
   var camperino = new Worker('./worker.js');
   camperino.onmessage = function(e) {
      app.isLoadingResults = false; // disattiva angelica
-     app.risultati = e.data;
+     if (riceviNotifiche == true) {
+      if (document.visibilityState != 'visible') {
+        var notification = new Notification('Epic Seven Camp Simulator', { body: "Your results are rady!", icon: "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" }); // manda notifica di completamento
+      };
+    };
+    app.risultati = e.data;
   }  
 
   </script>
