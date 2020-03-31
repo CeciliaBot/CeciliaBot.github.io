@@ -8,7 +8,7 @@
 <!--<script src="vue.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 :root {
@@ -20,6 +20,7 @@
     --search-border-color: #666666;
     --colore-check-eroi:green;
 }
+
 
   /* variabili del tema*/
 [data-theme="dark"] {
@@ -532,7 +533,6 @@ span.heroImgList {
 }
 
 
-
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -865,22 +865,22 @@ span.heroImgList {
     <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.classe}}:</center>
         <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.knight}}</p></label>
+        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_knight_label">{{strings.knight}}</p></label>
 
         <input type="checkbox" id="checkbox_thief" name="classe" value="assassin" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.thief}}</p></label>
+        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_thief_label">{{strings.thief}}</p></label>
 
         <input type="checkbox" id="checkbox_warrior" name="classe" value="warrior" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.warrior}}</p></label>
+        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_warrior_label">{{strings.warrior}}</p></label>
       
         <input type="checkbox" id="checkbox_ranger" name="classe" value="ranger" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.ranger}}</p></label>
+        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_ranger_label">{{strings.ranger}}</p></label>
       
         <input type="checkbox" id="checkbox_mage" name="classe" value="mage" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.mage}}</p></label>
+        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_mage_label">{{strings.mage}}</p></label>
       
         <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-35px;text-align:center;">{{strings["soul-weaver"]}}</p></label>
+        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
     </div>
     <br><br>
     <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
@@ -940,9 +940,9 @@ span.heroImgList {
         <table>
           <tbody>
             <th></th>
-            <th colspan="4">Team</th>
-            <th>Topics</th>
-            <th>Morale</th>
+            <th colspan="4">{{strings.team}}</th>
+            <th>{{strings.topics}}</th>
+            <th>{{strings.morale}}</th>
           </tbody>
           <tbody>
             <tr v-for="(item, index) in risultati">
@@ -952,7 +952,7 @@ span.heroImgList {
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[1]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[2]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[3]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
-              <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <i>{{translateTopics(item.opzioneMigliore1)}}</i><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <i>{{translateTopics(item.opzioneMigliore2)}}</i></td>
+              <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore1)}}</a><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore2)}}</a></td>
               <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
             </tr>
           </tbody>
@@ -1627,7 +1627,7 @@ function askNotificationPermission() {
                   impostazioni: "Impostazioni",
                   tema_notturno: "Tema notturno",
                   notifiche: "Notifiche",
-                  language: "Lingua"
+                  language: "Lingua"                  
                 };
 
               } else if (this.lingua == "zht") {
@@ -1651,7 +1651,7 @@ function askNotificationPermission() {
                   "soul-weaver": "精靈師",
                   fire: "火焰屬性",
                   ice: "寒氣屬性",
-                  earth: "自",
+                  earth: "自然屬性",
                   light: "光明屬性",
                   dark: "黑暗屬性",
                   elemento: "属性",
@@ -1687,7 +1687,7 @@ function askNotificationPermission() {
                   tema_notturno: "夜间模式",
                   notifiche: "启用通知",
                   language: "语言"
-                };
+                };               
 
               } else {
                 //this.lingua = "en";
@@ -1785,6 +1785,9 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Burn";
                 this.debuffList["stic_vampire"].name = "Vampire";
                 this.debuffList["stic_bomb"].name = "Bomb";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               } else if (this.lingua == "jp") {
                 this.buffList["stic_debuf_impossible"].name = "弱体効果免疫";
                 this.buffList["stic_att_up"].name = "攻撃力UP";
@@ -1832,6 +1835,9 @@ function askNotificationPermission() {
                 this.strings["earth"] = "木属性";
                 this.strings["light"] = "光属性";
                 this.strings["dark"] = "闇属性";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-45px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-45px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-45px";
               } else if (this.lingua == "kr") {
                 this.buffList["stic_debuf_impossible"].name = "면역";
                 this.buffList["stic_att_up"].name = "공격력 증가";
@@ -1879,6 +1885,9 @@ function askNotificationPermission() {
                 this.strings["earth"] = "자연속성";
                 this.strings["light"] = "광속성";
                 this.strings["dark"] = "암속성";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               } else if (lingua == "zht") {
                 this.buffList["stic_debuf_impossible"].name = "免疫";
                 this.buffList["stic_att_up"].name = "攻擊力增加";
@@ -1914,6 +1923,9 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "燒傷";
                 this.debuffList["stic_vampire"].name = "吸血之手";
                 this.debuffList["stic_bomb"].name = "炸彈";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               };
             },
       translateTopics: function (n) {
