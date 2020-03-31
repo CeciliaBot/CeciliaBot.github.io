@@ -8,7 +8,7 @@
 <!--<script src="vue.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 :root {
@@ -880,7 +880,7 @@ span.heroImgList {
         <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.mage}}</p></label>
       
         <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-35px;text-align:center;">{{strings["soul-weaver"]}}</p></label>
+        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings["soul-weaver"]}}</p></label>
     </div>
     <br><br>
     <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
@@ -940,9 +940,9 @@ span.heroImgList {
         <table>
           <tbody>
             <th></th>
-            <th colspan="4">Team</th>
-            <th>Topics</th>
-            <th>Morale</th>
+            <th colspan="4">{{strings.team}}</th>
+            <th>{{strings.topics}}</th>
+            <th>{{strings.morale}}</th>
           </tbody>
           <tbody>
             <tr v-for="(item, index) in risultati">
@@ -1651,7 +1651,7 @@ function askNotificationPermission() {
                   "soul-weaver": "精靈師",
                   fire: "火焰屬性",
                   ice: "寒氣屬性",
-                  earth: "自",
+                  earth: "自然屬性",
                   light: "光明屬性",
                   dark: "黑暗屬性",
                   elemento: "属性",
