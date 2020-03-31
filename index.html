@@ -1391,9 +1391,9 @@ function askNotificationPermission() {
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[2]].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[3]].id + `_s.png" style="height:55px;width:55px;">
                     <p>` + 
-                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG1)._id) + `: <i>`+ this.translateTopics(this.risultati[n].opzioneMigliore1) + `</i><br>` +
-                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG2)._id) + `: <i>`+ this.translateTopics(this.risultati[n].opzioneMigliore2) +
-                    `</i></p>
+                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG1)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore1) + `<br>` +
+                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG2)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore2) +
+                    `</p>
                   </div>
                   <div id="campSavingError" style="text-align:center;color:red;"></div>
                   <div class="container">
@@ -1453,9 +1453,9 @@ function askNotificationPermission() {
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png" style="height:55px;width:55px;">
                     <p>` + 
-                      this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG1)._id) + `: <i>`+ this.translateTopics(this.savedCamps[campName].opzioneMigliore1) + `</i><br>` +
-                      this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG2)._id) + `: <i>`+ this.translateTopics(this.savedCamps[campName].opzioneMigliore2) +
-                    `</i></p>
+                      this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG1)._id) + `: `+ this.translateTopics(this.savedCamps[campName].opzioneMigliore1) + `<br>` +
+                      this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG2)._id) + `: `+ this.translateTopics(this.savedCamps[campName].opzioneMigliore2) +
+                    `/p>
                   </div>
                   <div class="container">
                     <button type="button" onclick="$('#savedCamp').remove()" class="button_cancelbtn">` + this.strings.back_btn + `</button>
