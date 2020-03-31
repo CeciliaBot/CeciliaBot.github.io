@@ -865,19 +865,19 @@ span.heroImgList {
     <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.classe}}:</center>
         <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.knight}}</p></label>
+        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_knight_label">{{strings.knight}}</p></label>
 
         <input type="checkbox" id="checkbox_thief" name="classe" value="assassin" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.thief}}</p></label>
+        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_thief_label">{{strings.thief}}</p></label>
 
         <input type="checkbox" id="checkbox_warrior" name="classe" value="warrior" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.warrior}}</p></label>
+        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_warrior_label">{{strings.warrior}}</p></label>
       
         <input type="checkbox" id="checkbox_ranger" name="classe" value="ranger" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.ranger}}</p></label>
+        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_ranger_label">{{strings.ranger}}</p></label>
       
         <input type="checkbox" id="checkbox_mage" name="classe" value="mage" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.mage}}</p></label>
+        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_mage_label">{{strings.mage}}</p></label>
       
         <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
         <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
@@ -1785,6 +1785,8 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Burn";
                 this.debuffList["stic_vampire"].name = "Vampire";
                 this.debuffList["stic_bomb"].name = "Bomb";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
                 document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               } else if (this.lingua == "jp") {
                 this.buffList["stic_debuf_impossible"].name = "弱体効果免疫";
@@ -1833,7 +1835,9 @@ function askNotificationPermission() {
                 this.strings["earth"] = "木属性";
                 this.strings["light"] = "光属性";
                 this.strings["dark"] = "闇属性";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-45px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-45px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-45px";
               } else if (this.lingua == "kr") {
                 this.buffList["stic_debuf_impossible"].name = "면역";
                 this.buffList["stic_att_up"].name = "공격력 증가";
@@ -1881,6 +1885,8 @@ function askNotificationPermission() {
                 this.strings["earth"] = "자연속성";
                 this.strings["light"] = "광속성";
                 this.strings["dark"] = "암속성";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
                 document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               } else if (lingua == "zht") {
                 this.buffList["stic_debuf_impossible"].name = "免疫";
@@ -1917,6 +1923,8 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "燒傷";
                 this.debuffList["stic_vampire"].name = "吸血之手";
                 this.debuffList["stic_bomb"].name = "炸彈";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
                 document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               };
             },
