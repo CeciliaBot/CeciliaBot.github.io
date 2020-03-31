@@ -21,6 +21,7 @@
     --colore-check-eroi:green;
 }
 
+
   /* variabili del tema*/
 [data-theme="dark"] {
     --primary-color: #9A97F3;
@@ -532,7 +533,6 @@ span.heroImgList {
 }
 
 
-
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -880,7 +880,7 @@ span.heroImgList {
         <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.mage}}</p></label>
       
         <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings["soul-weaver"]}}</p></label>
+        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
     </div>
     <br><br>
     <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
@@ -952,7 +952,7 @@ span.heroImgList {
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[1]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[2]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[3]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
-              <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <i>{{translateTopics(item.opzioneMigliore1)}}</i><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <i>{{translateTopics(item.opzioneMigliore2)}}</i></td>
+              <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore1)}}</a><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <i>{{translateTopics(item.opzioneMigliore2)}}</i></td>
               <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
             </tr>
           </tbody>
@@ -1627,7 +1627,7 @@ function askNotificationPermission() {
                   impostazioni: "Impostazioni",
                   tema_notturno: "Tema notturno",
                   notifiche: "Notifiche",
-                  language: "Lingua"
+                  language: "Lingua"                  
                 };
 
               } else if (this.lingua == "zht") {
@@ -1687,7 +1687,7 @@ function askNotificationPermission() {
                   tema_notturno: "夜间模式",
                   notifiche: "启用通知",
                   language: "语言"
-                };
+                };               
 
               } else {
                 //this.lingua = "en";
@@ -1785,6 +1785,7 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Burn";
                 this.debuffList["stic_vampire"].name = "Vampire";
                 this.debuffList["stic_bomb"].name = "Bomb";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               } else if (this.lingua == "jp") {
                 this.buffList["stic_debuf_impossible"].name = "弱体効果免疫";
                 this.buffList["stic_att_up"].name = "攻撃力UP";
@@ -1832,6 +1833,7 @@ function askNotificationPermission() {
                 this.strings["earth"] = "木属性";
                 this.strings["light"] = "光属性";
                 this.strings["dark"] = "闇属性";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               } else if (this.lingua == "kr") {
                 this.buffList["stic_debuf_impossible"].name = "면역";
                 this.buffList["stic_att_up"].name = "공격력 증가";
@@ -1879,6 +1881,7 @@ function askNotificationPermission() {
                 this.strings["earth"] = "자연속성";
                 this.strings["light"] = "광속성";
                 this.strings["dark"] = "암속성";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               } else if (lingua == "zht") {
                 this.buffList["stic_debuf_impossible"].name = "免疫";
                 this.buffList["stic_att_up"].name = "攻擊力增加";
@@ -1914,6 +1917,7 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "燒傷";
                 this.debuffList["stic_vampire"].name = "吸血之手";
                 this.debuffList["stic_bomb"].name = "炸彈";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               };
             },
       translateTopics: function (n) {
