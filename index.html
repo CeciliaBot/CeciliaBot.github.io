@@ -578,13 +578,19 @@ span.heroImgList {
 
 </style>
 </head>
-<body onload="app.impostaLingua(); app.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes')">
+<body onload="app.impostaLingua(); app.inizializzaione(); app.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes')">
   <div id="app"><!-- vue.js -->
     <div id="welcome" style="display: '';">
-        <h2>{{strings.messaggio_di_benvenuto}}<br><font color="red">Data by EpicSevenDB</font></h2>
+        <h2>{{strings.messaggio_di_benvenuto}}<br><font color="red">{{strings.data_by}}</font></h2>
         <br><br>
         What's new:<br>
         <ul>
+          <li style="color:rgb(0, 255, 136)">
+            Added Japanese, Chinese (S) and Korean languages:<br>
+            Japanese and Korean are missing menu translation but game data is translated, Chinese (S) has full translation menus + game data.<br>
+            Thanks to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the Chinese translation.<br>
+            By default ENG is selected to change language go to Settings.
+          </li>
           <li>
             Added Notifications in settings:<br>
             Enable to recive a notification when the page is done calculating results.<br>
@@ -603,13 +609,15 @@ span.heroImgList {
           This tool can calculate all 35.208.615 possible combinations without crashing (it has low RAM usage during calculation) but it will require a long time (13-17 minutes, locking a hero 20 seconds);
         </li>
       </ul>
-        <br><br><br><br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
-	<br>Discord: gio#0898
+        <br><br><br><br>
+        Chinese translation: TriATK
+        <br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
+	      <br>Discord: gio#0898
         <br><br><br><br>
     </div>
     <div id="add_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} </span>
-	<input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" placeholder="Search..." title="Type in a name">
+	<input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
           <div id="pulsanti_display_add_window" style="display:inline">
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
@@ -623,7 +631,7 @@ span.heroImgList {
       <div style="display:inline-block;width:100%;height:100%;">
         <div class="search_hero_area" id="filter_all_rarity">
           <button class="search_hero_filter active" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="*">
-            <div>All</div>
+            <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="3">
             <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
@@ -637,7 +645,7 @@ span.heroImgList {
         </div>
         <div class="search_hero_area">
           <button class="search_hero_filter active" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="*">
-            <div>All</div>
+            <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="fire">
             <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png">
@@ -657,7 +665,7 @@ span.heroImgList {
         </div>
         <div class="search_hero_area">
           <button class="search_hero_filter active" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="*">
-            <div>All</div>
+            <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="knight">
             <!-- <span>knight</span> -->
@@ -710,7 +718,7 @@ span.heroImgList {
             <td>
               <div>
                 <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key).name)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
-		            <span>{{ thisHeroData(key).name }}</span>
+		            <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
 		            <template v-if="isInTeam(thisHeroData(key).name) === 'none'">  <!-- già aggiunto -->
                   <span v-on:click="addHero(thisHeroData(key).name)" class="fa fa-plus displaylistTableIcons">   </span>
                 </template>
@@ -728,7 +736,7 @@ span.heroImgList {
     </div>
     <div id="manage_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.i_tuoi_eroi}}          <font style="position:relative;top:0;color:red;font-size:12px;">({{rosterLength}})</font></span>
-          <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInMyHeroes" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" placeholder="Search..." title="Type in a name">
+          <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInMyHeroes" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
           <div id = "pulsanti_display_manage_window" style="display:inline">
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
@@ -742,7 +750,7 @@ span.heroImgList {
       <div style="display:inline-block;width:100%;height:100%;">
         <div class="search_hero_area" id="filter_all_rarity">
           <button class="search_hero_filter active" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
-            <div>All</div>
+            <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="3">
             <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
@@ -756,7 +764,7 @@ span.heroImgList {
         </div>
         <div class="search_hero_area">
           <button class="search_hero_filter active" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
-            <div>All</div>
+            <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="fire">
             <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png">
@@ -776,7 +784,7 @@ span.heroImgList {
         </div>
         <div class="search_hero_area">
           <button class="search_hero_filter active" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
-            <div>All</div>
+            <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="knight">
             <!-- <span>knight</span> -->
@@ -800,7 +808,7 @@ span.heroImgList {
         </div>
         <div class="search_hero_area">
           <button class="search_hero_filter active" name="filter_locked_only" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="false">
-            <div style="max-height:20px;">All</div>
+            <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_locked_only" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="true"> <!-- di default nascondi eroi già aggiunti -->
             <div style="max-height:20px;"><i class="fa fa-lock"></i></div>
@@ -828,7 +836,7 @@ span.heroImgList {
             <td>
               <div>
                 <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key).name)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
-		             <span>{{ thisHeroData(key).name }}</span>
+		             <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
                  <span v-on:click="app.removeHero(thisHeroData(key).name)" class="fa fa-trash displaylistTableIcons" aria-hidden="true"></span>
 		             <template v-if="isLocked(thisHeroData(key).name) === 'none'">  <!-- non lockato -->
                    <span class="fa fa-unlock-alt displaylistTableIcons" v-on:click="app.lockHero(key)"></span>
@@ -855,47 +863,47 @@ span.heroImgList {
 		<input type="checkbox" id="noDebuffs" name="noDebuffs" value="noDebuffs" onclick="app.aggiornaImposatazioniAvanzate()">
 		<label for="noDebuffs">{{strings.no_debuffs}}</label><br><br>
     <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
-      <center>{{strings.classe}}</center>
+      <center>{{strings.classe}}:</center>
         <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Knight</p></label>
+        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.knight}}</p></label>
 
         <input type="checkbox" id="checkbox_thief" name="classe" value="assassin" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Thief</p></label>
+        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.thief}}</p></label>
 
         <input type="checkbox" id="checkbox_warrior" name="classe" value="warrior" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Warrior</p></label>
+        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.warrior}}</p></label>
       
         <input type="checkbox" id="checkbox_ranger" name="classe" value="ranger" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Ranger</p></label>
+        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.ranger}}</p></label>
       
         <input type="checkbox" id="checkbox_mage" name="classe" value="mage" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Mage</p></label>
+        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.mage}}</p></label>
       
         <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-35px;text-align:center;">Soul Weaver</p></label>
+        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-35px;text-align:center;">{{strings["soul-weaver"]}}</p></label>
     </div>
     <br><br>
     <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
-      <center>{{strings.elemento}}</center>
+      <center>{{strings.elemento}}:</center>
         <input type="checkbox" id="checkbox_fire" name="elemento" value="fire" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_fire" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Fire</p></label>
+        <label for="checkbox_fire" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.fire}}</p></label>
 
         <input type="checkbox" id="checkbox_ice" name="elemento" value="ice" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ice" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Ice</p></label>
+        <label for="checkbox_ice" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.ice}}</p></label>
 
         <input type="checkbox" id="checkbox_earth" name="elemento" value="wind" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_earth" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Earth</p></label>
+        <label for="checkbox_earth" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.earth}}</p></label>
       
         <input type="checkbox" id="checkbox_light" name="elemento" value="light" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_light" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Light</p></label>
+        <label for="checkbox_light" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.light}}</p></label>
       
         <input type="checkbox" id="checkbox_dark" name="elemento" value="dark" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_dark" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">Dark</p></label>
+        <label for="checkbox_dark" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.dark}}</p></label>
       
     </div>
     <br><br>
     <div id="advanced_buff" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
-      <center>Buff:</center>
+      <center>{{strings.buff}}:</center>
       <span v-for="(value,key) in buffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:200px;padding-bottom:10px;">
         <input type="checkbox" v-bind:id="'checkbox_'+ key" name="buff" v-bind:value="value.id" style="position:relative;top:0px;display:none" onclick="app.aggiornaImposatazioniAvanzate()">
         <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0px;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" /></label>
@@ -904,7 +912,7 @@ span.heroImgList {
     </div>
     <br><br>
     <div id="advanced_debuff" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
-      <center>Debuff:</center>
+      <center>{{strings.debuff}}:</center>
       <span v-for="(value,key) in debuffList" style="display:inline-block;text-align:center;padding-bottom:10px;">
         <input type="checkbox" v-bind:id="'checkbox_'+ key" name="debuff" v-bind:value="value.id" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
         <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" /></label>
@@ -913,12 +921,12 @@ span.heroImgList {
     </div>
     <br><br>
     <div id="advanced_cartesian" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
-      <center>Multi-lock (Cartesian Product)<i style="color:red">(Beta)</i></center>
+      <center>{{strings.multilock}}<i style="color:red">(Beta)</i></center>
       <div v-for="(key,index) in cartesian_lock" style="display:inline-block;margin:20px;width:300px">
-        Slot {{index+1}}
-        <button type="button" v-on:click="showAddCartesian_lock(index)" class="button_login">Add to this slot</button>
+        {{strings.multilock_slot}} {{index+1}}
+        <button type="button" v-on:click="showAddCartesian_lock(index)" class="button_login">{{strings.add_to_slot}}</button>
         <div style="height:300px;max-height:300px;width:90%;max-width:300px;background-color:var(--bg-color);display:block;color:var(--font-color);overflow:scroll;overflow-x: hidden;padding-left:10px;padding-top:10px;padding-right:10px;-ms-overflow-style:none;">
-          <span v-for="(key,i) in cartesian_lock[index]" style="display:inline-block;position:relative;width:100%">{{key}}<span class="removecartesian" style="position:relative;float:right;font-size:16px;" v-on:click="removeCartesian_lock(index, i)">X</span></span>
+          <span v-for="(key,i) in cartesian_lock[index]" style="display:inline-block;position:relative;width:100%">{{thisHeroTranslatedName(thisHeroData(key)._id)}}<span class="removecartesian" style="position:relative;float:right;font-size:16px;" v-on:click="removeCartesian_lock(index, i)">X</span></span>
         </div>
       </div>
     </div>
@@ -944,7 +952,7 @@ span.heroImgList {
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[1]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[2]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
               <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[3]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
-              <td class="topics"><b>{{item.migliorPG1}}</b>: <i>{{capitalize(item.opzioneMigliore1)}}</i><br><b>{{item.migliorPG2}}</b>: <i>{{capitalize(item.opzioneMigliore2)}}</i></td>
+              <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <i>{{translateTopics(item.opzioneMigliore1)}}</i><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <i>{{translateTopics(item.opzioneMigliore2)}}</i></td>
               <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
             </tr>
           </tbody>
@@ -965,7 +973,7 @@ span.heroImgList {
           <td>
             <div style="max-height:55px">
               <span>
-              Night mode
+                {{strings.tema_notturno}}
               </span>
               <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
                 <label class="switch" style="position:absolute;">
@@ -980,7 +988,7 @@ span.heroImgList {
           <td>
             <div style="max-height:55px">
               <span>
-              Enable notifications
+                {{strings.notifiche}}
               </span>
               <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
                 <label class="switch" style="position:absolute;">
@@ -991,9 +999,19 @@ span.heroImgList {
             </div>
           </td>
         </tr>
+        <tr>
+          <td v-on:click="menuLingua()">
+            <div style="max-height:55px">
+              <span>
+                {{strings.language}}
+              </span>
+              <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:20px;">
+                >
+              </i>
+            </div>
+          </td>
+        </tr>
       </table>
-
-
 
     </div>
     <div id="toolbar" class="icon-bar"> <!-- nascondi toolbar durante il calcolo -->
@@ -1229,7 +1247,9 @@ function askNotificationPermission() {
 	            displayStyle: "grid",
 	            isLoadingResults: false,
               inizializzazione: false, //nascondi tutto durante il caricamento iniziale di vue
-              numeroCombinazioniPossibili: "/"
+              numeroCombinazioniPossibili: "/",
+              lingua: "en",
+              translatedName:{}
             }
         },
         methods: {
@@ -1238,6 +1258,9 @@ function askNotificationPermission() {
           },
           thisHeroData: function(hero) {
             return this.heroList[hero]
+          },
+          thisHeroTranslatedName: function(heroid) {
+            return this.translatedName[heroid]
           },
           capitalize: function(string) {
               return string[0].toUpperCase() + string.slice(1).replace(/-/gi," "); 
@@ -1286,7 +1309,36 @@ function askNotificationPermission() {
             };
           },
           writeSettings: function() {
-            localStorage.setItem('Settings', JSON.stringify({notification: riceviNotifiche}) );
+            localStorage.setItem('Settings', JSON.stringify({notification: riceviNotifiche, lingua: this.lingua}) );
+          },
+          menuLingua: function () {
+            $( "#settings_window" ).append(`
+              <div>
+                <div id="menu_lingua" class="modal" style="padding-top: 60px;display:block;">
+                  <form class="modal-content animate" id="menu_lingua" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:1080px">
+                    <div class="imgcontainer">
+                    <center>` + this.strings.language + `</center><br>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" style="height:70px" onclick="app.cambiaLingua('en')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" style="height:70px"  onclick="app.cambiaLingua('kr')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" style="height:70px"  onclick="app.cambiaLingua('zht')">
+                    <br><br>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" style="height:70px"  onclick="app.cambiaLingua('jp')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" style="height:70px"  onclick="app.cambiaLingua('it')">
+                    </div>
+                    <div class="container">
+                      <button type="button" onclick="$('#menu_lingua').remove()" class="button_cancelbtn">` + this.strings.back_btn + `</button>
+                    </div>
+                  </form>
+                </div>
+              </div>`
+            )
+          },
+          cambiaLingua: function (n) {
+            this.lingua = n;
+            this.writeSettings();
+            this.inizializzaione();
+            this.impostaLingua();
+            $('#menu_lingua').remove();
           },
           showAddCartesian_lock: function (n) {
             var eroiSelezionabili = "";
@@ -1308,8 +1360,8 @@ function askNotificationPermission() {
                       +
                     `</div>
                     <div class="container">
-                      <button type="button" onclick="app.addCartesian_lock(` + n  +`)" class="button_login">Add selection</button>
-                      <button type="button" onclick="$('#Cartesian_lock').remove()" class="button_cancelbtn">Back</button>
+                      <button type="button" onclick="app.addCartesian_lock(` + n  +`)" class="button_login">` + this.strings.add_selection + `</button>
+                      <button type="button" onclick="$('#Cartesian_lock').remove()" class="button_cancelbtn">` + this.strings.back_btn + `</button>
                     </div>
                   </form>
                 </div>
@@ -1333,22 +1385,22 @@ function askNotificationPermission() {
               <div id="saveCamp" class="modal" style="padding-top: 60px;display:block;">
                 <form class="modal-content animate" id="saveCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
-                    <p>Morale: ` + this.risultati[n].morale + `</p>
+                    <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[0]].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[1]].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[2]].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[this.risultati[n].team[3]].id + `_s.png" style="height:55px;width:55px;">
                     <p>` + 
-                      this.risultati[n].migliorPG1 + `: <i>`+ this.risultati[n].opzioneMigliore1 + `</i><br>` +
-                      this.risultati[n].migliorPG2 + `: <i>`+ this.risultati[n].opzioneMigliore2 +
+                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG1)._id) + `: <i>`+ this.translateTopics(this.risultati[n].opzioneMigliore1) + `</i><br>` +
+                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG2)._id) + `: <i>`+ this.translateTopics(this.risultati[n].opzioneMigliore2) +
                     `</i></p>
                   </div>
                   <div id="campSavingError" style="text-align:center;color:red;"></div>
                   <div class="container">
-                    <label for="camp_name"><b>Camp name</b></label>
-                    <input type="text" placeholder="Your camp's name" name="camp_name" id="camp_name" required="">
-                    <button type="button" onclick="app.salvaRisultato(` + n + `)" class="button_login">Save</button>
-                    <button type="button" onclick="$('#saveCamp').remove()" class="button_cancelbtn">Cancel</button>
+                    <label for="camp_name"><b>` + this.strings.camp_name_field + `</b></label>
+                    <input type="text" placeholder="` + this.strings.camp_name_placeholder + `" name="camp_name" id="camp_name" required="">
+                    <button type="button" onclick="app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
+                    <button type="button" onclick="$('#saveCamp').remove()" class="button_cancelbtn">` + this.strings.canc_btn + `</button>
                   </div>
                 </form>
               </div>
@@ -1364,15 +1416,15 @@ function askNotificationPermission() {
                 localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
                 this.displaySavedCamps = Object.keys(this.savedCamps); // aggionra la lista da visulizzare
 
-                $( "#snackbar" ).text(campName + ` saved successfully!`);
+                $( "#snackbar" ).text(campName + ` ` + this.strings.saved_message);
                 var x = document.getElementById("snackbar");
                 x.className = "show";
                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
               } else {
-                $("#campSavingError").text(`You are already using this name!`);
+                $("#campSavingError").text(this.strings.error_name_in_use);
               };
             } else {
-              $("#campSavingError").text(`Name is required!`);
+              $("#campSavingError").text(this.strings.error_no_name_provided);
             }; 
           },
           eliminaRisultatoSalvato: function (campName) {
@@ -1381,7 +1433,7 @@ function askNotificationPermission() {
                 $('#savedCamp').remove();
                 localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
                 this.displaySavedCamps = Object.keys(this.savedCamps); // aggionra la lista da visulizzare
-                $( "#snackbar" ).text(campName + ` deleted!`);
+                $( "#snackbar" ).text(campName + ` ` + this.strings.deleted_message);
                 var x = document.getElementById("snackbar");
                 x.className = "show";
                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
@@ -1395,18 +1447,18 @@ function askNotificationPermission() {
                 <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
                     <span onclick="app.eliminaRisultatoSalvato('` + campName + `')"><i class="fa fa-trash close" style="color: var(--font-color);"></i></span>
-                    <p>Morale: ` + this.savedCamps[campName].morale + `</p>
+                    <p>` + this.strings.morale + `: ` + this.savedCamps[campName].morale + `</p>
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png" style="height:55px;width:55px;">
                     <p>` + 
-                      this.savedCamps[campName].migliorPG1 + `: <i>`+ this.savedCamps[campName].opzioneMigliore1 + `</i><br>` +
-                      this.savedCamps[campName].migliorPG2 + `: <i>`+ this.savedCamps[campName].opzioneMigliore2 +
+                      this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG1)._id) + `: <i>`+ this.translateTopics(this.savedCamps[campName].opzioneMigliore1) + `</i><br>` +
+                      this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG2)._id) + `: <i>`+ this.translateTopics(this.savedCamps[campName].opzioneMigliore2) +
                     `</i></p>
                   </div>
                   <div class="container">
-                    <button type="button" onclick="$('#savedCamp').remove()" class="button_cancelbtn">Back</button>
+                    <button type="button" onclick="$('#savedCamp').remove()" class="button_cancelbtn">` + this.strings.back_btn + `</button>
                   </div>
                 </form>
               </div>
@@ -1455,7 +1507,7 @@ function askNotificationPermission() {
                   (HeroDB[tmpArray[i]].attribute != filtro.filter_element && filtro.filter_element != "*") || 
                   (HeroDB[tmpArray[i]].rarity != filtro.filter_rarity && filtro.filter_rarity != "*") ||
                   (filtro.filter_gia_aggiunti == "true" && this.myHeroesList[tmpArray[i]] ) ||
-                  (tmpArray[i].toLowerCase().indexOf(filtro.ricerca.toLowerCase()) == -1)
+                  (this.thisHeroTranslatedName(this.thisHeroData(tmpArray[i])._id).toLowerCase().indexOf(filtro.ricerca.toLowerCase()) == -1)
               ) {
                  tmpArray.splice(tmpArray.indexOf(tmpArray[i]), 1);
                  i--
@@ -1515,26 +1567,134 @@ function askNotificationPermission() {
                 } else this.noDebuffs = false;
             },
             impostaLingua: function () {
-              var language = window.navigator.userLanguage || window.navigator.language;
-              if (language == "it-IT") {
+              var lingua = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : '{"lingua":"en"}').lingua;
+              if (lingua == undefined) lingua = "en";
+              this.lingua = lingua;
+              //var language = window.navigator.userLanguage || window.navigator.language;
+              if (this.lingua == "it") {
                 this.strings = {
-                  messaggio_di_benvenuto: "Benvenuto su Epic 7 Camp Simulator",
-                  aggiungi: "Aggiungi ",
+                  messaggio_di_benvenuto: "Benvenuto su Epic Seven Camp simulator",
+                  data_by: "Data by EpicSevenDB",
+                  all: "All",
+                  aggiungi: "Aggiungi eroe",
                   i_tuoi_eroi: "I tuoi eroi",
-                  cerca_eroe: "Cerca eroe...",
-                  impostazioni_avanzate: "Impostazioni avanzate",
+                  cerca_eroe: "Cerca eroe..",
+                  impostazioni_avanzate: "Impostazioni Avanzate",
                   deve_contenere_AoE: "Team deve contenere AoE",
-                  no_s1_debuffs: "No S1 Debuffs (Esclusi: Provoke, Sleep e Stun)",
-                  no_debuffs: "No Debuffs (Except: Provoke, Sleep e Stun)",
-                  classe: "Classe:",
-                  elemento: "Elemento:",
-                  possibili_combinazioni: "Possibili combinazioni:",
+                  no_s1_debuffs: "No S1 Debuffs (Esclusi: Provoke, Sleep and Stun)",
+                  no_debuffs: "No Debuffs (Esclusi: Provoke, Sleep and Stun)",
+                  classe: "Classe",
+                  knight: "Knight",
+                  warrior: "Warrior",
+                  thief: "Thief",
+                  ranger: "Ranger",
+                  mage: "Mage",
+                  "soul-weaver": "Soul Weaver",
+                  fire: "Fire",
+                  ice: "Ice",
+                  earth: "Earth",
+                  light: "Light",
+                  dark: "Dark",
+                  elemento: "Elemento",
+                  buff: "Buff",
+                  debuff: "Debuff",
+                  combinations: "Combinazioni possibili",
+                  multilock: "Multi-lock (Cartesian Product)",
+                  multilock_slot: "Slot",
+                  add_to_slot: "Aggiungi a questo slot",
+                  add_selection: "Aggiungi selezionati",
+                  possibili_combinazioni: "Combinazioni:",
+
+                  //Results window
                   risultati: "Risultati",
-                  impostazioni: "Impostazioni"
+                  morale: "Morale",
+                  team: "Team",
+                  topics: "Topics",
+                  notification_title: "E7 Camp Simulator",
+                  notification_ready: "I tuoi team sono pronti!",
+
+                  ///Result saving window:
+                  camp_name_field: "Nome camp",
+                  camp_name_placeholder: "Inserisci il nome del tuo camp",
+                  save: "Salva",
+                  canc_btn: "Annulla",
+                  back_btn: "Indietro",
+                  error_no_name_provided: "Nome richiesto!",
+                  error_name_in_use: "Stai già utilizzando questo nome!",
+                  saved_message: "salvato con successo!",
+                  deleted_message: "eliminato!",
+
+                  impostazioni: "Impostazioni",
+                  tema_notturno: "Tema notturno",
+                  notifiche: "Notifiche",
+                  language: "Lingua"
                 };
+
+              } else if (this.lingua == "zht") {
+                this.strings = {
+                  messaggio_di_benvenuto: "欢迎使用第七史诗露营模拟器",
+                  data_by: "数据来源 EpicSevenDB",
+                  all: "全部",
+                  aggiungi: "添加英雄 ",
+                  i_tuoi_eroi: "你的英雄",
+                  cerca_eroe: "搜索..",
+                  impostazioni_avanzate: "高级设置",
+                  deve_contenere_AoE: "队伍必须包含 AoE",
+                  no_s1_debuffs: "S1不带Debuff (挑衅, 睡眠 和晕眩除外)",
+                  no_debuffs: "技能不带Debuff (挑衅, 睡眠 和晕眩除外)",
+                  classe: "职业",
+                  knight: "騎士",
+                  warrior: "戰士",
+                  thief: "盜賊",
+                  ranger: "射手",
+                  mage: "魔導士",
+                  "soul-weaver": "精靈師",
+                  fire: "火焰屬性",
+                  ice: "寒氣屬性",
+                  earth: "自",
+                  light: "光明屬性",
+                  dark: "黑暗屬性",
+                  elemento: "属性",
+                  buff: "Buff",
+                  debuff: "Debuff",
+                  combinations: "可能的组合",
+                  multilock: "锁定多人 (笛卡尔 出品)",
+                  multilock_slot: "栏位",
+                  add_to_slot: "添加到这个位置",
+                  add_selection: "添加",
+                  possibili_combinazioni: "可能的组合:",
+
+                  //Results window
+                  risultati: "结果",
+                  morale: "心情",
+                  team: "队伍",
+                  topics: "对话",
+                  notification_title: "E7 露营模拟器",
+                  notification_ready: "结果计算完毕!",
+
+                  ///Result saving window:
+                  camp_name_field: "队伍名称",
+                  camp_name_placeholder: "你的队伍名称",
+                  save: "保存",
+                  canc_btn: "取消",
+                  back_btn: "返回",
+                  error_no_name_provided: "队伍名称不能为空!",
+                  error_name_in_use: "该名称已经被使用!",
+                  saved_message: "保存成功!",
+                  deleted_message: "删除成功!",
+
+                  impostazioni: "设置",
+                  tema_notturno: "夜间模式",
+                  notifiche: "启用通知",
+                  language: "语言"
+                };
+
               } else {
+                //this.lingua = "en";
                 this.strings = {
                   messaggio_di_benvenuto: "Welcome to Epic Seven Camp simulator",
+                  data_by: "Data by EpicSevenDB",
+                  all: "All",
                   aggiungi: "Add hero ",
                   i_tuoi_eroi: "Your heroes",
                   cerca_eroe: "Search..",
@@ -1542,15 +1702,452 @@ function askNotificationPermission() {
                   deve_contenere_AoE: "Team must have AoE",
                   no_s1_debuffs: "No S1 Debuffs (Except: Provoke, Sleep and Stun)",
                   no_debuffs: "No Debuffs (Except: Provoke, Sleep and Stun)",
-                  classe: "Class:",
-                  elemento: "Element:",
+                  classe: "Class",
+                  knight: "Knight",
+                  warrior: "Warrior",
+                  thief: "Thief",
+                  ranger: "Ranger",
+                  mage: "Mage",
+                  "soul-weaver": "Soul Weaver",
+                  fire: "Fire",
+                  ice: "Ice",
+                  earth: "Earth",
+                  light: "Light",
+                  dark: "Dark",
+                  elemento: "Element",
+                  buff: "Buff",
+                  debuff: "Debuff",
+                  combinations: "Possible combinations",
+                  multilock: "Multi-lock (Cartesian Product)",
+                  multilock_slot: "Slot",
+                  add_to_slot: "Add to this slot",
+                  add_selection: "Add selection",
                   possibili_combinazioni: "Combinations:",
+
+                  //Results window
                   risultati: "Results",
-                  impostazioni: "Settings"
+                  morale: "Morale",
+                  team: "Team",
+                  topics: "Topics",
+                  notification_title: "E7 Camp Simulator",
+                  notification_ready: "Your results are rady!",
+
+                  ///Result saving window:
+                  camp_name_field: "Camp name",
+                  camp_name_placeholder: "Your camp's name",
+                  save: "Save",
+                  canc_btn: "Cancel",
+                  back_btn: "Back",
+                  error_no_name_provided: "Name is required!",
+                  error_name_in_use: "You are already using this name!",
+                  saved_message: "saved successfully!",
+                  deleted_message: "deleted!",
+
+                  impostazioni: "Settings",
+                  tema_notturno: "Night theme",
+                  notifiche: "Enable notifications",
+                  language: "Language"
                 };
               };
-            }
-        },
+
+              if (this.lingua == "en" || this.lingua == "it") {
+                this.buffList["stic_debuf_impossible"].name = "Immunity";
+                this.buffList["stic_att_up"].name = "Attack up";
+                this.buffList["stic_att_up2"].name = "Attack up (Greater)";
+                this.buffList["stic_def_up"].name = "Defense up";
+                this.buffList["stic_speed_up"].name = "Speed up";
+                this.buffList["stic_dodge_up"].name = "Evasion";
+                this.buffList["stic_protect"].name = "Barrier";
+                this.buffList["stic_cri_up"].name = "Crit chance up";
+                this.buffList["stic_cridmg_up"].name = "Crit damage up";
+                this.buffList["stic_crires_up"].name = "Crit Resistance";
+                this.buffList["stic_invincible"].name = "Invincibility";
+                this.buffList["stic_endure"].name = "Skill nullifier";
+                this.buffList["stic_heal"].name = "Continuous Healing";
+                this.buffList["stic_hide"].name = "Stealth";
+                this.buffList["stic_immortality"].name = "Immortality";
+                this.buffList["stic_reflect"].name = "Reflect";
+                this.buffList["stic_counter"].name = "Counter";
+
+                this.debuffList["stic_def_dn"].name = "Def down";
+                this.debuffList["stic_speed_dn"].name = "Speed down";
+                this.debuffList["stic_att_dn"].name = "Attack down";
+                this.debuffList["stic_blind"].name = "Blind";
+                this.debuffList["stic_target"].name = "Target";
+                this.debuffList["stic_buf_impossible"].name = "Unbuffable";
+                this.debuffList["stic_heal_impossible"].name = "Unhealable";
+                this.debuffList["stic_stun"].name = "Stun";
+                this.debuffList["stic_provoke"].name = "Provoke";
+                this.debuffList["stic_silence"].name = "Silence";
+                this.debuffList["stic_sleep"].name = "Sleep";
+                this.debuffList["stic_blood"].name = "Bleed";
+                this.debuffList["stic_dot"].name = "Poison";
+                this.debuffList["stic_blaze"].name = "Burn";
+                this.debuffList["stic_vampire"].name = "Vampire";
+                this.debuffList["stic_bomb"].name = "Bomb";
+              } else if (this.lingua == "jp") {
+                this.buffList["stic_debuf_impossible"].name = "弱体効果免疫";
+                this.buffList["stic_att_up"].name = "攻撃力UP";
+                this.buffList["stic_att_up2"].name = "攻撃力UP(大)";
+                this.buffList["stic_def_up"].name = "防御力UP";
+                this.buffList["stic_speed_up"].name = "スピードUP";
+                this.buffList["stic_dodge_up"].name = "回避率UP";
+                this.buffList["stic_protect"].name = "シールド";
+                this.buffList["stic_cri_up"].name = "クリティカル発生率UP";
+                this.buffList["stic_cridmg_up"].name = "クリティカルダメージUP";
+                this.buffList["stic_crires_up"].name = "クリティカル抵抗率UP";
+                this.buffList["stic_invincible"].name = "無敵";
+                this.buffList["stic_endure"].name = "スキルダメージ無効";
+                this.buffList["stic_heal"].name = "持続回復";
+                this.buffList["stic_hide"].name = "潜伏";
+                this.buffList["stic_immortality"].name = "不死";
+                this.buffList["stic_reflect"].name = "反射";
+                this.buffList["stic_counter"].name = "反撃";
+
+                this.debuffList["stic_def_dn"].name = "防御力DOWN";
+                this.debuffList["stic_speed_dn"].name = "スピードDOWN";
+                this.debuffList["stic_att_dn"].name = "攻撃力DOWN";
+                this.debuffList["stic_blind"].name = "命中率DOWN";
+                this.debuffList["stic_target"].name = "標的";
+                this.debuffList["stic_buf_impossible"].name = "強化不可";
+                this.debuffList["stic_heal_impossible"].name = "回復不可";
+                this.debuffList["stic_stun"].name = "スタン";
+                this.debuffList["stic_provoke"].name = "挑発";
+                this.debuffList["stic_silence"].name = "沈黙";
+                this.debuffList["stic_sleep"].name = "睡眠";
+                this.debuffList["stic_blood"].name = "出血";
+                this.debuffList["stic_dot"].name = "毒";
+                this.debuffList["stic_blaze"].name = "火傷";
+                this.debuffList["stic_vampire"].name = "吸血";
+                this.debuffList["stic_bomb"].name = "爆弾";
+
+                this.strings["knight"] = "ナイト";
+                this.strings["warrior"] = "ウォリアー";
+                this.strings["thief"] = "アサシン";
+                this.strings["ranger"] = "アーチャー";
+                this.strings["mage"] = "メイジ";
+                this.strings["soul-weaver"] = "プリースト";
+                this.strings["fire"] = "火属性";
+                this.strings["ice"] = "氷属性";
+                this.strings["earth"] = "木属性";
+                this.strings["light"] = "光属性";
+                this.strings["dark"] = "闇属性";
+              } else if (this.lingua == "kr") {
+                this.buffList["stic_debuf_impossible"].name = "면역";
+                this.buffList["stic_att_up"].name = "공격력 증가";
+                this.buffList["stic_att_up2"].name = "공격력 증가 (대)";
+                this.buffList["stic_def_up"].name = "방어력 증가";
+                this.buffList["stic_speed_up"].name = "속도 증가";
+                this.buffList["stic_dodge_up"].name = "회피 증가";
+                this.buffList["stic_protect"].name = "보호막";
+                this.buffList["stic_cri_up"].name = "치명확률 증가";
+                this.buffList["stic_cridmg_up"].name = "치명피해 증가";
+                this.buffList["stic_crires_up"].name = "치명저항 증가";
+                this.buffList["stic_invincible"].name = "무적";
+                this.buffList["stic_endure"].name = "스킬 대미지 무효";
+                this.buffList["stic_heal"].name = "지속 회복";
+                this.buffList["stic_hide"].name = "은신";
+                this.buffList["stic_immortality"].name = "불사";
+                this.buffList["stic_reflect"].name = "반사";
+                this.buffList["stic_counter"].name = "반격";
+
+                this.debuffList["stic_def_dn"].name = "방어력 감소";
+                this.debuffList["stic_speed_dn"].name = "속도 감소";
+                this.debuffList["stic_att_dn"].name = "공격력 감소";
+                this.debuffList["stic_blind"].name = "명중 감소";
+                this.debuffList["stic_target"].name = "표적";
+                this.debuffList["stic_buf_impossible"].name = "강화 불가";
+                this.debuffList["stic_heal_impossible"].name = "회복 불가";
+                this.debuffList["stic_stun"].name = "기절";
+                this.debuffList["stic_provoke"].name = "도발";
+                this.debuffList["stic_silence"].name = "침묵";
+                this.debuffList["stic_sleep"].name = "수면";
+                this.debuffList["stic_blood"].name = "출혈";
+                this.debuffList["stic_dot"].name = "중독";
+                this.debuffList["stic_blaze"].name = "화상";
+                this.debuffList["stic_vampire"].name = "흡혈의 손길";
+                this.debuffList["stic_bomb"].name = "폭탄";
+
+                this.strings["knight"] = "기사";
+                this.strings["warrior"] = "전사";
+                this.strings["thief"] = "도적";
+                this.strings["ranger"] = "사수";
+                this.strings["mage"] = "마도사";
+                this.strings["soul-weaver"] = "정령사";
+                this.strings["fire"] = "화염속성";
+                this.strings["ice"] = "냉기속성";
+                this.strings["earth"] = "자연속성";
+                this.strings["light"] = "광속성";
+                this.strings["dark"] = "암속성";
+              } else if (lingua == "zht") {
+                this.buffList["stic_debuf_impossible"].name = "免疫";
+                this.buffList["stic_att_up"].name = "攻擊力增加";
+                this.buffList["stic_att_up2"].name = "攻擊力大幅增加";
+                this.buffList["stic_def_up"].name = "防禦力增加";
+                this.buffList["stic_speed_up"].name = "速度提升";
+                this.buffList["stic_dodge_up"].name = "增加迴避";
+                this.buffList["stic_protect"].name = "防護罩";
+                this.buffList["stic_cri_up"].name = "暴擊率增加";
+                this.buffList["stic_cridmg_up"].name = "增加暴擊傷害";
+                this.buffList["stic_crires_up"].name = "暴擊抗性增加";
+                this.buffList["stic_invincible"].name = "無敵";
+                this.buffList["stic_endure"].name = "技能傷害無效";
+                this.buffList["stic_heal"].name = "持續恢復";
+                this.buffList["stic_hide"].name = "隱身";
+                this.buffList["stic_immortality"].name = "不死";
+                this.buffList["stic_reflect"].name = "反射";
+                this.buffList["stic_counter"].name = "反擊";
+
+                this.debuffList["stic_def_dn"].name = "防禦力減少";
+                this.debuffList["stic_speed_dn"].name = "速度下降";
+                this.debuffList["stic_att_dn"].name = "攻擊力減少";
+                this.debuffList["stic_blind"].name = "命中減少";
+                this.debuffList["stic_target"].name = "標靶";
+                this.debuffList["stic_buf_impossible"].name = "無法強化";
+                this.debuffList["stic_heal_impossible"].name = "無法恢復";
+                this.debuffList["stic_stun"].name = "暈眩";
+                this.debuffList["stic_provoke"].name = "挑釁";
+                this.debuffList["stic_silence"].name = "沉默";
+                this.debuffList["stic_sleep"].name = "睡眠";
+                this.debuffList["stic_blood"].name = "出血";
+                this.debuffList["stic_dot"].name = "中毒";
+                this.debuffList["stic_blaze"].name = "燒傷";
+                this.debuffList["stic_vampire"].name = "吸血之手";
+                this.debuffList["stic_bomb"].name = "炸彈";
+              };
+            },
+      translateTopics: function (n) {
+          if (this.lingua == "jp") {
+            switch (n) {
+              case 'Criticism':
+                return '世界批判';
+                break;
+              case 'Reality Check':
+                return '現実的な話題';
+                break;
+              case 'Heroic Tale':
+                return '武勇伝';
+                break;
+              case 'Comforting Cheer':
+                return '励まし';
+                break;
+              case 'Cute Cheer':
+                return '応援';
+                break;
+              case 'Heroic Cheer':
+                return '英雄応援';
+                break;
+              case 'Sad Memory':
+                return '悲しい思い出';
+                break;
+              case 'Joyful Memory':
+                return '楽しい思い出';
+                break;
+              case 'Happy Memory':
+                return '幸せな思い出';
+                break;
+              case 'Unique Comment':
+                return '不思議ちゃん';
+                break;
+              case 'Self-Indulgent':
+                return '自己愛';
+                break;
+              case 'Occult':
+                return 'オカルト';
+                break;
+              case 'Myth':
+                return '神話';
+                break;
+              case 'Bizarre Story':
+                return '猟奇的な話';
+                break;
+              case 'Food Story':
+                return 'グルメ';
+                break;
+              case 'Horror Story':
+                return 'ホラー';
+                break;
+              case 'Gossip':
+                return 'ゴシップ';
+                break;
+              case 'Dream':
+                return '夢';
+                break;
+              case 'Advice':
+                return '悩み相談';
+                break;
+              case 'Complain':
+                return '愚痴';
+                break;
+              case 'Belief':
+                return '信念';
+                break;
+              case 'Interesting Story':
+                return '冒険話';
+                break;
+              default:
+                return n;
+                break;
+            };
+          } else if (this.lingua == "zht") {
+            switch (n) {
+              case 'Criticism':
+                return '批判世界';
+                break;
+              case 'Reality Check':
+                return '正視現實';
+                break;
+              case 'Heroic Tale':
+                return '英雄故事';
+                break;
+              case 'Comforting Cheer':
+                return '安慰助陣';
+                break;
+              case 'Cute Cheer':
+                return '撒嬌助陣';
+                break;
+              case 'Heroic Cheer':
+                return '英雄式助陣';
+                break;
+              case 'Sad Memory':
+                return '傷心回憶';
+                break;
+              case 'Joyful Memory':
+                return '愉快回憶';
+                break;
+              case 'Happy Memory':
+                return '幸福回憶';
+                break;
+              case 'Unique Comment':
+                return '4次元的發言';
+                break;
+              case 'Self-Indulgent':
+                return '自我陶醉';
+                break;
+              case 'Occult':
+                return '秘術';
+                break;
+              case 'Myth':
+                return '神話';
+                break;
+              case 'Bizarre Story':
+                return '獵奇的故事';
+                break;
+              case 'Food Story':
+                return '食物故事';
+                break;
+              case 'Horror Story':
+                return '恐怖故事';
+                break;
+              case 'Gossip':
+                return '八卦';
+                break;
+              case 'Dream':
+                return '夢';
+                break;
+              case 'Advice':
+                return '煩惱諮詢';
+                break;
+              case 'Complain':
+                return '耍賴';
+                break;
+              case 'Belief':
+                return '信念';
+                break;
+              case 'Interesting Story':
+                return '冒險故事';
+                break;
+              default:
+                return n;
+                break;
+            };
+          } else if (this.lingua == "kr") {
+            switch (n) {
+              case 'Criticism':
+                return '세계 비판';
+                break;
+              case 'Reality Check':
+                return '현실직시';
+                break;
+              case 'Heroic Tale':
+                return '무용담';
+                break;
+              case 'Comforting Cheer':
+                return '위로 응원';
+                break;
+              case 'Cute Cheer':
+                return '애교 응원';
+                break;
+              case 'Heroic Cheer':
+                return '영웅적 응원';
+                break;
+              case 'Sad Memory':
+                return '슬픈 추억';
+                break;
+              case 'Joyful Memory':
+                return '즐거운 추억';
+                break;
+              case 'Happy Memory':
+                return '행복한 추억';
+                break;
+              case 'Unique Comment':
+                return '차원 발언';
+                break;
+              case 'Self-Indulgent':
+                return '자아도취';
+                break;
+              case 'Occult':
+                return '오컬트';
+                break;
+              case 'Myth':
+                return '신화';
+                break;
+              case 'Bizarre Story':
+                return '엽기적 이야기';
+                break;
+              case 'Food Story':
+                return '음식 이야기';
+                break;
+              case 'Horror Story':
+                return '공포 이야기';
+                break;
+              case 'Gossip':
+                return '가십';
+                break;
+              case 'Dream':
+                return '꿈';
+                break;
+              case 'Advice':
+                return '고민 상담';
+                break;
+              case 'Complain':
+                return '투정';
+                break;
+              case 'Belief':
+                return '신념';
+                break;
+              case 'Interesting Story':
+                return '모험이야기';
+                break;
+              default:
+                return n;
+                break;
+            };
+          } else {
+            return n;
+          };
+      },
+      inizializzaione: function() {
+        //Get characters names translated
+        var getDb = new XMLHttpRequest();
+        getDb.open( "GET", "https://api.epicsevendb.com/hero?lang=" + this.lingua, false ); // false for synchronous request
+        getDb.send( null );
+        getDb.responseText;
+        JSON.parse(getDb.response).results.forEach(item => {
+          this.translatedName[item._id] = item.name
+        });
+      }
+    },
     computed: {
         calcolaRisultati: function () { // in computed per evitare di calcolare 2 volte il risultato se non si è cambiato niente
            //resetta per un nuovo calcolo
@@ -1589,7 +2186,7 @@ function askNotificationPermission() {
      app.isLoadingResults = false; // disattiva angelica
      if (riceviNotifiche == true) {
       if (document.visibilityState != 'visible') {
-        var notification = new Notification('Epic Seven Camp Simulator', { body: "Your results are rady!", icon: "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" }); // manda notifica di completamento
+        var notification = new Notification(app.strings.notification_title, { body: app.strings.notification_ready, icon: "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" }); // manda notifica di completamento
       };
     };
     app.risultati = e.data;
