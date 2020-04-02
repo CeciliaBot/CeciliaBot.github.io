@@ -610,7 +610,7 @@ span.heroImgList {
         </li>
       </ul>
         <br><br><br><br>
-        Chinese translation: TriATK
+        Chinese/French translations: TriATK
         <br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
 	      <br>Discord: gio#0898
         <br><br><br><br>
@@ -1323,6 +1323,8 @@ function askNotificationPermission() {
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" style="height:70px"  onclick="app.cambiaLingua('jp')">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" style="height:70px"  onclick="app.cambiaLingua('it')">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" style="height:70px"  onclick="app.cambiaLingua('fr')">
+                    <br><br>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" style="height:70px"  onclick="app.cambiaLingua('es')">
                     </div>
                     <div class="container">
                       <button type="button" onclick="$('#menu_lingua').remove()" class="button_cancelbtn">` + this.strings.back_btn + `</button>
@@ -2023,6 +2025,44 @@ function askNotificationPermission() {
                 document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
                 document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
                 document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
+              } else if (lingua == "es") {
+                this.buffList["stic_debuf_impossible"].name = "Inmunidad";
+                this.buffList["stic_att_up"].name = "Aumenta el ataque";
+                this.buffList["stic_att_up2"].name = "Aumenta el ataque (mayor)";
+                this.buffList["stic_def_up"].name = "Aumenta la defensa";
+                this.buffList["stic_speed_up"].name = "Aumenta la velocidad";
+                this.buffList["stic_dodge_up"].name = "Aumenta la evasión";
+                this.buffList["stic_protect"].name = "Barrera";
+                this.buffList["stic_cri_up"].name = "Aumenta la probabilidad de golpe crítico";
+                this.buffList["stic_cridmg_up"].name = "Aumenta el daño de golpe crítico";
+                this.buffList["stic_crires_up"].name = "Aumenta la resistencia a golpes críticos";
+                this.buffList["stic_invincible"].name = "Invencible";
+                this.buffList["stic_endure"].name = "Anulador de habilidades";
+                this.buffList["stic_heal"].name = "Curación continua";
+                this.buffList["stic_hide"].name = "Sigilo";
+                this.buffList["stic_immortality"].name = "Inmortalidad";
+                this.buffList["stic_reflect"].name = "Reflejar";
+                this.buffList["stic_counter"].name = "Contraataque";
+
+                this.debuffList["stic_def_dn"].name = "Disminuye la defensa";
+                this.debuffList["stic_speed_dn"].name = "Disminuye la velocidad";
+                this.debuffList["stic_att_dn"].name = "Disminuye el ataque";
+                this.debuffList["stic_blind"].name = "Disminuir probabilidad de golpe";
+                this.debuffList["stic_target"].name = "Blanco";
+                this.debuffList["stic_buf_impossible"].name = "No se puede potenciar";
+                this.debuffList["stic_heal_impossible"].name = "Incurable";
+                this.debuffList["stic_stun"].name = "Aturdimiento";
+                this.debuffList["stic_provoke"].name = "Provocación";
+                this.debuffList["stic_silence"].name = "Silencio";
+                this.debuffList["stic_sleep"].name = "Sueño";
+                this.debuffList["stic_blood"].name = "Hemorragia";
+                this.debuffList["stic_dot"].name = "Veneno";
+                this.debuffList["stic_blaze"].name = "Quemadura";
+                this.debuffList["stic_vampire"].name = "Toque vampírico";
+                this.debuffList["stic_bomb"].name = "Bomba";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               };
             },
       translateTopics: function (n) {
@@ -2242,6 +2282,7 @@ function askNotificationPermission() {
                 return n;
                 break;
             };
+
           } else if (this.lingua == "kr") {
             switch (n) {
               case 'Criticism':
@@ -2309,6 +2350,78 @@ function askNotificationPermission() {
                 break;
               case 'Interesting Story':
                 return '모험이야기';
+                break;
+              default:
+                return n;
+                break;
+            };
+          } else if (this.lingua == "es") {
+            switch (n) {
+              case 'Criticism':
+                return 'Crítica';
+                break;
+              case 'Reality Check':
+                return 'Asume la realidad';
+                break;
+              case 'Heroic Tale':
+                return 'Relato heroico';
+                break;
+              case 'Comforting Cheer':
+                return 'Vitoreo reconfortante';
+                break;
+              case 'Cute Cheer':
+                return 'Vitoreo tierno';
+                break;
+              case 'Heroic Cheer':
+                return 'Vitoreo heroico';
+                break;
+              case 'Sad Memory':
+                return 'Recuerdo triste';
+                break;
+              case 'Joyful Memory':
+                return 'Recuerdo feliz';
+                break;
+              case 'Happy Memory':
+                return 'Recuerdo alegre';
+                break;
+              case 'Unique Comment':
+                return 'Comentario único';
+                break;
+              case 'Self-Indulgent':
+                return 'Hedonista';
+                break;
+              case 'Occult':
+                return 'Místico';
+                break;
+              case 'Myth':
+                return 'Mito';
+                break;
+              case 'Bizarre Story':
+                return 'Historia extraña';
+                break;
+              case 'Food Story':
+                return 'Historia sobre comida';
+                break;
+              case 'Horror Story':
+                return 'Historia de terror';
+                break;
+              case 'Gossip':
+                return 'Rumor';
+                break;
+              case 'Dream':
+                return 'Sueño';
+                break;
+              case 'Advice':
+                return 'Consejo';
+                break;
+              case 'Complain':
+                return 'Queja';
+                break;
+              case 'Belief':
+                return 'Creencia';
+                break;
+              case 'Interesting Story':
+                return 'Historia interesante';
                 break;
               default:
                 return n;
