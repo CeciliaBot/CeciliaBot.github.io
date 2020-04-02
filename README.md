@@ -6,4 +6,5 @@ To keep a smooth experience for the user HeroDatabase.json is automatically upda
 HeroDatabase.json is loaded during website startup with a get request: "https://ceciliabot.github.io/HeroDatabase.json"
 
 # Todo:
+Add DE and PT language support
 Improve display style code for Buffs/Debuffs strings in Advanced Settings
