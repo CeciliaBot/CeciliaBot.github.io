@@ -1322,6 +1322,7 @@ function askNotificationPermission() {
                     <br><br>
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" style="height:70px"  onclick="app.cambiaLingua('jp')">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" style="height:70px"  onclick="app.cambiaLingua('it')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" style="height:70px"  onclick="app.cambiaLingua('fr')">
                     </div>
                     <div class="container">
                       <button type="button" onclick="$('#menu_lingua').remove()" class="button_cancelbtn">` + this.strings.back_btn + `</button>
@@ -1687,6 +1688,54 @@ function askNotificationPermission() {
                   language: "语言"
                 };               
 
+              }else if (this.lingua == "fr") {
+                this.strings = {
+                  messaggio_di_benvenuto: "Bienvenue à E7 Camp Simulateur",
+                  data_by: "Source EpicSevenDB",
+                  all: "Tous",
+                  aggiungi: "Ajouter un héro ",
+                  i_tuoi_eroi: "Votre héros",
+                  cerca_eroe: "Rechercher..",
+                  impostazioni_avanzate: "Paramètre avancé",
+                  deve_contenere_AoE: "Equipe doit contenir AoE",
+                  no_s1_debuffs: "S1 sans Debuff (Sauf: Provoquer, Sommeil et Etourdir)",
+                  no_debuffs: "Non Debuff (Sauf: Provoquer, Sommeil et Etourdir)",
+                  classe: "Classe",
+                  elemento: "Elément",
+                  buff: "Buff",
+                  debuff: "Debuff",
+                  combinations: "Combinaisons",
+                  multilock: "Verrouillage multi",
+                  multilock_slot: "Slot",
+                  add_to_slot: "Ajouter dans ce slot",
+                  add_selection: "Ajouter",
+                  possibili_combinazioni: "Combinaisons possibles:",
+
+                  //Results window
+                  risultati: "Résultat",
+                  morale: "Morale",
+                  team: "Equipe",
+                  topics: "Conversations",
+                  notification_title: "E7 Camp Simulateur",
+                  notification_ready: "Calcul terminé!",
+
+                  ///Result saving window:
+                  camp_name_field: "Nom",
+                  camp_name_placeholder: "Nom de votre equipe",
+                  save: "Sauvgarde",
+                  canc_btn: "Annuler",
+                  back_btn: "Retour",
+                  error_no_name_provided: "Le nom ne peut pas être vide!",
+                  error_name_in_use: "Ce nom est déjà pris!",
+                  saved_message: "Sauvgardée!",
+                  deleted_message: "Supprimée!",
+
+                  impostazioni: "Paramètres",
+                  tema_notturno: "Mode nuit",
+                  notifiche: "Notification",
+                  language: "Langue"
+                };               
+
               } else {
                 //this.lingua = "en";
                 this.strings = {
@@ -1783,6 +1832,56 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Burn";
                 this.debuffList["stic_vampire"].name = "Vampire";
                 this.debuffList["stic_bomb"].name = "Bomb";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
+              } else if (this.lingua == "fr") {
+                this.buffList["stic_debuf_impossible"].name = "Immunité";
+                this.buffList["stic_att_up"].name = "Attaque augmentée";
+                this.buffList["stic_att_up2"].name = "Attaque augmentée (sup.)";
+                this.buffList["stic_def_up"].name = "Augmentation de défense";
+                this.buffList["stic_speed_up"].name = "Vitesse augmentée";
+                this.buffList["stic_dodge_up"].name = "Esquive augmentée";
+                this.buffList["stic_protect"].name = "Barrière";
+                this.buffList["stic_cri_up"].name = "Augm. Chances Coup Crit.";
+                this.buffList["stic_cridmg_up"].name = "Augm. Dégâts Coup Crit.";
+                this.buffList["stic_crires_up"].name = "Résistance Coups Critiques";
+                this.buffList["stic_invincible"].name = "Invincibilité";
+                this.buffList["stic_endure"].name = "Annulateur de compétence";
+                this.buffList["stic_heal"].name = "Soin continu";
+                this.buffList["stic_hide"].name = "Furtivité";
+                this.buffList["stic_immortality"].name = "Immortalité";
+                this.buffList["stic_reflect"].name = "Réflexion";
+                this.buffList["stic_counter"].name = "Contre-attaque";
+
+                this.debuffList["stic_def_dn"].name = "Réduction de la défense";
+                this.debuffList["stic_speed_dn"].name = "Vitesse réduite";
+                this.debuffList["stic_att_dn"].name = "Réduction de l'attaque";
+                this.debuffList["stic_blind"].name = "Réduc. Chances Coup réussi";
+                this.debuffList["stic_target"].name = "Cible";
+                this.debuffList["stic_buf_impossible"].name = "Bonus impossible";
+                this.debuffList["stic_heal_impossible"].name = "Inguérissable";
+                this.debuffList["stic_stun"].name = "Étourdissement";
+                this.debuffList["stic_provoke"].name = "Provocation";
+                this.debuffList["stic_silence"].name = "Silence";
+                this.debuffList["stic_sleep"].name = "Sommeil";
+                this.debuffList["stic_blood"].name = "Hémorragie";
+                this.debuffList["stic_dot"].name = "Poison";
+                this.debuffList["stic_blaze"].name = "Brûlure";
+                this.debuffList["stic_vampire"].name = "Toucher vampirique";
+                this.debuffList["stic_bomb"].name = "Bombe";
+
+                this.strings["knight"] = "Chevalier";
+                this.strings["warrior"] = "Guerrier";
+                this.strings["thief"] = "Assassin";
+                this.strings["ranger"] = "Tireur";
+                this.strings["mage"] = "Mage";
+                this.strings["soul-weaver"] = "Tisseur d'âme";
+                this.strings["fire"] = "Feu";
+                this.strings["ice"] = "Glace";
+                this.strings["earth"] = "Terre";
+                this.strings["light"] = "Lumière";
+                this.strings["dark"] = "Ténèbres";
                 document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
                 document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
                 document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
@@ -2066,6 +2165,78 @@ function askNotificationPermission() {
                 break;
               case 'Interesting Story':
                 return '冒險故事';
+                break;
+              default:
+                return n;
+                break;
+            };
+          } else if (this.lingua == "fr") {
+            switch (n) {
+              case 'Criticism':
+                return 'Critique';
+                break;
+              case 'Reality Check':
+                return 'Rappel à la réalité';
+                break;
+              case 'Heroic Tale':
+                return 'Histoire héroïque';
+                break;
+              case 'Comforting Cheer':
+                return 'Encouragement consolant';
+                break;
+              case 'Cute Cheer':
+                return 'Encouragement adorable';
+                break;
+              case 'Heroic Cheer':
+                return 'Encouragement héroïque';
+                break;
+              case 'Sad Memory':
+                return 'Souvenir triste';
+                break;
+              case 'Joyful Memory':
+                return 'Souvenir joyeux';
+                break;
+              case 'Happy Memory':
+                return 'Souvenir heureux';
+                break;
+              case 'Unique Comment':
+                return 'Commentaire particulier';
+                break;
+              case 'Self-Indulgent':
+                return 'Complaisant';
+                break;
+              case 'Occult':
+                return 'Occulte';
+                break;
+              case 'Myth':
+                return 'Mythe';
+                break;
+              case 'Bizarre Story':
+                return 'Histoire bizarre';
+                break;
+              case 'Food Story':
+                return 'Histoire appétissante';
+                break;
+              case 'Horror Story':
+                return 'Histoire lugubre';
+                break;
+              case 'Gossip':
+                return 'Potin';
+                break;
+              case 'Dream':
+                return 'Rêve';
+                break;
+              case 'Advice':
+                return 'Conseil';
+                break;
+              case 'Complain':
+                return 'Plainte';
+                break;
+              case 'Belief':
+                return 'Croyance';
+                break;
+              case 'Interesting Story':
+                return 'Anecdote';
                 break;
               default:
                 return n;
