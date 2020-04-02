@@ -3,4 +3,4 @@ E7 Camping Simulator
 
 To keep a smooth experience for the user HeroDatabase.json is automatically updated by a bot when a new character is added to the API
 
-HeroDatabase.json is loaded during website startup with a get request: "https://ceciliabot.github.io/HeroDatabase.json" if can't connect switch to local path
+HeroDatabase.json is loaded during website startup with a get request: "https://ceciliabot.github.io/HeroDatabase.json"
