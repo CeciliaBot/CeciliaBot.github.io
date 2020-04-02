@@ -4,3 +4,6 @@ E7 Camping Simulator
 To keep a smooth experience for the user HeroDatabase.json is automatically updated by a bot when a new character is added to the API
 
 HeroDatabase.json is loaded during website startup with a get request: "https://ceciliabot.github.io/HeroDatabase.json"
+
+# Todo:
+Improve display style code for Buffs/Debuffs strings in Advanced Settings
