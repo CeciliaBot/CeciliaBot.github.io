@@ -2466,7 +2466,7 @@ function askNotificationPermission() {
             this.AoE;
             this.noS1debuffs;
             this.noDebuffs;
-           if (this.rosterLength.length > 3) {
+           if (Object.keys(this.myHeroesList).length > 3) {
             this.isLoadingResults = true; // mostra animazione di caricamento
 
             var campList = Object.keys(this.myHeroesList);
