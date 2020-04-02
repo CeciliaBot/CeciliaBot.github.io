@@ -2457,8 +2457,6 @@ function askNotificationPermission() {
         calcolaRisultati: function () { // in computed per evitare di calcolare 2 volte il risultato se non si è cambiato niente
            //resetta per un nuovo calcolo
            this.risultati = [];
-           if (Object.keys(this.myHeroesList).length > 3) {
-            this.isLoadingResults = true; // mostra animazione di caricamento
             //Richiama questi valori per far capire a vue di ricalcolare se sono cambiati
             this.rosterLength;
             this.classe;
@@ -2468,6 +2466,8 @@ function askNotificationPermission() {
             this.AoE;
             this.noS1debuffs;
             this.noDebuffs;
+           if (Object.keys(this.myHeroesList).length > 3) {
+            this.isLoadingResults = true; // mostra animazione di caricamento
 
             var campList = Object.keys(this.myHeroesList);
             if (this.locked.length > 0 ) {
