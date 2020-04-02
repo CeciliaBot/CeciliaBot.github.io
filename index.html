@@ -578,7 +578,7 @@ span.heroImgList {
 
 </style>
 </head>
-<body onload="app.boot()">
+<body>
   <div id="app"><!-- vue.js -->
     <div id="welcome" style="display: '';">
         <h2>{{strings.messaggio_di_benvenuto}}<br><font color="red">{{strings.data_by}}</font></h2>
@@ -1435,7 +1435,7 @@ function askNotificationPermission() {
                 var x = document.getElementById("snackbar");
                 x.className = "show";
                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-            } catch {
+            } catch (err) {
               console.log("Error while removing camp")
             };
           },
@@ -2159,12 +2159,13 @@ function askNotificationPermission() {
         this.inizializzazione = false;
       },
       inizializzaione: function () {
+	self = this;
         //Get characters names translated
         var getDb = new XMLHttpRequest();
         getDb.open( "GET", "https://api.epicsevendb.com/hero?lang=" + this.lingua, false ); // false for synchronous request
         getDb.send( null );
-        JSON.parse(getDb.response).results.forEach(item => {
-          this.translatedName[item._id] = item.name
+        JSON.parse(getDb.response).results.forEach(function(item) {
+          self.translatedName[item._id] = item.name
         });
       }
     },
@@ -2199,6 +2200,9 @@ function askNotificationPermission() {
     HeroDB: {
       deep: true
     }
+  },
+  mounted () {
+	  this.boot();
   }
 });
 
