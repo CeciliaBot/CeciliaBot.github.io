@@ -626,7 +626,7 @@ span.heroImgList {
     </div>
     <div id="add_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} </span>
-	<input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
+	    <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
           <div id="pulsanti_display_add_window" style="display:inline">
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
@@ -913,20 +913,18 @@ span.heroImgList {
     <br><br>
     <div id="advanced_buff" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.buff}}:</center>
-      <span v-for="(value,key) in buffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:200px;padding-bottom:10px;">
+      <span v-for="(value,key) in buffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:auto;width:100px;padding-bottom:5px;">
         <input type="checkbox" v-bind:id="'checkbox_'+ key" name="buff" v-bind:value="value.id" style="position:relative;top:0px;display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0px;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" /></label>
-        <p>{{value.name}}</p>
+        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0px;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
       </span>
     </div>
     <br><br>
     <div id="advanced_debuff" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.debuff}}:</center>
-      <span v-for="(value,key) in debuffList" style="display:inline-block;text-align:center;padding-bottom:10px;">
+      <span v-for="(value,key) in debuffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:auto;width:100px;padding-bottom:5px;">
         <input type="checkbox" v-bind:id="'checkbox_'+ key" name="debuff" v-bind:value="value.id" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" /></label>
-        <p style="position:relative;">{{value.name}}</p>
-      </span>
+        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
+        </span>
     </div>
     <br><br>
     <div id="advanced_cartesian" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
@@ -1014,9 +1012,6 @@ span.heroImgList {
               <span>
                 {{strings.language}}
               </span>
-              <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:20px;">
-                >
-              </i>
             </div>
           </td>
         </tr>
