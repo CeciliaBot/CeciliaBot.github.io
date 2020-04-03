@@ -586,6 +586,12 @@ span.heroImgList {
         What's new:<br>
         <ul>
           <li style="color:rgb(0, 255, 136)">
+            Now you can select German, Portoguese, French and Spanish as language.<br>
+            Only French has gamedata and menus translated. Thanks again to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the translation.<br>
+            DE, ES and PT have only gamedata translated (Character name, Camping topics, buffs and debuffs) if you want to help translate the menus contact me.<br>
+            By default ENG is selected to change language go to Settings.
+          </li>
+          <li style="color:rgb(0, 255, 136)">
             Added Japanese, Chinese (S) and Korean languages:<br>
             Japanese and Korean are missing menu translation but game data is translated, Chinese (S) has full translation menus + game data.<br>
             Thanks to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the Chinese translation.<br>
@@ -1325,6 +1331,8 @@ function askNotificationPermission() {
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" style="height:70px"  onclick="app.cambiaLingua('fr')">
                     <br><br>
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" style="height:70px"  onclick="app.cambiaLingua('es')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" style="height:70px"  onclick="app.cambiaLingua('pt')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" style="height:70px"  onclick="app.cambiaLingua('de')">
                     </div>
                     <div class="container">
                       <button type="button" onclick="$('#menu_lingua').remove()" class="button_cancelbtn">` + this.strings.back_btn + `</button>
@@ -2062,7 +2070,83 @@ function askNotificationPermission() {
                 this.debuffList["stic_bomb"].name = "Bomba";
                 document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
                 document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
+              } else if (lingua == "pt") {
+                this.buffList["stic_debuf_impossible"].name = "Imune";
+                this.buffList["stic_att_up"].name = "Aumentar Ataque";
+                this.buffList["stic_att_up2"].name = "Aumentar Ataque (Superior)";
+                this.buffList["stic_def_up"].name = "Aumentar Defesa";
+                this.buffList["stic_speed_up"].name = "Aumentar Velocidade";
+                this.buffList["stic_dodge_up"].name = "Aumentar Evasão";
+                this.buffList["stic_protect"].name = "Barreira";
+                this.buffList["stic_cri_up"].name = "Aumentar Chance de Crítico";
+                this.buffList["stic_cridmg_up"].name = "Aumentar Dano Crítico";
+                this.buffList["stic_crires_up"].name = "Aumentar Resistência a Crítico";
+                this.buffList["stic_invincible"].name = "Invencível";
+                this.buffList["stic_endure"].name = "Anulador de Habilidades";
+                this.buffList["stic_heal"].name = "Cura Contínua";
+                this.buffList["stic_hide"].name = "Furtividade";
+                this.buffList["stic_immortality"].name = "Imortal";
+                this.buffList["stic_reflect"].name = "Refletir";
+                this.buffList["stic_counter"].name = "Contra-Ataque";
+
+                this.debuffList["stic_def_dn"].name = "Diminuir Defesa";
+                this.debuffList["stic_speed_dn"].name = "Diminuir Velocidade";
+                this.debuffList["stic_att_dn"].name = "Diminuir Ataque";
+                this.debuffList["stic_blind"].name = "Diminuir Chance de Acerto";
+                this.debuffList["stic_target"].name = "Alvo";
+                this.debuffList["stic_buf_impossible"].name = "Bloqueio de Reforço";
+                this.debuffList["stic_heal_impossible"].name = "Incurável";
+                this.debuffList["stic_stun"].name = "Atordoamento";
+                this.debuffList["stic_provoke"].name = "Provocação";
+                this.debuffList["stic_silence"].name = "Silêncio";
+                this.debuffList["stic_sleep"].name = "Dormindo";
+                this.debuffList["stic_blood"].name = "Sangramento";
+                this.debuffList["stic_dot"].name = "Veneno";
+                this.debuffList["stic_blaze"].name = "Queimar";
+                this.debuffList["stic_vampire"].name = "Toque Vampiresco";
+                this.debuffList["stic_bomb"].name = "Bomba";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
+              } else if (lingua == "de") {
+                this.buffList["stic_debuf_impossible"].name = "Immun";
+                this.buffList["stic_att_up"].name = "Angriff erhöhen";
+                this.buffList["stic_att_up2"].name = "Angriff erhöhen (stark)";
+                this.buffList["stic_def_up"].name = "Verteidigung erhöhen";
+                this.buffList["stic_speed_up"].name = "Geschwindigkeit erhöhen";
+                this.buffList["stic_dodge_up"].name = "Ausweichen erhöhen";
+                this.buffList["stic_protect"].name = "Barriere";
+                this.buffList["stic_cri_up"].name = "Kritische Trefferquote erhöhen";
+                this.buffList["stic_cridmg_up"].name = "Kritischen Schaden erhöhen";
+                this.buffList["stic_crires_up"].name = "Kritischen Widerstand erhöhen";
+                this.buffList["stic_invincible"].name = "Unbesiegbar";
+                this.buffList["stic_endure"].name = "Fertigkeit-Aufhebung";
+                this.buffList["stic_heal"].name = "Kontinuierliche Heilung";
+                this.buffList["stic_hide"].name = "Tarnung";
+                this.buffList["stic_immortality"].name = "Unsterblich";
+                this.buffList["stic_reflect"].name = "Reflektieren";
+                this.buffList["stic_counter"].name = "Gegenangriff";
+
+                this.debuffList["stic_def_dn"].name = "Verteidigung verringern";
+                this.debuffList["stic_speed_dn"].name = "Geschwindigkeit verringern";
+                this.debuffList["stic_att_dn"].name = "Angriff verringern";
+                this.debuffList["stic_blind"].name = "Trefferquote verringern";
+                this.debuffList["stic_target"].name = "Ziel";
+                this.debuffList["stic_buf_impossible"].name = "Buffblockade";
+                this.debuffList["stic_heal_impossible"].name = "Unheilbar";
+                this.debuffList["stic_stun"].name = "Betäubung";
+                this.debuffList["stic_provoke"].name = "Provozieren";
+                this.debuffList["stic_silence"].name = "Stille";
+                this.debuffList["stic_sleep"].name = "Schlaf";
+                this.debuffList["stic_blood"].name = "Bluten";
+                this.debuffList["stic_dot"].name = "Gift";
+                this.debuffList["stic_blaze"].name = "Verbrennen";
+                this.debuffList["stic_vampire"].name = "Vampirische Berührung";
+                this.debuffList["stic_bomb"].name = "Bombe";
+                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
+                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
+                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               };
             },
       translateTopics: function (n) {
@@ -2422,6 +2506,150 @@ function askNotificationPermission() {
                 break;
               case 'Interesting Story':
                 return 'Historia interesante';
+                break;
+              default:
+                return n;
+                break;
+            };
+          } else if (this.lingua == "pt") {
+            switch (n) {
+              case 'Criticism':
+                return 'Crítica';
+                break;
+              case 'Reality Check':
+                return 'Papo Realista';
+                break;
+              case 'Heroic Tale':
+                return 'Conto Heroico';
+                break;
+              case 'Comforting Cheer':
+                return 'Consolar';
+                break;
+              case 'Cute Cheer':
+                return 'Animar';
+                break;
+              case 'Heroic Cheer':
+                return 'Encorajar';
+                break;
+              case 'Sad Memory':
+                return 'Lembrança Triste';
+                break;
+              case 'Joyful Memory':
+                return 'Lembrança Animada';
+                break;
+              case 'Happy Memory':
+                return 'Lembrança Feliz';
+                break;
+              case 'Unique Comment':
+                return 'Comentário Singular';
+                break;
+              case 'Self-Indulgent':
+                return 'Complacência';
+                break;
+              case 'Occult':
+                return 'Ocultismo';
+                break;
+              case 'Myth':
+                return 'Mito';
+                break;
+              case 'Bizarre Story':
+                return 'História Bizarra';
+                break;
+              case 'Food Story':
+                return 'História de Comida';
+                break;
+              case 'Horror Story':
+                return 'História de Terror';
+                break;
+              case 'Gossip':
+                return 'Fofoca';
+                break;
+              case 'Dream':
+                return 'Sonho';
+                break;
+              case 'Advice':
+                return 'Conselho';
+                break;
+              case 'Complain':
+                return 'Reclamação';
+                break;
+              case 'Belief':
+                return 'Crença';
+                break;
+              case 'Interesting Story':
+                return 'História Interessante';
+                break;
+              default:
+                return n;
+                break;
+            };
+          } else if (this.lingua == "de") {
+            switch (n) {
+              case 'Criticism':
+                return 'Kritik';
+                break;
+              case 'Reality Check':
+                return 'Realitäts-Check';
+                break;
+              case 'Heroic Tale':
+                return 'Heroische Erzählung';
+                break;
+              case 'Comforting Cheer':
+                return 'Tröstlicher Jubel';
+                break;
+              case 'Cute Cheer':
+                return 'Niedlicher Jubel';
+                break;
+              case 'Heroic Cheer':
+                return 'Heroischer Jubel';
+                break;
+              case 'Sad Memory':
+                return 'Traurige Erinnerung';
+                break;
+              case 'Joyful Memory':
+                return 'Fröhliche Erinnerung';
+                break;
+              case 'Happy Memory':
+                return 'Glückliche Erinnerung';
+                break;
+              case 'Unique Comment':
+                return 'Einzigartiger Kommentar';
+                break;
+              case 'Self-Indulgent':
+                return 'Ausschweifend';
+                break;
+              case 'Occult':
+                return 'Okkult';
+                break;
+              case 'Myth':
+                return 'Mythos';
+                break;
+              case 'Bizarre Story':
+                return 'Bizarre Geschichte';
+                break;
+              case 'Food Story':
+                return 'Nahrungsgeschichte';
+                break;
+              case 'Horror Story':
+                return 'Horrorgeschichte';
+                break;
+              case 'Gossip':
+                return 'Tratsch';
+                break;
+              case 'Dream':
+                return 'Traum';
+                break;
+              case 'Advice':
+                return 'Rat';
+                break;
+              case 'Complain':
+                return 'Beschwerde';
+                break;
+              case 'Belief':
+                return 'Glaube';
+                break;
+              case 'Interesting Story':
+                return 'Interessante Geschichte';
                 break;
               default:
                 return n;
