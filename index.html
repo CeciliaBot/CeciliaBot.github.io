@@ -2647,7 +2647,13 @@ function askNotificationPermission() {
       },
       boot: function () {
         var getDbEng = new XMLHttpRequest();
-        getDbEng.open( "GET", "https://ceciliabot.github.io/HeroDatabase.json", false ); // false for synchronous request
+        var dbURL = window.location.href
+        if (dbURL.charAt(dbURL.length -1) == "/") {
+        dbURL=dbURL+"HeroDatabase.json";
+        } else {
+        dbURL=dbURL+"/HeroDatabase.json";
+        };       
+        getDbEng.open( "GET", dbURL, false ); // false for synchronous request
         getDbEng.send( null );
         this.HeroDB = JSON.parse(getDbEng.response);
         this.sortedHeroDB = Object.keys(this.HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
