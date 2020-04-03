@@ -2649,11 +2649,12 @@ function askNotificationPermission() {
         var getDbEng = new XMLHttpRequest();
         var dbURL = window.location.href
         if (dbURL.charAt(dbURL.length -1) == "/") {
-        dbURL=dbURL+"HeroDatabase.json";
+         dbURL=dbURL+"HeroDatabase.json";
         } else {
-        dbURL=dbURL+"/HeroDatabase.json";
-        };       
-        getDbEng.open( "GET", dbURL, false ); // false for synchronous request
+         dbURL=dbURL+"/HeroDatabase.json";
+        };
+	console.log(dbURL)
+        getDbEng.open( "GET", "./HeroDatabase.json", false ); // false for synchronous request
         getDbEng.send( null );
         this.HeroDB = JSON.parse(getDbEng.response);
         this.sortedHeroDB = Object.keys(this.HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
