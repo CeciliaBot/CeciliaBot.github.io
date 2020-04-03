@@ -428,9 +428,9 @@ span.heroImgList {
   
 .label {
   padding: 12px;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
-  margin: 10px;
+  margin: auto;
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -438,6 +438,8 @@ span.heroImgList {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  align-items: center;
+  flex-direction: column;
 }
 
 .label::before {
@@ -447,14 +449,15 @@ span.heroImgList {
   display: block;
   border-radius: 50%;
   position: absolute;
-  top: -5px;
-  left: -5px;
+  top: 5px;
+  left: 10px;
   width: 25px;
   height: 25px;
   text-align: center;
   line-height: 28px;
   transition-duration: 0.4s;
   transform: scale(0);
+  z-index:1;
 }
 
 .label img {
@@ -871,40 +874,40 @@ span.heroImgList {
     <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.classe}}:</center>
         <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_knight_label">{{strings.knight}}</p></label>
+        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_knight_label">{{strings.knight}}</p></label>
 
         <input type="checkbox" id="checkbox_thief" name="classe" value="assassin" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_thief_label">{{strings.thief}}</p></label>
+        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_thief_label">{{strings.thief}}</p></label>
 
         <input type="checkbox" id="checkbox_warrior" name="classe" value="warrior" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_warrior_label">{{strings.warrior}}</p></label>
+        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_warrior_label">{{strings.warrior}}</p></label>
       
         <input type="checkbox" id="checkbox_ranger" name="classe" value="ranger" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_ranger_label">{{strings.ranger}}</p></label>
+        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_ranger_label">{{strings.ranger}}</p></label>
       
         <input type="checkbox" id="checkbox_mage" name="classe" value="mage" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;" id="checkbox_mage_label">{{strings.mage}}</p></label>
+        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_mage_label">{{strings.mage}}</p></label>
       
         <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:absolute;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
+        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
     </div>
     <br><br>
     <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.elemento}}:</center>
         <input type="checkbox" id="checkbox_fire" name="elemento" value="fire" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_fire" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.fire}}</p></label>
+        <label for="checkbox_fire" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.fire}}</p></label>
 
         <input type="checkbox" id="checkbox_ice" name="elemento" value="ice" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ice" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.ice}}</p></label>
+        <label for="checkbox_ice" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.ice}}</p></label>
 
         <input type="checkbox" id="checkbox_earth" name="elemento" value="wind" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_earth" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.earth}}</p></label>
+        <label for="checkbox_earth" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.earth}}</p></label>
       
         <input type="checkbox" id="checkbox_light" name="elemento" value="light" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_light" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.light}}</p></label>
+        <label for="checkbox_light" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.light}}</p></label>
       
         <input type="checkbox" id="checkbox_dark" name="elemento" value="dark" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_dark" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:absolute;bottom:-20px;text-align:center;">{{strings.dark}}</p></label>
+        <label for="checkbox_dark" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.dark}}</p></label>
       
     </div>
     <br><br>
@@ -1842,9 +1845,6 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Burn";
                 this.debuffList["stic_vampire"].name = "Vampire";
                 this.debuffList["stic_bomb"].name = "Bomb";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               } else if (this.lingua == "fr") {
                 this.buffList["stic_debuf_impossible"].name = "Immunité";
                 this.buffList["stic_att_up"].name = "Attaque augmentée";
@@ -1892,9 +1892,6 @@ function askNotificationPermission() {
                 this.strings["earth"] = "Terre";
                 this.strings["light"] = "Lumière";
                 this.strings["dark"] = "Ténèbres";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               } else if (this.lingua == "jp") {
                 this.buffList["stic_debuf_impossible"].name = "弱体効果免疫";
                 this.buffList["stic_att_up"].name = "攻撃力UP";
@@ -1942,9 +1939,6 @@ function askNotificationPermission() {
                 this.strings["earth"] = "木属性";
                 this.strings["light"] = "光属性";
                 this.strings["dark"] = "闇属性";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-45px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-45px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-45px";
               } else if (this.lingua == "kr") {
                 this.buffList["stic_debuf_impossible"].name = "면역";
                 this.buffList["stic_att_up"].name = "공격력 증가";
@@ -1992,9 +1986,6 @@ function askNotificationPermission() {
                 this.strings["earth"] = "자연속성";
                 this.strings["light"] = "광속성";
                 this.strings["dark"] = "암속성";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               } else if (lingua == "zht") {
                 this.buffList["stic_debuf_impossible"].name = "免疫";
                 this.buffList["stic_att_up"].name = "攻擊力增加";
@@ -2030,9 +2021,6 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "燒傷";
                 this.debuffList["stic_vampire"].name = "吸血之手";
                 this.debuffList["stic_bomb"].name = "炸彈";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-20px";
               } else if (lingua == "es") {
                 this.buffList["stic_debuf_impossible"].name = "Inmunidad";
                 this.buffList["stic_att_up"].name = "Aumenta el ataque";
@@ -2068,9 +2056,6 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Quemadura";
                 this.debuffList["stic_vampire"].name = "Toque vampírico";
                 this.debuffList["stic_bomb"].name = "Bomba";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               } else if (lingua == "pt") {
                 this.buffList["stic_debuf_impossible"].name = "Imune";
                 this.buffList["stic_att_up"].name = "Aumentar Ataque";
@@ -2106,9 +2091,6 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Queimar";
                 this.debuffList["stic_vampire"].name = "Toque Vampiresco";
                 this.debuffList["stic_bomb"].name = "Bomba";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               } else if (lingua == "de") {
                 this.buffList["stic_debuf_impossible"].name = "Immun";
                 this.buffList["stic_att_up"].name = "Angriff erhöhen";
@@ -2144,9 +2126,6 @@ function askNotificationPermission() {
                 this.debuffList["stic_blaze"].name = "Verbrennen";
                 this.debuffList["stic_vampire"].name = "Vampirische Berührung";
                 this.debuffList["stic_bomb"].name = "Bombe";
-                document.getElementById("checkbox_warrior_label").style.bottom = "-20px";
-                document.getElementById("checkbox_ranger_label").style.bottom = "-20px";
-                document.getElementById("checkbox_soul-weaver_label").style.bottom = "-35px";
               };
             },
       translateTopics: function (n) {
