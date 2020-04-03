@@ -2652,8 +2652,7 @@ function askNotificationPermission() {
          dbURL=dbURL+"HeroDatabase.json";
         } else {
          dbURL=dbURL+"/HeroDatabase.json";
-        };
-	console.log(dbURL)
+        }; // can fail if the page has ?something at the end
         getDbEng.open( "GET", "./HeroDatabase.json", false ); // false for synchronous request
         getDbEng.send( null );
         this.HeroDB = JSON.parse(getDbEng.response);
