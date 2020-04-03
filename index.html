@@ -1619,6 +1619,9 @@ function askNotificationPermission() {
                   topics: "Topics",
                   notification_title: "E7 Camp Simulator",
                   notification_ready: "I tuoi team sono pronti!",
+                  results_error: "Errore",
+                  team_size_exceeded: "Dimensione team superata!",
+                  not_enough_heroes: "Nessun eroe rimanente da inserire nei rimanenti slot!",
 
                   ///Result saving window:
                   camp_name_field: "Nome camp",
@@ -1678,6 +1681,9 @@ function askNotificationPermission() {
                   topics: "对话",
                   notification_title: "E7 露营模拟器",
                   notification_ready: "结果计算完毕!",
+                  results_error: "Error",
+                  team_size_exceeded: "Team size exceeded!",
+                  not_enough_heroes: "No heroes to fill the remaining slots!",
 
                   ///Result saving window:
                   camp_name_field: "队伍名称",
@@ -1726,6 +1732,9 @@ function askNotificationPermission() {
                   topics: "Conversations",
                   notification_title: "E7 Camp Simulateur",
                   notification_ready: "Calcul terminé!",
+                  results_error: "Error",
+                  team_size_exceeded: "Team size exceeded!",
+                  not_enough_heroes: "No heroes to fill the remaining slots!",
 
                   ///Result saving window:
                   camp_name_field: "Nom",
@@ -1785,7 +1794,10 @@ function askNotificationPermission() {
                   team: "Team",
                   topics: "Topics",
                   notification_title: "E7 Camp Simulator",
-                  notification_ready: "Your results are rady!",
+                  notification_ready: "Your results are ready!",
+                  results_error: "Error",
+                  team_size_exceeded: "Team size exceeded!",
+                  not_enough_heroes: "No heroes to fill the remaining slots!",
 
                   ///Result saving window:
                   camp_name_field: "Camp name",
@@ -2677,8 +2689,16 @@ function askNotificationPermission() {
                   campList.splice( campList.indexOf(this.locked[i]),1);
                 };
             };
-            this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
-            camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, risultati: []});
+            try {
+              this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
+              camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, risultati: []});
+            } catch (err) {
+              this.isLoadingResults = false; // remove angelica loading
+              $( "#snackbar" ).text(`Error: ` + err);
+              var x = document.getElementById("snackbar");
+              x.className = "show";
+              setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            };
           };
       }
   }, // computed
@@ -2702,7 +2722,13 @@ function askNotificationPermission() {
         var notification = new Notification(app.strings.notification_title, { body: app.strings.notification_ready, icon: "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" }); // manda notifica di completamento
       };
     };
-    app.risultati = e.data;
+    if (e.data.code == 200 ) app.risultati = e.data.risultati
+    else if (e.data.code == 400 ) {
+      $( "#snackbar" ).text(app.strings["results_error"] + `: ` + app.strings[e.data.risultati[0]] );
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000); // show for 3 seconds
+    };
   }  
 
   </script>
