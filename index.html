@@ -2651,11 +2651,8 @@ function askNotificationPermission() {
       boot: function () {
         var getDbEng = new XMLHttpRequest();
         var dbURL = window.location.href
-        if (dbURL.charAt(dbURL.length -1) == "/") {
-         dbURL=dbURL+"HeroDatabase.json";
-        } else {
-         dbURL=dbURL+"/HeroDatabase.json";
-        }; // can fail if the page has ?something at the end
+        dbURL=dbURL.replace(/[^a-z0-9]$/gi,"");
+        dbURL=dbURL+"/HeroDatabase.json";
         getDbEng.open( "GET", "./HeroDatabase.json", false ); // false for synchronous request
         getDbEng.send( null );
         this.HeroDB = JSON.parse(getDbEng.response);
