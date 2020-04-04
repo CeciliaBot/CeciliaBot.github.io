@@ -1416,7 +1416,7 @@ function askNotificationPermission() {
           salvaRisultato: function (n) {
             var $form = $("#saveCamp");
             var campName = $('#camp_name', $form).val().replace(/  +/g,"").trim();
-            if (campName && campName != "") {
+            if (campName && campName != "" && campName.indexOf("@_#") == -1) {
               if (!this.savedCamps[campName]) {
                 this.savedCamps[campName] = this.risultati[n];
                 $('#saveCamp').remove();
@@ -1430,12 +1430,15 @@ function askNotificationPermission() {
               } else {
                 $("#campSavingError").text(this.strings.error_name_in_use);
               };
+            } else if (campName.indexOf("@_#") != -1) {
+	      $("#campSavingError").text("The sequence @_# can't be used");  
             } else {
               $("#campSavingError").text(this.strings.error_no_name_provided);
             }; 
           },
           eliminaRisultatoSalvato: function (campName) {
             try {
+		campName = campName.replace(/@_#3#9#;/g,"'").replace(/@_#3#4#;/g,'"').replace(/@_#9#6#;/g,'`'); // avoid errors during deletion
                 delete this.savedCamps[campName];
                 $('#savedCamp').remove();
                 localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
@@ -1453,7 +1456,7 @@ function askNotificationPermission() {
               <div id="savedCamp" class="modal" style="padding-top: 60px;display:block;">
                 <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
-                    <span onclick="app.eliminaRisultatoSalvato('` + campName + `')"><i class="fa fa-trash close" style="color: var(--font-color);"></i></span>
+                    <span onclick="app.eliminaRisultatoSalvato('` + campName.replace(/'/g,"@_#3#9#;").replace(/"/g,'@_#3#4#;').replace(/`/g,'@_#9#6#;') + `')"><i class="fa fa-trash close" style="color: var(--font-color);"></i></span>
                     <p>` + this.strings.morale + `: ` + this.savedCamps[campName].morale + `</p>
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png" style="height:55px;width:55px;">
                     <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png" style="height:55px;width:55px;">
