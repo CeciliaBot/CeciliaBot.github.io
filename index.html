@@ -595,9 +595,13 @@ span.heroImgList {
     <div id="welcome" style="display: '';">
         <h2>{{strings.messaggio_di_benvenuto}}<br><font color="red">{{strings.data_by}}</font></h2>
         <br><br>
-        <div id="WhatsNewText" onclick="toggleWhatsNew()" style="font-size: 16px;">▼ What's new:</div><br>
+        <div id="WhatsNewText" onclick="toggleWhatsNew()" style="font-size: 16px;">▼ What's new:</div>
         <div id="show_whats_new" class="noScrollBar" style="display: block; position: relative; height: 52vh; overflow-x: auto; font-size: 16px;">
           <ul>
+            <li>
+              Default language is now autodetected during first boot.<br>
+              You can change language in the settings.
+            </li>
             <li style="color:rgb(0, 255, 136)">
               Now you can select German, Portoguese, French and Spanish as language.<br>
               Only French has gamedata and menus translated. Thanks again to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the translation.<br>
@@ -1266,7 +1270,7 @@ function askNotificationPermission() {
 	            isLoadingResults: false,
               inizializzazione: true, //nascondi tutto durante il caricamento iniziale di vue
               numeroCombinazioniPossibili: "/",
-              lingua: "en", // Just a placeholder during boot, language is set at line 1568 and 1569
+              lingua: "en", // Just a placeholder during boot, language is set at line 1701 and 1705
               translatedName:{}
             };
         },
@@ -1668,10 +1672,43 @@ function askNotificationPermission() {
                 } else this.noDebuffs = false;
             },
             impostaLingua: function () {
-              var lingua = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : '{"lingua":"en"}').lingua;
-              if (lingua == undefined) lingua = "en";
+              var lingua = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : '{"lingua":"*"}').lingua;
+              if (lingua == undefined) lingua = "*";
+              try {
+                if (lingua === "*") { // detect browser language
+                  switch ( (navigator.language || navigator.userLanguage).split("-")[0] ) { // check browser setting and select language
+                    case 'it':
+                      lingua = "it";
+                      break;
+                    case 'fr':
+                      lingua = "fr";
+                      break;
+                    case 'de':
+                      lingua = "de";
+                      break;
+                    case 'pt':
+                      lingua = "pt";
+                      break;
+                    case 'es':
+                      lingua = "es";
+                      break;
+                    case 'ja':
+                      lingua = "jp";
+                      break;
+                    case 'ko':
+                      lingua = "kr";
+                      break;
+                    case 'zh':
+                      lingua = "zht";
+                      break;
+                    default:
+                      lingua = "en";
+                  };
+                };
+              } catch (err) {
+                lingua = "en"
+              };
               this.lingua = lingua;
-              //var language = window.navigator.userLanguage || window.navigator.language;
               if (this.lingua == "it") {
                 this.strings = {
                   messaggio_di_benvenuto: "Benvenuto su Epic Seven Camp simulator",
