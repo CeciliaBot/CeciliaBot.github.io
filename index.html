@@ -1528,7 +1528,7 @@ function askNotificationPermission() {
                              点击英雄头像可以锁定英雄，被锁定的英雄将会出现在所有的计算结果中.<br>
                              你可以点击下方的篝火图标计算露营心情，或者点击记事本图标添加高级选项.
                             `;
-                break
+                break;
               case 'advanced_settings':
                 titolo = "高级设置";
                 contenuto = `这里可以进行高级设置.<br>
@@ -1549,6 +1549,7 @@ function askNotificationPermission() {
                              如果你所有栏位都放入了英雄，同时又选择了任意一个高级设置， 将会报错 "队伍人数超过上限!" 并返回 0 个计算结果.<br>
                              这个选项有助于创建自定义队伍, 比如你将你所有的骑士放在一个栏位中，那么你所有的计算结果里就必定会出现一个骑士!
                              `;
+                break;
               case 'results_help':
                 titolo = "计算结果";
                 contenuto = `这里会出现根据你的设置筛选出的心情最高的前200个结果.<br>
@@ -1579,7 +1580,7 @@ function askNotificationPermission() {
                              You can lock a hero by clicking he's portrait, a lock symbol will appear near the portrait. A locked hero will appear in every team in the results page.<br>
                              You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.
                             `;
-                break
+                break;
               case 'advanced_settings':
                 titolo = "Advanced settings";
                 contenuto = `Here you can costumize your camp results.<br>
@@ -1600,6 +1601,7 @@ function askNotificationPermission() {
                              If you fill all the slots and select any advanced settings you will get a "team size exceeded" error or 0 results.<br>
                              This option is useful to create costum rules, for example you can put all your knights in 1 slot and you will get a knight for each team in the results!
                              `;
+                break;
               case 'results_help':
                 titolo = "Results";
                 contenuto = `Here are displayed the best 200 combinations for your roster and current advanced settings.<br>
