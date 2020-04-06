@@ -587,7 +587,11 @@ span.heroImgList {
 .noScrollBar::-webkit-scrollbar {
   display: none;
 }
-
+.blur {
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(5px);
+  color: white;
+}
 </style>
 </head>
 <body class="noScrollBar">
@@ -598,6 +602,11 @@ span.heroImgList {
         <div id="WhatsNewText" onclick="toggleWhatsNew()" style="font-size: 16px;">▼ What's new:</div>
         <div id="show_whats_new" class="noScrollBar" style="display: block; position: relative; height: 52vh; overflow-x: auto; font-size: 16px;">
           <ul>
+            <li style="color:#007FFF">
+              New setting option "Debug: Display camping values"<br>
+              When enabled you can right click (or long tap on mobile) on a hero's portrait to view that character's camping values.<br>
+              Useful if you want to check if the data is correct or updated.
+            </li>
             <li>
               Default language is now autodetected during first boot.<br>
               You can change language in the settings.
@@ -729,7 +738,7 @@ span.heroImgList {
             <td>
               <span v-for="key in displayList" class="heroImgList">
                 <!--<div class="fa fa-check-circle top-left" v-bind:style="'font-size:38px;color:green;display:' + isInTeam(thisHeroData(key).name)"></div>-->
-                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
+                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <div class="top-left" v-bind:style="'font-size:38px;display:' + isInTeam(thisHeroData(key)._id)">✔</div>
               </span>
             </td>
@@ -740,8 +749,8 @@ span.heroImgList {
          <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
           <tr v-for="key in displayList">
             <td>
-              <div>
-                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key).name)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
+              <div class="hero_potrait">
+                <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
 		            <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
 		            <template v-if="isInTeam(thisHeroData(key)._id) === 'none'">  <!-- già aggiunto -->
                   <span v-on:click="addHero(thisHeroData(key)._id)" class="fa fa-plus displaylistTableIcons">   </span>
@@ -769,7 +778,7 @@ span.heroImgList {
             <div><i class="fa fa-th-list"></i></div>
           </button>
           </div>
-	</h2>
+	    </h2>
        <!-- Pulsanti filtro eroi -->
       <div style="display:inline-block;width:100%;height:100%;">
         <div class="search_hero_area" id="filter_all_rarity">
@@ -858,8 +867,8 @@ span.heroImgList {
         <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
          <tr v-for="key in displayMyHeroes">
            <td>
-             <div>
-               <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key).name" v-bind:titolo="thisHeroData(key).name"/>
+             <div class="hero_potrait">
+               <img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + thisHeroData(key).id + '_s.png'" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
                 <span v-on:click="app.removeHero(thisHeroData(key)._id)" class="fa fa-trash displaylistTableIcons" aria-hidden="true"></span>
                 <template v-if="isLocked(thisHeroData(key)._id) === 'none'">  <!-- non lockato -->
@@ -970,10 +979,10 @@ span.heroImgList {
             <tr v-for="(item, index) in risultati">
               <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index)"><i class="fa fa-floppy-o" aria-hidden="true" style="font-size:30px;"></i>
                 <br>{{index+1}}</td>
-              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[0]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/></td>
-              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[1]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
-              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[2]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
-              <td><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[3]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
+              <td class="hero_potrait"><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[0]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/></td>
+              <td class="hero_potrait"><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[1]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
+              <td class="hero_potrait"><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[2]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
+              <td class="hero_potrait"><img v-bind:src="'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + heroId(item.team[3]) + '_s.png'" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
               <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore1)}}</a><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore2)}}</a></td>
               <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
             </tr>
@@ -1015,6 +1024,21 @@ span.heroImgList {
               <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
                 <label class="switch" style="position:absolute;">
                   <input type="checkbox" id="notifications_toggle" name="notifications_toggle" onchange="askNotificationPermission()">
+                  <i class="slider round"></i>
+                </label>
+              </i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="max-height:55px">
+              <span>
+                {{strings.debug_camping_values}}
+              </span>
+              <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
+                <label class="switch" style="position:absolute;">
+                  <input type="checkbox" id="showValues_toggle" name="showValues_toggle" onchange="toggleDebugValues()">
                   <i class="slider round"></i>
                 </label>
               </i>
@@ -1198,6 +1222,106 @@ function askNotificationPermission() {
   };
 };
 
+    //// context menu
+    var showValues = false;
+    if (showValues == true) {
+      var checkBoxes = $("#showValues_toggle");
+      checkBoxes.attr('checked', true);
+    };
+    function toggleDebugValues() {
+      if (showValues == true) {
+        showValues = false;
+        document.getElementById("showValues_toggle").checked = false;
+      } else {
+        showValues = true;
+        document.getElementById("showValues_toggle").checked = true;
+      };
+    };
+    function getPosition(e) {
+      var posx = 0;
+      var posy = 0;
+
+      if (!e) var e = window.event;
+
+      if (e.pageX || e.pageY) {
+        posx = e.pageX;
+        posy = e.pageY;
+      } else if (e.clientX || e.clientY) {
+        posx = e.clientX + document.body.scrollLeft + 
+                          document.documentElement.scrollLeft;
+        posy = e.clientY + document.body.scrollTop + 
+                          document.documentElement.scrollTop;
+      }
+
+      return {
+        x: posx,
+        y: posy
+      }
+    }
+
+if (document.addEventListener) {
+  var tastoDestro = 0;
+  document.addEventListener('click', function(e) {
+    console.log(e)
+    if (tastoDestro != 0) {
+      tastoDestro = 0;
+      $('#debugHeroInfo').remove();
+    }; 
+  }); 
+  document.addEventListener('contextmenu', function(e) {
+    if (showValues == true) {
+      if (tastoDestro != 0) {
+          $('#debugHeroInfo').remove();
+      }; 
+      if ((e.target.parentNode.className == "heroImgList" || e.target.parentNode.className == "hero_potrait") && e.target.tagName == "IMG") {
+        tastoDestro = 1;
+        var posX, posY;
+        let clickCoords = getPosition(e);
+        let clickCoordsX = clickCoords.x;
+        let clickCoordsY = clickCoords.y;
+
+        let menuWidth = 200 + 4;
+        let menuHeight = 480 + 4;
+        let currentXPosition = e.view.visualViewport.pageTop;
+        
+        let windowWidth = window.innerWidth;
+        let windowHeight = window.innerHeight;
+
+        if ( (windowWidth - clickCoordsX) < menuWidth ) {
+          posX = windowWidth - menuWidth - 50 + "px";
+        } else {
+          posX = clickCoordsX + "px";
+        }
+
+        if ( (windowHeight + currentXPosition - 100 - clickCoordsY) < menuHeight ) {
+          posY = windowHeight + currentXPosition - menuHeight - 110 + "px";
+        } else {
+          posY = clickCoordsY + "px";
+        }
+
+        var topics = "";
+        for (var key in app.HeroDB[e.target.alt].camping.values) {
+          topics += `<div style="border-bottom: 1px solid grey;">` + app.translateTopics(key) + " " + '<span style="float: right;">' + app.HeroDB[e.target.alt].camping.values[key] + '</span></div>'
+        };
+        $( "#app" ).append(`
+        <div id="debugHeroInfo" class="blur" style="width:200px;position:absolute; top:` + posY + `; left:` + posX + `; padding: 10px;">
+          ` + "<center>" + app.translatedName[e.target.alt] + "</center>" +
+          `<div style="font-size:12px">` +
+            app.strings.topics + ": " + app.translateTopics(app.HeroDB[e.target.alt].camping.topics[0]) + ", " +  app.translateTopics(app.HeroDB[e.target.alt].camping.topics[1]) + "<br><br>" +
+            topics
+          + `</div>
+          </div>
+        `);
+        e.preventDefault(); // hide left click
+      };
+    };
+  }, false);
+} else {
+  document.attachEvent('oncontextmenu', function() {
+    //alert("You've tried to open context menu");
+    window.event.returnValue = false;
+  });
+};
 
   // google 
   window.dataLayer = window.dataLayer || [];
@@ -1766,6 +1890,7 @@ function askNotificationPermission() {
                 lingua = "en"
               };
               this.lingua = lingua;
+
               if (this.lingua == "it") {
                 this.strings = {
                   messaggio_di_benvenuto: "Benvenuto su Epic Seven Camp simulator",
@@ -1825,6 +1950,7 @@ function askNotificationPermission() {
                   impostazioni: "Impostazioni",
                   tema_notturno: "Tema notturno",
                   notifiche: "Notifiche",
+                  debug_camping_values: "Debug: Mostra i valori delle opzioni",
                   language: "Lingua"                  
                 };
 
@@ -1887,6 +2013,7 @@ function askNotificationPermission() {
                   impostazioni: "设置",
                   tema_notturno: "夜间模式",
                   notifiche: "启用通知",
+                  debug_camping_values: "Debug: Display camping values",
                   language: "语言"
                 };               
 
@@ -1938,6 +2065,7 @@ function askNotificationPermission() {
                   impostazioni: "Paramètres",
                   tema_notturno: "Mode nuit",
                   notifiche: "Notification",
+                  debug_camping_values: "Debug: Display camping values",
                   language: "Langue"
                 };               
 
@@ -2001,6 +2129,7 @@ function askNotificationPermission() {
                   impostazioni: "Settings",
                   tema_notturno: "Night theme",
                   notifiche: "Enable notifications",
+                  debug_camping_values: "Debug: Display camping values",
                   language: "Language"
                 };
               };
