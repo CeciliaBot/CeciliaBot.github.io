@@ -1480,7 +1480,6 @@ function askNotificationPermission() {
           },
           mostraRisultatoSalvato: function (campName) {
             for (var i in this.savedCamps[campName].team) {
-              console.log(i)
               this.savedCamps[campName].team[i] = this.savedCamps[campName].team[i].toLowerCase().replace(/& /g,"").replace(/ /g, "-").replace(/'/g,"");
             };
             this.savedCamps[campName].migliorPG1 = this.savedCamps[campName].migliorPG1.toLowerCase().replace(/& /g,"").replace(/ /g, "-").replace(/'/g,"");
