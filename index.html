@@ -1262,7 +1262,6 @@ function askNotificationPermission() {
 if (document.addEventListener) {
   var tastoDestro = 0;
   document.addEventListener('click', function(e) {
-    console.log(e)
     if (tastoDestro != 0) {
       tastoDestro = 0;
       $('#debugHeroInfo').remove();
