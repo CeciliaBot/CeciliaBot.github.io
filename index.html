@@ -1506,41 +1506,82 @@ function askNotificationPermission() {
               </div>
             `);
             $("body").addClass("modal-open");
-          },          
+          },
           helpWindow: function (sezione, argomento) {
             var titolo, contenuto;
-            if (this.lingua == "zht") {
             switch (argomento) { //HTML code is allowed
               case 'add_heroes_help':
-                titolo = "添加英雄";
-                contenuto = `点击英雄头像将英雄添加到你的英雄列表.<br>
+                if (this.lingua != "zht") { // translations should be moved where the other strings are
+                  titolo = "Add Heroes";
+                  contenuto = `Tap or click the portrait of a hero to add that that hero to your roster.<br>
+                              Heroes in your roster will be used to calculate all possible combinations and return the best 200 combinations.<br>
+                              You can add as many heroes as you wish but the time needed to calculate all possible combinations will also increase.<br>
+                              Your roster will be saved and can be used everytime you visit this page without the need to add each hero everytime!<br>
+                              <br>
+                              If you are using the "List" display mode tap the "+" symbol to add a hero to your roster
+                              `;
+                } else {
+                  titolo = "添加英雄";
+                  contenuto = `点击英雄头像将英雄添加到你的英雄列表.<br>
                              你的英雄列表里的所有英雄将会用于计算可能的排列组合并给出心情最高的前200个结果.<br>
                              可添加的英雄没有数量限制，添加英雄越多计算越慢.<br>
                              你的英雄将会自动保存，不需要每次打开页面都重新选择，但是清除页面Cookie将会丢失你保存的设置和英雄列表!<br>
                              <br>
                              如果你使用的是"列表"视图(可在搜索框右方切换) 点击 "+" 号添加英雄至你的英雄列表
                             `;
+                };
                 break;
               case 'manage_heroes_help':
-                titolo = "英雄列表管理";
-                contenuto = `在这个界面你可以查看所有保存的英雄.<br>
+                if (this.lingua != "zht") {
+                  titolo = "Manage Heroes";
+                  contenuto = `In this window you can view all the heroes currently in your roster.<br>
+                              You can remove a hero by clicking the "x" at the bottom of the hero's portrait.<br>
+                              You can lock a hero by clicking he's portrait, a lock symbol will appear near the portrait. A locked hero will appear in every team in the results page.<br>
+                              You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.
+                              `;
+                } else {
+                  titolo = "英雄列表管理";
+                  contenuto = `在这个界面你可以查看所有保存的英雄.<br>
                              点击英雄头像上的 "x" 就可以删除英雄.<br>
                              点击英雄头像可以锁定英雄，被锁定的英雄将会出现在所有的计算结果中.<br>
                              你可以点击下方的篝火图标计算露营心情，或者点击记事本图标添加高级选项.
                             `;
-                break;
+                }; 
+                break
               case 'advanced_settings':
-                titolo = "高级设置";
-                contenuto = `这里可以进行高级设置.<br>
+                if (this.lingua != "zht") {
+                  titolo = "Advanced settings";
+                  contenuto = `Here you can costumize your camp results.<br>
+                              <b style="color:red">Locked heroes are not subject to these restrictions</b><br><br>
+                              You can select as many as you want but keep in mind time size while doing so.<br>
+                              For example if you lock 5 classes or 5 elements you will get a team size error.<br>
+                              Because locked heroes ignore advanced settings if you lock "Tamarinne" and select Soul weaver as a class you will get "Tamarinne" + another Soul weaver in every team. The same thing applies to Buffs and Debuffs<br>
+                              `;
+                } else {
+                  titolo = "高级设置";
+                  contenuto = `这里可以进行高级设置.<br>
                             <b style="color:red">被锁定的英雄不受高级设置影响</b><br><br>
                             你可以选择任意数量的选项，但是某些选项有特殊的限制.<br>
                             例如你在职业一栏勾选超过4个职业就会报错，因为一个队伍最多不超过4个人.<br>
                             因为被锁定的英雄无视高级设置限制，所以如果你锁定了 "塔瑪林爾(偶像)" 然后在高级设置的职业一栏选中了精灵师，那么在计算结果中 除了偶像还会再添加一个精灵师. 对于Buff和Debuff也是同理<br>
                             `;
+                };
                 break;
               case 'multi-lock':
-                titolo = "锁定多人 帮助";
-                contenuto = `每个栏位代表队伍里的一个位置, 每个栏位可以添加任意数量的英雄.<br>
+                if (this.lingua != "zht") {
+                  titolo = "Multi lock help";
+                  contenuto = `Each slot is a space in your team, on each slot you can add as many heroes as you wish.<br>
+                              Only one of the Heroes locked for each slot will be in the results. The same hero can't be added on multiple slots.<br>
+                              Empty slots will be filled with the remaining heroes in your roster.<br>
+                              If you use all your heroes to fill 3 or less slots and no heroes are left to fill the remaining slots you will get a "not enough heroes left" error.<br>
+                              Slots that are left empty will be subject of restrictions from advanced settings.<br><br>
+                              Locked heroes in one of the slots will ignore advanced settings.<br>
+                              If you fill all the slots and select any advanced settings you will get a "team size exceeded" error or 0 results.<br>
+                              This option is useful to create costum rules, for example you can put all your knights in 1 slot and you will get a knight for each team in the results!
+                              `;
+                } else {
+                  titolo = "锁定多人 帮助";
+                  contenuto = `每个栏位代表队伍里的一个位置, 每个栏位可以添加任意数量的英雄.<br>
                              计算结果中的每一个位置，只会出现对应栏位中的英雄. 同一个英雄不能被添加到多个栏位中.<br>
                              空白的栏位对应你的英雄列表中剩余的全部英雄.<br>
                              如果你将所有的英雄加到前三个栏位中将会出现 "所有英雄添加完毕，已无英雄可添加至下一个栏位!" 的错误信息.<br>
@@ -1549,71 +1590,28 @@ function askNotificationPermission() {
                              如果你所有栏位都放入了英雄，同时又选择了任意一个高级设置， 将会报错 "队伍人数超过上限!" 并返回 0 个计算结果.<br>
                              这个选项有助于创建自定义队伍, 比如你将你所有的骑士放在一个栏位中，那么你所有的计算结果里就必定会出现一个骑士!
                              `;
+                }; 
                 break;
               case 'results_help':
-                titolo = "计算结果";
-                contenuto = `这里会出现根据你的设置筛选出的心情最高的前200个结果.<br>
+                if (this.lingua != "zht") {
+                  titolo = "Results";
+                  contenuto = `Here are displayed the best 200 combinations for your roster and current advanced settings.<br>
+                              You need at least 4 heroes in your current roster for any result to be displayed.<br>
+                              You can click the floppy disk icon to save a specific team composition (you will be prompted to input a name for that team), your saved teams will be displayed in the settings window.
+                              `;
+                } else {
+                  titolo = "计算结果";
+                  contenuto = `这里会出现根据你的设置筛选出的心情最高的前200个结果.<br>
                              你的英雄列表里至少要有4个英雄才能显示结果.<br>
                              你可以点击每个结果前面的图标保存对应的队伍 (会弹出一个窗口要求你自定义队伍名称), 你保存的队伍会出现在右下方齿轮图标的"设置"一栏里.
                              `;
+                };
                 break;
               default:
                 titolo = "";
                 contenuto = "";
             };
-            } else {
-            switch (argomento) { //HTML code is allowed
-              case 'add_heroes_help':
-                titolo = "Add Heroes";
-                contenuto = `Tap or click the portrait of a hero to add that that hero to your roster.<br>
-                             Heroes in your roster will be used to calculate all possible combinations and return the best 200 combinations.<br>
-                             You can add as many heroes as you wish but the time needed to calculate all possible combinations will also increase.<br>
-                             Your roster will be saved and can be used everytime you visit this page without the need to add each hero everytime!<br>
-                             <br>
-                             If you are using the "List" display mode tap the "+" symbol to add a hero to your roster
-                            `;
-                break;
-              case 'manage_heroes_help':
-                titolo = "Manage Heroes";
-                contenuto = `In this window you can view all the heroes currently in your roster.<br>
-                             You can remove a hero by clicking the "x" at the bottom of the hero's portrait.<br>
-                             You can lock a hero by clicking he's portrait, a lock symbol will appear near the portrait. A locked hero will appear in every team in the results page.<br>
-                             You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.
-                            `;
-                break;
-              case 'advanced_settings':
-                titolo = "Advanced settings";
-                contenuto = `Here you can costumize your camp results.<br>
-                            <b style="color:red">Locked heroes are not subject to these restrictions</b><br><br>
-                            You can select as many as you want but keep in mind time size while doing so.<br>
-                            For example if you lock 5 classes or 5 elements you will get a team size error.<br>
-                            Because locked heroes ignore advanced settings if you lock "Tamarinne" and select Soul weaver as a class you will get "Tamarinne" + another Soul weaver in every team. The same thing applies to Buffs and Debuffs<br>
-                            `;
-                break;
-              case 'multi-lock':
-                titolo = "Multi lock help";
-                contenuto = `Each slot is a space in your team, on each slot you can add as many heroes as you wish.<br>
-                             Only one of the Heroes locked for each slot will be in the results. The same hero can't be added on multiple slots.<br>
-                             Empty slots will be filled with the remaining heroes in your roster.<br>
-                             If you use all your heroes to fill 3 or less slots and no heroes are left to fill the remaining slots you will get a "not enough heroes left" error.<br>
-                             Slots that are left empty will be subject of restrictions from advanced settings.<br><br>
-                             Locked heroes in one of the slots will ignore advanced settings.<br>
-                             If you fill all the slots and select any advanced settings you will get a "team size exceeded" error or 0 results.<br>
-                             This option is useful to create costum rules, for example you can put all your knights in 1 slot and you will get a knight for each team in the results!
-                             `;
-                break;
-              case 'results_help':
-                titolo = "Results";
-                contenuto = `Here are displayed the best 200 combinations for your roster and current advanced settings.<br>
-                             You need at least 4 heroes in your current roster for any result to be displayed.<br>
-                             You can click the floppy disk icon to save a specific team composition (you will be prompted to input a name for that team), your saved teams will be displayed in the settings window.
-                             `;
-                break;
-              default:
-                titolo = "";
-                contenuto = "";
-            };
-            }
+
             $( "#" + sezione).append(`
               <div id="help_menu" class="modal" style="padding-top: 60px;display:block;">
                 <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
@@ -1871,9 +1869,9 @@ function askNotificationPermission() {
                   topics: "对话",
                   notification_title: "E7 露营模拟器",
                   notification_ready: "结果计算完毕!",
-                  results_error: "错误",
-                  team_size_exceeded: "队伍人数超过上限!",
-                  not_enough_heroes: "所有英雄添加完毕，已无英雄可添加至下一个栏位!",
+                  results_error: "Error",
+                  team_size_exceeded: "Team size exceeded!",
+                  not_enough_heroes: "No heroes to fill the remaining slots!",
 
                   ///Result saving window:
                   camp_name_field: "队伍名称",
@@ -1922,9 +1920,9 @@ function askNotificationPermission() {
                   topics: "Conversations",
                   notification_title: "E7 Camp Simulateur",
                   notification_ready: "Calcul terminé!",
-                  results_error: "Erreur",
-                  team_size_exceeded: "Le nombre maximum de héros dans l'équipe dépassé!",
-                  not_enough_heroes: "Il n'y aura plus de héro disponible pour la prochaine slot!",
+                  results_error: "Error",
+                  team_size_exceeded: "Team size exceeded!",
+                  not_enough_heroes: "No heroes to fill the remaining slots!",
 
                   ///Result saving window:
                   camp_name_field: "Nom",
