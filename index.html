@@ -1479,6 +1479,12 @@ function askNotificationPermission() {
             };
           },
           mostraRisultatoSalvato: function (campName) {
+            for (var i in this.savedCamps[campName].team) {
+              console.log(i)
+              this.savedCamps[campName].team[i] = this.savedCamps[campName].team[i].toLowerCase().replace(/& /g,"").replace(/ /g, "-").replace(/'/g,"");
+            };
+            this.savedCamps[campName].migliorPG1 = this.savedCamps[campName].migliorPG1.toLowerCase().replace(/& /g,"").replace(/ /g, "-").replace(/'/g,"");
+            this.savedCamps[campName].migliorPG2 = this.savedCamps[campName].migliorPG1.toLowerCase().replace(/& /g,"").replace(/ /g, "-").replace(/'/g,"");
             $( "#settings_window" ).append(`
               <div id="savedCamp" class="modal" style="padding-top: 60px;display:block;">
                 <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
