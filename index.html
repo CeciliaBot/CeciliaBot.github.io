@@ -7,8 +7,6 @@
 <script src="./js-combinatorics@0.5.js"></script>
 <!--<script src="vue.js"></script>-->
 <script src="./vue@2.6.11.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
 <link rel="stylesheet" href="./font-awesome.min.css">
 <style>
 :root {
@@ -593,6 +591,15 @@ span.heroImgList {
   color: white;
 }
 </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161715700-1');
+</script>
 </head>
 <body class="noScrollBar">
   <div id="app"><!-- vue.js -->
@@ -1320,13 +1327,6 @@ if (document.addEventListener) {
     window.event.returnValue = false;
   });
 };
-
-  // google 
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-161715700-1'); 
 
     var AoEHeroes = ["Kawerik","Cerise","Specter Tenebria","Tempest Surin","Pavel","Ambitious Tywin","Alencia","Benevolent Romann","Elena","Cecilia","Vildred","Charlotte","Baal & Sezan","Yufine","Ravi","Kayron","Charles","Yuna","Sez","Haste","Tywin","Lidica","Aramintha","Tenebria","Basar","Tamarinne","Ludwig","Bellona","Luluca","Zeno","Vivian","Lilias","Dizzy","Faithless Lididca","Fallen Cecilia","Judge Kise","Arbiter Vildred","Sage Baal & Sezan","Specimen Sez","Martial Artist Ken","Silver Blade Aramintha","Desert Jewel Basar","Seaside Bellona","Silk","Mercedes","Armin","Zerato","Corvus","Cartuja","Schuri","Dingo","Clarissa","Leo","Purrgis","Crozet","Dominiel","Romann","Khawana","Shadow Rose","Celestial Mercedes","Champion Zerato","Blood Blade Karin","Watcher Schuri","Blaze Dingo","Kitty Clariss","Roaming Warrior Leo","Auxiliary Lots","General Purrgis","Ras","Sven","Church of Ilryos Axe","Rikoris","Adlay","Carrot","Jena","Jecht","Elson","Hurado","Kiris","Celeste","Pearlhorizon","Gloomyrain","Kikirat v2","Chaos Sect Axe","Captain Rikoris","Researcher Carrot","Lena"];
     var app = new Vue({
