@@ -1299,8 +1299,8 @@ if (document.addEventListener) {
           posX = clickCoordsX + "px";
         }
 
-        if ( (windowHeight - e.clientY) < menuHeight ) {
-          posY = clickCoordsY + windowHeight - e.clientY - menuHeight + "px";
+        if ( (windowHeight - e.clientY - 50) < menuHeight ) {
+          posY = clickCoordsY + windowHeight - e.clientY - menuHeight - 50 + "px";
         } else {
           posY = clickCoordsY + "px";
         }
