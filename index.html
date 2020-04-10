@@ -1288,19 +1288,19 @@ if (document.addEventListener) {
 
         let menuWidth = 200 + 4;
         let menuHeight = 480 + 4;
-        let currentXPosition = e.view.visualViewport.pageTop;
+        let currentYPosition = e.pageY;
         
         let windowWidth = window.innerWidth;
         let windowHeight = window.innerHeight;
 
-        if ( (windowWidth - clickCoordsX) < menuWidth ) {
-          posX = windowWidth - menuWidth - 50 + "px";
+        if ( (windowWidth - clickCoordsX - 50) < menuWidth ) {
+          posX = clickCoordsX - menuWidth - 15 + "px";
         } else {
           posX = clickCoordsX + "px";
         }
 
-        if ( (windowHeight + currentXPosition - 100 - clickCoordsY) < menuHeight ) {
-          posY = windowHeight + currentXPosition - menuHeight - 120 + "px";
+        if ( (windowHeight - e.clientY) < menuHeight ) {
+          posY = clickCoordsY + windowHeight - e.clientY - menuHeight + "px";
         } else {
           posY = clickCoordsY + "px";
         }
