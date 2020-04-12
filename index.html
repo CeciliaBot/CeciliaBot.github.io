@@ -1404,7 +1404,9 @@ if (document.addEventListener) {
             return this.HeroDB[hero]
           },
           thisHeroTranslatedName: function(heroid) {
-            return this.translatedName[heroid]
+            if (this.translatedName[heroid]) {
+              return this.translatedName[heroid]
+            } else return this.HeroDB[heroid].name
           },
           capitalize: function(string) {
               return string[0].toUpperCase() + string.slice(1).replace(/-/gi," "); 
