@@ -92,8 +92,8 @@ onmessage = function(e) {
                                         e.debuffs.every(i => debuffsRisultati.includes(i)) &&
                                         e.buffs.every(i => buffsRisultati.includes(i)) &&
                                         (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
-                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != "20" && team != "25" && team != "21"}).length === 0)) &&
-                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != "20" && team != "25" && team != "21"}).length === 0)  )
+                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)) &&
+                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)  )
                                     ){
                                         if (e.risultati.length < 200) {
                                         e.risultati.push(nuovoCampSimulatorTeam2(team));
@@ -155,8 +155,8 @@ onmessage = function(e) {
                                         e.debuffs.every(i => debuffsRisultati.includes(i)) &&
                                         e.buffs.every(i => buffsRisultati.includes(i)) &&
                                         (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
-                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != "20" && team != "25" && team != "21"}).length === 0)) &&
-                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != "20" && team != "25" && team != "21"}).length === 0)  )
+                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)) &&
+                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)  )
                                     ){
                                         if (e.risultati.length < 200) {
                                         e.risultati.push(nuovoCampSimulatorTeam2(team));
