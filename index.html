@@ -1832,26 +1832,26 @@ if (document.addEventListener) {
                 }; 
                 for(var i = 0; i < debuffs_checkbox.length; i++)  
                 {  
-                    if (debuffs_checkbox[i].checked) this.debuffs.push(debuffs_checkbox[i].value);
+                    if (debuffs_checkbox[i].checked) this.debuffs.push(parseInt(debuffs_checkbox[i].value));
                 }; 
                 for(var i = 0; i < buffs_checkbox.length; i++)  
                 {  
-                    if (buffs_checkbox[i].checked) this.buffs.push(buffs_checkbox[i].value);
+                    if (buffs_checkbox[i].checked) this.buffs.push(parseInt(buffs_checkbox[i].value));
                 }; 
 
                 if ($('#AoE').is(":checked"))
                 {
-                this.AoE = true;
+                    this.AoE = true;
                 } else this.AoE = false;
 
                 if ($('#noS1debuffs').is(":checked"))
                 {
-                this.noS1debuffs = true;
+                    this.noS1debuffs = true;
                 } else this.noS1debuffs = false;
 
                 if ($('#noDebuffs').is(":checked"))
                 {
-                this.noDebuffs = true;
+                    this.noDebuffs = true;
                 } else this.noDebuffs = false;
             },
             impostaLingua: function () {
