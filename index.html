@@ -5,6 +5,18 @@
 <title>E7 Camp Simulator</title>
   <meta name="keywords" content="epic seven camping, epic 7 camping simulator, e7 camp simulator, epic 7 morale calculator, e7 raid, epic seven raid" />
   <meta name="description" content="E7 Morale Calculator. Add your roster to find the best team combination with high morale!" />
+  
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/site.webmanifest">
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 <script src="./jquery.min.js"></script>
 <script src="./js-combinatorics@0.5.js"></script>
 <!--<script src="vue.js"></script>-->
@@ -612,6 +624,13 @@ span.heroImgList {
         <div id="show_whats_new" class="noScrollBar" style="display: block; position: relative; height: 52vh; overflow-x: auto; font-size: 16px;">
           <ul>
             <li style="color:#007FFF">
+              New: "Generate URL"<br>
+              Select this option in the settings window to generate a URL containing a copy of your current roster.<br>
+              You can use that URL on any device.<br>
+              If you open this tool with a generated URL it will replace your local roster on that device.<br>
+              You don't need a URL to save your roster. Your roster is automatically saved on your device, the URL is useful if you need to transfer you roster to a different device so you don't have to manually add each hero.
+            </li>
+            <li style="color:#007FFF">
               New setting option "Debug: Display camping values"<br>
               When enabled you can right click (or long tap on mobile) on a hero's portrait to view that character's camping values.<br>
               Useful if you want to check if the data is correct or updated.
@@ -1055,6 +1074,15 @@ span.heroImgList {
           </td>
         </tr>
         <tr>
+          <td v-on:click="modalGenerateURL()">
+            <div style="max-height:55px">
+              <span>
+                {{strings.genera_url}}
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td v-on:click="menuLingua()">
             <div style="max-height:55px">
               <span>
@@ -1330,6 +1358,29 @@ if (document.addEventListener) {
   });
 };
 
+  function generateUrl(roster) {
+    var baseURL = window.location.origin;
+    var encodeRoster = btoa(JSON.stringify(Object.keys(roster)));
+    return baseURL + window.location.pathname + "?camproster=" + encodeRoster;
+  };
+  function copyText(id){
+    var elm = document.getElementById(id);
+    
+    if(document.body.createTextRange) {// for Internet Explorer
+      var range = document.body.createTextRange();
+      range.moveToElementText(elm);
+      range.select();
+      document.execCommand("Copy");
+    }
+    else if(window.getSelection) {// other browsers
+      var selection = window.getSelection();
+      var range = document.createRange();
+      range.selectNodeContents(elm);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("Copy");
+    }
+  }
     var AoEHeroes = ["Kawerik","Cerise","Specter Tenebria","Tempest Surin","Pavel","Ambitious Tywin","Alencia","Benevolent Romann","Elena","Cecilia","Vildred","Charlotte","Baal & Sezan","Yufine","Ravi","Kayron","Charles","Yuna","Sez","Haste","Tywin","Lidica","Aramintha","Tenebria","Basar","Tamarinne","Ludwig","Bellona","Luluca","Zeno","Vivian","Lilias","Dizzy","Faithless Lididca","Fallen Cecilia","Judge Kise","Arbiter Vildred","Sage Baal & Sezan","Specimen Sez","Martial Artist Ken","Silver Blade Aramintha","Desert Jewel Basar","Seaside Bellona","Silk","Mercedes","Armin","Zerato","Corvus","Cartuja","Schuri","Dingo","Clarissa","Leo","Purrgis","Crozet","Dominiel","Romann","Khawana","Shadow Rose","Celestial Mercedes","Champion Zerato","Blood Blade Karin","Watcher Schuri","Blaze Dingo","Kitty Clariss","Roaming Warrior Leo","Auxiliary Lots","General Purrgis","Ras","Sven","Church of Ilryos Axe","Rikoris","Adlay","Carrot","Jena","Jecht","Elson","Hurado","Kiris","Celeste","Pearlhorizon","Gloomyrain","Kikirat v2","Chaos Sect Axe","Captain Rikoris","Researcher Carrot","Lena"];
     var app = new Vue({
         el: '#app',
@@ -1633,13 +1684,32 @@ if (document.addEventListener) {
             `);
             $("body").addClass("modal-open");
           },
+          modalGenerateURL: function (campName) {
+            $( "#settings_window" ).append(`
+              <div id="url_generator" class="modal" style="padding-top: 60px;display:block;">
+                <div class="modal-content animate" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
+                  <div class="imgcontainer">
+                    <div id="url_container" class="box_advanced_settings noScrollBar" style="display: block; width:90%; padding-left: 5%; padding-right: 5%; position: relative; overflow-x: auto; font-size: 16px; white-space: nowrap;">` + 
+                      generateUrl(this.myHeroesList) + 
+                   `</div>
+                    <button type="button" onclick="copyText('url_container')" class="button_login">` + this.strings.copia + `</button>
+                    <br>` + this.strings.url_usage_help + `<br><br>
+                  </div>
+                  <div class="container">
+                    <button type="button" onclick="$('#url_generator').remove(); $('body').removeClass('modal-open');" class="button_cancelbtn" style="width:100%">` + this.strings.back_btn + `</button>
+                  </div>
+                </div>
+              </div>
+            `);
+            $("body").addClass("modal-open");
+          },
           helpWindow: function (sezione, argomento) {
             var titolo, contenuto;
             switch (argomento) { //HTML code is allowed
               case 'add_heroes_help':
                 if (this.lingua != "zht") { // translations should be moved where the other strings are
                   titolo = "Add Heroes";
-                  contenuto = `Tap or click the portrait of a hero to add that that hero to your roster.<br>
+                  contenuto = `Tap or click the portrait of a hero to add that hero to your roster.<br>
                               Heroes in your roster will be used to calculate all possible combinations and return the best 200 combinations.<br>
                               You can add as many heroes as you wish but the time needed to calculate all possible combinations will also increase.<br>
                               Your roster will be saved and can be used everytime you visit this page without the need to add each hero everytime!<br>
@@ -1953,6 +2023,9 @@ if (document.addEventListener) {
                   tema_notturno: "Tema notturno",
                   notifiche: "Notifiche",
                   debug_camping_values: "Debug: Mostra i valori delle opzioni",
+                  genera_url: "Genera URL",
+                  url_usage_help: "Copia e incolla questo URL nel browser o dispositivo desiderato per generare una copia dei tuoi eroi attuali.",
+                  copia: "Copia",
                   language: "Lingua"                  
                 };
 
@@ -2016,6 +2089,9 @@ if (document.addEventListener) {
                   tema_notturno: "夜间模式",
                   notifiche: "启用通知",
                   debug_camping_values: "调试: 显示所有对话心情值",
+                  genera_url: "Generate URL",
+                  url_usage_help: "Copy and paste this URL to a new device or browser to generate a copy of your current roster. <br>Changes are not synchronized, if you change your roster you will have to generate a new URL.",
+                  copia: "Copy",
                   language: "语言"
                 };               
 
@@ -2068,6 +2144,9 @@ if (document.addEventListener) {
                   tema_notturno: "Mode nuit",
                   notifiche: "Notification",
                   debug_camping_values: "Debug: Afficher tous les valeurs de conversation",
+                  genera_url: "Generate URL",
+                  url_usage_help: "Copy and paste this URL to a new device or browser to generate a copy of your current roster. <br>Changes are not synchronized, if you change your roster you will have to generate a new URL.",
+                  copia: "Copy",
                   language: "Langue"
                 };               
 
@@ -2132,6 +2211,9 @@ if (document.addEventListener) {
                   tema_notturno: "Night theme",
                   notifiche: "Enable notifications",
                   debug_camping_values: "Debug: Display camping values",
+                  genera_url: "Generate URL",
+                  url_usage_help: "Copy and paste this URL to a new device or browser to generate a copy of your current roster. <br>Changes are not synchronized, if you change your roster you will have to generate a new URL.",
+                  copia: "Copy",
                   language: "Language"
                 };
               };
@@ -2986,13 +3068,30 @@ if (document.addEventListener) {
         this.rosterLength = Object.keys(tmp).length;
         //this.updateUserData(); // write data to local storage
       }, 
+      getUserHeroesURL(e) {
+        var roster = JSON.parse(atob(e));
+        for (var i = 0; i < roster.length; i++) {
+          if (this.HeroDB[roster[i]]) {
+            this.myHeroesList[roster[i]] = this.HeroDB[roster[i]];
+          };
+        };
+        this.displayMyHeroes = Object.keys(this.myHeroesList);
+        this.rosterLength = Object.keys(this.myHeroesList).length;
+        this.updateUserData();
+      },
       boot: function () {
+        var urlParams = new URLSearchParams(window.location.search);
         var getDbEng = new XMLHttpRequest();
         getDbEng.open( "GET", "./HeroDatabase.json", false ); // false for synchronous request
         getDbEng.send( null );
         this.HeroDB = JSON.parse(getDbEng.response);
         this.sortedHeroDB = Object.keys(this.HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
-        this.getUserHeroesBoot();
+        if (!urlParams.get("camproster")) { // get roster from file
+          this.getUserHeroesBoot();
+        } else {// get roster from url
+          this.getUserHeroesURL(urlParams.get("camproster"));
+          window.history.pushState("", "", '/'); // remove ?camproster= from the URL to avoid accidental refreshes replacing your current team
+        }; 
         this.impostaLingua();
         this.inizializzaione();
         this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes')
