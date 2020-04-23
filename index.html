@@ -1607,7 +1607,7 @@ if (document.addEventListener) {
                   <div class="container">
                     <label for="camp_name"><b>` + this.strings.camp_name_field + `</b></label>
                     <input type="text" placeholder="` + this.strings.camp_name_placeholder + `" name="camp_name" id="camp_name" required="">
-                    <button type="button" onclick="app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
+                    <button type=submit onclick="app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
                     <button type="button" onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.canc_btn + `</button>
                   </div>
                 </form>
