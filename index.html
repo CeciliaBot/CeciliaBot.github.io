@@ -49,6 +49,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
+  overscroll-behavior-y: contain; /* Prevent pull-to-refresh on mobile */
   color: var(--font-color); /* font color */
 }
 
@@ -1021,10 +1022,10 @@ span.heroImgList {
     <div id="settings_window" style="display:none;">
       <h2>{{strings.impostazioni}}</h2><br>
       <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
-        <tr v-for="key in displaySavedCamps" style="max-height:55px">
-          <td v-on:click="mostraRisultatoSalvato(key)" style="max-height:550px">
-            <div style="max-height:55px">
-              <span>{{key}}<span>
+        <tr v-for="key in displaySavedCamps">
+          <td v-on:click="mostraRisultatoSalvato(key)">
+            <div style="max-height:55px;">
+              <span style="max-width:450px; overflow: hidden; display: inline-block; white-space: nowrap; text-overflow: ellipsis;">{{key}}<span>
             </div>
           </td>
         </tr>
@@ -1379,9 +1380,9 @@ if (document.addEventListener) {
       selection.removeAllRanges();
       selection.addRange(range);
       document.execCommand("Copy");
-    }
-  }
-    var AoEHeroes = ["Kawerik","Cerise","Specter Tenebria","Tempest Surin","Pavel","Ambitious Tywin","Alencia","Benevolent Romann","Elena","Cecilia","Vildred","Charlotte","Baal & Sezan","Yufine","Ravi","Kayron","Charles","Yuna","Sez","Haste","Tywin","Lidica","Aramintha","Tenebria","Basar","Tamarinne","Ludwig","Bellona","Luluca","Zeno","Vivian","Lilias","Dizzy","Faithless Lididca","Fallen Cecilia","Judge Kise","Arbiter Vildred","Sage Baal & Sezan","Specimen Sez","Martial Artist Ken","Silver Blade Aramintha","Desert Jewel Basar","Seaside Bellona","Silk","Mercedes","Armin","Zerato","Corvus","Cartuja","Schuri","Dingo","Clarissa","Leo","Purrgis","Crozet","Dominiel","Romann","Khawana","Shadow Rose","Celestial Mercedes","Champion Zerato","Blood Blade Karin","Watcher Schuri","Blaze Dingo","Kitty Clariss","Roaming Warrior Leo","Auxiliary Lots","General Purrgis","Ras","Sven","Church of Ilryos Axe","Rikoris","Adlay","Carrot","Jena","Jecht","Elson","Hurado","Kiris","Celeste","Pearlhorizon","Gloomyrain","Kikirat v2","Chaos Sect Axe","Captain Rikoris","Researcher Carrot","Lena"];
+    };
+  };
+
     var app = new Vue({
         el: '#app',
         data: function () {
@@ -1474,7 +1475,7 @@ if (document.addEventListener) {
               this.rosterLength +=1; // usa per indicare a vue che qualcosa è cambiato
               this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
               this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}, "MyHeroes"); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
-                    app.updateUserData();
+              this.updateUserData();
             }
           },
           removeHero: function (hero) {
@@ -1486,7 +1487,7 @@ if (document.addEventListener) {
             };
             this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
             this.displayMyHeroes.splice(this.displayMyHeroes.indexOf(hero), 1); // rimuovi dalla display list dei miei eroi se presente (sempre presente)
-            app.updateUserData();
+            this.updateUserData();
           },
           isInTeam: function(hero) {
                 if (this.myHeroesList[hero]) {
@@ -1605,15 +1606,18 @@ if (document.addEventListener) {
                   </div>
                   <div id="campSavingError" style="text-align:center;color:red;"></div>
                   <div class="container">
-                    <label for="camp_name"><b>` + this.strings.camp_name_field + `</b></label>
-                    <input type="text" placeholder="` + this.strings.camp_name_placeholder + `" name="camp_name" id="camp_name" required="">
-                    <button type=submit onclick="app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
-                    <button type="button" onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.canc_btn + `</button>
+                    <form id="save_camp_details">
+                      <label for="camp_name"><b>` + this.strings.camp_name_field + `</b></label>
+                      <input type="text" placeholder="` + this.strings.camp_name_placeholder + `" name="camp_name" id="camp_name" required="">
+                      <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
+                      <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.canc_btn + `</button>
+                    </form>
                   </div>
                 </form>
               </div>
             `);
             $("body").addClass("modal-open");
+            $('#camp_name').focus();
           },
           salvaRisultato: function (n) {
             var $form = $("#saveCamp");
@@ -1638,6 +1642,7 @@ if (document.addEventListener) {
             } else {
               $("#campSavingError").text(this.strings.error_no_name_provided);
             }; 
+            return false;
           },
           eliminaRisultatoSalvato: function (campName) {
             try {
@@ -3069,15 +3074,20 @@ if (document.addEventListener) {
         //this.updateUserData(); // write data to local storage
       }, 
       getUserHeroesURL(e) {
-        var roster = JSON.parse(atob(e));
-        for (var i = 0; i < roster.length; i++) {
-          if (this.HeroDB[roster[i]]) {
-            this.myHeroesList[roster[i]] = this.HeroDB[roster[i]];
+        try {
+          var roster = JSON.parse(atob(e));
+          for (var i = 0; i < roster.length; i++) {
+            if (this.HeroDB[roster[i]]) {
+              this.myHeroesList[roster[i]] = this.HeroDB[roster[i]];
+            };
           };
+          this.displayMyHeroes = Object.keys(this.myHeroesList);
+          this.rosterLength = Object.keys(this.myHeroesList).length;
+          this.updateUserData();
+        } catch (err) { // if URL is corrupted
+          console.log("Error: corrupted URL");
+          this.getUserHeroesBoot(); // get heroes list from file
         };
-        this.displayMyHeroes = Object.keys(this.myHeroesList);
-        this.rosterLength = Object.keys(this.myHeroesList).length;
-        this.updateUserData();
       },
       boot: function () {
         var urlParams = new URLSearchParams(window.location.search);
