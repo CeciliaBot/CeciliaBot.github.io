@@ -29,7 +29,7 @@ onmessage = function(e) {
               let pg4 = inputTeam[3];
 
               var tabConTagNome = [
-              {personaggio: HeroDB[pg1]._id, opzione: HeroDB[pg1].camping.topics[0],risultato: HeroDB[pg2].camping.values[HeroDB[pg1].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg1]. camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg1].camping.topics[0]]},
+                    {personaggio: HeroDB[pg1]._id, opzione: HeroDB[pg1].camping.topics[0],risultato: HeroDB[pg2].camping.values[HeroDB[pg1].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg1]. camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg1].camping.topics[0]]},
                     {personaggio: HeroDB[pg1]._id, opzione: HeroDB[pg1].camping.topics[1],risultato: HeroDB[pg2].camping.values[HeroDB[pg1].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg1].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg1].camping.topics[1]]},
                     {personaggio: HeroDB[pg2]._id, opzione: HeroDB[pg2].camping.topics[0],risultato: HeroDB[pg1].camping.values[HeroDB[pg2].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg2].camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg2].camping.topics[0]]},
                     {personaggio: HeroDB[pg2]._id, opzione: HeroDB[pg2].camping.topics[1],risultato: HeroDB[pg1].camping.values[HeroDB[pg2].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg2].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg2].camping.topics[1]]},
@@ -95,13 +95,18 @@ onmessage = function(e) {
                                         (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)) &&
                                         (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)  )
                                     ){
-                                        if (e.risultati.length < 200) {
-                                        e.risultati.push(nuovoCampSimulatorTeam2(team));
-                                        e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                                        let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
+                                        if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
+                                            e.risultati.push(risultatoDiQuestoTeam);
+                                            e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
                                         } else {
-                                            let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
-                                            e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});	 
-                                            if  (risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) e.risultati.unshift(risultatoDiQuestoTeam),e.risultati.splice(200);
+                                            e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                                            if (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale) ) {
+                                                if ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) ) {
+                                                    e.risultati.unshift(risultatoDiQuestoTeam);
+                                                    if (e.preferenzeRisultati.numeroMassimo === true) e.risultati.splice(e.preferenzeRisultati.n);
+                                                };
+                                            };
                                         };
                                     };
                         });
@@ -158,13 +163,18 @@ onmessage = function(e) {
                                         (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)) &&
                                         (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)  )
                                     ){
-                                        if (e.risultati.length < 200) {
-                                        e.risultati.push(nuovoCampSimulatorTeam2(team));
-                                        e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                                        let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
+                                        if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
+                                            e.risultati.push(risultatoDiQuestoTeam);
+                                            e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
                                         } else {
-                                            let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
-                                            e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});	 
-                                            if  (risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) e.risultati.unshift(risultatoDiQuestoTeam),e.risultati.splice(200);
+                                            e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                                            if (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale) ) {
+                                                if ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) ) {
+                                                    e.risultati.unshift(risultatoDiQuestoTeam);
+                                                    if (e.preferenzeRisultati.numeroMassimo === true) e.risultati.splice(e.preferenzeRisultati.n);
+                                                };
+                                            };
                                         };
                                     };
                                 });

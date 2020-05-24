@@ -449,8 +449,9 @@ span.heroImgList {
   display: none;
   position: absolute;
   background-color: var(--search-primary-color);
-  width: 160px;
-  left: -40px;
+  min-width: 160px;
+  max-width: 500px;
+  /*left: -40px;*/
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -461,7 +462,13 @@ span.heroImgList {
   text-decoration: none;
   display: block;
 }
-
+.dropdown-content span {
+  color: var(--font-color);
+  padding: 12px 16px;
+  width: 500px;
+  text-decoration: none;
+  display: block;
+}
 .dropdown-content div:hover {
   background-color: var(--search-border-color);
   color: white;
@@ -652,6 +659,12 @@ span.heroImgList {
         <div id="WhatsNewText" onclick="toggleWhatsNew()" style="font-size: 16px;">▼ What's new:</div>
         <div id="show_whats_new" class="noScrollBar" style="display: block; position: relative; height: 52vh; overflow-x: auto; font-size: 16px;">
           <ul>
+            <li style="color:rgb(0, 255, 136)">
+              Now you can select the number of results or minimum morale to be displayed.<br>
+              Instructions: Select "Advanced settings" => click on the cog icon on the top left of the page => check "{{strings.numero_massimo_risultati}}" or/and "{{strings.morale_minimo_risultati}}" then type in the desired number in the corresponding input field.<br>
+              Please don't set a high number in the "{{strings.numero_massimo_risultati}}" input field or too low in "{{strings.morale_minimo_risultati}}" as your browser may slow down while displaying to many results.
+              By default (or if you don't provide a number) top 200 results are displayed.
+            </li>
             <li style="color:#007FFF">
               New: "Generate URL"<br>
               Select this option in the settings window to generate a URL containing a copy of your current roster.<br>
@@ -952,7 +965,31 @@ span.heroImgList {
       <br><br><br><br> <!-- -->
     </div>
   <div id="advanced_window" style="display:none;"> <!-- Watcher aggiorna automaticamente i dati -->
-	  <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
+    <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
+    <div style="float: right;">
+      <button class="search_hero_filter" onclick="document.getElementById('impostazioni_risultati').style.display='block'" style="font-size:16px; width:70px;" name="sort_by"><i class="fa fa-cog" aria-hidden="true"></i></button>
+      <div id="impostazioni_risultati" class="dropdown-content" style="right: 32px;">
+        <span>
+          <b class="close" style="font-size:20px" onclick="document.getElementById('impostazioni_risultati').style.display='none'"><br>X</b>
+          <br>
+          <input type="checkbox" id="numeroRisultatiMassimo" name="numeroRisultatiMassimo" onclick="app.personalizzaRisultati()">
+          <label for="numeroRisultatiMassimo">{{strings.numero_massimo_risultati}}</label>
+            <input style="display: inline-block; width: 100px; height: 20px" type="number" min="1" id="n_risultati" onkeyup="app.personalizzaRisultati()" placeholder="200" title="Number of results" disabled>
+        </span>
+        <span>
+          <input type="checkbox" id="moraleMinimo" name="moraleMinimo" value="moraleMinimo" onclick="app.personalizzaRisultati()">
+          <label for="moraleMinimo">{{strings.morale_minimo_risultati}}</label>
+            <input style="display: inline-block; width: 100px; height: 20px" type="number" min="0" max="52" id="n_moraleMinimo" onkeyup="app.personalizzaRisultati()" placeholder="0 - 52" title="Min morale" disabled>
+        </span>
+        <!--<span>
+          <input type="checkbox" id="disattivaImmaingiRisultati" name="disattivaImmaingiRisultati" onclick="app.personalizzaRisultati()">
+          <label for="disattivaImmaingiRisultati">{{strings.disabilita_immagini_in_risultati}}*</label>
+        </span>
+        <span style="color: red">
+          *
+        </span>-->
+      </div>
+    </div>
 		<input type="checkbox" id="AoE" name="AoE" value="AoE" onclick="app.aggiornaImposatazioniAvanzate()">
 		<label for="AoE">{{strings.deve_contenere_AoE}}</label><br>
 		<input type="checkbox" id="noS1debuffs" name="noS1debuffs" value="noS1debuffs" onclick="app.aggiornaImposatazioniAvanzate()">
@@ -1477,6 +1514,7 @@ if (document.addEventListener) {
               risultati: [],
               savedCamps: JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}"),
               displaySavedCamps: Object.keys(JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}")),
+              customizedResuts: {numeroMassimo: true, n: 200, minMorale: false, morale: 0, noImmagini: false}, //
 	            displayStyle: "grid",
 	            isLoadingResults: false,
               inizializzazione: true, //nascondi tutto durante il caricamento iniziale di vue
@@ -1931,6 +1969,44 @@ if (document.addEventListener) {
                 //tmpArray.length = 0;
             };
           },
+          personalizzaRisultati: function () {
+            var risultati = { numeroMassimo: true, n: 200, noImmagini: false, minMorale: false, morale: 0 }
+            checkNumeroMassimo = document.getElementById("numeroRisultatiMassimo");
+            valoreRisultatiMassimo = document.getElementById("n_risultati");
+            checkMoraleMinimo = document.getElementById("moraleMinimo");
+            valoreMoraleMinimo = document.getElementById("n_moraleMinimo");
+            //checkImmagini = document.getElementById("disattivaImmaingiRisultati");
+            if (checkNumeroMassimo.checked) {
+              risultati.numeroMassimo = true;
+              valoreRisultatiMassimo.disabled = false;
+            } else {
+              risultati.numeroMassimo = false;
+              valoreRisultatiMassimo.disabled = true;
+            };
+            if (checkMoraleMinimo.checked) {
+              risultati.minMorale = true;
+              valoreMoraleMinimo.disabled = false;
+            } else {
+              risultati.minMorale = false;
+              valoreMoraleMinimo.disabled = true;
+            };
+            //if (checkImmagini.checked) {
+            //  risultati.noImmagini = true;
+            //};
+            if (!isNaN(parseInt(valoreRisultatiMassimo.value))) {
+              risultati.n = parseInt(valoreRisultatiMassimo.value)
+            } else {
+              risultati.n = 200
+            };
+            if (!isNaN(parseInt(valoreMoraleMinimo.value))) {
+              risultati.morale = parseInt(valoreMoraleMinimo.value)
+            } else {
+              risultati.morale = 0
+            };
+            if (risultati.numeroMassimo === false && risultati.minMorale === false) {risultati.numeroMassimo = true; risultati.n = 200;}
+
+            this.customizedResuts = risultati;
+          },
           aggiornaImposatazioniAvanzate: function () {
                 this.classe = [];
                 this.elemento = [];
@@ -2026,6 +2102,9 @@ if (document.addEventListener) {
                   i_tuoi_eroi: "I tuoi eroi",
                   cerca_eroe: "Cerca eroe..",
                   impostazioni_avanzate: "Impostazioni Avanzate",
+                  numero_massimo_risultati: "Numero massimo di risultati",
+                  morale_minimo_risultati: "Morale minimo",
+                  disabilita_immagini_in_risultati: "Disabilita avatar dei personaggi nei risultati (consigliato se si richiedono tanti risultati)",
                   deve_contenere_AoE: "Team deve contenere AoE",
                   no_s1_debuffs: "No S1 Debuffs (Esclusi: Provoke, Sleep and Stun)",
                   no_debuffs: "No Debuffs (Esclusi: Provoke, Sleep and Stun)",
@@ -2095,6 +2174,9 @@ if (document.addEventListener) {
                   i_tuoi_eroi: "你的英雄",
                   cerca_eroe: "搜索..",
                   impostazioni_avanzate: "高级设置",
+                  numero_massimo_risultati: "Maximum number of camping results",
+                  morale_minimo_risultati: "Minimum morale",
+                  disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",
                   deve_contenere_AoE: "队伍必须包含 AoE",
                   no_s1_debuffs: "S1不带Debuff (挑衅, 睡眠 和晕眩除外)",
                   no_debuffs: "技能不带Debuff (挑衅, 睡眠 和晕眩除外)",
@@ -2164,6 +2246,9 @@ if (document.addEventListener) {
                   i_tuoi_eroi: "Votre héros",
                   cerca_eroe: "Rechercher..",
                   impostazioni_avanzate: "Paramètre avancé",
+                  numero_massimo_risultati: "Maximum number of camping results",
+                  morale_minimo_risultati: "Minimum morale",
+                  disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",
                   deve_contenere_AoE: "Equipe doit contenir AoE",
                   no_s1_debuffs: "S1 sans Debuff (Sauf: Provoquer, Sommeil et Etourdir)",
                   no_debuffs: "Non Debuff (Sauf: Provoquer, Sommeil et Etourdir)",
@@ -2223,6 +2308,9 @@ if (document.addEventListener) {
                   i_tuoi_eroi: "Your heroes",
                   cerca_eroe: "Search..",
                   impostazioni_avanzate: "Advanced settings",
+                  numero_massimo_risultati: "Maximum number of camping results",
+                  morale_minimo_risultati: "Minimum morale",
+                  disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",
                   deve_contenere_AoE: "Team must have AoE",
                   no_s1_debuffs: "No S1 Debuffs (Except: Provoke, Sleep and Stun)",
                   no_debuffs: "No Debuffs (Except: Provoke, Sleep and Stun)",
@@ -3178,8 +3266,8 @@ if (document.addEventListener) {
     },
     computed: {
         calcolaRisultati: function () { // in computed per evitare di calcolare 2 volte il risultato se non si è cambiato niente
-           //resetta per un nuovo calcolo
-           this.risultati = [];
+            //resetta per un nuovo calcolo
+            this.risultati = [];
             //Richiama questi valori per far capire a vue di ricalcolare se sono cambiati
             this.rosterLength;
             this.classe;
@@ -3189,6 +3277,7 @@ if (document.addEventListener) {
             this.AoE;
             this.noS1debuffs;
             this.noDebuffs;
+            this.customizedResuts;
            if (Object.keys(this.myHeroesList).length > 3) {
             this.isLoadingResults = true; // mostra animazione di caricamento
 
@@ -3200,7 +3289,7 @@ if (document.addEventListener) {
             };
             try {
               this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
-              camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, risultati: []});
+              camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
             } catch (err) {
               this.isLoadingResults = false; // remove angelica loading
               $( "#snackbar" ).text(`Error: ` + err);
