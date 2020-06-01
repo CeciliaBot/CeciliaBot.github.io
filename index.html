@@ -117,7 +117,7 @@ span.psw {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 3; /* toolbar's z-index = 3 */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -476,6 +476,28 @@ span.heroImgList {
 
 .dropdown:hover .dropdown-content {display: block;}
   
+.extras_grid {
+  display: grid;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
+}
+.extra_icon {
+  position: relative;
+  margin: 20px;
+  text-align: center;
+}
+.extra_icon:hover {
+  cursor: pointer;
+}
+.extra_icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
   
 .label {
   padding: 12px;
@@ -640,6 +662,61 @@ span.heroImgList {
   backdrop-filter: blur(5px);
   color: white;
 }
+
+.welcome {
+  display: grid;
+  margin-top: -10px;
+  grid-template-columns: repeat(1, 100%); 
+  grid-template-rows: 4% 94vh;
+}
+
+.bottom-border {
+  width: 100%;
+  border-style: none none outset none;
+}
+
+.welcome_menu {
+  /*background-color: rgba(0,0,0, 0.2);*/
+  text-align: center;
+  margin-right: auto; 
+  margin-left: auto;
+  width: 100%;
+}
+
+.welcome_menu span {
+  position: relative;
+  top: 12px;
+  font-size: 20px;
+  /*padding:5px;*/
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  width: 100%;
+}
+
+
+.active_welcome {
+  border-style: none none outset none;
+  border-color: rgb(221, 51, 8);
+}
+
+.histogram_bar {
+  border-radius: 15px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgb(128, 194, 254) 30%, rgb(14, 175, 227) 100%);
+}
+
+.histogram_bar span {
+  position: relative;
+  white-space: nowrap;
+  left: 100%;
+  margin-left: 20px;
+  top: 30%;
+  bottom: 0;
+  vertical-align: middle;
+  height: 40px;
+}
+
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
@@ -654,70 +731,121 @@ span.heroImgList {
 <body class="noScrollBar">
   <div id="app"><!-- vue.js -->
     <div id="welcome" style="display: '';">
-        <h2>{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a></h2>
-        <br><br>
-        <div id="WhatsNewText" onclick="toggleWhatsNew()" style="font-size: 16px;">▼ What's new:</div>
-        <div id="show_whats_new" class="noScrollBar" style="display: block; position: relative; height: 52vh; overflow-x: auto; font-size: 16px;">
-          <ul>
-            <li style="color:rgb(0, 255, 136)">
-              Now you can select the number of results or minimum morale to be displayed.<br>
-              Instructions: Select "Advanced settings" => click on the cog icon on the top left of the page => check "{{strings.numero_massimo_risultati}}" or/and "{{strings.morale_minimo_risultati}}" then type in the desired number in the corresponding input field.<br>
-              Please don't set a high number in the "{{strings.numero_massimo_risultati}}" input field or too low in "{{strings.morale_minimo_risultati}}" as your browser may slow down while displaying to many results.
-              By default (or if you don't provide a number) top 200 results are displayed.
-            </li>
-            <li style="color:#007FFF">
-              New: "Generate URL"<br>
-              Select this option in the settings window to generate a URL containing a copy of your current roster.<br>
-              You can use that URL on any device.<br>
-              If you open this tool with a generated URL it will replace your local roster on that device.<br>
-              You don't need a URL to save your roster. Your roster is automatically saved on your device, the URL is useful if you need to transfer you roster to a different device so you don't have to manually add each hero.
-            </li>
-            <li style="color:#007FFF">
-              New setting option "Debug: Display camping values"<br>
-              When enabled you can right click (or long tap on mobile) on a hero's portrait to view that character's camping values.<br>
-              Useful if you want to check if the data is correct or updated.
-            </li>
-            <li>
-              Default language is now autodetected during first boot.<br>
-              You can change language in the settings.
-            </li>
-            <li style="color:rgb(0, 255, 136)">
-              Now you can select German, Portoguese, French and Spanish as language.<br>
-              Only French has gamedata and menus translated. Thanks again to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the translation.<br>
-              DE, ES and PT have only gamedata translated (Character name, Camping topics, buffs and debuffs) if you want to help translate the menus contact me.<br>
-              By default ENG is selected to change language go to Settings.
-            </li>
-            <li style="color:rgb(0, 255, 136)">
-              Added Japanese, Chinese (S) and Korean languages:<br>
-              Japanese and Korean are missing menu translation but game data is translated, Chinese (S) has full translation menus + game data.<br>
-              Thanks to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the Chinese translation.<br>
-              By default ENG is selected to change language go to Settings.
-            </li>
-            <li>
-              Added Notifications in settings:<br>
-              Enable to recive a notification when the page is done calculating results.<br>
-              This function is useful if you are on PC and have a large roster, this page will only sand the notification if the page is in background and will not send you any other kind of notification!
-            </li>
-            <li style="color:rgb(0, 255, 136)">
-              Added Multi-lock:<br>
-              Add your heroes to one of the 4 slots (each slot is a space in your team), if you add 2 or more heroes into the same slot only one of them will be in each team!
-            </li>
-            <li style="color:#007FFF">
-              Now you can save your results:<br>
-              In the results window tap/click <i class="fa fa-floppy-o" aria-hidden="true"></i>  , in the modal window type a name for that specific camp and click "Save".<br>
-              Your saved camps will appear in the <i class="fa fa-cog" aria-hidden="true"></i>  settings window where you can view and delete them.
-            </li>
-            <li>At boot a web worker will be generated and will handle team calculations, this will prevent your browser from displaying the message "This page is not responding".<br>
-            This tool can calculate all 35.208.615 possible combinations without crashing (it has low RAM usage during calculation) but it will require a long time (13-17 minutes, locking a hero 20 seconds);
-          </li>
-          </ul>
+        <div id="contenuto_welcome" class="welcome">
+          <div class="welcome_menu">
+            <span class="active_welcome" name="welcome_element" onmouseover="welcome_toggle('welcome',this)">
+              {{strings.welcome}}
+            </span>
+            <span name="welcome_element" onmouseover="welcome_toggle('whats_new',this)">
+              {{strings.whats_new}}
+            </span>
+            <!--<span name="welcome_element" onmouseover="welcome_toggle('instructions',this)">
+              Instructions
+            </span>-->
+            <span name="welcome_element" onmouseover="welcome_toggle('cool_websites',this)">
+              {{strings.websites}}
+            </span>
+            <span name="welcome_element" onmouseover="welcome_toggle('credits',this)">
+              {{strings.credits}}
+            </span>
+          </div>
+          <div id="welcome_content">
+            <div id="welcome_message" style="height: 100%">
+              <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
+              </h2>
+              <div style="color: orangered; text-align: center;">
+                Looking for translators...
+              </div>
+              <!-- Copyright stuff if needed
+              <div style="width: 100%; position: absolute; bottom: 10%; text-align: center;">
+                All game content and assets are trademarks and copyrights of SUPERCREATIVE Corp and/or Smilegate Megaport.<br>
+                This site is fan made, not affiliated with SUPERCREATIVE Corp and/or Smilegate Megaport. 
+              </div>
+              -->
+            </div>
+            <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
+              <ul>
+                <li style="color:rgb(255, 60, 0)">
+                  Add Most saved teams statistics!<br>
+                  Select the cog icon in the toolbar -> "{{strings.most_saved_teams}}".
+                </li>
+                <li style="color:rgb(0, 255, 136)">
+                  Now you can select the number of results or minimum morale to be displayed.<br>
+                  Instructions: Select "Advanced settings" => click on the cog icon on the top left of the page => check "{{strings.numero_massimo_risultati}}" or/and "{{strings.morale_minimo_risultati}}" then type in the desired number in the corresponding input field.<br>
+                  Please don't set a high number in the "{{strings.numero_massimo_risultati}}" input field or too low in "{{strings.morale_minimo_risultati}}" as your browser may slow down while displaying to many results.
+                  By default (or if you don't provide a number) top 200 results are displayed.
+                </li>
+                <li style="color:#007FFF">
+                  New: "Generate URL"<br>
+                  Select this option in the settings window to generate a URL containing a copy of your current roster.<br>
+                  You can use that URL on any device.<br>
+                  If you open this tool with a generated URL it will replace your local roster on that device.<br>
+                  You don't need a URL to save your roster. Your roster is automatically saved on your device, the URL is useful if you need to transfer you roster to a different device so you don't have to manually add each hero.
+                </li>
+                <li style="color:#007FFF">
+                  New setting option "Debug: Display camping values"<br>
+                  When enabled you can right click (or long tap on mobile) on a hero's portrait to view that character's camping values.<br>
+                  Useful if you want to check if the data is correct or updated.
+                </li>
+                <li>
+                  Default language is now autodetected during first boot.<br>
+                  You can change language in the settings.
+                </li>
+                <li style="color:rgb(0, 255, 136)">
+                  Now you can select German, Portoguese, French and Spanish as language.<br>
+                  Only French has gamedata and menus translated. Thanks again to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the translation.<br>
+                  DE, ES and PT have only gamedata translated (Character name, Camping topics, buffs and debuffs) if you want to help translate the menus contact me.<br>
+                  By default ENG is selected to change language go to Settings.
+                </li>
+                <li style="color:rgb(0, 255, 136)">
+                  Added Japanese, Chinese (S) and Korean languages:<br>
+                  Japanese and Korean are missing menu translation but game data is translated, Chinese (S) has full translation menus + game data.<br>
+                  Thanks to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the Chinese translation.<br>
+                  By default ENG is selected to change language go to Settings.
+                </li>
+                <li>
+                  Added Notifications in settings:<br>
+                  Enable to recive a notification when the page is done calculating results.<br>
+                  This function is useful if you are on PC and have a large roster, this page will only sand the notification if the page is in background and will not send you any other kind of notification!
+                </li>
+                <li style="color:rgb(0, 255, 136)">
+                  Added Multi-lock:<br>
+                  Add your heroes to one of the 4 slots (each slot is a space in your team), if you add 2 or more heroes into the same slot only one of them will be in each team!
+                </li>
+                <li style="color:#007FFF">
+                  Now you can save your results:<br>
+                  In the results window tap/click <i class="fa fa-floppy-o" aria-hidden="true"></i>  , in the modal window type a name for that specific camp and click "Save".<br>
+                  Your saved camps will appear in the <i class="fa fa-cog" aria-hidden="true"></i>  settings window where you can view and delete them.
+                </li>
+                <li>
+                  At boot a web worker will be generated and will handle team calculations, this will prevent your browser from displaying the message "This page is not responding".<br>
+                  This tool can calculate all 35.208.615 possible combinations without crashing (it has low RAM usage during calculation) but it will require a long time (13-17 minutes, locking a hero 20 seconds);
+              </li>
+              </ul>
+            </div>
+            <div id="instructions_content" style="display: none">
+            </div>
+            <div id="cool_websites_content" style="display: none; text-align: center; margin-top: 10%;">
+              Cool websites you should check out:
+              <p><a href="https://epicsevendb.com/">EpicSevenDB</a> by RaphaelDDL</p>
+              <p><a href="https://e7herder.com/">E7herder</a> with a cool model viewer</p>
+              <p><a href="https://maphe.github.io/e7-damage-calc/">Epic 7 Damage Calculator</a> by Maphe</p>
+              <p><a href="https://www.e7leaks.com/">Epic 7 Leaks</a> by Maphe</p>
+              <p><a href="https://meowyih.github.io/epic7-gear/index.html?lang=en">Web tool to evaluate gears</a> by meowyih</p>
+              <p><a href="http://www.epicseventools.com/Home/LabMoraleOptimizer">E7 Tools</a> by Budandan</p>
+              <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
+            </div>
+            <div id="credits_content" style="display: none;">
+              <div style="width: 100vw; position: absolute; bottom: 10%; text-align: center;">
+                Chinese/French translations: TriATK
+                <br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
+                <br>Discord: gio#0898
+              </div>
+            </div>
+          </div>
         </div>
-        <span style="position:fixed; bottom: 100px;">
-          Chinese/French translations: TriATK
-          <br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
-          <br>Discord: gio#0898
-        </span>
     </div>
+
     <div id="add_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('add_window', 'add_heroes_help')"></i></span>
 	    <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
@@ -805,7 +933,7 @@ span.heroImgList {
        <template v-if="displayStyle === 'grid'"> <!-- grid -->
         <table id="lista_hero_disponibili">
           <tr>
-            <td>
+            <td style="text-align: center;">
               <span v-for="key in displayList" class="heroImgList">
                 <!--<div class="fa fa-check-circle top-left" v-bind:style="'font-size:38px;color:green;display:' + isInTeam(thisHeroData(key).name)"></div>-->
                 <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
@@ -931,7 +1059,7 @@ span.heroImgList {
        <template v-if="displayStyle === 'grid'">  <!-- grid -->
         <table id="myHeroes">
           <tr>
-            <td>
+            <td style="text-align: center;">
               <span v-for="key in displayMyHeroes" class="heroImgList">
                 <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(key) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" v-on:click="app.lockHero(thisHeroData(key)._id)" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
 		            <div class="top-right" v-bind:style="'display:' + isLocked(thisHeroData(key)._id)"  v-on:click="app.lockHero(thisHeroData(key)._id)">&#128274;</div>
@@ -968,7 +1096,7 @@ span.heroImgList {
     <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
     <div style="float: right;">
       <button class="search_hero_filter" onclick="document.getElementById('impostazioni_risultati').style.display='block'" style="font-size:16px; width:70px;" name="sort_by"><i class="fa fa-cog" aria-hidden="true"></i></button>
-      <div id="impostazioni_risultati" class="dropdown-content" style="right: 32px;">
+      <div id="impostazioni_risultati" class="dropdown-content" style="right: 32px; z-index: 2;">
         <span>
           <b class="close" style="font-size:20px" onclick="document.getElementById('impostazioni_risultati').style.display='none'"><br>X</b>
           <br>
@@ -1091,16 +1219,38 @@ span.heroImgList {
         </table>
         <br><br><br><br> <!-- -->
     </div>
+
+    <div id="extras_window" style="display:none;height: 100%;">
+      <div id="extras_menu" class="extras_grid" style="margin-top: 5%">
+        <div class="extra_icon box_advanced_settings" onclick="setWindow('settings_window')">
+          <span>
+            <i class="fa fa-cog" style="font-size: 90px;"></i><br><br>
+            {{strings.impostazioni}}
+          </span>
+        </div>
+        <div class="extra_icon box_advanced_settings" onclick="setWindow('my_teams_window')">
+          <span>
+            <i class="fa fa-floppy-o" aria-hidden="true" style="font-size:90px;"></i><br><br>
+            {{strings.my_teams}}
+          </span>
+        </div>
+        <div class="extra_icon box_advanced_settings" onclick="setWindow('raid_map')">
+          <span>
+            <i class="fa fa-map" aria-hidden="true" style="font-size:90px;"></i><br><br>
+            {{strings.extras_map}}
+          </span>
+        </div>
+        <div class="extra_icon box_advanced_settings" onclick="setWindow('saved_teams_stats');app.computedGetSavedTeamsStats;">
+          <span>
+            <i class="fa fa-bar-chart" aria-hidden="true" style="font-size:90px;"></i><br><br>
+            {{strings.most_saved_teams}}
+          </span>
+        </div>
+      </div>
+    </div>
     <div id="settings_window" style="display:none;">
       <h2>{{strings.impostazioni}}</h2><br>
       <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
-        <tr v-for="key in displaySavedCamps">
-          <td v-on:click="mostraRisultatoSalvato(key)">
-            <div style="max-height:55px;">
-              <span style="max-width:450px; overflow: hidden; display: inline-block; white-space: nowrap; text-overflow: ellipsis;">{{key}}<span>
-            </div>
-          </td>
-        </tr>
         <tr>
           <td>
             <div style="max-height:55px">
@@ -1167,6 +1317,38 @@ span.heroImgList {
       </table>
       <br><br><br><br> <!-- -->
     </div>
+
+    <div id="my_teams_window" style="display:none;">
+      <h2>{{strings.my_teams}}</h2><br>
+      <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
+        <tr v-for="key in displaySavedCamps">
+          <td v-on:click="mostraRisultatoSalvato(key)">
+            <div style="max-height:55px;">
+              <span style="max-width:450px; overflow: hidden; display: inline-block; white-space: nowrap; text-overflow: ellipsis;">{{key}}<span>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <br><br><br><br> <!-- -->
+    </div>
+
+    <div id="raid_map" style="display: none;">
+      <span class="center">
+        <!--<img src="https://preview.redd.it/j0kns9dt6sn41.png?width=3925&format=png&auto=webp&s=dd1cb7b1fb65bfdbc5129817f33fbe6f670ec88c" style="height: 800px"/>-->
+      </span>
+      <br><br><br><br>
+    </div>
+    <div id="saved_teams_stats" class="center" style="display: none; padding-bottom: 10%;">
+      <h2>{{strings.most_saved_teams}}
+        <div style="float: right;">
+          <button id="refreshStats" class="search_hero_filter" style="width: 70px" v-on:click="getSavedTeamsStats();">
+            <i class="fa fa-refresh" aria-hidden="true" style="padding-right: 5px;"></i>{{strings.refresh_team_stats}}
+          </button>
+        </div>
+      </h2>
+    </div>
+
+
     <div id="toolbar" class="icon-bar"> <!-- nascondi toolbar durante il calcolo -->
       <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
       <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil" aria-hidden="true"></i></span>
@@ -1175,20 +1357,22 @@ span.heroImgList {
         <!--Calcola-->
         <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" style="position:relative;top:-5px;margin-bottom:-10px;height:40px;" />
       </span>
-      <span id="icon-bar_settings_window" onclick="setWindow('settings_window')"><!--&#9881;--><i class="fa fa-cog"></i></span>
+      <span id="icon-bar_settings_window" onclick="setWindow('extras_window')"><!--&#9881;--><i class="fa fa-cog"></i>
+      </span>
     </div>
 
      <!-- Mostra durante il calcolo -->
-      <div  v-show="isLoadingResults" id="loading_camp_results">
-        <div style="opacity: 0.3;filter: alpha(opacity=30);height:100%;width:100%;position:fixed;z-index:2"></div> <!-- prevent user from changing menu -->
-        <div class="center_img box_advanced_settings" style="height:200px;width:200px">
-          <div class="center_img" style="text-align:center;"> 
-            <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px"/>
-            <!--<i class="fa fa-cog fa-spin" style="font-size:30px"></i><br> -->
-            {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
-          </div>
+    <div v-show="isLoadingResults" id="loading_camp_results">
+      <div style="opacity: 0.3;filter: alpha(opacity=30);height:100%;width:100%;position:fixed;z-index:2">
+      </div> <!-- prevent user from changing menu -->
+      <div class="center_img box_advanced_settings" style="height:200px;width:200px">
+        <div class="center_img" style="text-align:center;"> 
+          <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px"/>
+          <!--<i class="fa fa-cog fa-spin" style="font-size:30px"></i><br> -->
+          {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
         </div>
       </div>
+    </div>
     <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 10;height:100%;width:100%"> <!-- non è neccessario settare inizializzaione = true -->
       <div class="center_img" style="text-align:center;"> 
         <i class="fa fa-cog fa-spin" style="font-size:70px"></i>
@@ -1241,14 +1425,18 @@ span.heroImgList {
       document.getElementById('manage_window').style.display='none';
       document.getElementById('advanced_window').style.display='none';
       document.getElementById('calculate_window').style.display='none';
+      document.getElementById('extras_window').style.display='none';
+
       document.getElementById('settings_window').style.display='none';
+      document.getElementById('my_teams_window').style.display='none';
+      document.getElementById('raid_map').style.display='none';
+      document.getElementById('saved_teams_stats').style.display='none';
       //toolbar
       document.getElementById("icon-bar_add_window").className = "";
       document.getElementById("icon-bar_manage_window").className = "";
       document.getElementById("icon-bar_advanced_window").className = "";
       document.getElementById("icon-bar_calculate_window").className = "";
       document.getElementById("icon-bar_settings_window").className = "";
-                              
       switch (current) {
         case 'add_window':
           document.getElementById('add_window').style.display='block';
@@ -1266,12 +1454,60 @@ span.heroImgList {
           document.getElementById('calculate_window').style.display='block';
           document.getElementById("icon-bar_calculate_window").className = "active-icon-bar";
           break;
+        case 'extras_window':
+          document.getElementById('extras_window').style.display='block';
+          document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
+          break;
         case 'settings_window':
           document.getElementById('settings_window').style.display='block';
           document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
           break;
-      };  
+        case 'my_teams_window':
+          document.getElementById('my_teams_window').style.display='block';
+          document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
+          break;
+        case 'raid_map':
+          document.getElementById('raid_map').style.display='block';
+          document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
+          break;
+        case 'saved_teams_stats':
+          document.getElementById('saved_teams_stats').style.display='block';
+          document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
+          break;
+      };
     };
+
+    function welcome_toggle(id,menu) {
+      welcome_menu = document.getElementsByName("welcome_element");
+      for (var i = 0; i<welcome_menu.length; i++) {
+        $(welcome_menu[i]).removeClass('active_welcome');
+      };
+      $(menu).addClass('active_welcome');
+
+      document.getElementById("welcome_message").style.display = "none";
+      document.getElementById("whats_new_content").style.display = "none";
+      document.getElementById("instructions_content").style.display = "none";
+      document.getElementById("cool_websites_content").style.display = "none";
+      document.getElementById("credits_content").style.display = "none";
+      switch (id) {
+        case 'welcome':
+          document.getElementById("welcome_message").style.display = "block";
+          break;
+        case 'whats_new':
+          document.getElementById("whats_new_content").style.display = "block";
+          break;
+        case 'instructions':
+          document.getElementById("instructions_content").style.display = "block";
+          break;
+        case 'cool_websites':
+          document.getElementById("cool_websites_content").style.display = "block";
+          break;
+        case 'credits':
+          document.getElementById("credits_content").style.display = "block";
+          break;
+      };
+    };
+
 
   var Notification = window.Notification || window.mozNotification || window.webkitNotification;
   // NOTIFICATION
@@ -1366,8 +1602,8 @@ function askNotificationPermission() {
       return {
         x: posx,
         y: posy
-      }
-    }
+      };
+    };
 
 if (document.addEventListener) {
   var tastoDestro = 0;
@@ -1430,6 +1666,52 @@ if (document.addEventListener) {
     window.event.returnValue = false;
   });
 };
+function mandaNotificaCompletamento(){
+  if (riceviNotifiche == true) {
+    if (document.visibilityState != 'visible') {
+      var notification = new Notification(app.strings.notification_title, { body: app.strings.notification_ready, icon: "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" }); // manda notifica di completamento
+    };
+  };
+};
+
+function snackbarMessage(text) {
+  $( "#snackbar" ).text(text);
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+};
+
+function backendCalculation(camp) {
+    $.ajax({
+        url: "https://ceciliabotgithub.glitch.me/backend_calculation",
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify( camp ),
+        success: function (response) {
+          app.isLoadingResults = false; // disattiva angelica
+          mandaNotificaCompletamento();
+          app.risultati = response;
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+           app.isLoadingResults = false; // disattiva angelica
+           console.log(textStatus, errorThrown);
+        }
+    });
+  };
+
+  function sendTeamUsageStatistics(data) {
+    $.ajax({
+        url: "https://ceciliabotgithub.glitch.me/team_statistics",
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify( data ),
+        success: function (response) {
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.log("could not upload team data");
+        }
+    });
+  };
 
   function generateUrl(roster) {
     var baseURL = window.location.origin;
@@ -1686,6 +1968,24 @@ if (document.addEventListener) {
                     <form id="save_camp_details">
                       <label for="camp_name"><b>` + this.strings.camp_name_field + `</b></label>
                       <input type="text" placeholder="` + this.strings.camp_name_placeholder + `" name="camp_name" id="camp_name" required="">
+                      <div style="text-align: center;">
+                        <input type="checkbox" id="checkbox_normal" name="raid_difficulty">
+                        <label for="checkbox_normal">`+ this.strings.normal + `</label>
+                        <input type="checkbox" id="checkbox_hell" name="raid_difficulty">
+                        <label for="checkbox_hell">` + this.strings.hell +`</label>
+                      </div>
+                      <div style="text-align: center;">
+                        <input type="checkbox" id="checkbox_queen" name="raid_boss" style="position:relative;top:0px;display:none">
+                        <label for="checkbox_queen" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FQueen-Azumashik-284x300.png?v=1590932065337" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.queen + `</p></label>
+                        <input type="checkbox" id="checkbox_karkanis" name="raid_boss" style="position:relative;top:0px;display:none">
+                        <label for="checkbox_karkanis" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FKarkanis-284x300.png?v=1590932065109" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.karkanis + `</p></label>
+                        <input type="checkbox" id="checkbox_juleeve" name="raid_boss" style="position:relative;top:0px;display:none">
+                        <label for="checkbox_juleeve" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FJuleeve-284x300.png?v=1590932065054" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.juleeve + `</p></label>
+                        <input type="checkbox" id="checkbox_vera" name="raid_boss" style="position:relative;top:0px;display:none">
+                        <label for="checkbox_vera" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FSecretary-Vera-284x300.png?v=1590932064989" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.vera + `</p></label>
+                        <input type="checkbox" id="checkbox_arakahan" name="raid_boss" style="position:relative;top:0px;display:none">
+                        <label for="checkbox_arakahan" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.arakahan + `</p></label>
+                      </div>
                       <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
                       <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.canc_btn + `</button>
                     </form>
@@ -1697,42 +1997,69 @@ if (document.addEventListener) {
             $('#camp_name').focus();
           },
           salvaRisultato: function (n) {
-            var $form = $("#saveCamp");
-            var campName = $('#camp_name', $form).val().replace(/  +/g,"").trim();
-            if (campName && campName != "" && campName.indexOf("@_#") == -1) {
-              if (!this.savedCamps[campName]) {
-                this.savedCamps[campName] = this.risultati[n];
-                $('#saveCamp').remove();
-                $('body').removeClass('modal-open');
-                localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
-                this.displaySavedCamps = Object.keys(this.savedCamps); // aggionra la lista da visulizzare
+            try {
+              var $form = $("#saveCamp");
+              var campName = $('#camp_name', $form).val().replace(/  +/g,"").trim();
+              if (campName && campName != "" && campName.indexOf("@_#") == -1) {
+                if (!this.savedCamps[campName]) {
+                  var normal = false;
+                  var hell = false;
+                  var queen = false;
+                  var karkanis = false;
+                  var juleeve = false;
+                  var vera = false;
+                  var arakahan = false;
+                  if (document.getElementById("checkbox_normal").checked === true ) normal = true;
+                  if (document.getElementById("checkbox_hell").checked === true ) hell = true;
+                  if (document.getElementById("checkbox_queen").checked === true) queen = true;
+                  if (document.getElementById("checkbox_karkanis").checked === true ) karkanis = true;
+                  if (document.getElementById("checkbox_juleeve").checked === true ) juleeve = true;
+                  if (document.getElementById("checkbox_vera").checked === true ) vera = true;
+                  if (document.getElementById("checkbox_arakahan").checked === true ) arakahan = true;
+                  var save = this.risultati.slice(n,n+1)[0];
+                  save.normal = normal;
+                  save.hell = hell;
+                  save.queen = queen;
+                  save.karkanis = karkanis;
+                  save.juleeve = juleeve;
+                  save.vera = vera;
+                  save.arakahan = arakahan;
+                  console.log(save);
 
-                $( "#snackbar" ).text(campName + ` ` + this.strings.saved_message);
-                var x = document.getElementById("snackbar");
-                x.className = "show";
-                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                  this.savedCamps[campName] = this.risultati[n];
+                  var sendData = {morale: this.risultati[n].morale, team: this.risultati[n].team,  normal: normal, hell: hell, queen: queen, karkanis: karkanis, juleeve: juleeve, vera: vera, arakahan: arakahan};
+                  console.log(sendData);
+
+                  $('#saveCamp').remove();
+                  $('body').removeClass('modal-open');
+                  localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
+                  this.displaySavedCamps = Object.keys(this.savedCamps); // aggionra la lista da visulizzare
+                  sendTeamUsageStatistics({function: "add", data: [sendData]}); // send team comp to server for stats
+                  snackbarMessage(campName + ` ` + this.strings.saved_message)
+                } else {
+                  $("#campSavingError").text(this.strings.error_name_in_use);
+                };
+              } else if (campName.indexOf("@_#") != -1) {
+                $("#campSavingError").text("The sequence @_# can't be used");  
               } else {
-                $("#campSavingError").text(this.strings.error_name_in_use);
+                $("#campSavingError").text(this.strings.error_no_name_provided);
               };
-            } else if (campName.indexOf("@_#") != -1) {
-	            $("#campSavingError").text("The sequence @_# can't be used");  
-            } else {
-              $("#campSavingError").text(this.strings.error_no_name_provided);
+            } catch (err) {
+              console.log(err)
             }; 
             return false;
           },
           eliminaRisultatoSalvato: function (campName) {
             try {
-		            campName = campName.replace(/@_#3#9#;/g,"'").replace(/@_#3#4#;/g,'"').replace(/@_#9#6#;/g,'`'); // avoid errors during deletion
+                campName = campName.replace(/@_#3#9#;/g,"'").replace(/@_#3#4#;/g,'"').replace(/@_#9#6#;/g,'`'); // avoid errors during deletion
+                sendTeamUsageStatistics({function: "remove", data: [this.savedCamps[campName]]}); // send team comp to server for stats
                 delete this.savedCamps[campName];
                 $('#savedCamp').remove();
                 $('body').removeClass('modal-open');
                 localStorage.setItem('savedCamps', JSON.stringify(this.savedCamps) );
                 this.displaySavedCamps = Object.keys(this.savedCamps); // aggionra la lista da visulizzare
-                $( "#snackbar" ).text(campName + ` ` + this.strings.deleted_message);
-                var x = document.getElementById("snackbar");
-                x.className = "show";
-                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+                snackbarMessage(campName + ` ` + this.strings.deleted_message);
             } catch (err) {
               console.log("Error while removing camp")
             };
@@ -1743,7 +2070,7 @@ if (document.addEventListener) {
             };
             this.savedCamps[campName].migliorPG1 = this.savedCamps[campName].migliorPG1.toLowerCase().replace(/& /g,"").replace(/ /g, "-").replace(/'/g,"");
             this.savedCamps[campName].migliorPG2 = this.savedCamps[campName].migliorPG2.toLowerCase().replace(/& /g,"").replace(/ /g, "-").replace(/'/g,"");
-            $( "#settings_window" ).append(`
+            $( "#my_teams_window" ).append(`
               <div id="savedCamp" class="modal" style="padding-top: 60px;display:block;">
                 <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
@@ -1784,6 +2111,40 @@ if (document.addEventListener) {
               </div>
             `);
             $("body").addClass("modal-open");
+          },
+          getSavedTeamsStats: function() {
+            self = this;
+            var refreshButton = document.getElementById("refreshStats");
+            refreshButton.style.display = "none";
+            if (document.getElementById("stats_table")) $("#stats_table").remove();
+            $.ajax({
+              url: "https://ceciliabotgithub.glitch.me/team_statistics",
+              type: 'GET',
+              contentType: 'application/json',
+              success: function (response) {
+                var toPrint = "";
+                if (response.data.length>0) {
+                  for (var i = 0; i < response.data.length; i++) {
+                    toPrint += "<tr>" +  
+                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                      "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.data[i].usi/response.totale*100 + "%;'><span>" + Math.round(( (response.data[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
+                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + " times</td></tr>";
+                  };
+                } else {
+                  toPrint = "<td>No data</td>"
+                };
+                refreshButton.style.display = "";
+                $( "#saved_teams_stats").append(`<table id="stats_table">` + toPrint + `</table>`);
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                refreshButton.style.display = "";
+                $( "#saved_teams_stats").append(`<table id="stats_table"><td style="text-align: center;">Error while retirving data.<br> Please retry.</td></table>`);
+                snackbarMessage(`failed to retrive data`);
+              }
+            });
           },
           helpWindow: function (sezione, argomento) {
             var titolo, contenuto;
@@ -2091,6 +2452,10 @@ if (document.addEventListener) {
 
               if (this.lingua == "it") {
                 this.strings = {
+                  welcome: "Benvenuto",
+                  whats_new: "Novità",
+                  websites: "Pagine",
+                  credits: "Credits",
                   messaggio_di_benvenuto: "Benvenuto su Epic Seven Camp simulator",
                   data_by: "Data by EpicSevenDB",
                   all: "All",
@@ -2144,6 +2509,13 @@ if (document.addEventListener) {
                   ///Result saving window:
                   camp_name_field: "Nome camp",
                   camp_name_placeholder: "Inserisci il nome del tuo camp",
+                  normal: "Normale",
+                  hell: "Hell",
+                  queen: "Queen",
+                  arakahan: "Arakahan",
+                  karkanis: "Karkanis",
+                  vera: "Vera",
+                  juleeve: "Juleeve",
                   save: "Salva",
                   canc_btn: "Annulla",
                   back_btn: "Indietro",
@@ -2153,30 +2525,38 @@ if (document.addEventListener) {
                   deleted_message: "eliminato!",
 
                   impostazioni: "Impostazioni",
+                  my_teams: "Le mie squadre",
+                  most_saved_teams: "Squadre più popolari",
+                  refresh_team_stats: "Aggiorna",
+                  extras_map: "Miglior percorso",
                   tema_notturno: "Tema notturno",
                   notifiche: "Notifiche",
                   debug_camping_values: "Debug: Mostra i valori delle opzioni",
                   genera_url: "Genera URL",
                   url_usage_help: "Copia e incolla questo URL nel browser o dispositivo desiderato per generare una copia dei tuoi eroi attuali.",
                   copia: "Copia",
-                  language: "Lingua"                  
+                  language: "Lingua"
                 };
               } else if (this.lingua == "zht") {
                 this.strings = {
+                  welcome: "Welcome",
+                  whats_new: "What's new",
+                  websites: "Websites",
+                  credits: "Credits",
                   messaggio_di_benvenuto: "欢迎使用第七史诗露营模拟器",
                   data_by: "数据来源 EpicSevenDB",
                   all: "全部",
-                  sort: "排序",
-                  modified: "按添加日期",
-                  name: "按英雄名称",
-                  ingame_id: "按英雄ID",
+                  sort: "Sort by",
+                  modified: "Date",
+                  name: "Name",
+                  ingame_id: "In-game ID",
                   aggiungi: "添加英雄 ",
                   i_tuoi_eroi: "你的英雄",
                   cerca_eroe: "搜索..",
                   impostazioni_avanzate: "高级设置",
-                  numero_massimo_risultati: "显示结果数量",
-                  morale_minimo_risultati: "最低心情限制",
-                  disabilita_immagini_in_risultati: "结果页不显示英雄头像 (如果你设定的显示结果数量非常大，关闭英雄头像显示有助于提升性能)",
+                  numero_massimo_risultati: "Maximum number of camping results",
+                  morale_minimo_risultati: "Minimum morale",
+                  disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",
                   deve_contenere_AoE: "队伍必须包含 AoE",
                   no_s1_debuffs: "S1不带Debuff (挑衅, 睡眠 和晕眩除外)",
                   no_debuffs: "技能不带Debuff (挑衅, 睡眠 和晕眩除外)",
@@ -2216,6 +2596,13 @@ if (document.addEventListener) {
                   ///Result saving window:
                   camp_name_field: "队伍名称",
                   camp_name_placeholder: "你的队伍名称",
+                  normal: "Normal",
+                  hell: "Hell",
+                  queen: "Queen",
+                  arakahan: "Arakahan",
+                  karkanis: "Karkanis",
+                  vera: "Vera",
+                  juleeve: "Juleeve",
                   save: "保存",
                   canc_btn: "取消",
                   back_btn: "返回",
@@ -2225,6 +2612,11 @@ if (document.addEventListener) {
                   deleted_message: "删除成功!",
 
                   impostazioni: "设置",
+                  my_teams: "My teams",
+                  most_saved_teams: "Most common teams",
+                  refresh_team_stats: "Refresh",
+                  extras_map: "Best hell raid route",
+
                   tema_notturno: "夜间模式",
                   notifiche: "启用通知",
                   debug_camping_values: "调试: 显示所有对话心情值",
@@ -2235,20 +2627,24 @@ if (document.addEventListener) {
                 };
               }else if (this.lingua == "fr") {
                 this.strings = {
+                  welcome: "Welcome",
+                  whats_new: "What's new",
+                  websites: "Websites",
+                  credits: "Credits",
                   messaggio_di_benvenuto: "Bienvenue à E7 Camp Simulateur",
                   data_by: "Source EpicSevenDB",
                   all: "Tous",
-                  sort: "Trier par",
+                  sort: "Sort by",
                   modified: "Date",
-                  name: "Nom",
-                  ingame_id: "ID",
+                  name: "Name",
+                  ingame_id: "In-game ID",
                   aggiungi: "Ajouter un héro ",
                   i_tuoi_eroi: "Votre héros",
                   cerca_eroe: "Rechercher..",
                   impostazioni_avanzate: "Paramètre avancé",
-                  numero_massimo_risultati: "Nombre maximum de résultats de camping",
+                  numero_massimo_risultati: "Maximum number of camping results",
                   morale_minimo_risultati: "Minimum morale",
-                  disabilita_immagini_in_risultati: "Désactiver l'avatar du héro dans l'écran des résultats (Améliorer les performances si vous demandez trop de résultats)",
+                  disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",
                   deve_contenere_AoE: "Equipe doit contenir AoE",
                   no_s1_debuffs: "S1 sans Debuff (Sauf: Provoquer, Sommeil et Etourdir)",
                   no_debuffs: "Non Debuff (Sauf: Provoquer, Sommeil et Etourdir)",
@@ -2277,6 +2673,13 @@ if (document.addEventListener) {
                   ///Result saving window:
                   camp_name_field: "Nom",
                   camp_name_placeholder: "Nom de votre equipe",
+                  normal: "Normal",
+                  hell: "Hell",
+                  queen: "Queen",
+                  arakahan: "Arakahan",
+                  karkanis: "Karkanis",
+                  vera: "Vera",
+                  juleeve: "Juleeve",
                   save: "Sauvgarde",
                   canc_btn: "Annuler",
                   back_btn: "Retour",
@@ -2286,6 +2689,11 @@ if (document.addEventListener) {
                   deleted_message: "Supprimée!",
 
                   impostazioni: "Paramètres",
+                  my_teams: "My teams",
+                  most_saved_teams: "Most common teams",
+                  refresh_team_stats: "Refresh",
+                  extras_map: "Best hell raid route",
+
                   tema_notturno: "Mode nuit",
                   notifiche: "Notification",
                   debug_camping_values: "Debug: Afficher tous les valeurs de conversation",
@@ -2297,6 +2705,10 @@ if (document.addEventListener) {
               } else {
                 //this.lingua = "en";
                 this.strings = {
+                  welcome: "Welcome",
+                  whats_new: "What's new",
+                  websites: "Websites",
+                  credits: "Credits",
                   messaggio_di_benvenuto: "Welcome to Epic Seven Camp simulator",
                   data_by: "Data by EpicSevenDB",
                   all: "All",
@@ -2350,6 +2762,13 @@ if (document.addEventListener) {
                   ///Result saving window:
                   camp_name_field: "Camp name",
                   camp_name_placeholder: "Your camp's name",
+                  normal: "Normal",
+                  hell: "Hell",
+                  queen: "Queen",
+                  arakahan: "Arakahan",
+                  karkanis: "Karkanis",
+                  vera: "Vera",
+                  juleeve: "Juleeve",
                   save: "Save",
                   canc_btn: "Cancel",
                   back_btn: "Back",
@@ -2359,6 +2778,11 @@ if (document.addEventListener) {
                   deleted_message: "deleted!",
 
                   impostazioni: "Settings",
+                  my_teams: "My teams",
+                  most_saved_teams: "Most common teams",
+                  refresh_team_stats: "Refresh",
+                  extras_map: "Best hell raid route",
+
                   tema_notturno: "Night theme",
                   notifiche: "Enable notifications",
                   debug_camping_values: "Debug: Display camping values",
@@ -3198,6 +3622,22 @@ if (document.addEventListener) {
             return n;
           };
       },
+      sendAllTeams: function() {
+        var uploaded = localStorage.getItem('UploadedTeams') ? localStorage.getItem('Heroes') : false;
+        if (!uploaded) {
+          var campObj = JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}");
+          var camp = Object.values(campObj);
+          if (camp.length > 0 ) {
+            console.log("sending old camping teams data");
+            var data = [];
+            for (var i = 0; i < camp.length; i++) {
+              data.push(camp[i]);
+            };
+            sendTeamUsageStatistics({function: "add", data: data}); // send teams created before team stats were a thing
+          };
+          localStorage.setItem("UploadedTeams","true"); // se to true so this function is performed only once
+        };
+      },
       getUserHeroesBoot: function () { // read user's local storage team
         var tmp = localStorage.getItem('Heroes') ? localStorage.getItem('Heroes') : '{}';
         tmp = JSON.parse(tmp);
@@ -3247,10 +3687,11 @@ if (document.addEventListener) {
         } else {// get roster from url
           this.getUserHeroesURL(urlParams.get("camproster"));
           window.history.pushState("", "", window.location.pathname); // remove ?camproster= from the URL to avoid accidental refreshes replacing your current team
-        }; 
+        };
+        this.sendAllTeams();
         this.impostaLingua();
         this.inizializzaione();
-        this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes')
+        this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
         this.inizializzazione = false;
       },
       inizializzaione: function () {
@@ -3265,6 +3706,9 @@ if (document.addEventListener) {
       }
     },
     computed: {
+        computedGetSavedTeamsStats: function () {
+          this.getSavedTeamsStats();
+        },
         calcolaRisultati: function () { // in computed per evitare di calcolare 2 volte il risultato se non si è cambiato niente
             //resetta per un nuovo calcolo
             this.risultati = [];
@@ -3288,14 +3732,17 @@ if (document.addEventListener) {
                 };
             };
             try {
-              this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
-              camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
+              var backendDev = false;
+              if (backendDev && document.getElementById("showValues_toggle").checked === true ) {
+                snackbarMessage("using backend");
+                backendCalculation({campList: Object.keys(this.myHeroesList), locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
+              } else {
+                this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
+                camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
+              }
             } catch (err) {
               this.isLoadingResults = false; // remove angelica loading
-              $( "#snackbar" ).text(`Error: ` + err);
-              var x = document.getElementById("snackbar");
-              x.className = "show";
-              setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+              snackbarMessage(`Error: ` + err);
             };
           };
       }
@@ -3322,10 +3769,7 @@ if (document.addEventListener) {
     };
     if (e.data.code == 200 ) app.risultati = e.data.risultati
     else if (e.data.code == 400 ) {
-      $( "#snackbar" ).text(app.strings["results_error"] + `: ` + app.strings[e.data.risultati[0]] );
-      var x = document.getElementById("snackbar");
-      x.className = "show";
-      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000); // show for 3 seconds
+      snackbarMessage(app.strings["results_error"] + `: ` + app.strings[e.data.risultati[0]]);
     };
   }  
 
