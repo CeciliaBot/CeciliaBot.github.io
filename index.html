@@ -1873,17 +1873,17 @@ function backendCalculation(camp) {
                   <form class="modal-content animate" id="menu_lingua" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:1080px">
                     <div class="imgcontainer">
                     <center>` + this.strings.language + `</center><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" style="height:70px" onclick="app.cambiaLingua('en')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" style="height:70px"  onclick="app.cambiaLingua('kr')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" style="height:70px"  onclick="app.cambiaLingua('zht')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" width="105" height="70" onclick="app.cambiaLingua('en')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" width="105" height="70"  onclick="app.cambiaLingua('kr')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('zht')">
                     <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" style="height:70px"  onclick="app.cambiaLingua('jp')">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" style="height:70px"  onclick="app.cambiaLingua('it')">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" style="height:70px"  onclick="app.cambiaLingua('fr')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" width="105" height="70"  onclick="app.cambiaLingua('jp')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" width="105" height="70"  onclick="app.cambiaLingua('it')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" width="105" height="70"  onclick="app.cambiaLingua('fr')">
                     <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" style="height:70px"  onclick="app.cambiaLingua('es')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" style="height:70px"  onclick="app.cambiaLingua('pt')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" style="height:70px"  onclick="app.cambiaLingua('de')">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="105" height="70"  onclick="app.cambiaLingua('es')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" width="105" height="70"  onclick="app.cambiaLingua('pt')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  onclick="app.cambiaLingua('de')">
                     </div>
                     <div class="container">
                       <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
@@ -2539,10 +2539,10 @@ function backendCalculation(camp) {
                 };
               } else if (this.lingua == "zht") {
                 this.strings = {
-                  welcome: "Welcome",
-                  whats_new: "What's new",
-                  websites: "Websites",
-                  credits: "Credits",
+                  welcome: "欢迎",
+                  whats_new: "更新日志",
+                  websites: "实用链接",
+                  credits: "作者",
                   messaggio_di_benvenuto: "欢迎使用第七史诗露营模拟器",
                   data_by: "数据来源 EpicSevenDB",
                   all: "全部",
@@ -2596,13 +2596,13 @@ function backendCalculation(camp) {
                   ///Result saving window:
                   camp_name_field: "队伍名称",
                   camp_name_placeholder: "你的队伍名称",
-                  normal: "Normal",
-                  hell: "Hell",
-                  queen: "Queen",
-                  arakahan: "Arakahan",
-                  karkanis: "Karkanis",
-                  vera: "Vera",
-                  juleeve: "Juleeve",
+                  normal: "普通",
+                  hell: "地狱",
+                  queen: "阿吉曼夏洛斯女王",
+                  arakahan: "捕食者阿拉哈坎(蜘蛛)",
+                  karkanis: "执行者卡尔卡努斯(镰刀虫)",
+                  vera: "侍从官培拉(蛆)",
+                  juleeve: "乔里夫议会(蚊子)",
                   save: "保存",
                   canc_btn: "取消",
                   back_btn: "返回",
@@ -2612,10 +2612,10 @@ function backendCalculation(camp) {
                   deleted_message: "删除成功!",
 
                   impostazioni: "设置",
-                  my_teams: "My teams",
-                  most_saved_teams: "Most common teams",
-                  refresh_team_stats: "Refresh",
-                  extras_map: "Best hell raid route",
+                  my_teams: "我的队伍",
+                  most_saved_teams: "最常用的队伍",
+                  refresh_team_stats: "刷新",
+                  extras_map: "迷宫最佳路线",
 
                   tema_notturno: "夜间模式",
                   notifiche: "启用通知",
@@ -2627,10 +2627,10 @@ function backendCalculation(camp) {
                 };
               }else if (this.lingua == "fr") {
                 this.strings = {
-                  welcome: "Welcome",
-                  whats_new: "What's new",
-                  websites: "Websites",
-                  credits: "Credits",
+                  welcome: "Bienvenue",
+                  whats_new: "Quoi de neuf",
+                  websites: "Sites web",
+                  credits: "Crédits",
                   messaggio_di_benvenuto: "Bienvenue à E7 Camp Simulateur",
                   data_by: "Source EpicSevenDB",
                   all: "Tous",
@@ -2675,7 +2675,7 @@ function backendCalculation(camp) {
                   camp_name_placeholder: "Nom de votre equipe",
                   normal: "Normal",
                   hell: "Hell",
-                  queen: "Queen",
+                  queen: "La Reine",
                   arakahan: "Arakahan",
                   karkanis: "Karkanis",
                   vera: "Vera",
@@ -2689,10 +2689,10 @@ function backendCalculation(camp) {
                   deleted_message: "Supprimée!",
 
                   impostazioni: "Paramètres",
-                  my_teams: "My teams",
-                  most_saved_teams: "Most common teams",
-                  refresh_team_stats: "Refresh",
-                  extras_map: "Best hell raid route",
+                  my_teams: "Mes équipes",
+                  most_saved_teams: "Équipes les plus utilisés",
+                  refresh_team_stats: "Rafraîchir",
+                  extras_map: "Meilleur itinéraire pour Raid hell",
 
                   tema_notturno: "Mode nuit",
                   notifiche: "Notification",
