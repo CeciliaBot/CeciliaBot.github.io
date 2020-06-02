@@ -2146,7 +2146,7 @@ function backendCalculation(camp) {
                   toPrint = "<td>No data</td>"
                 };
                 refreshButton.style.display = "";
-                $( "#saved_teams_stats").append(`<table id="stats_table">` + toPrint + `</table>`);
+                $( "#saved_teams_stats").append(`<table id="stats_table" style="width: 100%;">` + toPrint + `</table>`);
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 refreshButton.style.display = "";
