@@ -1333,8 +1333,15 @@ span.heroImgList {
     </div>
 
     <div id="raid_map" style="display: none;">
-      <span class="center">
-        <!--<img src="https://preview.redd.it/j0kns9dt6sn41.png?width=3925&format=png&auto=webp&s=dd1cb7b1fb65bfdbc5129817f33fbe6f670ec88c" style="height: 800px"/>-->
+    <h2>{{strings.normal}}
+    <br>
+      <span class="center" id="map_normal">      
+        <img id="map_normal" src="./img/Raid-Normal_en.png" width="100%"/>
+      </span>
+      <h2>{{strings.hell}}
+      <br>
+      <span class="center">       
+        <img id="map_hell" src="./img/Raid-Hell_en.png" width="100%"/>
       </span>
       <br><br><br><br>
     </div>
@@ -2538,6 +2545,10 @@ function backendCalculation(camp) {
                   language: "Lingua"
                 };
               } else if (this.lingua == "zht") {
+                var mapnormal = document.getElementById("map_normal");
+                var maphell = document.getElementById("map_hell");
+                mapnormal.setAttribute("src", "./img/Raid-Normal_zht");               
+                maphell.setAttribute("src", "./img/Raid-Hell_zht");
                 this.strings = {
                   welcome: "欢迎",
                   whats_new: "更新日志",
