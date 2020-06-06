@@ -700,6 +700,21 @@ span.heroImgList {
   border-color: rgb(221, 51, 8);
 }
 
+.tab_style {
+  display: inline-block;
+  background-color: var(--search-border-color);
+  border-radius: 12px 12px 0 0;
+  width: 50%;
+  padding-top: 7px;
+  height: 30px;
+  color: white;
+  text-align: center;
+}
+.activetab {
+  background-color: var(--search-primary-color);
+  color: var(--font-color)
+}
+
 .histogram_bar {
   border-radius: 15px;
   height: 40px;
@@ -716,7 +731,6 @@ span.heroImgList {
   vertical-align: middle;
   height: 40px;
 }
-
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
@@ -1355,6 +1369,15 @@ span.heroImgList {
           </button>
         </div>
       </h2>
+      <br>
+      <div style="width: 100%">
+        <div id="team_tab_stats" class="tab_style activetab" style="margin-left: 0; margin-right: -2px" onclick="$('#char_tab_stats').removeClass('activetab'); $(this).addClass('activetab'); document.getElementById('teams_stats_tbody').style.display = 'block'; document.getElementById('char_stats_tbody').style.display = 'none'">
+          {{strings.teams}}
+        </div>
+        <div id="char_tab_stats" class="tab_style" style="margin-left: -2.6px;" onclick="$('#team_tab_stats').removeClass('activetab'); $(this).addClass('activetab');  document.getElementById('teams_stats_tbody').style.display = 'none'; document.getElementById('char_stats_tbody').style.display = 'block'">
+          {{strings.heroes}}
+        </div>
+      </div>
     </div>
 
 
@@ -1382,7 +1405,7 @@ span.heroImgList {
         </div>
       </div>
     </div>
-    <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 10;height:100%;width:100%"> <!-- non è neccessario settare inizializzaione = true -->
+    <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 10; height: 100%; width: 100%; border-radius: 0;"> <!-- non è neccessario settare inizializzaione = true -->
       <div class="center_img" style="text-align:center;"> 
         <i class="fa fa-cog fa-spin" style="font-size:70px"></i>
         <div>
@@ -2132,6 +2155,7 @@ function backendCalculation(camp) {
               contentType: 'application/json',
               success: function (response) {
                 var toPrint = "";
+                var toPrintChar = "";
                 if (response.data.length>0) {
                   for (var i = 0; i < response.data.length; i++) {
                     toPrint += "<tr>" +  
@@ -2140,13 +2164,33 @@ function backendCalculation(camp) {
                       `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
                       `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
                       "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.data[i].usi/response.totale*100 + "%;'><span>" + Math.round(( (response.data[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
-                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + " times</td></tr>";
+                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'>" + response.data[i].morale + "</td>" +
+                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + "</td></tr>";
+                  };
+                  for (var i = 0; i < response.characters.length; i++) {
+                    toPrintChar += "<tr>" +  
+                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                      "<td style='width: 80vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.characters[i].usi/response.totale*100 + "%;'><span>" + Math.round((( response.characters[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
+                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.characters[i].usi +"</td></tr>";
                   };
                 } else {
-                  toPrint = "<td>No data</td>"
+                  toPrint = "<td>No data</td>";
+                  toPrintChar = "";
                 };
                 refreshButton.style.display = "";
-                $( "#saved_teams_stats").append(`<table id="stats_table">` + toPrint + `</table>`);
+                $('#char_tab_stats').removeClass('activetab');
+                $('#team_tab_stats').addClass('activetab');
+                $( "#saved_teams_stats").append(`<table id="stats_table" style="width: 100%; background-color: var(--search-primary-color); padding: 10px; border-radius: 0 0 12px 12px;"><tbody id="teams_stats_tbody">
+                  <th colspan="4">${self.strings.team}</th>
+                  <th></th>
+                  <th style="white-space: nowrap;">${self.strings.morale}</th>
+                  <th style="white-space: nowrap;">${self.strings.teams}</th>
+                  ` + toPrint + `</tbody>
+                  <tbody id="char_stats_tbody" style="display: none;">
+                  <th></th>
+                  <th></th>
+                  <th style="white-space: nowrap;">${self.strings.teams}</th>
+                  ` + toPrintChar + `</tbody></table>`);
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 refreshButton.style.display = "";
@@ -2550,6 +2594,8 @@ function backendCalculation(camp) {
                   my_teams: "Le mie squadre",
                   most_saved_teams: "Squadre più popolari",
                   refresh_team_stats: "Aggiorna",
+                  heroes: "Eroi",
+                  teams: "Squadre",
                   extras_map: "Miglior percorso",
                   tema_notturno: "Tema notturno",
                   notifiche: "Notifiche",
@@ -2637,6 +2683,8 @@ function backendCalculation(camp) {
                   my_teams: "我的队伍",
                   most_saved_teams: "最常用的队伍",
                   refresh_team_stats: "刷新",
+                  heroes: "Heroes",
+                  teams: "Teams",
                   extras_map: "迷宫最佳路线",
 
                   tema_notturno: "夜间模式",
@@ -2714,6 +2762,8 @@ function backendCalculation(camp) {
                   my_teams: "Mes équipes",
                   most_saved_teams: "Équipes les plus utilisés",
                   refresh_team_stats: "Rafraîchir",
+                  heroes: "Heroes",
+                  teams: "Teams",
                   extras_map: "Meilleur itinéraire pour Raid hell",
 
                   tema_notturno: "Mode nuit",
@@ -2803,6 +2853,8 @@ function backendCalculation(camp) {
                   my_teams: "My teams",
                   most_saved_teams: "Most common teams",
                   refresh_team_stats: "Refresh",
+                  heroes: "Heroes",
+                  teams: "Teams",
                   extras_map: "Best hell raid route",
 
                   tema_notturno: "Night theme",
