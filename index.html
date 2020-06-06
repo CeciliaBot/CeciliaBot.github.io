@@ -2721,37 +2721,9 @@ function backendCalculation(camp) {
                       lingua = "kr";
                       break;
                     case 'zh':
-                      lingua = "cn";
-                      break;
-                    case 'zh-CN':
-                      lingua = "cn";
-                      break;
-                    case 'zh-SG':
-                      lingua = "cn";
-                      break;
-                    case 'zh-TW':
-                      lingua = "zht";
-                      break;
-                    case 'zh-HK':
-                      lingua = "zht";
-                      break;
-                    case 'zh-MO':
-                      lingua = "zht";
-                      break;
-                    case 'zh-cn':
-                      lingua = "cn";
-                      break;
-                    case 'zh-sg':
-                      lingua = "cn";
-                      break;
-                    case 'zh-tw':
-                      lingua = "zht";
-                      break;
-                    case 'zh-hk':
-                      lingua = "zht";
-                      break;
-                    case 'zh-mo':
-                      lingua = "zht";
+		      var langCode = navigator.language || navigator.userLanguage;
+		      if (langCode === "zh-TW" || langCode === "zh-HK" || langCode === "zh-MO") lingua = "zht"
+		      else lingua = "cn";
                       break;
                     default:
                       lingua = "en";
