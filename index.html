@@ -878,24 +878,24 @@ span.heroImgList {
                 </li>
                 <li style="color:rgb(0, 255, 136)">
               現在你可以選擇結果的顯示數量.<br>
-              使用方法: 選擇 "高級設置" => 點擊右上角齒輪圖標 => 選中 "{{strings.numero_massimo_risultati}}" 或/與 "{{strings.morale_minimo_risultati}}" 然後輸入相應的數量.<br>
-              請不要把 "{{strings.numero_massimo_risultati}}" 設置的很高 或者把"{{strings.morale_minimo_risultati}}" 設置得很低，你的瀏覽器很可能因為計算大量的結果而花費很長的加載時間.
+              使用方法: 選擇 "高級設定" => 點擊右上角齒輪圖標 => 選中 "{{strings.numero_massimo_risultati}}" 或/與 "{{strings.morale_minimo_risultati}}" 然後輸入相應的數量.<br>
+              請不要把 "{{strings.numero_massimo_risultati}}" 設定的很高 或者把"{{strings.morale_minimo_risultati}}" 設定得很低，你的瀏覽器很可能因為計算大量的結果而花費很長的加載時間.
               默認顯示心情最高的 200 個結果.
             </li>
             <li style="color:#007FFF">
               新功能: "生成URL鏈接"<br>
-              在設置裏選擇生成URL鏈接將會生成一個保存了你英雄列表的鏈接.<br>
+              在設定裏選擇生成URL鏈接將會生成一個保存了你英雄列表的鏈接.<br>
               你可以在任何設備上使用這個鏈接.<br>
               如果你用生成的鏈接打開將會覆蓋當前設備已經保存的英雄列表.<br>
               該功能僅用於跨設備/瀏覽器快速同步個人英雄列表，你的英雄列表依舊是自動保存的.
             </li>
             <li style="color:#007FFF">
-              設置裏加入調試選項.<br>
+              設定裏加入調試選項.<br>
               打開可以右鍵(手機長按)查看對話列表.
             </li>
             <li>
               默認語言將根據你瀏覽器的語言自動選擇.<br>
-              你可以在設置裏切換語言.
+              你可以在設定裏切換語言.
             </li>
             <li style="color:rgb(0, 255, 136)">
               現在你可以選擇德語，葡萄牙語，法語和西班牙語了.<br>
@@ -919,7 +919,7 @@ span.heroImgList {
             <li style="color:#007FFF">
               現在你可以保存計算的結果:<br>
             在結果頁面點擊 <i class="fa fa-floppy-o" aria-hidden="true"></i>  , 然後輸入你自己定義的隊伍名稱並點擊 "保存".<br>
-            你保存的隊伍將顯示在 <i class="fa fa-cog" aria-hidden="true"></i>  的設置窗口 你可以修改並刪除他們.
+            你保存的隊伍將顯示在 <i class="fa fa-cog" aria-hidden="true"></i>  的設定窗口 你可以修改並刪除他們.
             </li>
             <li>啟動的時候會生成一個web worker用於處理計算結果, 這會保證你的瀏覽器不會出現 "頁面失去響應".<br>
          這個工具可以計算全部 35.208.615 種可能的排列組合並且不會崩潰 (運行中會保持低RAM占用率) 但是會花費更長的時間 (13-17 分鐘, 鎖定一個英雄後約 20 秒);
@@ -2405,7 +2405,7 @@ function backendCalculation(camp) {
                   contenuto = `點擊英雄頭像將英雄添加到你的英雄列表.<br>
                              你的英雄列表裏的所有英雄將會用於計算可能的排列組合並給出心情最高的前200個結果.<br>
                              可添加的英雄沒有數量限制，添加英雄越多計算越慢.<br>
-                             你的英雄將會自動保存，不需要每次打開頁面都重新選擇，但是清除頁面Cookie將會丟失你保存的設置和英雄列表!<br>
+                             你的英雄將會自動保存，不需要每次打開頁面都重新選擇，但是清除頁面Cookie將會丟失你保存的設定和英雄列表!<br>
                              <br>
                              如果你使用的是"列表"視圖(可在搜索框右方切換) 點擊 "+" 號添加英雄至你的英雄列表
                             `;
@@ -2454,12 +2454,12 @@ function backendCalculation(camp) {
                             因为被锁定的英雄无视高级设置限制，所以如果你锁定了 "塔瑪林爾(偶像)" 然后在高级设置的职业一栏选中了精灵师，那么在计算结果中 除了偶像还会再添加一个精灵师. 对于Buff和Debuff也是同理<br>
                             `;                 
                 } else if (this.lingua == "zht") {
-                  titolo = "高級設置";
-                  contenuto = `這裏可以進行高級設置.<br>
-                            <b style="color:red">被鎖定的英雄不受高級設置影響</b><br><br>
+                  titolo = "高級設定";
+                  contenuto = `這裏可以進行高級設定.<br>
+                            <b style="color:red">被鎖定的英雄不受高級設定影響</b><br><br>
                             你可以選擇任意數量的選項，但是某些選項有特殊的限制.<br>
-                            例如你在職業一欄勾選超過4個職業就會報錯，因為一個隊伍最多不超過4個人.<br>
-                            因為被鎖定的英雄無視高級設置限制，所以如果你鎖定了 "塔瑪林爾(偶像)" 然後在高級設置的職業一欄選中了精靈師，那麽在計算結果中 除了偶像還會再添加一個精靈師. 對於Buff和Debuff也是同理<br>
+                            例如你在職階一欄勾選超過4個職階就會報錯，因為一個隊伍最多不超過4個人.<br>
+                            因為被鎖定的英雄無視高級設定限制，所以如果你鎖定了 "塔瑪林爾(偶像)" 然後在高級設定的職階一欄選中了精靈師，那麽在計算結果中 除了偶像還會再添加一個精靈師. 對於Buff和Debuff也是同理<br>
                             `;                 
                 } else {
                   titolo = "Advanced settings";
@@ -2489,9 +2489,9 @@ function backendCalculation(camp) {
                              計算結果中的每一個位置，只會出現對應欄位中的英雄. 同一個英雄不能被添加到多個欄位中.<br>
                              空白的欄位對應你的英雄列表中剩余的全部英雄.<br>
                              如果你將所有的英雄加到前三個欄位中將會出現 "所有英雄添加完畢，已無英雄可添加至下一個欄位!" 的錯誤信息.<br>
-                             空白的欄位將會受到高級設置的影響.<br><br>
-                             每個欄位中被鎖定的英雄將無視高級設置的影響.<br>
-                             如果你所有欄位都放入了英雄，同時又選擇了任意一個高級設置， 將會報錯 "隊伍人數超過上限!" 並返回 0 個計算結果.<br>
+                             空白的欄位將會受到高級設定的影響.<br><br>
+                             每個欄位中被鎖定的英雄將無視高級設定的影響.<br>
+                             如果你所有欄位都放入了英雄，同時又選擇了任意一個高級設定， 將會報錯 "隊伍人數超過上限!" 並返回 0 個計算結果.<br>
                              這個選項有助於創建自定義隊伍, 比如你將你所有的騎士放在一個欄位中，那麽你所有的計算結果裏就必定會出現一個騎士!
                              `;                  
                 } else {
@@ -2516,9 +2516,9 @@ function backendCalculation(camp) {
                              `;                 
                 } else if (this.lingua == "zht") {
                   titolo = "計算結果";
-                  contenuto = `這裏會出現根據你的設置篩選出的心情最高的前200個結果.<br>
+                  contenuto = `這裏會出現根據你的設定篩選出的心情最高的前200個結果.<br>
                              你的英雄列表裏至少要有4個英雄才能顯示結果.<br>
-                             你可以點擊每個結果前面的圖標保存對應的隊伍 (會彈出一個窗口要求你自定義隊伍名稱), 你保存的隊伍會出現在右下方齒輪圖標的"設置"一欄裏.
+                             你可以點擊每個結果前面的圖標保存對應的隊伍 (會彈出一個窗口要求你自定義隊伍名稱), 你保存的隊伍會出現在右下方齒輪圖標的"設定"一欄裏.
                              `;                 
                 } else {
                   titolo = "Results";
@@ -2855,7 +2855,7 @@ function backendCalculation(camp) {
                   name: "按英雄名称",
                   ingame_id: "按英雄ID",
                   aggiungi: "添加英雄 ",
-                  i_tuoi_eroi: "你的英雄",
+                  i_tuoi_eroi: "我的英雄",
                   cerca_eroe: "搜索..",
                   impostazioni_avanzate: "高级设置",
                   numero_massimo_risultati: "显示结果数量",
@@ -2865,17 +2865,17 @@ function backendCalculation(camp) {
                   no_s1_debuffs: "S1不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
                   no_debuffs: "技能不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
                   classe: "职业",
-                  knight: "騎士",
-                  warrior: "戰士",
-                  thief: "盜賊",
+                  knight: "骑士",
+                  warrior: "战士",
+                  thief: "盗贼",
                   ranger: "射手",
-                  mage: "魔導士",
-                  "soul-weaver": "精靈師",
-                  fire: "火焰屬性",
-                  ice: "寒氣屬性",
-                  earth: "自然屬性",
-                  light: "光明屬性",
-                  dark: "黑暗屬性",
+                  mage: "魔导士",
+                  "soul-weaver": "精灵师",
+                  fire: "火焰属性",
+                  ice: "寒气属性",
+                  earth: "自然属性",
+                  light: "光明属性",
+                  dark: "黑暗属性",
                   elemento: "属性",
                   buff: "Buff",
                   debuff: "Debuff",
@@ -2945,16 +2945,16 @@ function backendCalculation(camp) {
                   name: "按英雄名稱",
                   ingame_id: "按英雄ID",
                   aggiungi: "添加英雄 ",
-                  i_tuoi_eroi: "你的英雄",
+                  i_tuoi_eroi: "我的英雄",
                   cerca_eroe: "搜索..",
-                  impostazioni_avanzate: "高級設置",
+                  impostazioni_avanzate: "高級設定",
                   numero_massimo_risultati: "顯示結果數量",
                   morale_minimo_risultati: "最低心情限制",
                   disabilita_immagini_in_risultati: "結果頁不顯示英雄頭像 (如果你設定的顯示結果數量非常大，關閉英雄頭像顯示有助於提升性能)",
                   deve_contenere_AoE: "隊伍必須包含 AoE",
                   no_s1_debuffs: "S1不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
                   no_debuffs: "技能不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
-                  classe: "職業",
+                  classe: "職階",
                   knight: "騎士",
                   warrior: "戰士",
                   thief: "盜賊",
@@ -2970,7 +2970,7 @@ function backendCalculation(camp) {
                   buff: "Buff",
                   debuff: "Debuff",
                   combinations: "可能的組合",
-                  multilock: "鎖定多人 (笛卡爾 出品)",
+                  multilock: "鎖定多人 (笛卡兒 出品)",
                   multilock_slot: "欄位",
                   add_to_slot: "添加到這個位置",
                   add_selection: "添加",
@@ -3005,7 +3005,7 @@ function backendCalculation(camp) {
                   saved_message: "保存成功!",
                   deleted_message: "刪除成功!",
 
-                  impostazioni: "設置",
+                  impostazioni: "設定",
                   my_teams: "我的隊伍",
                   most_saved_teams: "常用隊伍&英雄",
                   refresh_team_stats: "刷新",
