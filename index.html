@@ -865,94 +865,90 @@ span.heroImgList {
                 <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
                 </h2>
                 <div style="color: orangered; text-align: center;">
-                  Looking for translators...
-                </div>
-                <!-- Copyright stuff if needed
-                <div style="width: 100%; position: absolute; bottom: 10%; text-align: center;">
-                  All game content and assets are trademarks and copyrights of SUPERCREATIVE Corp and/or Smilegate Megaport.<br>
-                  This site is fan made, not affiliated with SUPERCREATIVE Corp and/or Smilegate Megaport. 
-                </div>
-                -->
+                  寻找翻译者...
               </div>
-              <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
-                <ul>
-                  <li style="color:rgb(255, 60, 0)">
-                    Add Most saved teams statistics!<br>
-                    Select the cog icon in the toolbar -> "{{strings.most_saved_teams}}".
-                  </li>
-                  <li style="color:rgb(0, 255, 136)">
-                    Now you can select the number of results or minimum morale to be displayed.<br>
-                    Instructions: Select "Advanced settings" => click on the cog icon on the top left of the page => check "{{strings.numero_massimo_risultati}}" or/and "{{strings.morale_minimo_risultati}}" then type in the desired number in the corresponding input field.<br>
-                    Please don't set a high number in the "{{strings.numero_massimo_risultati}}" input field or too low in "{{strings.morale_minimo_risultati}}" as your browser may slow down while displaying to many results.
-                    By default (or if you don't provide a number) top 200 results are displayed.
-                  </li>
-                  <li style="color:#007FFF">
-                    New: "Generate URL"<br>
-                    Select this option in the settings window to generate a URL containing a copy of your current roster.<br>
-                    You can use that URL on any device.<br>
-                    If you open this tool with a generated URL it will replace your local roster on that device.<br>
-                    You don't need a URL to save your roster. Your roster is automatically saved on your device, the URL is useful if you need to transfer you roster to a different device so you don't have to manually add each hero.
-                  </li>
-                  <li style="color:#007FFF">
-                    New setting option "Debug: Display camping values"<br>
-                    When enabled you can right click (or long tap on mobile) on a hero's portrait to view that character's camping values.<br>
-                    Useful if you want to check if the data is correct or updated.
-                  </li>
-                  <li>
-                    Default language is now autodetected during first boot.<br>
-                    You can change language in the settings.
-                  </li>
-                  <li style="color:rgb(0, 255, 136)">
-                    Now you can select German, Portoguese, French and Spanish as language.<br>
-                    Only French has gamedata and menus translated. Thanks again to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the translation.<br>
-                    DE, ES and PT have only gamedata translated (Character name, Camping topics, buffs and debuffs) if you want to help translate the menus contact me.<br>
-                    By default ENG is selected to change language go to Settings.
-                  </li>
-                  <li style="color:rgb(0, 255, 136)">
-                    Added Japanese, Chinese (S) and Korean languages:<br>
-                    Japanese and Korean are missing menu translation but game data is translated, Chinese (S) has full translation menus + game data.<br>
-                    Thanks to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the Chinese translation.<br>
-                    By default ENG is selected to change language go to Settings.
-                  </li>
-                  <li>
-                    Added Notifications in settings:<br>
-                    Enable to recive a notification when the page is done calculating results.<br>
-                    This function is useful if you are on PC and have a large roster, this page will only sand the notification if the page is in background and will not send you any other kind of notification!
-                  </li>
-                  <li style="color:rgb(0, 255, 136)">
-                    Added Multi-lock:<br>
-                    Add your heroes to one of the 4 slots (each slot is a space in your team), if you add 2 or more heroes into the same slot only one of them will be in each team!
-                  </li>
-                  <li style="color:#007FFF">
-                    Now you can save your results:<br>
-                    In the results window tap/click <i class="fa fa-floppy-o" aria-hidden="true"></i>  , in the modal window type a name for that specific camp and click "Save".<br>
-                    Your saved camps will appear in the <i class="fa fa-cog" aria-hidden="true"></i>  settings window where you can view and delete them.
-                  </li>
-                  <li>
-                    At boot a web worker will be generated and will handle team calculations, this will prevent your browser from displaying the message "This page is not responding".<br>
-                    This tool can calculate all 35.208.615 possible combinations without crashing (it has low RAM usage during calculation) but it will require a long time (13-17 minutes, locking a hero 20 seconds);
+              <!-- Copyright stuff if needed
+              <div style="width: 100%; position: absolute; bottom: 10%; text-align: center;">
+                All game content and assets are trademarks and copyrights of SUPERCREATIVE Corp and/or Smilegate Megaport.<br>
+                This site is fan made, not affiliated with SUPERCREATIVE Corp and/or Smilegate Megaport. 
+              </div>
+              -->
+            </div>
+            <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
+              <ul>
+                <li style="color:rgb(255, 60, 0)">
+                  添加常用队伍统计!<br>
+                  在下方工具栏点击齿轮图标 -> "{{strings.most_saved_teams}}".
                 </li>
-                </ul>
-              </div>
-              <div id="instructions_content" style="display: none">
-              </div>
-              <div id="cool_websites_content" style="display: none; text-align: center; margin-top: 10%;">
-                Cool websites you should check out:
-                <p><a href="https://epicsevendb.com/">EpicSevenDB</a> by RaphaelDDL</p>
-                <p><a href="https://e7herder.com/">E7herder</a> with a cool model viewer</p>
-                <p><a href="https://maphe.github.io/e7-damage-calc/">Epic 7 Damage Calculator</a> by Maphe</p>
-                <p><a href="https://www.e7leaks.com/">Epic 7 Leaks</a> by Maphe</p>
-                <p><a href="https://meowyih.github.io/epic7-gear/index.html?lang=en">Web tool to evaluate gears</a> by meowyih</p>
-                <p><a href="http://www.epicseventools.com/Home/LabMoraleOptimizer">E7 Tools</a> by Budandan</p>
-                <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
-              </div>
-              <div id="credits_content" style="display: none;">
-                <div style="width: 100vw; position: absolute; bottom: 10%; text-align: center;">
-      <br>ENG Hell raid map: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
-      <br>Normal and Chinese Hell raid map: TriATK
-                  <br>Chinese/French translations: TriATK
-                  <br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
-                  <br>Discord: gio#0898
+                <li style="color:rgb(0, 255, 136)">
+              现在你可以选择结果的显示数量.<br>
+              使用方法: 选择 "高级设置" => 点击右上角齿轮图标 => 选中 "{{strings.numero_massimo_risultati}}" 或/与 "{{strings.morale_minimo_risultati}}" 然后输入相应的数量.<br>
+              请不要把 "{{strings.numero_massimo_risultati}}" 设置的很高 或者把"{{strings.morale_minimo_risultati}}" 设置得很低，你的浏览器很可能因为计算大量的结果而花费很长的加载时间.
+              默认显示心情最高的 200 个结果.
+            </li>
+            <li style="color:#007FFF">
+              新功能: "生成URL链接"<br>
+              在设置里选择生成URL链接将会生成一个保存了你英雄列表的链接.<br>
+              你可以在任何设备上使用这个链接.<br>
+              如果你用生成的链接打开将会覆盖当前设备已经保存的英雄列表.<br>
+              该功能仅用于跨设备/浏览器快速同步个人英雄列表，你的英雄列表依旧是自动保存的.
+            </li>
+            <li style="color:#007FFF">
+              设置里加入调试选项.<br>
+              打开可以右键(手机长按)查看对话列表.
+            </li>
+            <li>
+              默认语言将根据你浏览器的语言自动选择.<br>
+              你可以在设置里切换语言.
+            </li>
+            <li style="color:rgb(0, 255, 136)">
+              现在你可以选择德语，葡萄牙语，法语和西班牙语了.<br>
+            只有法语是菜单和数据完全翻译. 再次感谢 <a href="https://www.reddit.com/user/TriATK/">TriATK</a> 提供的法文翻译.<br>
+            德语，葡萄牙语，和西班牙语仅有数据翻译 (英雄名称, 对话, buffs 和 debuff) 如果你想提供翻译请联系我.<br>
+            </li>
+            <li style="color:rgb(0, 255, 136)">
+              添加简体中文，日文，韩文:<br>
+            日韩的菜单未翻译 游戏数据已翻译, 简中有完整的菜单和数据翻译.<br>
+            感谢 <a href="https://www.reddit.com/user/TriATK/">TriATK</a> 提供的中文翻译.<br>
+            </li>
+            <li>
+              添加通知功能:<br>
+            启用通知将会在计算完毕时发送通知.<br>
+            本功能适用于电脑端将网页放到后台时提示计算结果，并不会发送其它类型的通知!
+            </li>
+            <li style="color:rgb(0, 255, 136)">
+              添加锁定多人功能(Beta):<br>
+            添加你的英雄到4个栏位中 (每个栏位对应结果页上的相同位置), 如果你重复添加相同的英雄，最终结果里只会出现一次!
+            </li>
+            <li style="color:#007FFF">
+              现在你可以保存计算的结果:<br>
+            在结果页面点击 <i class="fa fa-floppy-o" aria-hidden="true"></i>  , 然后输入你自己定义的队伍名称并点击 "保存".<br>
+            你保存的队伍将显示在 <i class="fa fa-cog" aria-hidden="true"></i>  的设置窗口 你可以修改并删除他们.
+            </li>
+            <li>启动的时候会生成一个web worker用于处理计算结果, 这会保证你的浏览器不会出现 "页面失去响应".<br>
+         这个工具可以计算全部 35.208.615 种可能的排列组合并且不会崩溃 (运行中会保持低RAM占用率) 但是会花费更长的时间 (13-17 分钟, 锁定一个英雄后约 20 秒);
+          </li>
+              </ul>
+            </div>
+            <div id="instructions_content" style="display: none">
+            </div>
+            <div id="cool_websites_content" style="display: none; text-align: center; margin-top: 10%;">
+              不容错过的实用网站:
+              <p><a href="https://epicsevendb.com/">EpicSevenDB</a> by RaphaelDDL</p>
+              <p><a href="https://e7herder.com/">E7herder</a> 有非常酷的角色模型动画查看器</p>
+              <p><a href="https://maphe.github.io/e7-damage-calc/">Epic 7 伤害计算器</a> by Maphe</p>
+              <p><a href="https://www.e7leaks.com/">Epic 7 Leaks</a> by Maphe</p>
+              <p><a href="https://meowyih.github.io/epic7-gear/index.html?lang=en">装备评分计算器</a> by meowyih</p>
+              <p><a href="http://www.epicseventools.com/Home/LabMoraleOptimizer">E7 Tools</a> by Budandan</p>
+              <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
+            </div>
+            <div id="credits_content" style="display: none;">
+              <div style="width: 100vw; position: absolute; bottom: 10%; text-align: center;">
+              <br>英文地狱迷宫地图: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
+		      <br>普通迷宫地图&中文迷宫地图: TriATK
+              <br>中文/法文翻译: TriATK
+          <br>联系原作者(英语或意大利语): <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
+	      <br>Discord: gio#0898
                 </div>
               </div>
             </template>
@@ -2600,7 +2596,20 @@ function backendCalculation(camp) {
                 lingua = "en"
               };
               this.lingua = lingua;
-
+              
+              //change raid map language
+              if (this.lingua == "zht") {
+                var mapnormal = document.getElementById("map_normal");
+                var maphell = document.getElementById("map_hell");
+                mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
+                maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
+                } else {
+                var mapnormal = document.getElementById("map_normal");
+                var maphell = document.getElementById("map_hell");
+                mapnormal.setAttribute("src", "./img/Raid-Normal_en.png");               
+                maphell.setAttribute("src", "./img/Raid-Hell_en.png");
+               }
+               
               if (this.lingua == "it") {
                 this.strings = {
                   welcome: "Benvenuto",
@@ -2691,10 +2700,6 @@ function backendCalculation(camp) {
                   language: "Lingua"
                 };
               } else if (this.lingua == "zht") {
-                var mapnormal = document.getElementById("map_normal");
-                var maphell = document.getElementById("map_hell");
-                mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
-                maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
                 this.strings = {
                   welcome: "欢迎",
                   whats_new: "更新日志",
@@ -2770,10 +2775,10 @@ function backendCalculation(camp) {
 
                   impostazioni: "设置",
                   my_teams: "我的队伍",
-                  most_saved_teams: "最常用的队伍",
+                  most_saved_teams: "常用队伍&英雄",
                   refresh_team_stats: "刷新",
-                  heroes: "Heroes",
-                  teams: "Teams",
+                  heroes: "英雄",
+                  teams: "队伍",
                   extras_map: "迷宫最佳路线",
 
                   tema_notturno: "夜间模式",
@@ -2849,10 +2854,10 @@ function backendCalculation(camp) {
 
                   impostazioni: "Paramètres",
                   my_teams: "Mes équipes",
-                  most_saved_teams: "Équipes les plus utilisés",
+                  most_saved_teams: "Équipes & Héros les plus utilisés",
                   refresh_team_stats: "Rafraîchir",
-                  heroes: "Heroes",
-                  teams: "Teams",
+                  heroes: "Héros",
+                  teams: "Équipes",
                   extras_map: "Meilleur itinéraire pour Raid hell",
 
                   tema_notturno: "Mode nuit",
