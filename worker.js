@@ -92,8 +92,8 @@ onmessage = function(e) {
                                         e.debuffs.every(i => debuffsRisultati.includes(i)) &&
                                         e.buffs.every(i => buffsRisultati.includes(i)) &&
                                         (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
-                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)) &&
-                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)  )
+                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)) &&
+                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  )
                                     ){
                                         let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
                                         if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
@@ -160,8 +160,8 @@ onmessage = function(e) {
                                         e.debuffs.every(i => debuffsRisultati.includes(i)) &&
                                         e.buffs.every(i => buffsRisultati.includes(i)) &&
                                         (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
-                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)) &&
-                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21}).length === 0)  )
+                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)) &&
+                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  )
                                     ){
                                         let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
                                         if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
