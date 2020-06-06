@@ -2170,7 +2170,7 @@ function backendCalculation(camp) {
           }, 
           mostraSalvaRisultato: function (n) {
             $( "#calculate_window" ).append(`
-              <div id="saveCamp" class="modal" style="padding-top: 60px;display:block;">
+              <div id="saveCamp" class="modal" style="padding-top: 60px;display:block;overflow-y: scroll;">
                 <form class="modal-content animate" id="saveCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
                     <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
