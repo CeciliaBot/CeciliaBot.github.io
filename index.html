@@ -4202,14 +4202,22 @@ function backendCalculation(camp) {
         this.inizializzazione = false;
       },
       inizializzaione: function () {
-	      self = this;
+	self = this;
         //Get characters names translated
-        var getDb = new XMLHttpRequest();
-        getDb.open( "GET", "https://api.epicsevendb.com/hero?lang=" + this.lingua, false ); // false for synchronous request
-        getDb.send( null );
-        JSON.parse(getDb.response).results.forEach(function(item) {
-          self.translatedName[item._id] = item.name
-        });
+	try {
+		var getDb = new XMLHttpRequest();
+		getDb.open( "GET", "https://api.epicsevendb.com/hero?lang=" + this.lingua, false ); // false for synchronous request
+		getDb.send( null );
+		JSON.parse(getDb.response).results.forEach(function(item) {
+		  self.translatedName[item._id] = item.name;
+		});
+	} catch (err) {
+		console.log(err);
+		for (var _id in self.HeroDB) {
+			self.translatedName[_id] = self.HeroDB[_id].name;
+		};
+		snackbarMessage("Cannot connect to EpicSevenDB API. Using english gamedata.");
+	}
       }
     },
     computed: {
