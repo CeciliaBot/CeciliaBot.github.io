@@ -5,6 +5,8 @@ To keep a smooth experience for the user HeroDatabase.json is automatically upda
 
 HeroDatabase.json is loaded during website startup with a get request: "https://ceciliabot.github.io/HeroDatabase.json"
 
+At boot if cannot connect to EpicSevenDB API english character names will be used instead of the selected language to prevent the page from not booting at all
+
 # Todo:
 1. Improve speed with huge teams and 0/1 locked hero and no advanced settings;
 2. Most saved teams ?
