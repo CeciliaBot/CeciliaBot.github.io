@@ -17,11 +17,11 @@
 <meta name="msapplication-config" content="./favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-<script src="./jquery.min.js"></script>
-<script src="./js-combinatorics@0.5.js"></script>
+<script src="./jquery.min.js" async></script>
+<script src="./js-combinatorics@0.5.js" async></script>
 <!--<script src="vue.js"></script>-->
 <script src="./vue@2.6.11.js"></script>
-<link rel="stylesheet" href="./font-awesome.min.css">
+<link rel="stylesheet" href="./font-awesome.min.css" async>
 <style>
 :root {
     --primary-color: #302AE6;
@@ -1537,13 +1537,13 @@ span.heroImgList {
     <div id="raid_map" style="display: none;">
     <h2>{{strings.normal}}
     <br>
-      <span class="center">      
-        <img id="map_normal" src="./img/Raid-Normal_en.png" width="100%"/>
+      <span class="center">
+    <img id="map_normal" src="./img/Raid-Normal_en.png" width="100%" type="image/png" loading="lazy"/>      
       </span>
       <h2>{{strings.hell}}
       <br>
-      <span class="center">       
-        <img id="map_hell" src="./img/Raid-Hell_en.png" width="100%"/>
+      <span class="center">
+    <img id="map_hell" src="./img/Raid-Hell_en.png" width="100%" type="image/png" loading="lazy"/>          
       </span>
       <br><br><br><br>
     </div>
@@ -1602,10 +1602,8 @@ span.heroImgList {
     <div id="snackbar"></div> <!-- messaggio avvisi -->
   </div><!-- div id = app -->
 
-
-  <script>
-
-    function toggleCheck() {
+<script defer>
+function toggleCheck() {
         if (document.getElementById("darkModeCheck").checked === true) {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark'); // salva preferenza per future visite
@@ -4287,7 +4285,6 @@ function backendCalculation(camp) {
       snackbarMessage(app.strings["results_error"] + `: ` + app.strings[e.data.risultati[0]]);
     };
   }  
-
-  </script>
+</script>
 </body>
 </html>
