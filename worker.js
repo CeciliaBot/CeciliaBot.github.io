@@ -1,6 +1,8 @@
 importScripts('js-combinatorics@0.5.js');
 
 var AoEHeroes = ["adventurer-ras","kawerik","cerise","specter-tenebria","tempest-surin","pavel","ambitious-tywin","alencia","benevolent-romann","elena","cecilia","vildred","charlotte","baal-sezan","yufine","ravi","kayron","charles","yuna","sez","haste","tywin","lidica","aramintha","tenebria","basar","tamarinne","ludwig","bellona","luluca","zeno","vivian","lilias","dizzy","faithless-lididca","fallen-cecilia","judge-kise","arbiter-vildred","sage-baal-sezan","specimen-sez","martial-artist-ken","silver-blade-aramintha","desert-jewel-basar","seaside-bellona","silk","mercedes","armin","zerato","corvus","cartuja","schuri","dingo","clarissa","leo","purrgis","crozet","dominiel","romann","khawana","shadow-rose","celestial-mercedes","champion-zerato","blood-blade-karin","watcher-schuri","blaze-dingo","kitty-clariss","roaming-warrior-leo","auxiliary-lots","general-purrgis","ras","sven","church-of-ilryos-axe","rikoris","adlay","carrot","jena","jecht","elson","hurado","kiris","celeste","pearlhorizon","gloomyrain","kikirat-v2","chaos-sect-axe","captain-rikoris","researcher-carrot","lena"];
+var topics_results = {}; // topics combos: "Advice_Complain", "Advice_Sad Memory"....
+
 
 if (!Array.prototype.flat) { // create .flat() function only if not already supported by browser
     Object.defineProperty(Array.prototype, 'flat', {
@@ -11,6 +13,30 @@ if (!Array.prototype.flat) { // create .flat() function only if not already supp
       }
     });
 };
+
+//// SUPPORT FUNCTIONS
+function everyLocked(team, lock) {
+    for (var i = 0; i < lock.length; i++) {
+      if (!team.includes(lock[i])) {
+        return false;
+      };
+    };
+    return true;
+};
+function giaInTop(team, top) {
+    var pos = -1
+    if (top.length > 0 ) {
+      for (var i = 0; i<top.length;i++) {
+        if (top[i].morale === -100) break;
+        if (top[i].team.includes(team[0]) && top[i].team.includes(team[1]) && top[i].team.includes(team[2]) && top[i].team.includes(team[3]) ) {
+          pos = i;
+          break;
+        };
+      };
+    };
+    return pos;
+};
+
 
 ///replace this. -> e.
 onmessage = function(e) {
@@ -72,44 +98,182 @@ onmessage = function(e) {
                e.risultati = [];
 
                if (isCartesian == false) {
+                    var hasAdvSettings = false;
                     if ( (e.locked.length + e.classe.length) > 4 || (e.locked.length + e.elemento.length) > 4 ) { // team size error
                         code = 400; // error
                         e.risultati = ["team_size_exceeded"];
                     } else { // can calculate
-                        Combinatorics.bigCombination(campList,4-e.locked.length).forEach(teamComb => {
-                                    if (teamComb.length>4 || e.locked.length == 4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
-                                    var team = [].concat(teamComb, e.locked);
-                                    let elementoFiltro = teamComb;
-                                    let elementoRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat();
-                                    let buffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat();
-                                    let debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat();
-                                    let S1debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].skills[0].debuff }).flat();
-                                    let classeRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat();
-                                    let AoE_inTeam = AoEHeroes.some(i => elementoFiltro.includes(i));
-                                    if (e.locked.every(i => team.includes(i)) &&
-                                        e.classe.every(i => classeRisultati.includes(i)) && 
-                                        e.elemento.every(i => elementoRisultati.includes(i)) &&
-                                        e.debuffs.every(i => debuffsRisultati.includes(i)) &&
-                                        e.buffs.every(i => buffsRisultati.includes(i)) &&
-                                        (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
-                                        (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)) &&
-                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  )
-                                    ){
-                                        let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
-                                        if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
-                                            e.risultati.push(risultatoDiQuestoTeam);
-                                            e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                        var useExperimental = true; // set to false if new formula is not working correctly
+                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true) hasAdvSettings = true;
+                        if (useExperimental && hasAdvSettings === false && e.locked.length <= 1) { // use only with no advanced settings
+                            if (Object.keys(topics_results).length === 0) { // create topics combos (once for page visit)
+                                for (var hero_id in HeroDB) {
+                                    var topic_combos = Combinatorics.combination(Object.keys(HeroDB[hero_id].camping.values),2).toArray();
+                                    for ( var i = 0; i<topic_combos.length; i++) {
+                                      var key = topic_combos[i];
+                                      if (!topics_results[key.join("_")]) {topics_results[key.join("_")] = {}; topics_results[key.join("_")]["eroi"] = []; topics_results[key.join("_")][key[0]] = [];  topics_results[key.join("_")][key[1]] = [];};
+                                      if (HeroDB[hero_id].camping.topics.includes(key[0]) ) topics_results[key.join("_")][key[0]].push({"_id": HeroDB[hero_id]._id, punteggio: HeroDB[hero_id].camping.values[key[1]]});
+                                      if (HeroDB[hero_id].camping.topics.includes(key[1]) ) topics_results[key.join("_")][key[1]].push({"_id": HeroDB[hero_id]._id, punteggio: HeroDB[hero_id].camping.values[key[0]]});
+                                      topics_results[key.join("_")]["eroi"].push( {"_id": HeroDB[hero_id]._id, punteggio: HeroDB[hero_id].camping.values[key[0]]+HeroDB[hero_id].camping.values[key[1]]} );
+                                      topics_results[key.join("_")]["eroi"].sort(function (a,b) {return ((a.punteggio > b.punteggio) ? -1 : ((a.punteggio == b.punteggio) ? 0: 1))});
+                                      topics_results[key.join("_")][key[0]].sort(function (a,b) {return ((a.punteggio > b.punteggio) ? -1 : ((a.punteggio == b.punteggio) ? 0: 1))});
+                                      topics_results[key.join("_")][key[1]].sort(function (a,b) {return ((a.punteggio > b.punteggio) ? -1 : ((a.punteggio == b.punteggio) ? 0: 1))});
+                                    };
+                                };
+                            };
+                            e.risultati = Array(e.preferenzeRisultati.n).fill({morale: -100, opzioneMigliore1: "", opzioneMigliore2: "", migliorPG1: "", migliorPG2: "", team: []});
+                            for(key in topics_results){
+                                var currArray = topics_results[key];
+                                campList = Object.keys(e.myHeroesList);
+                                for(var id in currArray){
+                                  for(var i = 0; i < currArray[id].length; i++){
+                                    if(campList.includes(currArray[id][i]._id)){
+                                      currArray[id][i].roster = true;
+                                    } else {
+                                      currArray[id][i].roster = false;
+                                    };
+                                  };
+                                };
+                            };
+                            for (var key in topics_results) {
+                                var currTopicCombo = topics_results[key];
+                                for (var i = 0; i < currTopicCombo[key.split("_")[0]].length; i++) {
+                                    if (!currTopicCombo[key.split("_")[0]][i].roster) {
+                                        continue;
+                                    }; //!campList.includes(c2)
+                                    var c1p = currTopicCombo[key.split("_")[0]][i].punteggio;
+                                    var c1 = currTopicCombo[key.split("_")[0]][i]._id;
+                                    for (var w = 0; w < currTopicCombo[key.split("_")[1]].length; w++) {
+                                        var c2p = currTopicCombo[key.split("_")[1]][w].punteggio;
+                                        var c1data = currTopicCombo[key.split("_")[1]][w];
+                                        var c2 = currTopicCombo[key.split("_")[1]][w]._id;
+                                        if (!currTopicCombo[key.split("_")[1]][w].roster) {// || (e.locked.length === 3 && !e.locked.includes(c1) && !e.locked.includes(c2)) || (e.noDebuffs===true && currTopicCombo[key.split("_")[1]][w].hasDebuffs===true) || (e.noS1debuffs===true && currTopicCombo[key.split("_")[1]][w].hasS1Debuffs === true)) {
+                                            continue;
+                                        };
+                                        
+                                        if (c1 === c2) {
+                                            for (var i1 = 0; i1 < currTopicCombo.eroi.length; i1++) {
+                                                c2 = currTopicCombo.eroi[i1]._id;
+                                                if (currTopicCombo.eroi[i1].roster && c2 != c1) {
+                                                    for (var i2 = i1+1; i2 < currTopicCombo.eroi.length; i2++) {
+                                                        var c3 = currTopicCombo.eroi[i2]._id;
+                                                        if (currTopicCombo.eroi[i2].roster && c3 != c1) {
+                                                            for (var i3 = i2+1; i3 < currTopicCombo.eroi.length; i3++) {
+                                                                var c4 = currTopicCombo.eroi[i3]._id;
+                                                                if (currTopicCombo.eroi[i3].roster && c4 != c1) {
+                                                                    var punteggio = 0 + currTopicCombo.eroi[i1].punteggio + currTopicCombo.eroi[i2].punteggio + currTopicCombo.eroi[i3].punteggio;
+                                                                    if (e.risultati[e.risultati.length-1].morale > punteggio || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > punteggio) ) {
+                                                                        break;
+                                                                    };
+                                                                    for (var y = 0; y < e.risultati.length; y++) {
+                                                                        if (punteggio > e.risultati[y].morale) {
+                                                                            var team = [c1,c2,c3,c4];
+                                                                            if (!(everyLocked(team, e.locked))) {
+                                                                                break; // break da risultati
+                                                                            };
+                                                                            var inTop = giaInTop(team, e.risultati);
+                                                                            if (inTop === -1) {
+                                                                                e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
+                                                                                e.risultati.splice(e.preferenzeRisultati.n, 1);
+                                                                            } else if (inTop >= y) {
+                                                                                e.risultati.splice(inTop, 1);
+                                                                                e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
+                                                                            };
+                                                                            break;
+                                                                        };
+                                                                    };
+                                                                }; // if c3
+                                                            }; // for var i3
+                                                        }; // if c3
+                                                    }; // for var i2
+                                                }; // if c2
+                                            }; //for var i1
                                         } else {
-                                            e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
-                                            if (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale) ) {
-                                                if ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) ) {
-                                                    e.risultati.unshift(risultatoDiQuestoTeam);
-                                                    if (e.preferenzeRisultati.numeroMassimo === true) e.risultati.splice(e.preferenzeRisultati.n);
+                                            for (var i1 = 0; i1 < currTopicCombo.eroi.length; i1++) {
+                                                var c3 = currTopicCombo.eroi[i1]._id;
+                                                if (currTopicCombo.eroi[i1].roster && c3 != c1 && c3 != c2) {
+                                                    for (var i2 = i1+1; i2 < currTopicCombo.eroi.length; i2++) {
+                                                        var canBeBeaten = true;
+                                                        var c4 = currTopicCombo.eroi[i2]._id;
+                                                        if (currTopicCombo.eroi[i2].roster && c4 != c1 && c4 != c2) {
+                                                            var punteggio = c1p + c2p + currTopicCombo.eroi[i1].punteggio + currTopicCombo.eroi[i2].punteggio;
+                                                            if (e.risultati[e.risultati.length-1].morale > punteggio || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > punteggio) ) {
+                                                                break;
+                                                            };
+                                                            for (var y = 0; y < e.risultati.length; y++) {
+                                                                if (punteggio > e.risultati[y].morale) {
+                                                                    var team = [c1,c2,c3,c4];
+                                                                    if (!(everyLocked(team, e.locked))) {
+                                                                        break; // break da risultati
+                                                                    };
+                                                                    var inTop = giaInTop(team, e.risultati);
+                                                                    if (inTop === -1) {
+                                                                        e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
+                                                                        e.risultati.splice(e.preferenzeRisultati.n, 1);
+                                                                    } else if (inTop >= y) {
+                                                                        e.risultati.splice(inTop, 1);
+                                                                        e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
+                                                                    };
+                                                                    break;
+                                                                };
+                                                            };
+                                                        }; // if c3
+                                                    }; // for var i3
+                                                }; // if c3
+                                            }; // for var i2
+                                        }; // if c1 === c2
+                                    }; // var e
+                                };// var i
+                              };
+                              for (var i = 0; i < e.risultati.length; i++) {
+                                if (e.risultati[i].team.length<3) { // remove placeholders
+                                  e.risultati.splice(i, 1);
+                                  i--;
+                                } else { // Sort locked heroes in the team
+                                  e.risultati[i].team.sort(function(a,b){
+                                    if(e.locked.includes(a)){
+                                      return 1;
+                                    };
+                                    return -1;
+                                  })
+                                };
+                            };
+                        } else {
+                            Combinatorics.bigCombination(campList,4-e.locked.length).forEach(teamComb => {
+                                        if (teamComb.length>4 || e.locked.length == 4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
+                                        var team = [].concat(teamComb, e.locked);
+                                        let elementoFiltro = teamComb;
+                                        let elementoRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat();
+                                        let buffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat();
+                                        let debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat();
+                                        let S1debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].skills[0].debuff }).flat();
+                                        let classeRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat();
+                                        let AoE_inTeam = AoEHeroes.some(i => elementoFiltro.includes(i));
+                                        if (e.locked.every(i => team.includes(i)) &&
+                                            e.classe.every(i => classeRisultati.includes(i)) && 
+                                            e.elemento.every(i => elementoRisultati.includes(i)) &&
+                                            e.debuffs.every(i => debuffsRisultati.includes(i)) &&
+                                            e.buffs.every(i => buffsRisultati.includes(i)) &&
+                                            (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
+                                            (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)) &&
+                                            (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  )
+                                        ){
+                                            let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
+                                            if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
+                                                e.risultati.push(risultatoDiQuestoTeam);
+                                                e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                                            } else {
+                                                e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
+                                                if (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale) ) {
+                                                    if ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) ) {
+                                                        e.risultati.unshift(risultatoDiQuestoTeam);
+                                                        if (e.preferenzeRisultati.numeroMassimo === true) e.risultati.splice(e.preferenzeRisultati.n);
+                                                    };
                                                 };
                                             };
                                         };
-                                    };
-                        });
+                            });
+                        };
                     };
                 } else if (isCartesian == true) {
                     function printCombos(array) {

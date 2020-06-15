@@ -250,11 +250,11 @@ span.heroImgList {
   
   
 .search_hero_area {
-  position:relative;
-  display:inline-block;
+  position: relative;
+  display: inline-block;
   text-align: center;
-  padding-right: 5%;
-  padding-bottom: 18px;
+  margin-right: 30px; /* 5%*/
+  margin-bottom: 18px;
 
 }
 .search_hero_filter {
@@ -303,8 +303,17 @@ span.heroImgList {
 	border-radius: 15px;
 }
 
-  
-  
+.search_input {
+  background-color: #4CAF50;
+  height: 40px;
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
   
   
 .icon-bar {
@@ -333,7 +342,6 @@ span.heroImgList {
 .active-icon-bar {
   background-color: #4CAF50;
 }
-  
   
   
   
@@ -780,6 +788,11 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  15/06/2020: Faster calculation formula for large rosters!<br>
+                  Doesn't support advanced settings, if advanced settings are active the old formula will be used to calculate the results".<br>
+                  New "{{strings.add_displayed_heroes}}" and "{{strings.remove_displayed_heroes}}" functions to quickly add and remove heroes while testing teams.
+                </li>
                 <li style="color:rgb(255, 60, 0)">
                   添加常用队伍统计!<br>
                   在下方工具栏点击齿轮图标 -> "{{strings.most_saved_teams}}".
@@ -847,12 +860,12 @@ span.heroImgList {
               <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
             </div>
             <div id="credits_content" style="display: none;">
-              <div style="width: 100vw; position: absolute; bottom: 10%; text-align: center;">
-              <br>英文地狱迷宫地图: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
-		      <br>普通迷宫地图&中文迷宫地图: TriATK
-              <br>中文/法文翻译: TriATK
-          <br>联系原作者(英语或意大利语): <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
-	      <br>Discord: gio#0898
+              <div style="width: 98vw; position: absolute; bottom: 10%; text-align: center;">
+                <br>英文地狱迷宫地图: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
+                <br>普通迷宫地图&中文迷宫地图: TriATK
+                <br>中文/法文翻译: TriATK
+                <br>联系原作者(英语或意大利语): <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
+                <br>Discord: gio#0898
                 </div>
               </div>
             </template>
@@ -872,6 +885,11 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  15/06/2020: Faster calculation formula for large rosters!<br>
+                  Doesn't support advanced settings, if advanced settings are active the old formula will be used to calculate the results".<br>
+                  New "{{strings.add_displayed_heroes}}" and "{{strings.remove_displayed_heroes}}" functions to quickly add and remove heroes while testing teams.
+                </li>
                 <li style="color:rgb(255, 60, 0)">
                   添加常用隊伍統計!<br>
                   在下方工具欄點擊齒輪圖標 -> "{{strings.most_saved_teams}}".
@@ -939,12 +957,12 @@ span.heroImgList {
               <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
             </div>
             <div id="credits_content" style="display: none;">
-              <div style="width: 100vw; position: absolute; bottom: 10%; text-align: center;">
-              <br>英文地獄迷宮地圖: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
-		      <br>普通迷宮地圖&中文迷宮地圖: TriATK
-              <br>中文/法文翻譯: TriATK
-          <br>聯系原作者(英語或意大利語): <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
-	      <br>Discord: gio#0898
+              <div style="width: 98vw; position: absolute; bottom: 10%; text-align: center;">
+                <br>英文地獄迷宮地圖: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
+                <br>普通迷宮地圖&中文迷宮地圖: TriATK
+                <br>中文/法文翻譯: TriATK
+                <br>聯系原作者(英語或意大利語): <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
+                <br>Discord: gio#0898
                 </div>
               </div>
             </template>
@@ -964,11 +982,17 @@ span.heroImgList {
               </div>
               <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
                 <ul>
+                  <li style="color:rgb(0, 148, 32)">
+                    15/06/2020: Faster calculation formula for large rosters!<br>
+                    Doesn't support advanced settings, if advanced settings are active the old formula will be used to calculate the results".<br>
+                    Can be improved with more checks. Maybe...<br>
+                    New "{{strings.add_displayed_heroes}}" and "{{strings.remove_displayed_heroes}}" functions to quickly add and remove heroes while testing teams.
+                  </li>
                   <li style="color:rgb(255, 60, 0)">
                     Add Most saved teams statistics!<br>
                     Select the cog icon in the toolbar -> "{{strings.most_saved_teams}}".
                   </li>
-                  <li style="color:rgb(0, 255, 136)">
+                  <li style="color:rgb(0, 148, 32)">
                     Now you can select the number of results or minimum morale to be displayed.<br>
                     Instructions: Select "Advanced settings" => click on the cog icon on the top left of the page => check "{{strings.numero_massimo_risultati}}" or/and "{{strings.morale_minimo_risultati}}" then type in the desired number in the corresponding input field.<br>
                     Please don't set a high number in the "{{strings.numero_massimo_risultati}}" input field or too low in "{{strings.morale_minimo_risultati}}" as your browser may slow down while displaying to many results.
@@ -990,13 +1014,13 @@ span.heroImgList {
                     Default language is now autodetected during first boot.<br>
                     You can change language in the settings.
                   </li>
-                  <li style="color:rgb(0, 255, 136)">
+                  <li style="color:rgb(0, 148, 32)">
                     Now you can select German, Portoguese, French and Spanish as language.<br>
                     Only French has gamedata and menus translated. Thanks again to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the translation.<br>
                     DE, ES and PT have only gamedata translated (Character name, Camping topics, buffs and debuffs) if you want to help translate the menus contact me.<br>
                     By default ENG is selected to change language go to Settings.
                   </li>
-                  <li style="color:rgb(0, 255, 136)">
+                  <li style="color:rgb(0, 148, 32)">
                     Added Japanese, Chinese (S) and Korean languages:<br>
                     Japanese and Korean are missing menu translation but game data is translated, Chinese (S) has full translation menus + game data.<br>
                     Thanks to <a href="https://www.reddit.com/user/TriATK/">TriATK</a> for the Chinese translation.<br>
@@ -1007,7 +1031,7 @@ span.heroImgList {
                     Enable to recive a notification when the page is done calculating results.<br>
                     This function is useful if you are on PC and have a large roster, this page will only sand the notification if the page is in background and will not send you any other kind of notification!
                   </li>
-                  <li style="color:rgb(0, 255, 136)">
+                  <li style="color:rgb(0, 148, 32)">
                     Added Multi-lock:<br>
                     Add your heroes to one of the 4 slots (each slot is a space in your team), if you add 2 or more heroes into the same slot only one of them will be in each team!
                   </li>
@@ -1035,9 +1059,9 @@ span.heroImgList {
                 <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
               </div>
               <div id="credits_content" style="display: none;">
-                <div style="width: 100vw; position: absolute; bottom: 10%; text-align: center;">
-      <br>ENG Hell raid map: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
-      <br>Normal and Chinese Hell raid map: TriATK
+                <div style="width: 98vw; position: absolute; bottom: 10%; text-align: center;">
+                  <br>ENG Hell raid map: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
+                  <br>Normal and Chinese Hell raid map: TriATK
                   <br>Chinese/French translations: TriATK
                   <br>Contact me: <a href="https://www.reddit.com/user/UsernameSniped/">u/UsernameSniped</a>
                   <br>Discord: gio#0898
@@ -1050,15 +1074,10 @@ span.heroImgList {
 
     <div id="add_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('add_window', 'add_heroes_help')"></i></span>
-	    <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
-          <div id="pulsanti_display_add_window" style="display:inline">
-          <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
-            <div><i class="fa fa-th-large"></i></div>
-          </button><!--
-          --><button class="search_hero_filter" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="list">
-            <div><i class="fa fa-th-list"></i></div>
-          </button>
-         </div>
+        <div style="display: inline-block;">
+          <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInTuttiGliEroi" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
+          <button class="search_input"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
 	    </h2>
        <!-- Pulsanti filtro eroi -->
       <div style="display:inline-block;width:100%;height:100%;">
@@ -1128,6 +1147,15 @@ span.heroImgList {
             <div style="max-height:20px;"><i class="fa fa-eye-slash"></i></div>
           </button>
         </div>
+        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_filter" v-on:click="if (displayList.length > 0) alertUserAction('addDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.add_displayed_heroes}}</button>
+        <div id="pulsanti_display_add_window" style="display:inline">
+          <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
+            <div><i class="fa fa-th-large"></i></div>
+          </button><!--
+          --><button class="search_hero_filter" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="list">
+            <div><i class="fa fa-th-list"></i></div>
+          </button>
+         </div>
       </div>
       <!-- fine pulsanti filtro eroi -->
 
@@ -1169,14 +1197,9 @@ span.heroImgList {
     </div>
     <div id="manage_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.i_tuoi_eroi}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('manage_window', 'manage_heroes_help')"></i> <font style="position:relative;top:0;color:red;font-size:12px;">({{rosterLength}})</font></span>
-          <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInMyHeroes" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
-          <div id = "pulsanti_display_manage_window" style="display:inline">
-            <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="grid">
-              <div><i class="fa fa-th-large"></i></div>
-            </button><!--
-            --><button class="search_hero_filter" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="list">
-              <div><i class="fa fa-th-list"></i></div>
-            </button>
+          <div style="display: inline-block;">
+            <input style="padding-top: 5px;padding-bottom: 5px;width:250px;height:40px;font-size:20px;vertical-align: top;" type="text" id="inputInMyHeroes" class="search_hero_filter" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
+            <button class="search_input"><i class="fa fa-search" aria-hidden="true"></i></button>
           </div>
 	    </h2>
        <!-- Pulsanti filtro eroi -->
@@ -1254,6 +1277,15 @@ span.heroImgList {
             <div class="active" onclick="document.getElementById('myHeroes_sort_by').value='name'; app.filtroTuttiGliEroi(this, 'MyHeroes'); this.parentElement.style.display='none'">{{strings.name}}</div>
             <div class="active" onclick="document.getElementById('myHeroes_sort_by').value='id'; app.filtroTuttiGliEroi(this, 'MyHeroes'); this.parentElement.style.display='none'">{{strings.ingame_id}}</div>
           </div>
+        </div>
+        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_filter" v-on:click="if (displayMyHeroes.length > 0) alertUserAction('removeDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.remove_displayed_heroes}}</button>
+        <div id = "pulsanti_display_manage_window" style="display:inline"> <!-- Grid/List buttons-->
+          <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="grid">
+            <div><i class="fa fa-th-large"></i></div>
+          </button><!--
+          --><button class="search_hero_filter" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="list">
+            <div><i class="fa fa-th-list"></i></div>
+          </button>
         </div>
       </div>
       <!-- fine pulsanti filtro eroi -->
@@ -1560,7 +1592,7 @@ span.heroImgList {
         <div id="team_tab_stats" class="tab_style activetab" style="margin-left: 0; margin-right: -2px" onclick="$('#char_tab_stats').removeClass('activetab'); $(this).addClass('activetab'); document.getElementById('teams_stats_tbody').style.display = 'block'; document.getElementById('char_stats_tbody').style.display = 'none'">
           {{strings.teams}}
         </div>
-        <div id="char_tab_stats" class="tab_style" style="margin-left: -2.6px;" onclick="$('#team_tab_stats').removeClass('activetab'); $(this).addClass('activetab');  document.getElementById('teams_stats_tbody').style.display = 'none'; document.getElementById('char_stats_tbody').style.display = 'block'">
+        <div id="char_tab_stats" class="tab_style" style="margin-left: -2px; margin-right: -1px;" onclick="$('#team_tab_stats').removeClass('activetab'); $(this).addClass('activetab');  document.getElementById('teams_stats_tbody').style.display = 'none'; document.getElementById('char_stats_tbody').style.display = 'block'">
           {{strings.heroes}}
         </div>
       </div>
@@ -1621,18 +1653,7 @@ function toggleCheck() {
         if (currentTheme === 'dark') {
             var checkBoxes = $("input[name=darkModeCheck]");
             checkBoxes.attr('checked', true);
-        }
-    }
-    
-    function toggleWhatsNew() {
-      var toggle = document.getElementById("show_whats_new");
-      if (toggle.style.display == "block") {
-        toggle.style.display = "none";
-        $("#WhatsNewText").text("► What's New");
-      } else {
-        toggle.style.display = "block";
-        $("#WhatsNewText").text("▼ What's New:");
-      };
+        };
     };
     
     function setWindow(current) {
@@ -2044,10 +2065,19 @@ function backendCalculation(camp) {
               //this.myHeroesList.push(hero);
               this.myHeroesList[hero] = this.HeroDB[hero]; // aggiunge l'object del nuovo eroe
               this.rosterLength +=1; // usa per indicare a vue che qualcosa è cambiato
-              this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
-              this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}, "MyHeroes"); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+              this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // <=="Add Heroes" screen / aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+              this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}, "MyHeroes"); // <== "Manage Heroes" screen / aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
               this.updateUserData();
             }
+          },
+          addShownHeroes: function () {
+            for (var i = 0; i < this.displayList.length; i++) {
+              this.myHeroesList[this.displayList[i]] = this.HeroDB[this.displayList[i]];
+            };
+            this.rosterLength = Object.keys(this.myHeroesList).length; // Update roster length
+            this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+            this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}, "MyHeroes"); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+            this.updateUserData();
           },
           removeHero: function (hero) {
             //this.myHeroesList.splice(this.myHeroesList.indexOf(hero), 1);
@@ -2058,6 +2088,19 @@ function backendCalculation(camp) {
             };
             this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
             this.displayMyHeroes.splice(this.displayMyHeroes.indexOf(hero), 1); // rimuovi dalla display list dei miei eroi se presente (sempre presente)
+            this.updateUserData();
+          },
+          removeShownHeroes: function () {
+            for (var i = 0; i < this.displayMyHeroes.length; i++) {
+              delete this.myHeroesList[this.displayMyHeroes[i]];
+              if (this.locked.includes(this.displayMyHeroes[i])) { // lock
+                this.locked.splice(this.locked.indexOf(this.displayMyHeroes[i]), 1)
+              };
+            };
+            this.rosterLength = Object.keys(this.myHeroesList).length; // Update roster length
+            this.displayMyHeroes = [];
+            this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
+            //this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}, "MyHeroes"); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
             this.updateUserData();
           },
           isInTeam: function(hero) {
@@ -2081,6 +2124,24 @@ function backendCalculation(camp) {
           },
           writeSettings: function() {
             localStorage.setItem('Settings', JSON.stringify({notification: riceviNotifiche, lingua: this.lingua}) );
+          },
+          alertUserAction: function (f) {
+            let action, message;
+            if (f === "addDisplayed") {
+              message = this.strings.confirm_add_heroes.replace(/<N>/g, this.displayList.length);
+            } else if (f === "removeDisplayed") {
+              message = this.strings.confirm_remove_heroes.replace(/<N>/g, this.displayMyHeroes.length);
+            };
+            var answer = window.confirm(message);
+            if (answer) { // answer = true
+              if (f === "addDisplayed") {
+                this.addShownHeroes();
+              } else if (f === "removeDisplayed") {
+                this.removeShownHeroes();
+              };
+            }
+            else { // cancel
+            }
           },
           menuLingua: function () {
             $( "#settings_window" ).append(`
@@ -2242,11 +2303,9 @@ function backendCalculation(camp) {
                   save.juleeve = juleeve;
                   save.vera = vera;
                   save.arakahan = arakahan;
-                  console.log(save);
 
                   this.savedCamps[campName] = this.risultati[n];
                   var sendData = {morale: this.risultati[n].morale, team: this.risultati[n].team,  normal: normal, hell: hell, queen: queen, karkanis: karkanis, juleeve: juleeve, vera: vera, arakahan: arakahan};
-                  console.log(sendData);
 
                   $('#saveCamp').remove();
                   $('body').removeClass('modal-open');
@@ -2634,18 +2693,18 @@ function backendCalculation(camp) {
             //if (checkImmagini.checked) {
             //  risultati.noImmagini = true;
             //};
-            if (!isNaN(parseInt(valoreRisultatiMassimo.value))) {
+            if (!isNaN(parseInt(valoreRisultatiMassimo.value)) && parseInt(valoreRisultatiMassimo.value) > 0 ) {
               risultati.n = parseInt(valoreRisultatiMassimo.value)
             } else {
               risultati.n = 200
             };
-            if (!isNaN(parseInt(valoreMoraleMinimo.value))) {
+            if (!isNaN(parseInt(valoreMoraleMinimo.value)) && parseInt(valoreMoraleMinimo.value) <= 52 ) {
               risultati.morale = parseInt(valoreMoraleMinimo.value)
             } else {
               risultati.morale = 0
             };
             if (risultati.numeroMassimo === false && risultati.minMorale === false) {risultati.numeroMassimo = true; risultati.n = 200;}
-
+            if (risultati.numeroMassimo === false && risultati.minMorale === true) {risultati.numeroMassimo = true; risultati.n = 200;} // force a limit of 200 if only min morale is checked to avoid large memory usage
             this.customizedResuts = risultati;
           },
           aggiornaImposatazioniAvanzate: function () {
@@ -2719,9 +2778,9 @@ function backendCalculation(camp) {
                       lingua = "kr";
                       break;
                     case 'zh':
-		      var langCode = navigator.language || navigator.userLanguage;
-		      if (langCode === "zh-TW" || langCode === "zh-HK" || langCode === "zh-MO") lingua = "zht"
-		      else lingua = "cn";
+                      var langCode = navigator.language || navigator.userLanguage;
+                      if (langCode === "zh-TW" || langCode === "zh-HK" || langCode === "zh-MO") lingua = "zht"
+                      else lingua = "cn";
                       break;
                     default:
                       lingua = "en";
@@ -2738,18 +2797,18 @@ function backendCalculation(camp) {
                 var maphell = document.getElementById("map_hell");
                 mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
                 maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
-                } else if (this.lingua == "cn") {
+              } else if (this.lingua == "cn") {
                 var mapnormal = document.getElementById("map_normal");
                 var maphell = document.getElementById("map_hell");
                 mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
                 maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
-               } else {
+              } else {
                 var mapnormal = document.getElementById("map_normal");
                 var maphell = document.getElementById("map_hell");
                 mapnormal.setAttribute("src", "./img/Raid-Normal_en.png");               
                 maphell.setAttribute("src", "./img/Raid-Hell_en.png");
-               }
-               
+              };
+
               if (this.lingua == "it") {
                 this.strings = {
                   welcome: "Benvenuto",
@@ -2763,6 +2822,10 @@ function backendCalculation(camp) {
                   modified: "Modifica",
                   name: "Nome",
                   ingame_id: "ID gioco",
+                  remove_displayed_heroes: "Rimuovi questi eroi",
+                  add_displayed_heroes: "Aggiungi questi eroi",
+                  confirm_remove_heroes: "Sei sicuro di voler rimuovere <N> eroi dalla tua lista?",
+                  confirm_add_heroes: "Sei sicuro di voler aggiungere <N> eroi dalla tua lista?",
                   aggiungi: "Aggiungi eroe",
                   i_tuoi_eroi: "I tuoi eroi",
                   cerca_eroe: "Cerca eroe..",
@@ -2852,6 +2915,10 @@ function backendCalculation(camp) {
                   modified: "按添加日期",
                   name: "按英雄名称",
                   ingame_id: "按英雄ID",
+                  remove_displayed_heroes: "Remove displayed heroes",
+                  add_displayed_heroes: "Add displayed heroes",
+                  confirm_remove_heroes: "Are you sure you want to remove <N> heroes from your roster?", // <N> is replaced by the number of heroes
+                  confirm_add_heroes: "Are you sure you want to add <N> heroes to your roster?", // <N> is replaced by the number of heroes
                   aggiungi: "添加英雄 ",
                   i_tuoi_eroi: "我的英雄",
                   cerca_eroe: "搜索..",
@@ -2942,6 +3009,10 @@ function backendCalculation(camp) {
                   modified: "按添加日期",
                   name: "按英雄名稱",
                   ingame_id: "按英雄ID",
+                  remove_displayed_heroes: "Remove displayed heroes",
+                  add_displayed_heroes: "Add displayed heroes",
+                  confirm_remove_heroes: "Are you sure you want to remove <N> heroes from your roster?", // <N> is replaced by the number of heroes
+                  confirm_add_heroes: "Are you sure you want to add <N> heroes to your roster?", // <N> is replaced by the number of heroes
                   aggiungi: "添加英雄 ",
                   i_tuoi_eroi: "我的英雄",
                   cerca_eroe: "搜索..",
@@ -3032,6 +3103,10 @@ function backendCalculation(camp) {
                   modified: "Date",
                   name: "Nom",
                   ingame_id: "ID",
+                  remove_displayed_heroes: "Remove displayed heroes",
+                  add_displayed_heroes: "Add displayed heroes",
+                  confirm_remove_heroes: "Are you sure you want to remove <N> heroes from your roster?", // <N> is replaced by the number of heroes
+                  confirm_add_heroes: "Are you sure you want to add <N> heroes to your roster?", // <N> is replaced by the number of heroes
                   aggiungi: "Ajouter un héro ",
                   i_tuoi_eroi: "Votre héros",
                   cerca_eroe: "Rechercher..",
@@ -3112,6 +3187,10 @@ function backendCalculation(camp) {
                   modified: "Date",
                   name: "Name",
                   ingame_id: "In-game ID",
+                  remove_displayed_heroes: "Remove displayed heroes",
+                  add_displayed_heroes: "Add displayed heroes",
+                  confirm_remove_heroes: "Are you sure you want to remove <N> heroes from your roster?", // <N> is replaced by the number of heroes
+                  confirm_add_heroes: "Are you sure you want to add <N> heroes to your roster?", // <N> is replaced by the number of heroes
                   aggiungi: "Add hero ",
                   i_tuoi_eroi: "Your heroes",
                   cerca_eroe: "Search..",
@@ -4129,18 +4208,8 @@ function backendCalculation(camp) {
       },
       sendAllTeams: function() {
         var uploaded = localStorage.getItem('UploadedTeams') ? localStorage.getItem('Heroes') : false;
-        if (!uploaded) {
-          var campObj = JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}");
-          var camp = Object.values(campObj);
-          if (camp.length > 0 ) {
-            console.log("sending old camping teams data");
-            var data = [];
-            for (var i = 0; i < camp.length; i++) {
-              data.push(camp[i]);
-            };
-            sendTeamUsageStatistics({function: "add", data: data}); // send teams created before team stats were a thing
-          };
-          localStorage.setItem("UploadedTeams","true"); // se to true so this function is performed only once
+        if (uploaded) {
+          localStorage.removeItem("UploadedTeams"); // delete empty item
         };
       },
       getUserHeroesBoot: function () { // read user's local storage team
@@ -4200,22 +4269,22 @@ function backendCalculation(camp) {
         this.inizializzazione = false;
       },
       inizializzaione: function () {
-	self = this;
-        //Get characters names translated
-	try {
-		var getDb = new XMLHttpRequest();
-		getDb.open( "GET", "https://api.epicsevendb.com/hero?lang=" + this.lingua, false ); // false for synchronous request
-		getDb.send( null );
-		JSON.parse(getDb.response).results.forEach(function(item) {
-		  self.translatedName[item._id] = item.name;
-		});
-	} catch (err) {
-		console.log(err);
-		for (var _id in self.HeroDB) {
-			self.translatedName[_id] = self.HeroDB[_id].name;
-		};
-		snackbarMessage("Cannot connect to EpicSevenDB API. Using english gamedata.");
-	}
+        self = this;
+              //Get characters names translated
+        try {
+          var getDb = new XMLHttpRequest();
+          getDb.open( "GET", "https://api.epicsevendb.com/hero?lang=" + this.lingua, false ); // false for synchronous request
+          getDb.send( null );
+          JSON.parse(getDb.response).results.forEach(function(item) {
+            self.translatedName[item._id] = item.name;
+          });
+        } catch (err) {
+          console.log(err);
+          for (var _id in self.HeroDB) {
+            self.translatedName[_id] = self.HeroDB[_id].name;
+          };
+          snackbarMessage("Cannot connect to EpicSevenDB API. Using english gamedata.");
+        }
       }
     },
     computed: {
@@ -4275,16 +4344,12 @@ function backendCalculation(camp) {
   var camperino = new Worker('./worker.js');
   camperino.onmessage = function(e) {
      app.isLoadingResults = false; // disattiva angelica
-     if (riceviNotifiche == true) {
-      if (document.visibilityState != 'visible') {
-        var notification = new Notification(app.strings.notification_title, { body: app.strings.notification_ready, icon: "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" }); // manda notifica di completamento
-      };
-    };
+     mandaNotificaCompletamento();
     if (e.data.code == 200 ) app.risultati = e.data.risultati
     else if (e.data.code == 400 ) {
       snackbarMessage(app.strings["results_error"] + `: ` + app.strings[e.data.risultati[0]]);
     };
-  }  
+  };
 </script>
 </body>
 </html>
