@@ -802,9 +802,9 @@ span.heroImgList {
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
                 <li style="color:rgb(0, 148, 32)">
-                  15/06/2020: Faster calculation formula for large rosters!<br>
-                  Doesn't support advanced settings, if advanced settings are active the old formula will be used to calculate the results".<br>
-                  New "{{strings.add_displayed_heroes}}" and "{{strings.remove_displayed_heroes}}" functions to quickly add and remove heroes while testing teams.
+                  15/06/2020: 优化算法，提高了计算心情的速度!<br>
+                  高速计算不支持高级设置, 如果启用了高级设置，将使用原有算法计算".<br>
+                  新选项 "{{strings.add_displayed_heroes}}" 和 "{{strings.remove_displayed_heroes}}" 用于批量添加和删除英雄.
                 </li>
                 <li style="color:rgb(255, 60, 0)">
                   添加常用队伍统计!<br>
@@ -899,9 +899,9 @@ span.heroImgList {
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
                 <li style="color:rgb(0, 148, 32)">
-                  15/06/2020: Faster calculation formula for large rosters!<br>
-                  Doesn't support advanced settings, if advanced settings are active the old formula will be used to calculate the results".<br>
-                  New "{{strings.add_displayed_heroes}}" and "{{strings.remove_displayed_heroes}}" functions to quickly add and remove heroes while testing teams.
+                  15/06/2020: 優化算法，提高了計算心情的速度!<br>
+                  高速計算不支持高級設置, 如果啟用了高級設置，將使用原有算法計算".<br>
+                  新選項 "{{strings.add_displayed_heroes}}" 和 "{{strings.remove_displayed_heroes}}" 用於批量添加和刪除英雄.                 
                 </li>
                 <li style="color:rgb(255, 60, 0)">
                   添加常用隊伍統計!<br>
@@ -2821,6 +2821,25 @@ function backendCalculation(camp) {
                 mapnormal.setAttribute("src", "./img/Raid-Normal_en.png");               
                 maphell.setAttribute("src", "./img/Raid-Hell_en.png");
               };
+              
+              //change titile and meta info
+              if (this.lingua == "zht") {
+                document.title = "第七史詩 露營模擬器";
+                document.getElementsByTagName('meta')["keywords"].content = "第七史詩露營， 第七史詩露營模擬器，e7露營模擬器，第七史詩迷宮心情計算，第七史詩迷宮，e7迷宮心情計算";
+                document.getElementsByTagName('meta')["description"].content = "第七史詩迷宮心情計算器，添加你的英雄算出符合你需求的最佳隊伍組合！";
+              } else if (this.lingua == "cn") {
+                document.title = "第七史詩 露营模拟器";
+                document.getElementsByTagName('meta')["keywords"].content = "第七史诗露营， 第七史诗露营模拟器，e7露营模拟器，第七史诗迷宫心情计算，第七史诗迷宫，e7迷宫心情计算";
+                document.getElementsByTagName('meta')["description"].content = "第七史诗迷宫心情计算器，添加你的英雄算出符合你需求的最佳队伍组合！";
+              } else if (this.lingua == "fr") {
+                document.title = "Simulateur de Camp E7";
+                document.getElementsByTagName('meta')["keywords"].content = "camping epic seven, simulateur de camping epic 7, simulateur de camp e7, calculateur de moral epic 7, raid e7, raid epic seven";
+                document.getElementsByTagName('meta')["description"].content = "Calculateur de moral E7. Ajoutez votre héros pour trouver la meilleure combinaison d'équipe avec un moral élevé!";
+              } else {
+                document.title = "E7 Camp Simulator";
+                document.getElementsByTagName('meta')["keywords"].content = "epic seven camping, epic 7 camping simulator, e7 camp simulator, epic 7 morale calculator, e7 raid, epic seven raid";
+                document.getElementsByTagName('meta')["description"].content = "E7 Morale Calculator. Add your roster to find the best team combination with high morale!";
+              };
 
               if (this.lingua == "it") {
                 this.strings = {
@@ -2928,10 +2947,10 @@ function backendCalculation(camp) {
                   modified: "按添加日期",
                   name: "按英雄名称",
                   ingame_id: "按英雄ID",
-                  remove_displayed_heroes: "Remove displayed heroes",
-                  add_displayed_heroes: "Add displayed heroes",
-                  confirm_remove_heroes: "Are you sure you want to remove <N> heroes from your roster?", // <N> is replaced by the number of heroes
-                  confirm_add_heroes: "Are you sure you want to add <N> heroes to your roster?", // <N> is replaced by the number of heroes
+                  remove_displayed_heroes: "移除下方显示的英雄",
+                  add_displayed_heroes: "添加下方显示的英雄",
+                  confirm_remove_heroes: "你确定要从你的英雄列表里删除以下 <N> 个英雄?", // <N> is replaced by the number of heroes
+                  confirm_add_heroes: "你确定要往你的英雄列表里添加以下 <N> 个英雄?", // <N> is replaced by the number of heroes
                   aggiungi: "添加英雄 ",
                   i_tuoi_eroi: "我的英雄",
                   cerca_eroe: "搜索..",
@@ -3022,10 +3041,10 @@ function backendCalculation(camp) {
                   modified: "按添加日期",
                   name: "按英雄名稱",
                   ingame_id: "按英雄ID",
-                  remove_displayed_heroes: "Remove displayed heroes",
-                  add_displayed_heroes: "Add displayed heroes",
-                  confirm_remove_heroes: "Are you sure you want to remove <N> heroes from your roster?", // <N> is replaced by the number of heroes
-                  confirm_add_heroes: "Are you sure you want to add <N> heroes to your roster?", // <N> is replaced by the number of heroes
+                  remove_displayed_heroes: "移除下方顯示的英雄",
+                  add_displayed_heroes: "添加下方顯示的英雄",
+                  confirm_remove_heroes: "你確定要從你的英雄列表裏刪除以下 <N> 個英雄?", // <N> is replaced by the number of heroes
+                  confirm_add_heroes: "你確定要往你的英雄列表裏添加以下 <N> 個英雄?", // <N> is replaced by the number of heroes
                   aggiungi: "添加英雄 ",
                   i_tuoi_eroi: "我的英雄",
                   cerca_eroe: "搜索..",
@@ -3116,10 +3135,10 @@ function backendCalculation(camp) {
                   modified: "Date",
                   name: "Nom",
                   ingame_id: "ID",
-                  remove_displayed_heroes: "Remove displayed heroes",
-                  add_displayed_heroes: "Add displayed heroes",
-                  confirm_remove_heroes: "Are you sure you want to remove <N> heroes from your roster?", // <N> is replaced by the number of heroes
-                  confirm_add_heroes: "Are you sure you want to add <N> heroes to your roster?", // <N> is replaced by the number of heroes
+                  remove_displayed_heroes: "Supprimer les héros affichés",
+                  add_displayed_heroes: "Ajouter les héros affichés",
+                  confirm_remove_heroes: "Voulez-vous vraiment supprimer <N> héros de votre liste?", // <N> is replaced by the number of heroes
+                  confirm_add_heroes: "Voulez-vous vraiment ajouter <N> héros dans votre liste?", // <N> is replaced by the number of heroes
                   aggiungi: "Ajouter un héro ",
                   i_tuoi_eroi: "Votre héros",
                   cerca_eroe: "Rechercher..",
@@ -3767,7 +3786,7 @@ function backendCalculation(camp) {
                 return '梦';
                 break;
               case 'Advice':
-                return '烦恼谘询';
+                return '烦恼咨询';
                 break;
               case 'Complain':
                 return '耍赖';
