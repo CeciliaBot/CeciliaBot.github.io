@@ -62,7 +62,7 @@ input[type=text], input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   box-sizing: border-box;
 }
 
@@ -310,7 +310,7 @@ span.heroImgList {
   height: 40px;
   font-size: 20px;
   vertical-align: top;
-  border-radius: 10px 0 0 10px;
+  border-radius: 6px 0 0 6px;
   border-color: var(--search-border-color);
 }
 	
@@ -325,7 +325,7 @@ span.heroImgList {
   font-size: 17px;
   border: none;
   cursor: pointer;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 6px 6px 0;
 }
   
   
@@ -496,7 +496,8 @@ span.heroImgList {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
-  
+
+
 .extras_grid {
   display: grid;
   max-width: 640px;
@@ -802,6 +803,12 @@ span.heroImgList {
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
                 <li style="color:rgb(0, 148, 32)">
+                  <b>20/06/2020</b>: Removed teams with duplicate heroes (SC Hero + Normal hero) & other minor functions!<br>
+                  Removed teams that contain the same hero twice like Lorina and Commander Lorina. If you lock SC character and he's normal version you will get an error.<br>
+                  You can cancel from results calculation if it's taking too long and you don't want to wait.<br>
+                  Now you can quickly select your heroes in "Multi-lock".
+                </li>
+                <li style="color:rgb(0, 148, 32)">
                   15/06/2020: 优化算法，提高了计算心情的速度!<br>
                   高速计算不支持高级设置, 如果启用了高级设置，将使用原有算法计算".<br>
                   新选项 "{{strings.add_displayed_heroes}}" 和 "{{strings.remove_displayed_heroes}}" 用于批量添加和删除英雄.
@@ -898,6 +905,12 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  <b>20/06/2020</b>: Removed teams with duplicate heroes (SC Hero + Normal hero) & other minor functions!<br>
+                  Removed teams that contain the same hero twice like Lorina and Commander Lorina. If you lock SC character and he's normal version you will get an error.<br>
+                  You can cancel from results calculation if it's taking too long and you don't want to wait.<br>
+                  Now you can quickly select your heroes in "Multi-lock".
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   15/06/2020: 優化算法，提高了計算心情的速度!<br>
                   高速計算不支持高級設置, 如果啟用了高級設置，將使用原有算法計算".<br>
@@ -996,7 +1009,13 @@ span.heroImgList {
               <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
                 <ul>
                   <li style="color:rgb(0, 148, 32)">
-                    15/06/2020: Faster calculation formula for large rosters!<br>
+                    <b>20/06/2020</b>: Removed teams with duplicate heroes (SC Hero + Normal hero) & other minor functions!<br>
+                    Removed teams that contain the same hero twice like Lorina and Commander Lorina. If you lock SC character and he's normal version you will get an error.<br>
+                    You can cancel from results calculation if it's taking too long and you don't want to wait.<br>
+                    Now you can quickly select your heroes in "Multi-lock".
+                  </li>
+                  <li style="color:rgb(0, 148, 32)">
+                    <b>15/06/2020</b>: Faster calculation formula for large rosters!<br>
                     Doesn't support advanced settings, if advanced settings are active the old formula will be used to calculate the results".<br>
                     Can be improved with more checks. Maybe...<br>
                     New "{{strings.add_displayed_heroes}}" and "{{strings.remove_displayed_heroes}}" functions to quickly add and remove heroes while testing teams.
@@ -1161,7 +1180,7 @@ span.heroImgList {
           </button>
         </div>
         <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_filter" v-on:click="if (displayList.length > 0) alertUserAction('addDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.add_displayed_heroes}}</button>
-        <div id="pulsanti_display_add_window" style="display:inline">
+        <div id="pulsanti_display_add_window" style="display:inline-block">
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
           </button><!--
@@ -1292,7 +1311,7 @@ span.heroImgList {
           </div>
         </div>
         <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_filter" v-on:click="if (displayMyHeroes.length > 0) alertUserAction('removeDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.remove_displayed_heroes}}</button>
-        <div id = "pulsanti_display_manage_window" style="display:inline"> <!-- Grid/List buttons-->
+        <div id = "pulsanti_display_manage_window" style="display:inline-block"> <!-- Grid/List buttons-->
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
           </button><!--
@@ -1635,6 +1654,7 @@ span.heroImgList {
           {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
         </div>
       </div>
+      <button style="z-index: 2;margin-right: 30px; width: auto; font-size: 16px; top: auto;bottom: 90px;right: 0;position: absolute;" class="search_hero_filter" onclick="restartCamperino();">{{strings.abort_calculation}}</button>
     </div>
     <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 10; height: 100%; width: 100%; border-radius: 0;"> <!-- non è neccessario settare inizializzaione = true -->
       <div class="center_img" style="text-align:center;"> 
@@ -1648,7 +1668,7 @@ span.heroImgList {
   </div><!-- div id = app -->
 
 <script defer>
-function toggleCheck() {
+    function toggleCheck() {
         if (document.getElementById("darkModeCheck").checked === true) {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark'); // salva preferenza per future visite
@@ -1919,7 +1939,8 @@ if (document.addEventListener) {
 function mandaNotificaCompletamento(){
   if (riceviNotifiche == true) {
     if (document.visibilityState != 'visible') {
-      var notification = new Notification(app.strings.notification_title, { body: app.strings.notification_ready, icon: "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" }); // manda notifica di completamento
+      var icon = "./favicons/android-chrome-192x192.png" // "https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171"
+      var notification = new Notification(app.strings.notification_title, { body: app.strings.notification_ready, icon: icon }); // manda notifica di completamento
     };
   };
 };
@@ -2205,27 +2226,50 @@ function backendCalculation(camp) {
               !this.cartesian_lock[2].includes(tmpArray[i]) &&  !this.cartesian_lock[3].includes(tmpArray[i]) 
               ) { // don't show already cartesian locked heroes
                 eroiSelezionabili += `
-                <input type="checkbox" id="checkbox_cartesian_lock_` + i + `" name="` + tmpArray[i] +`" value="` + tmpArray[i] + `" style="display:none"><label for="checkbox_cartesian_lock_` + i + `" class="label"> <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[tmpArray[i]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[tmpArray[i]].id + `_s.png';" style="height:60px;width:60px;" /></label>`
+                <input type="checkbox" id="checkbox_cartesian_lock_` + i + `" name="character" value="` + tmpArray[i] + `" style="display:none"><label for="checkbox_cartesian_lock_` + i + `" class="label"> <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[tmpArray[i]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[tmpArray[i]].id + `_s.png';" style="height:60px;width:60px;" /></label>`
               };
             };
             $( "#advanced_window" ).append(`
               <div id="Cartesian_lock">
                 <div class="modal" style="display: block;height:100%; width: 100%; overflow: hidden;">
                   <form class="modal-content animate" id="Cartesian_lock" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:100%;height: 70%;">
-                    <div class="noScrollBar" style="height: 85%; overflow-x: scroll;">`
+                    <div class="noScrollBar" style="height: 80%; overflow-y: scroll;">`
                       +
                       eroiSelezionabili
                       +
                     `</div>
                     <div class="container">
-                      <button type="button" onclick="app.addCartesian_lock(` + n  +`)" class="button_login">` + this.strings.add_selection + `</button>
-                      <button type="button" onclick="$('#Cartesian_lock').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
+                      <div style="display: inline-block;float: right;"> 
+                        <div class="dropdown">
+                          <button type="button" onmouseover="document.getElementById('m_select_classes').style.removeProperty('display')" class="search_hero_filter" style="width: auto; font-size: 16px;height: 44px;margin-top: 8px;width: 138px;">`+this.strings.seleziona+`</button>
+                          <div id="m_select_classes" class="dropdown-content" style="top: -252px">
+                            <div type="button" onclick="app.selectAllClassesCartesian('knight'); this.parentElement.style.display='none'">`+this.strings.knight+`</div>
+                            <div type="button" onclick="app.selectAllClassesCartesian('warrior'); this.parentElement.style.display='none'">`+this.strings.warrior+`</div>
+                            <div type="button" onclick="app.selectAllClassesCartesian('assassin'); this.parentElement.style.display='none'">`+this.strings.thief+`</div>
+                            <div type="button" onclick="app.selectAllClassesCartesian('ranger'); this.parentElement.style.display='none'">`+this.strings.ranger+`</div>
+                            <div type="button" onclick="app.selectAllClassesCartesian('mage'); this.parentElement.style.display='none'">`+this.strings.mage+`</div>
+                            <div type="button" onclick="app.selectAllClassesCartesian('manauser'); this.parentElement.style.display='none'">`+this.strings["soul-weaver"]+`</div>
+                          </div>
+                        </div>
+                        <button type="button" onclick="var hero = document.getElementById('Cartesian_lock').getElementsByTagName('input'); for (var i = 0; i < hero.length; i++) { hero[i].checked = false; };" class="button_cancelbtn" style="float: right;">`+this.strings.deselect_all+`</button>
+                      </div>
+                      <div style="display: inline-block;">
+                        <button type="button" onclick="app.addCartesian_lock(` + n  +`)" class="button_login">` + this.strings.add_selection + `</button>
+                        <button type="button" onclick="$('#Cartesian_lock').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
+                      </div>
                     </div>
                   </form>
                 </div>
               </div>`
             );
             $("body").addClass("modal-open");
+          },
+          selectAllClassesCartesian: function (classe) {
+            var area = document.getElementById("Cartesian_lock");
+            var hero = area.getElementsByTagName("input");
+            for (var i = 0; i < hero.length; i++) {
+              if (this.HeroDB[hero[i].value].role === classe) hero[i].checked = true;
+            };
           },
           addCartesian_lock: function (n) {
             var area = document.getElementById("Cartesian_lock");
@@ -2414,8 +2458,10 @@ function backendCalculation(camp) {
               success: function (response) {
                 var toPrint = "";
                 var toPrintChar = "";
+                var usiTop400 = 0;
                 if (response.data.length>0) {
                   for (var i = 0; i < response.data.length; i++) {
+                    usiTop400 += response.data[i].usi;
                     toPrint += "<tr>" +  
                       `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
                       `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
@@ -2431,6 +2477,14 @@ function backendCalculation(camp) {
                       "<td style='width: 80vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.characters[i].usi/response.totale*100 + "%;'><span>" + Math.round((( response.characters[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                       "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.characters[i].usi +"</td></tr>";
                   };
+                  if (usiTop400 < response.totale) {
+                    toPrint += "<tr>" +
+                      "<td colspan='4' style='text-align: center;'>" + this.strings.others + "</td>" +
+                      "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + (response.totale-usiTop400)/response.totale*100 + "%;'><span>" + Math.round(( ( (response.totale-usiTop400)/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
+                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'></td>" +
+                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + (response.totale-usiTop400) + "</td></tr>";
+                  };
+
                 } else {
                   toPrint = "<td>No data</td>";
                   toPrintChar = "";
@@ -2888,6 +2942,8 @@ function backendCalculation(camp) {
                   multilock_slot: "Slot",
                   add_to_slot: "Aggiungi a questo slot",
                   add_selection: "Aggiungi selezionati",
+                  seleziona: "Seleziona",
+                  deselect_all : "Deseleziona tutto",
                   possibili_combinazioni: "Combinazioni:",
 
                   //Results window
@@ -2895,11 +2951,14 @@ function backendCalculation(camp) {
                   morale: "Morale",
                   team: "Team",
                   topics: "Topics",
+                  abort_calculation: "Annulla operazione",
+                  confirm_worker_termination: "Sei sicuro di voler annullare l'operazione?",
                   notification_title: "E7 Camp Simulator",
                   notification_ready: "I tuoi team sono pronti!",
                   results_error: "Errore",
                   team_size_exceeded: "Dimensione team superata!",
                   not_enough_heroes: "Nessun eroe rimanente da inserire nei rimanenti slot!",
+                  locked_sc_normal_err: "Bloccati SC e eroe normale",
 
                   ///Result saving window:
                   camp_name_field: "Nome camp",
@@ -2932,6 +2991,7 @@ function backendCalculation(camp) {
                   genera_url: "Genera URL",
                   url_usage_help: "Copia e incolla questo URL nel browser o dispositivo desiderato per generare una copia dei tuoi eroi attuali.",
                   copia: "Copia",
+                  others: "Altri",
                   language: "Lingua"
                 };
               } else if (this.lingua == "cn") {
@@ -2981,6 +3041,8 @@ function backendCalculation(camp) {
                   multilock_slot: "栏位",
                   add_to_slot: "添加到这个位置",
                   add_selection: "添加",
+                  seleziona: "Select",
+                  deselect_all : "Deselect all",
                   possibili_combinazioni: "可能的组合:",
 
                   //Results window
@@ -2988,11 +3050,14 @@ function backendCalculation(camp) {
                   morale: "心情",
                   team: "队伍",
                   topics: "对话",
+                  abort_calculation: "Abort operation",
+                  confirm_worker_termination: "Are you sure you want to abort this operation?",
                   notification_title: "E7 露营模拟器",
                   notification_ready: "结果计算完毕!",
                   results_error: "错误",
                   team_size_exceeded: "队伍人数超过上限!",
                   not_enough_heroes: "所有英雄添加完毕，已无英雄可添加至下一个栏位!",
+                  locked_sc_normal_err: "Both SC and normal hero are locked",
 
                   ///Result saving window:
                   camp_name_field: "队伍名称",
@@ -3026,6 +3091,7 @@ function backendCalculation(camp) {
                   genera_url: "生成URL链接",
                   url_usage_help: "复制这个链接到新设备来导入你的英雄列表. <br>设备间并不会自动同步, 如果你修改了英雄列表，下次导入前需要重新生成URL链接.",
                   copia: "复制",
+                  others: "Others",
                   language: "语言"
                 };
               } else if (this.lingua == "zht") {
@@ -3075,6 +3141,8 @@ function backendCalculation(camp) {
                   multilock_slot: "欄位",
                   add_to_slot: "添加到這個位置",
                   add_selection: "添加",
+                  seleziona: "Select",
+                  deselect_all : "Deselect all",
                   possibili_combinazioni: "可能的組合:",
 
                   //Results window
@@ -3082,11 +3150,14 @@ function backendCalculation(camp) {
                   morale: "心情",
                   team: "隊伍",
                   topics: "對話",
+                  abort_calculation: "Abort operation",
+                  confirm_worker_termination: "Are you sure you want to abort this operation?",
                   notification_title: "E7 露營模擬器",
                   notification_ready: "結果計算完畢!",
                   results_error: "錯誤",
                   team_size_exceeded: "隊伍人數超過上限!",
                   not_enough_heroes: "所有英雄添加完畢，已無英雄可添加至下一個欄位!",
+                  locked_sc_normal_err: "Both SC and normal hero are locked",
 
                   ///Result saving window:
                   camp_name_field: "隊伍名稱",
@@ -3120,6 +3191,7 @@ function backendCalculation(camp) {
                   genera_url: "生成URL鏈接",
                   url_usage_help: "復制這個鏈接到新設備來導入你的英雄列表. <br>設備間並不會自動同步, 如果你修改了英雄列表，下次導入前需要重新生成URL鏈接.",
                   copia: "復制",
+                  others: "Others",
                   language: "語言"
                 };
               }else if (this.lingua == "fr") {
@@ -3158,6 +3230,8 @@ function backendCalculation(camp) {
                   multilock_slot: "Slot",
                   add_to_slot: "Ajouter dans ce slot",
                   add_selection: "Ajouter",
+                  seleziona: "Select",
+                  deselect_all : "Deselect all",
                   possibili_combinazioni: "Combinaisons possibles:",
 
                   //Results window
@@ -3165,11 +3239,14 @@ function backendCalculation(camp) {
                   morale: "Morale",
                   team: "Equipe",
                   topics: "Conversations",
+                  abort_calculation: "Abort operation",
+                  confirm_worker_termination: "Are you sure you want to abort this operation?",
                   notification_title: "E7 Camp Simulateur",
                   notification_ready: "Calcul terminé!",
                   results_error: "Erreur",
                   team_size_exceeded: "Le nombre maximum de héros dans l'équipe dépassé!",
                   not_enough_heroes: "Il n'y aura plus de héro disponible pour la prochaine slot!",
+                  locked_sc_normal_err: "Both SC and normal hero are locked",
 
                   ///Result saving window:
                   camp_name_field: "Nom",
@@ -3203,6 +3280,7 @@ function backendCalculation(camp) {
                   genera_url: "Générer une URL",
                   url_usage_help: "Copiez et collez cette URL sur un nouvel appareil ou navigateur pour générer une copie de votre liste de héros actuelle. <br>Les modifications ne sont pas synchronisées, si vous changez votre liste, vous devrez générer une nouvelle URL.",
                   copia: "Copier",
+                  others: "Others",
                   language: "Langue"
                 };
               } else {
@@ -3252,6 +3330,8 @@ function backendCalculation(camp) {
                   multilock: "Multi-lock (Cartesian Product)",
                   multilock_slot: "Slot",
                   add_to_slot: "Add to this slot",
+                  seleziona: "Select",
+                  deselect_all : "Deselect all",
                   add_selection: "Add selection",
                   possibili_combinazioni: "Combinations:",
 
@@ -3260,11 +3340,14 @@ function backendCalculation(camp) {
                   morale: "Morale",
                   team: "Team",
                   topics: "Topics",
+                  abort_calculation: "Abort operation",
+                  confirm_worker_termination: "Are you sure you want to abort this operation?",
                   notification_title: "E7 Camp Simulator",
                   notification_ready: "Your results are ready!",
                   results_error: "Error",
                   team_size_exceeded: "Team size exceeded!",
                   not_enough_heroes: "No heroes to fill the remaining slots!",
+                  locked_sc_normal_err: "Both SC and normal hero are locked",
 
                   ///Result saving window:
                   camp_name_field: "Camp name",
@@ -3298,6 +3381,7 @@ function backendCalculation(camp) {
                   genera_url: "Generate URL",
                   url_usage_help: "Copy and paste this URL to a new device or browser to generate a copy of your current roster. <br>Changes are not synchronized, if you change your roster you will have to generate a new URL.",
                   copia: "Copy",
+                  others: "Others",
                   language: "Language"
                 };
               };
@@ -4371,17 +4455,33 @@ function backendCalculation(camp) {
   }
 });
 
-
+  var camperinoMessage = function (e) {
+    app.isLoadingResults = false; // disattiva angelica
+    mandaNotificaCompletamento();
+    if (e.data.error) snackbarMessage(app.strings["results_error"] + `: ` + app.strings[e.data.error]) // throw error
+    else app.risultati = e.data.risultati
+  };
   // Genera un worker per eseguire i calcoli del camp
   var camperino = new Worker('./worker.js');
   camperino.onmessage = function(e) {
-     app.isLoadingResults = false; // disattiva angelica
-     mandaNotificaCompletamento();
-    if (e.data.code == 200 ) app.risultati = e.data.risultati
-    else if (e.data.code == 400 ) {
-      snackbarMessage(app.strings["results_error"] + `: ` + app.strings[e.data.risultati[0]]);
+    camperinoMessage(e);
+  };
+
+  function restartCamperino() { // abort calculation function
+    var answer = window.confirm(app.strings.confirm_worker_termination);
+    if (answer) { // terminate
+      camperino.terminate();
+      camperino = new Worker('./worker.js');
+      var copy = app.debuffs.slice();
+      app.debuffs.push("aaaa"); // add something to trigger a new calculation attempt 
+      app.debuffs = copy; // restore locked list
+      app.isLoadingResults = false; // disattiva angelica
+      camperino.onmessage = function(e) {
+        camperinoMessage(e);
+      };
     };
   };
+
 </script>
 </body>
 </html>
