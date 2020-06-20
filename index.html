@@ -803,10 +803,10 @@ span.heroImgList {
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
                 <li style="color:rgb(0, 148, 32)">
-                  <b>20/06/2020</b>: Removed teams with duplicate heroes (SC Hero + Normal hero) & other minor functions!<br>
-                  Removed teams that contain the same hero twice like Lorina and Commander Lorina. If you lock SC character and he's normal version you will get an error.<br>
-                  You can cancel from results calculation if it's taking too long and you don't want to wait.<br>
-                  Now you can quickly select your heroes in "Multi-lock".
+                  <b>20/06/2020</b>: 计算结果中去掉了重复英雄 (转职英雄和转职前同时出现) & 其它小功能更新!<br>
+                  去掉了包含重复英雄的队伍 例如萝里娜和指挥官萝里娜. 如果你同时锁定了一个英雄的转职版本和普通版本将会报错.<br>
+                  如果计算耗时太长，你现在可以中止计算.<br>
+                  现在你可以"多重锁定"功能可以快速选择英雄.
                 </li>
                 <li style="color:rgb(0, 148, 32)">
                   15/06/2020: 优化算法，提高了计算心情的速度!<br>
@@ -906,10 +906,10 @@ span.heroImgList {
             <div id="whats_new_content" style="display: none; max-height: 90%; overflow-y: auto;">
               <ul>
                 <li style="color:rgb(0, 148, 32)">
-                  <b>20/06/2020</b>: Removed teams with duplicate heroes (SC Hero + Normal hero) & other minor functions!<br>
-                  Removed teams that contain the same hero twice like Lorina and Commander Lorina. If you lock SC character and he's normal version you will get an error.<br>
-                  You can cancel from results calculation if it's taking too long and you don't want to wait.<br>
-                  Now you can quickly select your heroes in "Multi-lock".
+                  <b>20/06/2020</b>: 計算結果中去掉了重復英雄 (轉職英雄和轉職前同時出現) & 其它小功能更新!<br>
+                  去掉了包含重復英雄的隊伍 例如蘿裏娜和指揮官蘿裏娜. 如果你同時鎖定了一個英雄的轉職版本和普通版本將會報錯.<br>
+                  如果計算耗時太長，你現在可以中止計算.<br>
+                  現在你可以"多重鎖定"功能可以快速選擇英雄.
                 </li>
                 <li style="color:rgb(0, 148, 32)">
                   15/06/2020: 優化算法，提高了計算心情的速度!<br>
@@ -3041,8 +3041,8 @@ function backendCalculation(camp) {
                   multilock_slot: "栏位",
                   add_to_slot: "添加到这个位置",
                   add_selection: "添加",
-                  seleziona: "Select",
-                  deselect_all : "Deselect all",
+                  seleziona: "选择",
+                  deselect_all : "全部取消选中",
                   possibili_combinazioni: "可能的组合:",
 
                   //Results window
@@ -3050,14 +3050,14 @@ function backendCalculation(camp) {
                   morale: "心情",
                   team: "队伍",
                   topics: "对话",
-                  abort_calculation: "Abort operation",
-                  confirm_worker_termination: "Are you sure you want to abort this operation?",
+                  abort_calculation: "中止计算",
+                  confirm_worker_termination: "您确定要中止这次计算?",
                   notification_title: "E7 露营模拟器",
                   notification_ready: "结果计算完毕!",
                   results_error: "错误",
                   team_size_exceeded: "队伍人数超过上限!",
                   not_enough_heroes: "所有英雄添加完毕，已无英雄可添加至下一个栏位!",
-                  locked_sc_normal_err: "Both SC and normal hero are locked",
+                  locked_sc_normal_err: "转职英雄和转职前英雄不能同时出现在一个队伍!",
 
                   ///Result saving window:
                   camp_name_field: "队伍名称",
@@ -3091,7 +3091,7 @@ function backendCalculation(camp) {
                   genera_url: "生成URL链接",
                   url_usage_help: "复制这个链接到新设备来导入你的英雄列表. <br>设备间并不会自动同步, 如果你修改了英雄列表，下次导入前需要重新生成URL链接.",
                   copia: "复制",
-                  others: "Others",
+                  others: "其它",
                   language: "语言"
                 };
               } else if (this.lingua == "zht") {
@@ -3141,8 +3141,8 @@ function backendCalculation(camp) {
                   multilock_slot: "欄位",
                   add_to_slot: "添加到這個位置",
                   add_selection: "添加",
-                  seleziona: "Select",
-                  deselect_all : "Deselect all",
+                  seleziona: "選擇",
+                  deselect_all : "全部取消選中",
                   possibili_combinazioni: "可能的組合:",
 
                   //Results window
@@ -3150,14 +3150,14 @@ function backendCalculation(camp) {
                   morale: "心情",
                   team: "隊伍",
                   topics: "對話",
-                  abort_calculation: "Abort operation",
-                  confirm_worker_termination: "Are you sure you want to abort this operation?",
+                  abort_calculation: "中止計算",
+                  confirm_worker_termination: "您確定要中止這次運算?",
                   notification_title: "E7 露營模擬器",
                   notification_ready: "結果計算完畢!",
                   results_error: "錯誤",
                   team_size_exceeded: "隊伍人數超過上限!",
                   not_enough_heroes: "所有英雄添加完畢，已無英雄可添加至下一個欄位!",
-                  locked_sc_normal_err: "Both SC and normal hero are locked",
+                  locked_sc_normal_err: "轉職英雄和轉職前英雄不能同時出現在一個隊伍!",
 
                   ///Result saving window:
                   camp_name_field: "隊伍名稱",
@@ -3191,7 +3191,7 @@ function backendCalculation(camp) {
                   genera_url: "生成URL鏈接",
                   url_usage_help: "復制這個鏈接到新設備來導入你的英雄列表. <br>設備間並不會自動同步, 如果你修改了英雄列表，下次導入前需要重新生成URL鏈接.",
                   copia: "復制",
-                  others: "Others",
+                  others: "其它",
                   language: "語言"
                 };
               }else if (this.lingua == "fr") {
@@ -3230,8 +3230,8 @@ function backendCalculation(camp) {
                   multilock_slot: "Slot",
                   add_to_slot: "Ajouter dans ce slot",
                   add_selection: "Ajouter",
-                  seleziona: "Select",
-                  deselect_all : "Deselect all",
+                  seleziona: "Selection",
+                  deselect_all : "Tout déselectionner",
                   possibili_combinazioni: "Combinaisons possibles:",
 
                   //Results window
@@ -3239,14 +3239,14 @@ function backendCalculation(camp) {
                   morale: "Morale",
                   team: "Equipe",
                   topics: "Conversations",
-                  abort_calculation: "Abort operation",
-                  confirm_worker_termination: "Are you sure you want to abort this operation?",
+                  abort_calculation: "Annuler l'opération",
+                  confirm_worker_termination: "Voulez-vous vraiment annuler cette opération?",
                   notification_title: "E7 Camp Simulateur",
                   notification_ready: "Calcul terminé!",
                   results_error: "Erreur",
                   team_size_exceeded: "Le nombre maximum de héros dans l'équipe dépassé!",
                   not_enough_heroes: "Il n'y aura plus de héro disponible pour la prochaine slot!",
-                  locked_sc_normal_err: "Both SC and normal hero are locked",
+                  locked_sc_normal_err: "SC héro et non SC version sont verrouillés en même temps!",
 
                   ///Result saving window:
                   camp_name_field: "Nom",
@@ -3280,7 +3280,7 @@ function backendCalculation(camp) {
                   genera_url: "Générer une URL",
                   url_usage_help: "Copiez et collez cette URL sur un nouvel appareil ou navigateur pour générer une copie de votre liste de héros actuelle. <br>Les modifications ne sont pas synchronisées, si vous changez votre liste, vous devrez générer une nouvelle URL.",
                   copia: "Copier",
-                  others: "Others",
+                  others: "Autres",
                   language: "Langue"
                 };
               } else {
