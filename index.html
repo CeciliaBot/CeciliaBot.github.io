@@ -689,7 +689,7 @@ span.heroImgList {
   display: grid;
   margin-top: -10px;
   grid-template-columns: repeat(1, 100%); 
-  grid-template-rows: 4% 94vh;
+  grid-template-rows: 40px;
 }
 
 .bottom-border {
@@ -765,7 +765,7 @@ span.heroImgList {
 </script>
 </head>
 <body class="noScrollBar">
-  <div id="app"><!-- vue.js -->
+  <div id="app" style="margin-bottom: 67px"><!-- vue.js -->
     <div id="welcome" style="display: '';">
         <div id="contenuto_welcome" class="welcome">
           <div class="welcome_menu">
@@ -880,7 +880,7 @@ span.heroImgList {
               <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
             </div>
             <div id="credits_content" style="display: none;">
-              <div style="width: 98vw; position: absolute; bottom: 10%; text-align: center;">
+              <div style="position: absolute; bottom: 10%; text-align: center; right: 0; left: 0;">
                 <br>英文地狱迷宫地图: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
                 <br>普通迷宫地图&中文迷宫地图: TriATK
                 <br>中文/法文翻译: TriATK
@@ -983,7 +983,7 @@ span.heroImgList {
               <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
             </div>
             <div id="credits_content" style="display: none;">
-              <div style="width: 98vw; position: absolute; bottom: 10%; text-align: center;">
+              <div style="position: absolute; bottom: 10%; text-align: center; right: 0; left: 0;">
                 <br>英文地獄迷宮地圖: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
                 <br>普通迷宮地圖&中文迷宮地圖: TriATK
                 <br>中文/法文翻譯: TriATK
@@ -1091,7 +1091,7 @@ span.heroImgList {
                 <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
               </div>
               <div id="credits_content" style="display: none;">
-                <div style="width: 98vw; position: absolute; bottom: 10%; text-align: center;">
+                <div style="position: absolute; bottom: 10%; text-align: center; right: 0; left: 0;">
                   <br>ENG Hell raid map: <a href="https://www.reddit.com/user/C0NNECT1NG/">u/C0NNECT1NG</a> (<a href="https://www.reddit.com/r/EpicSeven/comments/flg4b1/complete_hell_raid_map/">Reddit post</a>)
                   <br>Normal and Chinese Hell raid map: TriATK
                   <br>Chinese/French translations: TriATK
@@ -1112,7 +1112,7 @@ span.heroImgList {
         </div>
 	    </h2>
        <!-- Pulsanti filtro eroi -->
-      <div style="display:inline-block;width:100%;height:100%;">
+      <div style="display:inline-block;width:100%;">
         <div class="search_hero_area" id="filter_all_rarity">
           <button class="search_hero_filter active" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="*">
             <div style="font-size:16px">{{strings.all}}</div>
@@ -1224,8 +1224,6 @@ span.heroImgList {
          </table>
         </template>
 
-
-	<br><br><br><br> <!-- -->
     </div>
     <div id="manage_window" style="display:none;">
       <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.i_tuoi_eroi}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('manage_window', 'manage_heroes_help')"></i> <font style="position:relative;top:0;color:red;font-size:12px;">({{rosterLength}})</font></span>
@@ -1233,9 +1231,16 @@ span.heroImgList {
             <input type="text" id="inputInMyHeroes" class="search_hero_filter searchBox" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
             <button class="search_input"><i class="fa fa-search" aria-hidden="true"></i></button>
           </div>
+          <!-- TBA Soon; variations: lock heroes and get all possible variations even heroes that are not in your roster
+          <template v-if="locked.length>0">
+            <button class="search_hero_filter active" style="width: auto;" name="filter_rarity" v-on:click="document.getElementById('calculate_window').style.display =''; document.getElementById('manage_window').style.display ='none'; isLoadingResults = true; risultati = []; camperino.postMessage({HeroDB: HeroDB, myHeroesList: HeroDB, campList: Object.keys(HeroDB), locked: locked, classe: [], elemento: [], debuffs: [], buffs: [], AoE: false, noS1debuffs: false, noDebuffs: false, cartesianLock: [[],[],[],[]], preferenzeRisultati: customizedResuts, risultati: []});">
+              <div style="font-size:16px">Variations</div>
+            </button>
+          </template>
+          -->
 	    </h2>
        <!-- Pulsanti filtro eroi -->
-      <div style="display:inline-block;width:100%;height:100%;">
+      <div style="display:inline-block;width:100%;">
         <div class="search_hero_area" id="filter_all_rarity">
           <button class="search_hero_filter active" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
             <div style="font-size:16px">{{strings.all}}</div>
@@ -1354,9 +1359,6 @@ span.heroImgList {
         </table>
       </template>
 
-
-
-      <br><br><br><br> <!-- -->
     </div>
   <div id="advanced_window" style="display:none;"> <!-- Watcher aggiorna automaticamente i dati -->
     <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
@@ -1457,9 +1459,6 @@ span.heroImgList {
       </div>
     </div>
 
-
-
-    <br><br><br><br><br> <!-- -->
   </div>
   <div id="calculate_window" class="center" style="display:none;">
         <h2>{{strings.risultati}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('calculate_window', 'results_help')"></i></h2>
@@ -1483,7 +1482,6 @@ span.heroImgList {
             </tr>
           </tbody>
         </table>
-        <br><br><br><br> <!-- -->
     </div>
 
     <div id="extras_window" style="display:none;height: 100%;">
@@ -1551,6 +1549,21 @@ span.heroImgList {
           <td>
             <div style="max-height:55px">
               <span>
+                {{strings.vert_iconbar}}
+              </span>
+              <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
+                <label class="switch" style="position:absolute;">
+                  <input type="checkbox" id="toolbar_position" name="toolbar_position" onchange="toggleVerticalToolbar()">
+                  <i class="slider round"></i>
+                </label>
+              </i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div style="max-height:55px">
+              <span>
                 {{strings.debug_camping_values}}
               </span>
               <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
@@ -1581,7 +1594,6 @@ span.heroImgList {
           </td>
         </tr>
       </table>
-      <br><br><br><br> <!-- -->
     </div>
 
     <div id="my_teams_window" style="display:none;">
@@ -1595,7 +1607,6 @@ span.heroImgList {
           </td>
         </tr>
       </table>
-      <br><br><br><br> <!-- -->
     </div>
 
     <div id="raid_map" style="display: none;">
@@ -1611,7 +1622,7 @@ span.heroImgList {
       </span>
       <br><br><br><br>
     </div>
-    <div id="saved_teams_stats" class="center" style="display: none; padding-bottom: 10%;">
+    <div id="saved_teams_stats" class="center" style="display: none;">
       <h2>{{strings.most_saved_teams}}
         <div style="float: right;">
           <button id="refreshStats" class="search_hero_filter" style="width: 70px" v-on:click="getSavedTeamsStats();">
@@ -1635,17 +1646,20 @@ span.heroImgList {
       <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
       <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil" aria-hidden="true"></i></span>
       <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')"><!--&#9876;--><i class="fa fa-book" aria-hidden="true"></i></span>
-      <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="height:100%;font-size:36px;max-height:65.5px;">
+      <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="font-size:36px;max-height:65.5px;">
         <!--Calcola-->
         <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" style="position:relative;top:-5px;margin-bottom:-10px;height:40px;" />
       </span>
-      <span id="icon-bar_settings_window" onclick="setWindow('extras_window')"><!--&#9881;--><i class="fa fa-cog"></i>
-      </span>
+      <span id="icon-bar_settings_window" onclick="setWindow('extras_window')"><!--&#9881;--><i class="fa fa-cog"></i></span>
+      <span id="icon-bar_my_teams_window" onclick="setWindow('my_teams_window')" style="display: none;"><i class="fa fa-floppy-o"></i></span>
+      <span id="icon-bar_raid_map_window" onclick="setWindow('raid_map')" style="display: none;"><i class="fa fa-map"></i></span>
+      <span id="icon-bar_team_stats_window" onclick="setWindow('saved_teams_stats');app.computedGetSavedTeamsStats;" style="display: none;"><i class="fa fa-bar-chart"></i></span>
+      <span id="icon-bar_real_settings_window" onclick="setWindow('settings_window')" style="display: none;"><i class="fa fa-cog"></i></span>
     </div>
 
      <!-- Mostra durante il calcolo -->
     <div v-show="isLoadingResults" id="loading_camp_results">
-      <div style="opacity: 0.3;filter: alpha(opacity=30);height:100%;width:100%;position:fixed;z-index:2">
+      <div style="opacity: 0.3; filter: alpha(opacity=30); height:100%; width:100%; position:fixed; z-index:2; top: 0; right: 0;">
       </div> <!-- prevent user from changing menu -->
       <div class="center_img box_advanced_settings" style="height:200px;width:200px">
         <div class="center_img" style="text-align:center;"> 
@@ -1656,7 +1670,7 @@ span.heroImgList {
       </div>
       <button style="z-index: 2;margin-right: 30px; width: auto; font-size: 16px; top: auto;bottom: 90px;right: 0;position: absolute;" class="search_hero_filter" onclick="restartCamperino();">{{strings.abort_calculation}}</button>
     </div>
-    <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 10; height: 100%; width: 100%; border-radius: 0;"> <!-- non è neccessario settare inizializzaione = true -->
+    <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 10; height: 100%; width: 100%; border-radius: 0; top: 49.9%;"> <!-- non è neccessario settare inizializzaione = true -->
       <div class="center_img" style="text-align:center;"> 
         <i class="fa fa-cog fa-spin" style="font-size:70px"></i>
         <div>
@@ -1668,6 +1682,7 @@ span.heroImgList {
   </div><!-- div id = app -->
 
 <script defer>
+    var userSettings = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : "{}");
     function toggleCheck() {
         if (document.getElementById("darkModeCheck").checked === true) {
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -1676,7 +1691,7 @@ span.heroImgList {
         else {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light'); // salva preferenza per future visite
-        }    
+        };    
     };
     const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
@@ -1690,6 +1705,7 @@ span.heroImgList {
     };
     
     function setWindow(current) {
+      scrollTo(0,0);
       document.getElementById('welcome').style.display='none';
       document.getElementById('add_window').style.display='none';
       document.getElementById('manage_window').style.display='none';
@@ -1707,6 +1723,11 @@ span.heroImgList {
       document.getElementById("icon-bar_advanced_window").className = "";
       document.getElementById("icon-bar_calculate_window").className = "";
       document.getElementById("icon-bar_settings_window").className = "";
+
+      document.getElementById("icon-bar_real_settings_window").className = "";
+      document.getElementById("icon-bar_my_teams_window").className = "";
+      document.getElementById("icon-bar_raid_map_window").className = "";
+      document.getElementById("icon-bar_team_stats_window").className = "";
       switch (current) {
         case 'add_window':
           document.getElementById('add_window').style.display='block';
@@ -1731,17 +1752,21 @@ span.heroImgList {
         case 'settings_window':
           document.getElementById('settings_window').style.display='block';
           document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
+          document.getElementById("icon-bar_real_settings_window").className = "active-icon-bar";
           break;
         case 'my_teams_window':
           document.getElementById('my_teams_window').style.display='block';
+          document.getElementById("icon-bar_my_teams_window").className = "active-icon-bar";
           document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
           break;
         case 'raid_map':
           document.getElementById('raid_map').style.display='block';
+          document.getElementById("icon-bar_raid_map_window").className = "active-icon-bar";
           document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
           break;
         case 'saved_teams_stats':
           document.getElementById('saved_teams_stats').style.display='block';
+          document.getElementById("icon-bar_team_stats_window").className = "active-icon-bar";
           document.getElementById("icon-bar_settings_window").className = "active-icon-bar";
           break;
       };
@@ -1790,7 +1815,7 @@ span.heroImgList {
 
     return true;
   }
-  var riceviNotifiche = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : '{"notification":false}').notification;
+  var riceviNotifiche = userSettings.notification;
 
   if (riceviNotifiche === true) {
     var checkBoxes = $("#notifications_toggle");
@@ -1837,6 +1862,56 @@ function askNotificationPermission() {
         };
   };
 };
+
+  function setToolbarPosition (f) {
+    var sheet = document.styleSheets[document.styleSheets.length-1] || [];
+    var documentRules = sheet.cssRules || sheet.rules;
+    var f = f!=undefined ? f : "hor", appDoc = document.getElementById("app");
+    var rules = f==="hor" ? {".icon-bar": "z-index: 2; position: fixed; bottom: 0; right: 0; width: 100%; background-color: #555; overflow: auto;", ".icon-bar span": "float: left; text-align: center; width: 20%; padding: 12px 0; transition: all 0.3s ease; color: white; font-size: 36px;"} : {".icon-bar": "position: fixed; top: 0; left: 0; height: 100vh;width: 90px; background-color: #555;", ".icon-bar span": "display: block; text-align: center; padding: 16px; transition: all 0.3s ease; color: white; font-size: 36px;"};
+    for (var rule in rules) {
+      for (var i = 0; i < documentRules.length; i++) {
+        if (documentRules[i].selectorText === rule) {
+          documentRules[i].style = rules[rule];
+          break;
+        };
+      };
+    };
+    if (f === "hor") {
+      appDoc.style.marginLeft = "0";
+      appDoc.style.marginBottom = "70px";
+      setTimeout(function(){ if (appDoc.style.marginLeft === "0px") document.getElementById("icon-bar_settings_window").style.display = ""; }, 370); // setTimeout to fix a transiction effect
+      document.getElementById("icon-bar_real_settings_window").style.display = "none";
+      document.getElementById("icon-bar_my_teams_window").style.display = "none";
+      document.getElementById("icon-bar_raid_map_window").style.display = "none";
+      document.getElementById("icon-bar_team_stats_window").style.display = "none";
+    } else {
+      appDoc.style.marginLeft = "90px";
+      appDoc.style.marginBottom = "0";
+      document.getElementById("icon-bar_settings_window").style.display = "none";
+      document.getElementById("icon-bar_real_settings_window").style.display = "";
+      document.getElementById("icon-bar_my_teams_window").style.display = "";
+      document.getElementById("icon-bar_raid_map_window").style.display = "";
+      document.getElementById("icon-bar_team_stats_window").style.display = "";
+    };
+  };
+
+  if (userSettings.verticalToolbar === undefined) {
+    if (screen.width > 800 && screen.height >= 600) { // set vertical toolbar
+      $("#toolbar_position").attr('checked', true);
+      setToolbarPosition("ver");
+    };
+  } else {
+    if (userSettings.verticalToolbar === true) {
+      $("#toolbar_position").attr('checked', true);
+      setToolbarPosition("ver"); 
+    };
+  };
+  function toggleVerticalToolbar() {
+    if (document.getElementById("toolbar_position").checked === true) setToolbarPosition("ver");
+    else setToolbarPosition ();
+    app.writeSettings();
+  };
+
 
     //// context menu
     var showValues = false;
@@ -2157,7 +2232,7 @@ function backendCalculation(camp) {
             };
           },
           writeSettings: function() {
-            localStorage.setItem('Settings', JSON.stringify({notification: riceviNotifiche, lingua: this.lingua}) );
+            localStorage.setItem('Settings', JSON.stringify({notification: riceviNotifiche, lingua: this.lingua, verticalToolbar: document.getElementById("toolbar_position").checked}) );
           },
           alertUserAction: function (f) {
             let action, message;
@@ -2286,7 +2361,7 @@ function backendCalculation(camp) {
           }, 
           mostraSalvaRisultato: function (n) {
             $( "#calculate_window" ).append(`
-              <div id="saveCamp" class="modal" style="padding-top: 60px;display:block;overflow-y: scroll;">
+              <div id="saveCamp" class="modal" style="padding-top: 60px;display:block; overflow: scroll;">
                 <form class="modal-content animate" id="saveCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
                     <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
@@ -2461,21 +2536,25 @@ function backendCalculation(camp) {
                 var usiTop400 = 0;
                 if (response.data.length>0) {
                   for (var i = 0; i < response.data.length; i++) {
-                    usiTop400 += response.data[i].usi;
-                    toPrint += "<tr>" +  
-                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                      "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.data[i].usi/response.totale*100 + "%;'><span>" + Math.round(( (response.data[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
-                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'>" + response.data[i].morale + "</td>" +
-                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + "</td></tr>";
+                    if (self.HeroDB[response.data[i].team[0]]) {
+                      usiTop400 += response.data[i].usi;
+                      toPrint += "<tr>" +  
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                          "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.data[i].usi/response.totale*100 + "%;'><span>" + Math.round(( (response.data[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
+                          "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'>" + response.data[i].morale + "</td>" +
+                          "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + "</td></tr>";
+                    };
                   };
                   for (var i = 0; i < response.characters.length; i++) {
-                    toPrintChar += "<tr>" +  
-                      `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                      "<td style='width: 80vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.characters[i].usi/response.totale*100 + "%;'><span>" + Math.round((( response.characters[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
-                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.characters[i].usi +"</td></tr>";
+                    if (self.HeroDB[response.characters[i].character]) {
+                      toPrintChar += "<tr>" +  
+                        `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                        "<td style='width: 80vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.characters[i].usi/response.totale*100 + "%;'><span>" + Math.round((( response.characters[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
+                        "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.characters[i].usi +"</td></tr>";
+                    };
                   };
                   if (usiTop400 < response.totale) {
                     toPrint += "<tr>" +
@@ -2985,7 +3064,9 @@ function backendCalculation(camp) {
                   heroes: "Eroi",
                   teams: "Squadre",
                   extras_map: "Miglior percorso",
+
                   tema_notturno: "Tema notturno",
+                  vert_iconbar: "Toolbar verticale",
                   notifiche: "Notifiche",
                   debug_camping_values: "Debug: Mostra i valori delle opzioni",
                   genera_url: "Genera URL",
@@ -3086,6 +3167,7 @@ function backendCalculation(camp) {
                   extras_map: "迷宫最佳路线",
 
                   tema_notturno: "夜间模式",
+                  vert_iconbar: "Vertical toolbar",
                   notifiche: "启用通知",
                   debug_camping_values: "调试: 显示所有对话心情值",
                   genera_url: "生成URL链接",
@@ -3186,6 +3268,7 @@ function backendCalculation(camp) {
                   extras_map: "迷宮最佳路線",
 
                   tema_notturno: "夜間模式",
+                  vert_iconbar: "Vertical toolbar",
                   notifiche: "啟用通知",
                   debug_camping_values: "調試: 顯示所有對話心情值",
                   genera_url: "生成URL鏈接",
@@ -3275,6 +3358,7 @@ function backendCalculation(camp) {
                   extras_map: "Meilleur itinéraire pour Raid hell",
 
                   tema_notturno: "Mode nuit",
+                  vert_iconbar: "Vertical toolbar",
                   notifiche: "Notification",
                   debug_camping_values: "Debug: Afficher tous les valeurs de conversation",
                   genera_url: "Générer une URL",
@@ -3376,6 +3460,7 @@ function backendCalculation(camp) {
                   extras_map: "Best hell raid route",
 
                   tema_notturno: "Night theme",
+                  vert_iconbar: "Vertical toolbar",
                   notifiche: "Enable notifications",
                   debug_camping_values: "Debug: Display camping values",
                   genera_url: "Generate URL",
@@ -4466,7 +4551,11 @@ function backendCalculation(camp) {
   camperino.onmessage = function(e) {
     camperinoMessage(e);
   };
-
+  camperino.onerror = function(err) {
+    console.log(err)
+    snackbarMessage(`Camping fatal error. Please refresh this page.`)
+    app.isLoadingResults = false;
+  };
   function restartCamperino() { // abort calculation function
     var answer = window.confirm(app.strings.confirm_worker_termination);
     if (answer) { // terminate
@@ -4474,10 +4563,15 @@ function backendCalculation(camp) {
       camperino = new Worker('./worker.js');
       var copy = app.debuffs.slice();
       app.debuffs.push("aaaa"); // add something to trigger a new calculation attempt 
-      app.debuffs = copy; // restore locked list
+      app.debuffs = copy; // restore debuff list
       app.isLoadingResults = false; // disattiva angelica
       camperino.onmessage = function(e) {
         camperinoMessage(e);
+      };
+      camperino.onerror = function(err) {
+        console.log(err);
+        snackbarMessage(`Camping fatal error. Please refresh this page.`);
+        app.isLoadingResults = false;
       };
     };
   };
