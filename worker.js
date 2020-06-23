@@ -269,7 +269,7 @@ onmessage = function(e) {
                             Combinatorics.bigCombination(campList,4-e.locked.length).forEach(teamComb => {
                                         if (teamComb.length>4 || e.locked.length == 4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
                                         var team = [].concat(teamComb, e.locked);
-                                        let elementoFiltro = teamComb;
+                                        let elementoFiltro = e.preferenzeRisultati.lockedMatter === false ? teamComb : team;
                                         let elementoRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat();
                                         let buffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat();
                                         let debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat();
@@ -337,7 +337,7 @@ onmessage = function(e) {
                                     if (e.cartesianLock.length + e.locked.length>3) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
                                     //teamComb = teamComb.concat(cartesianLocked);
                                     var team = [].concat(teamComb, cartesianLocked, e.locked);
-                                    let elementoFiltro = teamComb; // applica filtro solo ai eroi non lockati
+                                    let elementoFiltro = e.preferenzeRisultati.lockedMatter === false ? teamComb : team; // applica filtro solo ai eroi non lockati
                                     let elementoRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat();
                                     let buffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat();
                                     let debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat();
