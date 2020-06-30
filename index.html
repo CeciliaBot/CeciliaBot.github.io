@@ -18,12 +18,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
-    <script src="./jquery.min.js"></script>
-    <script src="./js-combinatorics@0.5.js" async></script>
-    <!--<script src="vue.js"></script>-->
-    <script src="./vue@2.6.11.js"></script>
-    <link rel="stylesheet" href="./font-awesome.min.css" async>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" async>
+    
     <style>
 :root {
     --font-color: #424242;
@@ -799,7 +799,7 @@ span.heroImgList {
                   寻找翻译者...
                 </div>
                 <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
-                  First time here?<br> Click here for a quick guide.
+                  第一次使用?<br> 点击查看简明使用教程.
                 </div>
                 <!-- Copyright stuff if needed
                 <div style="width: 100%; position: absolute; bottom: 10%; text-align: center;">
@@ -811,8 +811,8 @@ span.heroImgList {
               <div id="whats_new_content" style="display: none;">
                 <ul>
                   <li style="color:#007FFF">
-                    <b>21/06/2020</b> Vertical toolbar.<br>
-                    Vertical toolbar is automatically enabled on wide devices. Can be enabled and disabled on all devices from the settings menu.
+                    <b>21/06/2020</b> 垂直工具栏.<br>
+                    宽屏设备上自动使用垂直工具栏. 可以在设置里切换回经典水平工具栏.
                   </li>
                   <li style="color:rgb(0, 148, 32)">
                     <b>20/06/2020</b>: 计算结果中去掉了重复英雄 (转职英雄和转职前同时出现) & 其它小功能更新!<br>
@@ -871,7 +871,7 @@ span.heroImgList {
                   </li>
                   <li style="color:#007FFF">
                     现在你可以保存计算的结果:<br>
-                    在结果页面点击 <i class="fa fa-floppy-o" aria-hidden="true"></i>  , 然后输入你自己定义的队伍名称并点击 "保存".<br>
+                    在结果页面点击 <i class="fa fa-save" aria-hidden="true"></i>  , 然后输入你自己定义的队伍名称并点击 "保存".<br>
                     你保存的队伍将显示在 <i class="fa fa-cog" aria-hidden="true"></i>  的设置窗口 你可以修改并删除他们.
                   </li>
                   <li>
@@ -881,14 +881,14 @@ span.heroImgList {
                 </ul>
               </div>
               <div id="instructions_content" style="display: none; text-align: center; margin-top: 10%;">
-                Quick guide:
+                简明教程:
                 <div style="padding-top: 30px;">
-                  <i class="fa fa-plus" aria-hidden="true"></i>: Add heroes to your roster.<br><br>
-                  <i class="fa fa-pencil" aria-hidden="true"></i>: Check your roster. Lock a hero by clicking on the portrait or remove it by clicking the <font color="red">x</font> symbol near the portrait.<br><br>
-                  <i class="fa fa-book" aria-hidden="true"></i> (optional): Set custom rules to find the best team for your needs. (Enabling advanced settings is slower for large rosters)<br><br>
-                  Click the campfire icon to find all possible combinations for your roster. (You need at least 4 heroes in your roster)<br><br><br><br>
-                  <i class="fa fa-question-circle" aria-hidden="true"></i>: You can find this icon near the title of each page. On click it will display some instructions for that page.<br>
-                  <i class="fa fa-cog"></i>: Change settings for the website.<br>
+                  <i class="fa fa-plus" aria-hidden="true"></i>: 添加英雄到你的英雄列表.<br><br>
+                  <i class="fa fa-pencil-alt" aria-hidden="true"></i>: 查看你的英雄列表. 点击英雄头像锁定，锁定后必定出现在计算结果中. 点击 <font color="red">x</font> 移除英雄.<br><br>
+                  <i class="fa fa-book" aria-hidden="true"></i> (可选): 高级设置. (启用高级设置会稍微降低运算速度)<br><br>
+                  <i class="fas fa-fire" aria-hidden="true"></i>点击篝火图标进行计算. (你的英雄列表至少要包含4个英雄)<br><br>
+                  <i class="fa fa-question-circle" aria-hidden="true"></i>: 这是帮助图标. 点击可以查看每项功能的具体说明.<br><br>
+                  <i class="fa fa-cog"></i>: 网站功能设定.<br>
                 </div>
               </div>
               <div id="cool_websites_content" style="display: none; text-align: center; margin-top: 10%;">
@@ -919,7 +919,7 @@ span.heroImgList {
                   尋找翻譯者...
                 </div>
                 <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
-                  First time here?<br> Click here for a quick guide.
+                  第一次使用?<br> 點擊查看簡明使用教程.
                 </div>
                 <!-- Copyright stuff if needed
                 <div style="width: 100%; position: absolute; bottom: 10%; text-align: center;">
@@ -931,8 +931,8 @@ span.heroImgList {
               <div id="whats_new_content" style="display: none;">
                 <ul>
                   <li style="color:#007FFF">
-                    <b>21/06/2020</b> Vertical toolbar.<br>
-                    Vertical toolbar is automatically enabled on wide devices. Can be enabled and disabled on all devices from the settings menu.
+                    <b>21/06/2020</b> 垂直工具欄.<br>
+                    寬熒幕設備上自動使用垂直工具欄. 可以在設定裏切換回經典水平工具欄.
                   </li>
                   <li style="color:rgb(0, 148, 32)">
                     <b>20/06/2020</b>: 計算結果中去掉了重復英雄 (轉職英雄和轉職前同時出現) & 其它小功能更新!<br>
@@ -991,7 +991,7 @@ span.heroImgList {
                   </li>
                   <li style="color:#007FFF">
                     現在你可以保存計算的結果:<br>
-                    在結果頁面點擊 <i class="fa fa-floppy-o" aria-hidden="true"></i>  , 然後輸入你自己定義的隊伍名稱並點擊 "保存".<br>
+                    在結果頁面點擊 <i class="fa fa-save" aria-hidden="true"></i>  , 然後輸入你自己定義的隊伍名稱並點擊 "保存".<br>
                     你保存的隊伍將顯示在 <i class="fa fa-cog" aria-hidden="true"></i>  的設定窗口 你可以修改並刪除他們.
                   </li>
                   <li>
@@ -1001,14 +1001,14 @@ span.heroImgList {
                 </ul>
               </div>
               <div id="instructions_content" style="display: none; text-align: center; margin-top: 10%;">
-                Quick guide:
+                簡明教程:
                 <div style="padding-top: 30px;">
-                  <i class="fa fa-plus" aria-hidden="true"></i>: Add heroes to your roster.<br><br>
-                  <i class="fa fa-pencil" aria-hidden="true"></i>: Check your roster. Lock a hero by clicking on the portrait or remove it by clicking the <font color="red">x</font> symbol near the portrait.<br><br>
-                  <i class="fa fa-book" aria-hidden="true"></i> (optional): Set custom rules to find the best team for your needs. (Enabling advanced settings is slower for large rosters)<br><br>
-                  Click the campfire icon to find all possible combinations for your roster. (You need at least 4 heroes in your roster)<br><br><br><br>
-                  <i class="fa fa-question-circle" aria-hidden="true"></i>: You can find this icon near the title of each page. On click it will display some instructions for that page.<br>
-                  <i class="fa fa-cog"></i>: Change settings for the website.<br>
+                  <i class="fa fa-plus" aria-hidden="true"></i>: 添加英雄到你的英雄列表.<br><br>
+                  <i class="fa fa-pencil-alt" aria-hidden="true"></i>: 查看你的英雄列表. 點擊英雄頭像鎖定，鎖定後必定出現在計算結果中. 點擊 <font color="red">x</font> 移除英雄.<br><br>
+                  <i class="fa fa-book" aria-hidden="true"></i> (可選): 高級設定. (啟用高級設定會稍微降低運算速度)<br><br>
+                  <i class="fas fa-fire" aria-hidden="true"></i>點擊篝火圖標進行計算. (你的英雄列表至少要包含4個英雄)<br><br>
+                  <i class="fa fa-question-circle" aria-hidden="true"></i>: 這是幫助圖標. 點擊可以查看每項功能的具體說明.<br><br>
+                  <i class="fa fa-cog"></i>: 網站功能設定.<br>
                 </div>
               </div>
               <div id="cool_websites_content" style="display: none; text-align: center; margin-top: 10%;">
@@ -1115,7 +1115,7 @@ span.heroImgList {
                   </li>
                   <li style="color:#007FFF">
                     Now you can save your results:<br>
-                    In the results window tap/click <i class="fa fa-floppy-o" aria-hidden="true"></i>  , in the modal window type a name for that specific camp and click "Save".<br>
+                    In the results window tap/click <i class="fa fa-save" aria-hidden="true"></i>  , in the modal window type a name for that specific camp and click "Save".<br>
                     Your saved camps will appear in the <i class="fa fa-cog" aria-hidden="true"></i>  settings window where you can view and delete them.
                   </li>
                   <li>
@@ -1128,10 +1128,10 @@ span.heroImgList {
                 Quick guide:
                 <div style="padding-top: 30px;">
                   <i class="fa fa-plus" aria-hidden="true"></i>: Add heroes to your roster.<br><br>
-                  <i class="fa fa-pencil" aria-hidden="true"></i>: Check your roster. Lock a hero by clicking on the portrait or remove it by clicking the <font color="red">x</font> symbol near the portrait.<br><br>
+                  <i class="fa fa-pencil-alt" aria-hidden="true"></i>: Check your roster. Lock a hero by clicking on the portrait or remove it by clicking the <font color="red">x</font> symbol near the portrait.<br><br>
                   <i class="fa fa-book" aria-hidden="true"></i> (optional): Set custom rules to find the best team for your needs. (Enabling advanced settings is slower for large rosters)<br><br>
-                  Click the campfire icon to find all possible combinations for your roster. (You need at least 4 heroes in your roster)<br><br><br><br>
-                  <i class="fa fa-question-circle" aria-hidden="true"></i>: You can find this icon near the title of each page. On click it will display some instructions for that page.<br>
+                  <i class="fas fa-fire" aria-hidden="true"></i>Click the campfire icon to find all possible combinations for your roster. (You need at least 4 heroes in your roster)<br><br>
+                  <i class="fa fa-question-circle" aria-hidden="true"></i>: You can find this icon near the title of each page. On click it will display some instructions for that page.<br><br>
                   <i class="fa fa-cog"></i>: Change settings for the website.<br>
                 </div>
               </div>
@@ -1532,7 +1532,7 @@ span.heroImgList {
           </tbody>
           <tbody>
             <tr v-for="(item, index) in risultati">
-              <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index)"><i class="fa fa-floppy-o" aria-hidden="true" style="font-size:30px;"></i>
+              <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index)"><i class="fa fa-save" aria-hidden="true" style="font-size:30px;"></i>
                 <br>{{index+1}}</td>
               <td class="hero_potrait"><img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[0]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/></td>
               <td class="hero_potrait"><img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[1]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
@@ -1555,7 +1555,7 @@ span.heroImgList {
         </div>
         <div class="extra_icon box_advanced_settings" onclick="setWindow('my_teams_window')">
           <span>
-            <i class="fa fa-floppy-o" aria-hidden="true" style="font-size:90px;"></i><br><br>
+            <i class="fa fa-save" aria-hidden="true" style="font-size:90px;"></i><br><br>
             {{strings.my_teams}}
           </span>
         </div>
@@ -1567,7 +1567,7 @@ span.heroImgList {
         </div>
         <div class="extra_icon box_advanced_settings" onclick="setWindow('saved_teams_stats');app.computedGetSavedTeamsStats;">
           <span>
-            <i class="fa fa-bar-chart" aria-hidden="true" style="font-size:90px;"></i><br><br>
+            <i class="fa fa-chart-bar" aria-hidden="true" style="font-size:90px;"></i><br><br>
             {{strings.most_saved_teams}}
           </span>
         </div>
@@ -1705,16 +1705,16 @@ span.heroImgList {
 
     <div id="toolbar" class="icon-bar"> <!-- nascondi toolbar durante il calcolo -->
       <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
-      <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil" aria-hidden="true"></i></span>
+      <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil-alt" aria-hidden="true"></i></span>
       <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')"><!--&#9876;--><i class="fa fa-book" aria-hidden="true"></i></span>
       <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="font-size:36px;max-height:65.5px;">
         <!--Calcola-->
         <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" style="position:relative;top:-5px;margin-bottom:-10px;height:40px;" />
       </span>
       <span id="icon-bar_settings_window" onclick="setWindow('extras_window')"><!--&#9881;--><i class="fa fa-cog"></i></span>
-      <span id="icon-bar_my_teams_window" onclick="setWindow('my_teams_window')" style="display: none;"><i class="fa fa-floppy-o"></i></span>
+      <span id="icon-bar_my_teams_window" onclick="setWindow('my_teams_window')" style="display: none;"><i class="fa fa-save"></i></span>
       <span id="icon-bar_raid_map_window" onclick="setWindow('raid_map')" style="display: none;"><i class="fa fa-map"></i></span>
-      <span id="icon-bar_team_stats_window" onclick="setWindow('saved_teams_stats');app.computedGetSavedTeamsStats;" style="display: none;"><i class="fa fa-bar-chart"></i></span>
+      <span id="icon-bar_team_stats_window" onclick="setWindow('saved_teams_stats');app.computedGetSavedTeamsStats;" style="display: none;"><i class="fa fa-chart-bar"></i></span>
       <span id="icon-bar_real_settings_window" onclick="setWindow('settings_window')" style="display: none;"><i class="fa fa-cog"></i></span>
     </div>
 
@@ -3146,7 +3146,7 @@ function backendCalculation(camp) {
                 this.strings = {
                   welcome: "欢迎",
                   whats_new: "更新日志",
-                  instructions: "Instructions",
+                  instructions: "简明教程",
                   websites: "实用链接",
                   credits: "作者",
                   messaggio_di_benvenuto: "欢迎使用第七史诗露营模拟器",
@@ -3249,7 +3249,7 @@ function backendCalculation(camp) {
                 this.strings = {
                   welcome: "歡迎",
                   whats_new: "更新日誌",
-                  instructions: "Instructions",
+                  instructions: "簡明教程",
                   websites: "實用鏈接",
                   credits: "作者",
                   messaggio_di_benvenuto: "歡迎使用第七史詩露營模擬器",
