@@ -1535,7 +1535,7 @@ img.lazyload:not([src]) {
       <center>{{strings.debuff}}:</center>
       <span v-for="(value,key) in debuffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:auto;width:120px;padding-bottom:5px;">
         <input type="checkbox" v-bind:id="'checkbox_'+ key" name="debuff" v-bind:value="value.id" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img data-src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{value.name}}</p></label>
+        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:data-src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{value.name}}</p></label>
         </span>
     </div>
     <br><br>
