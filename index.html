@@ -1782,7 +1782,7 @@ img.lazyload:not([src]) {
     <div id="snackbar"></div> <!-- messaggio avvisi -->
   </div><!-- div id = app -->
 
-<script async>
+<script defer>
     var userSettings = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : "{}");
     function toggleCheck() {
         if (document.getElementById("darkModeCheck").checked === true) {
