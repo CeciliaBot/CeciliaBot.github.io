@@ -22,7 +22,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" async>
+    
     
     <style>
 :root {
@@ -1197,13 +1199,13 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="3">
-            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="4">
-            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="5">
-            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button>
         </div>
         <div class="search_hero_area">
@@ -1211,19 +1213,19 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="fire">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="ice">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="wind">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="light">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="dark">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1232,22 +1234,22 @@ span.heroImgList {
           </button><!--
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="knight">
             <!-- <span>knight</span> -->
-          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png">
+          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="warrior">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="assassin">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="ranger">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="mage">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="manauser">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1277,7 +1279,7 @@ span.heroImgList {
             <td style="text-align: center;">
               <span v-for="key in displayList" class="heroImgList">
                 <!--<div class="fa fa-check-circle top-left" v-bind:style="'font-size:38px;color:green;display:' + isInTeam(thisHeroData(key).name)"></div>-->
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" class="lazyload" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <div class="top-left" v-bind:style="'font-size:38px;display:' + isInTeam(thisHeroData(key)._id)">✔</div>
               </span>
             </td>
@@ -1289,7 +1291,7 @@ span.heroImgList {
           <tr v-for="key in displayList">
             <td>
               <div class="hero_potrait">
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" class="lazyload" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
 		            <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
 		            <template v-if="isInTeam(thisHeroData(key)._id) === 'none'">  <!-- già aggiunto -->
                   <span v-on:click="addHero(thisHeroData(key)._id)" class="fa fa-plus displaylistTableIcons">   </span>
@@ -1325,13 +1327,13 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="3">
-            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="4">
-            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="5">
-            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
+            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button>
         </div>
         <div class="search_hero_area">
@@ -1339,19 +1341,19 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="fire">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="ice">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="wind">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="light">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="dark">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png">
+            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1360,22 +1362,22 @@ span.heroImgList {
           </button><!--
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="knight">
             <!-- <span>knight</span> -->
-          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png">
+          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="warrior">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="assassin">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="ranger">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="mage">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="manauser">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png">
+            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1411,7 +1413,7 @@ span.heroImgList {
           <tr>
             <td style="text-align: center;">
               <span v-for="key in displayMyHeroes" class="heroImgList">
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(key) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" v-on:click="app.lockHero(thisHeroData(key)._id)" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
+                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(key) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" class="lazyload" v-on:click="app.lockHero(thisHeroData(key)._id)" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
 		            <div class="top-right" v-bind:style="'display:' + isLocked(thisHeroData(key)._id)"  v-on:click="app.lockHero(thisHeroData(key)._id)">&#128274;</div>
               </span>
             </td>
@@ -1696,12 +1698,12 @@ span.heroImgList {
     <h2>{{strings.normal}}
     <br>
       <span class="center">
-    <img id="map_normal" src="./img/Raid-Normal_en.png" width="100%" type="image/png" loading="lazy"/>      
+    <img id="map_normal" src="./img/Raid-Normal_en.png" width="100%" type="image/png" class="lazyload"/>      
       </span>
       <h2>{{strings.hell}}
       <br>
       <span class="center">
-    <img id="map_hell" src="./img/Raid-Hell_en.png" width="100%" type="image/png" loading="lazy"/>          
+    <img id="map_hell" src="./img/Raid-Hell_en.png" width="100%" type="image/png" class="lazyload"/>          
       </span>
       <br><br><br><br>
     </div>
@@ -1746,7 +1748,7 @@ span.heroImgList {
       </div> <!-- prevent user from changing menu -->
       <div class="center_img box_advanced_settings" style="height:200px;width:200px">
         <div class="center_img" style="text-align:center;"> 
-          <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px"/>
+          <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px" class="lazyload"/>
           <!--<i class="fa fa-cog fa-spin" style="font-size:30px"></i><br> -->
           {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
         </div>
@@ -2614,10 +2616,10 @@ function backendCalculation(camp) {
                     if (self.HeroDB[response.data[i].team[0]]) {
                       usiTop400 += response.data[i].usi;
                       toPrint += "<tr>" +  
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
                           "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.data[i].usi/response.totale*100 + "%;'><span>" + Math.round(( (response.data[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                           "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'>" + response.data[i].morale + "</td>" +
                           "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + "</td></tr>";
@@ -2626,7 +2628,7 @@ function backendCalculation(camp) {
                   for (var i = 0; i < response.characters.length; i++) {
                     if (self.HeroDB[response.characters[i].character]) {
                       toPrintChar += "<tr>" +  
-                        `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                        `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
                         "<td style='width: 80vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.characters[i].usi/response.totale*100 + "%;'><span>" + Math.round((( response.characters[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                         "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.characters[i].usi +"</td></tr>";
                     };
