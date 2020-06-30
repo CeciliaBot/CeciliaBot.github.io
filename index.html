@@ -64,6 +64,12 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
+/* Disable outline on click (focus-visible is not supported by chrome)
+*:focus:not(.focus-visible) {
+  outline: none;
+}
+*/
+
 /* Set a style for all buttons */
 .button_login {
   background-color: #4CAF50;
@@ -293,11 +299,11 @@ span.heroImgList {
 .search_hero_filter.active { /* tasto premuto*/
   background-color: var(--search-border-color);
   color: white;
-} 
-
+  outline: none;
+}
 .box_advanced_settings {
 	background: var(--search-primary-color);
-  	color: var(--font-color);
+  color: var(--font-color);
 	border-radius: 15px;
 }
 
@@ -1305,7 +1311,11 @@ span.heroImgList {
 
     </div>
     <div id="manage_window" style="display:none;">
-      <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.i_tuoi_eroi}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('manage_window', 'manage_heroes_help')"></i> <font style="position:relative;top:0;color:red;font-size:12px;">({{rosterLength}})</font></span>
+      <h2>
+        <span style="position:relative;top:10px;vertical-align: middle">{{strings.i_tuoi_eroi}}
+          <span style="display: inline-block; background: rgb(250,0,80); border-radius: 4px; min-width: 40px; height: 25px; padding: 4px; text-align: center; color: white; font-size: 20px;">{{rosterLength}}</span>
+          <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('manage_window', 'manage_heroes_help')"></i> 
+        </span>
           <div style="display: inline-block;">
             <input type="text" id="inputInMyHeroes" class="search_hero_filter searchBox" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
             <button class="search_input"><i class="fa fa-search" aria-hidden="true"></i></button>
