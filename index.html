@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/plugins/attrchange/ls.attrchange.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" async>
     
     
@@ -208,6 +209,11 @@ span.heroImgList {
 }
 .heroInTeam {
   background-color:green;
+}
+
+/* Broken image symbol */
+img.lazyload:not([src]) {
+	visibility: hidden;
 }
   
 /* The Close Button (x) */
@@ -1199,13 +1205,13 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="3">
-            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
+            <div><i>3</i><img data-src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="4">
-            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
+            <div><i>4</i><img data-src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="5">
-            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
+            <div><i>5</i><img data-src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button>
         </div>
         <div class="search_hero_area">
@@ -1213,19 +1219,19 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="fire">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="ice">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="wind">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="light">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="dark">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1234,22 +1240,22 @@ span.heroImgList {
           </button><!--
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="knight">
             <!-- <span>knight</span> -->
-          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" class="lazyload">
+          <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="warrior">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="assassin">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="ranger">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="mage">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="manauser">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1279,7 +1285,7 @@ span.heroImgList {
             <td style="text-align: center;">
               <span v-for="key in displayList" class="heroImgList">
                 <!--<div class="fa fa-check-circle top-left" v-bind:style="'font-size:38px;color:green;display:' + isInTeam(thisHeroData(key).name)"></div>-->
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" class="lazyload" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+                <img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" class="lazyload" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <div class="top-left" v-bind:style="'font-size:38px;display:' + isInTeam(thisHeroData(key)._id)">✔</div>
               </span>
             </td>
@@ -1291,7 +1297,7 @@ span.heroImgList {
           <tr v-for="key in displayList">
             <td>
               <div class="hero_potrait">
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" class="lazyload" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+                <img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" class="lazyload" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
 		            <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
 		            <template v-if="isInTeam(thisHeroData(key)._id) === 'none'">  <!-- già aggiunto -->
                   <span v-on:click="addHero(thisHeroData(key)._id)" class="fa fa-plus displaylistTableIcons">   </span>
@@ -1327,13 +1333,13 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="3">
-            <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
+            <div><i>3</i><img data-src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="4">
-            <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
+            <div><i>4</i><img data-src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button><!-- 
           --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="5">
-            <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
+            <div><i>5</i><img data-src="https://assets.epicsevendb.com/star/cm_icon_star.png" class="lazyload" /></div>
           </button>
         </div>
         <div class="search_hero_area">
@@ -1341,19 +1347,19 @@ span.heroImgList {
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="fire">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="ice">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="wind">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="light">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="dark">
-            <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1362,22 +1368,22 @@ span.heroImgList {
           </button><!--
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="knight">
             <!-- <span>knight</span> -->
-          <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" class="lazyload">
+          <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="warrior">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="assassin">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="ranger">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="mage">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" class="lazyload">
           </button><!-- 
           --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="manauser">
-            <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" class="lazyload">
+            <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" class="lazyload">
           </button>
         </div>
         <div class="search_hero_area">
@@ -1413,7 +1419,7 @@ span.heroImgList {
           <tr>
             <td style="text-align: center;">
               <span v-for="key in displayMyHeroes" class="heroImgList">
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(key) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" class="lazyload" v-on:click="app.lockHero(thisHeroData(key)._id)" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
+                <img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + heroId(key) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" class="lazyload" v-on:click="app.lockHero(thisHeroData(key)._id)" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
 		            <div class="top-right" v-bind:style="'display:' + isLocked(thisHeroData(key)._id)"  v-on:click="app.lockHero(thisHeroData(key)._id)">&#128274;</div>
               </span>
             </td>
@@ -1425,7 +1431,7 @@ span.heroImgList {
          <tr v-for="key in displayMyHeroes">
            <td>
              <div class="hero_potrait">
-               <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+               <img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" class="lazyload" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
                 <span v-on:click="app.removeHero(thisHeroData(key)._id)" class="fa fa-trash displaylistTableIcons" aria-hidden="true"></span>
                 <template v-if="isLocked(thisHeroData(key)._id) === 'none'">  <!-- non lockato -->
@@ -1480,40 +1486,40 @@ span.heroImgList {
     <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.classe}}:</center>
         <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_knight_label">{{strings.knight}}</p></label>
+        <label for="checkbox_knight" class="label"> <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px; " class="lazyload"/><p style="position:relative;text-align:center;" id="checkbox_knight_label">{{strings.knight}}</p></label>
 
         <input type="checkbox" id="checkbox_thief" name="classe" value="assassin" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_thief_label">{{strings.thief}}</p></label>
+        <label for="checkbox_thief" class="label"> <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;" id="checkbox_thief_label">{{strings.thief}}</p></label>
 
         <input type="checkbox" id="checkbox_warrior" name="classe" value="warrior" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_warrior_label">{{strings.warrior}}</p></label>
+        <label for="checkbox_warrior" class="label"> <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;" id="checkbox_warrior_label">{{strings.warrior}}</p></label>
       
         <input type="checkbox" id="checkbox_ranger" name="classe" value="ranger" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_ranger_label">{{strings.ranger}}</p></label>
+        <label for="checkbox_ranger" class="label"> <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;" id="checkbox_ranger_label">{{strings.ranger}}</p></label>
       
         <input type="checkbox" id="checkbox_mage" name="classe" value="mage" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_mage_label">{{strings.mage}}</p></label>
+        <label for="checkbox_mage" class="label"> <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;" id="checkbox_mage_label">{{strings.mage}}</p></label>
       
         <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
+        <label for="checkbox_soul-weaver" class="label"> <img data-src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
     </div>
     <br><br>
     <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
       <center>{{strings.elemento}}:</center>
         <input type="checkbox" id="checkbox_fire" name="elemento" value="fire" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_fire" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.fire}}</p></label>
+        <label for="checkbox_fire" class="label"> <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{strings.fire}}</p></label>
 
         <input type="checkbox" id="checkbox_ice" name="elemento" value="ice" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_ice" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.ice}}</p></label>
+        <label for="checkbox_ice" class="label"> <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{strings.ice}}</p></label>
 
         <input type="checkbox" id="checkbox_earth" name="elemento" value="wind" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_earth" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.earth}}</p></label>
+        <label for="checkbox_earth" class="label"> <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{strings.earth}}</p></label>
       
         <input type="checkbox" id="checkbox_light" name="elemento" value="light" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_light" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.light}}</p></label>
+        <label for="checkbox_light" class="label"> <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{strings.light}}</p></label>
       
         <input type="checkbox" id="checkbox_dark" name="elemento" value="dark" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label for="checkbox_dark" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.dark}}</p></label>
+        <label for="checkbox_dark" class="label"> <img data-src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{strings.dark}}</p></label>
       
     </div>
     <br><br>
@@ -1521,7 +1527,7 @@ span.heroImgList {
       <center>{{strings.buff}}:</center>
       <span v-for="(value,key) in buffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:auto;width:120px;padding-bottom:5px;">
         <input type="checkbox" v-bind:id="'checkbox_'+ key" name="buff" v-bind:value="value.id" style="position:relative;top:0px;display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0px;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
+        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0px;"> <img v-bind:data-src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{value.name}}</p></label>
       </span>
     </div>
     <br><br>
@@ -1529,7 +1535,7 @@ span.heroImgList {
       <center>{{strings.debuff}}:</center>
       <span v-for="(value,key) in debuffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:auto;width:120px;padding-bottom:5px;">
         <input type="checkbox" v-bind:id="'checkbox_'+ key" name="debuff" v-bind:value="value.id" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
+        <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:data-src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" class="lazyload"/><p style="position:relative;text-align:center;">{{value.name}}</p></label>
         </span>
     </div>
     <br><br>
@@ -1558,10 +1564,10 @@ span.heroImgList {
             <tr v-for="(item, index) in risultati">
               <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index)"><i class="fa fa-save" aria-hidden="true" style="font-size:30px;"></i>
                 <br>{{index+1}}</td>
-              <td class="hero_potrait"><img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[0]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/></td>
-              <td class="hero_potrait"><img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[1]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
-              <td class="hero_potrait"><img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[2]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
-              <td class="hero_potrait"><img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[3]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
+              <td class="hero_potrait"><img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[0]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" class="lazyload" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/></td>
+              <td class="hero_potrait"><img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[1]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" class="lazyload" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/></td>
+              <td class="hero_potrait"><img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[2]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" class="lazyload" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/></td>
+              <td class="hero_potrait"><img v-bind:data-src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[3]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" class="lazyload" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/></td>
               <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore1)}}</a><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore2)}}</a></td>
               <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
             </tr>
@@ -1698,12 +1704,12 @@ span.heroImgList {
     <h2>{{strings.normal}}
     <br>
       <span class="center">
-    <img id="map_normal" src="./img/Raid-Normal_en.png" width="100%" type="image/png" class="lazyload"/>      
+    <img id="map_normal" data-src="./img/Raid-Normal_en.png" width="100%" type="image/png" class="lazyload"/>      
       </span>
       <h2>{{strings.hell}}
       <br>
       <span class="center">
-    <img id="map_hell" src="./img/Raid-Hell_en.png" width="100%" type="image/png" class="lazyload"/>          
+    <img id="map_hell" data-src="./img/Raid-Hell_en.png" width="100%" type="image/png" class="lazyload"/>          
       </span>
       <br><br><br><br>
     </div>
@@ -1748,7 +1754,7 @@ span.heroImgList {
       </div> <!-- prevent user from changing menu -->
       <div class="center_img box_advanced_settings" style="height:200px;width:200px">
         <div class="center_img" style="text-align:center;"> 
-          <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px" class="lazyload"/>
+          <img data-src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px" class="lazyload"/>
           <!--<i class="fa fa-cog fa-spin" style="font-size:30px"></i><br> -->
           {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
         </div>
@@ -2336,19 +2342,19 @@ function backendCalculation(camp) {
                   <form class="modal-content animate" id="menu_lingua" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:1080px">
                     <div class="imgcontainer">
                     <center>` + this.strings.language + `</center><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" width="105" height="70" onclick="app.cambiaLingua('en')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" width="105" height="70"  onclick="app.cambiaLingua('kr')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('cn')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" width="105" height="70" class="lazyload" onclick="app.cambiaLingua('en')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('kr')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('cn')">
                     <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" width="105" height="70"  onclick="app.cambiaLingua('jp')">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" width="105" height="70"  onclick="app.cambiaLingua('it')">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" width="105" height="70"  onclick="app.cambiaLingua('fr')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('jp')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('it')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('fr')">
                     <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="105" height="70"  onclick="app.cambiaLingua('es')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" width="105" height="70"  onclick="app.cambiaLingua('pt')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  onclick="app.cambiaLingua('de')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('es')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('pt')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('de')">
                     <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1000px-Flag_of_the_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('zht')">
+                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1000px-Flag_of_the_Republic_of_China.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('zht')">
                     </div>
                     <div class="container">
                       <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
@@ -2442,10 +2448,10 @@ function backendCalculation(camp) {
                 <form class="modal-content animate" id="saveCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
                     <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[0]].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[1]].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[2]].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[3]].id + `_s.png';" style="height:55px;width:55px;">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[0]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[1]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[2]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[3]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
                     <p>` + 
                       this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG1)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore1) + `<br>` +
                       this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG2)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore2) +
@@ -2464,15 +2470,15 @@ function backendCalculation(camp) {
                       </div>
                       <div style="text-align: center;">
                         <input type="checkbox" id="checkbox_queen" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_queen" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FQueen-Azumashik-284x300.png?v=1590932065337" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.queen + `</p></label>
+                        <label for="checkbox_queen" class="label" style="position:relative;top:0px;"> <img data-src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FQueen-Azumashik-284x300.png?v=1590932065337" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;" class="lazyload">` + this.strings.queen + `</p></label>
                         <input type="checkbox" id="checkbox_karkanis" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_karkanis" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FKarkanis-284x300.png?v=1590932065109" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.karkanis + `</p></label>
+                        <label for="checkbox_karkanis" class="label" style="position:relative;top:0px;"> <img data-src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FKarkanis-284x300.png?v=1590932065109" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;" class="lazyload">` + this.strings.karkanis + `</p></label>
                         <input type="checkbox" id="checkbox_juleeve" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_juleeve" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FJuleeve-284x300.png?v=1590932065054" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.juleeve + `</p></label>
+                        <label for="checkbox_juleeve" class="label" style="position:relative;top:0px;"> <img data-src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FJuleeve-284x300.png?v=1590932065054" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;" class="lazyload">` + this.strings.juleeve + `</p></label>
                         <input type="checkbox" id="checkbox_vera" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_vera" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FSecretary-Vera-284x300.png?v=1590932064989" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.vera + `</p></label>
+                        <label for="checkbox_vera" class="label" style="position:relative;top:0px;"> <img data-src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FSecretary-Vera-284x300.png?v=1590932064989" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;" class="lazyload">` + this.strings.vera + `</p></label>
                         <input type="checkbox" id="checkbox_arakahan" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_arakahan" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.arakahan + `</p></label>
+                        <label for="checkbox_arakahan" class="label" style="position:relative;top:0px;"> <img data-src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;" class="lazyload">` + this.strings.arakahan + `</p></label>
                       </div>
                       <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
                       <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.canc_btn + `</button>
@@ -2562,10 +2568,10 @@ function backendCalculation(camp) {
                   <div class="imgcontainer">
                     <span onclick="app.eliminaRisultatoSalvato('` + campName.replace(/'/g,"@_#3#9#;").replace(/"/g,'@_#3#4#;').replace(/`/g,'@_#9#6#;') + `')"><i class="fa fa-trash close" style="color: var(--font-color);"></i></span>
                     <p>` + this.strings.morale + `: ` + this.savedCamps[campName].morale + `</p>
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png';" style="height:55px;width:55px;">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
+                    <img data-src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png';" style="height:55px;width:55px;" class="lazyload">
                     <p>` + 
                       this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG1)._id) + `: `+ this.translateTopics(this.savedCamps[campName].opzioneMigliore1) + `<br>` +
                       this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG2)._id) + `: `+ this.translateTopics(this.savedCamps[campName].opzioneMigliore2) +
@@ -2616,10 +2622,10 @@ function backendCalculation(camp) {
                     if (self.HeroDB[response.data[i].team[0]]) {
                       usiTop400 += response.data[i].usi;
                       toPrint += "<tr>" +  
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img data-src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img data-src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img data-src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img data-src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
                           "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.data[i].usi/response.totale*100 + "%;'><span>" + Math.round(( (response.data[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                           "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'>" + response.data[i].morale + "</td>" +
                           "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + "</td></tr>";
@@ -2628,7 +2634,7 @@ function backendCalculation(camp) {
                   for (var i = 0; i < response.characters.length; i++) {
                     if (self.HeroDB[response.characters[i].character]) {
                       toPrintChar += "<tr>" +  
-                        `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
+                        `<td style='padding-top: 15px; padding-bottom:10px'><img data-src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;" class="lazyload"></td>` +
                         "<td style='width: 80vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.characters[i].usi/response.totale*100 + "%;'><span>" + Math.round((( response.characters[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                         "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.characters[i].usi +"</td></tr>";
                     };
@@ -3019,18 +3025,18 @@ function backendCalculation(camp) {
               if (this.lingua == "zht") {
                 var mapnormal = document.getElementById("map_normal");
                 var maphell = document.getElementById("map_hell");
-                mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
-                maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
+                mapnormal.setAttribute("data-src", "./img/Raid-Normal_zht.png");               
+                maphell.setAttribute("data-src", "./img/Raid-Hell_zht.png");
               } else if (this.lingua == "cn") {
                 var mapnormal = document.getElementById("map_normal");
                 var maphell = document.getElementById("map_hell");
-                mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
-                maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
+                mapnormal.setAttribute("data-src", "./img/Raid-Normal_zht.png");               
+                maphell.setAttribute("data-src", "./img/Raid-Hell_zht.png");
               } else {
                 var mapnormal = document.getElementById("map_normal");
                 var maphell = document.getElementById("map_hell");
-                mapnormal.setAttribute("src", "./img/Raid-Normal_en.png");               
-                maphell.setAttribute("src", "./img/Raid-Hell_en.png");
+                mapnormal.setAttribute("data-src", "./img/Raid-Normal_en.png");               
+                maphell.setAttribute("data-src", "./img/Raid-Hell_en.png");
               };
               
               //change titile and meta info
