@@ -350,6 +350,28 @@ span.heroImgList {
   background-color: #000;
 }
 
+.vertical-icon-bar {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  height: 100vh;
+  width: 90px; 
+  background-color: #555;
+}
+
+.vertical-icon-bar span { 
+  display: block; 
+  text-align: center; 
+  padding: 16px; 
+  transition: all 0.3s ease; 
+  color: white; 
+  font-size: 36px;
+}
+
+.vertical-icon-bar span:hover:not(.active-icon-bar) {
+  background-color: #000;
+}
+
 .active-icon-bar {
   background-color: #4CAF50;
 }
@@ -1925,20 +1947,7 @@ function askNotificationPermission() {
 };
 
   function setToolbarPosition (f) {
-    /*var sheet = document.styleSheets || [];
     var f = f!=undefined ? f : "hor", appDoc = document.getElementById("app");
-    var rules = f==="hor" ? {".icon-bar": "z-index: 2; position: fixed; bottom: 0; right: 0; width: 100%; background-color: #555; overflow: auto;", ".icon-bar span": "float: left; text-align: center; width: 20%; padding: 12px 0; transition: all 0.3s ease; color: white; font-size: 36px;"} : {".icon-bar": "position: fixed; top: 0; left: 0; height: 100vh;width: 90px; background-color: #555;", ".icon-bar span": "display: block; text-align: center; padding: 16px; transition: all 0.3s ease; color: white; font-size: 36px;"};
-    for (var j=sheet.length-1; j>0; j--) {
-      var documentRules = sheet[j].cssRules || sheet[j].rules;
-      for (var rule in rules) {
-        for (var i = 0; i < documentRules.length; i++) {
-          if (documentRules[i].selectorText === rule) {
-            documentRules[i].style = rules[rule];
-            break;
-          };
-        };
-      };
-    };
     if (f === "hor") {
       appDoc.style.marginLeft = "0";
       appDoc.style.marginBottom = "70px";
@@ -1947,6 +1956,7 @@ function askNotificationPermission() {
       document.getElementById("icon-bar_my_teams_window").style.display = "none";
       document.getElementById("icon-bar_raid_map_window").style.display = "none";
       document.getElementById("icon-bar_team_stats_window").style.display = "none";
+      document.getElementById("toolbar").className = "icon-bar";
     } else {
       appDoc.style.marginLeft = "90px";
       appDoc.style.marginBottom = "0";
@@ -1955,7 +1965,8 @@ function askNotificationPermission() {
       document.getElementById("icon-bar_my_teams_window").style.display = "";
       document.getElementById("icon-bar_raid_map_window").style.display = "";
       document.getElementById("icon-bar_team_stats_window").style.display = "";
-    };*/
+      document.getElementById("toolbar").className = "vertical-icon-bar";
+    };
   };
 
   if (userSettings.verticalToolbar === undefined) {
