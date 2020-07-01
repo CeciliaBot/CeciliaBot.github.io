@@ -25,6 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/plugins/attrchange/ls.attrchange.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" async>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css@3.5.0/css/flag-icon.min.css" defer>
     
     
     <style>
@@ -792,6 +793,11 @@ img.lazyload:not([src]) {
   bottom: 0;
   vertical-align: middle;
   height: 40px;
+}
+
+.flag-icon {
+ width: 105px;
+ height: 70px;
 }
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1782,7 +1788,7 @@ img.lazyload:not([src]) {
     <div id="snackbar"></div> <!-- messaggio avvisi -->
   </div><!-- div id = app -->
 
-<script defer>
+<script async>
     var userSettings = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : "{}");
     function toggleCheck() {
         if (document.getElementById("darkModeCheck").checked === true) {
@@ -2352,19 +2358,19 @@ function backendCalculation(camp) {
                   <form class="modal-content animate" id="menu_lingua" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:1080px">
                     <div class="imgcontainer">
                     <center>` + this.strings.language + `</center><br>
-                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" width="105" height="70" class="lazyload" onclick="app.cambiaLingua('en')">
-                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('kr')">
-                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('cn')">
+                    <span class="flag-icon flag-icon-gb" onclick="app.cambiaLingua('en')"></span>
+                    <span class="flag-icon flag-icon-kr" onclick="app.cambiaLingua('kr')"></span>
+                    <span class="flag-icon flag-icon-cn" onclick="app.cambiaLingua('cn')"></span>
                     <br><br>
-                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('jp')">
-                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('it')">
-                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('fr')">
+                    <span class="flag-icon flag-icon-jp" onclick="app.cambiaLingua('jp')"></span>
+                    <span class="flag-icon flag-icon-it" onclick="app.cambiaLingua('it')"></span>
+                    <span class="flag-icon flag-icon-fr" onclick="app.cambiaLingua('fr')"></span>
                     <br><br>
-                    <img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('es')">
-                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('pt')">
-                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('de')">
+                    <span class="flag-icon flag-icon-es" onclick="app.cambiaLingua('es')"></span>
+                    <span class="flag-icon flag-icon-pt" onclick="app.cambiaLingua('pt')"></span>
+                    <span class="flag-icon flag-icon-de" onclick="app.cambiaLingua('de')"></span>
                     <br><br>
-                    <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1000px-Flag_of_the_Republic_of_China.svg.png" width="105" height="70"  class="lazyload" onclick="app.cambiaLingua('zht')">
+                    <span class="flag-icon flag-icon-tw" onclick="app.cambiaLingua('zht')"></span>
                     </div>
                     <div class="container">
                       <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
