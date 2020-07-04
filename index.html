@@ -2643,7 +2643,7 @@ function backendCalculation(camp) {
                   };
                   if (usiTop400 < response.totale) {
                     toPrint += "<tr>" +
-                      "<td colspan='4' style='text-align: center;'>" + this.strings.others + "</td>" +
+                      "<td colspan='4' style='text-align: center;'>" + self.strings.others + "</td>" +
                       "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + (response.totale-usiTop400)/response.totale*100 + "%;'><span>" + Math.round(( ( (response.totale-usiTop400)/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                       "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'></td>" +
                       "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + (response.totale-usiTop400) + "</td></tr>";
