@@ -1,7 +1,7 @@
 importScripts('https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js');
 
 var AoEHeroes = ["adventurer-ras","kawerik","cerise","specter-tenebria","tempest-surin","pavel","ambitious-tywin","alencia","benevolent-romann","elena","cecilia","vildred","charlotte","baal-sezan","yufine","ravi","kayron","charles","yuna","sez","haste","tywin","lidica","aramintha","tenebria","basar","tamarinne","ludwig","bellona","luluca","zeno","vivian","lilias","dizzy","faithless-lididca","fallen-cecilia","judge-kise","arbiter-vildred","sage-baal-sezan","specimen-sez","martial-artist-ken","silver-blade-aramintha","desert-jewel-basar","seaside-bellona","silk","mercedes","armin","zerato","corvus","cartuja","schuri","dingo","clarissa","leo","purrgis","crozet","dominiel","romann","khawana","shadow-rose","celestial-mercedes","champion-zerato","blood-blade-karin","watcher-schuri","blaze-dingo","kitty-clariss","roaming-warrior-leo","auxiliary-lots","general-purrgis","ras","sven","church-of-ilryos-axe","rikoris","adlay","carrot","jena","jecht","elson","hurado","kiris","celeste","pearlhorizon","gloomyrain","kikirat-v2","chaos-sect-axe","captain-rikoris","researcher-carrot","lena"];
-var topics_results = {}; // topics combos: "Advice_Complain", "Advice_Sad Memory"....
+var topics_results = {};
 var scHeroes = {
                 "kluri": "falconer-kluri",
                 "butcher-corps-inquisitor": "chaos-inquisitor",
@@ -17,7 +17,7 @@ var scHeroes = {
                 "ras": "adventurer-ras"
                };
 
-if (!Array.prototype.flat) { // create .flat() function only if not already supported by browser
+if (!Array.prototype.flat) {
     Object.defineProperty(Array.prototype, 'flat', {
       value: function(depth = 1) {
         return this.reduce(function (flat, toFlatten) {
@@ -258,10 +258,7 @@ onmessage = function(e) {
                                   i--;
                                 } else { // Sort locked heroes in the team
                                   e.risultati[i].team.sort(function(a,b){
-                                    if(e.locked.includes(a)){
-                                      return 1;
-                                    };
-                                    return -1;
+                                    return e.locked.includes(a) ? 1 : -1;
                                   })
                                 };
                              };
