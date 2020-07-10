@@ -4717,6 +4717,11 @@ span.heroImgList {
           };
           snackbarMessage("Cannot connect to EpicSevenDB API. Using english gamedata.");
         };
+	if (!self.translatedName["dark-tyrant-tenebria"]) {
+	   if (self.lingua === "cn") self.translatedName["dark-tyrant-tenebria"] = "残月的暴君泰妮布里雅"
+	   else if (self.lingua === "zht") self.translatedName["dark-tyrant-tenebria"] = "殘月的暴君泰妮布里雅"
+	   else if (self.lingua === "fr") self.translatedName["dark-tyrant-tenebria"] = "Tenebria tyran de l'astre violine"
+	};
       }
     },
     computed: {
