@@ -24,6 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" async>
 
+    <!--<link rel="preload" href="https://i.imgur.com/NDUMMYK.png" as="image" media="(max-width: 90px)">-->
     <style>
 :root {
     --font-color: #424242;
@@ -798,6 +799,37 @@ span.heroImgList {
   vertical-align: middle;
   height: 40px;
 }
+
+
+.pagination {
+  list-style-type: none;
+  text-align: center;
+  padding: 0 0 40px 0;
+}
+
+.pagination-item {
+  display: inline-block;
+  margin: 0 auto 0 auto;
+}
+.pagination-item button {
+  background-color: var(--search-primary-color);
+  color: var(--font-color);
+  border: none;
+  height: 40px;
+  min-width: 40px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) { /* zoom pagintion buttons on small devices*/ 
+  .pagination-item button {
+    height: 60px;
+    min-width: 60px;
+  }
+}
+.pagination-item .activePage {
+  background-color: var(--search-border-color);
+  color: #ffffff;
+}
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
@@ -837,7 +869,7 @@ span.heroImgList {
               <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
               </h2>
               <div style="color: orangered; text-align: center;">
-		! 重要: 如果你拥有暗影的泰妮布里雅，请把残月的暴君泰妮布里雅皮肤也加入你的英雄列表，她们的露营对话是不同的 !
+                ! 重要: 如果你拥有暗影的泰妮布里雅，请把残月的暴君泰妮布里雅皮肤也加入你的英雄列表，她们的露营对话是不同的 !
               </div>
               <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
                 第一次使用?<br> 点击查看简明使用教程.
@@ -851,6 +883,11 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  <b>18/07/2020</b>: Pagination for Results Page<br>
+                  Results are now split into pages to save up memory on your device. Each page will show 50 teams.
+                  TODO: Add pagination to "Most saved teams" to save more memory when visiting that function.
+                </li>
                 <li style="color:#007FFF">
                   <b>21/06/2020</b> 垂直工具栏.<br>
                   宽屏设备上自动使用垂直工具栏. 可以在设置里切换回经典水平工具栏.
@@ -957,7 +994,7 @@ span.heroImgList {
               <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
               </h2>
               <div style="color: orangered; text-align: center;">
-		!  重要: 如果你擁有暗影的泰妮布里雅，請把殘月的暴君泰妮布里雅造型也加入你的英雄列表，她們的露營對話是不同的  !
+                !  重要: 如果你擁有暗影的泰妮布里雅，請把殘月的暴君泰妮布里雅造型也加入你的英雄列表，她們的露營對話是不同的  !
               </div>
               <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
                 第一次使用?<br> 點擊查看簡明使用教程.
@@ -971,6 +1008,11 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  <b>18/07/2020</b>: Pagination for Results Page<br>
+                  Results are now split into pages to save up memory on your device. Each page will show 50 teams.
+                  TODO: Add pagination to "Most saved teams" to save more memory when visiting that function.
+                </li>
                 <li style="color:#007FFF">
                   <b>21/06/2020</b> 垂直工具欄.<br>
                   寬熒幕設備上自動使用垂直工具欄. 可以在設定裏切換回經典水平工具欄.
@@ -1077,7 +1119,7 @@ span.heroImgList {
               <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
               </h2>
               <div style="color: orangered; text-align: center;">
-		! IMPORTANT: if you are using Specter Tenebria's skin please add Dark Tyrant Tenebria to your roster because they have different camping topics !
+                ! IMPORTANT: if you are using Specter Tenebria's skin please add Dark Tyrant Tenebria to your roster because they have different camping topics !
               </div>
               <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
                 First time here?<br> Click here for a quick guide.
@@ -1091,6 +1133,11 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  <b>18/07/2020</b>: Pagination for Results Page<br>
+                  Results are now split into pages to save up memory on your device. Each page will show 50 teams.
+                  TODO: Add pagination to "Most saved teams" to save more memory when visiting that function.
+                </li>
                 <li style="color:#007FFF">
                   <b>21/06/2020</b> Vertical toolbar.<br>
                   Vertical toolbar is automatically enabled on wide devices. Can be enabled and disabled on all devices from the settings menu.
@@ -1295,7 +1342,7 @@ span.heroImgList {
           <tr>
             <td style="text-align: center;">
               <span v-for="key in displayList" class="heroImgList" v-on:click="addHero(thisHeroData(key)._id)">
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="/*this.onerror=null;*/ this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <template v-if="isInTeam(thisHeroData(key)._id)===true">
                   <div class="top-left" style="font-size:38px;">✔</div>
                 </template>
@@ -1312,7 +1359,7 @@ span.heroImgList {
           <tr v-for="key in displayList">
             <td>
               <div class="hero_potrait">
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="/*this.onerror=null;*/this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
 		            <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
 		            <template v-if="isInTeam(thisHeroData(key)._id) === 'none'">  <!-- già aggiunto -->
                   <span v-on:click="addHero(thisHeroData(key)._id)" class="fa fa-plus displaylistTableIcons">   </span>
@@ -1450,7 +1497,7 @@ span.heroImgList {
                 <template v-else-if="isLocked(thisHeroData(key)._id)&& lockType===3">
                   <span style="position: absolute;margin-top: 35px;margin-left: 35px;transform: translate(-50%, -50%);font-size: 40px;" class="animate-flicker">🔒</span>
                 </template>
-                <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(key) + '_s.png'" onerror="/*this.onerror=null;*/this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
+                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
                 <template v-if="showNamesInGrid===true">
                   <p class="heroNameLabel">{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</p>
                 </template>
@@ -1464,7 +1511,7 @@ span.heroImgList {
          <tr v-for="key in displayMyHeroes">
            <td>
              <div class="hero_potrait">
-               <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + thisHeroData(key).id + '_s.png'" onerror="/*this.onerror=null;*/this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
+               <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <span>{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</span>
                 <span v-on:click="app.removeHero(thisHeroData(key)._id)" class="fa fa-trash displaylistTableIcons" aria-hidden="true"></span>
                 <template v-if="!isLocked(thisHeroData(key)._id)">  <!-- non lockato -->
@@ -1594,26 +1641,33 @@ span.heroImgList {
           <th style="white-space: nowrap;">{{strings.morale}}</th>
         </thead>
         <tbody>
-          <tr v-for="(item, index) in risultati">
-            <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index)"><i class="fa fa-save" aria-hidden="true" style="font-size:30px;"></i>
-              <br>{{index+1}}</td>
+          <tr v-for="(item, index) in risultati.slice((currentResultsPage-1)*50,(currentResultsPage-1)*50+50)">
+            <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index+(currentResultsPage-1)*50)"><i class="fa fa-save" aria-hidden="true" style="font-size:30px;"></i>
+              <br>{{index+1+(currentResultsPage-1)*50}}</td>
             <td class="hero_potrait">
-              <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[0]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/>
+              <img v-bind:src="getHeroAssets(thisHeroData(item.team[0])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]"/>
             </td>
             <td class="hero_potrait">
-              <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[1]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/>
+              <img v-bind:src="getHeroAssets(thisHeroData(item.team[1])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]"/>
             </td>
             <td class="hero_potrait">
-              <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[2]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/>
+              <img v-bind:src="getHeroAssets(thisHeroData(item.team[2])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]"/>
             </td>
             <td class="hero_potrait">
-              <img v-bind:src="'https://assets.epicsevendb.com/_source/face/' + heroId(item.team[3]) + '_s.png'" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + app.thisHeroData(this.alt).id + '_s.png';" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/>
+              <img v-bind:src="getHeroAssets(thisHeroData(item.team[3])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]"/>
             </td>
             <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore1)}}</a><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore2)}}</a></td>
             <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
           </tr>
         </tbody>
       </table>
+      <pagination
+        :total-pages="Math.ceil( risultati.length/50 )"
+        :total="risultati.length"
+        :per-page="50"
+        :current-page="currentResultsPage"
+        @pagechanged="changeResultsPage"
+      />
     </div>
 
     <div id="extras_window" style="display:none;height: 100%;">
@@ -1795,7 +1849,7 @@ span.heroImgList {
       <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')"><!--&#9876;--><i class="fa fa-book" aria-hidden="true"></i></span>
       <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="font-size:36px;max-height:65.5px;">
         <!--Calcola-->
-        <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" style="position:relative;top:-5px;margin-bottom:-10px;height:40px;" />
+        <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" alt="calculate" style="position:relative;top:-5px;margin-bottom:-10px;height:40px;" />
       </span>
       <span id="icon-bar_settings_window" onclick="setWindow('extras_window')"><!--&#9881;--><i class="fa fa-cog"></i></span>
       <span id="icon-bar_my_teams_window" onclick="setWindow('my_teams_window')" style="display: none;"><i class="fa fa-save"></i></span>
@@ -1827,6 +1881,70 @@ span.heroImgList {
     </div>
     <div id="snackbar"></div> <!-- messaggio avvisi -->
   </div><!-- div id = app -->
+
+  <script type="text/x-template" id="pagination">
+    <ul class="pagination" v-if="totalPages>1">
+      <li 
+        class="pagination-item"
+      >
+        <button 
+          type="button" 
+          @click="onClickFirstPage"
+          :disabled="isInFirstPage"
+          aria-label="Go to first page"
+        >
+          &lt;&lt;
+        </button>
+      </li>
+  
+      <li
+        class="pagination-item"
+      >
+        <button 
+          type="button" 
+          @click="onClickPreviousPage"
+          :disabled="isInFirstPage"
+          aria-label="Go to previous page"
+        >
+          &lt;
+        </button>
+      </li>
+  
+      <li v-for="page in pages" class="pagination-item">
+        <button 
+          type="button" 
+          @click="onClickPage(page.name)"
+          :disabled="page.isDisabled"
+          :class="{ activePage: isPageActive(page.name) }"
+          :aria-label="`Go to page number ${page.name}`"
+        >
+          {{ page.name }}
+        </button>
+      </li>
+  
+      <li class="pagination-item">
+        <button 
+          type="button" 
+          @click="onClickNextPage"
+          :disabled="isInLastPage"
+          aria-label="Go to next page"
+        >
+          &gt;
+        </button>
+      </li>
+  
+      <li class="pagination-item">
+        <button 
+          type="button" 
+          @click="onClickLastPage"
+          :disabled="isInLastPage"
+          aria-label="Go to last page"
+        >
+          &gt;&gt;
+        </button>
+      </li>
+    </ul>
+  </script>
 
 <script defer>
     var userSettings = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : "{}");
@@ -2252,7 +2370,6 @@ span.heroImgList {
   };
   function copyText(id){
     var elm = document.getElementById(id);
-    
     if(document.body.createTextRange) {// for Internet Explorer
       var range = document.body.createTextRange();
       range.moveToElementText(elm);
@@ -2267,10 +2384,95 @@ span.heroImgList {
       selection.addRange(range);
       document.execCommand("Copy");
     };
+    snackbarMessage("Copied to clipboard");
+  };
+
+  ///Component
+  const pagination = {
+    name: 'pagination',
+    template: '#pagination',
+      props: {
+      maxVisibleButtons: {
+        type: Number,
+        required: false,
+        default: 4
+      },
+      totalPages: {
+        type: Number,
+        required: true
+      },
+      total: {
+        type: Number,
+        required: true
+      },
+      perPage: {
+        type: Number,
+        required: true
+      },
+      currentPage: {
+        type: Number,
+        required: true
+      },
+    },
+    computed: {
+      pages() {
+        const range = [];
+        var remainingLeft = 0;
+        var remainingRight = 0;
+        var endPage = this.currentPage + Math.floor(this.maxVisibleButtons/2);
+        var startPage = this.currentPage - Math.ceil(this.maxVisibleButtons/2);
+        if ( endPage>this.totalPages ) remainingRight = endPage-this.totalPages, endPage = this.totalPages;
+        if (startPage<1) remainingLeft = Math.abs( 1-startPage ), startPage = 1;
+        endPage += remainingLeft;
+        startPage -= remainingRight;
+        if ( endPage>this.totalPages ) endPage = this.totalPages;
+        if (startPage<1) startPage = 1;
+
+        for (let i = startPage; i <= endPage; i+= 1 ) {
+          if (i>0) {
+            range.push({
+              name: i,
+              isDisabled: i === this.currentPage 
+            });
+          };
+        };
+
+        return range;
+      },
+      isInFirstPage() {
+        return this.currentPage === 1;
+      },
+      isInLastPage() {
+        return this.currentPage === this.totalPages;
+      },
+    },
+    methods: {
+      onClickFirstPage() {
+        this.$emit('pagechanged', 1);
+      },
+      onClickPreviousPage() {
+        this.$emit('pagechanged', this.currentPage - 1);
+      },
+      onClickPage(page) {
+        this.$emit('pagechanged', page);
+      },
+      onClickNextPage() {
+        this.$emit('pagechanged', this.currentPage + 1);
+      },
+      onClickLastPage() {
+        this.$emit('pagechanged', this.totalPages);    
+      },
+      isPageActive(page) {
+        return this.currentPage === page;
+      },
+    }
   };
 
     var app = new Vue({
         el: '#app',
+        components: {
+          pagination: pagination,
+        },
         data: function () {
             return {
               strings: {},
@@ -2326,6 +2528,9 @@ span.heroImgList {
               noDebuffs:  false,
               cartesian_lock: [[],[],[],[]],
               risultati: [],
+              currentResultsPage: 1,
+              topSavedCamps: [],
+              topSavedCampsPage: 1,
               savedCamps: JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}"),
               displaySavedCamps: Object.keys(JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}")),
               customizedResuts: {numeroMassimo: true, n: 200, minMorale: false, morale: 0, noImmagini: false},
@@ -2340,6 +2545,10 @@ span.heroImgList {
             };
         },
         methods: {
+          changeResultsPage: function (page) {
+            scrollTo(0,0)
+            this.currentResultsPage = page;
+          },
           heroId: function (hero) {
             return this.HeroDB[hero].id;
           },
@@ -2350,6 +2559,13 @@ span.heroImgList {
             if (this.translatedName[heroid]) {
               return this.translatedName[heroid]
             } else return this.HeroDB[heroid].name
+          },
+          getHeroAssets: function (_id, f) {
+            if (this.HeroDB[_id]){
+              if (!this.HeroDB[_id].assets) this.HeroDB[_id].assets = {icon: 'https://assets.epicsevendb.com/_source/face/' + this.thisHeroData(_id).id + '_s.png'};
+              if (f === "onerror") this.HeroDB[_id].assets = {icon: 'https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F' + this.thisHeroData(_id).id + '_s.png'};
+              return this.HeroDB[_id].assets;
+            } else return {icon: ""};
           },
           capitalize: function(string) {
               return string[0].toUpperCase() + string.slice(1).replace(/-/gi," "); 
@@ -2495,7 +2711,7 @@ span.heroImgList {
                   !this.cartesian_lock[2].includes(tmpArray[i]) &&  !this.cartesian_lock[3].includes(tmpArray[i]) 
               ) { // don't show already cartesian locked heroes
                 eroiSelezionabili += `
-                <input type="checkbox" id="checkbox_cartesian_lock_` + i + `" name="character" value="` + tmpArray[i] + `" style="display:none"><label for="checkbox_cartesian_lock_` + i + `" class="label"> <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[tmpArray[i]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[tmpArray[i]].id + `_s.png';" style="height:60px;width:60px;" /></label>`
+                <input type="checkbox" id="checkbox_cartesian_lock_` + i + `" name="character" value="` + tmpArray[i] + `" style="display:none"><label for="checkbox_cartesian_lock_` + i + `" class="label"> <img src="`+this.getHeroAssets(this.HeroDB[tmpArray[i]]._id).icon+`" onerror="this.src=app.getHeroAssets('`+this.HeroDB[tmpArray[i]]._id+`', 'onerror').icon; this.onerror=null;" style="height:60px;width:60px;" /></label>`
               };
             };
             $( "#advanced_window" ).append(`
@@ -2559,10 +2775,10 @@ span.heroImgList {
                 <form class="modal-content animate" id="saveCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
                     <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[0]].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[1]].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[2]].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[this.risultati[n].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[this.risultati[n].team[3]].id + `_s.png';" style="height:55px;width:55px;">
+                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[0]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[0]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
+                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[1]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[1]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
+                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[2]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[2]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
+                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[3]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[3]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
                     <p>` + 
                       this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG1)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore1) + `<br>` +
                       this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG2)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore2) +
@@ -2679,10 +2895,10 @@ span.heroImgList {
                   <div class="imgcontainer">
                     <span onclick="app.eliminaRisultatoSalvato('` + campName.replace(/'/g,"@_#3#9#;").replace(/"/g,'@_#3#4#;').replace(/`/g,'@_#9#6#;') + `')"><i class="fa fa-trash close" style="color: var(--font-color);"></i></span>
                     <p>` + this.strings.morale + `: ` + this.savedCamps[campName].morale + `</p>
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[0] ].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[1] ].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[2] ].id + `_s.png';" style="height:55px;width:55px;">
-                    <img src="https://assets.epicsevendb.com/_source/face/` + this.HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + this.HeroDB[ this.savedCamps[campName].team[3] ].id + `_s.png';" style="height:55px;width:55px;">
+                    <img src="`+ this.getHeroAssets(this.thisHeroData( this.savedCamps[campName].team[0] )._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.thisHeroData( this.savedCamps[campName].team[0] )._id + `', 'onerror').icon;this.onerror=null" style="height:55px;width:55px;">
+                    <img src="`+ this.getHeroAssets(this.thisHeroData( this.savedCamps[campName].team[1] )._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.thisHeroData( this.savedCamps[campName].team[1] )._id + `', 'onerror').icon;this.onerror=null" style="height:55px;width:55px;">
+                    <img src="`+ this.getHeroAssets(this.thisHeroData( this.savedCamps[campName].team[2] )._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.thisHeroData( this.savedCamps[campName].team[2] )._id + `', 'onerror').icon;this.onerror=null" style="height:55px;width:55px;">
+                    <img src="`+ this.getHeroAssets(this.thisHeroData( this.savedCamps[campName].team[3] )._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.thisHeroData( this.savedCamps[campName].team[3] )._id + `', 'onerror').icon;this.onerror=null" style="height:55px;width:55px;">
                     <p>` + 
                       this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG1)._id) + `: `+ this.translateTopics(this.savedCamps[campName].opzioneMigliore1) + `<br>` +
                       this.thisHeroTranslatedName(this.thisHeroData(this.savedCamps[campName].migliorPG2)._id) + `: `+ this.translateTopics(this.savedCamps[campName].opzioneMigliore2) +
@@ -2733,10 +2949,10 @@ span.heroImgList {
                     if (self.HeroDB[response.data[i].team[0]]) {
                       usiTop400 += response.data[i].usi;
                       toPrint += "<tr>" +  
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[0]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[0]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[1]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[1]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[2]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[2]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
-                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.data[i].team[3]].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.data[i].team[3]].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="` + self.getHeroAssets(self.HeroDB[response.data[i].team[0]]._id).icon + `" onerror="this.onerror=null;this.src=app.getHeroAssets('` + self.HeroDB[response.data[i].team[0]]._id + `', 'onerror').icon;" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="` + self.getHeroAssets(self.HeroDB[response.data[i].team[1]]._id).icon + `" onerror="this.onerror=null;this.src=app.getHeroAssets('` + self.HeroDB[response.data[i].team[1]]._id + `', 'onerror').icon;" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="` + self.getHeroAssets(self.HeroDB[response.data[i].team[2]]._id).icon + `" onerror="this.onerror=null;this.src=app.getHeroAssets('` + self.HeroDB[response.data[i].team[2]]._id + `', 'onerror').icon;" style="height:55px;width:55px;"></td>` +
+                          `<td style='padding-top: 15px; padding-bottom:10px'><img src="` + self.getHeroAssets(self.HeroDB[response.data[i].team[3]]._id).icon + `" onerror="this.onerror=null;this.src=app.getHeroAssets('` + self.HeroDB[response.data[i].team[3]]._id + `', 'onerror').icon;" style="height:55px;width:55px;"></td>` +
                           "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.data[i].usi/response.totale*100 + "%;'><span>" + Math.round(( (response.data[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                           "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'>" + response.data[i].morale + "</td>" +
                           "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.data[i].usi + "</td></tr>";
@@ -2745,7 +2961,7 @@ span.heroImgList {
                   for (var i = 0; i < response.characters.length; i++) {
                     if (self.HeroDB[response.characters[i].character]) {
                       toPrintChar += "<tr>" +  
-                        `<td style='padding-top: 15px; padding-bottom:10px'><img src="https://assets.epicsevendb.com/_source/face/` + self.HeroDB[response.characters[i].character].id + `_s.png" onerror="this.onerror=null;this.src='https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2F` + self.HeroDB[response.characters[i].character].id + `_s.png';" style="height:55px;width:55px;"></td>` +
+                        `<td style='padding-top: 15px; padding-bottom:10px'><img src="` + self.getHeroAssets(self.HeroDB[response.characters[i].character]._id).icon + `" onerror="this.onerror=null;this.src=app.getHeroAssets('` + self.HeroDB[response.characters[i].character]._id + `', 'onerror').icon;" style="height:55px;width:55px;"></td>` +
                         "<td style='width: 80vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + response.characters[i].usi/response.totale*100 + "%;'><span>" + Math.round((( response.characters[i].usi/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
                         "<td></td>" +
                         "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + response.characters[i].usi +"</td></tr>";
@@ -2755,7 +2971,6 @@ span.heroImgList {
                     toPrint += "<tr>" +
                       "<td colspan='4' style='text-align: center;'>" + self.strings.others + "</td>" +
                       "<td style='width:50vw; padding-top: 15px; padding-bottom:10px'> <div class='histogram_bar' style='width:" + (response.totale-usiTop400)/response.totale*100 + "%;'><span>" + Math.round(( ( (response.totale-usiTop400)/response.totale*100)+ Number.EPSILON) * 100) / 100 + " %</span></div></td>" +
-                      "<td style='text-align: center; padding-top: 15px; padding-bottom:10px; border-right: thin;'></td>" +
                       "<td></td>" +
                       "<td style='text-align: center; padding-top: 15px; padding-bottom:10px'>" + (response.totale-usiTop400) + "</td></tr>";
                   };
@@ -4633,12 +4848,6 @@ span.heroImgList {
             return n;
           };
       },
-      sendAllTeams: function() {
-        var uploaded = localStorage.getItem('UploadedTeams') ? localStorage.getItem('Heroes') : false;
-        if (uploaded) {
-          localStorage.removeItem("UploadedTeams"); // delete empty item
-        };
-      },
       getUserHeroesBoot: function () { // read user's local storage team
         var tmp = localStorage.getItem('Heroes') ? localStorage.getItem('Heroes') : '{}';
         tmp = JSON.parse(tmp);
@@ -4691,7 +4900,6 @@ span.heroImgList {
             this.getUserHeroesURL(urlParams.get("camproster"));
             window.history.pushState("", "", window.location.pathname); // remove ?camproster= from the URL to avoid accidental refreshes replacing your current team
           };
-          this.sendAllTeams();
           this.impostaLingua();
           this.inizializzaione();
           this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
@@ -4717,10 +4925,10 @@ span.heroImgList {
           };
           snackbarMessage("Cannot connect to EpicSevenDB API. Using english gamedata.");
         };
-	   if (this.lingua === "cn") {this.translatedName["dark-tyrant-tenebria"] = "残月的暴君泰妮布里雅"}
-	   else if (this.lingua === "zht") {this.translatedName["dark-tyrant-tenebria"] = "殘月的暴君泰妮布里雅"}
-	   else if (this.lingua === "fr") {this.translatedName["dark-tyrant-tenebria"] = "Tenebria tyran de l'astre violine"}
-	   else {this.translatedName["dark-tyrant-tenebria"] = "Dark Tyrant Tenebria"};
+        if (this.lingua === "cn") this.translatedName["dark-tyrant-tenebria"] = "残月的暴君泰妮布里雅"
+        else if (this.lingua === "zht") this.translatedName["dark-tyrant-tenebria"] = "殘月的暴君泰妮布里雅"
+        else if (this.lingua === "fr") this.translatedName["dark-tyrant-tenebria"] = "Tenebria tyran de l'astre violine"
+        else this.translatedName["dark-tyrant-tenebria"] = "Dark Tyrant Tenebria";
       }
     },
     computed: {
@@ -4759,7 +4967,10 @@ span.heroImgList {
           };
       }
   }, // computed
-  watcher: {
+  watch: {
+    risultati: function () { // when new results are calculated go back to page 1
+      this.currentResultsPage = 1;
+    }
   },
   mounted () {
 	  this.boot();
