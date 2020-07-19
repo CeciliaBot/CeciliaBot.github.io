@@ -884,6 +884,11 @@ span.heroImgList {
             <div id="whats_new_content" style="display: none;">
               <ul>
                 <li style="color:rgb(0, 148, 32)">
+                  <b>19/07/2020</b>: Bug fix<br>
+                  After removing a hero the next hero in the list would automatically get locked or the removed hero could lock itself.
+                  Fixed by delaying the function by 1ms after the left click is released.
+                </li>
+                <li style="color:rgb(0, 148, 32)">
                   <b>18/07/2020</b>: Pagination for Results Page<br>
                   Results are now split into pages to save up memory on your device. Each page will show 50 teams.
                   TODO: Add pagination to "Most saved teams" to save more memory when visiting that function.
@@ -1009,6 +1014,11 @@ span.heroImgList {
             <div id="whats_new_content" style="display: none;">
               <ul>
                 <li style="color:rgb(0, 148, 32)">
+                  <b>19/07/2020</b>: Bug fix<br>
+                  After removing a hero the next hero in the list would automatically get locked or the removed hero could lock itself.
+                  Fixed by delaying the function by 1ms after the left click is released.
+                </li>
+                <li style="color:rgb(0, 148, 32)">
                   <b>18/07/2020</b>: Pagination for Results Page<br>
                   Results are now split into pages to save up memory on your device. Each page will show 50 teams.
                   TODO: Add pagination to "Most saved teams" to save more memory when visiting that function.
@@ -1133,6 +1143,11 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  <b>19/07/2020</b>: Bug fix<br>
+                  After removing a hero the next hero in the list would automatically get locked or the removed hero could lock itself.
+                  Fixed by delaying the function by 1ms after the left click is released.
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>18/07/2020</b>: Pagination for Results Page<br>
                   Results are now split into pages to save up memory on your device. Each page will show 50 teams.
@@ -1484,7 +1499,7 @@ span.heroImgList {
         <table id="myHeroes">
           <tr>
             <td style="text-align: center;">
-              <span v-for="key in displayMyHeroes" class="heroImgList" v-on:click="app.lockHero(thisHeroData(key)._id)">
+              <span v-for="key in displayMyHeroes" class="heroImgList" v-on:click="lockHero(thisHeroData(key)._id)">
                 <!-- Classco -->
                 <template v-if="isLocked(thisHeroData(key)._id) && lockType===1">
                   <div class="top-right animate-flicker">&#128274;</div>
@@ -1497,7 +1512,7 @@ span.heroImgList {
                 <template v-else-if="isLocked(thisHeroData(key)._id)&& lockType===3">
                   <span style="position: absolute;margin-top: 35px;margin-left: 35px;transform: translate(-50%, -50%);font-size: 40px;" class="animate-flicker">🔒</span>
                 </template>
-                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="app.removeHero(thisHeroData(key)._id)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
+                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="setTimeout(function() {removeHero(thisHeroData(key)._id)}, 1)" style="z-index: 1;" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span> <!-- z-index 1 to avoid self lock when removing and timeout 1 to avoid locking the next hero when removing a hero-->
                 <template v-if="showNamesInGrid===true">
                   <p class="heroNameLabel">{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</p>
                 </template>
@@ -2628,12 +2643,12 @@ span.heroImgList {
               return false;
           },
           lockHero: function(hero) {
-             if (!this.locked.includes(hero)) { // lock
-               if (this.locked.length < 4) {
+            if (!this.locked.includes(hero)) { // lock
+              if (this.locked.length < 4) {
                 this.locked.push(hero);
-               } else {
-                 snackbarMessage(this.strings.cant_lock_more_heroes)
-               }
+              } else {
+                snackbarMessage(this.strings.cant_lock_more_heroes)
+              }
             } else { // già locked -> sblocca
               this.locked.splice(this.locked.indexOf(hero), 1)
             };
@@ -4974,7 +4989,8 @@ span.heroImgList {
   },
   mounted () {
 	  this.boot();
-  }
+  },
+  created () {console.log("created")}
 });
 
   var camperinoMessage = function (e) {
