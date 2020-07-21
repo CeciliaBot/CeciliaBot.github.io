@@ -1,6 +1,7 @@
 importScripts('https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js');
 
 var AoEHeroes = ["mui","adventurer-ras","kawerik","cerise","dark-tyrant-tenebria","specter-tenebria","tempest-surin","pavel","ambitious-tywin","alencia","benevolent-romann","elena","cecilia","vildred","charlotte","baal-sezan","yufine","ravi","kayron","charles","yuna","sez","haste","tywin","lidica","aramintha","tenebria","basar","tamarinne","ludwig","bellona","luluca","zeno","vivian","lilias","dizzy","faithless-lididca","fallen-cecilia","judge-kise","arbiter-vildred","sage-baal-sezan","specimen-sez","martial-artist-ken","silver-blade-aramintha","desert-jewel-basar","seaside-bellona","silk","mercedes","armin","zerato","corvus","cartuja","schuri","dingo","clarissa","leo","purrgis","crozet","dominiel","romann","khawana","shadow-rose","celestial-mercedes","champion-zerato","blood-blade-karin","watcher-schuri","blaze-dingo","kitty-clariss","roaming-warrior-leo","auxiliary-lots","general-purrgis","ras","sven","church-of-ilryos-axe","rikoris","adlay","carrot","jena","jecht","elson","hurado","kiris","celeste","pearlhorizon","gloomyrain","kikirat-v2","chaos-sect-axe","captain-rikoris","researcher-carrot","lena"];
+var dispelHeroes = ["adventurer-ras","alencia","arowell","basar","bask","benevolent-romann","blood-moon-haste","butcher-corps-inquisitor","captain-rikoris","carmainerose","chaos-inquisitor","charles","chloe","crescent-moon-rin","elphelt","faithless-lidica","falconer-kluri","hurado","iseria","kawerik","kikirat-v2","kitty-clarissa","lidica","ludwig","melissa","mui","ras","rikoris","rin","romann","sage-baal-sezan","shadow-rose","sol","tamarinne","taranor-royal-guard","tywin","watcher-schuri","yufine"];
 var topics_results = {};
 var scHeroes = {
                 "kluri": "falconer-kluri",
@@ -127,7 +128,7 @@ onmessage = function(e) {
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate
                         var useExperimental = true; // set to false if new formula is not working correctly
-                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true) hasAdvSettings = true;
+                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel) hasAdvSettings = true;
                         if (useExperimental && hasAdvSettings === false && e.locked.length <= 1) { // use only with no advanced settings
                             if (Object.keys(topics_results).length === 0) { // create topics combos (once for page visit)
                                 for (var hero_id in HeroDB) {
@@ -267,13 +268,14 @@ onmessage = function(e) {
                             Combinatorics.bigCombination(campList,4-e.locked.length).forEach(teamComb => {
                                         if (teamComb.length>4 || e.locked.length == 4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
                                         var team = [].concat(teamComb, e.locked);
-                                        let elementoFiltro = e.preferenzeRisultati.lockedMatter === false ? teamComb : team;
+                                        let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb;
                                         let elementoRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat();
                                         let buffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat();
                                         let debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat();
                                         let S1debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].skills[0].debuff }).flat();
                                         let classeRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat();
                                         let AoE_inTeam = AoEHeroes.some(i => elementoFiltro.includes(i));
+                                        let dispel_inTeam = dispelHeroes.some(i => elementoFiltro.includes(i));
                                         if (!checkScDupe(team) &&
                                             e.locked.every(i => team.includes(i)) &&
                                             e.classe.every(i => classeRisultati.includes(i)) && 
@@ -282,7 +284,8 @@ onmessage = function(e) {
                                             e.buffs.every(i => buffsRisultati.includes(i)) &&
                                             (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
                                             (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)) &&
-                                            (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  )
+                                            (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  ) &&
+                                            (!e.mustIncludeDispel || (e.mustIncludeDispel && dispel_inTeam ))
                                         ){
                                             let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
                                             if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
@@ -335,13 +338,14 @@ onmessage = function(e) {
                                     if (e.cartesianLock.length + e.locked.length>3) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
                                     //teamComb = teamComb.concat(cartesianLocked);
                                     var team = [].concat(teamComb, cartesianLocked, e.locked);
-                                    let elementoFiltro = e.preferenzeRisultati.lockedMatter === false ? teamComb : team; // applica filtro solo ai eroi non lockati
+                                    let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb; // applica filtro solo ai eroi non lockati
                                     let elementoRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat();
                                     let buffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat();
                                     let debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat();
                                     let S1debuffsRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].skills[0].debuff }).flat();
                                     let classeRisultati = elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat();
                                     let AoE_inTeam = AoEHeroes.some(i => elementoFiltro.includes(i));
+                                    let dispel_inTeam = dispelHeroes.some(i => elementoFiltro.includes(i));
                                     if (!checkScDupe(team) &&
                                         e.locked.every(i => team.includes(i)) &&
                                         e.classe.every(i => classeRisultati.includes(i)) && 
@@ -350,7 +354,8 @@ onmessage = function(e) {
                                         e.buffs.every(i => buffsRisultati.includes(i)) &&
                                         (e.AoE === false || (e.AoE === true && AoE_inTeam )) &&
                                         (e.noS1debuffs === false || (e.noS1debuffs === true &&  S1debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)) &&
-                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  )
+                                        (e.noDebuffs === false || (e.noDebuffs === true && debuffsRisultati.filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length === 0)  ) &&
+                                        (!e.mustIncludeDispel || (e.mustIncludeDispel && dispel_inTeam ))
                                     ){
                                         let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team)
                                         if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {

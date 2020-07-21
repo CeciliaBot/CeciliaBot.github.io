@@ -883,6 +883,12 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:#007FFF">
+                  <b>21/07/2020</b>: Team must include dispel<br>
+                  You can check this option if you want your teams to have at least one hero that can remove buffs from enemies.<br>
+                  Note: Chloe is tagged as dispeller because of her EE (can remove buffs with S2), I also tagged cerise and some other heroes that reduce buff duration because there are just a few heroes that can dispel.<br>
+                  A warning will now appear in the "Advanced settings" to warn you about your team size and the time needed to calculate all combinations with advanced settings on (locking heroes can reduce the time required). This tool can calculate all combinations without crashing but it will require a long time. If you don't care and want to try anyway you can activate notifications in the settings window to let you know we results are ready :P .
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>19/07/2020</b>: Bug 修复<br>
                   删除一个英雄时会自动锁定列表中的下一个英雄或者锁定删除掉的英雄.
@@ -1013,6 +1019,12 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:#007FFF">
+                  <b>21/07/2020</b>: Team must include dispel<br>
+                  You can check this option if you want your teams to have at least one hero that can remove buffs from enemies.<br>
+                  Note: Chloe is tagged as dispeller because of her EE (can remove buffs with S2), I also tagged cerise and some other heroes that reduce buff duration because there are just a few heroes that can dispel.<br>
+                  A warning will now appear in the "Advanced settings" to warn you about your team size and the time needed to calculate all combinations with advanced settings on (locking heroes can reduce the time required). This tool can calculate all combinations without crashing but it will require a long time. If you don't care and want to try anyway you can activate notifications in the settings window to let you know we results are ready :P .
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>19/07/2020</b>: Bug 修複<br>
                   刪除一個英雄時會自動鎖定列錶中的下一個英雄或者鎖定刪除掉的英雄.
@@ -1143,9 +1155,15 @@ span.heroImgList {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:#007FFF">
+                  <b>21/07/2020</b>: Team must include dispel<br>
+                  You can check this option if you want your teams to have at least one hero that can remove buffs from enemies.<br>
+                  Note: Chloe is tagged as dispeller because of her EE (can remove buffs with S2), I also tagged cerise and some other heroes that reduce buff duration because there are just a few heroes that can dispel.<br>
+                  A warning will now appear in the "Advanced settings" to warn you about your team size and the time needed to calculate all combinations with advanced settings on (locking heroes can reduce the time required). This tool can calculate all combinations without crashing but it will require a long time. If you don't care and want to try anyway you can activate notifications in the settings window to let you know we results are ready :P .
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>19/07/2020</b>: Bug fix<br>
-                  After removing a hero the next hero in the list would automatically get locked or the removed hero could lock itself.
+                  After removing a hero the next hero on the list would automatically get locked or the removed hero could lock itself.<br>
                   Fixed by delaying the function by 1ms after the left click is released.
                 </li>
                 <li style="color:rgb(0, 148, 32)">
@@ -1543,6 +1561,10 @@ span.heroImgList {
     </div>
 
     <div id="advanced_window" style="display:none;">
+      <div v-if="rosterLength>69 && locked.length===0" style="background-color: khaki;padding: 10px;border-radius: 4px;text-align: center;color: black;">
+        <p style="margin:0 0 8px 0"><b>{{ strings.warn_tsize_adv_title }}</b></p>
+        <p style="margin: 0; white-space: pre-wrap; font-size: 15px;">{{ strings.warn_tsize_adv_details }}</p>
+      </div>
       <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
       <div style="float: right;">
         <button class="search_hero_filter" onclick="document.getElementById('impostazioni_risultati').style.display='block'" style="font-size:16px; width:70px;" name="sort_by"><i class="fa fa-cog" aria-hidden="true"></i></button>
@@ -1577,7 +1599,9 @@ span.heroImgList {
       <input type="checkbox" id="noS1debuffs" name="noS1debuffs" value="noS1debuffs" onclick="app.aggiornaImposatazioniAvanzate()">
       <label for="noS1debuffs">{{strings.no_s1_debuffs}}</label><br>
       <input type="checkbox" id="noDebuffs" name="noDebuffs" value="noDebuffs" onclick="app.aggiornaImposatazioniAvanzate()">
-      <label for="noDebuffs">{{strings.no_debuffs}}</label><br><br>
+      <label for="noDebuffs">{{strings.no_debuffs}}</label><br>
+      <input type="checkbox" id="mustIncludeDispel" name="mustIncludeDispel" value="mustIncludeDispel" onclick="app.aggiornaImposatazioniAvanzate()">
+      <label for="mustIncludeDispel">{{strings.must_include_dispel}}</label><br><br>
       <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
         <center>{{strings.classe}}:</center>
           <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
@@ -2541,6 +2565,7 @@ span.heroImgList {
               AoE: false,
               noS1debuffs: false,
               noDebuffs:  false,
+              mustIncludeDispel: false,
               cartesian_lock: [[],[],[],[]],
               risultati: [],
               currentResultsPage: 1,
@@ -3331,6 +3356,11 @@ span.heroImgList {
                 {
                     this.noDebuffs = true;
                 } else this.noDebuffs = false;
+
+                if (document.getElementById("mustIncludeDispel").checked)
+                {
+                  this.mustIncludeDispel = true;
+                } else this.mustIncludeDispel = false;
             },
             impostaLingua: function () {
               var lingua = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : '{"lingua":"*"}').lingua;
@@ -3433,6 +3463,8 @@ span.heroImgList {
                   cerca_eroe: "Cerca eroe..",
                   cant_lock_more_heroes: "Hai già 4 eroi in squadra",
                   impostazioni_avanzate: "Impostazioni Avanzate",
+                  warn_tsize_adv_title: "Hai un sacco di eroi e nessun eroe bloccato",
+                  warn_tsize_adv_details: "Attivando le impostazioni avanzate aumenterà il tempo richiesto per il calcolo delle combinazioni. \nPuoi ridurre il tempo richiesto per il calcolo bloccando un personaggio.",
                   numero_massimo_risultati: "Numero massimo di risultati",
                   morale_minimo_risultati: "Morale minimo",
                   includi_locked_in_adv: "Gli eroi bloccati contano al fine del raggiungimento delle condizioni avanzate",
@@ -3440,6 +3472,7 @@ span.heroImgList {
                   deve_contenere_AoE: "Team deve contenere AoE",
                   no_s1_debuffs: "No S1 Debuffs (Esclusi: Provoke, Sleep, Stun e Poison)",
                   no_debuffs: "No Debuffs (Esclusi: Provoke, Sleep, Stun e Poison)",
+                  must_include_dispel: "Team deve contenere dispel (Rimuovi o riduci la durata dei buff dal nemico)",
                   classe: "Classe",
                   knight: "Knight",
                   warrior: "Warrior",
@@ -3538,6 +3571,8 @@ span.heroImgList {
                   cant_lock_more_heroes: "不能锁定超过4个英雄",
                   cerca_eroe: "搜索..",
                   impostazioni_avanzate: "高级设置",
+                  warn_tsize_adv_title: "You have a large roster and no heroes locked",
+                  warn_tsize_adv_details: "Activating any advanced features will increse the required time to calculate all the combinations. \nYou can reduce the required time by locking a hero.",
                   numero_massimo_risultati: "显示结果数量",
                   morale_minimo_risultati: "最低心情限制",
                   includi_locked_in_adv: "高级设置包括锁定的英雄",
@@ -3545,6 +3580,7 @@ span.heroImgList {
                   deve_contenere_AoE: "队伍必须包含 AoE",
                   no_s1_debuffs: "S1不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
                   no_debuffs: "技能不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
+                  must_include_dispel: "Team must include dispel (remove enemy's buffs or reduce their duration)",
                   classe: "职业",
                   knight: "骑士",
                   warrior: "战士",
@@ -3643,6 +3679,8 @@ span.heroImgList {
                   cant_lock_more_heroes: "不能鎖定超過4個英雄！",
                   cerca_eroe: "搜索..",
                   impostazioni_avanzate: "高級設定",
+                  warn_tsize_adv_title: "You have a large roster and no heroes locked",
+                  warn_tsize_adv_details: "Activating any advanced features will increse the required time to calculate all the combinations. \nYou can reduce the required time by locking a hero.",
                   numero_massimo_risultati: "顯示結果數量",
                   morale_minimo_risultati: "最低心情限制",
                   includi_locked_in_adv: "高級設置包括鎖定的英雄",
@@ -3650,6 +3688,7 @@ span.heroImgList {
                   deve_contenere_AoE: "隊伍必須包含 AoE",
                   no_s1_debuffs: "S1不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
                   no_debuffs: "技能不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
+                  must_include_dispel: "Team must include dispel (remove enemy's buffs or reduce their duration)",
                   classe: "職階",
                   knight: "騎士",
                   warrior: "戰士",
@@ -3748,6 +3787,8 @@ span.heroImgList {
                   cant_lock_more_heroes: "Impossible de verrouiller plus de 4 héros",
                   cerca_eroe: "Rechercher..",
                   impostazioni_avanzate: "Paramètre avancé",
+                  warn_tsize_adv_title: "You have a large roster and no heroes locked",
+                  warn_tsize_adv_details: "Activating any advanced features will increse the required time to calculate all the combinations. \nYou can reduce the required time by locking a hero.",
                   numero_massimo_risultati: "Nombre maximum de résultats de camping",
                   morale_minimo_risultati: "Minimum morale",
                   includi_locked_in_adv: "Héros verrouillés inclus dans les paramètres avancés",
@@ -3755,6 +3796,7 @@ span.heroImgList {
                   deve_contenere_AoE: "Equipe doit contenir AoE",
                   no_s1_debuffs: "S1 sans Debuff (Sauf: Provoquer, Sommeil, Etourdir et Poison)",
                   no_debuffs: "Non Debuff (Sauf: Provoquer, Sommeil, Etourdir et Poison)",
+                  must_include_dispel: "Team must include dispel (remove enemy's buffs or reduce their duration)",
                   classe: "Classe",
                   elemento: "Elément",
                   buff: "Buff",
@@ -3843,6 +3885,8 @@ span.heroImgList {
                   cant_lock_more_heroes: "Can't lock more than 4 heroes",
                   cerca_eroe: "Search..",
                   impostazioni_avanzate: "Advanced settings",
+                  warn_tsize_adv_title: "You have a large roster and no heroes locked",
+                  warn_tsize_adv_details: "Activating any advanced features will increse the required time to calculate all the combinations. \nYou can reduce the required time by locking a hero.",
                   numero_massimo_risultati: "Maximum number of camping results",
                   morale_minimo_risultati: "Minimum morale",
                   includi_locked_in_adv: "Locked heroes count towards the fulfillment of the selected advanced settings",
@@ -3850,6 +3894,7 @@ span.heroImgList {
                   deve_contenere_AoE: "Team must have AoE",
                   no_s1_debuffs: "No S1 Debuffs (Except: Provoke, Sleep, Stun and Poison)",
                   no_debuffs: "No Debuffs (Except: Provoke, Sleep, Stun and Posion)",
+                  must_include_dispel: "Team must include dispel (remove enemy's buffs or reduce their duration)",
                   classe: "Class",
                   knight: "Knight",
                   warrior: "Warrior",
@@ -4962,6 +5007,7 @@ span.heroImgList {
             this.AoE;
             this.noS1debuffs;
             this.noDebuffs;
+            this.mustIncludeDispel;
             this.customizedResuts;
            if (Object.keys(this.myHeroesList).length > 3) {
             this.isLoadingResults = true; // mostra animazione di caricamento
@@ -4973,7 +5019,7 @@ span.heroImgList {
                 };
             };
             try {
-              camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
+              camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, mustIncludeDispel: this.mustIncludeDispel, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
               this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
             } catch (err) {
               this.isLoadingResults = false; // remove angelica loading
