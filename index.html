@@ -869,7 +869,7 @@ span.heroImgList {
               <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
               </h2>
               <div style="color: orangered; text-align: center;">
-                ! 重要: 如果你拥有暗影的泰妮布里雅，请把残月的暴君泰妮布里雅皮肤也加入你的英雄列表，她们的露营对话是不同的 !
+                ! Dark Tyrant Tenebria has been removed from this tool and your roster because her original camplines have been restored !<br>If you have saved teams that include S. Tenebria's skin you have to manually delete them.
               </div>
               <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
                 第一次使用?<br> 点击查看简明使用教程.
@@ -1005,7 +1005,7 @@ span.heroImgList {
               <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
               </h2>
               <div style="color: orangered; text-align: center;">
-                !  重要: 如果你擁有暗影的泰妮布里雅，請把殘月的暴君泰妮布里雅造型也加入你的英雄列表，她們的露營對話是不同的  !
+                ! Dark Tyrant Tenebria has been removed from this tool and your roster because her original camplines have been restored !<br>If you have saved teams that include S. Tenebria's skin you have to manually delete them.
               </div>
               <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
                 第一次使用?<br> 點擊查看簡明使用教程.
@@ -1140,7 +1140,7 @@ span.heroImgList {
               <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
               </h2>
               <div style="color: orangered; text-align: center;">
-                ! IMPORTANT: if you are using Specter Tenebria's skin please add Dark Tyrant Tenebria to your roster because they have different camping topics !
+                ! Dark Tyrant Tenebria has been removed from this tool and your roster because her original camplines have been restored !<br>If you have saved teams that include S. Tenebria's skin you have to manually delete them.
               </div>
               <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
                 First time here?<br> Click here for a quick guide.
@@ -4924,8 +4924,9 @@ span.heroImgList {
           };
         };
         this.myHeroesList = tmp;
-        this.displayMyHeroes = Object.keys(tmp);
-        this.rosterLength = Object.keys(tmp).length;
+        if (this.myHeroesList['dark-tyrant-tenebria']) delete this.myHeroesList['dark-tyrant-tenebria'];
+        this.displayMyHeroes = Object.keys(this.myHeroesList);
+        this.rosterLength = Object.keys(this.myHeroesList).length;
         //this.updateUserData(); // write data to local storage
       }, 
       getUserHeroesURL(e) {
@@ -4936,6 +4937,7 @@ span.heroImgList {
               this.myHeroesList[roster[i]] = this.HeroDB[roster[i]];
             };
           };
+          if (this.myHeroesList['dark-tyrant-tenebria']) delete this.myHeroesList['dark-tyrant-tenebria'];
           this.displayMyHeroes = Object.keys(this.myHeroesList);
           this.rosterLength = Object.keys(this.myHeroesList).length;
           this.updateUserData();
@@ -4953,6 +4955,7 @@ span.heroImgList {
           getDbEng.send( null );
           this.HeroDB = JSON.parse(getDbEng.response);
           this.sortedHeroDB = Object.keys(this.HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
+          this.sortedHeroDB.splice(this.sortedHeroDB.indexOf("dark-tyrant-tenebria"), 1); // remove s tenebria's skin
           if (!urlParams.get("camproster")) { // get roster from file
             this.getUserHeroesBoot();
           } else {// get roster from url
