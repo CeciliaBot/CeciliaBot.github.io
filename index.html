@@ -27,23 +27,30 @@
     <!--<link rel="preload" href="https://i.imgur.com/NDUMMYK.png" as="image" media="(max-width: 90px)">-->
     <style>
 :root {
-    --font-color: #424242;
-    --bg-color: #fff;
-    --search-primary-color:#f1f1f1;
-    --search-border-color: #666666;
-    --colore-check-eroi:green;
+	--font-color: #424242;
+	--bg-color: #fff;
+  --bg-color-secondary: #f1f1f1;
+	--search-primary-color: #f1f1f1;
+	--search-border-color: #666666;
+	--colore-check-eroi: green;
+	--icon-bar: #555;
+	--icon-bar-alt: #36393f;
+	--icon-bar-active: #4CAF50;
 }
 
 
   /* variabili del tema*/
 [data-theme="dark"] {
-    --font-color: #A1AEBD;
-    --bg-color: #252B35;
-    --search-primary-color:#1e2126;
-    --search-border-color: #131417;
-    --colore-check-eroi:red;
+  --font-color: #A1AEBD;
+  --bg-color: #252B35;
+  --bg-color-secondary: #1e2126;
+  --search-primary-color: #181C22;
+  --search-border-color: #0e0f11;
+  --colore-check-eroi: red;
+  --icon-bar: #1e2126;
+  --icon-bar-alt: #252B35;
+  --icon-bar-active: #4CAF50;
 }
-  
   
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -285,10 +292,11 @@ span.heroImgList {
   top:0px;
   display: inline-block;
   font-size: 10px;
-  border-style: ridge;
+  /*border-style: ridge;
   border-width: thin;
-  border-color: var(--search-border-color);
+  border-color: var(--search-border-color);*/
   vertical-align: top;
+  outline: none;
 } 
 .search_hero_filter div { /* per il testo dei tasti */
   text-align: center;
@@ -340,7 +348,7 @@ span.heroImgList {
   border-radius: 0 6px 6px 0;
 }
   
-  
+/* Icon Bar CSS */
 .icon-bar {
   position:fixed;
   bottom: 0;
@@ -359,6 +367,12 @@ span.heroImgList {
   color: white;
   font-size: 36px;
 }
+icon-bar span img {
+  position: relative;
+  top: -5px;
+  margin-bottom: -10px;
+  height: 40px;
+}
 
 .icon-bar span:hover:not(.active-icon-bar) {
   background-color: #000;
@@ -370,39 +384,43 @@ span.heroImgList {
   left: 0; 
   height: 100vh;
   width: 90px; 
-  background-color: #555;
+  background-color: var(--icon-bar);
+  overflow: scroll;
+  overscroll-behavior: contain;
+  scrollbar-width: none; /* FireFox */
+  -ms-overflow-style: none;
+}
+.vertical-icon-bar::-webkit-scrollbar { /*Chrome*/
+  display: none;
 }
 
-.vertical-icon-bar span { 
-  display: block; 
-  text-align: center; 
-  padding: 16px; 
-  transition: all 0.3s ease; 
-  color: white; 
+.vertical-icon-bar span {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: white;
   font-size: 36px;
+  width: 75px;
+  height: 75px;
+  background-color: var(--icon-bar-alt);
+  margin-left: 8px;
+  margin-top: 10px;
+  border-radius: 28px;
 }
 
 .vertical-icon-bar span:hover:not(.active-icon-bar) {
   background-color: #000;
 }
 
-.active-icon-bar {
-  background-color: #4CAF50;
+.vertical-icon-bar span i, .vertical-icon-bar span img {
+    transform: translate(0,-52%);
+    margin-top: 50%;
 }
-  
-  
-  
-                  /* dark mode old */
-                  /*body { 
-                    background-color: #252B35;
-                    color: #A1AEBD;
-                  }
-                  .light-mode {
-                    background-color: white;
-                    color: black;
-                  }
-                  */
-  
+
+.active-icon-bar {
+  background-color: var(--icon-bar-active) !important;
+} 
                   .topics {
                     text-align:center; 
                     font-family:sans-serif;
@@ -514,7 +532,7 @@ span.heroImgList {
   max-width: 500px;
   /*left: -40px;*/
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 2;
 }
 
 .dropdown-content div {
@@ -779,7 +797,7 @@ span.heroImgList {
   text-align: center;
 }
 .activetab {
-  background-color: var(--search-primary-color);
+  background-color: var(--bg-color-secondary);
   color: var(--font-color)
 }
 
@@ -1560,7 +1578,7 @@ span.heroImgList {
     </div>
 
     <div id="advanced_window" style="display:none;">
-      <div v-if="rosterLength>69 && locked.length===0" style="background-color: khaki;padding: 10px;border-radius: 4px;text-align: center;color: black;">
+      <div v-if="rosterLength>69 && locked.length===0" style="background-color: #fff27dBF;padding: 10px;border-radius: 4px;text-align: center;color: black;">
         <p style="margin:0 0 8px 0"><b>{{ strings.warn_tsize_adv_title }}</b></p>
         <p style="margin: 0; white-space: pre-wrap; font-size: 15px;">{{ strings.warn_tsize_adv_details }}</p>
       </div>
@@ -1882,12 +1900,13 @@ span.heroImgList {
 
 
     <div id="toolbar" class="icon-bar"> <!-- nascondi toolbar durante il calcolo -->
+      <!--<span id="icon-bar_user_window" onclick="/*setWindow('user_window')*/" style="background-image: url(./favicons/android-chrome-192x192.png); background-size: cover; background-repeat: no-repeat;"></span>-->
       <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
       <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil-alt" aria-hidden="true"></i></span>
       <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')"><!--&#9876;--><i class="fa fa-book" aria-hidden="true"></i></span>
-      <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="font-size:36px;max-height:65.5px;">
+      <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="font-size:36px;">
         <!--Calcola-->
-        <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" alt="calculate" style="position:relative;top:-5px;margin-bottom:-10px;height:40px;" />
+        <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" alt="calculate" style="margin-bottom: -10px; height: 40px;" />
       </span>
       <span id="icon-bar_settings_window" onclick="setWindow('extras_window')"><!--&#9881;--><i class="fa fa-cog"></i></span>
       <span id="icon-bar_my_teams_window" onclick="setWindow('my_teams_window')" style="display: none;"><i class="fa fa-save"></i></span>
@@ -2352,7 +2371,7 @@ span.heroImgList {
             topics += `<div style="border-bottom: 1px solid grey;">` + app.translateTopics(key) + " " + '<span style="float: right;">' + app.HeroDB[e.target.alt].camping.values[key] + '</span></div>'
           };
           $( "#app" ).append(`
-          <div id="debugHeroInfo" class="blur" style="width:200px;position:absolute; top:` + posY + `; left:` + posX + `; padding: 10px;">
+          <div id="debugHeroInfo" class="blur" style="z-index: 1; width:200px;position:absolute; top:` + posY + `; left:` + posX + `; padding: 10px;">
             ` + "<center>" + app.thisHeroTranslatedName(e.target.alt) + "</center>" +
             `<div style="font-size:12px">` +
               app.strings.topics + ": " + app.translateTopics(app.HeroDB[e.target.alt].camping.topics[0]) + ", " +  app.translateTopics(app.HeroDB[e.target.alt].camping.topics[1]) + "<br><br>" +
@@ -3021,7 +3040,7 @@ span.heroImgList {
                 refreshButton.style.display = "";
                 $('#char_tab_stats').removeClass('activetab');
                 $('#team_tab_stats').addClass('activetab');
-                $( "#saved_teams_stats").append(`<table id="stats_table" style="width: 100%; background-color: var(--search-primary-color); padding: 10px; border-radius: 0 0 12px 12px;"><tbody id="teams_stats_tbody">
+                $( "#saved_teams_stats").append(`<table id="stats_table" style="width: 100%; background-color: var(--bg-color-secondary); padding: 10px; border-radius: 0 0 12px 12px;"><tbody id="teams_stats_tbody">
                   <th colspan="4">${self.strings.team}</th>
                   <th></th>
                   <th style="white-space: nowrap;">${self.strings.morale}</th>

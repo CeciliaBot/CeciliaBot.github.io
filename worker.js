@@ -49,17 +49,15 @@ function checkScDupe (team) {
 };
 
 function giaInTop(team, top) {
-    var pos = -1;
     if (top.length > 0 ) {
       for (var i = 0; i<top.length;i++) {
         if (top[i].morale === -100) break;
         if (top[i].team.includes(team[0]) && top[i].team.includes(team[1]) && top[i].team.includes(team[2]) && top[i].team.includes(team[3]) ) {
-          pos = i;
-          break;
+          return i;
         };
       };
     };
-    return pos;
+    return -1;
 };
 
 
