@@ -59,10 +59,18 @@ body {
   color: var(--font-color); /* font color */
 }
 
+html, div, span { /*Firefox scrollbar*/
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar { /*Chrome scrollbar*/
+  display: none;
+}
 
-
+[v-cloak] > * {
+  display:none;
+}
 /* Full-width input fields */
-  
 input[type=text], input[type=password] {
   /*width: 100%;*/
   padding: 12px 20px;
@@ -129,7 +137,7 @@ span.psw {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 3; /* toolbar's z-index = 3 */
+  z-index: 60; /* toolbar's z-index = 50 */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -139,8 +147,9 @@ span.psw {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
-body.modal-open {
+.modal-open {
     overflow: hidden;
+    margin-bottom: 100%; /*Fix for firefox*/
 }
 /* Modal Content/Box */
 .modal-content {
@@ -203,27 +212,38 @@ div.toolbar {
   
 span.heroImgList {
     position: relative;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    margin-left: 12px;
-    margin-right: 12px;
+    padding: 12px;
     font-weight: bold;
     font-size:24px;
     color: var(--font-color);/*color: #221461;*/
     display:inline-block;
     vertical-align: top;
+    transition: all .2s ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.heroImgList:hover,
-.heroImgList:focus {
-  background-color:#ddd;
-  cursor: pointer;
-  color: black;
+@media (hover: hover) {
+  .heroImgList:hover {
+    background-color: var(--search-primary-color);
+    cursor: pointer;
+    transform: scale(1.3);
+    z-index: 1;
+  }
+  /* Will mess with remove hero function
+  .heroImgList:active {
+    transform: scale(2);
+  }*/
 }
 .heroNameLabel {
   font-weight: normal;
   font-size: 14px;
   margin: 0;
   width: 81px;
+  min-height: 34px;
 }
 
 .heroInTeam {
@@ -355,7 +375,7 @@ span.heroImgList {
   right: 0;
   width: 100%;
   background-color: #555;
-  z-index: 2;
+  z-index: 50;
 }
 
 .icon-bar span {
@@ -380,6 +400,7 @@ icon-bar span img {
 
 .vertical-icon-bar {
   position: fixed; 
+  z-index: 50;
   top: 0; 
   left: 0; 
   height: 100vh;
@@ -389,9 +410,6 @@ icon-bar span img {
   overscroll-behavior: contain;
   scrollbar-width: none; /* FireFox */
   -ms-overflow-style: none;
-}
-.vertical-icon-bar::-webkit-scrollbar { /*Chrome*/
-  display: none;
 }
 
 .vertical-icon-bar span {
@@ -496,13 +514,13 @@ icon-bar span img {
 /* Lock icon */
 .top-right {
   position: absolute;
-  top: 2px;
-  right: 7px;
+  top: 5px;
+  right: 15px;
 }
 .top-left {
   position: absolute;
-  top: -15px;
-  left: -10px;
+  top: -10px;
+  left: 6px;
   color: var(--colore-check-eroi);
 }
 .center_img {
@@ -688,6 +706,54 @@ icon-bar span img {
   color: white;
 }
 
+.maps_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vert_table_titile {
+  text-orientation: mixed;
+  text-transform: uppercase;
+  max-width: 50px;
+  writing-mode: vertical-rl;
+  font-size: 30px;
+}
+
+.maps_column {
+  text-align: center;
+}
+.maps_column > span {
+	position: relative;
+	height: 200px;
+	margin: 20px 15px;
+	display: inline-block;
+}
+.maps_column > span > span {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 90px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	font-size: 25px;
+	color: white;
+	text-shadow: 1px 1px 0px black, 1px -1px 0px black, -1px 1px 0px black, -1px -1px 0px black;
+}
+
+.maps_column > span img {
+	image-rendering: optimizespeed;
+	height: 200px;
+	filter: brightness(50%);/* blur(2px);*/
+	border: 2px;
+	border-color: black;
+	transition: all .3s ease;
+}
+
+.maps_column > span img:hover {
+	cursor: pointer;
+	filter: brightness(.2);/* blur(2px);*/
+}
 
 #snackbar {
   visibility: hidden;
@@ -699,7 +765,7 @@ icon-bar span img {
   border-radius: 25px;
   padding: 16px;
   position: fixed;
-  z-index: 10; /* always on top. Loading screen z-index = 10 */
+  z-index: 100; /* always on top. Loading screen z-index = 10 */
   left: 50%;
   top: 30px;
   font-size: 17px;
@@ -734,12 +800,6 @@ icon-bar span img {
   to {top: 0; opacity: 0;}
 }
 
-.noScrollBar {
-  -ms-overflow-style: none;
-}
-.noScrollBar::-webkit-scrollbar {
-  display: none;
-}
 .blur {
   background-color: rgba(0, 0, 0, 0.61);
   backdrop-filter: blur(5px);
@@ -836,6 +896,7 @@ icon-bar span img {
   height: 40px;
   min-width: 40px;
   cursor: pointer;
+  outline: none;
 }
 
 @media screen and (max-width: 600px) { /* zoom pagintion buttons on small devices*/ 
@@ -859,10 +920,10 @@ icon-bar span img {
   gtag('config', 'UA-161715700-1');
 </script>
 </head>
-<body class="noScrollBar">
-  <div id="app" style="margin-bottom: 67px"><!-- vue.js -->
+<body>
+  <div id="app" style="margin-bottom: 70px"><!-- vue.js -->
     <!--WELCOME WINDOW START-->
-    <div id="welcome" style="display: '';">
+    <div id="welcome" style="display: '';" v-cloak>
       <div id="contenuto_welcome" class="welcome">
         <div class="welcome_menu" style="position: sticky; top: 0; background: var(--bg-color);">
           <span class="active_welcome" name="welcome_element" onmouseover="welcome_toggle('welcome',this)">
@@ -1172,6 +1233,12 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)">
+                  <b>15/08/2020</b>:<br>
+                  Some Firefox changes.<br>
+                  Nixied maps from game8.co<br>
+                  Still no Pearlhorizon SC camping data sorry :( .
+                </li>
                 <li style="color:#007FFF">
                   <b>21/07/2020</b>: Team must include dispel<br>
                   You can check this option if you want your teams to have at least one hero that can remove buffs from enemies.<br>
@@ -1374,8 +1441,8 @@ icon-bar span img {
             <div style="max-height:20px;"><i class="fa fa-eye-slash"></i></div>
           </button>
         </div>
-        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_filter" v-on:click="if (displayList.length > 0) alertUserAction('addDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.add_displayed_heroes}}</button>
-        <div id="pulsanti_display_add_window" style="display:inline-block">
+        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_area search_hero_filter" v-on:click="if (displayList.length > 0) alertUserAction('addDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.add_displayed_heroes}}</button>
+        <div id="pulsanti_display_add_window" class="search_hero_area" style="display:inline-block">
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
           </button><!--
@@ -1390,7 +1457,7 @@ icon-bar span img {
        <template v-if="displayStyle === 'grid'"> <!-- grid -->
         <table id="lista_hero_disponibili">
           <tr>
-            <td style="text-align: center;">
+            <td style="text-align: center; padding-bottom: 20px;">
               <span v-for="key in displayList" class="heroImgList" v-on:click="addHero(thisHeroData(key)._id)">
                 <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
                 <template v-if="isInTeam(thisHeroData(key)._id)===true">
@@ -1518,8 +1585,8 @@ icon-bar span img {
             <div class="active" onclick="document.getElementById('myHeroes_sort_by').value='id'; app.filtroTuttiGliEroi(this, 'MyHeroes'); this.parentElement.style.display='none'">{{strings.ingame_id}}</div>
           </div>
         </div>
-        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_filter" v-on:click="if (displayMyHeroes.length > 0) alertUserAction('removeDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.remove_displayed_heroes}}</button>
-        <div id = "pulsanti_display_manage_window" style="display:inline-block"> <!-- Grid/List buttons-->
+        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_area search_hero_filter" v-on:click="if (displayMyHeroes.length > 0) alertUserAction('removeDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.remove_displayed_heroes}}</button>
+        <div id="pulsanti_display_manage_window" class="search_hero_area" style="display:inline-block"> <!-- Grid/List buttons-->
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
           </button><!--
@@ -1533,8 +1600,8 @@ icon-bar span img {
        <template v-if="displayStyle === 'grid'">  <!-- grid -->
         <table id="myHeroes">
           <tr>
-            <td style="text-align: center;">
-              <span v-for="key in displayMyHeroes" class="heroImgList" v-on:click="lockHero(thisHeroData(key)._id)">
+            <td style="text-align: center; padding-bottom: 20px;">
+              <span v-for="key in displayMyHeroes" class="heroImgList" v-on:click="if($event.target.className.indexOf('removeHero') === -1 ) lockHero(thisHeroData(key)._id)">
                 <!-- Classco -->
                 <template v-if="isLocked(thisHeroData(key)._id) && lockType===1">
                   <div class="top-right animate-flicker">&#128274;</div>
@@ -1547,7 +1614,7 @@ icon-bar span img {
                 <template v-else-if="isLocked(thisHeroData(key)._id)&& lockType===3">
                   <span style="position: absolute;margin-top: 35px;margin-left: 35px;transform: translate(-50%, -50%);font-size: 40px;" class="animate-flicker">🔒</span>
                 </template>
-                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="setTimeout(function() {removeHero(thisHeroData(key)._id)}, 1)" style="z-index: 1;" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span> <!-- z-index 1 to avoid self lock when removing and timeout 1 to avoid locking the next hero when removing a hero-->
+                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="setTimeout(function() {removeHero(thisHeroData(key)._id)}, 1)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
                 <template v-if="showNamesInGrid===true">
                   <p class="heroNameLabel">{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</p>
                 </template>
@@ -1680,7 +1747,7 @@ icon-bar span img {
         <div v-for="(key,index) in cartesian_lock" style="display:inline-block;margin:20px;width:22%;min-width:230px">
           {{strings.multilock_slot}} {{index+1}}
           <button type="button" v-on:click="showAddCartesian_lock(index)" class="button_login">{{strings.add_to_slot}}</button>
-          <div class="noScrollBar" style="height:300px;max-height:300px;background-color:var(--bg-color);display:block;color:var(--font-color);overflow-x:scroll;overflow-x: hidden;padding-left:10px;padding-top:10px;padding-right:10px;">
+          <div style="height:300px;max-height:300px;background-color:var(--bg-color);display:block;color:var(--font-color);overflow-x:scroll;overflow-x: hidden;padding-left:10px;padding-top:10px;padding-right:10px;">
             <span v-for="(key,i) in cartesian_lock[index]" style="display:inline-block;position:relative;width:100%">{{thisHeroTranslatedName(thisHeroData(key)._id)}}<span class="removecartesian" style="position:relative;float:right;font-size:16px;" v-on:click="removeCartesian_lock(index, i)">X</span></span>
           </div>
         </div>
@@ -1866,18 +1933,78 @@ icon-bar span img {
       </table>
     </div>
 
-    <div id="raid_map" style="display: none;">
-    <h2>{{strings.normal}}
-    <br>
-      <span class="center">
-    <img id="map_normal" src="./img/Raid-Normal_en.png" width="100%" type="image/png" loading="lazy"/>      
-      </span>
-      <h2>{{strings.hell}}
-      <br>
-      <span class="center">
-    <img id="map_hell" src="./img/Raid-Hell_en.png" width="100%" type="image/png" loading="lazy"/>          
-      </span>
-      <br><br><br><br>
+    <div id="raid_map" style="display: none; margin: -8px;">
+      <table class="maps_table">
+        <tbody>
+          <tr style="background-color: #f002;">
+            <td>
+              <span class="vert_table_titile">Raid</span>
+            </td>
+            <td class="maps_column">
+              <span>
+                <img v-if="lingua==='cn'" src="./img/Raid-Normal_zht.png" onclick="openImage(this.src)">
+                <img v-else-if="lingua==='zht'" src="./img/Raid-Normal_zht.png" onclick="openImage(this.src)">
+                <img v-else src="./img/Raid-Normal_en.png" onclick="openImage(this.src)">
+                <span>
+                  {{strings.normal}}
+                </span>
+              </span>
+              <span>
+                <img v-if="lingua==='cn'" src="./img/Raid-Hell_zht.png" onclick="openImage(this.src)">
+                <img v-else-if="lingua==='zht'" src="./img/Raid-Hell_zht.png" onclick="openImage(this.src)">
+                <img v-else src="./img/Raid-Hell_en.png" onclick="openImage(this.src)">
+                <span>
+                  {{strings.hell}}
+                </span>
+              </span>
+            </td>
+          </tr>
+          <tr style="background-color: #0fffff22">
+            <td>
+            </td>
+            <td style="text-align: center;">
+              Nixied's maps by game8. They have a full guide here: <br><a href="https://game8.co/games/Epic-Seven/archives/284193 " target="_blank" style="text-decoration: none; color: red; text-shadow: 1px 1px 5px black;">https://game8.co/games/Epic-Seven/archives/284193</a><br>
+            </td>
+          </tr>
+          <tr style="background-color: #0fffff22">
+            <td>
+              <span class="vert_table_titile">Nixied</span>
+            </td>
+            <td class="maps_column">
+              <span>
+                <img src="https://img.game8.co/3235580/df915e10aa933192c93773c9ee67c6ed.png/original" onclick="openImage(this.src)">
+                <span>
+                  Nixied 1
+                </span>
+              </span>
+              <span>
+                <img src="https://img.game8.co/3238837/41e580783640902df84ad4154d45b02b.png/original" onclick="openImage(this.src)">
+                <span>
+                  Nixied 2
+                </span>
+              </span>
+              <span>
+                <img src="https://img.game8.co/3240084/c9d0e19e6d97cfc31f10c9c0f2381a73.png/original" onclick="openImage(this.src)">
+                <span>
+                  Nixied 3
+                </span>
+              </span>
+              <span>
+                <img src="https://img.game8.co/3258768/0dbd22118596b848cbe378e9eec42e13.jpeg/original" onclick="openImage(this.src)">
+                <span>
+                  Nixied 4
+                </span>
+              </span>
+              <span>
+                <img src="https://img.game8.co/3259720/8a3f4a32a2ae7ffce3cf23bf25d75511.jpeg/original" onclick="openImage(this.src)">
+                <span>
+                  Nixied 5
+                </span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div id="saved_teams_stats" class="center" style="display: none;">
       <h2>{{strings.most_saved_teams}}
@@ -1917,7 +2044,7 @@ icon-bar span img {
 
      <!-- Mostra durante il calcolo -->
     <div v-show="isLoadingResults" id="loading_camp_results">
-      <div style="opacity: 0.3; filter: alpha(opacity=30); height:100%; width:100%; position:fixed; z-index:2; top: 0; right: 0;">
+      <div style="opacity: 0.3; filter: alpha(opacity=30); height:100%; width:100%; position:fixed; z-index:99; top: 0; right: 0;">
       </div> <!-- prevent user from changing menu -->
       <div class="center_img box_advanced_settings" style="height:200px;width:200px">
         <div class="center_img" style="text-align:center;"> 
@@ -1926,9 +2053,9 @@ icon-bar span img {
           {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
         </div>
       </div>
-      <button style="z-index: 2;margin-right: 30px; width: auto; font-size: 16px; top: auto;bottom: 90px;right: 0;position: absolute;" class="search_hero_filter" onclick="restartCamperino();">{{strings.abort_calculation}}</button>
+      <button style="z-index: 99;margin-right: 30px; width: auto; font-size: 16px; top: auto;bottom: 90px;right: 0;position: absolute;" class="search_hero_filter" onclick="restartCamperino();">{{strings.abort_calculation}}</button>
     </div>
-    <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 10; height: 100%; width: 100%; border-radius: 0; top: 49.9%;"> <!-- non è neccessario settare inizializzaione = true -->
+    <div id="caricamentoIniziale" v-if="inizializzazione" class="center_img box_advanced_settings" style="z-index: 100; height: 100%; width: 100%; border-radius: 0; top: 49.9%;"> <!-- non è neccessario settare inizializzaione = true -->
       <div class="center_img" style="text-align:center;"> 
         <i class="fa fa-cog fa-spin" style="font-size:70px"></i>
         <div>
@@ -2192,11 +2319,11 @@ icon-bar span img {
     if (f === "hor") {
       appDoc.style.marginLeft = "0";
       appDoc.style.marginBottom = "70px";
-      setTimeout(function(){ if (appDoc.style.marginLeft === "0px") document.getElementById("icon-bar_settings_window").style.display = ""; }, 370); // setTimeout to fix a transiction effect
       document.getElementById("icon-bar_real_settings_window").style.display = "none";
       document.getElementById("icon-bar_my_teams_window").style.display = "none";
       document.getElementById("icon-bar_raid_map_window").style.display = "none";
       document.getElementById("icon-bar_team_stats_window").style.display = "none";
+      document.getElementById("icon-bar_settings_window").style.display = "";
       document.getElementById("toolbar").className = "icon-bar";
     } else {
       appDoc.style.marginLeft = "90px";
@@ -2289,6 +2416,21 @@ icon-bar span img {
     };
   };
   */
+  function openImage (link){
+    $( "body" ).append(`
+      <div id="imageViewer" style="z-index: 60; position: relative;">
+        <div style="position: fixed; top: 0; left: 0; overflow-y: auto; scrollbar-width:initial; background-color: #0007; height: 100%; width: 100%;" onclick="$('#imageViewer').remove();$('body').removeClass('modal-open');">
+          <img id="imageViewerObj" src="` + link + `" style="display: block; animation: animatezoom 0.4s; object-fit: scale-down;height: 100%;width: 100%;">
+          <div style="width: 60px;height: 60px;position: fixed;right: 20px;top: 20px;background-color: #0006;border-radius: 40px;text-align: center;font-size: 48px;color: #fff8;cursor: pointer">x</div>
+        </div>
+        <div style="width: 60px;height: 60px;position: fixed;right: 20px;bottom: 20px;background-color: #0006;border-radius: 40px;text-align: center;font-size: 38px;color: #fff8;cursor: pointer" onclick="var img = document.getElementById('imageViewerObj'); if (img.style.objectFit === 'scale-down') {img.style.objectFit= ''; img.style.height='100%'; img.style.width='auto'; img.style.margin = 'auto'; this.children[0].className='fa fa-search-minus'} else {img.style.objectFit= 'scale-down'; img.style.height='100%'; img.style.width='100%'; this.children[0].className='fa fa-search-plus';};">
+          <i class="fa fa-search-plus" aria-hidden="true" style="margin-top: 10px;"></i>
+        </div>
+      </div>
+    `);
+    $("body").addClass("modal-open");
+  };
+
 
   //// context menu
   var showValues = false;
@@ -2776,7 +2918,7 @@ icon-bar span img {
               <div id="Cartesian_lock">
                 <div class="modal" style="display: block;height:100%; width: 100%; overflow: hidden;">
                   <form class="modal-content animate" id="Cartesian_lock" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:100%;height: 70%;">
-                    <div class="noScrollBar" style="height: 80%; overflow-y: scroll;">`
+                    <div style="height: 80%; overflow-y: scroll;">`
                       +
                       eroiSelezionabili
                       +
@@ -2975,7 +3117,7 @@ icon-bar span img {
               <div id="url_generator" class="modal" style="padding-top: 60px;display:block;">
                 <div class="modal-content animate" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
                   <div class="imgcontainer">
-                    <div id="url_container" class="box_advanced_settings noScrollBar" style="display: block; width:90%; padding-left: 5%; padding-right: 5%; position: relative; overflow-x: auto; font-size: 16px; white-space: nowrap;">` + 
+                    <div id="url_container" class="box_advanced_settings" style="display: block; width:90%; padding-left: 5%; padding-right: 5%; position: relative; overflow-x: auto; font-size: 16px; white-space: nowrap;">` + 
                       generateUrl(this.myHeroesList) + 
                    `</div>
                     <button type="button" onclick="copyText('url_container')" class="button_login">` + this.strings.copia + `</button>
@@ -3420,24 +3562,6 @@ icon-bar span img {
                 lingua = "en"
               };
               this.lingua = lingua;
-              
-              //change raid map language
-              if (this.lingua == "zht") {
-                var mapnormal = document.getElementById("map_normal");
-                var maphell = document.getElementById("map_hell");
-                mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
-                maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
-              } else if (this.lingua == "cn") {
-                var mapnormal = document.getElementById("map_normal");
-                var maphell = document.getElementById("map_hell");
-                mapnormal.setAttribute("src", "./img/Raid-Normal_zht.png");               
-                maphell.setAttribute("src", "./img/Raid-Hell_zht.png");
-              } else {
-                var mapnormal = document.getElementById("map_normal");
-                var maphell = document.getElementById("map_hell");
-                mapnormal.setAttribute("src", "./img/Raid-Normal_en.png");               
-                maphell.setAttribute("src", "./img/Raid-Hell_en.png");
-              };
               
               //change titile and meta info
               if (this.lingua == "zht") {
