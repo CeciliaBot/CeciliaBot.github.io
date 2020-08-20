@@ -962,6 +962,10 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)"></li>
+                  <b>20/08/2020</b>: Add Thai (ภาษาไทย) language support<br>
+                  With the Epic Seven DB API update you can now select Thai for the game data (menus are still english).
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>15/08/2020</b>:<br>
                   Firefox浏览器兼容性优化.<br>
@@ -1104,6 +1108,10 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)"></li>
+                  <b>20/08/2020</b>: Add Thai (ภาษาไทย) language support<br>
+                  With the Epic Seven DB API update you can now select Thai for the game data (menus are still english).
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>15/08/2020</b>:<br>
                   Firefox瀏覽器兼容性優化.<br>
@@ -1245,6 +1253,10 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:rgb(0, 148, 32)"></li>
+                  <b>20/08/2020</b>: Add Thai (ภาษาไทย) language support<br>
+                  With the Epic Seven DB API update you can now select Thai for the game data (menus are still english).
+                </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>15/08/2020</b>:<br>
                   Some Firefox changes.<br>
@@ -2891,6 +2903,7 @@ icon-bar span img {
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  onclick="app.cambiaLingua('de')">
                     <br><br>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1000px-Flag_of_the_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('zht')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" width="105" height="70"  onclick="app.cambiaLingua('th')">
                     </div>
                     <div class="container">
                       <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
@@ -3442,6 +3455,9 @@ icon-bar span img {
                       break;
                     case 'ko':
                       lingua = "kr";
+                      break;
+                    case 'th':
+                      lingua = "th";
                       break;
                     case 'zh':
                       var langCode = navigator.language || navigator.userLanguage;
