@@ -4394,6 +4394,41 @@ icon-bar span img {
                 this.debuffList["stic_blaze"].name = "燒傷";
                 this.debuffList["stic_vampire"].name = "吸血之手";
                 this.debuffList["stic_bomb"].name = "炸彈";
+              } else if (lingua == "th") {
+                this.buffList["stic_debuf_impossible"].name = "ภูมิคุ้มกัน";
+                this.buffList["stic_att_up"].name = "เพิ่มพลังโจมตี";
+                this.buffList["stic_att_up2"].name = "เพิ่มพลังโจมตี (ชั้นสูง)";
+                this.buffList["stic_def_up"].name = "เพิ่มพลังป้องกัน";
+                this.buffList["stic_speed_up"].name = "เพิ่มความเร็ว";
+                this.buffList["stic_dodge_up"].name = "เพิ่มการหลบหลีก";
+                this.buffList["stic_protect"].name = "บาเรีย";
+                this.buffList["stic_cri_up"].name = "เพิ่มโอกาสคริติคอล";
+                this.buffList["stic_cridmg_up"].name = "เพิ่มดาเมจคริติคอล";
+                this.buffList["stic_crires_up"].name = "เพิ่มความต้านทานคริติคอล";
+                this.buffList["stic_invincible"].name = "คงกระพัน";
+                this.buffList["stic_endure"].name = "ล้างดาเมจสกิล";
+                this.buffList["stic_heal"].name = "รักษาต่อเนื่อง";
+                this.buffList["stic_hide"].name = "ซ่อนตัว";
+                this.buffList["stic_immortality"].name = "อมตะ";
+                this.buffList["stic_reflect"].name = "สะท้อน";
+                this.buffList["stic_counter"].name = "โจมตีโต้กลับ";
+
+                this.debuffList["stic_def_dn"].name = "ลดพลังป้องกัน";
+                this.debuffList["stic_speed_dn"].name = "ลดความเร็ว";
+                this.debuffList["stic_att_dn"].name = "ลดพลังโจมตี";
+                this.debuffList["stic_blind"].name = "ลดความแม่นยำ";
+                this.debuffList["stic_target"].name = "ตกเป็นเป้า";
+                this.debuffList["stic_buf_impossible"].name = "ห้ามบัฟ";
+                this.debuffList["stic_heal_impossible"].name = "ห้ามการฟื้นฟู";
+                this.debuffList["stic_stun"].name = "สตัน";
+                this.debuffList["stic_provoke"].name = "ยั่วยุ";
+                this.debuffList["stic_silence"].name = "เป็นใบ้";
+                this.debuffList["stic_sleep"].name = "หลับ";
+                this.debuffList["stic_blood"].name = "เลือดไหล";
+                this.debuffList["stic_dot"].name = "พิษ";
+                this.debuffList["stic_blaze"].name = "เผาไหม้";
+                this.debuffList["stic_vampire"].name = "สัมผัสแวมไพร์";
+                this.debuffList["stic_bomb"].name = "ระเบิด";
               } else if (lingua == "es") {
                 this.buffList["stic_debuf_impossible"].name = "Inmunidad";
                 this.buffList["stic_att_up"].name = "Aumenta el ataque";
@@ -4825,7 +4860,78 @@ icon-bar span img {
                 return n;
                 break;
             };
-
+          } else if (this.lingua == "th") {
+            switch (n) {
+              case 'Criticism':
+                return 'วิพากษ์วิจารณ์';
+                break;
+              case 'Reality Check':
+                return 'ย้ำเตือนถึงความเป็นจริง';
+                break;
+              case 'Heroic Tale':
+                return 'เรื่องเล่าวีรกรรม';
+                break;
+              case 'Comforting Cheer':
+                return 'ให้กำลังใจเพื่อปลอบโยน';
+                break;
+              case 'Cute Cheer':
+                return 'ให้กำลังใจอย่างน่ารัก';
+                break;
+              case 'Heroic Cheer':
+                return 'ให้กำลังใจอย่างกล้าหาญ';
+                break;
+              case 'Sad Memory':
+                return 'ความทรงจำแสนเศร้า';
+                break;
+              case 'Joyful Memory':
+                return 'ความทรงจำอันเบิกบาน';
+                break;
+              case 'Happy Memory':
+                return 'ความทรงจำแสนสุข';
+                break;
+              case 'Unique Comment':
+                return 'ความคิดเห็นที่เป็นเอกลักษณ์';
+                break;
+              case 'Self-Indulgent':
+                return 'พูดจาหลงตัวเอง';
+                break;
+              case 'Occult':
+                return 'ลัทธิ';
+                break;
+              case 'Myth':
+                return 'ตำนาน';
+                break;
+              case 'Bizarre Story':
+                return 'เรื่องประหลาด';
+                break;
+              case 'Food Story':
+                return 'เรื่องอาหาร';
+                break;
+              case 'Horror Story':
+                return 'เรื่องสยอง';
+                break;
+              case 'Gossip':
+                return 'เรื่องกอสซิป';
+                break;
+              case 'Dream':
+                return 'ความฝัน';
+                break;
+              case 'Advice':
+                return 'คำแนะนำ';
+                break;
+              case 'Complain':
+                return 'คำบ่น';
+                break;
+              case 'Belief':
+                return 'ความเชื่อ';
+                break;
+              case 'Interesting Story':
+                return 'เรื่องน่าสนใจ';
+                break;
+              default:
+                return n;
+                break;
+            };
           } else if (this.lingua == "kr") {
             switch (n) {
               case 'Criticism':
