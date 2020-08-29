@@ -1253,6 +1253,11 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li>
+                  <b>29/08/2020</b>: New Progress bar :D<br>
+                  When you select advanced settings a progress bar will be displayed while calculating team combinations. As of 29/08/2020 it takes 17 mins to calculate all the combinations with 187 heroes in your roster and advanced settings on, it takes 20 sec if you lock 1 hero.<br>
+                  The progress bar is not displayed if no advanced settings are selected because it takes only 4 seconds to calculate the best combinations regardless of the roster's size.
+                </li>
                 <li style="color:rgb(0, 148, 32)"></li>
                   <b>20/08/2020</b>: Add Thai (ภาษาไทย) language support<br>
                   With the Epic Seven DB API update you can now select Thai for the game data (menus are still english).
@@ -2075,6 +2080,10 @@ icon-bar span img {
           <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fangienobg.gif?v=1585008523656" style="height:100px"/>
           <!--<i class="fa fa-cog fa-spin" style="font-size:30px"></i><br> -->
           {{strings.possibili_combinazioni}}<br><b>{{numeroCombinazioniPossibili}}</b>
+        </div>
+        <div style="display: none; width: 100%; height: 20px; background-color: transparent; padding: 0px; text-align: initial;border-radius: 0 0 15px 15px;position: absolute;bottom: 0;overflow: hidden;border: thin;border-style: solid none none;border-color: var(--search-border-color);">
+          <span style="left: 40%; position:absolute"></span>
+          <span id="calculationPer" style="height: 100%; width: 0%; background-color: var(--icon-bar-active); display: inline-block;"></span>
         </div>
       </div>
       <button style="z-index: 99;margin-right: 30px; width: auto; font-size: 16px; top: auto;bottom: 90px;right: 0;position: absolute;" class="search_hero_filter" onclick="restartCamperino();">{{strings.abort_calculation}}</button>
@@ -5366,11 +5375,47 @@ icon-bar span img {
   created () {console.log("created")}
 });
 
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function executedFunction() {
+    var context = this;
+    var args = arguments;
+	    
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+	
+    clearTimeout(timeout);
+
+    timeout = setTimeout(later, wait);
+	
+    if (callNow) func.apply(context, args);
+  };
+};
+
+
   var camperinoMessage = function (e) {
-    app.isLoadingResults = false; // disattiva angelica
-    mandaNotificaCompletamento();
-    if (e.data.error) snackbarMessage(app.strings["results_error"] + `: ` + app.strings[e.data.error]) // throw error
-    else app.risultati = e.data.risultati
+    //mandaNotificaCompletamento();
+    if (e.data.error)
+      mandaNotificaCompletamento(),
+      snackbarMessage(app.strings["results_error"] + `: ` + app.strings[e.data.error]), /* throw error */
+      document.getElementById('calculationPer').parentNode.style.display = "none",
+      document.getElementById('calculationPer').style.width = "0%",
+      app.isLoadingResults = false;
+    else if (e.data.status) {
+      document.getElementById('calculationPer').parentNode.style.display = "block";
+      document.getElementById('calculationPer').previousElementSibling.innerText = e.data.status + "%";
+      document.getElementById('calculationPer').style.width = e.data.status + "%";
+    }
+    else if (e.data.risultati)
+      mandaNotificaCompletamento(),
+      app.risultati = e.data.risultati,
+      document.getElementById('calculationPer').parentNode.style.display = "none",
+      document.getElementById('calculationPer').style.width = "0%",
+      app.isLoadingResults = false;
   };
   // Genera un worker per eseguire i calcoli del camp
   var camperino = new Worker('./worker.js');
@@ -5391,6 +5436,7 @@ icon-bar span img {
       app.debuffs.push("aaaa"); // add something to trigger a new calculation attempt 
       app.debuffs = copy; // restore debuff list
       app.isLoadingResults = false; // disattiva angelica
+      document.getElementById('calculationPer').parentNode.style.display = "none",
       camperino.onmessage = function(e) {
         camperinoMessage(e);
       };
@@ -5408,7 +5454,7 @@ icon-bar span img {
   };
   */
   window.addEventListener("error", function (e) {
-    if (e.error.message.indexOf("e.target.parentNode")===-1) snackbarMessage("ERROR<br>"+e.message + "<br>"+e.error.fileName+" "+e.error.lineNumber+":"+e.error.columnNumber);
+    if (e.error && e.error.message.indexOf("e.target.parentNode")===-1) snackbarMessage("ERROR<br>"+e.message + "<br>"+e.error.fileName+" "+e.error.lineNumber+":"+e.error.columnNumber);
     return false;
   });
 </script>

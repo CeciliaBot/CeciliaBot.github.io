@@ -16,7 +16,7 @@ var scHeroes = {
                 "carrot": "researcher-carrot",
                 "wanda": "allrounder-wanda",
                 "ras": "adventurer-ras",
-                "pearlhorizon": "doll-maker-pearlhorizon" // only one of them can be in team
+                "pearlhorizon": "doll-maker-pearlhorizon"
                };
 
 if (!Array.prototype.flat) {
@@ -263,7 +263,16 @@ onmessage = function(e) {
                                 };
                              };
                         } else {
+                            var currIndex = 0;
+                            var lastProgress = -1;
+                            var tot = Combinatorics.bigCombination(campList,4-e.locked.length).length.valueOf();
                             Combinatorics.bigCombination(campList,4-e.locked.length).forEach(teamComb => {
+                                        //Progress Bar
+                                        currIndex++
+                                        if (lastProgress !== Math.round(currIndex * 100 / tot))
+                                            lastProgress = Math.round(currIndex * 100 / tot),
+                                            postMessage({"status": Math.round(currIndex * 100 / tot) });
+
                                         if (teamComb.length>4 || e.locked.length == 4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
                                         var team = [].concat(teamComb, e.locked);
                                         let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb;
@@ -304,15 +313,16 @@ onmessage = function(e) {
                     };
                 } else if (isCartesian === true) {
                     function printCombos(array) {
-                        var results = [[]];for (var i = 0; i < array.length; i++) {
-                        var currentSubArray = array[i];
-                        var temp = [];
-                        for (var j = 0; j < results.length; j++) {
-                            for (var k = 0; k < currentSubArray.length; k++) {
-                            temp.push(results[j].concat(currentSubArray[k]));
+                        var results = [[]];
+                        for (var i = 0; i < array.length; i++) {
+                            var currentSubArray = array[i];
+                            var temp = [];
+                            for (var j = 0; j < results.length; j++) {
+                                for (var k = 0; k < currentSubArray.length; k++) {
+                                temp.push(results[j].concat(currentSubArray[k]));
+                                }
                             }
-                        }
-                        results = temp;
+                            results = temp;
                         }
                         return results;
                     };
@@ -330,8 +340,17 @@ onmessage = function(e) {
                     } else { // can calculate 
                         if ( (e.cartesianLock.length + e.locked.length) > 3 ) campList = ["Ras"]; // placeholder Ras if all heroes are used in multilock or lock-> avoid RangeError
                         c = printCombos(e.cartesianLock);
+                        var currIndex = 0;
+                        var lastProgress = -1;
+                        var tot = (Combinatorics.bigCombination(campList,4-e.locked.length-c[0].length).length * c.length).valueOf();
                         c.forEach( (cartesianLocked) => {
                                 Combinatorics.bigCombination(campList,4-e.locked.length-cartesianLocked.length).forEach(teamComb => {
+                                    //Progress Bar
+                                    currIndex++
+                                    if (lastProgress !== Math.round(currIndex * 100 / tot))
+                                        lastProgress = Math.round(currIndex * 100 / tot),
+                                        postMessage({"status": Math.round(currIndex * 100 / tot) });
+
                                     var teamComb = teamComb;
                                     if (e.cartesianLock.length + e.locked.length>3) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
                                     //teamComb = teamComb.concat(cartesianLocked);
