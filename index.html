@@ -565,6 +565,7 @@ icon-bar span img {
   width: 500px;
   text-decoration: none;
   display: block;
+  box-sizing: border-box;
 }
 .dropdown-content div:hover {
   background-color: var(--search-border-color);
@@ -1120,7 +1121,7 @@ icon-bar span img {
                 </li>
                 <li style="color:rgb(0, 148, 32)">
                 <b>20/08/2020</b>: 添加泰文 (ภาษาไทย) 支援<br>
-                Epic Seven DB API 更新後可以選擇泰文作為數據顯示語言 (菜單依舊為英文).
+                  Epic Seven DB API 更新後可以選擇泰文作為數據顯示語言 (菜單依舊為英文).
                 </li>
                 <li style="color:rgb(0, 148, 32)">
                   <b>15/08/2020</b>:<br>
@@ -1264,11 +1265,16 @@ icon-bar span img {
             <div id="whats_new_content" style="display: none;">
               <ul>
                 <li>
+                  <b>02/09/2020</b>: Advanced Settings speed improvements<br>
+                  Now it can calculate all the combinations under 7 minutes instead of 17 minutes (as of 02/09/2020 - on PC), under 8 seconds with 1 hero locked, with advanced settings on<br>
+                  The time required will increase as new heroes are released.
+                </li>
+                <li>
                   <b>29/08/2020</b>: New Progress bar :D<br>
                   When you select advanced settings a progress bar will be displayed while calculating team combinations. As of 29/08/2020 it takes 17 mins to calculate all the combinations with 187 heroes in your roster and advanced settings on, it takes 20 sec if you lock 1 hero.<br>
                   The progress bar is not displayed if no advanced settings are selected because it takes only 4 seconds to calculate the best combinations regardless of the roster's size.
                 </li>
-                <li style="color:rgb(0, 148, 32)"></li>
+                <li style="color:rgb(0, 148, 32)">
                   <b>20/08/2020</b>: Add Thai (ภาษาไทย) language support<br>
                   With the Epic Seven DB API update you can now select Thai for the game data (menus are still english).
                 </li>
@@ -1697,7 +1703,7 @@ icon-bar span img {
             <br>
             <input type="checkbox" id="numeroRisultatiMassimo" name="numeroRisultatiMassimo" onclick="app.personalizzaRisultati()">
             <label for="numeroRisultatiMassimo">{{strings.numero_massimo_risultati}}</label>
-              <input style="display: inline-block; width: 100px; height: 20px" type="number" min="1" id="n_risultati" onkeyup="app.personalizzaRisultati()" placeholder="200" title="Number of results" disabled>
+              <input style="display: inline-block; width: 100px; height: 20px" type="number" min="1" id="n_risultati" onkeyup="app.personalizzaRisultati()" placeholder="default 200" title="Number of results" disabled>
           </span>
           <span>
             <input type="checkbox" id="moraleMinimo" name="moraleMinimo" value="moraleMinimo" onclick="app.personalizzaRisultati()">
@@ -2934,6 +2940,11 @@ icon-bar span img {
             $("body").addClass("modal-open");
           },
           cambiaLingua: function (n) {
+            if (n === this.lingua) {
+               $('#menu_lingua').remove(); 
+               $('body').removeClass('modal-open'); 
+               return;
+            }
             this.lingua = n;
             this.writeSettings();
             this.inizializzaione();
@@ -3388,9 +3399,14 @@ icon-bar span img {
             //};
             if (!isNaN(parseInt(valoreRisultatiMassimo.value)) && parseInt(valoreRisultatiMassimo.value) > 0 ) {
               risultati.n = parseInt(valoreRisultatiMassimo.value)
+              if (parseInt(valoreRisultatiMassimo.value) > 10000) {
+                risultati.n = 10000;
+                valoreRisultatiMassimo.value = 10000;
+              }
             } else {
               risultati.n = 200
             };
+
             if (!isNaN(parseInt(valoreMoraleMinimo.value)) && parseInt(valoreMoraleMinimo.value) <= 52 ) {
               risultati.morale = parseInt(valoreMoraleMinimo.value)
             } else {
@@ -3536,7 +3552,7 @@ icon-bar span img {
                   impostazioni_avanzate: "Impostazioni Avanzate",
                   warn_tsize_adv_title: "Hai un sacco di eroi e nessun eroe bloccato",
                   warn_tsize_adv_details: "Attivando le impostazioni avanzate aumenterà il tempo richiesto per il calcolo delle combinazioni. \nPuoi ridurre il tempo richiesto per il calcolo bloccando un personaggio.",
-                  numero_massimo_risultati: "Numero massimo di risultati",
+                  numero_massimo_risultati: "Numero massimo di risultati (max 10.000)",
                   morale_minimo_risultati: "Morale minimo",
                   includi_locked_in_adv: "Gli eroi bloccati contano al fine del raggiungimento delle condizioni avanzate",
                   disabilita_immagini_in_risultati: "Disabilita avatar dei personaggi nei risultati (consigliato se si richiedono tanti risultati)",
@@ -3676,7 +3692,7 @@ icon-bar span img {
                   impostazioni_avanzate: "高级设置",
                   warn_tsize_adv_title: "你有大量的英雄并且没有锁定任何英雄，计算可能耗费较长时间",
                   warn_tsize_adv_details: "使用高级设定会耗费更多时间计算. \n你可以通过锁定英雄来提高计算速度.",
-                  numero_massimo_risultati: "显示结果数量",
+                  numero_massimo_risultati: "显示结果数量 (MAX 10.000)",
                   morale_minimo_risultati: "最低心情限制",
                   includi_locked_in_adv: "高级设置包括锁定的英雄",
                   disabilita_immagini_in_risultati: "结果页不显示英雄头像 (如果你设定的显示结果数量非常大，关闭英雄头像显示有助于提升性能)",
@@ -3815,7 +3831,7 @@ icon-bar span img {
                   impostazioni_avanzate: "高級設定",
                   warn_tsize_adv_title: "你有大量的英雄並且冇有鎖定任何英雄，計算可能耗費較長時間",
                   warn_tsize_adv_details: "使用高級設定會耗費更多時間計算. \n你可以通過鎖定英雄來提高計算速度.",
-                  numero_massimo_risultati: "顯示結果數量",
+                  numero_massimo_risultati: "顯示結果數量 (MAX 10.000)",
                   morale_minimo_risultati: "最低心情限制",
                   includi_locked_in_adv: "高級設置包括鎖定的英雄",
                   disabilita_immagini_in_risultati: "結果頁不顯示英雄頭像 (如果你設定的顯示結果數量非常大，關閉英雄頭像顯示有助於提升性能)",
@@ -3954,7 +3970,7 @@ icon-bar span img {
                   impostazioni_avanzate: "Paramètre avancé",
                   warn_tsize_adv_title: "Vous avez une grande liste de héros et aucun héros verrouillé",
                   warn_tsize_adv_details: "L'activation de toutes les fonctionnalités avancées augmentera le temps nécessaire pour calculer toutes les combinaisons. \nVous pouvez réduire le temps requis en verrouillant un héros.",
-                  numero_massimo_risultati: "Nombre maximum de résultats de camping",
+                  numero_massimo_risultati: "Nombre maximum de résultats de camping (MAX 10.000)",
                   morale_minimo_risultati: "Minimum morale",
                   includi_locked_in_adv: "Héros verrouillés inclus dans les paramètres avancés",
                   disabilita_immagini_in_risultati: "Désactiver l'avatar du héro dans l'écran des résultats (Améliorer les performances si vous demandez trop de résultats)",
@@ -4084,7 +4100,7 @@ icon-bar span img {
                   impostazioni_avanzate: "Advanced settings",
                   warn_tsize_adv_title: "You have a large roster and no heroes locked",
                   warn_tsize_adv_details: "Activating any advanced features will increse the required time to calculate all the combinations. \nYou can reduce the required time by locking a hero.",
-                  numero_massimo_risultati: "Maximum number of camping results",
+                  numero_massimo_risultati: "Maximum number of camping results (MAX 10.000)",
                   morale_minimo_risultati: "Minimum morale",
                   includi_locked_in_adv: "Locked heroes count towards the fulfillment of the selected advanced settings",
                   disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",

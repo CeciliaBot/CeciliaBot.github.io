@@ -263,63 +263,69 @@ onmessage = function(e) {
                                 };
                              };
                         } else {
+                            e.risultati = Array(e.preferenzeRisultati.n).fill({morale: -100, team: []});
                             var currIndex = 0;
                             var lastProgress = -1;
                             var tot = Combinatorics.bigCombination(campList,4-e.locked.length).length.valueOf();
                             Combinatorics.bigCombination(campList,4-e.locked.length).forEach(teamComb => {
-                                        //Progress Bar
-                                        currIndex++
-                                        if (lastProgress !== Math.round(currIndex * 100 / tot))
-                                            lastProgress = Math.round(currIndex * 100 / tot),
-                                            postMessage({"status": Math.round(currIndex * 100 / tot) });
+                                //Progress Bar
+                                currIndex++
+                                if (lastProgress !== Math.round(currIndex * 100 / tot))
+                                    lastProgress = Math.round(currIndex * 100 / tot),
+                                    postMessage({"status": Math.round(currIndex * 100 / tot) });
 
-                                        if (teamComb.length>4 || e.locked.length == 4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
-                                        var team = [].concat(teamComb, e.locked);
-                                        let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb;
-                                        if (checkScDupe(team))
-                                            return;
-                                        
-                                        if (!e.locked.every(i => team.includes(i)))
-                                            return;
+                                if (teamComb.length>4 || e.locked.length == 4) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
+                                var team = [].concat(teamComb, e.locked);
+                                let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb;
+                                if (checkScDupe(team))
+                                    return;
+                                
+                                if (!e.locked.every(i => team.includes(i)))
+                                    return;
 
-                                        if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
-                                            return;
+                                if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
+                                    return;
 
-                                        if (e.elemento.length > 0 && !e.elemento.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat().includes(i)))
-                                            return;
-                                        
-                                        if (e.buffs.length > 0 && !e.buffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat().includes(i)))
-                                            return;
-                                        
-                                        if (e.debuffs.length > 0 && !e.debuffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat().includes(i)))
-                                            return;
+                                if (e.elemento.length > 0 && !e.elemento.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat().includes(i)))
+                                    return;
+                                
+                                if (e.buffs.length > 0 && !e.buffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat().includes(i)))
+                                    return;
+                                
+                                if (e.debuffs.length > 0 && !e.debuffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat().includes(i)))
+                                    return;
 
-                                        if (e.noS1debuffs && elementoFiltro.map(function (hero, i) { return HeroDB[hero].skills[0].debuff }).flat().filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length != 0)
-                                            return;
+                                if (e.noS1debuffs && elementoFiltro.map(function (hero, i) { return HeroDB[hero].skills[0].debuff }).flat().filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length != 0)
+                                    return;
 
-                                        if (e.noDebuffs && elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat().filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length != 0)
-                                            return;
+                                if (e.noDebuffs && elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat().filter(function (team) {return team != 20 && team != 25 && team != 21 && team != 24}).length != 0)
+                                    return;
 
-                                        if (e.AoE && !AoEHeroes.some(i => elementoFiltro.includes(i)) )
-                                            return;
+                                if (e.AoE && !AoEHeroes.some(i => elementoFiltro.includes(i)) )
+                                    return;
 
-                                        if (e.mustIncludeDispel && !dispelHeroes.some(i => elementoFiltro.includes(i)))
-                                            return;
+                                if (e.mustIncludeDispel && !dispelHeroes.some(i => elementoFiltro.includes(i)))
+                                    return;
 
-                                        let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team);
-                                        if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
-                                            e.risultati.push(risultatoDiQuestoTeam);
-                                            e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
-                                        } else {
-                                            e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
-                                            if (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale) ) {
-                                                if ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) ) {
-                                                    e.risultati.unshift(risultatoDiQuestoTeam);
-                                                    if (e.preferenzeRisultati.numeroMassimo === true) e.risultati.splice(e.preferenzeRisultati.n);
-                                                };
-                                            };
-                                        };
+                                let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team);
+
+                                if (e.risultati[e.risultati.length-1].morale >= risultatoDiQuestoTeam.morale || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > risultatoDiQuestoTeam.morale) )
+                                    return;
+
+                                for (var i = 0; i<e.risultati.length;i++) {
+                                    if (risultatoDiQuestoTeam.morale > e.risultati[i].morale) {
+                                        e.risultati.splice(i, 0, risultatoDiQuestoTeam );
+                                        e.risultati.splice(e.preferenzeRisultati.n, 1);
+                                        break;
+                                    };
+                                };
                             });
+                            for (var i = 0; i < e.risultati.length; i++) {
+                                if (e.risultati[i].team.length<3) { // remove placeholders
+                                    e.risultati.splice(i);
+                                    break;
+                                };
+                            };
                         };
                     };
                 } else if (isCartesian === true) {
@@ -349,6 +355,7 @@ onmessage = function(e) {
                     } else if ((e.cartesianLock.length + e.locked.length + e.classe.length) > 4 || (e.cartesianLock.length + e.locked.length + e.elemento.length) > 4) { // Too many locked heroes
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate 
+                        e.risultati = Array(e.preferenzeRisultati.n).fill({morale: -100, team: []});
                         if ( (e.cartesianLock.length + e.locked.length) > 3 ) campList = ["Ras"]; // placeholder Ras if all heroes are used in multilock or lock-> avoid RangeError
                         c = printCombos(e.cartesianLock);
                         var currIndex = 0;
@@ -397,22 +404,27 @@ onmessage = function(e) {
                                     return;
 
                                 let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team);
-                                if ( ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && e.risultati.length < e.preferenzeRisultati.n) ) && (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale))) {
-                                    e.risultati.push(risultatoDiQuestoTeam);
-                                    e.risultati.sort(function(a, b)  {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
-                                } else {
-                                    e.risultati.sort(function(a, b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0 : 1));});
-                                    if (e.preferenzeRisultati.minMorale === false || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale <= risultatoDiQuestoTeam.morale) ) {
-                                        if ( e.preferenzeRisultati.numeroMassimo === false || (e.preferenzeRisultati.numeroMassimo === true && risultatoDiQuestoTeam.morale > e.risultati[e.risultati.length-1].morale) ) {
-                                            e.risultati.unshift(risultatoDiQuestoTeam);
-                                            if (e.preferenzeRisultati.numeroMassimo === true) e.risultati.splice(e.preferenzeRisultati.n);
-                                        };
+
+                                if (e.risultati[e.risultati.length-1].morale >= risultatoDiQuestoTeam.morale || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > risultatoDiQuestoTeam.morale) )
+                                    return;
+
+                                for (var i = 0; i<e.risultati.length;i++) {
+                                    if (risultatoDiQuestoTeam.morale > e.risultati[i].morale) {
+                                        e.risultati.splice(i, 0, risultatoDiQuestoTeam );
+                                        e.risultati.splice(e.preferenzeRisultati.n, 1);
+                                        break;
                                     };
                                 };
                             });
+                            for (var i = 0; i < e.risultati.length; i++) {
+                                if (e.risultati[i].team.length<3) { // remove placeholders
+                                    e.risultati.splice(i);
+                                    break;
+                                };
+                            };
                         });
                     };
                 };
-                e.risultati.sort(function (a,b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0: 1))}); // riordina l'ultimo elemento aggiunto
+                //e.risultati.sort(function (a,b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0: 1))}); // riordina l'ultimo elemento aggiunto
                 postMessage({risultati: e.risultati});
 }
