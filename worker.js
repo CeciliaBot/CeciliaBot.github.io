@@ -60,12 +60,43 @@ function giaInTop(team, top) {
     return -1;
 };
 
+//******************** Check required class ********************/
+var knights = 0, warriors = 0, assassins = 0, rangers = 0, mages = 0, manausers = 0;
+function setRequestedClass (classe) {
+    if (classe.length>0)
+        for (var i = 0; i < classe.length; i++){
+            if (classe[i] === "knight") knights++
+            else if (classe[i] === "warrior") warriors++
+            else if (classe[i] === "assassin") assassins++
+            else if (classe[i] === "ranger") rangers++
+            else if (classe[i] === "mage") mages++
+            else if (classe[i] === "manauser") manausers++
+        };
+};
+function checkHeroClass(team, HeroDB) {
+    var _knights = 0, _warriors = 0, _assassins = 0, _rangers = 0, _mages = 0, _manausers = 0;
+    for (var i = 0; i < team.length; i++) {
+        var thisHeroClass = HeroDB[team[i]].role;
+        if (thisHeroClass === "knight") _knights++
+        else if (thisHeroClass === "warrior") _warriors++
+        else if (thisHeroClass === "assassin") _assassins++
+        else if (thisHeroClass === "ranger") _rangers++
+        else if (thisHeroClass === "mage") _mages++
+        else if (thisHeroClass === "manauser") _manausers++
+    };
+
+    if (_knights >= knights && _warriors >= warriors && _assassins >= assassins && _rangers >= rangers && _mages >= mages && _manausers >= manausers)
+        return true;
+
+    return false;
+};
 
 onmessage = function(e) {
          var e = e.data;
          e.risultati = [];
          var HeroDB = e.HeroDB;
          var campList = e.campList;
+         knights = 0, warriors = 0, assassins = 0, rangers = 0, mages = 0, manausers = 0;
          var isCartesian = e.cartesianLock.flat().length>0 ? true : false;
          console.log("Is cartesian product? " + isCartesian)
 
@@ -122,10 +153,10 @@ onmessage = function(e) {
 
                 if (isCartesian === false) {
                     var hasAdvSettings = false;
-                    if ( (e.locked.length + e.classe.length) > 4 || (e.locked.length + e.elemento.length) > 4 ) { // team size error
+                    if ( ((e.locked.length + e.classe.length) > 4 && !e.preferenzeRisultati.lockedMatter) || ((e.locked.length + e.elemento.length) > 4 && !e.preferenzeRisultati.lockedMatter) || e.elemento.length > 4) { // team size error
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate
-                        var useExperimental = true; // set to false if new formula is not working correctly
+                        var useExperimental = true; // set to false if the new loop is not working correctly
                         if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel) hasAdvSettings = true;
                         if (useExperimental && hasAdvSettings === false && e.locked.length <= 1) { // use only with no advanced settings
                             if (Object.keys(topics_results).length === 0) { // create topics combos (once for page visit)
@@ -188,7 +219,7 @@ onmessage = function(e) {
                                                                         break;
                                                                     };
                                                                     for (var y = 0; y < e.risultati.length; y++) {
-                                                                        if (punteggio > e.risultati[y].morale) {
+                                                                        if (punteggio >= e.risultati[y].morale) {
                                                                             var team = [c1,c2,c3,c4];
                                                                             if (checkScDupe(team)) {
                                                                                 break; // dupe character detected
@@ -225,7 +256,7 @@ onmessage = function(e) {
                                                                 break;
                                                             };
                                                             for (var y = 0; y < e.risultati.length; y++) {
-                                                                if (punteggio > e.risultati[y].morale) {
+                                                                if (punteggio >= e.risultati[y].morale) {
                                                                     var team = [c1,c2,c3,c4];
                                                                     if (checkScDupe(team)) {
                                                                         break; // dupe character detected
@@ -254,8 +285,8 @@ onmessage = function(e) {
                               };
                               for (var i = 0; i < e.risultati.length; i++) {
                                 if (e.risultati[i].team.length<3) { // remove placeholders
-                                  e.risultati.splice(i, 1);
-                                  i--;
+                                  e.risultati.splice(i);
+                                  break;
                                 } else { // Sort locked heroes in the team
                                   e.risultati[i].team.sort(function(a,b){
                                     return e.locked.includes(a) ? 1 : -1;
@@ -264,6 +295,7 @@ onmessage = function(e) {
                              };
                         } else {
                             e.risultati = Array(e.preferenzeRisultati.n).fill({morale: -100, team: []});
+                            setRequestedClass(e.classe);
                             var currIndex = 0;
                             var lastProgress = -1;
                             var tot = Combinatorics.bigCombination(campList,4-e.locked.length).length.valueOf();
@@ -279,19 +311,22 @@ onmessage = function(e) {
                                 let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb;
                                 if (checkScDupe(team))
                                     return;
-                                
-                                if (!e.locked.every(i => team.includes(i)))
+
+                                if (e.classe.length > 0 && !checkHeroClass(elementoFiltro, HeroDB))
                                     return;
 
-                                if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
+                                if (!e.locked.every(i => team.includes(i)))
                                     return;
+                                
+                                /*if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
+                                    return;*/
 
                                 if (e.elemento.length > 0 && !e.elemento.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat().includes(i)))
                                     return;
-                                
+
                                 if (e.buffs.length > 0 && !e.buffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat().includes(i)))
                                     return;
-                                
+
                                 if (e.debuffs.length > 0 && !e.debuffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat().includes(i)))
                                     return;
 
@@ -313,19 +348,20 @@ onmessage = function(e) {
                                     return;
 
                                 for (var i = 0; i<e.risultati.length;i++) {
-                                    if (risultatoDiQuestoTeam.morale > e.risultati[i].morale) {
+                                    if (risultatoDiQuestoTeam.morale >= e.risultati[i].morale) {
                                         e.risultati.splice(i, 0, risultatoDiQuestoTeam );
                                         e.risultati.splice(e.preferenzeRisultati.n, 1);
                                         break;
                                     };
                                 };
                             });
-                            for (var i = 0; i < e.risultati.length; i++) {
-                                if (e.risultati[i].team.length<3) { // remove placeholders
-                                    e.risultati.splice(i);
-                                    break;
+                            if (e.risultati[e.risultati.length-1].team.length<3)
+                                for (var i = 0; i < e.risultati.length; i++) {
+                                    if (e.risultati[i].team.length<3) { // remove placeholders
+                                        e.risultati.splice(i);
+                                        break;
+                                    };
                                 };
-                            };
                         };
                     };
                 } else if (isCartesian === true) {
@@ -352,12 +388,13 @@ onmessage = function(e) {
                     };
                     if ((e.cartesianLock.length + e.locked.length) < 4 && campList.length < 4-(e.cartesianLock.length + e.locked.length)) { // can't calculate not enough heroes to fill remaining slots
                         return postMessage({error: "not_enough_heroes"});
-                    } else if ((e.cartesianLock.length + e.locked.length + e.classe.length) > 4 || (e.cartesianLock.length + e.locked.length + e.elemento.length) > 4) { // Too many locked heroes
+                    } else if ( ((e.cartesianLock.length + e.locked.length + e.classe.length) > 4 && !e.preferenzeRisultati.lockedMatter) || ((e.cartesianLock.length + e.locked.length + e.elemento.length) > 4 && !e.preferenzeRisultati.lockedMatter)) { // Too many locked heroes
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate 
                         e.risultati = Array(e.preferenzeRisultati.n).fill({morale: -100, team: []});
+                        setRequestedClass(e.classe);
                         if ( (e.cartesianLock.length + e.locked.length) > 3 ) campList = ["Ras"]; // placeholder Ras if all heroes are used in multilock or lock-> avoid RangeError
-                        c = printCombos(e.cartesianLock);
+                        var c = printCombos(e.cartesianLock);
                         var currIndex = 0;
                         var lastProgress = -1;
                         var tot = (Combinatorics.bigCombination(campList,4-e.locked.length-c[0].length).length * c.length).valueOf();
@@ -375,7 +412,7 @@ onmessage = function(e) {
                                 let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb; // applica filtro solo ai eroi non lockati
                                 if (checkScDupe(team))
                                     return;
-                            
+
                                 if (!e.locked.every(i => team.includes(i)))
                                     return;
 
@@ -384,10 +421,10 @@ onmessage = function(e) {
 
                                 if (e.elemento.length > 0 && !e.elemento.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat().includes(i)))
                                     return;
-                                
+
                                 if (e.buffs.length > 0 && !e.buffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat().includes(i)))
                                     return;
-                                
+
                                 if (e.debuffs.length > 0 && !e.debuffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].debuffs }).flat().includes(i)))
                                     return;
 
@@ -409,19 +446,20 @@ onmessage = function(e) {
                                     return;
 
                                 for (var i = 0; i<e.risultati.length;i++) {
-                                    if (risultatoDiQuestoTeam.morale > e.risultati[i].morale) {
+                                    if (risultatoDiQuestoTeam.morale >= e.risultati[i].morale) {
                                         e.risultati.splice(i, 0, risultatoDiQuestoTeam );
                                         e.risultati.splice(e.preferenzeRisultati.n, 1);
                                         break;
                                     };
                                 };
                             });
-                            for (var i = 0; i < e.risultati.length; i++) {
-                                if (e.risultati[i].team.length<3) { // remove placeholders
-                                    e.risultati.splice(i);
-                                    break;
+                            if (e.risultati[e.risultati.length-1].team.length<3)
+                                for (var i = 0; i < e.risultati.length; i++) {
+                                    if (e.risultati[i].team.length<3) { // remove placeholders
+                                        e.risultati.splice(i);
+                                        break;
+                                    };
                                 };
-                            };
                         });
                     };
                 };

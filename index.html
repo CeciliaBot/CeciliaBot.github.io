@@ -343,6 +343,58 @@ span.heroImgList {
 	border-radius: 15px;
 }
 
+.adv_settings_elem {
+  width: 120px;
+  display: inline-block;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.class-quantity-container {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.class-quantity-container > .incrementa {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  cursor: pointer;
+  padding: 4px 8px;
+  background-color: var(--bg-color);
+  color: green;
+  border-radius: 50px;
+}
+.class-quantity-container > .decrementa {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  cursor: pointer;
+  padding: 4px 10px;
+  background-color: var(--bg-color);
+  color: red;
+  border-radius: 50px;
+}
+.class-quantity-container > .quantity_curr_quantity {
+  position: absolute;
+  top: -8px;
+  left: -5px;
+  background-color: green;
+  color: white;
+  border-radius: 40px;
+  padding: 5px 10px;
+}
+
 .searchBox {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -963,6 +1015,11 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:#007FFF">
+                  <b>08/09/2020</b>: Request a specific number of character classes<br>
+                  You can now set a specific minimum number of soul-weavers/knights/warriors etc...<br>
+                  For example you can request 2 soul-weavers and a knight for safer runs.
+                </li>
                 <li>
                   <b>29/08/2020</b>: 添加计算进度条 :D<br>
                   现在选了高级设置以后，计算会显示进度条.  例如 2020 年 8月 29 日的版本需要花17分钟计算 187 个英雄带高级设置的所有排列组合, 锁定一个英雄后计算耗时20秒.<br>
@@ -1114,6 +1171,11 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:#007FFF">
+                  <b>08/09/2020</b>: Request a specific number of character classes<br>
+                  You can now set a specific minimum number of soul-weavers/knights/warriors etc...<br>
+                  For example you can request 2 soul-weavers and a knight for safer runs.
+                </li>
                 <li>
                   <b>29/08/2020</b>: 添加計算進度條 :D<br>
                   現在選了高級設定以後，計算會顯示進度條.  例如 2020 年 8月 29 日的版本需要花17分鍾計算 187 個英雄帶高級設定的所有排列組合, 鎖定一個英雄後計算耗時20秒.<br>
@@ -1264,6 +1326,11 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:#007FFF">
+                  <b>08/09/2020</b>: Request a specific number of character classes<br>
+                  You can now set a specific minimum number of soul-weavers/knights/warriors etc...<br>
+                  For example you can request 2 soul-weavers and a knight for safer runs.
+                </li>
                 <li>
                   <b>02/09/2020</b>: Advanced Settings speed improvements<br>
                   Now it can calculate all the combinations under 7 minutes instead of 17 minutes (as of 02/09/2020 - on PC), under 8 seconds with 1 hero locked, with advanced settings on<br>
@@ -1733,23 +1800,29 @@ icon-bar span img {
       <label for="mustIncludeDispel">{{strings.must_include_dispel}}</label><br><br>
       <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
         <center>{{strings.classe}}:</center>
-          <input type="checkbox" id="checkbox_knight" name="classe" value="knight" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_knight" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_knight_label">{{strings.knight}}</p></label>
+          <div class="adv_settings_elem" v-for="(value,key) in {
+                    knight: {string: strings['knight'], icon: 'cm_icon_role_knight'}, 
+                    assassin: {string: strings['thief'], icon: 'cm_icon_role_thief'}, 
+                    warrior: {string: strings['warrior'], icon: 'cm_icon_role_warrior'}, 
+                    ranger: {string: strings['ranger'], icon: 'cm_icon_role_ranger'}, 
+                    mage: {string: strings['mage'], icon: 'cm_icon_role_mage'},
+                    manauser: {string: strings['soul-weaver'], icon: 'cm_icon_role_soul-weaver'},
+                  }
+          " >
+            <div class="class-quantity-container" v-bind:value="key">
+              <span class="quantity_curr_quantity" style="display: none;">
+              </span>
+              <span class="incrementa" onclick="app.editClassQuantity(this)">
+                +
+              </span>
+              <span class="decrementa" onclick="app.editClassQuantity(this)">
+                -
+              </span>
+            </div>
+            <img v-bind:src="'https://assets.epicsevendb.com/class/' + value.icon + '.png'" style="height:60px;width:60px;" />
+            <p style="position:relative;text-align:center;">{{value.string}}</p>
+          </div>
 
-          <input type="checkbox" id="checkbox_thief" name="classe" value="assassin" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_thief" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_thief_label">{{strings.thief}}</p></label>
-
-          <input type="checkbox" id="checkbox_warrior" name="classe" value="warrior" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_warrior" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_warrior_label">{{strings.warrior}}</p></label>
-        
-          <input type="checkbox" id="checkbox_ranger" name="classe" value="ranger" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_ranger" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_ranger_label">{{strings.ranger}}</p></label>
-        
-          <input type="checkbox" id="checkbox_mage" name="classe" value="mage" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_mage" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_mage_label">{{strings.mage}}</p></label>
-        
-          <input type="checkbox" id="checkbox_soul-weaver" name="classe" value="manauser" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_soul-weaver" class="label"> <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;" id="checkbox_soul-weaver_label">{{strings["soul-weaver"]}}</p></label>
       </div>
       <br><br>
       <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
@@ -3416,21 +3489,38 @@ icon-bar span img {
             if (risultati.numeroMassimo === false && risultati.minMorale === true) {risultati.numeroMassimo = true; risultati.n = 200;} // force a limit of 200 if only min morale is checked to avoid large memory usage
             this.customizedResuts = risultati;
           },
+          editClassQuantity: function (e) {
+            var target = e.parentNode, _classe = e.parentNode.attributes.value.value, n = 0;
+            if (e.className === "incrementa"){
+              if (this.classe.length > 3) return snackbarMessage(this.strings["team_size_exceeded"]);
+              this.classe.push(_classe);
+            } else if (e.className === "decrementa") {
+              if (this.classe.indexOf(_classe) === -1) return
+              this.classe.splice(this.classe.indexOf(_classe), 1);
+            }
+
+            for (var i = 0; i < this.classe.length; i++)
+              if (this.classe[i] === _classe ) n++;
+
+            target.firstElementChild.innerHTML = n;
+            if (n===0) target.firstElementChild.style.display = "none"
+            else target.firstElementChild.style.display = ""
+          },
           aggiornaImposatazioniAvanzate: function () {
-                this.classe = [];
+                //this.classe = [];
                 this.elemento = [];
                 this.debuffs = [];
                 this.buffs = [];
 
                 //Raccogli le impostazioni avanzate
-                var classi = document.getElementsByName("classe");
+                //var classi = document.getElementsByName("classe");
                 var elemento_checkbox = document.getElementsByName("elemento");
                 var debuffs_checkbox = document.getElementsByName("debuff");
                 var buffs_checkbox = document.getElementsByName("buff");
-                for(var i = 0; i < classi.length; i++)  
-                {  
-                    if (classi[i].checked) this.classe.push(classi[i].value);
-                }; 
+                //for(var i = 0; i < classi.length; i++)  
+                //{  
+                //    if (classi[i].checked) this.classe.push(classi[i].value);
+                //}; 
                 for(var i = 0; i < elemento_checkbox.length; i++)  
                 {  
                     if (elemento_checkbox[i].checked) this.elemento.push(elemento_checkbox[i].value);
