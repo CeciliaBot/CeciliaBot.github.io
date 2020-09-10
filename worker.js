@@ -1,6 +1,6 @@
 importScripts('https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js');
 
-var AoEHeroes = ["choux","doll-maker-pearlhorizon","briar-witch-iseria","holiday-yufine","mui","adventurer-ras","kawerik","cerise","dark-tyrant-tenebria","specter-tenebria","tempest-surin","pavel","ambitious-tywin","alencia","benevolent-romann","elena","cecilia","vildred","charlotte","baal-sezan","yufine","ravi","kayron","charles","yuna","sez","haste","tywin","lidica","aramintha","tenebria","basar","tamarinne","ludwig","bellona","luluca","zeno","vivian","lilias","dizzy","faithless-lididca","fallen-cecilia","judge-kise","arbiter-vildred","sage-baal-sezan","specimen-sez","martial-artist-ken","silver-blade-aramintha","desert-jewel-basar","seaside-bellona","silk","mercedes","armin","zerato","corvus","cartuja","schuri","dingo","clarissa","leo","purrgis","crozet","dominiel","romann","khawana","shadow-rose","celestial-mercedes","champion-zerato","blood-blade-karin","watcher-schuri","blaze-dingo","kitty-clariss","roaming-warrior-leo","auxiliary-lots","general-purrgis","ras","sven","church-of-ilryos-axe","rikoris","adlay","carrot","jena","jecht","elson","hurado","kiris","celeste","pearlhorizon","gloomyrain","kikirat-v2","chaos-sect-axe","captain-rikoris","researcher-carrot","lena"];
+var AoEHeroes = ["last-rider-krau","choux","doll-maker-pearlhorizon","briar-witch-iseria","holiday-yufine","mui","adventurer-ras","kawerik","cerise","dark-tyrant-tenebria","specter-tenebria","tempest-surin","pavel","ambitious-tywin","alencia","benevolent-romann","elena","cecilia","vildred","charlotte","baal-sezan","yufine","ravi","kayron","charles","yuna","sez","haste","tywin","lidica","aramintha","tenebria","basar","tamarinne","ludwig","bellona","luluca","zeno","vivian","lilias","dizzy","faithless-lididca","fallen-cecilia","judge-kise","arbiter-vildred","sage-baal-sezan","specimen-sez","martial-artist-ken","silver-blade-aramintha","desert-jewel-basar","seaside-bellona","silk","mercedes","armin","zerato","corvus","cartuja","schuri","dingo","clarissa","leo","purrgis","crozet","dominiel","romann","khawana","shadow-rose","celestial-mercedes","champion-zerato","blood-blade-karin","watcher-schuri","blaze-dingo","kitty-clariss","roaming-warrior-leo","auxiliary-lots","general-purrgis","ras","sven","church-of-ilryos-axe","rikoris","adlay","carrot","jena","jecht","elson","hurado","kiris","celeste","pearlhorizon","gloomyrain","kikirat-v2","chaos-sect-axe","captain-rikoris","researcher-carrot","lena"];
 var dispelHeroes = ["adventurer-ras","alencia","arowell","basar","bask","bellona","benevolent-romann","blood-moon-haste","briar-witch-iseria","butcher-corps-inquisitor","captain-rikoris","carmainerose","cecilia","chaos-inquisitor","charles","chloe","crescent-moon-rin","elphelt","faithless-lidica","falconer-kluri","hurado","iseria","kawerik","kikirat-v2","kitty-clarissa","lidica","ludwig","melissa","mui","ras","rikoris","rin","romann","sage-baal-sezan","shadow-rose","sol","tamarinne","taranor-royal-guard","tywin","watcher-schuri","yufine"];
 var topics_results = {};
 var scHeroes = {
@@ -416,8 +416,11 @@ onmessage = function(e) {
                                 if (!e.locked.every(i => team.includes(i)))
                                     return;
 
-                                if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
+                                if (e.classe.length > 0 && !checkHeroClass(elementoFiltro, HeroDB))
                                     return;
+
+                                /*if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
+                                    return;*/
 
                                 if (e.elemento.length > 0 && !e.elemento.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat().includes(i)))
                                     return;
