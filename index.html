@@ -1156,6 +1156,7 @@ icon-bar span img {
               <p><a href="https://e7herder.com/">E7herder</a> 有非常酷的角色模型动画查看器</p>
               <p><a href="https://maphe.github.io/e7-damage-calc/zh/index.html">Epic 7 伤害计算器</a> by Maphe</p>
               <p><a href="https://www.e7leaks.com/">Epic 7 Leaks</a> by Maphe</p>
+              <p><a href="https://epic7pvp.com">Epic7pvp.com</a> for PVP community events</p>
               <p><a href="https://meowyih.github.io/epic7-gear/index.html?lang=cn">装备评分计算器</a> by meowyih</p>
               <p><a href="http://www.epicseventools.com/Home/LabMoraleOptimizer">E7 Tools</a> by Budandan</p>
               <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
@@ -1316,6 +1317,7 @@ icon-bar span img {
               <p><a href="https://e7herder.com/">E7herder</a> 有非常酷的角色模型動畫查看器</p>
               <p><a href="https://maphe.github.io/e7-damage-calc/zhTW/index.html">Epic 7 傷害計算器</a> by Maphe</p>
               <p><a href="https://www.e7leaks.com/">Epic 7 Leaks</a> by Maphe</p>
+              <p><a href="https://epic7pvp.com">Epic7pvp.com</a> for PVP community events</p>
               <p><a href="https://meowyih.github.io/epic7-gear/index.html?lang=tw">裝備評分計算器</a> by meowyih</p>
               <p><a href="http://www.epicseventools.com/Home/LabMoraleOptimizer">E7 Tools</a> by Budandan</p>
               <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
@@ -1486,6 +1488,7 @@ icon-bar span img {
               <p><a href="https://e7herder.com/">E7herder</a> with a cool model viewer</p>
               <p><a href="https://maphe.github.io/e7-damage-calc/">Epic 7 Damage Calculator</a> by Maphe</p>
               <p><a href="https://www.e7leaks.com/">Epic 7 Leaks</a> by Maphe</p>
+              <p><a href="https://epic7pvp.com">Epic7pvp.com</a> for PVP community events</p>
               <p><a href="https://meowyih.github.io/epic7-gear/index.html?lang=en">Web tool to evaluate gears</a> by meowyih</p>
               <p><a href="http://www.epicseventools.com/Home/LabMoraleOptimizer">E7 Tools</a> by Budandan</p>
               <p><a href="https://gamepress.gg/epicseven/">GamePress.gg</a></p>
@@ -3018,6 +3021,7 @@ icon-bar span img {
               if (tastoDestro === 1) $("#debugHeroInfo").remove(), tastoDestro = 0;
               if (showValues) return debugRightMenu(e, key);
               var hero = this.thisHeroData(key);
+              var self = this;
               /* E7DB language tags */
               var _lingua = "/"
               if (this.lingua === "kr") _lingua = "/ko/"
@@ -3035,6 +3039,9 @@ icon-bar span img {
 
               let menuWidth = 400;
               let menuHeight = 480;
+              let _app = document.getElementById("app");
+              let margin_bottom = parseInt( (_app.currentStyle?.marginTop || document.defaultView?.getComputedStyle(_app, '')?.getPropertyValue('margin-bottom') || 0 ), 10);
+              //let margin_left = parseInt( (_app.currentStyle?.marginleft || document.defaultView?.getComputedStyle(_app, '')?.getPropertyValue('margin-left') || 0 ), 10);
               var clickCoordsX = getPosition(e).x;
               var clickCoordsY = getPosition(e).y;
 
@@ -3043,21 +3050,27 @@ icon-bar span img {
 
               var transformX = 0;
               var transformY = 0;
-              if ( (windowWidth - clickCoordsX - 50) < menuWidth ) {
-                transformX =  Math.abs(Math.abs(clickCoordsX - windowWidth) - menuWidth) * 100 / menuWidth + 3;
+              if ( (windowWidth - clickCoordsX - 5) < menuWidth ) {
+                /*if (clickCoordsX - menuWidth > margin_left + 5)
+                  transformX = 100;
+                else*/
+                  transformX =  Math.abs(Math.abs(clickCoordsX - windowWidth) - menuWidth) * 100 / menuWidth + 3;
               };
 
-              if ( (windowHeight - e.clientY - 50) < menuHeight ) {
-                transformY =  Math.abs(Math.abs(clickCoordsY - (document.getScroll()[1]+windowHeight) ) - menuHeight) * 100 / menuHeight + 3;
-                if (!userSettings.verticalToolbar) clickCoordsY -= 70;
+              if ( (windowHeight - e.clientY - margin_bottom - 5) < menuHeight ) {
+                /*if ( e.clientY - menuHeight > margin_bottom && windowHeight - e.clientY > 0)
+                  transformY = 100;
+                else*/
+                  transformY =  Math.abs(Math.abs(e.clientY - windowHeight) - menuHeight - margin_bottom) * 100 / menuHeight + 3;
               };
+
               /*console.log({windowWidth: windowWidth, windowHeight: windowHeight, clickCoordsX: clickCoordsX, clickCoordsY: clickCoordsY, transformX: transformX+"%", transformY: transformY+"%"})*/
               $( "#app" ).append(`
-              <div id="debugHeroInfo" class="dropdown-content" style="display: inline-block; height: auto; top: `+ clickCoordsY +`px; left: `+clickCoordsX+`px; width: ` + menuWidth + `px; transform: translate(-`+transformX+`%, -`+transformY+`%);">
-                <span style="width: 100%; font-size: 24px; text-align: center;"><b>` + this.thisHeroTranslatedName(hero._id) + `</b><b class="close" style="position: static; float: right; cursor: pointer; font-size: 30px;" onclick="$('#debugHeroInfo').remove()">x</b></span>
+              <div id="debugHeroInfo" class="dropdown-content" style="display: inline-block; max-height: 480px; top: `+ clickCoordsY +`px; left: `+clickCoordsX+`px; width: ` + menuWidth + `px; transform: translate(-`+transformX+`%, -`+transformY+`%); border-top: thick solid var(--icon-bar-active); box-sizing: border-box;">
+                <span style="width: 100%; font-size: 24px; text-align: center;"><b>` + this.thisHeroTranslatedName(hero._id) + `</b><b class="close" style="float: right; cursor: pointer; font-size: 30px; margin-right: -10px;" onclick="$('#debugHeroInfo').remove()">x</b></span>
                 <a href="` + e7dbLink + `" target="_blank">` + this.strings.view_on_e7db + `</a>
                 <a href="https://e7herder.com/tools/model-viewer#type=5,id=` + hero.id + `" target="_blank">` + this.strings.view_hero_model + `</a>
-                <span id="heroDetailsRight" style="width: 100% !important; padding: 0; position: relative; min-height: 50px;">
+                <span id="heroDetailsRight" style="width: 100% !important; padding: 0; overflow: scroll; position: relative; min-height: 50px;">
                   <i class="fa  fa-circle-notch fa-spin" style="font-size: 40px; position: absolute; top 40%; left: 40%;"></i>
                 </span>
               </div>
@@ -3072,7 +3085,7 @@ icon-bar span img {
 
                   for (var i = 0; i<skills.length; i++) {
                     for (var j = 0; j < skills[i].values.length; j++) {
-                      var number = skills[i].values[j] <= 1 ? skills[i].values[j]*100+"%" : skills[i].values[j];
+                      var number = skills[i].values[j] <= 1 ? Math.round( skills[i].values[j]*100 ) + "%" : skills[i].values[j];
                       if (skills[i].enhanced_description) {
                         skills[i].enhanced_description = skills[i].enhanced_description.replace(/{{variable}}/i,'<font color="orangered">' + number + '</font>');
                       } else {
@@ -3087,7 +3100,7 @@ icon-bar span img {
                     `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'inline-block'; menu[1].style.display = 'none'; menu[2].style.display = 'none';" style="background-image: url(` + skills[0].assets.icon + `);" class="rightClickIconMenu"></span>` + 
                     `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'none'; menu[1].style.display = 'inline-block'; menu[2].style.display = 'none';" style="background-image: url(` + skills[1].assets.icon + `);" class="rightClickIconMenu"></span>` + 
                     (skills[2] ? `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'none'; menu[1].style.display = 'none'; menu[2].style.display = 'inline-block';" style="background-image: url(` + skills[2].assets.icon + `);" class="rightClickIconMenu"></span>` : "<span></span>") +
-                    `<div style="padding: 12px 16px; margin-top: -4px; background-color: var(--bg-color)">` +
+                    `<div style="padding: 0 16px 12px 16px; margin-top: -4px; background-color: var(--bg-color); max-height: 269px; overflow: scroll; overscroll-behavior: contain; box-sizing: border-box;">` +
                       `<div style="display: inline-block;"><p style="text-align: center"><b>` + skills[0].name + `</b></p><p>` + (skills[0].enhanced_description || skills[0].description) + `</p><p>` + (skills[0].soul_description ? "Soulburn:<br>" + skills[0].soul_description : "") + `</p></div>` +
                       `<div style="display: none;"><p style="text-align: center"><b>` + skills[1].name + `</b></p><p>` + (skills[1].enhanced_description || skills[1].description) + `</p><p>` + (skills[1].soul_description ? "Soulburn:<br>" + skills[1].soul_description : "") + `</p></div>` +
                       (skills[2] ? 
@@ -3099,8 +3112,14 @@ icon-bar span img {
                   );
                 },
                 error: function (err) {
+                  console.log(err)
+                  let error = "";
+                  if (err.responseJSON) error = self.strings.e7api_missing_character; //"Couldn't find this character on EpicSevenDB";
+                  else error = self.strings.e7api_couldnt_connect; //"Couldn't connect to EpicSevenDB.";
+                  document.getElementById("heroDetailsRight").innerHTML = "";
                   $( "#heroDetailsRight" ).append(
-                    `<div style="padding: 12px 16px; margin-top: -4px; background-color: var(--bg-color)"></div>`);
+                    `<div style="padding: 12px 16px; margin-top: -4px; background-color: var(--bg-color)"><p style="text-align: center">${error}</p></div>`
+                  );
                 }
               });
             }, 10);
@@ -3874,6 +3893,8 @@ icon-bar span img {
                   view_on_e7db: "Visualizza dettagli eroe su EpicSevenDB.com",
                   view_hero_model: "Visualizza modello 2D su e7herder.com",
                   skills_not_enhanced: "Skills are awakened but not enhanced",
+                  e7api_missing_character: "Questo eroe non è presente nel database di EpicSevenDB",
+                  e7api_couldnt_connect: "Impossibile connettersi a EpicSevenDB",
 
                   tema_notturno: "Tema notturno",
                   vert_iconbar: "Toolbar verticale",
@@ -4018,6 +4039,8 @@ icon-bar span img {
                   view_on_e7db: " 前往EpicSevenDB.com查看英雄详细信息",
                   view_hero_model: "前往e7herder.com查看英雄模型",
                   skills_not_enhanced: "技能已经觉醒但是并没有强化",
+                  e7api_missing_character: "Couldn't find this character on EpicSevenDB",
+                  e7api_couldnt_connect: "Couldn't connect to EpicSevenDB",
 
                   tema_notturno: "夜间模式",
                   vert_iconbar: "垂直工具栏",
@@ -4162,6 +4185,8 @@ icon-bar span img {
                   view_on_e7db: " 前往EpicSevenDB.com檢視英雄詳細信息",
                   view_hero_model: "前往e7herder.com檢視英雄模型",
                   skills_not_enhanced: "技能已經覺醒但是並未強化",
+                  e7api_missing_character: "Couldn't find this character on EpicSevenDB",
+                  e7api_couldnt_connect: "Couldn't connect to EpicSevenDB",
 
                   tema_notturno: "夜間模式",
                   vert_iconbar: "垂直工具欄",
@@ -4296,6 +4321,8 @@ icon-bar span img {
                   view_on_e7db: "Voir les détails du héro sur EpicSevenDB.com",
                   view_hero_model: "Voir le modèle de héro sur e7herder.com",
                   skills_not_enhanced: "Les compétences sont éveillées mais pas améliorées",
+                  e7api_missing_character: "Couldn't find this character on EpicSevenDB",
+                  e7api_couldnt_connect: "Couldn't connect to EpicSevenDB",
 
                   tema_notturno: "Mode nuit",
                   vert_iconbar: "Barre d'outils verticale",
@@ -4442,6 +4469,8 @@ icon-bar span img {
                   view_on_e7db: "View hero details on EpicSevenDB.com",
                   view_hero_model: "View hero model on e7herder.com",
                   skills_not_enhanced: "Skills are awakened but not enhanced",
+                  e7api_missing_character: "Couldn't find this character on EpicSevenDB",
+                  e7api_couldnt_connect: "Couldn't connect to EpicSevenDB",
 
                   tema_notturno: "Night theme",
                   vert_iconbar: "Vertical toolbar",
@@ -5644,19 +5673,6 @@ icon-bar span img {
   created () {console.log("created")}
 });
 
-
-document.getScroll = function() {
-  if (window.pageYOffset != undefined) {
-      return [pageXOffset, pageYOffset];
-  } else {
-      var sx, sy, d = document,
-          r = d.documentElement,
-          b = d.body;
-      sx = r.scrollLeft || b.scrollLeft || 0;
-      sy = r.scrollTop || b.scrollTop || 0;
-      return [sx, sy];
-  };
-};
 function debounce(func, wait, immediate) {
   var timeout;
   return function executedFunction() {
