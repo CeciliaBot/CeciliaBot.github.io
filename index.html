@@ -3040,7 +3040,10 @@ icon-bar span img {
               let menuWidth = 400;
               let menuHeight = 480;
               let _app = document.getElementById("app");
-              let margin_bottom = parseInt( (_app.currentStyle?.marginTop || document.defaultView?.getComputedStyle(_app, '')?.getPropertyValue('margin-bottom') || 0 ), 10);
+              //let margin_bottom = parseInt( (_app.currentStyle?.marginTop || document.defaultView?.getComputedStyle(_app, '')?.getPropertyValue('margin-bottom') || 0 ), 10);
+              let margin_bottom = !userSettings.verticalToolbar ? 0 : 70;
+              
+              
               //let margin_left = parseInt( (_app.currentStyle?.marginleft || document.defaultView?.getComputedStyle(_app, '')?.getPropertyValue('margin-left') || 0 ), 10);
               var clickCoordsX = getPosition(e).x;
               var clickCoordsY = getPosition(e).y;
