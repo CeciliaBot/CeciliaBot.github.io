@@ -16,7 +16,8 @@ var scHeroes = {
                 "carrot": "researcher-carrot",
                 "wanda": "allrounder-wanda",
                 "ras": "adventurer-ras",
-                "pearlhorizon": "doll-maker-pearlhorizon"
+                "pearlhorizon": "doll-maker-pearlhorizon",
+                "doris": "magic-scholar-doris"
                };
 
 if (!Array.prototype.flat) {
