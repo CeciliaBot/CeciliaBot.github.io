@@ -3576,7 +3576,7 @@ icon-bar span img {
                   (this.HeroDB[tmpArray[i]].attribute != filtro.filter_element && filtro.filter_element != "*") || 
                   (this.HeroDB[tmpArray[i]].rarity != filtro.filter_rarity && filtro.filter_rarity != "*") ||
                   (filtro.filter_gia_aggiunti == "true" && this.myHeroesList[tmpArray[i]] ) ||
-                  (this.thisHeroTranslatedName(this.thisHeroData(tmpArray[i])._id).toLowerCase().indexOf(filtro.ricerca.toLowerCase()) === -1 || this.thisHeroData(tmpArray[i]).name.toLowerCase().indexOf(filtro.ricerca.toLowerCase()) === -1)
+                  (this.thisHeroTranslatedName(this.thisHeroData(tmpArray[i])._id).toLowerCase().indexOf(filtro.ricerca.toLowerCase()) === -1 && this.thisHeroData(tmpArray[i]).name.toLowerCase().indexOf(filtro.ricerca.toLowerCase()) === -1)
               ) {
                  tmpArray.splice(tmpArray.indexOf(tmpArray[i]), 1);
                  i--
