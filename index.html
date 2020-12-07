@@ -2285,7 +2285,16 @@ icon-bar span img {
 
 <script defer>
     var userSettings = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : "{}");
-
+    
+    function defaultThemeColor() {
+	try {
+	      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		 return 'dark';
+	     } else return 'light';
+	} catch (err) {
+	    return 'light';
+	};
+    };
     function toggleCheck() {
         if (document.getElementById("darkModeCheck").checked === true) {
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -2306,7 +2315,7 @@ icon-bar span img {
             checkBoxes.attr('checked', true);
         };
     } else {
-	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { // check OS settings and set dark theme if necessary
+	if (defaultThemeColor() == 'dark') { // check OS settings and set dark theme if necessary
 	    document.documentElement.setAttribute('data-theme', 'dark');
             var checkBoxes = $("input[name=darkModeCheck]");
             checkBoxes.attr('checked', true);
