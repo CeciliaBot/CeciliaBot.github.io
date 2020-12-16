@@ -119,7 +119,7 @@ onmessage = function(e) {
               ];
 
 
-              //Ordina per risultato				   
+              //Ordina per risultato
               tabConTagNome.sort(function(a, b) {
                   return ((a.risultato > b.risultato) ? -1 : ((a.risultato == b.risultato) ? 0 : 1));
               });   
@@ -158,7 +158,7 @@ onmessage = function(e) {
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate
                         var useExperimental = true; // set to false if the new loop is not working correctly
-                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel) hasAdvSettings = true;
+                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel || e.preferenzeRisultati.n > 2000) hasAdvSettings = true;
                         if (useExperimental && hasAdvSettings === false && e.locked.length <= 1) { // use only with no advanced settings
                             if (Object.keys(topics_results).length === 0) { // create topics combos (once for page visit)
                                 for (var hero_id in HeroDB) {
@@ -208,78 +208,79 @@ onmessage = function(e) {
                                         if (c1 === c2) {
                                             for (var i1 = 0; i1 < currTopicCombo.eroi.length; i1++) {
                                                 c2 = currTopicCombo.eroi[i1]._id;
-                                                if (currTopicCombo.eroi[i1].roster && c2 != c1) {
-                                                    for (var i2 = i1+1; i2 < currTopicCombo.eroi.length; i2++) {
-                                                        var c3 = currTopicCombo.eroi[i2]._id;
-                                                        if (currTopicCombo.eroi[i2].roster && c3 != c1) {
-                                                            for (var i3 = i2+1; i3 < currTopicCombo.eroi.length; i3++) {
-                                                                var c4 = currTopicCombo.eroi[i3]._id;
-                                                                if (currTopicCombo.eroi[i3].roster && c4 != c1) {
-                                                                    var punteggio = 0 + currTopicCombo.eroi[i1].punteggio + currTopicCombo.eroi[i2].punteggio + currTopicCombo.eroi[i3].punteggio;
-                                                                    if (e.risultati[e.risultati.length-1].morale > punteggio || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > punteggio) ) {
-                                                                        break;
-                                                                    };
-                                                                    for (var y = 0; y < e.risultati.length; y++) {
-                                                                        if (punteggio >= e.risultati[y].morale) {
-                                                                            var team = [c1,c2,c3,c4];
-                                                                            if (checkScDupe(team)) {
-                                                                                break; // dupe character detected
-                                                                            };
-                                                                            if (!(everyLocked(team, e.locked))) {
-                                                                                break; // break da risultati
-                                                                            };
-                                                                            var inTop = giaInTop(team, e.risultati);
-                                                                            if (inTop === -1) {
-                                                                                e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
-                                                                                e.risultati.splice(e.preferenzeRisultati.n, 1);
-                                                                            } else if (inTop >= y) {
-                                                                                e.risultati.splice(inTop, 1);
-                                                                                e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
-                                                                            };
-                                                                            break;
-                                                                        };
-                                                                    };
-                                                                }; // if c3
-                                                            }; // for var i3
-                                                        }; // if c3
-                                                    }; // for var i2
-                                                }; // if c2
+                                                if (!currTopicCombo.eroi[i1].roster || c2 == c1) continue;
+                                                for (var i2 = i1+1; i2 < currTopicCombo.eroi.length; i2++) {
+                                                    let canContinue = true;
+                                                    var c3 = currTopicCombo.eroi[i2]._id;
+                                                    if (!currTopicCombo.eroi[i2].roster || c3 == c1) continue;
+                                                    for (var i3 = i2+1; i3 < currTopicCombo.eroi.length; i3++) {
+                                                        var c4 = currTopicCombo.eroi[i3]._id;
+                                                        if (!currTopicCombo.eroi[i3].roster || c4 == c1) continue;
+                                                        var punteggio = 0 + currTopicCombo.eroi[i1].punteggio + currTopicCombo.eroi[i2].punteggio + currTopicCombo.eroi[i3].punteggio;
+                                                        if (e.risultati[e.risultati.length-1].morale > punteggio || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > punteggio) ) {
+                                                            if (i3 == i2+1) canContinue = false;
+                                                            break;
+                                                        };
+                                                        for (var y = 0; y < e.risultati.length; y++) {
+                                                            if (punteggio >= e.risultati[y].morale) {
+                                                                var team = [c1,c2,c3,c4];
+                                                                if (checkScDupe(team)) {
+                                                                    break; // dupe character detected
+                                                                };
+                                                                if (!(everyLocked(team, e.locked))) {
+                                                                    break; // break da risultati
+                                                                };
+                                                                var inTop = giaInTop(team, e.risultati);
+                                                                if (inTop === -1) {
+                                                                    e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
+                                                                    e.risultati.splice(e.preferenzeRisultati.n, 1);
+                                                                } else if (inTop >= y) {
+                                                                    e.risultati.splice(inTop, 1);
+                                                                    e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
+                                                                };
+                                                                break;
+                                                            };
+                                                        };
+                                                    }; // for var i3
+                                                    if (!canContinue) break;
+                                                }; // for var i2
                                             }; //for var i1
                                         } else {
                                             for (var i1 = 0; i1 < currTopicCombo.eroi.length; i1++) {
+                                                let canContinue = true;
                                                 var c3 = currTopicCombo.eroi[i1]._id;
-                                                if (currTopicCombo.eroi[i1].roster && c3 != c1 && c3 != c2) {
-                                                    for (var i2 = i1+1; i2 < currTopicCombo.eroi.length; i2++) {
-                                                        var c4 = currTopicCombo.eroi[i2]._id;
-                                                        if (currTopicCombo.eroi[i2].roster && c4 != c1 && c4 != c2) {
-                                                            var punteggio = c1p + c2p + currTopicCombo.eroi[i1].punteggio + currTopicCombo.eroi[i2].punteggio;
-                                                            if (e.risultati[e.risultati.length-1].morale > punteggio || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > punteggio) ) {
-                                                                break;
+                                                if (!currTopicCombo.eroi[i1].roster || c3 == c1 || c3 == c2) continue;
+                                                for (var i2 = i1+1; i2 < currTopicCombo.eroi.length; i2++) {
+                                                    var c4 = currTopicCombo.eroi[i2]._id;
+                                                    if (!currTopicCombo.eroi[i2].roster || c4 == c1 || c4 == c2) continue;
+                                                    var punteggio = c1p + c2p + currTopicCombo.eroi[i1].punteggio + currTopicCombo.eroi[i2].punteggio;
+                                                    if (e.risultati[e.risultati.length-1].morale > punteggio || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > punteggio) ) {
+                                                        if (i2==i1+1) canContinue = false;
+                                                        break;
+                                                    };
+                                                    for (var y = 0; y < e.risultati.length; y++) {
+                                                        if (punteggio >= e.risultati[y].morale) {
+                                                            var team = [c1,c2,c3,c4];
+                                                            if (checkScDupe(team)) {
+                                                                break; // dupe character detected
                                                             };
-                                                            for (var y = 0; y < e.risultati.length; y++) {
-                                                                if (punteggio >= e.risultati[y].morale) {
-                                                                    var team = [c1,c2,c3,c4];
-                                                                    if (checkScDupe(team)) {
-                                                                        break; // dupe character detected
-                                                                    };
-                                                                    if (!(everyLocked(team, e.locked))) {
-                                                                        break; // break da risultati
-                                                                    };
-                                                                    var inTop = giaInTop(team, e.risultati);
-                                                                    if (inTop === -1) {
-                                                                        e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
-                                                                        e.risultati.splice(e.preferenzeRisultati.n, 1);
-                                                                    } else if (inTop >= y) {
-                                                                        e.risultati.splice(inTop, 1);
-                                                                        e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
-                                                                    };
-                                                                    break;
-                                                                };
+                                                            if (!(everyLocked(team, e.locked))) {
+                                                                break; // break da risultati
                                                             };
-                                                        }; // if c3
-                                                    }; // for var i3
-                                                }; // if c3
-                                            }; // for var i2
+                                                            var inTop = giaInTop(team, e.risultati);
+                                                            if (inTop === -1) {
+                                                                e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
+                                                                e.risultati.splice(e.preferenzeRisultati.n, 1);
+                                                            } else if (inTop >= y) {
+                                                                e.risultati.splice(inTop, 1);
+                                                                e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
+                                                            };
+                                                            break;
+                                                        };
+                                                    };
+                                                }; // for var i2
+                                                if (!canContinue) break;
+                                            }; // for var i1
                                         }; // if c1 === c2
                                     }; // var e
                                 };// var i
