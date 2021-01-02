@@ -17,8 +17,13 @@
     <link rel="shortcut icon" href="./favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    
+    <meta name="theme-color" content="#252B35">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CeciliaBot">
+    <meta property="og:image" content="./favicons/android-chrome-256x256.png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
@@ -1351,6 +1356,9 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li>
+                  <b>02/01/2021</b>: Boot speed improvements<br>
+                </li>
                 <li style="color:#007FFF">
                   <b>12/09/2020</b>: Contextual menu<br>
                   Right click (long tap on mobile) on a character to open a quick menu where you can read that hero's skills and quickly jump to Epic Seven DB to read more or open the model viewer on e7herder.com.<br>
@@ -5589,59 +5597,61 @@ icon-bar span img {
       boot: function () {
         try {
           var urlParams = new URLSearchParams(window.location.search);
-          var getDbEng = new XMLHttpRequest();
-          getDbEng.open( "GET", "./HeroDatabase.json", false ); // false for synchronous request
-          getDbEng.send( null );
-          this.HeroDB = JSON.parse(getDbEng.response);
-          this.sortedHeroDB = Object.keys(this.HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
-          this.sortedHeroDB.splice(this.sortedHeroDB.indexOf("dark-tyrant-tenebria"), 1); // remove s tenebria's skin
-          if (!urlParams.get("camproster")) { // get roster from file
-            this.getUserHeroesBoot();
-          } else {// get roster from url
-            this.getUserHeroesURL(urlParams.get("camproster"));
-            window.history.pushState("", "", window.location.pathname); // remove ?camproster= from the URL to avoid accidental refreshes replacing your current team
-          };
+          $.ajax({
+              url: "./HeroDatabase.json",
+              type: 'GET',
+              contentType: 'application/json',
+              success: (response) => {
+                console.log(response);
+                this.HeroDB = response;
+                this.sortedHeroDB = Object.keys(this.HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
+                this.sortedHeroDB.splice(this.sortedHeroDB.indexOf("dark-tyrant-tenebria"), 1); // remove s tenebria's skin
+                if (!urlParams.get("camproster")) { // get roster from file
+                  this.getUserHeroesBoot();
+                } else {// get roster from url
+                  this.getUserHeroesURL(urlParams.get("camproster"));
+                  window.history.pushState("", "", window.location.pathname); // remove ?camproster= from the URL to avoid accidental refreshes replacing your current team
+                };
+                this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
+                this.inizializzazione = false;
+              },
+              error: (jqXHR, textStatus, errorThrown) => {
+                console.log("could not upload team data");
+              }
+          });
           this.impostaLingua();
           this.inizializzaione();
-          this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
-          this.inizializzazione = false;
         } catch (err) {
           console.log(err);
           document.getElementById("caricamentoIniziale").innerHTML += "<span style='position: fixed; bottom: 0; right: 0; color: red; padding: 10px'><pre>FATAL ERROR<br>"+err+"<br><span style='color:green'>Please retry or contact me.</span></pre></span>";
         };
       },
       inizializzaione: function () {
+        this.translatedName = {};
         self = this;
-        try {
-          var getDb = new XMLHttpRequest();
-          getDb.open( "GET", "https://api.epicsevendb.com/hero?lang=" + this.lingua, false ); // false for synchronous request
-          getDb.send( null );
-          JSON.parse(getDb.response).results.forEach(function(item) {
-            self.translatedName[item._id] = item.name;
-          });
-        } catch (err) {
-          console.log(err);
-          for (var _id in self.HeroDB) {
-            self.translatedName[_id] = self.HeroDB[_id].name;
-          };
-          snackbarMessage("Cannot connect to EpicSevenDB API. Using english gamedata.");
-        };
-        if (this.lingua === "cn") {
-          this.translatedName["dark-tyrant-tenebria"] = "残月的暴君泰妮布里雅";
-          this.translatedName["landy"] = "兰蒂";
-        }
-        else if (this.lingua === "zht") {
-          this.translatedName["dark-tyrant-tenebria"] = "殘月的暴君泰妮布里雅";
-          this.translatedName["landy"] = "蘭蒂";
-        }
-        else if (this.lingua === "fr") {
-          this.translatedName["dark-tyrant-tenebria"] = "Tenebria tyran de l'astre violine";
-          this.translatedName["landy"] = "Landy";
-        }
-        else {
-          this.translatedName["dark-tyrant-tenebria"] = "Dark Tyrant Tenebria";
-          this.translatedName["landy"] = "Landy";
-        }
+        $.ajax({
+          url: "https://api.epicsevendb.com/hero?lang=" + this.lingua,
+          type: 'GET',
+          contentType: 'application/json',
+          success: (response) => {
+            response.results.forEach(function(item) {
+              self.translatedName[item._id] = item.name;
+            });
+            let missing = {
+              "dark-tyrant-tenebria": {cn: "残月的暴君泰妮布里雅", zht: "殘月的暴君泰妮布里雅", fr: "Tenebria tyran de l'astre violine"},
+              "fairytale-tenebria": {jp: "メルヘン テネブレア", cn: "童话泰妮布里雅", zht: "童話泰妮布里雅", kr: "메르헨 테네브리아", fr: "Tenebria des merveilles", es: "Tenebria fantasia", pt: "Tenébria das Fábulas", de: "Märchenhafte Tenebria"},
+              "mort": {cn: "魔勒", zht: "魔勒", kr: "모르트", fr: "Morté", es: "Mort", pt: "Mort", de: "Mort"}
+            };
+            for (var id in missing) {
+              if (missing[id][this.lingua]) self.translatedName[id] = missing[id][this.lingua];
+            };
+            this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
+          },
+          error: (jqXHR, textStatus, errorThrown) => {
+            this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
+            snackbarMessage("Cannot connect to EpicSevenDB API. Using english gamedata.");
+          }
+        });
       }
     },
     computed: {
@@ -5662,23 +5672,23 @@ icon-bar span img {
             this.noDebuffs;
             this.mustIncludeDispel;
             this.customizedResuts;
-           if (Object.keys(this.myHeroesList).length > 3) {
-            this.isLoadingResults = true; // mostra animazione di caricamento
+            if (Object.keys(this.myHeroesList).length > 3) {
+              this.isLoadingResults = true; // mostra animazione di caricamento
 
-            var campList = Object.keys(this.myHeroesList);
-            if (this.locked.length > 0 ) {
-              for (var i = 0; i< this.locked.length; i++){
-                  campList.splice( campList.indexOf(this.locked[i]),1);
-                };
+              var campList = Object.keys(this.myHeroesList);
+              if (this.locked.length > 0 ) {
+                for (var i = 0; i< this.locked.length; i++){
+                    campList.splice( campList.indexOf(this.locked[i]),1);
+                  };
+              };
+              try {
+                camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, mustIncludeDispel: this.mustIncludeDispel, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
+                this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
+              } catch (err) {
+                this.isLoadingResults = false; // remove angelica loading
+                snackbarMessage(`Error: ` + err);
+              };
             };
-            try {
-              camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, mustIncludeDispel: this.mustIncludeDispel, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
-              this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
-            } catch (err) {
-              this.isLoadingResults = false; // remove angelica loading
-              snackbarMessage(`Error: ` + err);
-            };
-          };
       }
   }, // computed
   watch: {
@@ -5687,9 +5697,8 @@ icon-bar span img {
     }
   },
   mounted () {
-	  this.boot();
   },
-  created () {console.log("created")}
+  created () {console.log("CeciliaBot is booting..."), this.boot()}
 });
 
 function debounce(func, wait, immediate) {
