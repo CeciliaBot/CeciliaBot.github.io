@@ -68,4 +68,71 @@
   "assets": {
     "icon": "https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2Fc4071_s.png?v=1610082026482"
   }
-}}
+},
+"archdemons-shadow":{
+  "id": "c5004",
+  "_id": "archdemons-shadow",
+  "name": "Archdemon's Shadow",
+  "rarity": "5",
+  "role": "mage",
+  "attribute": "dark",
+  "camping": {
+    "personalities": [
+      "Obsessive",
+      "Envious"
+    ],
+    "topics": [
+      "Unique Comment",
+      "Joyful Memory"
+    ],
+    "values": {
+      "Criticism": 3,
+      "Reality Check": 0,
+      "Heroic Tale": 2,
+      "Comforting Cheer": 0,
+      "Cute Cheer": 3,
+      "Heroic Cheer": 4,
+      "Sad Memory": 0,
+      "Joyful Memory": 1,
+      "Happy Memory": 0,
+      "Unique Comment": 4,
+      "Self-Indulgent": 1,
+      "Occult": 3,
+      "Myth": 4,
+      "Bizarre Story": 5,
+      "Food Story": 2,
+      "Horror Story": 3,
+      "Gossip": 0,
+      "Dream": 5,
+      "Advice": 0,
+      "Complain": 0,
+      "Belief": 6,
+      "Interesting Story": 1
+    }
+  },
+  "skills": [
+    {
+      "buff": [],
+      "debuff": [],
+      "common": []
+    },
+    {
+      "buff": [],
+      "debuff": [],
+      "common": []
+    },
+    {
+      "buff": [],
+      "debuff": [],
+      "common": []
+    }
+  ],
+  "buffs": [],
+  "debuffs": [
+    22,
+    31
+  ],
+  "common": [],
+  "assets": {"icon": "https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2Fc5004_s.png?v=1610107225672"}
+}
+}
