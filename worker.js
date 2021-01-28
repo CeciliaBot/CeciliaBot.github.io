@@ -49,7 +49,9 @@ function checkScDupe (team) {
     };
     return false;
 };
-
+function hasDuplicates(array) {
+    return array.some((val, i) => array.indexOf(val) !== i);
+};
 function giaInTop(team, top) {
     if (top.length > 0 ) {
       for (var i = 0; i<top.length;i++) {
@@ -375,7 +377,8 @@ onmessage = function(e) {
                             var temp = [];
                             for (var j = 0; j < results.length; j++) {
                                 for (var k = 0; k < currentSubArray.length; k++) {
-                                temp.push(results[j].concat(currentSubArray[k]));
+                                    if ( hasDuplicates(results[j].concat(currentSubArray[k])) ) continue;
+                                    temp.push(results[j].concat(currentSubArray[k]));
                                 }
                             }
                             results = temp;
