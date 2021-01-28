@@ -2327,7 +2327,7 @@ icon-bar span img {
       <hero_selector v-bind:selectable="cartesianSlotRoster()" v-bind:selected="cartesian_lock[isSelectingCartesian]" @right-click="rightClickHero" v-bind:slotnumber="isSelectingCartesian" @close-modal="addToCartesianLock"></hero_selector>
     </template>
 
-    <div v-if="avatars.notSet==true && inizializzazione==false" ref="popup-modal" class="modal" style="display: block;">
+    <div v-if="avatars.notSet==true" ref="popup-modal" class="modal" style="display: block;">
       <div class="modal-content modal-small modal-three-parts animate">
         <div>
           <span class="modal-title">
