@@ -26,8 +26,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js" async></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" async>
+    <!--<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">-->
 
     <!--<link rel="preload" href="https://i.imgur.com/NDUMMYK.png" as="image" media="(max-width: 90px)">-->
     <style>
@@ -64,7 +65,7 @@ body {
   color: var(--font-color); /* font color */
 }
 
-html, div, span { /*Firefox scrollbar*/
+html, div, span, form { /*Firefox scrollbar*/
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -72,7 +73,7 @@ html, div, span { /*Firefox scrollbar*/
   display: none;
 }
 
-[v-cloak] > * {
+[v-cloak] {
   display:none;
 }
 /* Full-width input fields */
@@ -150,7 +151,7 @@ span.psw {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+  box-sizing: border-box;
 }
 .modal-open {
     overflow: hidden;
@@ -158,12 +159,104 @@ span.psw {
 }
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  margin: 2% auto auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 4px solid #776048;
+  border-radius: 12px;
   width: 80%; /* Could be more or less, depending on screen size */
+  max-height: 90%;
+  padding: 10px;
+  background-color:var(--search-primary-color); 
+  color:var(--font-color);
 }
-
+.modal-big {
+  height: 90%;
+}
+.modal-small {
+  max-width: 760px;
+  overflow: scroll;
+}
+.modal-title {
+  width: 100%;
+  font-size: 35px;
+  text-align: initial;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.modal-text {
+  width: 100%;
+  font-size: 18px;
+  text-align: initial;
+}
+.modal-three-parts {
+  display: flex; 
+  flex-direction: column;
+}
+.modal-three-parts > div {
+  padding: 16px;
+}
+.modal-three-parts > div:first-of-type {
+  flex: 0 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: solid thin #776048;
+  position:relative
+}
+.modal-three-parts > div:not(:first-of-type) {
+  overflow: scroll;
+  flex: 1; 
+  text-align: center;
+}
+.modal-three-parts > div:last-of-type {
+  flex: 0 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: solid thin #776048;
+  min-height: fit-content;
+  overflow: hidden;
+}
+.modal-button {
+  cursor: pointer;
+  height: 48px; 
+  min-width: 130px; 
+  background-color: var(--bg-color-secondary); 
+  border: 1px solid rgb(119, 96, 72); 
+  border-radius: 10px; 
+  color: var(--font-color); 
+  font-size: 20px; 
+  padding: 5px 20px;
+  outline: none;
+}
+.modal-button:not(:last-of-type) {
+  margin-right: 30px;
+}
+.modal-button:hover {
+  opacity: 0.6;
+}
+/* E7 style buttons */
+.green-btn {
+  border: none;
+  background-color: #3ea406;
+  box-shadow: inset 0 40px 10px rgba(0, 0, 0, 0.37), inset 0 -12px 10px #07F95A78, inset 0 -3px 0px rgb(133, 255, 164), inset -10px 20px 30px rgba(0, 0, 0, 0.3), inset 10px 30px 20px rgba(2, 77, 27, 0.3);
+  color: white;
+  text-shadow: 0 0px 3px black;
+}
+.red-btn {
+  border: none;
+  background-color: #a40606;
+  box-shadow: inset 0 40px 10px rgba(0, 0, 0, 0.37), inset 0 -12px 10px #F9070778, inset 0 -3px 0px rgb(255, 133, 133), inset -10px 20px 30px rgba(0, 0, 0, 0.3), inset 10px 30px 20px rgba(77, 2, 2, 0.3);
+  color: white;
+  text-shadow: 0 0px 3px black;
+}
+.brown-btn {
+  border: none;
+  background-color: #a44906;
+  box-shadow: inset 0 40px 10px rgba(0, 0, 0, 0.37), inset 0 -12px 10px #F98F0778, inset 0 -3px 0px rgb(255, 173, 133), inset -10px 20px 30px rgba(0, 0, 0, 0.3), inset 10px 30px 20px rgba(77, 27, 2, 0.3);
+  color: white;
+  text-shadow: 0 0px 3px black;
+}
 /* The Close Button (x) */
 .close {
   position: absolute;
@@ -206,7 +299,7 @@ span.psw {
      width: 100%;
   }
 }
-  
+
 div.toolbar {
   position: fixed;
   bottom: 0;
@@ -214,41 +307,64 @@ div.toolbar {
   width: 100%;
   border: 3px solid #73AD21;
 }
-  
-span.heroImgList {
-    position: relative;
-    padding: 12px;
-    font-weight: bold;
-    font-size:24px;
-    color: var(--font-color);/*color: #221461;*/
-    display:inline-block;
-    vertical-align: top;
-    transition: all .2s ease;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+
+.heroImgList {
+  position: relative;
+  padding: 12px;
+  font-weight: bold;
+  font-size:24px;
+  color: var(--font-color);/*color: #221461;*/
+  display:inline-block;
+  vertical-align: top;
+  transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-@media (hover: hover) {
+.imgResults {
+  padding: 0 !important;
+  cursor: default !important;
+}
+.imgResults:hover {
+  background-color: transparent !important;
+}
+.heroAvatar {
+  height: 100%;
+  width: 100%;
+  /* Style alt text*/
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  word-break: keep-all;
+  overflow: hidden;
+}
+@media (hover: hover) { /* most likely pc */
   .heroImgList:hover {
     background-color: var(--search-primary-color);
     cursor: pointer;
+  }
+  .hoverIcon:hover {
     transform: scale(1.3);
     z-index: 1;
   }
-  /* Will mess with remove hero function
-  .heroImgList:active {
-    transform: scale(2);
-  }*/
+  .modal {
+    backdrop-filter: blur(8px);
+  }
 }
 .heroNameLabel {
   font-weight: normal;
   font-size: 14px;
-  margin: 0;
-  width: 81px;
+  margin: 5px 0 0;
   min-height: 34px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .heroInTeam {
@@ -258,10 +374,11 @@ span.heroImgList {
 /* The Close Button (x) */
 .removeHero {
   position: relative;
-  top: 0;
   color: #A1AEBD;
   font-size: 20px;
   font-weight: bold;
+  /*margin-left: -5%;*/
+  vertical-align: bottom;
 }
 .removeHero:hover,
 .removeHero:focus {
@@ -282,15 +399,16 @@ span.heroImgList {
   cursor: pointer;
 }
 
-                  .center {
-                    max-width: 800px;
-                    margin: auto;
-                  }
-                  .topics {
-                    text-align:center; 
-                    font-family:sans-serif;
-                    font-size:16px
-                  }
+.center {
+  max-width: 800px;
+  margin: auto;
+}
+.topics {
+  text-align:center; 
+  font-family:sans-serif;
+  font-size:16px;
+  min-width: 100px;
+}
   
   
   
@@ -523,8 +641,9 @@ icon-bar span img {
                   .slider {
                     position: absolute;
                     cursor: pointer;
+                    width: 60px;
                     top: 0;
-                    left: 0;
+                    /*left: 0;*/
                     right: 0;
                     bottom: 0;
                     background-color: #ccc;
@@ -571,8 +690,8 @@ icon-bar span img {
 /* Lock icon */
 .top-right {
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: -12%;
+  right: -7%;
 }
 .top-left {
   position: absolute;
@@ -615,6 +734,7 @@ icon-bar span img {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  cursor: pointer;
 }
 .dropdown-content > span {
   color: var(--font-color);
@@ -768,7 +888,7 @@ icon-bar span img {
   border-collapse: collapse;
 }
 
-.vert_table_titile {
+.vert_table_title {
   text-orientation: mixed;
   text-transform: uppercase;
   max-width: 50px;
@@ -980,6 +1100,44 @@ icon-bar span img {
   background-color: var(--search-border-color);
   color: #ffffff;
 }
+.wrapper-hero-info {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.rarity-5 {
+  background-image: url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png);
+  background-size: 25%;
+  background-position: 90%,70%,50%,30%,10%;
+  background-position-y: 99%;
+  background-repeat: no-repeat;
+}
+.rarity-4 {
+  background-image: url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png);
+  background-size: 25%;
+  background-position: 80%,60%,40%,20%;
+  background-position-y: 99%;
+  background-repeat: no-repeat;
+}
+.rarity-3 {
+  background-image: url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png);
+  background-size: 25%;
+  background-position: 70%,50%,30%;
+  background-position-y: 99%;
+  background-repeat: no-repeat;
+}
+.attribute-role {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  height: 110%;
+  width: 110%;
+  background-position: 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 32%;
+
+}
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-161715700-1"></script>
@@ -1033,9 +1191,6 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
-                <li>
-                  <b>02/01/2021</b>: 启动速度优化<br>
-                </li>
                 <li style="color:#007FFF">
                   <b>12/09/2020</b>: 右键菜单<br>
                   右键 (手机长按) 可以打开快捷菜单 可以查看英雄技能 或者跳转到 Epic Seven DB 查看更多英雄信息 或者跳转至e7herder.com查看英雄的模型.<br>
@@ -1198,9 +1353,6 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
-                <li>
-                  <b>02/01/2021</b>: 啓動速度優化<br>
-                </li>
                 <li style="color:#007FFF">
                   <b>12/09/2020</b>: 右鍵菜單<br>
                   右鍵 (手機長按) 可以打開快捷菜單 可以檢視英雄技能 或者跳轉到 Epic Seven DB 檢視更多英雄信息 或者跳轉至e7herder.com檢視英雄的模型.<br>
@@ -1362,6 +1514,13 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:#007FFF">
+                  <b>28/01/2021</b>: Multi-lock (Cartesian Lock) update and other ui changes<br>
+                  More sorting options: Name, Attribute, Class, Rarity, ID (and date for your roster)<br>
+                  Better character selector for cartesian lock: you can filter and search herooes in the modal window<br>
+                  Removed "(Beta)" tag from Multi-lock because it's working as intended, now you can lock the same hero in multiple slots allowing you to create custom rules with your roster
+                  How to use Multi-lock? You have 4 slots and you can put any hero and as many heroes as you desire and this tool will take a hero from each slot and combine it with heroes from other slots. For examle you can put all your single target DPSs in "Slot 1" and your AOE DPSs in "Slot 2" the result will be a combination of Single Target DPS + AOE DPS + 2 other random heroes from your roster. The potential of this tool is infinite!
+                </li>
                 <li>
                   <b>02/01/2021</b>: Boot speed improvements<br>
                 </li>
@@ -1524,81 +1683,92 @@ icon-bar span img {
 
     <!--ADD HEROES WINDOW-->
     <div id="add_window" style="display:none;">
-      <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('add_window', 'add_heroes_help')"></i></span>
+      <h2><span style="position:relative;top:10px;vertical-align: middle">{{strings.aggiungi}} <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px; cursor: pointer;" v-on:click="helpWindow('add_window', 'add_heroes_help')"></i></span>
         <div style="display: inline-block;">
-          <input type="text" id="inputInTuttiGliEroi" class="search_hero_filter searchBox" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
+          <input type="text" id="inputInTuttiGliEroi" class="search_hero_filter searchBox" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'})" v-bind:placeholder="strings.search+'...'" title="Type in a name">
           <button class="search_input"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
 	    </h2>
        <!-- Pulsanti filtro eroi -->
       <div style="display:inline-block;width:100%;">
         <div class="search_hero_area" id="filter_all_rarity">
-          <button class="search_hero_filter active" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="*">
+          <button class="search_hero_filter active" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this)" value="*">
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
-          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="3">
+          --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this)" value="3">
             <div><i>3</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="4">
+          --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this)" value="4">
             <div><i>4</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_rarity" onclick=app.filtroTuttiGliEroi(this) value="5">
+          --><button class="search_hero_filter" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this)" value="5">
             <div><i>5</i><img src="https://assets.epicsevendb.com/star/cm_icon_star.png" /></div>
           </button>
         </div>
         <div class="search_hero_area">
-          <button class="search_hero_filter active" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="*">
+          <button class="search_hero_filter active" name="filter_element" onclick="app.filtroTuttiGliEroi(this)" value="*">
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
-          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="fire">
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this)" value="fire">
             <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="ice">
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this)" value="ice">
             <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="wind">
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this)" value="wind">
             <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="light">
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this)" value="light">
             <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_element" onclick=app.filtroTuttiGliEroi(this) value="dark">
+          --><button class="search_hero_filter" name="filter_element" onclick="app.filtroTuttiGliEroi(this)" value="dark">
             <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png">
           </button>
         </div>
         <div class="search_hero_area">
-          <button class="search_hero_filter active" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="*">
+          <button class="search_hero_filter active" name="filter_class" onclick="app.filtroTuttiGliEroi(this)" value="*">
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
-          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="knight">
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this)" value="knight">
             <!-- <span>knight</span> -->
           <img src="https://assets.epicsevendb.com/class/cm_icon_role_knight.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="warrior">
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this)" value="warrior">
             <img src="https://assets.epicsevendb.com/class/cm_icon_role_warrior.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="assassin">
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this)" value="assassin">
             <img src="https://assets.epicsevendb.com/class/cm_icon_role_thief.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="ranger">
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this)" value="ranger">
             <img src="https://assets.epicsevendb.com/class/cm_icon_role_ranger.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="mage">
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this)" value="mage">
             <img src="https://assets.epicsevendb.com/class/cm_icon_role_mage.png">
           </button><!-- 
-          --><button class="search_hero_filter" name="filter_class" onclick=app.filtroTuttiGliEroi(this) value="manauser">
+          --><button class="search_hero_filter" name="filter_class" onclick="app.filtroTuttiGliEroi(this)" value="manauser">
             <img src="https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png">
           </button>
         </div>
+        <!--
         <div class="search_hero_area">
           <button class="search_hero_filter" name="filter_gia_aggiunti" onclick=app.filtroTuttiGliEroi(this) value="false">
             <div style="max-height:20px;"><i class="fa fa-eye"></i></div>
-          </button><!--
-          --><button class="search_hero_filter active" name="filter_gia_aggiunti" onclick=app.filtroTuttiGliEroi(this) value="true"> <!-- di default nascondi eroi già aggiunti -->
+          </button>--><!--
+          --><!--<button class="search_hero_filter active" name="filter_gia_aggiunti" onclick=app.filtroTuttiGliEroi(this) value="true">
             <div style="max-height:20px;"><i class="fa fa-eye-slash"></i></div>
           </button>
+        </div>-->
+        <div class="search_hero_area dropdown">
+          <button id="allHeroes_sort_by" class="search_hero_filter" onmouseover="document.getElementById('dropdown_allHeroes_sort_by').style.removeProperty('display')" style="font-size:16px; width:90px;" name="sort_by" value="name">{{strings.sort}}</button>
+          <div id="dropdown_allHeroes_sort_by" class="dropdown-content" style="float:right;">
+            <div class="active" onclick="app.databaseSort='name'; this.parentElement.style.display='none'">{{strings.name}}</div>
+            <div class="active" onclick="app.databaseSort='rarity'; this.parentElement.style.display='none'">{{strings.rarity}}</div>
+            <div class="active" onclick="app.databaseSort='attribute'; this.parentElement.style.display='none'">{{strings.attribute}}</div>
+            <div class="active" onclick="app.databaseSort='role'; this.parentElement.style.display='none'">{{strings.classe}}</div>
+            <div class="active" onclick="app.databaseSort='id'; this.parentElement.style.display='none'">{{strings.ingame_id}}</div>
+          </div>
         </div>
-        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_area search_hero_filter" v-on:click="if (displayList.length > 0) alertUserAction('addDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.add_displayed_heroes}}</button>
+        <button class="search_hero_area search_hero_filter" v-on:click="alertUserAction('addDisplayed');" style="margin-right: 30px; width: auto; font-size: 16px; font-size:16px; width:90px; width: auto;">{{strings.add_displayed_heroes}}</button>
         <div id="pulsanti_display_add_window" class="search_hero_area" style="display:inline-block">
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'add_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
@@ -1615,15 +1785,7 @@ icon-bar span img {
         <table id="lista_hero_disponibili">
           <tr>
             <td style="text-align: center; padding-bottom: 20px;">
-              <span v-for="key in displayList" class="heroImgList" v-on:click="addHero(thisHeroData(key)._id)" @contextmenu="rightClickHero(key, $event)">
-                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
-                <template v-if="isInTeam(thisHeroData(key)._id)===true">
-                  <div class="top-left" style="font-size:38px;">✔</div>
-                </template>
-                <template v-if="showNamesInGrid===true">
-                  <p class="heroNameLabel">{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</p>
-                </template>
-              </span>
+              <hero-icon v-for="key in sortedHeroDB" v-show="displayList.includes(key)" :data="thisHeroData(key)" @clicked="addHero(thisHeroData(key)._id)" @contextmenu="rightClickHero(key, $event)" :img="getHeroAssets(key).icon" :displayname="avatars.name" :name="thisHeroTranslatedName(key)" :showstars="avatars.stars" :role_attr="avatars.role_attr" :scale="parseFloat(avatars.scale)" :hoverable="avatars.hoverable" v-bind:style="'opacity:' + (myHeroesList[key] ? 0.5 : 1) "></hero-icon>
             </td>
           </tr>
          </table>
@@ -1652,10 +1814,10 @@ icon-bar span img {
       <h2>
         <span style="position:relative;top:10px;vertical-align: middle">{{strings.i_tuoi_eroi}}
           <span style="display: inline-block; background: rgb(250,0,80); border-radius: 4px; min-width: 40px; height: 25px; padding: 4px; text-align: center; color: white; font-size: 20px;">{{rosterLength}}</span>
-          <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('manage_window', 'manage_heroes_help')"></i> 
+          <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px; cursor: pointer;" v-on:click="helpWindow('manage_window', 'manage_heroes_help')"></i> 
         </span>
           <div style="display: inline-block;">
-            <input type="text" id="inputInMyHeroes" class="search_hero_filter searchBox" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" v-bind:placeholder="strings.cerca_eroe" title="Type in a name">
+            <input type="text" id="inputInMyHeroes" class="search_hero_filter searchBox" onkeyup="app.filtroTuttiGliEroi({tipo:'input',casella:this,value:this.value,className: 'search_hero_filter', name: 'ricerca'}, 'MyHeroes')" v-bind:placeholder="strings.search+'...'" title="Type in a name">
             <button class="search_input"><i class="fa fa-search" aria-hidden="true"></i></button>
           </div>
           <!--
@@ -1668,7 +1830,7 @@ icon-bar span img {
 	    </h2>
        <!-- Pulsanti filtro eroi -->
       <div style="display:inline-block;width:100%;">
-        <div class="search_hero_area" id="filter_all_rarity">
+        <div class="search_hero_area" id="filter_myHeroes_rarity">
           <button class="search_hero_filter active" name="filter_rarity" onclick="app.filtroTuttiGliEroi(this, 'MyHeroes')" value="*">
             <div style="font-size:16px">{{strings.all}}</div>
           </button><!--
@@ -1737,12 +1899,15 @@ icon-bar span img {
         <div class="search_hero_area dropdown">
           <button id="myHeroes_sort_by" class="search_hero_filter" onmouseover="document.getElementById('dropdown_sort_myHeroes').style.removeProperty('display')" style="font-size:16px; width:90px;" name="sort_by" value="date">{{strings.sort}}</button>
           <div id="dropdown_sort_myHeroes" class="dropdown-content" style="float:right;">
-            <div class="active" onclick="document.getElementById('myHeroes_sort_by').value='date'; app.filtroTuttiGliEroi(this, 'MyHeroes'); this.parentElement.style.display='none'">{{strings.modified}}</div>
-            <div class="active" onclick="document.getElementById('myHeroes_sort_by').value='name'; app.filtroTuttiGliEroi(this, 'MyHeroes'); this.parentElement.style.display='none'">{{strings.name}}</div>
-            <div class="active" onclick="document.getElementById('myHeroes_sort_by').value='id'; app.filtroTuttiGliEroi(this, 'MyHeroes'); this.parentElement.style.display='none'">{{strings.ingame_id}}</div>
+            <div class="active" onclick="app.rosterSort='date'; this.parentElement.style.display='none'">{{strings.modified}}</div>
+            <div class="active" onclick="app.rosterSort='name'; this.parentElement.style.display='none'">{{strings.name}}</div>
+            <div class="active" onclick="app.rosterSort='rarity'; this.parentElement.style.display='none'">{{strings.rarity}}</div>
+            <div class="active" onclick="app.rosterSort='attribute'; this.parentElement.style.display='none'">{{strings.attribute}}</div>
+            <div class="active" onclick="app.rosterSort='role'; this.parentElement.style.display='none'">{{strings.classe}}</div>
+            <div class="active" onclick="app.rosterSort='id'; this.parentElement.style.display='none'">{{strings.ingame_id}}</div>
           </div>
         </div>
-        <button id="myHeroes_sort_by" style="margin-right: 30px; width: auto; font-size: 16px;" class="search_hero_area search_hero_filter" v-on:click="if (displayMyHeroes.length > 0) alertUserAction('removeDisplayed');" style="font-size:16px; width:90px; width: auto;">{{strings.remove_displayed_heroes}}</button>
+        <button class="search_hero_area search_hero_filter" v-on:click="alertUserAction('removeDisplayed');" style="margin-right: 30px; width: auto; font-size: 16px; font-size:16px; width:90px; width: auto;">{{strings.remove_displayed_heroes}}</button>
         <div id="pulsanti_display_manage_window" class="search_hero_area" style="display:inline-block"> <!-- Grid/List buttons-->
           <button class="search_hero_filter active" name="display_list" onclick="app.setDisplayStyle(this, 'manage_window')" value="grid">
             <div><i class="fa fa-th-large"></i></div>
@@ -1758,24 +1923,7 @@ icon-bar span img {
         <table id="myHeroes">
           <tr>
             <td style="text-align: center; padding-bottom: 20px;">
-              <span v-for="key in displayMyHeroes" class="heroImgList" v-on:click="if($event.target.className.indexOf('removeHero') === -1 ) lockHero(thisHeroData(key)._id)" @contextmenu="rightClickHero( key, $event)">
-                <!-- Classco -->
-                <template v-if="isLocked(thisHeroData(key)._id) && lockType===1">
-                  <div class="top-right animate-flicker">&#128274;</div>
-                </template>
-                <!--Frame small frame="height: 90px; margin: -8px 0 0 -9px;" perfect frame="height: 100px; margin: -12px 0 0 -13px;"-->
-                <template v-else-if="isLocked(thisHeroData(key)._id)&& lockType===2">
-                  <img src="https://i.imgur.com/NDUMMYK.png" style="position: absolute; margin: -8px 0 0 -9px; height: 90px;">
-                </template>
-                <!--Big lock-->
-                <template v-else-if="isLocked(thisHeroData(key)._id)&& lockType===3">
-                  <span style="position: absolute;margin-top: 35px;margin-left: 35px;transform: translate(-50%, -50%);font-size: 40px;" class="animate-flicker">🔒</span>
-                </template>
-                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px" v-bind:alt="key" v-bind:titolo="key"/><span v-on:click="setTimeout(function() {removeHero(thisHeroData(key)._id)}, 1)" class="removeHero" v-bind:title="'Remove ' + thisHeroData(key).name">×</span>
-                <template v-if="showNamesInGrid===true">
-                  <p class="heroNameLabel">{{ thisHeroTranslatedName(thisHeroData(key)._id) }}</p>
-                </template>
-              </span>
+              <hero-icon v-for="key in roster" v-show="displayMyHeroes.includes(key)" v-bind:data="thisHeroData(key)" @clicked="lockHero(key)" @remove="removeHero(key)" @contextmenu="rightClickHero(key, $event)" :img="getHeroAssets(key).icon" :removable="true" :displayname="avatars.name" :name="thisHeroTranslatedName(key)" :showstars="avatars.stars" :role_attr="avatars.role_attr" :scale="parseFloat(avatars.scale)" :hoverable="avatars.hoverable" :selected="isLocked(key)"></hero-icon>
             </td>
           </tr>
         </table>
@@ -1806,7 +1954,7 @@ icon-bar span img {
         <p style="margin:0 0 8px 0"><b>{{ strings.warn_tsize_adv_title }}</b></p>
         <p style="margin: 0; white-space: pre-wrap; font-size: 15px;">{{ strings.warn_tsize_adv_details }}</p>
       </div>
-      <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
+      <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px; cursor: pointer;" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
       <div style="float: right;">
         <button class="search_hero_filter" onclick="document.getElementById('impostazioni_risultati').style.display='block'" style="font-size:16px; width:70px;" name="sort_by"><i class="fa fa-cog" aria-hidden="true"></i></button>
         <div id="impostazioni_risultati" class="dropdown-content" style="right: 32px; z-index: 2;">
@@ -1826,13 +1974,6 @@ icon-bar span img {
             <input type="checkbox" id="includi_locked_in_advanced_settings" onclick="app.personalizzaRisultati()">
             <label for="includi_locked_in_advanced_settings">{{strings.includi_locked_in_adv}}</label>
           </span>
-          <!--<span>
-            <input type="checkbox" id="disattivaImmaingiRisultati" name="disattivaImmaingiRisultati" onclick="app.personalizzaRisultati()">
-            <label for="disattivaImmaingiRisultati">{{strings.disabilita_immagini_in_risultati}}*</label>
-          </span>
-          <span style="color: red">
-            *
-          </span>-->
         </div>
       </div>
       <input type="checkbox" id="AoE" name="AoE" value="AoE" onclick="app.aggiornaImposatazioniAvanzate()">
@@ -1906,19 +2047,19 @@ icon-bar span img {
       </div>
       <br><br>
       <div id="advanced_cartesian" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
-        <center>{{strings.multilock}}<i style="color:red">(Beta)</i> <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('advanced_window', 'multi-lock')"></i></center>
+        <center>{{strings.multilock}}<i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px; cursor: pointer;" v-on:click="helpWindow('advanced_window', 'multi-lock')"></i></center>
         <div v-for="(key,index) in cartesian_lock" style="display:inline-block;margin:20px;width:22%;min-width:230px">
           {{strings.multilock_slot}} {{index+1}}
-          <button type="button" v-on:click="showAddCartesian_lock(index)" class="button_login">{{strings.add_to_slot}}</button>
+          <button type="button" v-on:click="openCartesianLock(index)" class="button_login">{{strings.add_to_slot}}</button>
           <div style="height:300px;max-height:300px;background-color:var(--bg-color);display:block;color:var(--font-color);overflow-x:scroll;overflow-x: hidden;padding-left:10px;padding-top:10px;padding-right:10px;">
-            <span v-for="(key,i) in cartesian_lock[index]" style="display:inline-block;position:relative;width:100%">{{thisHeroTranslatedName(thisHeroData(key)._id)}}<span class="removecartesian" style="position:relative;float:right;font-size:16px;" v-on:click="removeCartesian_lock(index, i)">X</span></span>
+            <span v-for="(key,i) in cartesian_lock[index]" style="display:inline-block;position:relative;width:100%">{{thisHeroTranslatedName(thisHeroData(key)._id)}}<span class="removecartesian" style="position:relative;float:right;font-size:16px;" v-on:click="removeCartesian_lock(index, key)">X</span></span>
           </div>
         </div>
       </div>
     </div>
 
     <div id="calculate_window" class="center" style="display:none;">
-      <h2>{{strings.risultati}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px" v-on:click="helpWindow('calculate_window', 'results_help')"></i></h2>
+      <h2>{{strings.risultati}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px; cursor: pointer;" v-on:click="helpWindow('calculate_window', 'results_help')"></i></h2>
       <table>
         <thead>
           <th></th>
@@ -1927,20 +2068,20 @@ icon-bar span img {
           <th style="white-space: nowrap;">{{strings.morale}}</th>
         </thead>
         <tbody>
-          <tr v-for="(item, index) in risultati.slice((currentResultsPage-1)*50,(currentResultsPage-1)*50+50)">
-            <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center;" v-on:click="mostraSalvaRisultato(index+(currentResultsPage-1)*50)"><i class="fa fa-save" aria-hidden="true" style="font-size:30px;"></i>
-              <br>{{index+1+(currentResultsPage-1)*50}}</td>
-            <td class="hero_potrait">
-              <img v-bind:src="getHeroAssets(thisHeroData(item.team[0])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[0]" v-bind:titolo="item.team[0]" @contextmenu="rightClickHero( item.team[0], $event)" />
+          <tr v-for="(item, index) in risultati.slice((currentResultsPage-1)*25,(currentResultsPage-1)*25+25)">
+            <td width="4%" style="padding-top: 30px;padding-bottom: 30px;text-align: center; cursor: pointer;" v-on:click="mostraSalvaRisultato(index+(currentResultsPage-1)*25)"><i class="fa fa-save" aria-hidden="true" style="font-size:30px;"></i>
+              <br>{{index+1+(currentResultsPage-1)*25}}</td>
+            <td class="hero_potrait" style="max-width: 100px;">
+              <hero-icon v-bind:data="thisHeroData(item.team[0])" @contextmenu="rightClickHero(item.team[0], $event)" :img="getHeroAssets(item.team[0]).icon" :hoverable="false" :displayname="avatars.name" :name="thisHeroTranslatedName(item.team[0])" :showstars="avatars.stars" :role_attr="avatars.role_attr" :size="60" :scale="parseFloat(avatars.scale)" class="imgResults"></hero-icon>
             </td>
-            <td class="hero_potrait">
-              <img v-bind:src="getHeroAssets(thisHeroData(item.team[1])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[1]" v-bind:titolo="item.team[1]" @contextmenu="rightClickHero( item.team[1], $event)" />
+            <td class="hero_potrait" style="max-width: 100px;">
+              <hero-icon v-bind:data="thisHeroData(item.team[1])" @contextmenu="rightClickHero(item.team[1], $event)" :img="getHeroAssets(item.team[1]).icon" :hoverable="false" :displayname="avatars.name" :name="thisHeroTranslatedName(item.team[1])" :showstars="avatars.stars" :role_attr="avatars.role_attr" :size="60" :scale="parseFloat(avatars.scale)" class="imgResults"></hero-icon>
             </td>
-            <td class="hero_potrait">
-              <img v-bind:src="getHeroAssets(thisHeroData(item.team[2])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[2]" v-bind:titolo="item.team[2]" @contextmenu="rightClickHero( item.team[2], $event)" />
+            <td class="hero_potrait" style="max-width: 100px;">
+              <hero-icon v-bind:data="thisHeroData(item.team[2])" @contextmenu="rightClickHero(item.team[2], $event)" :img="getHeroAssets(item.team[2]).icon" :hoverable="false" :displayname="avatars.name" :name="thisHeroTranslatedName(item.team[2])" :showstars="avatars.stars" :role_attr="avatars.role_attr" :size="60" :scale="parseFloat(avatars.scale)" class="imgResults"></hero-icon>
             </td>
-            <td class="hero_potrait">
-              <img v-bind:src="getHeroAssets(thisHeroData(item.team[3])._id).icon" onerror="this.src=app.getHeroAssets(app.thisHeroData(this.alt)._id, 'onerror').icon; this.onerror=null;" style="width:55px;height:55px;" v-bind:alt="item.team[3]" v-bind:titolo="item.team[3]" @contextmenu="rightClickHero( item.team[3], $event)" />
+            <td class="hero_potrait" style="max-width: 100px;">
+              <hero-icon v-bind:data="thisHeroData(item.team[3])" @contextmenu="rightClickHero(item.team[3], $event)" :img="getHeroAssets(item.team[3]).icon" :hoverable="false" :displayname="avatars.name" :name="thisHeroTranslatedName(item.team[3])" :showstars="avatars.stars" :role_attr="avatars.role_attr" :size="60" :scale="parseFloat(avatars.scale)" class="imgResults"></hero-icon>
             </td>
             <td class="topics"><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG1)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore1)}}</a><br><b>{{thisHeroTranslatedName(thisHeroData(item.migliorPG2)._id)}}</b>: <a>{{translateTopics(item.opzioneMigliore2)}}</a></td>
             <td style="text-align:center; font-family:sans-serif;font-size:17px" width="3%">{{item.morale}}</td>
@@ -1948,9 +2089,9 @@ icon-bar span img {
         </tbody>
       </table>
       <pagination
-        :total-pages="Math.ceil( risultati.length/50 )"
+        :total-pages="Math.ceil( risultati.length/25 )"
         :total="risultati.length"
-        :per-page="50"
+        :per-page="25"
         :current-page="currentResultsPage"
         @pagechanged="changeResultsPage"
       />
@@ -2047,22 +2188,16 @@ icon-bar span img {
             </div>
           </td>
         </tr>
-        <tr>
+        <tr @click="avatars.notSet=true;" style="cursor: pointer;">
           <td>
             <div style="max-height:55px">
               <span>
-                {{strings.hero_name_under_pic_grid}}
+                {{strings.customize_ch_icons}}
               </span>
-              <i style="font-size:38px;float: right;padding:10px;position:relative;top:0px;right:60px;">
-                <label class="switch" style="position:absolute;">
-                  <input type="checkbox" id="heroNameInGrid" name="heroNamesGrid" onchange="toggleNamesInGrid()">
-                  <i class="slider round"></i>
-                </label>
-              </i>
             </div>
           </td>
         </tr>
-        <tr>
+        <tr style="cursor: pointer;">
           <td v-on:click="modalGenerateURL()">
             <div style="max-height:55px">
               <span>
@@ -2071,7 +2206,7 @@ icon-bar span img {
             </div>
           </td>
         </tr>
-        <tr>
+        <tr style="cursor: pointer;">
           <td v-on:click="menuLingua()">
             <div style="max-height:55px">
               <span>
@@ -2089,7 +2224,7 @@ icon-bar span img {
         <tr v-for="key in displaySavedCamps">
           <td v-on:click="mostraRisultatoSalvato(key)">
             <div style="max-height:55px;">
-              <span style="max-width:450px; overflow: hidden; display: inline-block; white-space: nowrap; text-overflow: ellipsis;">{{key}}<span>
+              <span style="max-width:450px; overflow: hidden; display: inline-block; white-space: nowrap; text-overflow: ellipsis;">{{key}}</span>
             </div>
           </td>
         </tr>
@@ -2101,7 +2236,7 @@ icon-bar span img {
         <tbody>
           <tr style="background-color: #f002;">
             <td>
-              <span class="vert_table_titile">{{strings.raid}}</span>
+              <span class="vert_table_title">{{strings.raid}}</span>
             </td>
             <td class="maps_column">
               <span>
@@ -2131,7 +2266,7 @@ icon-bar span img {
           </tr>
           <tr style="background-color: #0fffff22">
             <td>
-              <span class="vert_table_titile">{{strings.nixied}}</span>
+              <span class="vert_table_title">{{strings.nixied}}</span>
             </td>
             <td class="maps_column">
               <span>
@@ -2188,13 +2323,133 @@ icon-bar span img {
       </div>
     </div>
 
+    <template  v-if="isSelectingCartesian">
+      <hero_selector v-bind:selectable="cartesianSlotRoster()" v-bind:selected="cartesian_lock[isSelectingCartesian]" @right-click="rightClickHero" v-bind:slotnumber="isSelectingCartesian" @close-modal="addToCartesianLock"></hero_selector>
+    </template>
+
+    <div v-if="avatars.notSet==true" ref="popup-modal" class="modal" style="display: block;">
+      <div class="modal-content modal-small modal-three-parts animate">
+        <div>
+          <span class="modal-title">
+            {{strings.customize_ch_icons}}
+          </span>
+        </div>
+        <div>
+          <div style="min-height: 265px;">
+            <div style="display: inline-block">
+              <div style="display: inline-block; height: 180px; width: 90px;">
+                <hero-icon :data="thisHeroData('alencia')" @clicked="avatars.scale=0.9" :img="getHeroAssets('alencia').icon" :removable="true" :hoverable="avatars.hoverable" :displayname="avatars.name" :name="thisHeroTranslatedName('alencia')" :showstars="avatars.stars" :role_attr="avatars.role_attr" :scale="0.75" style="margin: auto; box-sizing: border-box; height: 114px;"></hero-icon>
+                <span style="display: block;">
+                  <input type="radio" id="scale0.9" value="0.9" v-model="avatars.scale">
+                  <label for="scale0.9">
+                    {{strings.small}}
+                  </label>
+                </span>
+              </div>
+              <div style="display: inline-block; height: 180px; width: 120px;">
+                <hero-icon :data="thisHeroData('alencia')" @clicked="avatars.scale=1" :img="getHeroAssets('alencia').icon" :removable="true" :hoverable="avatars.hoverable" :displayname="avatars.name" :name="thisHeroTranslatedName('alencia')" :showstars="avatars.stars" :role_attr="avatars.role_attr" :scale="1" style="margin: auto; box-sizing: border-box; height: 142px;"></hero-icon>
+                <span style="display: block;">
+                  <input type="radio" id="scale1" value="1" v-model="avatars.scale">
+                  <label for="scale1">
+                    {{strings.default}}
+                  </label>
+                </span>
+              </div>
+            </div>
+            <div style="display: inline-block">
+              <div style="display: inline-block; height: 180px; width: 140px;">
+                <hero-icon :data="thisHeroData('alencia')" @clicked="avatars.scale=1.15" :img="getHeroAssets('alencia').icon" :removable="true" :hoverable="avatars.hoverable" :displayname="avatars.name" :name="thisHeroTranslatedName('alencia')" :showstars="avatars.stars" :role_attr="avatars.role_attr" :scale="1.15" style="margin: auto; box-sizing: border-box; height:163px"></hero-icon>
+                <span style="display: block;">
+                  <input type="radio" id="scale1.15" value="1.15" v-model="avatars.scale">
+                  <label for="scale1.15">
+                    {{strings.medium}}
+                  </label>
+                </span>
+              </div>
+              <div style="display: inline-block; height: 180px; width: 150px;">
+                <hero-icon :data="thisHeroData('alencia')" @clicked="avatars.scale=1.25" :img="getHeroAssets('alencia').icon" :removable="true" :hoverable="avatars.hoverable" :displayname="avatars.name" :name="thisHeroTranslatedName('alencia')" :showstars="avatars.stars" :role_attr="avatars.role_attr" :scale="1.25" style="margin: auto; box-sizing: border-box; height: 177px;"></hero-icon>
+                <span style="display: block;">
+                  <input type="radio" id="scale1.25" value="1.25" v-model="avatars.scale">
+                  <label for="scale1.25">
+                    {{strings.large}}
+                  </label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="width:100%; min-width: 350px; margin: auto; text-align: start; font-size: 1.4em;">
+              <span style="position: relative;width: 100%;display: inline-block;padding: 10px;">
+                <label class="switch" style="width: 100%;" for="heroNameIconCheckbox">
+                  <span style="height: 35px; line-height: 35px;">{{strings.name}}</span>
+                  <input type="checkbox" id="heroNameIconCheckbox" v-model="avatars.name">
+                  <i class="slider round"></i>
+                </label>
+              </span>
+              <span style="position: relative;width: 100%;display: inline-block;padding: 10px;">
+                <label class="switch" style="width: 100%;" for="role_attrIconsCheckbox">
+                  <span style="height: 35px; line-height: 35px;">{{strings.attr_role}}</span>
+                  <input type="checkbox" id="role_attrIconsCheckbox" v-model="avatars.role_attr">
+                  <i class="slider round"></i>
+                </label>
+              </span>
+              <span style="position: relative;width: 100%;display: inline-block;padding: 10px;">
+                <label class="switch" style="width: 100%;" for="starsIconsCheckbox">
+                  <span style="height: 35px; line-height: 35px;">{{strings.stars}}</span>
+                  <input type="checkbox" id="starsIconsCheckbox" v-model="avatars.stars">
+                  <i class="slider round"></i>
+                </label>
+              </span>
+              <span style="position: relative;width: 100%;display: inline-block;padding: 10px;">
+                <label class="switch" style="width: 100%;" for="hoverIconsCheckbox">
+                  <span style="height: 35px; line-height: 35px; display: inline-block; max-width: 80%;">{{strings.enable_mouseover_zoom}}</span>
+                  <input type="checkbox" id="hoverIconsCheckbox" v-model="avatars.hoverable">
+                  <i class="slider round"></i>
+                </label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span v-if="avatars.notSet" class="modal-text">
+            {{strings.settings_samll_help}}
+          </span>
+          <button class="modal-button" @click="avatars.notSet=false; this.localStorage.setItem('avatars',JSON.stringify(avatars));">
+            {{strings.save}}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--<div v-if="last_version!=VERSION" ref="popup-modal-update" class="modal" style="display: block;">
+      <div class="modal-content modal-small modal-three-parts">
+        <div>
+          <span class="modal-title">
+            What's new!
+          </span>
+        </div>
+        <div style="min-height: 170px;">
+          <span style="text-align: start; display: inline-block;">
+            T E X T   H E R E
+            <a href="/old.html" style="text-align: center; text-decoration: none; color: var(--font-color);">If you are encountering issues with this version you can click here to use the old version.</a>
+          </span>
+        </div>
+        <div>
+          <div>
+            <button class="modal-button" @click="last_version=VERSION; /*localStorage.setItem('last_version', JSON.stringify(last_version))*/">
+              {{strings.confirm}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>-->
 
     <div id="toolbar" class="icon-bar"> <!-- nascondi toolbar durante il calcolo -->
       <!--<span id="icon-bar_user_window" onclick="/*setWindow('user_window')*/" style="background-image: url(./favicons/android-chrome-192x192.png); background-size: cover; background-repeat: no-repeat;"></span>-->
       <span id="icon-bar_add_window" onclick="setWindow('add_window')"><!--&#43;--><i class="fa fa-plus" aria-hidden="true"></i></span>
       <span id="icon-bar_manage_window" onclick="setWindow('manage_window')"><!--&#9998;--><i class="fa fa-pencil-alt" aria-hidden="true"></i></span>
       <span id="icon-bar_advanced_window" onclick="setWindow('advanced_window')"><!--&#9876;--><i class="fa fa-book" aria-hidden="true"></i></span>
-      <span id="icon-bar_calculate_window" v-on:click="calcolaRisultati; setWindow('calculate_window');" style="font-size:36px;">
+      <span id="icon-bar_calculate_window" onclick="app.calcolaRisultati; window.setWindow('calculate_window');" style="font-size:36px;">
         <!--Calcola-->
         <img src="https://cdn.glitch.com/5c21c869-ea9a-48ba-b019-90cd493f45cd%2Fcamp-fire-icon%20small.png?v=1585067234171" alt="calculate" style="margin-bottom: -10px; height: 40px;" />
       </span>
@@ -2262,7 +2517,7 @@ icon-bar span img {
       </li>
   
       <li v-for="page in pages" class="pagination-item">
-        <button 
+        <button
           type="button" 
           @click="onClickPage(page.name)"
           :disabled="page.isDisabled"
@@ -2297,43 +2552,95 @@ icon-bar span img {
     </ul>
   </script>
 
-<script defer>
+  <script type="text/x-template" id="hero_selector">
+    <div class="modal" style="display: block;" @click="ranodomClick($event)">
+      <form class="modal-content modal-big modal-three-parts animate" style="position: relative; z-index: 61; ">
+        <span id="emptyDiv" v-if="filtering==true" @click="filtering=false;" style="z-index: 60; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"></span>
+        <div>
+          <span class="modal-title">{{modalTitle}}</span>
+          <button @click="filtering=true; removeSearchBar()" class="modal-button"><i class="fa fa-sliders" aria-hidden="true"></i>
+            {{strings.filter}}
+          </button>
+          <div v-show="filtering" style="z-index: 62; position: absolute; min-height: 200px; min-width: 300px; background-color: black; top: 90%; border-radius: 10px; border: 1px solid rgb(119, 96, 72); right: 0px; display: flex; text-align: center; margin: 5px;">
+            <div v-for="(i,key) in filters" style="flex: 1; margin: 5px;">
+              <div v-for="j in i" v-bind:style="isActiveFilter(key,j)" style="position: relative; padding: 10px; font-size: 25px; box-sizing: border-box; height: 54px" @click="changeFilter( key, j)">
+                <button v-if="j=='all'||j=='selected'" style="background-color: white; color: black; padding: 5px 20px; border-radius: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;outline: none;border: none;font-size: 20px;">
+                  {{strings[j]}}
+                </button>
+                <img v-else-if="key=='attribute'" v-bind:src="assetsAttribute(j)" />
+                <img v-else-if="key=='role'" v-bind:src="assetsRole(j)" style="height: 34px;" />
+                <span v-else-if="key=='rarity'" v-bind:class="'wrapper-hero-info rarity-' + j" style="display:block; height: 80%; margin-left: -10px;"></span>
+              </div>
+            </div>
+          </div>
+          <button class="modal-button fa fa-search" style="opacity: 0.5;" @click="this.snackbarMessage('Temporarily unavailable due to memory leak on Chrome!'); /*openSearchBar()*/">
+            {{strings.search}}
+          </button>
+          <!--<div v-show="inputField" style="display: flex;position: absolute; z-index: 2;height: 50px;">
+            <button @click="removeSearchBar()" style="flex: 0 1 10px;margin: 0; border-radius: 6px 0 0 6px;font-size: 17px;margin: 0;height: 100%;float: left;background-color: saddlebrown;" class="search_input">
+              X
+            </button>
+            <input id="modal_selector_searchbar" :value="inputCharacter" ref="editInputField" v-bind:placeholder="strings.search+'...'" style="flex: 1;width: 100%;border-radius: 0;border: thin;border-style: solid none solid;box-sizing: border-box;height: 100%;" class="search_hero_filter searchBox" />
+            <button class="fa fa-search search_input" style="flex: 0 1;height: 100%;margin: 0;">
+            </button>
+          </div>-->
+        </div>
+        <div>
+          <hero-icon v-for="id in filteredData" v-bind:data="$root.thisHeroData(id)" @clicked="select(id)" @contextmenu="emitRightClick(id,$event)" :img="$root.getHeroAssets(id).icon" :displayname="$root.avatars.name" :name="$root.thisHeroTranslatedName(id)" :showstars="$root.avatars.stars" :role_attr="$root.avatars.role_attr" :scale="parseFloat($root.avatars.scale)" :hoverable="$root.avatars.hoverable" :selected="isSelected(id)"></hero-icon>
+          <div v-if="heroes.length==0" style="display: flex; height: 100%;align-items: center;justify-content: center;">
+            <div style="background-color:var(--bg-color); color:var(--font-color); border-radius: 30px; box-shadow:5px 5px 14px 1px var(--search-border-color);align-items: center;padding: 10px 50px;">
+              <template v-if="filteredData.length==0">No heroes in your roster!</template>
+              <template v-else>Sorry, your search returned no results...</template>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="modal-text">{{strings.selected}}: {{numberSelected}}</span>
+          <button @click="closeModal()" class="modal-button">
+            {{strings.confirm}}
+          </button>
+        </div>
+      </form>
+    </div>
+  </script>
+
+<script>
     var userSettings = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : "{}");
     
     function defaultThemeColor() {
-	try {
-	      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		 return 'dark';
-	     } else return 'light';
-	} catch (err) {
-	    return 'light';
-	};
+      try {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        } else return 'light';
+      } catch (err) {
+          return 'light';
+      };
     };
     function toggleCheck() {
-        if (document.getElementById("darkModeCheck").checked === true) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark'); // salva preferenza per future visite
-        }
-        else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light'); // salva preferenza per future visite
-        };    
+      if (document.getElementById("darkModeCheck").checked === true) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); // salva preferenza per future visite
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); // salva preferenza per future visite
+      };    
     };
     const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
     if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
+      document.documentElement.setAttribute('data-theme', currentTheme);
 
-        if (currentTheme === 'dark') {
-            var checkBoxes = $("input[name=darkModeCheck]");
-            checkBoxes.attr('checked', true);
-        };
+      if (currentTheme === 'dark') {
+        var checkBoxes = $("input[name=darkModeCheck]");
+        checkBoxes.attr('checked', true);
+      };
     } else {
-	if (defaultThemeColor() == 'dark') { // check OS settings and set dark theme if necessary
-	    document.documentElement.setAttribute('data-theme', 'dark');
-            var checkBoxes = $("input[name=darkModeCheck]");
-            checkBoxes.attr('checked', true);
-	};
+      if (defaultThemeColor() == 'dark') { // check OS settings and set dark theme if necessary
+        document.documentElement.setAttribute('data-theme', 'dark');
+        var checkBoxes = $("input[name=darkModeCheck]");
+        checkBoxes.attr('checked', true);
+      };
     };
     
     function setWindow(current) {
@@ -2544,61 +2851,6 @@ icon-bar span img {
     app.writeSettings();
   };
 
-  /*
-  //////////////// M O B I L E  S W I P E ////////////////// Maybe use JQuery
-  var touchStart = null;
-  var htoolbarTabs = ['add_window', 'manage_window', 'advanced_window', 'calculate_window', 'extras_window'];
-  var vtoolbarTabs = ['add_window', 'manage_window', 'advanced_window', 'calculate_window', 'my_teams_window', 'raid_map', 'saved_teams_stats', 'settings_window'];
-  var currentTab = "welcome";
-  window.addEventListener("touchstart",function(event){
-   if(event.touches.length === 1){
-      //just one finger touched
-      touchStart = event.touches.item(0).clientX;
-    }else{
-      //a second finger hit the screen, abort the touch
-      touchStart = null;
-    };
-  });
-  window.addEventListener("touchend",function(event){
-    var offset = 120;//at least 120px are a swipe
-    if(touchStart && app && !app.isLoadingResults){ // Can't swipe if loading results
-      var end = event.changedTouches.item(0).clientX;
-      var pageTabs = document.getElementById("toolbar_position").checked ? vtoolbarTabs : htoolbarTabs;
-      var currIndex = pageTabs.indexOf(currentTab);
-      if(end > touchStart + offset){//left -> right swipe
-        currIndex = currIndex-1 < 0 ? pageTabs.length-1 : currIndex-1;
-        setWindow(pageTabs[currIndex]);
-      } else if (end < touchStart - offset ){//left -> right swipe
-        currIndex = currIndex+1 > pageTabs.length-1 ? 0 : currIndex+1;
-        setWindow(pageTabs[currIndex]);
-      };
-      pageTabs[currIndex] === "calculate_window" ? app.calcolaRisultati : null;
-      //snackbarMessage(currIndex);
-    };
-  });
-  document.addEventListener('keydown', swipeTab);
-  function swipeTab(e){
-    if(app && !app.isLoadingResults){ // Can't swipe if loading results
-      var pageTabs = document.getElementById("toolbar_position").checked ? vtoolbarTabs : htoolbarTabs;
-      var currIndex = pageTabs.indexOf(currentTab);
-      switch (e.code) {
-        case 'ArrowRight':
-        case 'ArrowDown':
-          currIndex = currIndex+1 > pageTabs.length-1 ? 0 : currIndex+1;
-          setWindow(pageTabs[currIndex]);
-          break;
-        case 'ArrowLeft':
-        case 'ArrowUp':
-          currIndex = currIndex-1 < 0 ? pageTabs.length-1 : currIndex-1;
-          setWindow(pageTabs[currIndex]);
-          break;
-        default:
-          return;
-      };
-      pageTabs[currIndex] === "calculate_window" ? app.calcolaRisultati : null;
-    };
-  };
-  */
   function openImage (link){
     $( "body" ).append(`
       <div id="imageViewer" style="z-index: 60; position: relative;">
@@ -2774,7 +3026,7 @@ icon-bar span img {
   const pagination = {
     name: 'pagination',
     template: '#pagination',
-      props: {
+    props: {
       maxVisibleButtons: {
         type: Number,
         required: false,
@@ -2850,18 +3102,300 @@ icon-bar span img {
       },
     }
   };
+  const hero_icon = {
+    functional: true,
+    name: 'hero_icon',
+    props: {
+      data: {
+        type: Object,
+        required: true,
+        default: function () {
+          return {};
+        }
+      },
+      img: {
+        type: String,
+        required: false,
+        default: "https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2Fc0000_s.png"
+      },
+      name: {
+        type: String,
+        required: false,
+        default: "<NAME>"
+      },
+      removable: {
+        type: Boolean,
+        required: false,
+        default: false
+      },
+      selected: {
+        type: Boolean,
+        required: false,
+        default: false
+      },
+      displayname: {
+        type: Boolean,
+        required: false,
+        default: false
+      },
+      role_attr: {
+        type: Boolean,
+        required: false,
+        default: true
+      },
+      showstars: {
+        type: Boolean,
+        required: false,
+        default: false
+      },
+      hoverable: {
+        type: Boolean,
+        required: false,
+        default: true
+      },
+      size: {
+        type: Number,
+        required: false,
+        default: 75
+      },
+      scale: {
+        type: Number,
+        required: false,
+        default: 1
+      }
+    },
+    render: function (h,ctx) {
+      let roleIcon = {knight: "knight",warrior:"warrior",assassin: "thief",mage: "mage", ranger: "ranger", manauser: "soul-weaver"},
+          attrIcon = {fire: "fire", wind: "earth", ice: "ice", light: "light", dark: "mdark"};
+      return h('div', {key: ctx.props.data._id, attrs: ctx.data.attrs, on: {click: event => event.target.className.indexOf('removeHero') !=-1 ? ctx.listeners['remove'](ctx.props.data._id) : ctx.listeners['clicked'] ? ctx.listeners['clicked'](ctx.props.data._id) : null, contextmenu: event => ctx.listeners['contextmenu'](event,ctx.props.data._id)}, class: [{'heroImgList': true, hoverIcon: ctx.props.hoverable},ctx.data.staticClass], style: [{padding: 12*ctx.props.scale + 'px'},ctx.data.staticStyle], directives: ctx.data.directives},[
+          h('div', {style: {position: "relative", display: "inline-block", verticalAlign: "top", height: ctx.props.size*ctx.props.scale+"px", width: ctx.props.size*ctx.props.scale+"px"}}, 
+            [/* icon wrapper*/
+              h('img', {class: "heroAvatar", attrs: {src: ctx.props.img, onerror: 'this.src=app.getHeroAssets(\''+ctx.props.data._id+'\', \'onerror\').icon;this.onerror=null;', alt: ctx.props.name}}),
+              ctx.props.role_attr? h('div', {class: "attribute-role", style: {backgroundImage: "url(https://assets.epicsevendb.com/class/cm_icon_role_"+ roleIcon[ctx.props.data.role] +".png),url(https://assets.epicsevendb.com/attribute/cm_icon_pro"+ attrIcon[ctx.props.data.attribute] +".png)"}}) : null,
+              ctx.props.showstars? h('div', {class: "wrapper-hero-info rarity-"+ctx.props.data.rarity}) : null,
+              ctx.props.selected? h('div', {class: "top-right animate-flicker", style: {fontSize: ctx.props.scale*24+"px"}},'🔒') : null
+            ],
+          ),
+          ctx.props.removable ? h('span', {class: "removeHero", style: {fontSize: 20*ctx.props.scale+"px"}, attrs: {title: "Remove " + ctx.props.name}}, '×') : null,
+          ctx.props.displayname ? h('p',{class: "heroNameLabel", style: {width: (ctx.props.size*ctx.props.scale + (ctx.props.removable ? 20*ctx.props.scale : 0) ) + "px", fontSize: 14*ctx.props.scale+"px", height: 50*ctx.props.scale+"px"}}, ctx.props.name) : null
+        ]
+      )
+    }
+  };
+  const hero_selector = {
+    name: 'hero_selector',
+    template: '#hero_selector',
+    components: {
+      "hero-icon": hero_icon
+    },
+    props: {
+      selectable: {
+        type: Array,
+        required: true,
+        default: []
+      },
+      selected: {
+        type: Array,
+        required: false,
+        default: []
+      },
+      title: {
+        type: String,
+        required: false,
+        default: undefined
+      },
+      slotnumber: {
+        type: String,
+        required: false,
+        default: "0"
+      },
+      forceSelection: {
+        type: Boolean,
+        required: false,
+        default: false
+      },
+      maxSelectable: {
+        type: Number,
+        required: false,
+        default: -1
+      }
+    },
+    data: function () {
+      return {
+        inputField: false,
+        inputCharacter: "",
+        filtering: false,
+        filters: {attribute: ["all","fire","ice","wind","light","dark"], role: ["all", "warrior", "knight", "assassin", "ranger", "mage", "manauser"], rarity: ["all", 5, 4, 3, "selected"]},
+        filter: {},
+        filteredData: this.selectable
+      }
+    },
+    computed: {
+      heroes: function() {
+        let tmp = {};
+        for (var i in this.selectable) {
+          tmp[this.selectable[i]] = this.$root.HeroDB[this.selectable[i]];
+        };
+        return tmp;
+      },
+      modalTitle: function () {
+        if (!this.title) return this.strings.multilock_slot + " " + (parseInt(this.slotnumber) + 1);
+        return title;
+      },
+      strings: function () {
+        try {
+          return this.$root.strings;
+        } catch (err) { /* for safety */
+          console.log(err);
+          return {};
+        };
+      },
+      numberSelected: function () {
+        return this.selected.length;
+      }
+    },
+    methods: {
+      hero: function (id) {
+        return this.heroes[id];
+      },
+      isSelected: function (hero) {
+        return this.selected.includes(hero);
+      },
+      assetsRole: function(role) {
+        switch (role) {
+          case "manauser": 
+            return "https://assets.epicsevendb.com/class/cm_icon_role_soul-weaver.png"
+            break;
+          case "assassin": 
+            return "https://assets.epicsevendb.com/class/cm_icon_role_thief.png"
+            break;
+          case "warrior": 
+            return "https://assets.epicsevendb.com/class/cm_icon_role_warrior.png"
+            break;
+          case "mage": 
+            return "https://assets.epicsevendb.com/class/cm_icon_role_mage.png"
+            break;
+          case "ranger": 
+            return "https://assets.epicsevendb.com/class/cm_icon_role_ranger.png"
+            break;
+          default:
+            return "https://assets.epicsevendb.com/class/cm_icon_role_knight.png"
+        }
+      },
+      assetsAttribute: function(attr) {
+        switch (attr) {
+          case "fire": 
+            return "https://assets.epicsevendb.com/attribute/cm_icon_profire.png"
+            break;
+          case "ice": 
+            return "https://assets.epicsevendb.com/attribute/cm_icon_proice.png"
+            break;
+          case "wind": 
+            return "https://assets.epicsevendb.com/attribute/cm_icon_proearth.png"
+            break;
+          case "light": 
+            return "https://assets.epicsevendb.com/attribute/cm_icon_prolight.png"
+            break;
+          case "dark": 
+            return "https://assets.epicsevendb.com/attribute/cm_icon_promdark.png"
+            break;
+          default:
+            return "https://assets.epicsevendb.com/attribute/cm_icon_profire.png"
+        }
+      },
+      select: function(e) {
+        if (this.selected.includes(e)) {
+          this.selected.splice(this.selected.indexOf(e), 1)
+        } else {
+          this.selected.push(e);
+        }
+      },
+      localizedName: function (id) {
+        if (this.translatedNames[id]) return this.translatedNames[id];
+        else return "";
+      },
+      isActiveFilter: function (type, filter) {
+        let slectedStyle = {"backgroundColor": "var(--icon-bar-active)", borderRadius: "10px"};
+        if (this.filter[type]) {
+          if (this.filter[type] == filter) return slectedStyle;
+        };
+        if (!this.filter[type] && filter == "all") return slectedStyle;
+        return {"backgroundColor": "transparent"}; // no background-color
+      },
+      heroesFilter: function() {
+        var tmp = JSON.parse(JSON.stringify(this.heroes)); // make a copy
+        let text = this.inputCharacter.toLowerCase();
+        for (var hero in tmp){
+          if (text && tmp[hero].name.toLowerCase().indexOf(text) == -1 && this.name.toLowerCase().indexOf(text) == -1) {delete tmp[hero];continue};
+          for (var i in this.filter) {
+            if (!tmp[hero]) break;
+            if (isNaN(this.filter[i]) && this.filter[i].toLowerCase() == "all") continue;
+            if (isNaN(this.filter[i]) && this.filter[i] == "selected" && this.isSelected(hero)) continue;
+            if (tmp[hero][i] != this.filter[i]) delete tmp[hero];
+          };
+        };
+        this.filteredData = Object.keys(tmp);
+      },
+      changeFilter: function(type,value) {
+        this.filter[type] = value;
+        this.heroesFilter();
+      },
+      openSearchBar: function() {
+        this.inputField=true; 
+        this.filtering=false;
+        this.$nextTick(() => {
+          this.$refs.editInputField.focus();
+        });
+      },
+      removeSearchBar: function () {
+        this.inputCharacter = "";
+        this.inputField = false;
+      },
+      ranodomClick: function (e) {
+        e.preventDefault();
+        if (e.target.className=="modal") return this.closeModal();
+        //else console.log(e);
+      },
+      emitRightClick(e,event) {
+        this.$emit('right-click', e,event);
+      },
+      closeModal() {
+        if (this.forceSelection && this.selected.length==0) return; // must select something
+        this.$emit('close-modal', this.selected);
+        this.$destroy(true);
+      }
+    },
+    watch: {
+      inputCharacter: function () {
+        this.filter = {}; //remove filters when searching by name
+        this.heroesFilter();
+      },
+    },
+    mounted: function() {
+    },
+    beforeDestroy: function() {
+    }
+  };
 
     var app = new Vue({
         el: '#app',
         components: {
           pagination: pagination,
+          "hero-icon": hero_icon,
+          hero_selector: hero_selector
         },
         data: function () {
             return {
+              VERSION: 1.0,
+              last_version: localStorage.getItem('last_version'), /* if different from VERSION a popup will appear*/
+              avatars: JSON.parse(localStorage.getItem('avatars') || '{"name": false, "role_attr": true, "stars": false, "scale": 1, "hoverable": true, "notSet": true}'),
               strings: {},
+
+              /* Database (add hero window) */
               HeroDB: {},
-              sortedHeroDB: [],
+              databaseSort: "name",
               displayList: [],
+
               buffList: {
                 "stic_debuf_impossible": {"name": "Immunity", "id": 12},
                 "stic_att_up": {"name": "Attack up", "id": 1},
@@ -2898,9 +3432,13 @@ icon-bar span img {
                 "stic_vampire": {"name": "Vampire", "id": 23},
                 "stic_bomb": {"name": "Bomb", "id": 53}
               },
+
+              /* User's roster */
               myHeroesList: {},
               displayMyHeroes: [],
-              rosterLength: 0,
+              rosterLength: 0, /* Used to make roster object reactive*/
+              rosterSort: 'date',
+
               locked: [],
               classe: [],
               elemento: [],
@@ -2911,6 +3449,7 @@ icon-bar span img {
               noDebuffs:  false,
               mustIncludeDispel: false,
               cartesian_lock: [[],[],[],[]],
+              isSelectingCartesian: false,
               risultati: [],
               currentResultsPage: 1,
               topSavedCamps: [],
@@ -2918,7 +3457,6 @@ icon-bar span img {
               savedCamps: JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}"),
               displaySavedCamps: Object.keys(JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}")),
               customizedResuts: {numeroMassimo: true, n: 200, minMorale: false, morale: 0, noImmagini: false},
-              showNamesInGrid: userSettings.heroNameInGrid,
 	            displayStyle: "grid",
 	            isLoadingResults: false,
               inizializzazione: true, //nascondi tutto durante il caricamento iniziale di vue
@@ -2940,9 +3478,13 @@ icon-bar span img {
             return this.HeroDB[hero]
           },
           thisHeroTranslatedName: function(heroid) {
+            if (!heroid) return; 
             if (this.translatedName[heroid]) {
               return this.translatedName[heroid]
-            } else return this.HeroDB[heroid].name
+            } else {
+              if (!this.thisHeroData(heroid)) return heroid;
+              return this.thisHeroData(heroid).name;
+            }
           },
           getHeroAssets: function (_id, f) {
             if (this.HeroDB[_id]){
@@ -2983,6 +3525,9 @@ icon-bar span img {
             if (this.locked.includes(hero)) { // lock
                this.locked.splice(this.locked.indexOf(hero), 1)
             };
+            for (var i = 0; i < this.cartesian_lock.length; i++) {
+              this.removeCartesian_lock(i, hero);
+            };
             this.filtroTuttiGliEroi({className: "search_hero_filter", name: "", value: ""}); // aggiorna i filtri per evitare bug se l'opzione nascondi eroi già in team è attiva
             this.displayMyHeroes.splice(this.displayMyHeroes.indexOf(hero), 1); // rimuovi dalla display list dei miei eroi se presente (sempre presente)
             this.updateUserData();
@@ -3000,10 +3545,10 @@ icon-bar span img {
             this.updateUserData();
           },
           isInTeam: function(hero) {
-                if (this.myHeroesList[hero])
-                  return true
-                else 
-                  return false;
+            if (this.myHeroesList[hero])
+              return true
+            else 
+              return false;
           },
           isLocked: function(hero) {
             if (this.locked.includes(hero))
@@ -3023,15 +3568,17 @@ icon-bar span img {
             };
           },
           writeSettings: function() {
-            var settings = JSON.stringify({notification: riceviNotifiche, lingua: this.lingua, verticalToolbar: document.getElementById("toolbar_position").checked, heroNameInGrid: document.getElementById("heroNameInGrid").checked});
+            var settings = JSON.stringify({notification: riceviNotifiche, lingua: this.lingua, verticalToolbar: document.getElementById("toolbar_position").checked});
             localStorage.setItem('Settings', settings);
             userSettings = JSON.parse(settings);
           },
           alertUserAction: function (f) {
             let action, message;
             if (f === "addDisplayed") {
+              if (this.displayList.length==0) return;
               message = this.strings.confirm_add_heroes.replace(/<N>/g, this.displayList.length);
             } else if (f === "removeDisplayed") {
+              if (this.displayMyHeroes.length==0) return;
               message = this.strings.confirm_remove_heroes.replace(/<N>/g, this.displayMyHeroes.length);
             };
             var answer = window.confirm(message);
@@ -3099,7 +3646,7 @@ icon-bar span img {
 
               /*console.log({windowWidth: windowWidth, windowHeight: windowHeight, clickCoordsX: clickCoordsX, clickCoordsY: clickCoordsY, transformX: transformX+"%", transformY: transformY+"%"})*/
               $( "#app" ).append(`
-              <div id="debugHeroInfo" class="dropdown-content" style="display: inline-block; max-height: 480px; top: `+ clickCoordsY +`px; left: `+clickCoordsX+`px; width: ` + menuWidth + `px; transform: translate(-`+transformX+`%, -`+transformY+`%); border-top: thick solid var(--icon-bar-active); box-sizing: border-box;">
+              <div id="debugHeroInfo" class="dropdown-content" style="z-index: 70; display: inline-block; max-height: 480px; top: `+ clickCoordsY +`px; left: `+clickCoordsX+`px; width: ` + menuWidth + `px; transform: translate(-`+transformX+`%, -`+transformY+`%); border-top: thick solid var(--icon-bar-active); box-sizing: border-box;">
                 <span style="width: 100%; font-size: 24px; text-align: center;"><b>` + this.thisHeroTranslatedName(hero._id) + `</b><b class="close" style="float: right; cursor: pointer; font-size: 30px; margin-right: -10px;" onclick="$('#debugHeroInfo').remove()">x</b></span>
                 <a href="` + e7dbLink + `" target="_blank">` + this.strings.view_on_e7db + `</a>
                 <a href="https://e7herder.com/tools/model-viewer#type=5,id=` + hero.id + `" target="_blank">` + this.strings.view_hero_model + `</a>
@@ -3150,8 +3697,9 @@ icon-bar span img {
                   if (err.responseJSON) error = self.strings.e7api_missing_character; //"Couldn't find this character on EpicSevenDB";
                   else error = self.strings.e7api_couldnt_connect; //"Couldn't connect to EpicSevenDB.";
                   document.getElementById("heroDetailsRight").innerHTML = "";
+                  document.getElementById("debugHeroInfo").style.borderColor = "red";
                   $( "#heroDetailsRight" ).append(
-                    `<div style="padding: 12px 16px; margin-top: -4px; background-color: var(--bg-color)"><p style="text-align: center">${error}</p></div>`
+                    `<div style="padding: 12px 16px; margin-top: -4px; background-color: var(--bg-color)"><p style="text-align: center; border-color: red;">${error}</p></div>`
                   );
                 }
               });
@@ -3160,27 +3708,31 @@ icon-bar span img {
           menuLingua: function () {
             $( "#settings_window" ).append(`
               <div id="menu_lingua">
-                <div class="modal" style="padding-top: 60px;display:block;">
-                  <form class="modal-content animate" id="menu_lingua" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:1080px">
-                    <div class="imgcontainer">
-                    <center>` + this.strings.language + `</center><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" width="105" height="70" onclick="app.cambiaLingua('en')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" width="105" height="70"  onclick="app.cambiaLingua('kr')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('cn')">
-                    <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" width="105" height="70"  onclick="app.cambiaLingua('jp')">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" width="105" height="70"  onclick="app.cambiaLingua('it')">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" width="105" height="70"  onclick="app.cambiaLingua('fr')">
-                    <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="105" height="70"  onclick="app.cambiaLingua('es')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" width="105" height="70"  onclick="app.cambiaLingua('pt')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  onclick="app.cambiaLingua('de')">
-                    <br><br>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1000px-Flag_of_the_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('zht')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" width="105" height="70"  onclick="app.cambiaLingua('th')">
+                <div class="modal" style="display:block;">
+                  <form class="modal-content  modal-small modal-three-parts animate" id="menu_lingua">
+                    <div>
+                      <div class="modal-title">
+                        ` + this.strings.language + `
+                      </div>
                     </div>
-                    <div class="container">
-                      <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
+                    <div>
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" width="105" height="70" onclick="app.cambiaLingua('en')">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" width="105" height="70"  onclick="app.cambiaLingua('kr')">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('cn')">
+                      <br><br>
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" width="105" height="70"  onclick="app.cambiaLingua('jp')">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" width="105" height="70"  onclick="app.cambiaLingua('it')">
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" width="105" height="70"  onclick="app.cambiaLingua('fr')">
+                      <br><br>
+                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="105" height="70"  onclick="app.cambiaLingua('es')">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" width="105" height="70"  onclick="app.cambiaLingua('pt')">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  onclick="app.cambiaLingua('de')">
+                      <br><br>
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1000px-Flag_of_the_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('zht')">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" width="105" height="70"  onclick="app.cambiaLingua('th')">
+                    </div>
+                    <div>
+                      <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="modal-button">` + this.strings.back_btn + `</button>
                     </div>
                   </form>
                 </div>
@@ -3201,82 +3753,32 @@ icon-bar span img {
             $('#menu_lingua').remove();
             $('body').removeClass('modal-open');
           },
-          showAddCartesian_lock: function (n) {
-            var eroiSelezionabili = "";
-            self = this;
-            var tmpArray = Object.keys(this.myHeroesList);
-            var sortBy = document.getElementById("myHeroes_sort_by").value;
-            if (sortBy != "date")
-              sortBy!="name"
-              ? tmpArray.sort(function (a,b) {return ((self.HeroDB[a][sortBy] < self.HeroDB[b][sortBy]) ? -1 : ((self.HeroDB[a][sortBy] == self.HeroDB[b][sortBy]) ? 0: 1))})
-              : tmpArray.sort(function (a,b) {return ((self.thisHeroTranslatedName(a) < self.thisHeroTranslatedName(b)) ? -1 : ((self.thisHeroTranslatedName(a) == self.thisHeroTranslatedName(b)) ? 0: 1))});
-            for (var i = 0; i < tmpArray.length; i++ ) {
-              if (!this.cartesian_lock[0].includes(tmpArray[i]) &&  !this.cartesian_lock[1].includes(tmpArray[i]) &&
-                  !this.cartesian_lock[2].includes(tmpArray[i]) &&  !this.cartesian_lock[3].includes(tmpArray[i]) 
-              ) { // don't show already cartesian locked heroes
-                eroiSelezionabili += `
-                <input type="checkbox" id="checkbox_cartesian_lock_` + i + `" name="character" value="` + tmpArray[i] + `" style="display:none"><label for="checkbox_cartesian_lock_` + i + `" class="label"> <img src="`+this.getHeroAssets(this.HeroDB[tmpArray[i]]._id).icon+`" onerror="this.src=app.getHeroAssets('`+this.HeroDB[tmpArray[i]]._id+`', 'onerror').icon; this.onerror=null;" style="height:60px;width:60px;" /></label>`
-              };
-            };
-            $( "#advanced_window" ).append(`
-              <div id="Cartesian_lock">
-                <div class="modal" style="display: block;height:100%; width: 100%; overflow: hidden;">
-                  <form class="modal-content animate" id="Cartesian_lock" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:100%;height: 70%;">
-                    <div style="height: 80%; overflow-y: scroll;">`
-                      +
-                      eroiSelezionabili
-                      +
-                    `</div>
-                    <div class="container">
-                      <div style="display: inline-block;float: right;"> 
-                        <div class="dropdown">
-                          <button type="button" onmouseover="document.getElementById('m_select_classes').style.removeProperty('display')" class="search_hero_filter" style="width: auto; font-size: 16px;height: 44px;margin-top: 8px;width: 138px;">`+this.strings.seleziona+`</button>
-                          <div id="m_select_classes" class="dropdown-content" style="top: -252px">
-                            <div type="button" onclick="app.selectAllClassesCartesian('knight'); this.parentElement.style.display='none'">`+this.strings.knight+`</div>
-                            <div type="button" onclick="app.selectAllClassesCartesian('warrior'); this.parentElement.style.display='none'">`+this.strings.warrior+`</div>
-                            <div type="button" onclick="app.selectAllClassesCartesian('assassin'); this.parentElement.style.display='none'">`+this.strings.thief+`</div>
-                            <div type="button" onclick="app.selectAllClassesCartesian('ranger'); this.parentElement.style.display='none'">`+this.strings.ranger+`</div>
-                            <div type="button" onclick="app.selectAllClassesCartesian('mage'); this.parentElement.style.display='none'">`+this.strings.mage+`</div>
-                            <div type="button" onclick="app.selectAllClassesCartesian('manauser'); this.parentElement.style.display='none'">`+this.strings["soul-weaver"]+`</div>
-                          </div>
-                        </div>
-                        <button type="button" onclick="var hero = document.getElementById('Cartesian_lock').getElementsByTagName('input'); for (var i = 0; i < hero.length; i++) { hero[i].checked = false; };" class="button_cancelbtn" style="float: right;">`+this.strings.deselect_all+`</button>
-                      </div>
-                      <div style="display: inline-block;">
-                        <button type="button" onclick="app.addCartesian_lock(` + n  +`)" class="button_login">` + this.strings.add_selection + `</button>
-                        <button type="button" onclick="$('#Cartesian_lock').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.back_btn + `</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>`
-            );
+          openCartesianLock: function (e) {
+            this.isSelectingCartesian = e.toString();
             $("body").addClass("modal-open");
           },
-          selectAllClassesCartesian: function (classe) {
-            var area = document.getElementById("Cartesian_lock");
-            var hero = area.getElementsByTagName("input");
-            for (var i = 0; i < hero.length; i++) {
-              if (this.HeroDB[hero[i].value].role === classe) hero[i].checked = true;
+          cartesianSlotRoster: function() {
+            let tmp = [], n = this.isSelectingCartesian;
+            for (var i in this.HeroDB) {
+              //if (this.cartesian_lock.flat().includes(i) && !this.cartesian_lock[n].includes(i)) continue;
+              if (this.myHeroesList[i]) tmp.push(i);
             };
+            return tmp;
           },
-          addCartesian_lock: function (n) {
-            var area = document.getElementById("Cartesian_lock");
-            var hero = area.getElementsByTagName("input");
-            for(var i = 0; i < hero.length; i++)  
-                {  
-                    if (hero[i].checked) this.cartesian_lock[n].push(hero[i].value);
-                };
-            $('#Cartesian_lock').remove();
-            $("body").removeClass("modal-open")
+          addToCartesianLock: function(e) {
+            let n = this.isSelectingCartesian;
+            this.cartesian_lock[n] = e;
+            this.isSelectingCartesian = false;
+            $("body").removeClass("modal-open");
           },
           removeCartesian_lock: function ( n, y) {
-            this.cartesian_lock[n].splice(this.cartesian_lock[n].indexOf(this.cartesian_lock[n][y]), 1)
-          }, 
+            if (this.cartesian_lock[n].includes(y))
+              this.cartesian_lock[n].splice(this.cartesian_lock[n].indexOf(y), 1)
+          },
           mostraSalvaRisultato: function (n) {
             $( "#calculate_window" ).append(`
-              <div id="saveCamp" class="modal" style="padding-top: 60px;display:block; overflow: scroll;">
-                <form class="modal-content animate" id="saveCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
+              <div id="saveCamp" class="modal" style="display: block;">
+                <form class="modal-content modal-small animate" id="saveCamp">
                   <div class="imgcontainer">
                     <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
                     <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[0]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[0]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
@@ -3311,8 +3813,8 @@ icon-bar span img {
                         <input type="checkbox" id="checkbox_arakahan" name="raid_boss" style="position:relative;top:0px;display:none">
                         <label for="checkbox_arakahan" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.arakahan + `</p></label>
                       </div>
-                      <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="button_login">` + this.strings.save + `</button>
-                      <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="button_cancelbtn">` + this.strings.canc_btn + `</button>
+                      <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="modal-button">` + this.strings.save + `</button>
+                      <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="modal-button">` + this.strings.canc_btn + `</button>
                     </form>
                   </div>
                 </form>
@@ -3394,8 +3896,8 @@ icon-bar span img {
             this.savedCamps[campName].migliorPG1 = this.savedCamps[campName].migliorPG1.toLowerCase().replace(/ /g,"-").replace(/&/g,"").replace(/'/g,"");
             this.savedCamps[campName].migliorPG2 = this.savedCamps[campName].migliorPG2.toLowerCase().replace(/ /g,"-").replace(/&/g,"").replace(/'/g,"");
             $( "#my_teams_window" ).append(`
-              <div id="savedCamp" class="modal" style="padding-top: 60px;display:block;">
-                <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
+              <div id="savedCamp" class="modal" style="display:block;">
+                <form class="modal-content modal-small animate" id="savedCamp">
                   <div class="imgcontainer">
                     <span onclick="app.eliminaRisultatoSalvato('` + campName.replace(/'/g,"@_#3#9#;").replace(/"/g,'@_#3#4#;').replace(/`/g,'@_#9#6#;') + `')"><i class="fa fa-trash close" style="color: var(--font-color);"></i></span>
                     <p>` + this.strings.morale + `: ` + this.savedCamps[campName].morale + `</p>
@@ -3409,7 +3911,7 @@ icon-bar span img {
                     `</p>
                   </div>
                   <div class="container">
-                    <button type="button" onclick="$('#savedCamp').remove(); $('body').removeClass('modal-open');" class="button_cancelbtn">` + this.strings.back_btn + `</button>
+                    <button type="button" onclick="$('#savedCamp').remove(); $('body').removeClass('modal-open');" class="modal-button">` + this.strings.back_btn + `</button>
                   </div>
                 </form>
               </div>
@@ -3418,17 +3920,17 @@ icon-bar span img {
           },
           modalGenerateURL: function (campName) {
             $( "#settings_window" ).append(`
-              <div id="url_generator" class="modal" style="padding-top: 60px;display:block;">
-                <div class="modal-content animate" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
+              <div id="url_generator" class="modal" style="display:block;">
+                <div class="modal-content modal-small animate">
                   <div class="imgcontainer">
-                    <div id="url_container" class="box_advanced_settings" style="display: block; width:90%; padding-left: 5%; padding-right: 5%; position: relative; overflow-x: auto; font-size: 16px; white-space: nowrap;">` + 
+                    <div id="url_container" class="box_advanced_settings" style="display: block; width:100%; max-height: 250px; padding: 20px;  position: relative; overflow-x: auto; font-size: 16px; word-break: break-all;background-color: rgb(0,0,0,0.4);box-sizing: border-box;">` + 
                       generateUrl(this.myHeroesList) + 
                    `</div>
                     <button type="button" onclick="copyText('url_container')" class="button_login">` + this.strings.copia + `</button>
                     <br>` + this.strings.url_usage_help + `<br><br>
                   </div>
                   <div class="container">
-                    <button type="button" onclick="$('#url_generator').remove(); $('body').removeClass('modal-open');" class="button_cancelbtn" style="width:100%">` + this.strings.back_btn + `</button>
+                    <button type="button" onclick="$('#url_generator').remove(); $('body').removeClass('modal-open');" class="modal-button" style="width:100%">` + this.strings.back_btn + `</button>
                   </div>
                 </div>
               </div>
@@ -3535,14 +4037,18 @@ icon-bar span img {
             };
 
             $( "#" + sezione).append(`
-              <div id="help_menu" class="modal" style="padding-top: 60px;display:block;">
-                <form class="modal-content animate" id="savedCamp" style="background-color: var(--search-primary-color);color: var(--font-color);max-width:760px">
-                  <div class="imgcontainer">` + titolo + `
+              <div id="help_menu" class="modal" style="display:block;">
+                <form class="modal-content modal-small modal-three-parts animate" id="savedCamp">
+                  <div>
+                    <span class="modal-title">` + titolo + `
+                    </span>
                   </div>
-                  <div style="padding:15px">` + contenuto + `
+                  <div>
+                    <div class="modal-text">` + contenuto + `
+                    </div>
                   </div>
-                  <div class="container">
-                    <button type="button" onclick="$('#help_menu').remove(); $('body').removeClass('modal-open');" class="button_cancelbtn">` + this.strings.back_btn + `</button>
+                  <div>
+                    <button type="button" onclick="$('#help_menu').remove(); $('body').removeClass('modal-open');" class="modal-button">` + this.strings.back_btn + `</button>
                   </div>
                 </form>
               </div>
@@ -3565,12 +4071,8 @@ icon-bar span img {
             };
             this.displayStyle = layout.value;
           },
-          sortDisplayedHeroesByName() { // on language change call this function to sort by hero name
-            self=this;
-            this.sortedHeroDB.sort(function (a,b) {return ((self.thisHeroTranslatedName(a) < self.thisHeroTranslatedName(b)) ? -1 : ((self.thisHeroTranslatedName(a) == self.thisHeroTranslatedName(b)) ? 0: 1))});
-            this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
-            if (document.getElementById("myHeroes_sort_by").value=="name")
-              this.displayMyHeroes.sort(function (a,b) {return ((self.thisHeroTranslatedName(a) < self.thisHeroTranslatedName(b)) ? -1 : ((self.thisHeroTranslatedName(a) == self.thisHeroTranslatedName(b)) ? 0: 1))});
+          sortHeroes: function (sortBy, a, b) {
+            return this.thisHeroData(a)[sortBy] > this.thisHeroData(a)[sortBy] ? this.thisHeroData(a).name < this.thisHeroData(a).name : -1
           },
           filtroTuttiGliEroi: function (button, listToModify) {
             self = this;
@@ -3582,10 +4084,6 @@ icon-bar span img {
               filtro["ricerca"] = document.getElementById("inputInTuttiGliEroi").value; // ottieni il testo digitato nella casella
             } else if (listToModify === "MyHeroes")  {
               tmpArray = Object.keys(this.myHeroesList);
-              var sortBy = document.getElementById("myHeroes_sort_by").value;
-              if (sortBy != "date") tmpArray.sort(function (a,b) {return ((self.HeroDB[a][sortBy] < self.HeroDB[b][sortBy]) ? -1 : ((self.HeroDB[a][sortBy] == self.HeroDB[b][sortBy]) ? 0: 1))})
-              //: tmpArray.sort(function (a,b) {return ((self.thisHeroTranslatedName(a) < self.thisHeroTranslatedName(b)) ? -1 : ((self.thisHeroTranslatedName(a) == self.thisHeroTranslatedName(b)) ? 0: 1))});
-              //if (button.className == "search_hero_filter")
               filtro["ricerca"] =  document.getElementById("inputInMyHeroes").value; // ottieni il testo digitato nella casella
               pulsantiIn = document.getElementById("manage_window"); // determina in che sezione sono i pulsanti
             };
@@ -3804,6 +4302,7 @@ icon-bar span img {
                   data_by: "Data by EpicSevenDB",
                   all: "All",
                   sort: "Ordina",
+                  filter: "Filtro",
                   modified: "Modifica",
                   name: "Nome",
                   ingame_id: "ID gioco",
@@ -3813,7 +4312,7 @@ icon-bar span img {
                   confirm_add_heroes: "Sei sicuro di voler aggiungere <N> eroi dalla tua lista?",
                   aggiungi: "Aggiungi eroe",
                   i_tuoi_eroi: "I tuoi eroi",
-                  cerca_eroe: "Cerca eroe..",
+                  search: "Cerca",
                   cant_lock_more_heroes: "Hai già 4 eroi in squadra",
                   impostazioni_avanzate: "Impostazioni Avanzate",
                   warn_tsize_adv_title: "Hai un sacco di eroi e nessun eroe bloccato",
@@ -3827,6 +4326,8 @@ icon-bar span img {
                   no_debuffs: "No Debuffs (Esclusi: Provoke, Sleep, Stun e Poison)",
                   must_include_dispel: "Team deve contenere dispel (Rimuovi o riduci la durata dei buff dal nemico)",
                   classe: "Classe",
+                  attribute: "Attributo",
+                  rarity: "Rarità",
                   knight: "Knight",
                   warrior: "Warrior",
                   thief: "Thief",
@@ -3903,9 +4404,6 @@ icon-bar span img {
                   karkanis: "Karkanis",
                   vera: "Vera",
                   juleeve: "Juleeve",
-                  save: "Salva",
-                  canc_btn: "Annulla",
-                  back_btn: "Indietro",
                   error_no_name_provided: "Nome richiesto!",
                   error_name_in_use: "Stai già utilizzando questo nome!",
                   saved_message: "salvato con successo!",
@@ -3936,7 +4434,21 @@ icon-bar span img {
                   hero_name_under_pic_grid: "Mostra il nome eroe sotto l'immagine",
                   genera_url: "Genera URL",
                   url_usage_help: "Copia e incolla questo URL nel browser o dispositivo desiderato per generare una copia dei tuoi eroi attuali.",
+                  customize_ch_icons: "Personalizza icone",
+                  small: "Piccola",
+                  default: "Predefinita",
+                  medium: "Media",
+                  large: "Grande",
+                  settings_samll_help: "Puoi cambiare le preferenze ogni volta che vuoi nella finestra impostazioni",
+                  attr_role: "Elemento e classe",
+                  stars: "Stelle (Rango)",
+                  enable_mouseover_zoom: "Ingrandisci al passaggio del mouse (solo su PC)",
                   copia: "Copia",
+                  save: "Salva",
+                  confirm: "Conferma",
+                  selected: "Selezionati",
+                  canc_btn: "Annulla",
+                  back_btn: "Indietro",
                   others: "Altri",
                   language: "Lingua"
                 };
@@ -3951,6 +4463,7 @@ icon-bar span img {
                   data_by: "数据来源 EpicSevenDB",
                   all: "全部",
                   sort: "排序",
+                  filter: "Filter",
                   modified: "按添加日期",
                   name: "按英雄名称",
                   ingame_id: "按英雄ID",
@@ -3961,7 +4474,7 @@ icon-bar span img {
                   aggiungi: "添加英雄 ",
                   i_tuoi_eroi: "我的英雄",
                   cant_lock_more_heroes: "不能锁定超过4个英雄",
-                  cerca_eroe: "搜索..",
+                  search: "搜索",
                   impostazioni_avanzate: "高级设置",
                   warn_tsize_adv_title: "你有大量的英雄并且没有锁定任何英雄，计算可能耗费较长时间",
                   warn_tsize_adv_details: "使用高级设定会耗费更多时间计算. \n你可以通过锁定英雄来提高计算速度.",
@@ -3974,6 +4487,8 @@ icon-bar span img {
                   no_debuffs: "技能不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
                   must_include_dispel: "队伍必须包含驱散角色",
                   classe: "职业",
+                  attribute: "Attribute",
+                  rarity: "Rarity",
                   knight: "骑士",
                   warrior: "战士",
                   thief: "盗贼",
@@ -4049,9 +4564,6 @@ icon-bar span img {
                   karkanis: "执行者卡尔卡努斯",
                   vera: "侍从官培拉",
                   juleeve: "乔里夫议会",
-                  save: "保存",
-                  canc_btn: "取消",
-                  back_btn: "返回",
                   error_no_name_provided: "队伍名称不能为空!",
                   error_name_in_use: "该名称已经被使用!",
                   saved_message: "保存成功!",
@@ -4082,7 +4594,21 @@ icon-bar span img {
                   hero_name_under_pic_grid: "在英雄头像下方显示英雄名字",
                   genera_url: "生成URL链接",
                   url_usage_help: "复制这个链接到新设备来导入你的英雄列表. <br>设备间并不会自动同步, 如果你修改了英雄列表，下次导入前需要重新生成URL链接.",
+                  customize_ch_icons: "Customize character icons",
+                  small: "Small",
+                  default: "Default",
+                  medium: "Medium",
+                  large: "Large",
+                  settings_samll_help: "If you wish, you can change your settings at any time in the settings tab!",
+                  attr_role: "Attribute and Role",
+                  stars: "Stars",
+                  enable_mouseover_zoom: "Zoom on mouse over (PC only)",
                   copia: "复制",
+                  save: "保存",
+                  confirm: "Confirm",
+                  canc_btn: "取消",
+                  back_btn: "返回",
+                  selected: "Selected",
                   others: "其它",
                   language: "语言"
                 };
@@ -4097,6 +4623,7 @@ icon-bar span img {
                   data_by: "數據來源 EpicSevenDB",
                   all: "全部",
                   sort: "排序",
+                  filter: "Filter",
                   modified: "按添加日期",
                   name: "按英雄名稱",
                   ingame_id: "按英雄ID",
@@ -4107,7 +4634,7 @@ icon-bar span img {
                   aggiungi: "添加英雄 ",
                   i_tuoi_eroi: "我的英雄",
                   cant_lock_more_heroes: "不能鎖定超過4個英雄！",
-                  cerca_eroe: "搜索..",
+                  search: "搜索",
                   impostazioni_avanzate: "高級設定",
                   warn_tsize_adv_title: "你有大量的英雄並且冇有鎖定任何英雄，計算可能耗費較長時間",
                   warn_tsize_adv_details: "使用高級設定會耗費更多時間計算. \n你可以通過鎖定英雄來提高計算速度.",
@@ -4120,6 +4647,8 @@ icon-bar span img {
                   no_debuffs: "技能不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
                   must_include_dispel: "隊伍必須包含驅散角色",
                   classe: "職階",
+                  attribute: "Attribute",
+                  rarity: "Rarity",
                   knight: "騎士",
                   warrior: "戰士",
                   thief: "盜賊",
@@ -4195,9 +4724,6 @@ icon-bar span img {
                   karkanis: "執行者卡爾卡努斯",
                   vera: "侍從官培拉",
                   juleeve: "喬裏夫議會",
-                  save: "保存",
-                  canc_btn: "取消",
-                  back_btn: "返回",
                   error_no_name_provided: "隊伍名稱不能為空!",
                   error_name_in_use: "該名稱已經被使用!",
                   saved_message: "保存成功!",
@@ -4228,7 +4754,21 @@ icon-bar span img {
                   hero_name_under_pic_grid: "在英雄頭像下方顯示英雄名字",
                   genera_url: "生成URL鏈接",
                   url_usage_help: "復制這個鏈接到新設備來導入你的英雄列表. <br>設備間並不會自動同步, 如果你修改了英雄列表，下次導入前需要重新生成URL鏈接.",
+                  customize_ch_icons: "Customize character icons",
+                  small: "Small",
+                  default: "Default",
+                  medium: "Medium",
+                  large: "Large",
+                  settings_samll_help: "If you wish, you can change your settings at any time in the settings tab!",
+                  attr_role: "Attribute and Role",
+                  stars: "Stars",
+                  enable_mouseover_zoom: "Zoom on mouse over (PC only)",
                   copia: "復制",
+                  save: "保存",
+                  confirm: "Confirm",
+                  canc_btn: "取消",
+                  back_btn: "返回",
+                  selected: "Selected",
                   others: "其它",
                   language: "語言"
                 };
@@ -4243,6 +4783,7 @@ icon-bar span img {
                   data_by: "Source EpicSevenDB",
                   all: "Tous",
                   sort: "Trier par",
+                  filter: "Filter",
                   modified: "Date",
                   name: "Nom",
                   ingame_id: "ID",
@@ -4253,7 +4794,7 @@ icon-bar span img {
                   aggiungi: "Ajouter un héro ",
                   i_tuoi_eroi: "Votre héros",
                   cant_lock_more_heroes: "Impossible de verrouiller plus de 4 héros",
-                  cerca_eroe: "Rechercher..",
+                  search: "Rechercher",
                   impostazioni_avanzate: "Paramètre avancé",
                   warn_tsize_adv_title: "Vous avez une grande liste de héros et aucun héros verrouillé",
                   warn_tsize_adv_details: "L'activation de toutes les fonctionnalités avancées augmentera le temps nécessaire pour calculer toutes les combinaisons. \nVous pouvez réduire le temps requis en verrouillant un héros.",
@@ -4266,6 +4807,8 @@ icon-bar span img {
                   no_debuffs: "Non Debuff (Sauf: Provoquer, Sommeil, Etourdir et Poison)",
                   must_include_dispel: "L'équipe doit contenir stripper",
                   classe: "Classe",
+                  attribute: "Attribute",
+                  rarity: "Rarity",
                   elemento: "Elément",
                   buff: "Buff",
                   debuff: "Debuff",
@@ -4331,9 +4874,6 @@ icon-bar span img {
                   karkanis: "Karkanis",
                   vera: "Vera",
                   juleeve: "Juleeve",
-                  save: "Sauvgarde",
-                  canc_btn: "Annuler",
-                  back_btn: "Retour",
                   error_no_name_provided: "Le nom ne peut pas être vide!",
                   error_name_in_use: "Ce nom est déjà pris!",
                   saved_message: "Sauvgardée!",
@@ -4364,7 +4904,21 @@ icon-bar span img {
                   hero_name_under_pic_grid: "Afficher le nom du héros sous le portrait",
                   genera_url: "Générer une URL",
                   url_usage_help: "Copiez et collez cette URL sur un nouvel appareil ou navigateur pour générer une copie de votre liste de héros actuelle. <br>Les modifications ne sont pas synchronisées, si vous changez votre liste, vous devrez générer une nouvelle URL.",
+                  customize_ch_icons: "Customize character icons",
+                  small: "Small",
+                  default: "Default",
+                  medium: "Medium",
+                  large: "Large",
+                  settings_samll_help: "If you wish, you can change your settings at any time in the settings tab!",
+                  attr_role: "Attribute and Role",
+                  stars: "Stars",
+                  enable_mouseover_zoom: "Zoom on mouse over (PC only)",
                   copia: "Copier",
+                  save: "Sauvgarde",
+                  confirm: "Confirm",
+                  canc_btn: "Annuler",
+                  back_btn: "Retour",
+                  selected: "selected",
                   others: "Autres",
                   language: "Langue"
                 };
@@ -4380,6 +4934,7 @@ icon-bar span img {
                   data_by: "Data by EpicSevenDB",
                   all: "All",
                   sort: "Sort by",
+                  filter: "Filter",
                   modified: "Date",
                   name: "Name",
                   ingame_id: "In-game ID",
@@ -4390,7 +4945,7 @@ icon-bar span img {
                   aggiungi: "Add hero ",
                   i_tuoi_eroi: "Your heroes",
                   cant_lock_more_heroes: "Can't lock more than 4 heroes",
-                  cerca_eroe: "Search..",
+                  search: "Search",
                   impostazioni_avanzate: "Advanced settings",
                   warn_tsize_adv_title: "You have a large roster and no heroes locked",
                   warn_tsize_adv_details: "Activating any advanced features will increse the required time to calculate all the combinations. \nYou can reduce the required time by locking a hero.",
@@ -4400,9 +4955,11 @@ icon-bar span img {
                   disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",
                   deve_contenere_AoE: "Team must have AoE",
                   no_s1_debuffs: "No S1 Debuffs (Except: Provoke, Sleep, Stun and Poison)",
-                  no_debuffs: "No Debuffs (Except: Provoke, Sleep, Stun and Posion)",
+                  no_debuffs: "No Debuffs (Except: Provoke, Sleep, Stun and Poison)",
                   must_include_dispel: "Team must include dispel (remove enemy's buffs or reduce their duration)",
                   classe: "Class",
+                  attribute: "Attribute",
+                  rarity: "Rarity",
                   knight: "Knight",
                   warrior: "Warrior",
                   thief: "Thief",
@@ -4479,9 +5036,6 @@ icon-bar span img {
                   karkanis: "Karkanis",
                   vera: "Vera",
                   juleeve: "Juleeve",
-                  save: "Save",
-                  canc_btn: "Cancel",
-                  back_btn: "Back",
                   error_no_name_provided: "Name is required!",
                   error_name_in_use: "You are already using this name!",
                   saved_message: "saved successfully!",
@@ -4512,7 +5066,21 @@ icon-bar span img {
                   hero_name_under_pic_grid: "Hero's name under the portrait",
                   genera_url: "Generate URL",
                   url_usage_help: "Copy and paste this URL to a new device or browser to generate a copy of your current roster. <br>Changes are not synchronized, if you change your roster you will have to generate a new URL.",
+                  customize_ch_icons: "Customize character icons",
+                  small: "Small",
+                  default: "Default",
+                  medium: "Medium",
+                  large: "Large",
+                  settings_samll_help: "If you wish, you can change your settings at any time in the settings tab!",
+                  attr_role: "Attribute and Role",
+                  stars: "Stars",
+                  enable_mouseover_zoom: "Zoom on mouse over (PC only)",
                   copia: "Copy",
+                  save: "Save",
+                  confirm: "Confirm",
+                  canc_btn: "Cancel",
+                  back_btn: "Back",
+                  selected: "Selected",
                   others: "Others",
                   language: "Language"
                 };
@@ -5609,8 +6177,6 @@ icon-bar span img {
               contentType: 'application/json',
               success: (response) => {
                 this.HeroDB = response;
-                this.sortedHeroDB = Object.keys(this.HeroDB).sort(function (a,b) {return ((a < b) ? -1 : ((a == b) ? 0: 1))});
-                this.sortedHeroDB.splice(this.sortedHeroDB.indexOf("dark-tyrant-tenebria"), 1); // remove s tenebria's skin
                 if (!urlParams.get("camproster")) { // get roster from file
                   this.getUserHeroesBoot();
                 } else {// get roster from url
@@ -5621,7 +6187,7 @@ icon-bar span img {
                 this.inizializzazione = false;
               },
               error: (jqXHR, textStatus, errorThrown) => {
-                console.log("could not upload team data");
+                console.log("Can't download Hero Database!");
               }
           });
           this.impostaLingua();
@@ -5660,6 +6226,23 @@ icon-bar span img {
       }
     },
     computed: {
+        databaseNumber: function() {
+          return Object.keys(this.HeroDB).length-this.rosterLength;
+        },
+        sortedHeroDB: function () {
+          this.databaseNumber;
+          var sortBy = this.databaseSort, list = Object.keys(this.HeroDB), banned = ["dark-tyrant-tenebria"];
+          for (var i=0; i<list.length;i++) if (this.myHeroesList[list[i]] || banned.includes(list[i])) list.splice(list.indexOf(list[i]),1),i--;
+          if (sortBy !="rarity") return list.sort((x, y) => { return (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+          else if (sortBy =="rarity") return list.sort((x, y) => { return (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+        },
+        roster: function() {
+          this.rosterLength;
+          var sortBy = this.rosterSort;
+          if (sortBy != "date" && sortBy !="rarity") return Object.keys(this.myHeroesList).sort((x, y) => { return (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+          else if (sortBy =="rarity") return Object.keys(this.myHeroesList).sort((x, y) => { return (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+          else return Object.keys(this.myHeroesList);
+        },
         computedGetSavedTeamsStats: function () {
           this.getSavedTeamsStats();
         },
@@ -5679,7 +6262,7 @@ icon-bar span img {
             this.customizedResuts;
             if (Object.keys(this.myHeroesList).length > 3) {
               this.isLoadingResults = true; // mostra animazione di caricamento
-
+              console.log("Start calculating...");
               var campList = Object.keys(this.myHeroesList);
               if (this.locked.length > 0 ) {
                 for (var i = 0; i< this.locked.length; i++){
@@ -5694,11 +6277,15 @@ icon-bar span img {
                 snackbarMessage(`Error: ` + err);
               };
             };
+            return null;
       }
   }, // computed
   watch: {
     risultati: function () { // when new results are calculated go back to page 1
       this.currentResultsPage = 1;
+    },
+    rosterLength: function () {
+      this.sortedHeroDB;
     }
   },
   mounted () {
