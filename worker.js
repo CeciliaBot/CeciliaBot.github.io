@@ -475,3 +475,9 @@ onmessage = function(e) {
                 //e.risultati.sort(function (a,b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0: 1))}); // riordina l'ultimo elemento aggiunto
                 postMessage({risultati: e.risultati});
 }
+
+// creating service-worker.js using sw-precache
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
