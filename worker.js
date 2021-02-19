@@ -234,10 +234,10 @@ onmessage = function(e) {
                                                       break; // dupe character detected
                                                   };
                                                   var inTop = -1;
-                                                  for (var i = 0; i<e.risultati.length;i++) {
-                                                    if (e.risultati[i].morale === -100) break;
-                                                    if (e.risultati[i].team.length == team.length && e.risultati[i].team.every(y => team.includes(y))) {
-                                                      inTop = i;
+                                                  for (var k = 0; k<e.risultati.length;k++) {
+                                                    if (e.risultati[k].morale === -100) break;
+                                                    if (e.risultati[k].team.length == team.length && e.risultati[k].team.every(y => team.includes(y))) {
+                                                      inTop = k;
                                                     };
                                                   };
                                                   if (inTop === -1) {
