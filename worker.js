@@ -162,6 +162,7 @@ onmessage = function(e) {
                     } else { // can calculate
                         var useExperimental = true; // set to false if the new loop is not working correctly
                         if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel || e.preferenzeRisultati.n > 2000) hasAdvSettings = true;
+                        if (e.type == "friendship") hasAdvSettings = false;
                         if (useExperimental && hasAdvSettings === false && e.locked.length <= 1) { // use only with no advanced settings
                             if (Object.keys(topics_results).length === 0) { // create topics combos (once for page visit)
                                 for (var hero_id in HeroDB) {
@@ -184,7 +185,7 @@ onmessage = function(e) {
                                 campList = Object.keys(e.myHeroesList);
                                 for(var id in currArray){
                                   for(var i = 0; i < currArray[id].length; i++){
-                                    if(campList.includes(currArray[id][i]._id)){
+                                    if(campList.includes(currArray[id][i]._id) || e.locked.includes(currArray[id][i]._id)){
                                       currArray[id][i].roster = true;
                                     } else {
                                       currArray[id][i].roster = false;
@@ -192,6 +193,68 @@ onmessage = function(e) {
                                   };
                                 };
                             };
+
+
+                            if (e.type=="friendship"){ // calculate highest friendship -> Only 1 character supported, no advanced settings
+                              for (var key in topics_results) {
+                                  var currTopicCombo = topics_results[key];
+                                  var index = null;
+                                  for (var j=0; j<e.locked.length;j++) {
+                                    for (var i=0; i<topics_results[key].eroi.length;i++)
+                                      if (currTopicCombo.eroi[i]._id == e.locked[j])
+                                        if (currTopicCombo.eroi[i].punteggio > e.risultati[e.risultati.length-1].morale) index = i;
+                                  };
+                                  if (!index) continue;
+                                  for (var i = 0; i < currTopicCombo[key.split("_")[0]].length; i++) {
+                                      if (!currTopicCombo[key.split("_")[0]][i].roster) {
+                                          continue;
+                                      }; //!campList.includes(c2)
+                                      var c1p = currTopicCombo[key.split("_")[0]][i].punteggio;
+                                      var c1 = currTopicCombo[key.split("_")[0]][i]._id;
+                                      for (var w = 0; w < currTopicCombo[key.split("_")[1]].length; w++) {
+                                          var c2p = currTopicCombo[key.split("_")[1]][w].punteggio;
+                                          var c1data = currTopicCombo[key.split("_")[1]][w];
+                                          var c2 = currTopicCombo[key.split("_")[1]][w]._id;
+                                          if (c1==c2 || !currTopicCombo[key.split("_")[1]][w].roster) {// || (e.locked.length === 3 && !e.locked.includes(c1) && !e.locked.includes(c2)) || (e.noDebuffs===true && currTopicCombo[key.split("_")[1]][w].hasDebuffs===true) || (e.noS1debuffs===true && currTopicCombo[key.split("_")[1]][w].hasS1Debuffs === true)) {
+                                              continue;
+                                          };
+                                          var punteggio = 0;
+                                          if (e.locked.includes(c1) || e.locked.includes(c2)) {
+                                            punteggio = e.locked.includes(c1) ? c1p : c2p;
+                                          } else {
+                                            punteggio = currTopicCombo.eroi[index].punteggio; 
+                                          }
+                                          for (var y = 0; y < e.risultati.length; y++) {
+                                              if (punteggio >= e.risultati[y].morale) {
+                                                  var team = c1 != c2 ? [c1,c2]:[c1];
+                                                  for (var j=0; j<e.locked.length; j++) {
+                                                    if (!team.includes(e.locked[j])) team.push(e.locked[j]);
+                                                  };
+                                                  if (checkScDupe(team)) {
+                                                      break; // dupe character detected
+                                                  };
+                                                  e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
+                                                  e.risultati.splice(e.preferenzeRisultati.n, 1);
+                                                  break;
+                                              };
+                                          };
+                                      }; // var e
+                                  };// var i
+                                };
+                                for (var i = 0; i < e.risultati.length; i++) {
+                                  if (e.risultati[i].morale==-100) { // remove placeholders
+                                    e.risultati.splice(i);
+                                    break;
+                                  } else { // Sort locked heroes in the team
+                                    e.risultati[i].team.sort(function(a,b){
+                                      return e.locked.includes(a) ? 1 : -1;
+                                    })
+                                  };
+                                };
+                                return postMessage({risultati: e.risultati}); //worker is done
+                            }; // end of friendship calc
+                          
+                          
                             for (var key in topics_results) {
                                 var currTopicCombo = topics_results[key];
                                 for (var i = 0; i < currTopicCombo[key.split("_")[0]].length; i++) {

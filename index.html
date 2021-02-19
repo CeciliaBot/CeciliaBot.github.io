@@ -1525,6 +1525,15 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color:##007FFF">
+                  <b>19/02/2021</b>: Friendship Farming?<br>
+                  If you don't care about morale and you're just friendship farming in labyrinth you can use this new function to quickly find the best companions for your character.<br>
+                  Right click a character and select "{{strings.calculate_highest_friendship}}". The results will be displayed in the same tab as normal morale but the numbers displayed under the "{{strings.morale}}" column are the friendship gains for your character not your team's morale.<br>
+                  The result team will have a size of 3 or less heroes you can fill the remaining free spaces with fodder or any hero you wish when building you team.<br>
+                  Since most of the top teams will have the same results the current layout may be subject to some changes.<br>
+                  At the moment locked heroes will be ignored when using this function.<br>
+                  Note: You cannot use the Save function normally available for teams.
+                </li>
                 <li style="color:#ff0000">
                   <b>05/02/2021</b>: ! IMPORTANT !<br>
                   After the update on the 4th of February many of the camping values have changed.<br>
@@ -3185,6 +3194,7 @@ icon-bar span img {
     render: function (h,ctx) {
       let roleIcon = {knight: "knight",warrior:"warrior",assassin: "thief",mage: "mage", ranger: "ranger", manauser: "soul-weaver"},
           attrIcon = {fire: "fire", wind: "earth", ice: "ice", light: "light", dark: "mdark"};
+      if (!ctx.props.data._id) return;
       return h('div', {key: ctx.props.data._id, attrs: ctx.data.attrs, on: {click: event => event.target.className.indexOf('removeHero') !=-1 ? ctx.listeners['remove'](ctx.props.data._id) : ctx.listeners['clicked'] ? ctx.listeners['clicked'](ctx.props.data._id) : null, contextmenu: event => ctx.listeners['contextmenu'](event,ctx.props.data._id)}, class: [{'heroImgList': true, hoverIcon: ctx.props.hoverable},ctx.data.staticClass], style: [{padding: 12*ctx.props.scale + 'px'},ctx.data.staticStyle], directives: ctx.data.directives},[
           h('div', {style: {position: "relative", display: "inline-block", verticalAlign: "top", height: ctx.props.size*ctx.props.scale+"px", width: ctx.props.size*ctx.props.scale+"px"}}, 
             [/* icon wrapper*/
@@ -3406,7 +3416,7 @@ icon-bar span img {
             return {
               VERSION: 1.0,
               last_version: localStorage.getItem('last_version'), /* if different from VERSION a popup will appear*/
-              avatars: JSON.parse(localStorage.getItem('avatars') || '{"name": false, "role_attr": true, "stars": false, "scale": 1, "hoverable": true, "notSet": true}'),
+              avatars: JSON.parse(localStorage.getItem('avatars') || '{"name": false, "role_attr": true, "stars": false, "scale": 1, "hoverable": true, "notSet": false}'),
               strings: {},
 
               /* Database (add hero window) */
@@ -3668,6 +3678,15 @@ icon-bar span img {
                 <span style="width: 100%; font-size: 24px; text-align: center;"><b>` + this.thisHeroTranslatedName(hero._id) + `</b><b class="close" style="float: right; cursor: pointer; font-size: 30px; margin-right: -10px;" onclick="$('#debugHeroInfo').remove()">x</b></span>
                 <a href="` + e7dbLink + `" target="_blank">` + this.strings.view_on_e7db + `</a>
                 <a href="https://e7herder.com/tools/model-viewer#type=5,id=` + hero.id + `" target="_blank">` + this.strings.view_hero_model + `</a>
+                <a onclick="
+                  if (window.event.target.nodeName=='I') return;
+                  app.risultati = [];
+                  window.setWindow('calculate_window');
+                  tastoDestro = 0; 
+                  $('#debugHeroInfo').remove(); 
+                  app.isLoadingResults=true; 
+                  camperino.postMessage({type: 'friendship', HeroDB: app.HeroDB, myHeroesList: app.myHeroesList, campList: Object.keys(app.myHeroesList), locked: ['${key}'], classe: [], elemento: [], debuffs: [], buffs: [], AoE: false, noS1debuffs: false, noDebuffs: false, mustIncludeDispel: false, cartesianLock: [[],[],[],[]], preferenzeRisultati: app.customizedResuts, risultati: []});
+                ">` + this.strings.calculate_highest_friendship + `<i onclick="app.helpWindow('app','friendship-farming'); tastoDestro = 0;  $('#debugHeroInfo').remove(); " class="fa fa-question-circle"></i></a>
                 <span id="heroDetailsRight" style="width: 100% !important; padding: 0; overflow: scroll; position: relative; min-height: 50px;">
                   <i class="fa  fa-circle-notch fa-spin" style="font-size: 40px; position: absolute; top 40%; left: 40%;"></i>
                 </span>
@@ -3794,52 +3813,56 @@ icon-bar span img {
               this.cartesian_lock[n].splice(this.cartesian_lock[n].indexOf(y), 1)
           },
           mostraSalvaRisultato: function (n) {
-            $( "#calculate_window" ).append(`
-              <div id="saveCamp" class="modal" style="display: block;">
-                <form class="modal-content modal-small animate" id="saveCamp">
-                  <div class="imgcontainer">
-                    <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
-                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[0]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[0]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
-                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[1]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[1]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
-                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[2]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[2]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
-                    <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[3]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[3]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
-                    <p>` + 
-                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG1)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore1) + `<br>` +
-                      this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG2)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore2) +
-                    `</p>
-                  </div>
-                  <div id="campSavingError" style="text-align:center;color:red;"></div>
-                  <div class="container">
-                    <form id="save_camp_details">
-                      <label for="camp_name"><b>` + this.strings.camp_name_field + `</b></label>
-                      <input type="text" style="width: 100%;" placeholder="` + this.strings.camp_name_placeholder + `" name="camp_name" id="camp_name" required="">
-                      <div style="text-align: center;">
-                        <input type="checkbox" id="checkbox_normal" name="raid_difficulty">
-                        <label for="checkbox_normal">`+ this.strings.normal + `</label>
-                        <input type="checkbox" id="checkbox_hell" name="raid_difficulty">
-                        <label for="checkbox_hell">` + this.strings.hell +`</label>
-                      </div>
-                      <div style="text-align: center;">
-                        <input type="checkbox" id="checkbox_queen" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_queen" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FQueen-Azumashik-284x300.png?v=1590932065337" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.queen + `</p></label>
-                        <input type="checkbox" id="checkbox_karkanis" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_karkanis" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FKarkanis-284x300.png?v=1590932065109" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.karkanis + `</p></label>
-                        <input type="checkbox" id="checkbox_juleeve" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_juleeve" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FJuleeve-284x300.png?v=1590932065054" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.juleeve + `</p></label>
-                        <input type="checkbox" id="checkbox_vera" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_vera" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FSecretary-Vera-284x300.png?v=1590932064989" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.vera + `</p></label>
-                        <input type="checkbox" id="checkbox_arakahan" name="raid_boss" style="position:relative;top:0px;display:none">
-                        <label for="checkbox_arakahan" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.arakahan + `</p></label>
-                      </div>
-                      <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="modal-button">` + this.strings.save + `</button>
-                      <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="modal-button">` + this.strings.canc_btn + `</button>
-                    </form>
-                  </div>
-                </form>
-              </div>
-            `);
-            $("body").addClass("modal-open");
-            $('#camp_name').focus();
+            try {
+              $( "#calculate_window" ).append(`
+                <div id="saveCamp" class="modal" style="display: block;">
+                  <form class="modal-content modal-small animate" id="saveCamp">
+                    <div class="imgcontainer">
+                      <p>` + this.strings.morale + `: ` + this.risultati[n].morale + `</p>
+                      <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[0]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[0]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
+                      <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[1]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[1]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
+                      <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[2]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[2]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
+                      <img src="` + this.getHeroAssets(this.HeroDB[this.risultati[n].team[3]]._id).icon + `" onerror="this.src=app.getHeroAssets('` + this.HeroDB[this.risultati[n].team[3]]._id + `', 'onerror').icon;this.onerror=null;" style="height:55px;width:55px;">
+                      <p>` + 
+                        this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG1)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore1) + `<br>` +
+                        this.thisHeroTranslatedName(this.thisHeroData(this.risultati[n].migliorPG2)._id) + `: `+ this.translateTopics(this.risultati[n].opzioneMigliore2) +
+                      `</p>
+                    </div>
+                    <div id="campSavingError" style="text-align:center;color:red;"></div>
+                    <div class="container">
+                      <form id="save_camp_details">
+                        <label for="camp_name"><b>` + this.strings.camp_name_field + `</b></label>
+                        <input type="text" style="width: 100%;" placeholder="` + this.strings.camp_name_placeholder + `" name="camp_name" id="camp_name" required="">
+                        <div style="text-align: center;">
+                          <input type="checkbox" id="checkbox_normal" name="raid_difficulty">
+                          <label for="checkbox_normal">`+ this.strings.normal + `</label>
+                          <input type="checkbox" id="checkbox_hell" name="raid_difficulty">
+                          <label for="checkbox_hell">` + this.strings.hell +`</label>
+                        </div>
+                        <div style="text-align: center;">
+                          <input type="checkbox" id="checkbox_queen" name="raid_boss" style="position:relative;top:0px;display:none">
+                          <label for="checkbox_queen" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FQueen-Azumashik-284x300.png?v=1590932065337" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.queen + `</p></label>
+                          <input type="checkbox" id="checkbox_karkanis" name="raid_boss" style="position:relative;top:0px;display:none">
+                          <label for="checkbox_karkanis" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FKarkanis-284x300.png?v=1590932065109" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.karkanis + `</p></label>
+                          <input type="checkbox" id="checkbox_juleeve" name="raid_boss" style="position:relative;top:0px;display:none">
+                          <label for="checkbox_juleeve" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FJuleeve-284x300.png?v=1590932065054" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.juleeve + `</p></label>
+                          <input type="checkbox" id="checkbox_vera" name="raid_boss" style="position:relative;top:0px;display:none">
+                          <label for="checkbox_vera" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FSecretary-Vera-284x300.png?v=1590932064989" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.vera + `</p></label>
+                          <input type="checkbox" id="checkbox_arakahan" name="raid_boss" style="position:relative;top:0px;display:none">
+                          <label for="checkbox_arakahan" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.arakahan + `</p></label>
+                        </div>
+                        <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="modal-button">` + this.strings.save + `</button>
+                        <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="modal-button">` + this.strings.canc_btn + `</button>
+                      </form>
+                    </div>
+                  </form>
+                </div>
+              `);
+              $("body").addClass("modal-open");
+              $('#camp_name').focus();
+            } catch (err) {
+              $('body').removeClass('modal-open');
+            }
           },
           salvaRisultato: function (n) {
             try {
@@ -4036,6 +4059,10 @@ icon-bar span img {
               case 'manage_heroes_help':
                 titolo =self.strings.manage_heroes;
                 contenuto = self.strings.manage_heroes_help;
+                break;
+              case 'friendship-farming':
+                titolo =self.strings.calculate_highest_friendship;
+                contenuto = self.strings.calculate_highest_friendship_help;
                 break;
               case 'advanced_settings':
                 titolo =self.strings.impostazioni_avanzate;
@@ -4380,7 +4407,10 @@ icon-bar span img {
                   manage_heroes_help:"In this window you can view all the heroes currently in your roster.<br>\
                             You can remove a hero by clicking the \"x\" at the bottom of the hero's portrait.<br>\
                             You can lock a hero by clicking he's portrait, a lock symbol will appear near the portrait. A locked hero will appear in every team in the results page.<br>\
-                            You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.",                    
+                            You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.",  
+                  calculate_highest_friendship_help: "Calculate all the combinations that give the selected character the highest friendship;<br>\
+                            Team morale will not be calculated and the morale displayed in the results window will be replaced by the character's friendship (title is morale but please ignore that).<br>\
+                            Advanced settings will be ignored and all the combinations will be generated using your roster, make sure you have at least 4 characters in your roster!",
                   advanced_settings_help:"Here you can costumize your camp results.<br>\
                             <b style=\"color:red\">Locked heroes are not subject to these restrictions</b><br><br>\
                             You can select as many as you want but keep in mind time size while doing so.<br>\
@@ -4441,6 +4471,7 @@ icon-bar span img {
                   //Right click menu
                   view_on_e7db: "Visualizza dettagli eroe su EpicSevenDB.com",
                   view_hero_model: "Visualizza modello 2D su e7herder.com",
+                  calculate_highest_friendship: "Calcola miglior friendship combo",
                   skills_not_enhanced: "Skills are awakened but not enhanced",
                   e7api_missing_character: "Questo eroe non è presente nel database di EpicSevenDB",
                   e7api_couldnt_connect: "Impossibile connettersi a EpicSevenDB",
@@ -4540,7 +4571,10 @@ icon-bar span img {
                   manage_heroes_help:"在这个界面你可以查看所有保存的英雄.<br>\
                             点击英雄头像上的 \"x\" 就可以删除英雄.<br>\
                             点击英雄头像可以锁定英雄，被锁定的英雄将会出现在所有的计算结果中.<br>\
-                            你可以点击工具栏的篝火图标计算露营心情，或者点击记事本图标添加高级选项.<br>",                    
+                            你可以点击工具栏的篝火图标计算露营心情，或者点击记事本图标添加高级选项.<br>", 
+                  calculate_highest_friendship_help: "Calculate all the combinations that give the selected character the highest friendship;<br>\
+                            Team morale will not be calculated and the morale displayed in the results window will be replaced by the character's friendship (title is morale but please ignore that).<br>\
+                            Advanced settings will be ignored and all the combinations will be generated using your roster, make sure you have at least 4 characters in your roster!",
                   advanced_settings_help:"这里可以进行高级设置.<br>\
                             <b style=\"color:red\">被锁定的英雄不受高级设置影响</b><br><br>\
                             你可以选择任意数量的选项，但是某些选项有特殊的限制.<br>\
@@ -4601,6 +4635,7 @@ icon-bar span img {
                   //Right click menu
                   view_on_e7db: " 前往EpicSevenDB.com查看英雄详细信息",
                   view_hero_model: "前往e7herder.com查看英雄模型",
+                  calculate_highest_friendship: "Calculate Friendship Farming",
                   skills_not_enhanced: "技能已经觉醒但是并没有强化",
                   e7api_missing_character: "在 EpicSevenDB 暂时找不到该英雄的信息",
                   e7api_couldnt_connect: "无法连接到 EpicSevenDB",
@@ -4700,7 +4735,10 @@ icon-bar span img {
                   manage_heroes_help:"在這個界麵你可以檢視所有保存的英雄.<br>\
                             點選英雄頭像上的 \"x\" 就可以刪除英雄.<br>\
                             點選英雄頭像可以鎖定英雄，被鎖定的英雄將會出現在所有的計算結果中.<br>\
-                            你可以點選工具欄的篝火圖示計算露營心情，或者點選記事本圖示添加高級選項.<br>",                    
+                            你可以點選工具欄的篝火圖示計算露營心情，或者點選記事本圖示添加高級選項.<br>",
+                  calculate_highest_friendship_help: "Calculate all the combinations that give the selected character the highest friendship;<br>\
+                            Team morale will not be calculated and the morale displayed in the results window will be replaced by the character's friendship (title is morale but please ignore that).<br>\
+                            Advanced settings will be ignored and all the combinations will be generated using your roster, make sure you have at least 4 characters in your roster!",
                   advanced_settings_help:"這裏可以進行高級設定.<br>\
                             <b style=\"color:red\">被鎖定的英雄不受高級設定影響</b><br><br>\
                             你可以選擇任意數量的選項，但是某些選項有特殊的限製.<br>\
@@ -4761,6 +4799,7 @@ icon-bar span img {
                   //Right click menu
                   view_on_e7db: " 前往EpicSevenDB.com檢視英雄詳細信息",
                   view_hero_model: "前往e7herder.com檢視英雄模型",
+                  calculate_highest_friendship: "Calculate Friendship Farming",
                   skills_not_enhanced: "技能已經覺醒但是並未強化",
                   e7api_missing_character: "在 EpicSevenDB 暫時找不到該英雄的信息",
                   e7api_couldnt_connect: "無法連接到 EpicSevenDB",
@@ -4850,7 +4889,10 @@ icon-bar span img {
                   manage_heroes_help:"In this window you can view all the heroes currently in your roster.<br>\
                             You can remove a hero by clicking the \"x\" at the bottom of the hero's portrait.<br>\
                             You can lock a hero by clicking he's portrait, a lock symbol will appear near the portrait. A locked hero will appear in every team in the results page.<br>\
-                            You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.",                    
+                            You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.",   
+                  calculate_highest_friendship_help: "Calculate all the combinations that give the selected character the highest friendship;<br>\
+                            Team morale will not be calculated and the morale displayed in the results window will be replaced by the character's friendship (title is morale but please ignore that).<br>\
+                            Advanced settings will be ignored and all the combinations will be generated using your roster, make sure you have at least 4 characters in your roster!",
                   advanced_settings_help:"Here you can costumize your camp results.<br>\
                             <b style=\"color:red\">Locked heroes are not subject to these restrictions</b><br><br>\
                             You can select as many as you want but keep in mind time size while doing so.<br>\
@@ -4911,6 +4953,7 @@ icon-bar span img {
                   //Right click menu
                   view_on_e7db: "Voir les détails du héro sur EpicSevenDB.com",
                   view_hero_model: "Voir le modèle de héro sur e7herder.com",
+                  calculate_highest_friendship: "Calculate Friendship Farming",
                   skills_not_enhanced: "Les compétences sont éveillées mais pas améliorées",
                   e7api_missing_character: "Impossible de trouver ce héro sur EpicSevenDB",
                   e7api_couldnt_connect: "Impossible de se connecter à EpicSevenDB",
@@ -5012,7 +5055,10 @@ icon-bar span img {
                   manage_heroes_help:"In this window you can view all the heroes currently in your roster.<br>\
                             You can remove a hero by clicking the \"x\" at the bottom of the hero's portrait.<br>\
                             You can lock a hero by clicking he's portrait, a lock symbol will appear near the portrait. A locked hero will appear in every team in the results page.<br>\
-                            You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.",                    
+                            You can calculate all the camping results for the current roster by clicking the bonfire icon in the toolbar or click the book icon to add advance settings.",
+                  calculate_highest_friendship_help: "Calculate all the combinations that give the selected character the highest friendship;<br>\
+                            Team morale will not be calculated and the morale displayed in the results window will be replaced by the character's friendship (title is morale but please ignore that).<br>\
+                            Advanced settings will be ignored and all the combinations will be generated using your roster, make sure you have at least 4 characters in your roster!",
                   advanced_settings_help:"Here you can costumize your camp results.<br>\
                             <b style=\"color:red\">Locked heroes are not subject to these restrictions</b><br><br>\
                             You can select as many as you want but keep in mind time size while doing so.<br>\
@@ -5073,6 +5119,7 @@ icon-bar span img {
                   //Right click menu
                   view_on_e7db: "View hero details on EpicSevenDB.com",
                   view_hero_model: "View hero model on e7herder.com",
+                  calculate_highest_friendship: "Calculate Friendship Farming",
                   skills_not_enhanced: "Skills are awakened but not enhanced",
                   e7api_missing_character: "Couldn't find this character on EpicSevenDB",
                   e7api_couldnt_connect: "Couldn't connect to EpicSevenDB",
