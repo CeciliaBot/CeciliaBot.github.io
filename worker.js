@@ -241,11 +241,11 @@ onmessage = function(e) {
                                                     };
                                                   };
                                                   if (inTop === -1) {
-                                                      e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
+                                                      e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
                                                       e.risultati.splice(e.preferenzeRisultati.n, 1);
                                                   } else if (inTop >= y) {
                                                       e.risultati.splice(inTop, 1);
-                                                      e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c1, team: team} );
+                                                      e.risultati.splice(y, 0,  {morale: punteggio, opzioneMigliore1: key.split("_")[0], opzioneMigliore2: key.split("_")[1], migliorPG1: c1, migliorPG2: c2, team: team} );
                                                   };
                                                   break;
                                               };
