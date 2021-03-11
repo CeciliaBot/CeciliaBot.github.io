@@ -3517,7 +3517,7 @@ icon-bar span img {
           getHeroAssets: function (_id, f) {
             if (this.HeroDB[_id]){
               if (!this.HeroDB[_id].assets) this.HeroDB[_id].assets = {icon: 'https://assets.epicsevendb.com/_source/face/' + this.thisHeroData(_id).id + '_s.png'};
-              if (f === "onerror") this.HeroDB[_id].assets = {icon: 'https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2F' + this.thisHeroData(_id).id + '_s.png'};
+              if (f === "onerror") this.HeroDB[_id].assets = {icon: 'https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2F' + this.thisHeroData(_id).id + '_s.png?v=' + this.VERSION};
               return this.HeroDB[_id].assets;
             } else return {icon: ""};
           },
