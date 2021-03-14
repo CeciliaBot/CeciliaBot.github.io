@@ -215,7 +215,7 @@ onmessage = function(e) {
                                           var c2p = currTopicCombo[key.split("_")[1]][w].punteggio;
                                           var c1data = currTopicCombo[key.split("_")[1]][w];
                                           var c2 = currTopicCombo[key.split("_")[1]][w]._id;
-                                          if (c1==c2 || !currTopicCombo[key.split("_")[1]][w].roster) {// || (e.locked.length === 3 && !e.locked.includes(c1) && !e.locked.includes(c2)) || (e.noDebuffs===true && currTopicCombo[key.split("_")[1]][w].hasDebuffs===true) || (e.noS1debuffs===true && currTopicCombo[key.split("_")[1]][w].hasS1Debuffs === true)) {
+                                          if (!currTopicCombo[key.split("_")[1]][w].roster) {// || (e.locked.length === 3 && !e.locked.includes(c1) && !e.locked.includes(c2)) || (e.noDebuffs===true && currTopicCombo[key.split("_")[1]][w].hasDebuffs===true) || (e.noS1debuffs===true && currTopicCombo[key.split("_")[1]][w].hasS1Debuffs === true)) {
                                               continue;
                                           };
                                           var punteggio = 0;
