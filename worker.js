@@ -208,19 +208,19 @@ onmessage = function(e) {
                                   for (var i = 0; i < currTopicCombo[key.split("_")[0]].length; i++) {
                                       if (!currTopicCombo[key.split("_")[0]][i].roster) {
                                           continue;
-                                      }; //!campList.includes(c2)
+                                      };
                                       var c1p = currTopicCombo[key.split("_")[0]][i].punteggio;
                                       var c1 = currTopicCombo[key.split("_")[0]][i]._id;
                                       for (var w = 0; w < currTopicCombo[key.split("_")[1]].length; w++) {
                                           var c2p = currTopicCombo[key.split("_")[1]][w].punteggio;
                                           var c1data = currTopicCombo[key.split("_")[1]][w];
                                           var c2 = currTopicCombo[key.split("_")[1]][w]._id;
-                                          if (!currTopicCombo[key.split("_")[1]][w].roster) {// || (e.locked.length === 3 && !e.locked.includes(c1) && !e.locked.includes(c2)) || (e.noDebuffs===true && currTopicCombo[key.split("_")[1]][w].hasDebuffs===true) || (e.noS1debuffs===true && currTopicCombo[key.split("_")[1]][w].hasS1Debuffs === true)) {
+                                          if (!currTopicCombo[key.split("_")[1]][w].roster) {
                                               continue;
                                           };
                                           var punteggio = 0;
                                           if (e.locked.includes(c1) || e.locked.includes(c2)) {
-                                            punteggio = e.locked.includes(c1) ? c1p : c2p;
+                                            punteggio = e.locked.includes(c1) ? (e.locked.includes(c2) ? 0 : c1p) : (e.locked.includes(c2) ? c2p : 0);
                                           } else {
                                             punteggio = currTopicCombo.eroi[index].punteggio; 
                                           }
@@ -230,8 +230,9 @@ onmessage = function(e) {
                                                   for (var j=0; j<e.locked.length; j++) {
                                                     if (!team.includes(e.locked[j])) team.push(e.locked[j]);
                                                   };
+                                                  if (punteggio === e.risultati[y].morale && team.length > e.risultati[y].team.length) continue; /* Preoritize smaller teams for more team building flexibility */
                                                   if (checkScDupe(team)) {
-                                                      break; // dupe character detected
+                                                      break; /* dupe character detected */
                                                   };
                                                   var inTop = -1;
                                                   for (var k = 0; k<e.risultati.length;k++) {
@@ -265,8 +266,8 @@ onmessage = function(e) {
                                 };
                                 return postMessage({risultati: e.risultati}); //worker is done
                             }; // end of friendship calc
-                          
-                          
+
+
                             for (var key in topics_results) {
                                 var currTopicCombo = topics_results[key];
                                 for (var i = 0; i < currTopicCombo[key.split("_")[0]].length; i++) {
