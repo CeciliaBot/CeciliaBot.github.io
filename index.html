@@ -2001,6 +2001,10 @@ icon-bar span img {
             <input type="checkbox" id="includi_locked_in_advanced_settings" onclick="app.personalizzaRisultati()">
             <label for="includi_locked_in_advanced_settings">{{strings.includi_locked_in_adv}}</label>
           </span>
+          <span style="width: 95%">
+            <input type="checkbox" id="adv_mute_locked_heroes" onclick="app.personalizzaRisultati()">
+            <label for="adv_mute_locked_heroes">{{strings.adv_mute_locked_heroes}}</label>
+          </span>
         </div>
       </div>
       <input type="checkbox" id="AoE" name="AoE" value="AoE" onclick="app.aggiornaImposatazioniAvanzate()">
@@ -3484,7 +3488,7 @@ icon-bar span img {
               topSavedCampsPage: 1,
               savedCamps: JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}"),
               displaySavedCamps: Object.keys(JSON.parse(localStorage.getItem('savedCamps') ? localStorage.getItem('savedCamps') : "{}")),
-              customizedResuts: {numeroMassimo: true, n: 200, minMorale: false, morale: 0, noImmagini: false},
+              customizedResuts: {numeroMassimo: true, n: 200, minMorale: false, morale: 0, noImmagini: false, advMuteLocked: false},
 	            displayStyle: "grid",
 	            isLoadingResults: false,
               inizializzazione: true, //nascondi tutto durante il caricamento iniziale di vue
@@ -4165,7 +4169,7 @@ icon-bar span img {
             };
           },
           personalizzaRisultati: function () {
-            var risultati = { numeroMassimo: true, n: 200, noImmagini: false, minMorale: false, morale: 0, lockedMatter: false }
+            var risultati = { numeroMassimo: true, n: 200, noImmagini: false, minMorale: false, morale: 0, lockedMatter: false, advMuteLocked: false }
             checkNumeroMassimo = document.getElementById("numeroRisultatiMassimo");
             valoreRisultatiMassimo = document.getElementById("n_risultati");
             checkMoraleMinimo = document.getElementById("moraleMinimo");
@@ -4189,6 +4193,8 @@ icon-bar span img {
             //if (checkImmagini.checked) {
             //  risultati.noImmagini = true;
             //};
+            if (document.getElementById("adv_mute_locked_heroes").checked) risultati.advMuteLocked = true;
+            
             if (!isNaN(parseInt(valoreRisultatiMassimo.value)) && parseInt(valoreRisultatiMassimo.value) > 0 ) {
               risultati.n = parseInt(valoreRisultatiMassimo.value)
               if (parseInt(valoreRisultatiMassimo.value) > 10000) {
@@ -4365,6 +4371,7 @@ icon-bar span img {
                   numero_massimo_risultati: "Numero massimo di risultati (max 10.000)",
                   morale_minimo_risultati: "Morale minimo",
                   includi_locked_in_adv: "Gli eroi bloccati contano al fine del raggiungimento delle condizioni avanzate",
+                  adv_mute_locked_heroes: "Discard team if a topic is held by a locked hero",
                   disabilita_immagini_in_risultati: "Disabilita avatar dei personaggi nei risultati (consigliato se si richiedono tanti risultati)",
                   deve_contenere_AoE: "Team deve contenere AoE",
                   no_s1_debuffs: "No S1 Debuffs (Esclusi: Provoke, Sleep, Stun e Poison)",
@@ -4530,6 +4537,7 @@ icon-bar span img {
                   numero_massimo_risultati: "显示结果数量 (MAX 10.000)",
                   morale_minimo_risultati: "最低心情限制",
                   includi_locked_in_adv: "高级设置包括锁定的英雄",
+                  adv_mute_locked_heroes: "Discard team if a topic is held by a locked hero",
                   disabilita_immagini_in_risultati: "结果页不显示英雄头像 (如果你设定的显示结果数量非常大，关闭英雄头像显示有助于提升性能)",
                   deve_contenere_AoE: "队伍必须包含 AoE",
                   no_s1_debuffs: "S1不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
@@ -4694,6 +4702,7 @@ icon-bar span img {
                   numero_massimo_risultati: "顯示結果數量 (MAX 10.000)",
                   morale_minimo_risultati: "最低心情限制",
                   includi_locked_in_adv: "高級設置包括鎖定的英雄",
+                  adv_mute_locked_heroes: "Discard team if a topic is held by a locked hero",
                   disabilita_immagini_in_risultati: "結果頁不顯示英雄頭像 (如果你設定的顯示結果數量非常大，關閉英雄頭像顯示有助於提升性能)",
                   deve_contenere_AoE: "隊伍必須包含 AoE",
                   no_s1_debuffs: "S1不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
@@ -4858,6 +4867,7 @@ icon-bar span img {
                   numero_massimo_risultati: "Nombre maximum de résultats de camping (MAX 10.000)",
                   morale_minimo_risultati: "Minimum morale",
                   includi_locked_in_adv: "Héros verrouillés inclus dans les paramètres avancés",
+                  adv_mute_locked_heroes: "Discard team if a topic is held by a locked hero",
                   disabilita_immagini_in_risultati: "Désactiver l'avatar du héro dans l'écran des résultats (Améliorer les performances si vous demandez trop de résultats)",
                   deve_contenere_AoE: "L'équipe doit contenir AoE",
                   no_s1_debuffs: "S1 sans Debuff (Sauf: Provoquer, Sommeil, Etourdir et Poison)",
@@ -5013,6 +5023,7 @@ icon-bar span img {
                   numero_massimo_risultati: "Maximum number of camping results (MAX 10.000)",
                   morale_minimo_risultati: "Minimum morale",
                   includi_locked_in_adv: "Locked heroes count towards the fulfillment of the selected advanced settings",
+                  adv_mute_locked_heroes: "Discard team if a topic is held by a locked hero",
                   disabilita_immagini_in_risultati: "Disable character's avatar in results screen (better performance for your browser if you request too many results)",
                   deve_contenere_AoE: "Team must have AoE",
                   no_s1_debuffs: "No S1 Debuffs (Except: Provoke, Sleep, Stun and Poison)",

@@ -4,6 +4,9 @@ To keep a smooth experience for the user HeroDatabase.json is automatically upda
 
 HeroDatabase.json is loaded during website startup with a get request: "https://ceciliabot.github.io/HeroDatabase.json"
 
+# Missing Character Data
+- SC Rima
+
 # Todo:
 
 1. ~~Improve calculation speed~~; (15/06/2020)
@@ -12,4 +15,3 @@ HeroDatabase.json is loaded during website startup with a get request: "https://
 4. ~~Save memory with pagination~~; (18/07/2020) working on "Most popular teams"
 5. Service worker for offline app (PWA)? (maybe)
 6. Most used team sorted by Boss or Difficulty. ()
-

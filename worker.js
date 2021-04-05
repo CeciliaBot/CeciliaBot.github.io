@@ -271,7 +271,7 @@ onmessage = function(e) {
                             for (var key in topics_results) {
                                 var currTopicCombo = topics_results[key];
                                 for (var i = 0; i < currTopicCombo[key.split("_")[0]].length; i++) {
-                                    if (!currTopicCombo[key.split("_")[0]][i].roster) {
+                                    if (!currTopicCombo[key.split("_")[0]][i].roster || (e.preferenzeRisultati.advMuteLocked && e.locked.includes(currTopicCombo[key.split("_")[0]][i]._id)) ) {
                                         continue;
                                     }; //!campList.includes(c2)
                                     var c1p = currTopicCombo[key.split("_")[0]][i].punteggio;
@@ -280,10 +280,9 @@ onmessage = function(e) {
                                         var c2p = currTopicCombo[key.split("_")[1]][w].punteggio;
                                         var c1data = currTopicCombo[key.split("_")[1]][w];
                                         var c2 = currTopicCombo[key.split("_")[1]][w]._id;
-                                        if (!currTopicCombo[key.split("_")[1]][w].roster) {// || (e.locked.length === 3 && !e.locked.includes(c1) && !e.locked.includes(c2)) || (e.noDebuffs===true && currTopicCombo[key.split("_")[1]][w].hasDebuffs===true) || (e.noS1debuffs===true && currTopicCombo[key.split("_")[1]][w].hasS1Debuffs === true)) {
+                                        if (!currTopicCombo[key.split("_")[1]][w].roster || (e.preferenzeRisultati.advMuteLocked && e.locked.includes(c2)) ) {
                                             continue;
                                         };
-                                        
                                         if (c1 === c2) {
                                             for (var i1 = 0; i1 < currTopicCombo.eroi.length; i1++) {
                                                 c2 = currTopicCombo.eroi[i1]._id;
@@ -424,6 +423,9 @@ onmessage = function(e) {
                                     return;
 
                                 let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team);
+                              
+                                if (e.preferenzeRisultati.advMuteLocked && (e.locked.includes(risultatoDiQuestoTeam.migliorPG1) || e.locked.includes(risultatoDiQuestoTeam.migliorPG2)) )
+                                    return;
 
                                 if (e.risultati[e.risultati.length-1].morale >= risultatoDiQuestoTeam.morale || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > risultatoDiQuestoTeam.morale) )
                                     return;
@@ -526,6 +528,9 @@ onmessage = function(e) {
                                     return;
 
                                 let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team);
+                              
+                                if (e.preferenzeRisultati.advMuteLocked && ([].concat(cartesianLocked, e.locked).includes(risultatoDiQuestoTeam.migliorPG1) || [].concat(cartesianLocked, e.locked).includes(risultatoDiQuestoTeam.migliorPG2)) )
+                                    return;
 
                                 if (e.risultati[e.risultati.length-1].morale >= risultatoDiQuestoTeam.morale || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > risultatoDiQuestoTeam.morale) )
                                     return;
