@@ -275,18 +275,18 @@ span.psw {
 
 /* Add Zoom Animation */
 .animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+  animation: animatezoom 0.5s;
+  -webkit-animation: animatezoom 0.5s;
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
 }
 
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -1100,6 +1100,64 @@ icon-bar span img {
   background-color: var(--search-border-color);
   color: #ffffff;
 }
+
+.check {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  color: var(--font-color);
+  user-select: none;
+  margin: 10px 0;
+  padding-left: 1.7em;
+  padding-top: .1em;
+}
+/* Hide the browser's default checkbox */
+.check input[type="checkbox"] {
+  display: none;
+  position: absolute;
+}
+.checkmark {
+  position: absolute;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: -.1em;
+  border: 0.16em solid #555;
+  border-radius: 20%;
+  transition: all ease-out 0.2s;
+  white-space: nowrap;
+}
+/* Change border color when checked */
+.check input:checked ~ .checkmark {
+  border: 0.16em solid var(--icon-bar-active);
+}
+.check input[type="checkbox"]:hover ~ .checkmark {
+  cursor: pointer;
+}
+/* Hide marker
+.checkmark:after {
+} */
+/* Show the checkmark when checked */
+.check input:checked ~ .checkmark:after {
+  opacity: 1;
+  width: 1.1em;
+}
+/* marker style */
+.check .checkmark:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.35em;
+  border-bottom: 0.16em solid var(--icon-bar-active);
+  border-left: 0.16em solid var(--icon-bar-active);
+  top: 25%;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: all ease-out 0.2s;
+}
+
 .wrapper-hero-info {
   height: 100%;
   width: 100%;
@@ -1136,7 +1194,6 @@ icon-bar span img {
   background-position: 0% 0%, 100% 0%;
   background-repeat: no-repeat;
   background-size: 32%;
-
 }
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -1525,7 +1582,7 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
-                <li style="color:##007FFF">
+                <li style="color: #007FFF">
                   <b>19/02/2021</b>: Friendship Farming?<br>
                   If you don't care about morale and you're just friendship farming in labyrinth you can use this new function to quickly find the best companions for your character.<br>
                   Right click a character and select "{{strings.calculate_highest_friendship}}". The results will be displayed in the same tab as normal morale but the numbers displayed under the "{{strings.morale}}" column are the friendship gains for your character not your team's morale.<br>
@@ -1982,39 +2039,62 @@ icon-bar span img {
         <p style="margin: 0; white-space: pre-wrap; font-size: 15px;">{{ strings.warn_tsize_adv_details }}</p>
       </div>
       <h2>{{strings.impostazioni_avanzate}}  <i class="fa fa-question-circle" aria-hidden="true" style="font-size:20px; cursor: pointer;" v-on:click="helpWindow('advanced_window', 'advanced_settings')"></i></h2>
-      <div style="float: right;">
+      <div style="float: right; position: relative; z-index: 1;">
         <button class="search_hero_filter" onclick="document.getElementById('impostazioni_risultati').style.display='block'" style="font-size:16px; width:70px;" name="sort_by"><i class="fa fa-cog" aria-hidden="true"></i></button>
         <div id="impostazioni_risultati" class="dropdown-content" style="right: 32px; z-index: 2;">
           <span>
-            <b class="close" style="font-size:20px" onclick="document.getElementById('impostazioni_risultati').style.display='none'"><br>X</b>
-            <br>
-            <input type="checkbox" id="numeroRisultatiMassimo" name="numeroRisultatiMassimo" onclick="app.personalizzaRisultati()">
-            <label for="numeroRisultatiMassimo">{{strings.numero_massimo_risultati}}</label>
+            <label class="check">
+              <input type="checkbox" id="numeroRisultatiMassimo" name="numeroRisultatiMassimo" onclick="app.personalizzaRisultati()">
+              <span class="checkmark"></span>
+              {{strings.numero_massimo_risultati}}
               <input style="display: inline-block; width: 100px; height: 20px" type="number" min="1" id="n_risultati" onkeyup="app.personalizzaRisultati()" placeholder="default 200" title="Number of results" disabled>
+            </label>
           </span>
           <span>
-            <input type="checkbox" id="moraleMinimo" name="moraleMinimo" value="moraleMinimo" onclick="app.personalizzaRisultati()">
-            <label for="moraleMinimo">{{strings.morale_minimo_risultati}}</label>
+            <label class="check">
+              <input type="checkbox" id="moraleMinimo" name="moraleMinimo" value="moraleMinimo" onclick="app.personalizzaRisultati()">
+              <span class="checkmark"></span>
+              {{strings.morale_minimo_risultati}}
               <input style="display: inline-block; width: 100px; height: 20px" type="number" min="0" max="52" id="n_moraleMinimo" onkeyup="app.personalizzaRisultati()" placeholder="0 - 52" title="Min morale" disabled>
+            </label>
           </span>
-          <span style="width: 95%">
-            <input type="checkbox" id="includi_locked_in_advanced_settings" onclick="app.personalizzaRisultati()">
-            <label for="includi_locked_in_advanced_settings">{{strings.includi_locked_in_adv}}</label>
+          <span>
+            <label class="check" style="width: 95%">
+              <input type="checkbox" id="includi_locked_in_advanced_settings" onclick="app.personalizzaRisultati()">
+              <span class="checkmark"></span>
+              {{strings.includi_locked_in_adv}}
+            </label>
           </span>
-          <span style="width: 95%">
-            <input type="checkbox" id="adv_mute_locked_heroes" onclick="app.personalizzaRisultati()">
-            <label for="adv_mute_locked_heroes">{{strings.adv_mute_locked_heroes}}</label>
+          <span>
+            <label class="check" style="width: 95%">
+              <input type="checkbox" id="adv_mute_locked_heroes" onclick="app.personalizzaRisultati()">
+              <span class="checkmark"></span>
+              {{strings.adv_mute_locked_heroes}}
+            </label>
           </span>
+          <b class="close" style="right: 10px;" onclick="document.getElementById('impostazioni_risultati').style.display='none'">×</b>
         </div>
       </div>
-      <input type="checkbox" id="AoE" name="AoE" value="AoE" onclick="app.aggiornaImposatazioniAvanzate()">
-      <label for="AoE">{{strings.deve_contenere_AoE}}</label><br>
-      <input type="checkbox" id="noS1debuffs" name="noS1debuffs" value="noS1debuffs" onclick="app.aggiornaImposatazioniAvanzate()">
-      <label for="noS1debuffs">{{strings.no_s1_debuffs}}</label><br>
-      <input type="checkbox" id="noDebuffs" name="noDebuffs" value="noDebuffs" onclick="app.aggiornaImposatazioniAvanzate()">
-      <label for="noDebuffs">{{strings.no_debuffs}}</label><br>
-      <input type="checkbox" id="mustIncludeDispel" name="mustIncludeDispel" value="mustIncludeDispel" onclick="app.aggiornaImposatazioniAvanzate()">
-      <label for="mustIncludeDispel">{{strings.must_include_dispel}}</label><br><br>
+      <label class="check">
+        <input type="checkbox" id="AoE" name="AoE" value="AoE" onclick="app.aggiornaImposatazioniAvanzate()">
+        <span class="checkmark"></span>
+        {{strings.deve_contenere_AoE}}
+      </label>
+      <label class="check">
+        <input type="checkbox" id="noS1debuffs" name="noS1debuffs" value="noS1debuffs" onclick="app.aggiornaImposatazioniAvanzate()">
+        <span class="checkmark"></span>
+        {{strings.no_s1_debuffs}}
+      </label>
+      <label class="check">
+        <input type="checkbox" id="noDebuffs" name="noDebuffs" value="noDebuffs" onclick="app.aggiornaImposatazioniAvanzate()">
+        <span class="checkmark"></span>
+        {{strings.no_debuffs}}
+      </label>
+      <label class="check">
+        <input type="checkbox" id="mustIncludeDispel" name="mustIncludeDispel" value="mustIncludeDispel" onclick="app.aggiornaImposatazioniAvanzate()">
+        <span class="checkmark"></span>
+        {{strings.must_include_dispel}}
+      </label>
       <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
         <center>{{strings.classe}}:</center>
           <div class="adv_settings_elem" v-for="(value,key) in {
@@ -3447,7 +3527,8 @@ icon-bar span img {
                 "stic_reflect": {"name": "Reflect", "id": 13},
                 "stic_counter": {"name": "Counter", "id": 7}
               },
-              debuffList: {"stic_def_dn": {"name": "Def down", "id": 18},
+              debuffList: {
+                "stic_def_dn": {"name": "Def down", "id": 18},
                 "stic_speed_dn": {"name": "Speed down", "id": 19},
                 "stic_att_dn": {"name": "Attack down", "id": 17},
                 "stic_blind": {"name": "Blind", "id": 22},
@@ -3495,7 +3576,7 @@ icon-bar span img {
               numeroCombinazioniPossibili: "/",
               lingua: "en", // Just a placeholder during boot, language is set at line 1701 and 1705
               lockType: 1,
-              translatedName:{}
+              translatedName: {}
             };
         },
         methods: {
@@ -3678,10 +3759,10 @@ icon-bar span img {
 
               /*console.log({windowWidth: windowWidth, windowHeight: windowHeight, clickCoordsX: clickCoordsX, clickCoordsY: clickCoordsY, transformX: transformX+"%", transformY: transformY+"%"})*/
               $( "#app" ).append(`
-              <div id="debugHeroInfo" class="dropdown-content" style="z-index: 70; display: inline-block; max-height: 480px; top: `+ clickCoordsY +`px; left: `+clickCoordsX+`px; width: ` + menuWidth + `px; transform: translate(-`+transformX+`%, -`+transformY+`%); border-top: thick solid var(--icon-bar-active); box-sizing: border-box;">
-                <span style="width: 100%; font-size: 24px; text-align: center;"><b>` + this.thisHeroTranslatedName(hero._id) + `</b><b class="close" style="float: right; cursor: pointer; font-size: 30px; margin-right: -10px;" onclick="$('#debugHeroInfo').remove()">x</b></span>
-                <a href="` + e7dbLink + `" target="_blank">` + this.strings.view_on_e7db + `</a>
-                <a href="https://e7herder.com/tools/model-viewer#type=5,id=` + hero.id + `" target="_blank">` + this.strings.view_hero_model + `</a>
+              <div id="debugHeroInfo" class="dropdown-content" style="z-index: 70; display: inline-block; max-height: 480px; top: ${clickCoordsY}px; left: ${clickCoordsX}px; width: ${menuWidth}px; transform: translate(-${transformX}%, -${transformY}%); border-top: thick solid var(--icon-bar-active); box-sizing: border-box;">
+                <span style="width: 100%; font-size: 24px; text-align: center;"><b>${this.thisHeroTranslatedName(hero._id)}</b><b class="close" style="float: right; cursor: pointer; font-size: 30px; margin-right: -10px;" onclick="$('#debugHeroInfo').remove()">x</b></span>
+                <a href="${e7dbLink}" target="_blank">${this.strings.view_on_e7db}</a>
+                <a href="https://e7herder.com/tools/model-viewer#type=5,id=${hero.id}" target="_blank">${this.strings.view_hero_model}</a>
                 <a onclick="
                   if (window.event.target.nodeName=='I') return;
                   app.risultati = [];
@@ -3690,7 +3771,7 @@ icon-bar span img {
                   $('#debugHeroInfo').remove(); 
                   app.isLoadingResults=true; 
                   camperino.postMessage({type: 'friendship', HeroDB: app.HeroDB, myHeroesList: app.myHeroesList, campList: Object.keys(app.myHeroesList), locked: ['${key}'], classe: [], elemento: [], debuffs: [], buffs: [], AoE: false, noS1debuffs: false, noDebuffs: false, mustIncludeDispel: false, cartesianLock: [[],[],[],[]], preferenzeRisultati: app.customizedResuts, risultati: []});
-                ">` + this.strings.calculate_highest_friendship + `<i onclick="app.helpWindow('app','friendship-farming'); tastoDestro = 0;  $('#debugHeroInfo').remove(); " class="fa fa-question-circle"></i></a>
+                ">${this.strings.calculate_highest_friendship}<i style="float: right;" title="Help" onclick="app.helpWindow('app','friendship-farming'); tastoDestro = 0;  $('#debugHeroInfo').remove(); " class="fa fa-question-circle"></i></a>
                 <span id="heroDetailsRight" style="width: 100% !important; padding: 0; overflow: scroll; position: relative; min-height: 50px;">
                   <i class="fa  fa-circle-notch fa-spin" style="font-size: 40px; position: absolute; top 40%; left: 40%;"></i>
                 </span>
@@ -3701,6 +3782,7 @@ icon-bar span img {
                 type: 'GET',
                 contentType: 'application/json',
                 success: function (response) {
+                  if (tastoDestro === 0) return;
                   if (document.getElementById("debugHeroInfo") === null ) return; // right click has been removed
                   var skills = response.results[0].skills;
 
@@ -3718,21 +3800,22 @@ icon-bar span img {
                   document.getElementById("heroDetailsRight").innerHTML = "";
 
                   $( "#heroDetailsRight" ).append(
-                    `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'inline-block'; menu[1].style.display = 'none'; menu[2].style.display = 'none';" style="background-image: url(` + skills[0].assets.icon + `);" class="rightClickIconMenu"></span>` + 
-                    `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'none'; menu[1].style.display = 'inline-block'; menu[2].style.display = 'none';" style="background-image: url(` + skills[1].assets.icon + `);" class="rightClickIconMenu"></span>` + 
-                    (skills[2] ? `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'none'; menu[1].style.display = 'none'; menu[2].style.display = 'inline-block';" style="background-image: url(` + skills[2].assets.icon + `);" class="rightClickIconMenu"></span>` : "<span></span>") +
+                    `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'inline-block'; menu[1].style.display = 'none'; menu[2].style.display = 'none';" style="background-image: url(${skills[0].assets.icon});" class="rightClickIconMenu"></span>` + 
+                    `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'none'; menu[1].style.display = 'inline-block'; menu[2].style.display = 'none';" style="background-image: url(${skills[1].assets.icon});" class="rightClickIconMenu"></span>` + 
+                    (skills[2] ? `<span onclick="var menu = this.parentNode.children[3].childNodes; menu[0].style.display = 'none'; menu[1].style.display = 'none'; menu[2].style.display = 'inline-block';" style="background-image: url(${skills[2].assets.icon});" class="rightClickIconMenu"></span>` : "<span></span>") +
                     `<div style="padding: 0 16px 12px 16px; margin-top: -4px; background-color: var(--bg-color); max-height: 269px; overflow: scroll; overscroll-behavior: contain; box-sizing: border-box;">` +
-                      `<div style="display: inline-block;"><p style="text-align: center"><b>` + skills[0].name + `</b></p><p>` + (skills[0].enhanced_description || skills[0].description) + `</p><p>` + (skills[0].soul_description ? "Soulburn:<br>" + skills[0].soul_description : "") + `</p></div>` +
-                      `<div style="display: none;"><p style="text-align: center"><b>` + skills[1].name + `</b></p><p>` + (skills[1].enhanced_description || skills[1].description) + `</p><p>` + (skills[1].soul_description ? "Soulburn:<br>" + skills[1].soul_description : "") + `</p></div>` +
+                      `<div style="display: inline-block;"><p style="text-align: center"><b>${skills[0].name}</b></p><p>${(skills[0].enhanced_description || skills[0].description).replace(/\n/g,'<br>')}</p><p>${skills[0].soul_description ? "Soulburn:<br>" + skills[0].soul_description : ""}</p></div>` +
+                      `<div style="display: none;"><p style="text-align: center"><b>${skills[1].name}</b></p><p>${(skills[1].enhanced_description || skills[1].description).replace(/\n/g,'<br>')}</p><p>${skills[1].soul_description ? "Soulburn:<br>" + skills[1].soul_description : ""}</p></div>` +
                       (skills[2] ? 
-                          `<div style="display: none;"><p style="text-align: center"><b>` + skills[2].name + `</b></p><p>` + (skills[2].enhanced_description || skills[2].description) + `</p><p>` + (skills[2].soul_description ? "Soulburn:<br>" + skills[2].soul_description : "")
-                           + `</p></div>` : "<div></div>"
+                          `<div style="display: none;"><p style="text-align: center"><b>${skills[2].name}</b></p><p>${(skills[2].enhanced_description || skills[2].description).replace(/\n/g,'<br>')}</p><p>${skills[2].soul_description ? "Soulburn:<br>" + skills[2].soul_description : ""}</p></div>` 
+                          : "<div></div>"
                       ) +
-                    `<p style="text-align: end; margin-bottom: 0;"><i>` + self.strings.skills_not_enhanced + `</i></p>
-                    </div>`
+                      `<p style="text-align: end; margin-bottom: 0;"><i>${self.strings.skills_not_enhanced}</i></p>` +
+                    `</div>`
                   );
                 },
                 error: function (err) {
+                  if (tastoDestro === 0) return;
                   console.log(err)
                   let error = "";
                   if (err.responseJSON) error = self.strings.e7api_missing_character; //"Couldn't find this character on EpicSevenDB";
@@ -3753,7 +3836,7 @@ icon-bar span img {
                   <form class="modal-content  modal-small modal-three-parts animate" id="menu_lingua">
                     <div>
                       <div class="modal-title">
-                        ` + this.strings.language + `
+                        ${this.strings.language}
                       </div>
                     </div>
                     <div>
@@ -3773,7 +3856,7 @@ icon-bar span img {
                       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" width="105" height="70"  onclick="app.cambiaLingua('th')">
                     </div>
                     <div>
-                      <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="modal-button">` + this.strings.back_btn + `</button>
+                      <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="modal-button">${this.strings.back_btn}</button>
                     </div>
                   </form>
                 </div>
