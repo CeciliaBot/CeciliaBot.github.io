@@ -2095,6 +2095,11 @@ icon-bar span img {
         <span class="checkmark"></span>
         {{strings.must_include_dispel}}
       </label>
+      <label class="check" style="display: none;">
+        <input type="checkbox" id="mustIncludeCleanser" name="mustIncludeCleanser" value="mustIncludeCleanser" onclick="app.aggiornaImposatazioniAvanzate()">
+        <span class="checkmark"></span>
+        {{strings.must_include_cleanser || 'missing(strings.must_include_cleanser)'}}
+      </label>
       <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
         <center>{{strings.classe}}:</center>
           <div class="adv_settings_elem" v-for="(value,key) in {
@@ -3561,6 +3566,7 @@ icon-bar span img {
               noS1debuffs: false,
               noDebuffs:  false,
               mustIncludeDispel: false,
+              mustIncludeCleanser: false,
               cartesian_lock: [[],[],[],[]],
               isSelectingCartesian: false,
               risultati: [],
@@ -3830,34 +3836,58 @@ icon-bar span img {
             }, 10);
           },
           menuLingua: function () {
+            var langs = [
+              {code: 'en', name: 'English', flag: ['https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_the_United_States_%28Pantone%29.svg','https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/320px-Flag_of_the_United_Kingdom.svg.png']},
+              {code: 'kr', name: '한국어', flag: ['https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/320px-Flag_of_South_Korea.svg.png']},
+              {code: 'cn', name: '汉语', flag: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/320px-Flag_of_the_People%27s_Republic_of_China.svg.png']},
+              {code: 'zht', name: '漢語', flag: ['https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/320px-Flag_of_the_Republic_of_China.svg.png']},
+              {code: 'jp', name: '日本語', flag: ['https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/320px-Flag_of_Japan.svg.png']},
+              {code: 'it', name: 'Italiano', flag: ['https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/320px-Flag_of_Italy.svg.png']},
+              {code: 'fr', name: 'Français', flag: ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/1024px-Flag_of_Canada.svg.png','https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png']},
+              {code: 'es', name: 'Español', flag: ['https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg','https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/320px-Flag_of_Spain.svg.png']},
+              {code: 'pt', name: 'Português', flag: ['https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg','https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/320px-Flag_of_Portugal.svg.png']},
+              {code: 'de', name: 'Deutsch', flag: ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/320px-Flag_of_Germany.svg.png']},
+              {code: 'th', name: 'ภาษาไทย', flag: ['https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg']}
+            ];
+            var selection = "";
+            for (var i = 0; i < langs.length; i++) {
+              selection += 
+              `<tr onclick="app.cambiaLingua('${langs[i].code}')" style="cursor: pointer; height: 70px; line-height: 100%;">
+                <td style="width: 60%;">
+                  <label class="check" style="display: inline-block; font-size: 30px; display: inline-block;">
+                    <input type="checkbox" ${langs[i].code === this.lingua ? 'checked' : null}>
+                    <span class="checkmark" style="border-radius: 100%;"></span>
+                    ${langs[i].name}
+                  </label>
+                </td>
+                <td style="width: 40%; text-align: end; white-space: nowrap;">
+                  ${langs[i].flag.map(flag => {return `<img src="${flag}" height="50px" width="75px" style="margin-right: 10px;" style="border-radius: 16px;">`} ).join("")}
+                </td>
+                <td style="width: 10%; display: none;">
+                  <label class="check" style="display: inline-block; font-size: 30px; display: inline; height: 100%; margin: 0; padding-left: 0;">
+                    <input type="checkbox" ${langs[i].code === this.lingua ? 'checked' : ''}>
+                    <span class="checkmark" style="border-radius: 100%;"></span>
+                  </label>
+                </td>
+              </tr>`
+            };
             $( "#settings_window" ).append(`
               <div id="menu_lingua">
                 <div class="modal" style="display:block;">
-                  <form class="modal-content  modal-small modal-three-parts animate" id="menu_lingua">
-                    <div>
+                  <form class="modal-content  modal-small animate" style="max-width: 600px; padding: 0;" id="menu_lingua">
+                    <!--<div style="display: none;">
                       <div class="modal-title">
                         ${this.strings.language}
                       </div>
+                    </div>-->
+                    <div style="text-align: initial; font-size: 30px; margin: 10px;">
+                      <table style="width: 100%;">
+                        ${selection}
+                      </table>
                     </div>
-                    <div>
-                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png" width="105" height="70" onclick="app.cambiaLingua('en')">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1200px-Flag_of_South_Korea.svg.png" width="105" height="70"  onclick="app.cambiaLingua('kr')">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('cn')">
-                      <br><br>
-                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" width="105" height="70"  onclick="app.cambiaLingua('jp')">
-                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png" width="105" height="70"  onclick="app.cambiaLingua('it')">
-                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" width="105" height="70"  onclick="app.cambiaLingua('fr')">
-                      <br><br>
-                      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png" width="105" height="70"  onclick="app.cambiaLingua('es')">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png" width="105" height="70"  onclick="app.cambiaLingua('pt')">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="105" height="70"  onclick="app.cambiaLingua('de')">
-                      <br><br>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1000px-Flag_of_the_Republic_of_China.svg.png" width="105" height="70"  onclick="app.cambiaLingua('zht')">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" width="105" height="70"  onclick="app.cambiaLingua('th')">
-                    </div>
-                    <div>
+                    <!--<div style="display: none;">
                       <button type="button" onclick="$('#menu_lingua').remove(); $('body').removeClass('modal-open')" class="modal-button">${this.strings.back_btn}</button>
-                    </div>
+                    </div>-->
                   </form>
                 </div>
               </div>`
@@ -4138,7 +4168,7 @@ icon-bar span img {
           },
           helpWindow: function (sezione, argomento) {
             var titolo, contenuto;
-            switch (argomento) { //HTML code is allowed
+            switch (argomento) {
               case 'add_heroes_help':
                 titolo = self.strings.aggiungi;
                 contenuto = self.strings.add_heroes_help;
@@ -4285,7 +4315,7 @@ icon-bar span img {
                 valoreRisultatiMassimo.value = 10000;
               }
             } else {
-              risultati.n = 200
+              risultati.n = 200;
             };
 
             if (!isNaN(parseInt(valoreMoraleMinimo.value)) && parseInt(valoreMoraleMinimo.value) <= 52 ) {
@@ -4361,6 +4391,11 @@ icon-bar span img {
                 {
                   this.mustIncludeDispel = true;
                 } else this.mustIncludeDispel = false;
+
+                if (document.getElementById("mustIncludeCleanser").checked)
+                {
+                  this.mustIncludeCleanser = true;
+                } else this.mustIncludeCleanser = false;
             },
             impostaLingua: function () {
               var lingua = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : '{"lingua":"*"}').lingua;
@@ -4460,6 +4495,7 @@ icon-bar span img {
                   no_s1_debuffs: "No S1 Debuffs (Esclusi: Provoke, Sleep, Stun e Poison)",
                   no_debuffs: "No Debuffs (Esclusi: Provoke, Sleep, Stun e Poison)",
                   must_include_dispel: "Team deve contenere dispel (Rimuovi o riduci la durata dei buff dal nemico)",
+                  must_include_cleanser: "Team deve contenere cleanser (Rimuovi o riduci la durata dei debuff)",
                   classe: "Classe",
                   attribute: "Attributo",
                   rarity: "Rarità",
@@ -4626,6 +4662,7 @@ icon-bar span img {
                   no_s1_debuffs: "S1不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
                   no_debuffs: "技能不带Debuff (挑衅, 睡眠, 晕眩 和中毒除外)",
                   must_include_dispel: "队伍必须包含驱散角色",
+                  must_include_cleanser: "Team must include cleanser (remove or reduce the duration of debuffs on your allies)",
                   classe: "职业",
                   attribute: "属性",
                   rarity: "稀有度",
@@ -4791,6 +4828,7 @@ icon-bar span img {
                   no_s1_debuffs: "S1不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
                   no_debuffs: "技能不帶Debuff (挑釁, 睡眠，暈眩 和中毒除外)",
                   must_include_dispel: "隊伍必須包含驅散角色",
+                  must_include_cleanser: "Team must include cleanser (remove or reduce the duration of debuffs on your allies)",
                   classe: "職階",
                   attribute: "屬性",
                   rarity: "稀有度",
@@ -4956,6 +4994,7 @@ icon-bar span img {
                   no_s1_debuffs: "S1 sans Debuff (Sauf: Provoquer, Sommeil, Etourdir et Poison)",
                   no_debuffs: "Non Debuff (Sauf: Provoquer, Sommeil, Etourdir et Poison)",
                   must_include_dispel: "L'équipe doit contenir stripper",
+                  must_include_cleanser: "Team must include cleanser (remove or reduce the duration of debuffs on your allies)",
                   classe: "Classe",
                   attribute: "Attribut",
                   rarity: "Rareté",
@@ -5112,6 +5151,7 @@ icon-bar span img {
                   no_s1_debuffs: "No S1 Debuffs (Except: Provoke, Sleep, Stun and Poison)",
                   no_debuffs: "No Debuffs (Except: Provoke, Sleep, Stun and Poison)",
                   must_include_dispel: "Team must include dispel (remove enemy's buffs or reduce their duration)",
+                  must_include_cleanser: "Team must include cleanser (remove or reduce the duration of debuffs on your allies)",
                   classe: "Class",
                   attribute: "Attribute",
                   rarity: "Rarity",
@@ -6377,9 +6417,7 @@ icon-bar span img {
               self.translatedName[item._id] = item.name;
             });
             let missing = {
-              "dark-tyrant-tenebria": {cn: "残月的暴君泰妮布里雅", zht: "殘月的暴君泰妮布里雅", fr: "Tenebria tyran de l'astre violine"},
-              "fairytale-tenebria": {jp: "メルヘン テネブレア", cn: "童话泰妮布里雅", zht: "童話泰妮布里雅", kr: "메르헨 테네브리아", fr: "Tenebria des merveilles", es: "Tenebria fantasia", pt: "Tenébria das Fábulas", de: "Märchenhafte Tenebria"},
-              "mort": {cn: "魔勒", zht: "魔勒", kr: "모르트", fr: "Morté", es: "Mort", pt: "Mort", de: "Mort"}
+              "dark-tyrant-tenebria": {cn: "残月的暴君泰妮布里雅", zht: "殘月的暴君泰妮布里雅", fr: "Tenebria tyran de l'astre violine"}
             };
             for (var id in missing) {
               if (missing[id][this.lingua]) self.translatedName[id] = missing[id][this.lingua];
@@ -6438,7 +6476,7 @@ icon-bar span img {
                   };
               };
               try {
-                camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, mustIncludeDispel: this.mustIncludeDispel, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
+                camperino.postMessage({HeroDB: this.HeroDB, myHeroesList: this.myHeroesList, campList: campList, locked: this.locked, classe: this.classe, elemento: this.elemento, debuffs: this.debuffs, buffs: this.buffs, AoE: this.AoE, noS1debuffs: this.noS1debuffs, noDebuffs: this.noDebuffs, mustIncludeDispel: this.mustIncludeDispel, mustIncludeCleanser: this.mustIncludeCleanser, cartesianLock: this.cartesian_lock, preferenzeRisultati: this.customizedResuts, risultati: []});
                 this.numeroCombinazioniPossibili = Combinatorics.bigCombination(campList,4-this.locked.length).length;
               } catch (err) {
                 this.isLoadingResults = false; // remove angelica loading
@@ -6510,7 +6548,7 @@ function debounce(func, wait, immediate) {
   };
   camperino.onerror = function(err) {
     console.log(err)
-    snackbarMessage(`Camping fatal error. Please refresh this page.`)
+    snackbarMessage(`worker.js unknown error. Please retry or refresh this page.`)
     app.isLoadingResults = false;
   };
   function restartCamperino() { // abort calculation function

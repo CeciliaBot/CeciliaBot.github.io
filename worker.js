@@ -19,7 +19,8 @@ var scHeroes = {
                 "ras": "adventurer-ras",
                 "pearlhorizon": "doll-maker-pearlhorizon",
                 "doris": "magic-scholar-doris",
-                "carmainerose": "zealot-carmainerose"
+                "carmainerose": "zealot-carmainerose",
+                "rima": "muse-rima"
                };
 
 if (!Array.prototype.flat) {
@@ -105,52 +106,41 @@ onmessage = function(e) {
          var isCartesian = e.cartesianLock.flat().length>0 ? true : false;
          console.log("Is cartesian product? " + isCartesian)
 
-         const nuovoCampSimulatorTeam2 = function(inputTeam) {
-              let pg1 = inputTeam[0];
-              let pg2 = inputTeam[1];
-              let pg3 = inputTeam[2];
-              let pg4 = inputTeam[3];
+            const nuovoCampSimulatorTeam2 = function(inputTeam, locked = [], opts = {}) {
+                var tabConTagNome = [];
+                for (var i=0; i<inputTeam.length;  i++) {
+                    var pg = inputTeam[i];
+                    if (!HeroDB[pg].camping.topics) continue;
+                    if ( opts.advMuteLocked && locked.includes(pg) ) continue;
+                    for (var j=0; j<HeroDB[pg].camping.topics.length; j++) {
+                        var obj = {personaggio: pg, opzione: HeroDB[pg].camping.topics[j], risultato: 0};
+                        for (var k=0;k<inputTeam.length;k++) {
+                            if (i===k) continue;
+                            obj.risultato += HeroDB[inputTeam[k]].camping.values[obj.opzione];
+                        };
+                        tabConTagNome.push(obj);
+                    };
+                };
+                if (tabConTagNome.length===0) return null;
 
-              var tabConTagNome = [
-                    {personaggio: HeroDB[pg1]._id, opzione: HeroDB[pg1].camping.topics[0],risultato: HeroDB[pg2].camping.values[HeroDB[pg1].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg1]. camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg1].camping.topics[0]]},
-                    {personaggio: HeroDB[pg1]._id, opzione: HeroDB[pg1].camping.topics[1],risultato: HeroDB[pg2].camping.values[HeroDB[pg1].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg1].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg1].camping.topics[1]]},
-                    {personaggio: HeroDB[pg2]._id, opzione: HeroDB[pg2].camping.topics[0],risultato: HeroDB[pg1].camping.values[HeroDB[pg2].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg2].camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg2].camping.topics[0]]},
-                    {personaggio: HeroDB[pg2]._id, opzione: HeroDB[pg2].camping.topics[1],risultato: HeroDB[pg1].camping.values[HeroDB[pg2].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg2].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg2].camping.topics[1]]},
-                    {personaggio: HeroDB[pg3]._id, opzione: HeroDB[pg3].camping.topics[0],risultato: HeroDB[pg1].camping.values[HeroDB[pg3].camping.topics[0]]+HeroDB[pg2].camping.values[HeroDB[pg3].camping.topics[0]]+HeroDB[pg4].camping.values[HeroDB[pg3].camping.topics[0]]},
-                    {personaggio: HeroDB[pg3]._id, opzione: HeroDB[pg3].camping.topics[1],risultato: HeroDB[pg1].camping.values[HeroDB[pg3].camping.topics[1]]+HeroDB[pg2].camping.values[HeroDB[pg3].camping.topics[1]]+HeroDB[pg4].camping.values[HeroDB[pg3].camping.topics[1]]},
-                    {personaggio: HeroDB[pg4]._id, opzione: HeroDB[pg4].camping.topics[0],risultato: HeroDB[pg1].camping.values[HeroDB[pg4].camping.topics[0]]+HeroDB[pg2].camping.values[HeroDB[pg4].camping.topics[0]]+HeroDB[pg3].camping.values[HeroDB[pg4].camping.topics[0]]},
-                    {personaggio: HeroDB[pg4]._id, opzione: HeroDB[pg4].camping.topics[1],risultato: HeroDB[pg1].camping.values[HeroDB[pg4].camping.topics[1]]+HeroDB[pg2].camping.values[HeroDB[pg4].camping.topics[1]]+HeroDB[pg3].camping.values[HeroDB[pg4].camping.topics[1]]}
-              ];
+                tabConTagNome.sort(function(a, b) {
+                    return ((a.risultato > b.risultato) ? -1 : ((a.risultato == b.risultato) ? 0 : 1));
+                });
 
+                while (tabConTagNome[0].opzione === tabConTagNome[1].opzione) {
+                    tabConTagNome.splice(1, 1);
+                };
 
-              //Ordina per risultato
-              tabConTagNome.sort(function(a, b) {
-                  return ((a.risultato > b.risultato) ? -1 : ((a.risultato == b.risultato) ? 0 : 1));
-              });   
-
-               while (tabConTagNome[0].opzione === tabConTagNome[1].opzione) {
-                  tabConTagNome.splice(1, 1);
-               };
-                var campMiglioreRisultato1 = tabConTagNome[0].risultato;
-                var campNomeMigliorScelta1 = tabConTagNome[0].opzione;
-                var campMigliorePG1 = tabConTagNome[0].personaggio;
-
-                var campMiglioreRisultato2 = tabConTagNome[1].risultato;
-                var campNomeMigliorScelta2 = tabConTagNome[1].opzione;
-                var campMigliorePG2 = tabConTagNome[1].personaggio;
-
-                 var moraleTotaleGuadagnato = campMiglioreRisultato1 + campMiglioreRisultato2;
-
-              let soluzioni = {}; 
-                  soluzioni.morale = moraleTotaleGuadagnato;
-                  soluzioni.opzioneMigliore1 = campNomeMigliorScelta1;
-                  soluzioni.risultatoScelta1 = campMiglioreRisultato1;
-                  soluzioni.opzioneMigliore2 = campNomeMigliorScelta2;
-                  soluzioni.risultatoScelta2 = campMiglioreRisultato2;
-                  soluzioni.migliorPG1 = campMigliorePG1;
-                  soluzioni.migliorPG2 = campMigliorePG2;
-                  soluzioni.team = [HeroDB[pg1]._id,HeroDB[pg2]._id,HeroDB[pg3]._id,HeroDB[pg4]._id];
-              return soluzioni;
+                return {
+                    morale: tabConTagNome[0].risultato + tabConTagNome[1].risultato,
+                    opzioneMigliore1: tabConTagNome[0].opzione,
+                    risultatoScelta1: tabConTagNome[0].risultato,
+                    opzioneMigliore2: tabConTagNome[1].opzione,
+                    risultatoScelta2: tabConTagNome[1].risultato,
+                    migliorPG1: tabConTagNome[0].personaggio,
+                    migliorPG2: tabConTagNome[1].personaggio,
+                    team: inputTeam
+                };
             };
 
                 // both sc and normal hero are locked: throw error
@@ -162,7 +152,7 @@ onmessage = function(e) {
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate
                         var useExperimental = true; // set to false if the new loop is not working correctly
-                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel || e.preferenzeRisultati.n > 2000) hasAdvSettings = true;
+                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel || e.mustIncludeCleanser || e.preferenzeRisultati.n > 2000) hasAdvSettings = true;
                         if (e.type == "friendship") hasAdvSettings = false;
                         if (useExperimental && hasAdvSettings === false && e.locked.length <= 1) { // use only with no advanced settings
                             if (Object.keys(topics_results).length === 0) { // create topics combos (once for page visit)
@@ -423,9 +413,12 @@ onmessage = function(e) {
                                 if (e.mustIncludeDispel && !dispelHeroes.some(i => elementoFiltro.includes(i)))
                                     return;
 
-                                let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team);
+                                if (e.mustIncludeCleanser && !cleanserHeroes.some(i => elementoFiltro.includes(i)))
+                                    return;
+
+                                let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team, e.locked, e.preferenzeRisultati);
                               
-                                if (e.preferenzeRisultati.advMuteLocked && (e.locked.includes(risultatoDiQuestoTeam.migliorPG1) || e.locked.includes(risultatoDiQuestoTeam.migliorPG2)) )
+                                if (!risultatoDiQuestoTeam)
                                     return;
 
                                 if (e.risultati[e.risultati.length-1].morale >= risultatoDiQuestoTeam.morale || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > risultatoDiQuestoTeam.morale) )
@@ -528,9 +521,12 @@ onmessage = function(e) {
                                 if (e.mustIncludeDispel && !dispelHeroes.some(i => elementoFiltro.includes(i)))
                                     return;
 
-                                let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team);
+                                if (e.mustIncludeCleanser && !cleanserHeroes.some(i => elementoFiltro.includes(i)))
+                                    return;
+
+                                let risultatoDiQuestoTeam = nuovoCampSimulatorTeam2(team, [].concat(cartesianLocked, e.locked), e.preferenzeRisultati);
                               
-                                if (e.preferenzeRisultati.advMuteLocked && ([].concat(cartesianLocked, e.locked).includes(risultatoDiQuestoTeam.migliorPG1) || [].concat(cartesianLocked, e.locked).includes(risultatoDiQuestoTeam.migliorPG2)) )
+                                if (!risultatoDiQuestoTeam)
                                     return;
 
                                 if (e.risultati[e.risultati.length-1].morale >= risultatoDiQuestoTeam.morale || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > risultatoDiQuestoTeam.morale) )
