@@ -262,7 +262,7 @@ span.psw {
   position: absolute;
   right: 25px;
   top: 0;
-  /*color: #000;*/
+  color: var(--font-color);
   font-size: 35px;
   font-weight: bold;
 }
@@ -308,6 +308,15 @@ div.toolbar {
   border: 3px solid #73AD21;
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .heroImgList {
   position: relative;
   padding: 12px;
@@ -320,12 +329,6 @@ div.toolbar {
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
   -o-transition: all .2s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .imgResults {
   padding: 0 !important;
@@ -473,12 +476,6 @@ div.toolbar {
   text-align: center;
   position: relative;
   box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .class-quantity-container {
@@ -780,12 +777,6 @@ icon-bar span img {
   position: relative;
   margin: auto;
   cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   align-items: center;
   flex-direction: column;
 }
@@ -2102,7 +2093,7 @@ icon-bar span img {
       </label>
       <div id="advanced_classe" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
         <center>{{strings.classe}}:</center>
-          <div class="adv_settings_elem" v-for="(value,key) in {
+          <div class="adv_settings_elem noselect" v-for="(value,key) in {
                     knight: {string: strings['knight'], icon: 'cm_icon_role_knight'}, 
                     assassin: {string: strings['thief'], icon: 'cm_icon_role_thief'}, 
                     warrior: {string: strings['warrior'], icon: 'cm_icon_role_warrior'}, 
@@ -2130,19 +2121,19 @@ icon-bar span img {
       <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
         <center>{{strings.elemento}}:</center>
           <input type="checkbox" id="checkbox_fire" name="elemento" value="fire" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_fire" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.fire}}</p></label>
+          <label for="checkbox_fire" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.fire}}</p></label>
 
           <input type="checkbox" id="checkbox_ice" name="elemento" value="ice" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_ice" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.ice}}</p></label>
+          <label for="checkbox_ice" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.ice}}</p></label>
 
           <input type="checkbox" id="checkbox_earth" name="elemento" value="wind" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_earth" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.earth}}</p></label>
+          <label for="checkbox_earth" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.earth}}</p></label>
         
           <input type="checkbox" id="checkbox_light" name="elemento" value="light" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_light" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.light}}</p></label>
+          <label for="checkbox_light" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.light}}</p></label>
         
           <input type="checkbox" id="checkbox_dark" name="elemento" value="dark" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_dark" class="label"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.dark}}</p></label>
+          <label for="checkbox_dark" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.dark}}</p></label>
         
       </div>
       <br><br>
@@ -2150,7 +2141,7 @@ icon-bar span img {
         <center>{{strings.buff}}:</center>
         <span v-for="(value,key) in buffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:auto;width:120px;padding-bottom:5px;">
           <input type="checkbox" v-bind:id="'checkbox_'+ key" name="buff" v-bind:value="value.id" style="position:relative;top:0px;display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0px;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
+          <label v-bind:for="'checkbox_'+ key" class="label noselect" style="position:relative;top:0px;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
         </span>
       </div>
       <br><br>
@@ -2158,7 +2149,7 @@ icon-bar span img {
         <center>{{strings.debuff}}:</center>
         <span v-for="(value,key) in debuffList" style="display:inline-block;position:relative;top:0px;text-align:center;height:auto;width:120px;padding-bottom:5px;">
           <input type="checkbox" v-bind:id="'checkbox_'+ key" name="debuff" v-bind:value="value.id" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label v-bind:for="'checkbox_'+ key" class="label" style="position:relative;top:0;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
+          <label v-bind:for="'checkbox_'+ key" class="label noselect" style="position:relative;top:0;"> <img v-bind:src="'https://assets.epicsevendb.com/buff/' + key + '.png'" style="position:relative;top:0;height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{value.name}}</p></label>
           </span>
       </div>
       <br><br>
@@ -2371,6 +2362,7 @@ icon-bar span img {
                   {{strings.hell}}
                 </span>
               </span>
+              <route-maker id="route_maker_window"></route-maker>
             </td>
           </tr>
           <tr style="background-color: #0fffff22">
@@ -3284,7 +3276,7 @@ icon-bar span img {
       let roleIcon = {knight: "knight",warrior:"warrior",assassin: "thief",mage: "mage", ranger: "ranger", manauser: "soul-weaver"},
           attrIcon = {fire: "fire", wind: "earth", ice: "ice", light: "light", dark: "mdark"};
       if (!ctx.props.data._id) return;
-      return h('div', {key: ctx.props.data._id, attrs: ctx.data.attrs, on: {click: event => event.target.className.indexOf('removeHero') !=-1 ? ctx.listeners['remove'](ctx.props.data._id) : ctx.listeners['clicked'] ? ctx.listeners['clicked'](ctx.props.data._id) : null, contextmenu: event => ctx.listeners['contextmenu'](event,ctx.props.data._id)}, class: [{'heroImgList': true, hoverIcon: ctx.props.hoverable},ctx.data.staticClass], style: [{padding: 12*ctx.props.scale + 'px'},ctx.data.staticStyle], directives: ctx.data.directives},[
+      return h('div', {key: ctx.props.data._id, attrs: ctx.data.attrs, on: {click: event => event.target.className.indexOf('removeHero') !=-1 ? ctx.listeners['remove'](ctx.props.data._id) : ctx.listeners['clicked'] ? ctx.listeners['clicked'](ctx.props.data._id) : null, contextmenu: event => ctx.listeners['contextmenu'](event,ctx.props.data._id)}, class: [{'heroImgList': true, 'noselect': true, hoverIcon: ctx.props.hoverable},ctx.data.staticClass], style: [{padding: 12*ctx.props.scale + 'px'},ctx.data.staticStyle], directives: ctx.data.directives},[
           h('div', {style: {position: "relative", display: "inline-block", verticalAlign: "top", height: ctx.props.size*ctx.props.scale+"px", width: ctx.props.size*ctx.props.scale+"px"}}, 
             [/* icon wrapper*/
               h('img', {class: "heroAvatar", attrs: {src: ctx.props.img, onerror: 'this.src=app.getHeroAssets(\''+ctx.props.data._id+'\', \'onerror\').icon;this.onerror=null;', alt: ctx.props.name}}),
@@ -3499,7 +3491,8 @@ icon-bar span img {
         components: {
           pagination: pagination,
           "hero-icon": hero_icon,
-          hero_selector: hero_selector
+          hero_selector: hero_selector,
+          //"route-maker": route_maker
         },
         data: function () {
             return {
@@ -3958,15 +3951,15 @@ icon-bar span img {
                         </div>
                         <div style="text-align: center;">
                           <input type="checkbox" id="checkbox_queen" name="raid_boss" style="position:relative;top:0px;display:none">
-                          <label for="checkbox_queen" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FQueen-Azumashik-284x300.png?v=1590932065337" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.queen + `</p></label>
+                          <label for="checkbox_queen" class="label noselect" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FQueen-Azumashik-284x300.png?v=1590932065337" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.queen + `</p></label>
                           <input type="checkbox" id="checkbox_karkanis" name="raid_boss" style="position:relative;top:0px;display:none">
-                          <label for="checkbox_karkanis" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FKarkanis-284x300.png?v=1590932065109" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.karkanis + `</p></label>
+                          <label for="checkbox_karkanis" class="label noselect" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FKarkanis-284x300.png?v=1590932065109" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.karkanis + `</p></label>
                           <input type="checkbox" id="checkbox_juleeve" name="raid_boss" style="position:relative;top:0px;display:none">
-                          <label for="checkbox_juleeve" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FJuleeve-284x300.png?v=1590932065054" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.juleeve + `</p></label>
+                          <label for="checkbox_juleeve" class="label noselect" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FJuleeve-284x300.png?v=1590932065054" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.juleeve + `</p></label>
                           <input type="checkbox" id="checkbox_vera" name="raid_boss" style="position:relative;top:0px;display:none">
-                          <label for="checkbox_vera" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FSecretary-Vera-284x300.png?v=1590932064989" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.vera + `</p></label>
+                          <label for="checkbox_vera" class="label noselect" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FSecretary-Vera-284x300.png?v=1590932064989" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.vera + `</p></label>
                           <input type="checkbox" id="checkbox_arakahan" name="raid_boss" style="position:relative;top:0px;display:none">
-                          <label for="checkbox_arakahan" class="label" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.arakahan + `</p></label>
+                          <label for="checkbox_arakahan" class="label noselect" style="position:relative;top:0px;"> <img src="https://cdn.glitch.com/97cf5510-4561-4fba-a2bd-849e3aed02ba%2FDevourer-Arakahan-284x300.png?v=1590932064956" style="position:relative;top:0px;height:60px;width:60px;" /><p style="position:relative;text-align:center;">` + this.strings.arakahan + `</p></label>
                         </div>
                         <button type=submit onclick="return app.salvaRisultato(` + n + `)" class="modal-button">` + this.strings.save + `</button>
                         <button type=button onclick="$('#saveCamp').remove(); $('body').removeClass('modal-open')" class="modal-button">` + this.strings.canc_btn + `</button>
@@ -6582,5 +6575,6 @@ function debounce(func, wait, immediate) {
     return false;
   });
 </script>
+<script src="./components/lab-maker.js" defer></script>
 </body>
 </html>
