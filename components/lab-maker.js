@@ -5,9 +5,6 @@ function getCoords(e,size) {
     return [Math.floor(mouseX / size), Math.floor(mouseY / size)];
 }
 
-var normalRaid = {"name":"Normal Raid", "type":"raid","start":"18-22","data":{"2-19":{"type":"battle"},"2-20":{"type":null},"3-19":{"type":null},"4-19":{"type":"battle"},"2-21":{"type":null},"2-22":{"type":"mini-boss"},"3-22":{"type":null},"4-22":{"type":"battle"},"5-22":{"type":null},"6-22":{"type":null},"6-21":{"type":null},"6-20":{"type":null},"5-19":{"type":null},"6-19":{"type":"mini-boss"},"7-22":{"type":null},"8-22":{"type":"battle"},"9-22":{"type":null},"10-22":{"type":"battle"},"10-21":{"type":null},"10-20":{"type":null},"10-19":{"type":"battle"},"9-19":{"type":null},"8-19":{"type":null},"7-19":{"type":null},"6-17":{"type":null},"6-18":{"type":null},"6-16":{"type":"battle"},"7-16":{"type":null},"8-16":{"type":"battle"},"9-16":{"type":null},"10-16":{"type":"battle"},"10-15":{"type":null},"10-14":{"type":null},"10-13":{"type":"battle"},"9-13":{"type":null},"8-13":{"type":"battle"},"7-13":{"type":null},"6-13":{"type":"battle"},"6-14":{"type":null},"6-15":{"type":null},"5-13":{"type":"boss"},"12-22":{"type":"battle"},"11-22":{"type":null},"13-22":{"type":null},"14-22":{"type":"battle"},"14-23":{"type":null},"15-22":{"type":null},"16-22":{"type":"battle"},"17-22":{"type":null},"18-22":{"type": 'tp'},"18-23":{"type":"shop"},"14-24":{"type":"battle"},"14-25":{"type":null},"15-26":{"type":null},"14-26":{"type":null},"16-26":{"type":"battle"},"17-26":{"type":null},"18-26":{"type":"battle"},"18-27":{"type":null},"18-28":{"type":null},"18-29":{"type":null},"18-30":{"type":"mini-boss"},"17-30":{"type":null},"16-30":{"type":null},"15-30":{"type":null},"14-30":{"type":"battle"},"14-29":{"type":null},"14-28":{"type":"battle"},"14-27":{"type":null},"13-26":{"type":null},"12-26":{"type":null},"11-26":{"type":null},"10-26":{"type":"battle"},"10-27":{"type":null},"10-28":{"type":"battle"},"10-29":{"type":null},"10-30":{"type":"mini-boss"},"9-30":{"type":null},"8-30":{"type":"battle"},"7-30":{"type":null},"6-30":{"type":"battle"},"6-29":{"type":null},"6-28":{"type":null},"6-27":{"type":null},"6-26":{"type":"battle"},"7-26":{"type":null},"8-26":{"type":"battle"},"9-26":{"type":null},"10-31":{"type":null},"10-32":{"type":null},"10-33":{"type":"battle"},"10-34":{"type":null},"10-35":{"type":"battle"},"11-35":{"type":"boss"},"19-22":{"type":null},"20-22":{"type":"battle"},"21-22":{"type":null},"22-22":{"type":"battle"},"23-22":{"type":null},"24-22":{"type":"battle"},"25-22":{"type":null},"26-22":{"type":null},"26-21":{"type":null},"26-18":{"type":null},"26-19":{"type":null},"26-20":{"type":"battle"},"30-18":{"type":"battle"},"29-18":{"type":null},"28-18":{"type":"battle"},"27-18":{"type":null},"27-22":{"type":null},"28-22":{"type":null},"29-22":{"type":null},"30-22":{"type":"mini-boss"},"31-22":{"type":null},"32-22":{"type":"battle"},"22-23":{"type":null},"22-24":{"type":null},"22-25":{"type":"battle"},"30-19":{"type":null},"30-20":{"type":"battle"},"30-21":{"type":null},"31-18":{"type":null},"33-18":{"type":null},"32-18":{"type":"battle"},"30-17":{"type":null},"30-16":{"type":"battle"},"30-15":{"type":null},"30-14":{"type":"battle"},"31-14":{"type":null},"32-14":{"type":null},"33-14":{"type":null},"34-14":{"type":"mini-boss"},"34-15":{"type":null},"34-16":{"type":null},"34-17":{"type":null},"34-18":{"type":"battle"},"34-22":{"type":"battle"},"33-22":{"type":null},"35-22":{"type":null},"36-22":{"type":"battle"},"36-21":{"type":null},"36-20":{"type":null},"36-19":{"type":"battle"},"37-19":{"type":"boss"},"22-26":{"type":null},"22-27":{"type":"mini-boss"},"23-27":{"type":null},"24-27":{"type":null},"25-27":{"type":null},"25-26":{"type":null},"25-25":{"type":null},"25-24":{"type":"battle"},"26-24":{"type":null},"27-24":{"type":"battle"},"28-24":{"type":null},"29-24":{"type":"battle"},"29-25":{"type":null},"29-26":{"type":null},"29-27":{"type":"battle"},"28-27":{"type":null},"27-27":{"type":"battle"},"26-27":{"type":null},"25-28":{"type":null},"25-29":{"type":null},"25-30":{"type":"battle"},"24-30":{"type":null},"23-30":{"type":"battle"},"22-30":{"type":null},"21-30":{"type":"battle"},"21-31":{"type":null},"21-32":{"type":null},"21-33":{"type":"mini-boss"},"22-33":{"type":null},"23-33":{"type":null},"24-33":{"type":null},"25-33":{"type":"battle"},"25-32":{"type":null},"25-31":{"type":null},"26-30":{"type":null},"27-30":{"type":"battle"},"28-30":{"type":null},"29-30":{"type":"battle"},"30-30":{"type":null},"31-30":{"type":"battle"},"31-31":{"type":"boss"},"18-21":{"type":null},"18-20":{"type":"battle"},"18-19":{"type":null},"17-18":{"type":null},"18-18":{"type":"battle"},"18-17":{"type":null},"18-16":{"type":null},"18-15":{"type":"battle"},"14-14":{"type":null},"14-15":{"type":null},"14-16":{"type":"battle"},"14-17":{"type":null},"14-18":{"type":"battle"},"15-18":{"type":null},"16-18":{"type":null},"19-18":{"type":null},"20-18":{"type":null},"21-18":{"type":null},"22-18":{"type":"battle"},"22-17":{"type":null},"22-16":{"type":"battle"},"22-15":{"type":null},"22-14":{"type":null},"14-13":{"type":"mini-boss"},"14-12":{"type":null},"14-11":{"type":"battle"},"22-11":{"type":"battle"},"22-12":{"type":null},"22-13":{"type":"mini-boss"},"18-9":{"type":null},"18-8":{"type":"boss"},"21-13":{"type":null},"20-13":{"type":"battle"},"19-13":{"type":null},"18-13":{"type":null},"17-13":{"type":null},"16-13":{"type":"battle"},"15-13":{"type":null},"18-14":{"type":null},"14-10":{"type":null},"22-10":{"type":null},"22-9":{"type":"battle"},"21-9":{"type":null},"20-9":{"type":"battle"},"19-9":{"type":null},"14-9":{"type":"battle"},"15-9":{"type":null},"16-9":{"type":"battle"},"17-9":{"type":null}}};
-var hellRaid = {"name":"Hell Raid", "type": 'raid', "start": '18-22', "data": {"2-19":{"type":"battle"},"2-20":{"type":null},"3-19":{"type":null},"4-19":{"type":"battle"},"2-21":{"type":null},"2-22":{"type":"mini-boss"},"3-22":{"type":null},"4-22":{"type":"battle"},"5-22":{"type":null},"6-22":{"type":null},"6-21":{"type":null},"6-20":{"type":null},"5-19":{"type":null},"6-19":{"type":"mini-boss"},"7-22":{"type":null},"8-22":{"type":"battle"},"9-22":{"type":null},"10-22":{"type":"mini-boss"},"10-21":{"type":null},"10-20":{"type":null},"10-19":{"type":"battle"},"9-19":{"type":null},"8-19":{"type":null},"7-19":{"type":null},"6-17":{"type":null},"6-18":{"type":null},"6-16":{"type":"battle"},"7-16":{"type":null},"8-16":{"type":"battle"},"9-16":{"type":null},"10-16":{"type":"mini-boss"},"10-15":{"type":null},"10-14":{"type":null},"10-13":{"type":"mini-boss"},"9-13":{"type":null},"8-13":{"type":"battle"},"7-13":{"type":null},"6-13":{"type":"battle"},"6-14":{"type":null},"6-15":{"type":null},"5-13":{"type":"boss"},"12-22":{"type":"battle"},"11-22":{"type":null},"13-22":{"type":null},"14-22":{"type":"battle"},"14-23":{"type":null},"15-22":{"type":null},"16-22":{"type":"battle"},"17-22":{"type":null},"18-22":{"type":"tp"},"18-23":{"type":"shop"},"14-24":{"type":"battle"},"14-25":{"type":null},"15-26":{"type":null},"14-26":{"type":null},"16-26":{"type":"battle"},"17-26":{"type":null},"18-26":{"type":"mini-boss"},"18-27":{"type":null},"18-28":{"type":null},"18-29":{"type":null},"18-30":{"type":"mini-boss"},"17-30":{"type":null},"16-30":{"type":null},"15-30":{"type":null},"14-30":{"type":"battle"},"14-29":{"type":null},"14-28":{"type":"battle"},"14-27":{"type":null},"13-26":{"type":null},"12-26":{"type":null},"11-26":{"type":null},"10-26":{"type":"mini-boss"},"10-27":{"type":null},"10-28":{"type":"battle"},"10-29":{"type":null},"10-30":{"type":"mini-boss"},"9-30":{"type":null},"8-30":{"type":"battle"},"7-30":{"type":null},"6-30":{"type":"mini-boss"},"6-29":{"type":null},"6-28":{"type":null},"6-27":{"type":null},"6-26":{"type":"battle"},"7-26":{"type":null},"8-26":{"type":"battle"},"9-26":{"type":null},"10-31":{"type":null},"10-32":{"type":null},"10-33":{"type":"battle"},"10-34":{"type":null},"10-35":{"type":"battle"},"11-35":{"type":"boss"},"19-22":{"type":null},"20-22":{"type":"battle"},"21-22":{"type":null},"22-22":{"type":"battle"},"23-22":{"type":null},"24-22":{"type":"battle"},"25-22":{"type":null},"26-22":{"type":null},"26-21":{"type":null},"26-18":{"type":"mini-boss"},"26-19":{"type":null},"26-20":{"type":"battle"},"30-18":{"type":"mini-boss"},"29-18":{"type":null},"28-18":{"type":"battle"},"27-18":{"type":null},"27-22":{"type":null},"28-22":{"type":null},"29-22":{"type":null},"30-22":{"type":"mini-boss"},"31-22":{"type":null},"32-22":{"type":"battle"},"22-23":{"type":null},"22-24":{"type":null},"22-25":{"type":"battle"},"30-19":{"type":null},"30-20":{"type":"battle"},"30-21":{"type":null},"31-18":{"type":null},"33-18":{"type":null},"32-18":{"type":"battle"},"30-17":{"type":null},"30-16":{"type":"battle"},"30-15":{"type":null},"30-14":{"type":null},"31-14":{"type":null},"32-14":{"type":null},"33-14":{"type":null},"34-14":{"type":"mini-boss"},"34-15":{"type":null},"34-16":{"type":null},"34-17":{"type":null},"34-18":{"type":"mini-boss"},"34-22":{"type":"mini-boss"},"33-22":{"type":null},"35-22":{"type":null},"36-22":{"type":"battle"},"36-21":{"type":null},"36-20":{"type":null},"36-19":{"type":"battle"},"37-19":{"type":"boss"},"22-26":{"type":null},"22-27":{"type":"mini-boss"},"23-27":{"type":null},"24-27":{"type":null},"25-27":{"type":null},"25-26":{"type":null},"25-25":{"type":null},"25-24":{"type":"battle"},"26-24":{"type":null},"27-24":{"type":"battle"},"28-24":{"type":null},"29-24":{"type":"mini-boss"},"29-25":{"type":null},"29-26":{"type":null},"29-27":{"type":"battle"},"28-27":{"type":null},"27-27":{"type":"battle"},"26-27":{"type":null},"25-28":{"type":null},"25-29":{"type":null},"25-30":{"type":"mini-boss"},"24-30":{"type":null},"23-30":{"type":"battle"},"22-30":{"type":null},"21-30":{"type":"battle"},"21-31":{"type":null},"21-32":{"type":null},"21-33":{"type":"mini-boss"},"22-33":{"type":null},"23-33":{"type":null},"24-33":{"type":null},"25-33":{"type":"mini-boss"},"25-32":{"type":null},"25-31":{"type":null},"26-30":{"type":null},"27-30":{"type":"battle"},"28-30":{"type":null},"29-30":{"type":"battle"},"30-30":{"type":null},"31-30":{"type":"battle"},"31-31":{"type":"boss"},"18-21":{"type":null},"18-20":{"type":"battle"},"18-19":{"type":null},"17-18":{"type":null},"18-18":{"type":"mini-boss"},"18-17":{"type":null},"18-16":{"type":null},"18-15":{"type":"battle"},"14-14":{"type":null},"14-15":{"type":null},"14-16":{"type":"battle"},"14-17":{"type":null},"14-18":{"type":"mini-boss"},"15-18":{"type":null},"16-18":{"type":null},"19-18":{"type":null},"20-18":{"type":null},"21-18":{"type":null},"22-18":{"type":"mini-boss"},"22-17":{"type":null},"22-16":{"type":"battle"},"22-15":{"type":null},"22-14":{"type":null},"14-13":{"type":"mini-boss"},"14-12":{"type":null},"14-11":{"type":"battle"},"22-11":{"type":"battle"},"22-12":{"type":null},"22-13":{"type":"mini-boss"},"18-9":{"type":null},"38-19":{"type":null},"39-19":{"type":null},"40-19":{"type":"tp"},"18-8":{"type":"boss"},"18-7":{"type":null},"18-6":{"type":null},"4-13":{"type":null},"3-13":{"type":null},"2-13":{"type":"tp"},"12-35":{"type":null},"13-35":{"type":null},"14-35":{"type":"tp"},"31-32":{"type":null},"31-33":{"type":null},"31-34":{"type":"tp"},"21-13":{"type":null},"20-13":{"type":"battle"},"19-13":{"type":null},"18-13":{"type":null},"17-13":{"type":null},"16-13":{"type":"battle"},"15-13":{"type":null},"18-14":{"type":null},"14-10":{"type":null},"22-10":{"type":null},"22-9":{"type":"battle"},"21-9":{"type":null},"20-9":{"type":"battle"},"19-9":{"type":null},"14-9":{"type":"battle"},"15-9":{"type":null},"16-9":{"type":"battle"},"17-9":{"type":null},"18-5":{"type":"tp"}}};
-
 Vue.component('route-maker', {
     name: 'route-maker',
     props: {
@@ -19,15 +16,20 @@ Vue.component('route-maker', {
     },
     data: function () {
         return {
+            VERSION: 1.1,
+            maps: [],
             firstRender: true,
             dev: false, /* true will enable map editing */
             hideRouteMenu: false,
             mode: 'route', /* */
-            eventOptions: [{type: null, name: null}, {type: 'start', name: 'Start'},{type: 'tp', name: 'Teleport'}, {type: 'shop', name: 'Shop'}, {type: 'battle', name: 'Battle'}, {type: 'mini-boss', name: 'Mini-boss'}, {type: 'boss', name: 'Boss Battle'}],
-            eventType: 0, /* if mode = event on click set cells to that event type (0: null, 1: start, 3: tp, 4: shop, 5: battle, 6: mini-boss, 7: boss) */
+            eventOptions: [{type: null, name: null}, {type: 'start', name: 'Start'},{type: 'tp', name: 'Teleport'}, {type: 'shop', name: 'Shop'}, {type: 'battle', name: 'Battle'}, {type: 'mini-boss', name: 'Mini-boss'}, {type: 'boss', name: 'Boss Battle'}, {type: 'portal', name: 'Portal'}, {type: 'lock', name: 'Locked'}],
+            eventType: 0, /* if mode = event eventOptions[eventType] */
+            setLink: [], /* [key1, key2] temporary -> connection betwween 2 cells*/
+            cellTextInput: {display: false, cell: null, value: ''},
+            lockOrientation: 0, /* up,right,down,left */
             canvas: this.$refs.route_canvas,
             cellSize: 32,
-            mapSize: 42, /* Canvas size = mapSize * cellSize */
+            mapSize: 46, /* Canvas size = mapSize * cellSize */
             currTheme: "white",
             theme: {
                 white: {
@@ -36,11 +38,13 @@ Vue.component('route-maker', {
                     lineWidth: 5,
                     null: 'white',
                     shop: '#4CAF50',
-                    battle: '#3ed7f0',
+                    battle: '#4a86e8',//'#3ed7f0',
                     'mini-boss': 'yellow',
                     boss: 'red',
                     tp: 'orange',
-                    start: 'green'
+                    start: 'green',
+                    portal: '#01ffff',
+                    lock: 'grey'
                 },
                 dark: {
                     cellStroke: 'grey',
@@ -52,17 +56,26 @@ Vue.component('route-maker', {
                     'mini-boss': 'yellow',
                     boss: 'red',
                     tp: 'orange',
-                    start: 'green'
+                    start: 'green',
+                    portal: '#01ffff'
                 }
             },
             isMouseDown: false,
+            unlockAllCells: false,
             currentRoute: 0,
             userRoutes: [],
             routesPerCell: {},
-            map: normalRaid
+            totalMorale: [],
+            map: {}
         }
     },
     methods: {
+        userMessage: function (message) {
+            if (!message) return;
+            if (snackbarMessage) {
+                snackbarMessage(message);
+            };
+        },
         changeCellSize: function (size) {
             this.cellSize = size;
             Vue.nextTick(()=>{
@@ -71,10 +84,22 @@ Vue.component('route-maker', {
         },
         clearCanvas: function () {
             this.map = {
-                type: null, /* type lab or raid */
-                start: null, /* starting point */
+                name: this.map.start,
+                start: null,
                 data: {}
             };
+            this.clearRoutes();
+            this.draw();
+        },
+        newMap: function () {
+            this.maps.push({
+                name: 'Untitled '+this.maps.length,
+                start: null,
+                type: 'lab',
+                data: {}
+            });
+            this.map = this.maps[this.maps.length-1];
+            this.mode = 'map';
             this.clearRoutes();
             this.draw();
         },
@@ -105,11 +130,29 @@ Vue.component('route-maker', {
             return color[i%color.length];
         },
         isCrossWalk: function (key,cells) {
-            var x = Number(key.split("-")[0]), y = Number(key.split("-")[0]);
-            if (cells[(x+1)+"-"+(y+1)] || cells[(x+1)+"-"+(y-1)] || cells[(x-1)+"-"+(y-1)] || cells[(x-1)+"-"+(y+1)]) { // |_ or .-
-                return true;
-            }
+            var x = Number(key.split(/\b-/)[0]), y = Number(key.split(/\b-/)[1]);
+            if ((cells[(x-1)+"-"+y] || cells[(x+1)+"-"+y]) && (cells[x+"-"+(y-1)] || cells[x+"-"+(y+1)]) ) return true;
             return false;
+        },
+        hasTeleported: function (newKey,oldKey) {
+            var diffX = Math.abs(Number(newKey.split(/\b-/)[0]) - oldKey.split(/\b-/)[0]);
+            var diffY = Math.abs(Number(newKey.split(/\b-/)[1]) - oldKey.split(/\b-/)[1]);
+            if (diffX > 1 ||  diffY > 1  || (diffX === 1 && diffY === 1)) return true;
+            return false;
+        },
+        isUnlocked: function (key, i) {
+            if (this.unlockAllCells) return true;
+            if (!key) return true;
+            //if (this.userRoutes[i].indexOf(cells[key].ref)!=-1 || (this.userRoutes.some( (item,index) => {if (index>=i)return; return item.includes(cells[key].ref)}))) return true;
+            if (this.userRoutes[i].indexOf(key)!=-1 || (this.userRoutes.some( (item,index) => {if (index>=i)return; return item.includes(key)}))) return true;
+            return false;
+        },
+        addTextCell: function () {
+            if (this.$refs.cellTextInput.value!="") this.map.data[this.cellTextInput.cell].text = this.$refs.cellTextInput.value;
+            this.cellTextInput.display = false;
+            this.cellTextInput.value = '';
+            this.cellTextInput.cell = null;
+            this.draw();
         },
         calculateMorale: function () {
             var tmp = [];
@@ -121,7 +164,8 @@ Vue.component('route-maker', {
                     var key = this.userRoutes[i][j];
                     var cell = this.map.data[key];
                     if (cell.type==='tp') { // Applay teleporting cost
-                        tmp[i] += 3; 
+                        if (this.hasTeleported(key,this.userRoutes[i][j-1])) tmp[i] += 3;
+                        else tmp[i] += 1;
                         continue;
                     } else if (['battle','mini-boss','boss'].includes(cell.type)) {
                         var isCrossWalk = this.isCrossWalk(key,this.map.data);
@@ -138,38 +182,69 @@ Vue.component('route-maker', {
                             };
                         } else 
                             tmp[i]++;
+                    } else if (cell.type === 'portal') {
+                        if (this.hasTeleported(key,this.userRoutes[i][j-1])) tmp[i] += 0;
+                        else tmp[i]++;
+                        continue;
                     } else {
                         tmp[i]++;
-                    }
+                    };
                 };
             };
+            this.totalMorale = tmp;
             return tmp;
         },
-        exportMapJSON: function () {
-            this.$refs.canvasDiv.innerHTML += JSON.stringify(this.map);
+        downloadJSON: function (data,filename,type) {
+            var file = new Blob([data], {type: type});
+            if (window.navigator.msSaveOrOpenBlob)
+                window.navigator.msSaveOrOpenBlob(file, filename);
+            else {
+                var a = document.createElement("a"),
+                        url = URL.createObjectURL(file);
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(function() {
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);  
+                }, 0); 
+            }
         },
         moveMap: function (x,y) {
             var tmp={type: this.map.type, start: this.map.start, data: {}};
             Object.keys(this.map.data).forEach((key) => {
-                var posx = Number(key.split('-')[0]);
-                var posy = Number(key.split('-')[1]);
-                tmp.data[(posx+x)+"-"+(posy+y)] = this.map.data[key];
+                var xy = key.split(/\b-/);
+                var posx = Number(xy[0]);
+                var posy = Number(xy[1]);
+                var newkey = (posx+x)+"-"+(posy+y);
+                tmp.data[newkey] = this.map.data[key];
+                if (this.map.data[key].ref) {
+                    var refxy = this.map.data[key].ref.split(/\b-/);
+                    var refx = Number(refxy[0]), refy = Number(refxy[1]);
+                    tmp.data[newkey].ref = (refx+x) + '-' + (refy+y);
+                };
             });
+            if (this.map.start!=null) {
+                var xy = this.map.start.split(/\b-/);
+                var startX = Number(xy[0]), startY = Number(xy[1]);
+                tmp.start = (startX+x) + '-' + (startY+y);
+            };
             this.map = tmp;
-            this.draw();
+            this.clearRoutes(); // this.draw() is called inside this.clearRoutes()
         },
         thisRouteLine: function (j) {
             var tmp = [/* [x,y,extrax,extray],[x,y,extrax,extray]... */];
             for (var i=0;i<this.userRoutes[j].length;i++) {
-                var x = Number(this.userRoutes[j][i].split('-')[0]);
-                var y = Number(this.userRoutes[j][i].split('-')[1]);
+                var x = Number(this.userRoutes[j][i].split(/\b-/)[0]);
+                var y = Number(this.userRoutes[j][i].split(/\b-/)[1]);
                 var cell = this.userRoutes[j][i];
                 if (i===0) {
                     tmp.push([x,y,this.cellSize/2, this.cellSize/2]);
                     continue;
                 } else {
-                    var lastX = Number(this.userRoutes[j][i-1].split('-')[0]);
-                    var lastY = Number(this.userRoutes[j][i-1].split('-')[1]);
+                    var lastX = Number(this.userRoutes[j][i-1].split(/\b-/)[0]);
+                    var lastY = Number(this.userRoutes[j][i-1].split(/\b-/)[1]);
                     var diffX = Math.abs(lastX-x);
                     var diffY = Math.abs(lastY-y);
                     var inCellPos = this.routesPerCell[cell][0]!=0?this.cellSize/(this.routesPerCell[cell][0]+1)*(this.routesPerCell[cell][1] || 0) : this.cellSize/2;
@@ -198,31 +273,105 @@ Vue.component('route-maker', {
                         ctx.lineWidth = this.pathLineWidth;
                         ctx.strokeStyle = this.routeColor(j);
                     } else { // start
-                        ctx.strokeStyle = this.theme[this.currTheme].cellStroke;
-                        ctx.rect(lines[i][0] * this.cellSize + this.cellSize/3, lines[i][1] * this.cellSize + this.cellSize/3, this.cellSize/3, this.cellSize/3);
-                        ctx.fillStyle = "#f4893a";
-                        ctx.fill();
+                        ctx.font = `${this.cellSize/1.2}px Arial`;
+                        ctx.fillStyle = 'red';
+                        ctx.textAlign = 'center';
+                        ctx.fillText('★', lines[i][0]*this.cellSize+this.cellSize/2, lines[i][1]*this.cellSize+this.cellSize-8);
+                        ctx.textAlign = 'start';
                     };
                     ctx.stroke();
                 };
             };
+            if (this.map.data[this.map.start] && this.map.data[this.userRoutes[this.currentRoute].slice(-1)[0]].type==='portal') {
+                var cell = this.map.data[this.userRoutes[this.currentRoute].slice(-1)[0]].ref;
+                if (this.map.data[this.userRoutes[this.currentRoute].slice(-2,-1)[0]].type!='portal') {
+                    var [x,y] = cell.split(/\b-/);
+                    ctx.beginPath();
+                    ctx.rect(x*this.cellSize, y*this.cellSize, this.cellSize, this.cellSize);
+                    ctx.strokeStyle = 'pink';
+                    ctx.stroke();
+                };
+            };
             var morale = this.calculateMorale();
+            var baseMorale = this.map.type==='raid'?100:80;
             morale.forEach( ( route, i )=>{
                 ctx.font = "30px Arial";
                 ctx.fillStyle = this.routeColor(i);
-                ctx.fillText("Route " + (i+1) + ": " + (route-100>0?route-100 : 0)/*+ " (" + route + ")"*/, 10, 50*(1+i));
+                ctx.fillText("Route " + (i+1) + ": " + (route-baseMorale>0?route-baseMorale : 0)+ " (" + route + ")", 10, 50*(1+i));
             });
-            [2,3,4,5,6].map( (key,i) => {
+            [{txt: '★', name: 'Start'}, {txt: '💰', name: 'Chest'}].map( (item,i) =>  {
+                ctx.font = this.cellSize + "px Arial";
+                ctx.fillStyle = 'red';
+                ctx.textAlign = 'center';
+                ctx.fillText(item.txt, (this.mapSize-7)*this.cellSize+this.cellSize/2, this.cellSize*(i+1)+10);
+                ctx.textAlign = 'start';
+                ctx.fillText(item.name, (this.mapSize-6)*this.cellSize+this.cellSize/2, this.cellSize*(i+1)+10);
+            });
+            [2,3,7,4,5,6].map( (key,i) => {
                 ctx.beginPath();
+                ctx.setLineDash([]);
                 ctx.fillStyle = this.theme[this.currTheme][this.eventOptions[key].type];
-                ctx.rect((this.mapSize-8)*this.cellSize, this.cellSize*(i+1)+10, this.cellSize, this.cellSize);
+                ctx.rect((this.mapSize-7)*this.cellSize, this.cellSize*(i+1)+this.cellSize*1+15, this.cellSize, this.cellSize);
                 ctx.fill();
                 ctx.lineWidth = this.theme[this.currTheme].cellStrokeWidth;
                 ctx.strokeStyle = this.theme[this.currTheme].cellStroke;
                 ctx.font = this.cellSize + "px Arial";
-                ctx.fillText(this.eventOptions[key].name, (this.mapSize-7)*this.cellSize+this.cellSize/2, this.cellSize+this.cellSize*(1+i)+5); 
+                ctx.fillText(this.eventOptions[key].name, (this.mapSize-6)*this.cellSize+this.cellSize/2, this.cellSize+this.cellSize*(1+i)+this.cellSize*1+10); 
                 ctx.stroke();
             });
+        },
+        drawIcons: function (p,cell) {
+            var ctx = this.ctx;
+            if (cell.text) {
+                let l = cell.text.length;
+                ctx.font = `${this.cellSize/2}px Arial`;
+                ctx.fillStyle = 'black';
+                ctx.textAlign = 'center';
+                ctx.fillText(cell.text, p[0]*this.cellSize+this.cellSize/2, p[1]*this.cellSize+this.cellSize-8);
+                ctx.textAlign = 'start';
+            };
+        },
+        drawLockWalls: function (p,cell,ctx) {
+            if (this.unlockAllCells) return;
+            if (!cell.lock) return;
+            if (!Array.isArray(cell.lock)) return;
+            ctx.beginPath();
+            ctx.lineWidth = this.pathLineWidth*1.5;
+            ctx.strokeStyle = 'purple';
+            ctx.font = `${this.cellSize/1.7}px Arial`;
+            ctx.fillStyle = 'purple';
+            if (cell.lock[0] && !this.isUnlocked(cell.lock[0],this.currentRoute)) {//top
+                ctx.moveTo(p[0]*this.cellSize,p[1]*this.cellSize);
+                ctx.lineTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize);
+                if (this.map.data[cell.lock[0]].text) {
+                    ctx.fillText(this.map.data[cell.lock[0]].text.slice(2), p[0]*this.cellSize+this.cellSize+5,p[1]*this.cellSize);
+                };
+            };
+            if (cell.lock[1] && !this.isUnlocked(cell.lock[1],this.currentRoute)) {//right
+                ctx.moveTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize);
+                ctx.lineTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize);
+                if (this.map.data[cell.lock[1]].text) {
+                    ctx.fillText(this.map.data[cell.lock[1]].text.slice(2), p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize+20);
+                };
+            };
+            if (cell.lock[2] && !this.isUnlocked(cell.lock[2],this.currentRoute)) {//bottom
+                ctx.moveTo(p[0]*this.cellSize,p[1]*this.cellSize+this.cellSize);
+                ctx.lineTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize);
+                if (this.map.data[cell.lock[2]].text) {
+                    ctx.textAlign = 'right';
+                    ctx.fillText(this.map.data[cell.lock[2]].text.slice(2), p[0]*this.cellSize-5,p[1]*this.cellSize+this.cellSize);
+                };
+            };
+            if (cell.lock[3] && !this.isUnlocked(cell.lock[3],this.currentRoute)) {//left
+                ctx.moveTo(p[0]*this.cellSize,p[1]*this.cellSize);
+                ctx.lineTo(p[0]*this.cellSize,p[1]*this.cellSize+this.cellSize);
+                if (this.map.data[cell.lock[3]].text) {
+                    ctx.fillText(this.map.data[cell.lock[3]].text.slice(2), p[0]*this.cellSize,p[1]*this.cellSize-5);
+                };
+            };
+            ctx.textAlign = 'start';
+            ctx.lineWidth = this.pathLineWidth;
+            ctx.stroke();
         },
         draw: function () {
             var ctx = this.ctx;
@@ -230,8 +379,8 @@ Vue.component('route-maker', {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.lineWidth = 1;
             Object.keys(this.map.data).forEach((key) => {
-                var positionX = Number(key.split("-")[0]);
-                var positionY = Number(key.split("-")[1]);
+                var positionX = Number(key.split(/\b-/)[0]);
+                var positionY = Number(key.split(/\b-/)[1]);
                 ctx.beginPath();
                 ctx.setLineDash([]);
                 ctx.rect(positionX * this.cellSize, positionY * this.cellSize, this.cellSize, this.cellSize);
@@ -241,7 +390,19 @@ Vue.component('route-maker', {
                 ctx.strokeStyle = this.theme[this.currTheme].cellStroke;
                 ctx.stroke();
             });
+            Object.keys(this.map.data).forEach((key) => {
+                var positionX = Number(key.split(/\b-/)[0]);
+                var positionY = Number(key.split(/\b-/)[1]);
+                this.drawIcons([positionX,positionY],this.map.data[key]);
+                this.drawLockWalls([positionX,positionY],this.map.data[key],ctx);
+            });
             this.drawRoutes();
+        },
+        handleMuseEvent: function (event) {
+            if (this.isMouseDown)
+                this.addTile(event)
+            else { // mouseover event
+            };
         },
         addTile: function (mouseEvent) {
             var clicked = getCoords(mouseEvent, this.cellSize);
@@ -251,8 +412,10 @@ Vue.component('route-maker', {
             };
             if (this.mode==='map') {
                 if (mouseEvent.shiftKey) {
+                    if (!this.map.data[key]) return;
                     delete this.map.data[key];
                 } else {
+                    if (this.map.data[key]) return;
                     this.map.data[key] = {
                         type: null
                     };
@@ -269,26 +432,102 @@ Vue.component('route-maker', {
                     };
                     if (this.userRoutes[this.currentRoute].length<1) this.userRoutes[this.currentRoute] = [this.map.start];
                 } else {
-                    if (this.userRoutes[this.currentRoute][this.userRoutes[this.currentRoute].length-1]===key) return;
+                    let lastKey = this.userRoutes[this.currentRoute][this.userRoutes[this.currentRoute].length-1];
+                    if (lastKey===key) return;
                     if (!this.map.data[key])  return; /* Out of borders */
-                    var [lastX, lastY] = this.userRoutes[this.currentRoute][this.userRoutes[this.currentRoute].length-1].split("-");
-                    var diffX = Math.abs(Number(lastX) - clicked[0]);
-                    var diffY = Math.abs(Number(lastY) - clicked[1]);
-                    if ( this.map.data[key].type!="tp" && (diffX > 1 ||  diffY > 1  || (diffX === 1 && diffY === 1)) )  return; /* Too far from last point */
+                    if (this.hasTeleported(key,lastKey )) { /* Too far from last point */
+                        if (this.map.data[key].type!="tp" && this.map.data[key].type!="portal") return;
+                        else if (this.map.data[key].type==="portal" && this.map.data[lastKey].ref!=key) return;
+                    };
+                    if (this.map.data[lastKey].lock||this.map.data[key].lock) {
+                        let i=-1, target = this.map.data[lastKey].lock;
+                        let old = lastKey.split(/\b-/), diffX = clicked[0] - Number(old[0]), diffY = clicked[1] - Number(old[1]);
+                        if (target) {
+                            if (diffY===-1) i=0;
+                            else if (diffX===1) i=1;
+                            else if (diffY===1) i=2;
+                            else if (diffX===-1) i=3;
+                            if (!this.isUnlocked(target[i],this.currentRoute)) return; // locked
+                        };
+                        if (this.map.data[key].lock) {
+                            i=-1;
+                            diffX=diffX*-1;
+                            diffY=diffY*-1;
+                            target = this.map.data[key].lock;
+                            if (diffY===-1) i=0;
+                            else if (diffX===1) i=1;
+                            else if (diffY===1) i=2;
+                            else if (diffX===-1) i=3;
+                            if (!this.isUnlocked(target[i],this.currentRoute)) return; // locked
+                        };
+                    };
                     this.userRoutes[this.currentRoute].push(key);
                 };
             } else if (this.mode === 'events') {
                 if (!this.map.data[key]) return;
-                switch (this.eventOptions[this.eventType].type) {
-                    case 'start':
-                        this.map.start = key;
-                        this.clearRoutes();
-                        break;
-                    default:
-                        this.map.data[key].type = this.eventOptions[this.eventType].type;
+                if (mouseEvent.shiftKey) {
+                    this.map.data[key].type = null;
+                    delete this.map.data[key].ref;
+                    delete this.map.data[key].lock;
+                } else {
+                    switch (this.eventOptions[this.eventType].type) {
+                        case 'start':
+                            this.map.start = key;
+                            this.clearRoutes();
+                            break;
+                        case 'lock':
+                            if (this.setLink.includes(key)) return;
+                            this.setLink.push(key);
+                            if (this.setLink.length===2) {
+                                /*
+                                this.map.data[this.setLink[0]].type = this.eventOptions[this.eventType].type;
+                                this.map.data[this.setLink[0]].ref = this.setLink[1];
+                                */
+                                if (!this.map.data[this.setLink[0]].lock) this.map.data[this.setLink[0]].lock = [0,0,0,0];
+                                this.map.data[this.setLink[0]].lock[this.lockOrientation] = this.setLink[1];
+                                this.setLink = [];
+                            };
+                            break;
+                        case 'portal':
+                            if (this.setLink.includes(key)) return;
+                            this.setLink.push(key);
+                            if (this.setLink.length===2) {
+                                this.map.data[this.setLink[0]].type = this.eventOptions[this.eventType].type;
+                                this.map.data[this.setLink[1]].type = this.eventOptions[this.eventType].type;
+                                this.map.data[this.setLink[0]].ref = this.setLink[1];
+                                this.map.data[this.setLink[1]].ref = this.setLink[0];
+                                this.setLink = [];
+                            };
+                            break;
+                        default:
+                            this.map.data[key].type = this.eventOptions[this.eventType].type;
+                    };
+                };
+            } else if (this.mode==='text') {
+                if (mouseEvent.shiftKey) {
+                    delete this.map.data[key].text;
+                } else {
+                    if (!this.map.data[key]) return;
+                    this.cellTextInput.value=this.map.data[key].text || '';
+                    this.cellTextInput.cell = key;
+                    this.$refs.cellTextInput.value = this.cellTextInput.value;
+                    this.cellTextInput.display = true;
+                    Vue.nextTick(()=>this.$refs.cellTextInput.focus());
+                    return; // no need to redraw
                 };
             };
             this.draw();
+        },
+        bootOptions: function () {
+            this.map = this.maps[0];
+            this.hideRouteMenu = false;
+            Vue.nextTick ( () => {
+                this.firstRender = false;
+                document.body.classList.add('modal-open');
+                this.ctx = this.$refs.route_canvas.getContext('2d');
+                this.clearRoutes();
+                this.draw();
+            });
         }
     },
     watch: {
@@ -299,19 +538,27 @@ Vue.component('route-maker', {
                         'event_category': 'Map Maker',
                         'event_label': 'First render'
                     });
-                };                  
-                this.hideRouteMenu = false;
-                Vue.nextTick ( () => {
-                    this.firstRender = false;
-                    document.body.classList.add('modal-open');
-                    this.ctx = this.$refs.route_canvas.getContext('2d');
-                    this.clearRoutes();
-                    this.draw();
-                });
+                };
+                if (this.maps.length===0) {
+                    var self = this;
+                    $.ajax({
+                        url: "components/maps.json",
+                        type: 'GET',
+                        contentType: 'application/json',
+                        success: (response) => {
+                            self.maps = response;
+                            self.bootOptions();
+                        },
+                        error: (err) => {}
+                    });
+                } else this.bootOptions();
             } else {
                 this.dev = false;
                 document.body.classList.remove('modal-open');
             };
+        },
+        unlockAllCells: function () {
+            this.draw();
         }
     },
     mounted: function () {
@@ -325,7 +572,7 @@ Vue.component('route-maker', {
         if (!this.renderCanvas) 
             return h('span',{on: {click: () => this.renderCanvas = !this.renderCanvas}, style: {overflow: 'hidden', background: 'grey', height: '200px', width: '200px', verticalAlign: 'top', cursor: 'pointer'}}, [
                 h('img', {attrs: {src: './img/Raid-Hell_en.png'}}),
-                h('div', {style: {transform: "rotate(-45deg)", position: 'absolute', boxShadow: '#00000024 0 5px 8px', top: '8px', left: '-30px', padding: '5px 30px', color: 'white', backgroundColor: 'red'}}, 'NEW'),
+                //h('div', {style: {transform: "rotate(-45deg)", position: 'absolute', boxShadow: '#00000024 0 5px 8px', top: '8px', left: '-30px', padding: '5px 30px', color: 'white', backgroundColor: 'red'}}, 'NEW'),
                 h('span','Custom route')
             ]);
 
@@ -338,31 +585,48 @@ Vue.component('route-maker', {
                             h('button', {on: {click: () => this.mode = 'map'}}, 'Edit Map'),
                             h('button', {on: {click: () => this.mode = 'events'}}, 'Edit Events'),
                             h('button', {on: {click: () => this.mode = 'route'}}, 'Edit Routes'),
-                            h('button', {on: {click: () => this.moveMap(0,3)}}, 'Move down'),
-                            h('button', {on: {click: () => this.moveMap(0,-3)}}, 'Move up'),
-                            h('button', {on: {click: this.clearCanvas}}, 'Clear Canvas'),
-                            h('button', {on: {click: this.exportMapJSON}}, 'JSON Map'),
+                            h('button', {on: {click: () => this.moveMap(0,2)}}, 'Move down'),
+                            h('button', {on: {click: () => this.moveMap(0,-2)}}, 'Move up'),
+                            h('button', {on: {click: () => this.moveMap(-2,0)}}, 'Move left'),
+                            h('button', {on: {click: () => this.moveMap(2,0)}}, 'Move right'),
+                            h('br'),
+                            h('input', {type: 'text', ref: 'cellTextInput', style: {display: this.cellTextInput.display?'inline':'none'}}),
+                            !this.cellTextInput.display?h('button', {on: {click: () => {this.mode = 'text',this.userMessage('Select a cell.<br>Press SHIFT + Click to delete the text from a cell.')}}}, 'Add text'):h('button', {on: {click: () => this.addTextCell()}}, 'Add text to '+this.cellTextInput.cell),
+                            h('button', {on: {click: () => this.clearCanvas()}}, 'Clear Canvas'),
+                            h('button', {on: {click: () => this.newMap()}}, 'New Map'),
+                            h('button', {on: {click: () => this.downloadJSON(JSON.stringify(this.map/*, null, 2*/), this.map.name,'.json')}}, 'Download JSON map')
                         ]) : null,
                         this.mode==='events' ? h('div', {}, this.eventOptions.map((x,i) => {
-                            return h('button', {on: {click: () => this.eventType=i}}, 'Set '+ x.name);
+                            return h('button', {on: {click: () => {this.eventType=i,this.setLink=[]} }}, 'Set '+ x.name);
                         })) : null,
+                        this.mode==='events'&&this.eventOptions[this.eventType].type==='lock'? h('button', {on: {click: (event) => this.lockOrientation<3?this.lockOrientation++:this.lockOrientation=0}}, ['Up','Right','Down','Left'][this.lockOrientation]) :  null,
+                        this.mode==='events'&&this.eventType===7? h('span', this.setLink.length?'Set Destination':'Select Entry point'):null,
                         /*h('button', {on: {click: () => {this.currTheme==='dark' ? this.currTheme='white':this.currTheme='dark';this.draw();}}}, this.currTheme==='white'?'Dark map':'Light map'),
                         [64,40,32,24,16].map(x => {return h('button', {on: {click: () => this.changeCellSize(x) }}, 'x'+x)}),*/
-                        !this.dev?h('span', {class: 'modal-title'}, 'Custom Route Maker'):null
+                        !this.dev?h('span', {class: 'modal-title'}, 'Custom Route Maker v'+this.VERSION):null
                     ]),
-                    h('div', {style: {position: 'sticky', top: '73px'}}, [
-                        h('div', {class: 'noselect', style: {overflow: 'scroll', overscrollBehavior: 'contain', cursor: 'default', position: 'absolute', left: 0, backgroundColor: 'var(--bg-color)', maxHeight: this.hideRouteMenu?'40px':'300px', borderRadius: '0 0 13px', borderBottom: 'solid', borderRight: 'solid', borderColor: '#776048', width: '250px'}}, [
-                            h('div', [{name: 'Normal Raid', data: normalRaid}, {name: 'Hell Raid', data: hellRaid}].map(item => {return h('span', {on: {click: () => {this.map = item.data; this.clearRoutes()} }, style: {display: 'inline-block', width: '50%', padding: '10px 0', backgroundColor: this.map.name===item.name?'var(--bg-color-secondary)':null}}, item.name)}) ),
-                            h('span', {on: {click: () => {this.userRoutes.push([this.map.start]); this.currentRoute = this.userRoutes.length-1;this.draw()}}, class: 'fa fa-plus', style: {width: '50%', padding: '10px 0'}}, 'New Route'),
-                            h('span', {on: {click: this.clearRoutes}, class: 'fa fa-trash', style: {width: '50%', padding: '10px 0'}}, 'Delete all'),
-                            this.userRoutes.map( (x,i) => {
-                                return h('div', {on: {click: () => { this.currentRoute = i;}}, style: {backgroundColor: this.currentRoute===i?'var(--bg-color-secondary)':null, color: this.routeColor(i), textAlign: 'initial', padding: '15px'}}, [
-                                    h('span', {}, 'Route '+(i+1)),
-                                    h('i', {on: {click: () => this.deleteRoute(i)}, class: 'fa fa-trash', style: {float: 'right'}})
-                                ]);
-                            }),
-                            h('div', {on: {click: () => this.hideRouteMenu = !this.hideRouteMenu}, class: !this.hideRouteMenu?'fa fa-angle-double-up':'fa fa-angle-double-down',style: {cursor: 'pointer', position: 'sticky', height: '40px', width: '100%', bottom: 0, backgroundColor: '#776048', fontSize: '35px', color: 'white'}}),
-                        ])
+                    h('div', {style: {position: 'sticky', top: '73px', left: 0, right: 0}}, [
+                        h('div', {class: 'noselect', style: {overflow: 'scroll', overscrollBehavior: 'contain', cursor: 'default', position: 'absolute', left: 0, backgroundColor: 'var(--bg-color)', maxHeight: this.hideRouteMenu?'40px':'300px', borderRadius: '0 0 13px', borderBottom: 'solid', borderRight: 'solid', borderColor: '#776048', width: '250px'}}, 
+                            this.maps.length>0?[
+                                h('div', this.maps.map(item => {return h('span', {on: {click: () => {this.map = item; this.clearRoutes()} }, style: {display: 'inline-block', width: '50%', padding: '10px 0', backgroundColor: this.map.name===item.name?'var(--bg-color-secondary)':null}}, item.name)}) ),
+                                h('div', [
+                                    this.map.name&&!this.map.name.indexOf('Nixied') ? h('label', {class: 'check', style: {textAlign: 'initial', fontSize: '16px'}}, [
+                                        h('input', {attrs: {type: 'checkbox'}, on: {click: (e) => this.unlockAllCells = e.target.checked}}),
+                                        h('span', {class: 'checkmark'}),
+                                        'Unlock all cells'
+                                    ]) : null
+                                ]),
+                                h('span', {on: {click: () => {this.userRoutes.push([this.map.start]); this.currentRoute = this.userRoutes.length-1;this.draw()}}, class: 'fa fa-plus', style: {width: '50%', padding: '10px 0'}}, 'New Route'),
+                                h('span', {on: {click: this.clearRoutes}, class: 'fa fa-trash', style: {width: '50%', padding: '10px 0'}}, 'Delete all'),
+                                this.userRoutes.map( (x,i) => {
+                                    return h('div', {on: {click: () => { this.currentRoute = i;}}, style: {backgroundColor: this.currentRoute===i?'var(--bg-color-secondary)':null, color: this.routeColor(i), textAlign: 'initial', padding: '15px'}}, [
+                                        h('span', {}, `Route ${i+1} (${(this.map.type==='raid'?100:80)-this.totalMorale[i]<0?Math.abs((this.map.type==='raid'?100:80)-this.totalMorale[i]):0})`),
+                                        h('i', {on: {click: () => this.deleteRoute(i)}, class: 'fa fa-trash', style: {float: 'right'}})
+                                    ]);
+                                }),
+                                h('div', {on: {click: () => this.hideRouteMenu = !this.hideRouteMenu}, class: !this.hideRouteMenu?'fa fa-angle-double-up':'fa fa-angle-double-down',style: {cursor: 'pointer', position: 'sticky', height: '40px', width: '100%', bottom: 0, backgroundColor: '#776048', fontSize: '35px', color: 'white'}}),
+                            ]:null
+                        )
                     ]),
                     h('p',{style: {textAlign: 'center', marginTop: '45px'}}, [
                         h('b', 'Click'),
@@ -377,7 +641,8 @@ Vue.component('route-maker', {
                         h('br'),
                         h('b', {style: {fontSize: '20px'}}, 'If you encounter any problems with this tool feel free to contact me on discord: gio#0898')
                     ]),
-                    h('canvas', {ref: 'route_canvas', on: {mousedown: (event) => {this.isMouseDown = true; this.addTile(event)}, mousemove: (event) => {if (this.isMouseDown) this.addTile(event)}, mouseup: () => this.isMouseDown = false, mouseleave: () => this.isMouseDown = false}, style: {/*border: 'solid thin white'*/}, attrs: {height: this.mapSize*this.cellSize, width: this.mapSize*this.cellSize}})
+                    this.maps.length===0? h('div', {style: {fontSize:'34px'}}, 'Downloading maps...'):null,
+                    h('canvas', {ref: 'route_canvas', on: {mousedown: (event) => {this.isMouseDown = true; this.addTile(event)}, mousemove: (event) => this.handleMuseEvent(event), mouseup: () => this.isMouseDown = false, mouseleave: () => this.isMouseDown = false}, style: {margin: '30px'/*border: 'solid thin white'*/}, attrs: {height: this.mapSize*this.cellSize, width: this.mapSize*this.cellSize}})
                 ] : null
             ])
         ]);
