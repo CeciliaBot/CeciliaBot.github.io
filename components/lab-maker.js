@@ -4,7 +4,15 @@ function getCoords(e,size) {
     const mouseY = e.clientY - y;
     return [Math.floor(mouseX / size), Math.floor(mouseY / size)];
 }
-
+function drawStroked(text, size, x, y, ctx,color) {
+    ctx.font = size+"px Sans-serif"
+    if (color && color[0]) ctx.strokeStyle = color[0];
+    ctx.lineWidth = size/11;
+    ctx.strokeText(text, x, y);
+    if (color && color[1]) ctx.fillStyle = color[1];
+    else ctx.fillStyle = 'white';
+    ctx.fillText(text, x, y);
+}
 Vue.component('route-maker', {
     name: 'route-maker',
     props: {
@@ -36,7 +44,7 @@ Vue.component('route-maker', {
                     cellStroke: 'grey',
                     cellStrokeWidth: 2,
                     lineWidth: 5,
-                    null: 'white',
+                    null: 'white',//'#e3e0e0',
                     shop: '#4CAF50',
                     battle: '#4a86e8',//'#3ed7f0',
                     'mini-boss': 'yellow',
@@ -83,11 +91,7 @@ Vue.component('route-maker', {
             });
         },
         clearCanvas: function () {
-            this.map = {
-                name: this.map.start,
-                start: null,
-                data: {}
-            };
+            this.map.data = {};
             this.clearRoutes();
             this.draw();
         },
@@ -128,10 +132,22 @@ Vue.component('route-maker', {
         routeColor: function (i) {
             var color = ['red','green','blue','orange','pink','purple','cyian']
             return color[i%color.length];
+            //return('#'+Math.floor(i*16777215).toString(16))
+        },
+        isDeadEnd: function (x,y,cells) {
+            var c=0;
+            [[x+1,y],[x-1,y],[x,y+1],[x,y-1]].forEach((item,i) => {
+                if (cells[item[0]+'-'+item[1]]) c++;
+            });
+            if (c<2) return true;
+            return false;
         },
         isCrossWalk: function (key,cells) {
             var x = Number(key.split(/\b-/)[0]), y = Number(key.split(/\b-/)[1]);
-            if ((cells[(x-1)+"-"+y] || cells[(x+1)+"-"+y]) && (cells[x+"-"+(y-1)] || cells[x+"-"+(y+1)]) ) return true;
+            if (cells[key].crossroad) return true;
+            else if ((cells[(x-1)+"-"+y] || cells[(x+1)+"-"+y]) && (cells[x+"-"+(y-1)] || cells[x+"-"+(y+1)]) ) return true;
+            if(this.isDeadEnd(x,y,cells)) return true;
+            else if (cells[key].type==='tp'||cells[key].type==='portal') return true;
             return false;
         },
         hasTeleported: function (newKey,oldKey) {
@@ -143,7 +159,6 @@ Vue.component('route-maker', {
         isUnlocked: function (key, i) {
             if (this.unlockAllCells) return true;
             if (!key) return true;
-            //if (this.userRoutes[i].indexOf(cells[key].ref)!=-1 || (this.userRoutes.some( (item,index) => {if (index>=i)return; return item.includes(cells[key].ref)}))) return true;
             if (this.userRoutes[i].indexOf(key)!=-1 || (this.userRoutes.some( (item,index) => {if (index>=i)return; return item.includes(key)}))) return true;
             return false;
         },
@@ -158,30 +173,58 @@ Vue.component('route-maker', {
             var tmp = [];
             for (var i = 0; i < this.userRoutes.length; i++) {
                 tmp[i] = 0;
+                var v2 = {w: this.userRoutes[i].length-1, c: 0, b: 0, tp: 0, p:0};
                 for (var j = 0; j < this.userRoutes[i].length; j++) {
                     if (j===0) continue; //start point
                     var isLast = j===this.userRoutes[i].length-1;
                     var key = this.userRoutes[i][j];
+                    var willBackTrack = this.userRoutes[i][j-1] === this.userRoutes[i][j+1];
                     var cell = this.map.data[key];
+
+                    if(cell.type==='tp' && this.hasTeleported(key,this.userRoutes[i][j-1])) v2.tp++;
+                    else if (['battle','mini-boss','boss'].includes(cell.type)) {
+                        var isCrossWalk = this.isCrossWalk(key,this.map.data);
+                        var wasCrossWalk = this.isCrossWalk(this.userRoutes[i][j-1],this.map.data);
+                        var isBattleOver = (this.map.type==='raid' && this.userRoutes.some( (item,index) => {if (index>=i)return; return item.includes(key)})) || this.userRoutes[i].indexOf(key)<j;
+                        if (!isBattleOver) {
+                            if (!isLast) {
+                                if (!isCrossWalk) {
+                                    if (willBackTrack && !wasCrossWalk) v2.w--;
+                                    v2.b++;
+                                }
+                                    else v2.c++;
+                            } else {
+                                if (isCrossWalk || wasCrossWalk) null 
+                                else v2.w--;
+                            };
+                        };
+                    }
+                    else if (cell.type === 'portal' && this.hasTeleported(key,this.userRoutes[i][j-1])) v2.p++;
+                    continue;
+
                     if (cell.type==='tp') { // Applay teleporting cost
                         if (this.hasTeleported(key,this.userRoutes[i][j-1])) tmp[i] += 3;
-                        else tmp[i] += 1;
+                        else tmp[i]++;
                         continue;
                     } else if (['battle','mini-boss','boss'].includes(cell.type)) {
                         var isCrossWalk = this.isCrossWalk(key,this.map.data);
+                        var wasCrossWalk = this.isCrossWalk(this.userRoutes[i][j-1],this.map.data);
                         var isBattleOver = (this.map.type==='raid' && this.userRoutes.some( (item,index) => {if (index>=i)return; return item.includes(key)})) || this.userRoutes[i].indexOf(key)<j;
                         if (!isBattleOver) {
                             if (!isLast) {
                                 tmp[i]++;
                                 if (!isCrossWalk) {
+                                    if (willBackTrack && !wasCrossWalk) tmp[i]-=2; /* Walking back will cost nothing */
                                     tmp[i]+=6;
-                                } else 
+                                } else {
                                     tmp[i]+=7;
-                            } else if (isCrossWalk) {
+                                };
+                            } else if (isCrossWalk || wasCrossWalk) {
                                 tmp[i]++;
                             };
-                        } else 
+                        } else {
                             tmp[i]++;
+                        };
                     } else if (cell.type === 'portal') {
                         if (this.hasTeleported(key,this.userRoutes[i][j-1])) tmp[i] += 0;
                         else tmp[i]++;
@@ -190,7 +233,9 @@ Vue.component('route-maker', {
                         tmp[i]++;
                     };
                 };
+                tmp[i] = v2.w-v2.tp + v2.c*7+v2.b*6+v2.tp*3-v2.p;
             };
+            //if (this.dev) console.log(v2,'Morale:', v2.w-v2.tp + v2.c*7 + v2.b*6 + v2.tp*3 - v2.p, 'Explore:', v2.w-v2.tp-v2.p, 'Battle:', v2.c*7 + v2.b*6, 'Waypoint:', v2.tp*3);
             this.totalMorale = tmp;
             return tmp;
         },
@@ -223,6 +268,13 @@ Vue.component('route-maker', {
                     var refxy = this.map.data[key].ref.split(/\b-/);
                     var refx = Number(refxy[0]), refy = Number(refxy[1]);
                     tmp.data[newkey].ref = (refx+x) + '-' + (refy+y);
+                };
+                if (tmp.data[newkey].lock) {
+                    tmp.data[newkey].lock.forEach((item,i) => {
+                        if (!item) return;
+                        var [lx,ly] = item.split(/\b-/);
+                        tmp.data[newkey].lock[i] = (Number(lx)+x)+  '-' +(Number(ly)+y);
+                    });
                 };
             });
             if (this.map.start!=null) {
@@ -324,10 +376,10 @@ Vue.component('route-maker', {
             var ctx = this.ctx;
             if (cell.text) {
                 let l = cell.text.length;
-                ctx.font = `${this.cellSize/2}px Arial`;
                 ctx.fillStyle = 'black';
                 ctx.textAlign = 'center';
-                ctx.fillText(cell.text, p[0]*this.cellSize+this.cellSize/2, p[1]*this.cellSize+this.cellSize-8);
+                //ctx.fillText(cell.text, p[0]*this.cellSize+this.cellSize/2, p[1]*this.cellSize+this.cellSize-8);
+                drawStroked(cell.text, Math.ceil(this.cellSize/1.7), p[0]*this.cellSize+this.cellSize/2,p[1]*this.cellSize+this.cellSize-8, ctx,['black','white'])
                 ctx.textAlign = 'start';
             };
         },
@@ -337,21 +389,23 @@ Vue.component('route-maker', {
             if (!Array.isArray(cell.lock)) return;
             ctx.beginPath();
             ctx.lineWidth = this.pathLineWidth*1.5;
-            ctx.strokeStyle = 'purple';
+            ctx.strokeStyle = 'red';
             ctx.font = `${this.cellSize/1.7}px Arial`;
             ctx.fillStyle = 'purple';
             if (cell.lock[0] && !this.isUnlocked(cell.lock[0],this.currentRoute)) {//top
                 ctx.moveTo(p[0]*this.cellSize,p[1]*this.cellSize);
                 ctx.lineTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize);
                 if (this.map.data[cell.lock[0]].text) {
-                    ctx.fillText(this.map.data[cell.lock[0]].text.slice(2), p[0]*this.cellSize+this.cellSize+5,p[1]*this.cellSize);
+                    drawStroked(this.map.data[cell.lock[0]].text.slice(2), this.cellSize/1.7, p[0]*this.cellSize+this.cellSize+5, p[1]*this.cellSize, ctx)
+                    //ctx.fillText(this.map.data[cell.lock[0]].text.slice(2), p[0]*this.cellSize+this.cellSize+5,p[1]*this.cellSize);
                 };
             };
             if (cell.lock[1] && !this.isUnlocked(cell.lock[1],this.currentRoute)) {//right
                 ctx.moveTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize);
                 ctx.lineTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize);
                 if (this.map.data[cell.lock[1]].text) {
-                    ctx.fillText(this.map.data[cell.lock[1]].text.slice(2), p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize+20);
+                    drawStroked(this.map.data[cell.lock[1]].text.slice(2), this.cellSize/1.7, p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize+20, ctx)
+                    //ctx.fillText(this.map.data[cell.lock[1]].text.slice(2), p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize+20);
                 };
             };
             if (cell.lock[2] && !this.isUnlocked(cell.lock[2],this.currentRoute)) {//bottom
@@ -359,14 +413,16 @@ Vue.component('route-maker', {
                 ctx.lineTo(p[0]*this.cellSize+this.cellSize,p[1]*this.cellSize+this.cellSize);
                 if (this.map.data[cell.lock[2]].text) {
                     ctx.textAlign = 'right';
-                    ctx.fillText(this.map.data[cell.lock[2]].text.slice(2), p[0]*this.cellSize-5,p[1]*this.cellSize+this.cellSize);
+                    drawStroked(this.map.data[cell.lock[2]].text.slice(2), this.cellSize/1.7, p[0]*this.cellSize-5,p[1]*this.cellSize+this.cellSize, ctx)
+                    //ctx.fillText(this.map.data[cell.lock[2]].text.slice(2), p[0]*this.cellSize-5,p[1]*this.cellSize+this.cellSize);
                 };
             };
             if (cell.lock[3] && !this.isUnlocked(cell.lock[3],this.currentRoute)) {//left
                 ctx.moveTo(p[0]*this.cellSize,p[1]*this.cellSize);
                 ctx.lineTo(p[0]*this.cellSize,p[1]*this.cellSize+this.cellSize);
                 if (this.map.data[cell.lock[3]].text) {
-                    ctx.fillText(this.map.data[cell.lock[3]].text.slice(2), p[0]*this.cellSize,p[1]*this.cellSize-5);
+                    drawStroked(this.map.data[cell.lock[3]].text.slice(2), this.cellSize/1.7, p[0]*this.cellSize,p[1]*this.cellSize-5, ctx)
+                    //ctx.fillText(this.map.data[cell.lock[3]].text.slice(2), p[0]*this.cellSize,p[1]*this.cellSize-5);
                 };
             };
             ctx.textAlign = 'start';
@@ -389,12 +445,16 @@ Vue.component('route-maker', {
                 ctx.lineWidth = this.theme[this.currTheme].cellStrokeWidth;
                 ctx.strokeStyle = this.theme[this.currTheme].cellStroke;
                 ctx.stroke();
+                if (this.dev && this.isCrossWalk(key,this.map.data)) {
+                    ctx.font = `${this.cellSize/1.7}px Arial`;
+                    ctx.fillStyle = 'purple';ctx.fillText('x', positionX*this.cellSize,positionY*this.cellSize+this.cellSize/2-5);
+                }
             });
             Object.keys(this.map.data).forEach((key) => {
                 var positionX = Number(key.split(/\b-/)[0]);
                 var positionY = Number(key.split(/\b-/)[1]);
-                this.drawIcons([positionX,positionY],this.map.data[key]);
                 this.drawLockWalls([positionX,positionY],this.map.data[key],ctx);
+                this.drawIcons([positionX,positionY],this.map.data[key]);
             });
             this.drawRoutes();
         },
@@ -503,6 +563,12 @@ Vue.component('route-maker', {
                             this.map.data[key].type = this.eventOptions[this.eventType].type;
                     };
                 };
+            } else if (this.mode==='crossroad') {
+                if (mouseEvent.shiftKey) {
+                    delete this.map.data[key].crossroad;
+                } else {
+                    this.map.data[key].crossroad = true;
+                };
             } else if (this.mode==='text') {
                 if (mouseEvent.shiftKey) {
                     delete this.map.data[key].text;
@@ -531,6 +597,10 @@ Vue.component('route-maker', {
         }
     },
     watch: {
+        dev: function () {
+            this.mode = 'route';
+            this.eventType = 0;
+        },
         renderCanvas: function (status) {
             if (this.renderCanvas===true) {
                 if (gtag && this.firstRender) {
@@ -585,6 +655,7 @@ Vue.component('route-maker', {
                             h('button', {on: {click: () => this.mode = 'map'}}, 'Edit Map'),
                             h('button', {on: {click: () => this.mode = 'events'}}, 'Edit Events'),
                             h('button', {on: {click: () => this.mode = 'route'}}, 'Edit Routes'),
+                            h('button', {on: {click: () => this.mode = 'crossroad'}}, 'Set Crossroad'),
                             h('button', {on: {click: () => this.moveMap(0,2)}}, 'Move down'),
                             h('button', {on: {click: () => this.moveMap(0,-2)}}, 'Move up'),
                             h('button', {on: {click: () => this.moveMap(-2,0)}}, 'Move left'),
