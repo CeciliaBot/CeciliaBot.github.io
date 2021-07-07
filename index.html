@@ -744,9 +744,10 @@ icon-bar span img {
 .dropdown-content > div:hover, .dropdown-content > a:hover {
   background-color: var(--search-border-color);
   color: white;
+  transition: display 2s; 
 }
-.dropdown:hover .dropdown-content {display: block;}
-
+.dropdown:hover > .dropdown-content {display: block;}
+/*.dropdown:hover > .dropdown-content:active {transition-delay: 1s; display: none;}*/
 
 .extras_grid {
   display: grid;
@@ -1574,6 +1575,16 @@ icon-bar span img {
             <div id="whats_new_content" style="display: none;">
               <ul>
                 <li style="color: #007FFF">
+                  <b>08/07/2021</b>: More sorting options<br>
+                  Now you can sort by the reaction value to camping topics, for example you can sort by "Advice".<br>
+                  Topic filtering will be added soon (TM).
+                </li>
+                <li style="color: #007FFF">
+                  <b>22/06/2021</b>: Custom Lab Maker<br>
+                  A simple route maker for Nixied and Raid.<br>
+                  To access it go to "Maps" and click on "Custom route".
+                </li>
+                <li style="color: #007FFF">
                   <b>19/02/2021</b>: Friendship Farming?<br>
                   If you don't care about morale and you're just friendship farming in labyrinth you can use this new function to quickly find the best companions for your character.<br>
                   Right click a character and select "{{strings.calculate_highest_friendship}}". The results will be displayed in the same tab as normal morale but the numbers displayed under the "{{strings.morale}}" column are the friendship gains for your character not your team's morale.<br>
@@ -1841,6 +1852,19 @@ icon-bar span img {
             <div class="active" onclick="app.databaseSort='attribute'; this.parentElement.style.display='none'">{{strings.attribute}}</div>
             <div class="active" onclick="app.databaseSort='role'; this.parentElement.style.display='none'">{{strings.classe}}</div>
             <div class="active" onclick="app.databaseSort='id'; this.parentElement.style.display='none'">{{strings.ingame_id}}</div>
+            <div class="active dropdown" onclick="var x = this.getBoundingClientRect().right; if (document.body.getBoundingClientRect().right-x>320)document.getElementById('dropdown_sort_by_topic').style.left='100%'; else document.getElementById('dropdown_sort_by_topic').style.left='-200%'" onmouseover="document.getElementById('dropdown_sort_by_topic').style.removeProperty('display')">{{strings.topics}}
+              <span style="float:right">></span>
+              <div id="dropdown_sort_by_topic" class="dropdown-content" style="top:-500%;left:100%; width:320px">
+                <div v-for="t in ['Advice','Belief','Bizarre Story','Comforting Cheer','Complain','Criticism','Cute Cheer','Dream','Food Story','Gossip','Happy Memories','Heroic Cheer','Heroic Tale','Horror Story','Interesting Story','Joyful Memory','Myth','Occult','Reality Check','Sad Memory','Self-Indulgent','Unique Comment']"
+                 class="active" 
+                 v-on:click="databaseSort=['c_values',t]"
+                 onclick="this.parentElement.style.display='none'"
+                 style='display: inline-block; width: 50%; box-sizing: border-box;'
+                >
+                  {{translateTopics(t)}}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button class="search_hero_area search_hero_filter" v-on:click="alertUserAction('addDisplayed');" style="margin-right: 30px; width: auto; font-size: 16px; font-size:16px; width:90px; width: auto;">{{strings.add_displayed_heroes}}</button>
@@ -1867,7 +1891,7 @@ icon-bar span img {
 	      </template>
         <template v-else-if="displayStyle === 'list'">  <!-- Lista -->
          <table class="displaylistTable" style="margin-left:auto;margin-right:auto;">
-          <tr v-for="key in displayList">
+          <tr v-for="key in sortedHeroDB" v-if="displayList.includes(key)">
             <td>
               <div class="hero_potrait" @contextmenu="rightClickHero(key, $event)">
                 <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
@@ -1980,6 +2004,19 @@ icon-bar span img {
             <div class="active" onclick="app.rosterSort='attribute'; this.parentElement.style.display='none'">{{strings.attribute}}</div>
             <div class="active" onclick="app.rosterSort='role'; this.parentElement.style.display='none'">{{strings.classe}}</div>
             <div class="active" onclick="app.rosterSort='id'; this.parentElement.style.display='none'">{{strings.ingame_id}}</div>
+            <div class="active dropdown" onclick="var x = this.getBoundingClientRect().right; if (document.body.getBoundingClientRect().right-x>320)document.getElementById('dropdown_sort_by_topic_b').style.left='100%'; else document.getElementById('dropdown_sort_by_topic_b').style.left='-200%'" onmouseover="document.getElementById('dropdown_sort_by_topic_b').style.removeProperty('display')">{{strings.topics}}
+              <span style="float:right">></span>
+              <div id="dropdown_sort_by_topic_b" class="dropdown-content" style="top:-600%;left:100%; width:320px">
+                <div v-for="t in ['Advice','Belief','Bizarre Story','Comforting Cheer','Complain','Criticism','Cute Cheer','Dream','Food Story','Gossip','Happy Memories','Heroic Cheer','Heroic Tale','Horror Story','Interesting Story','Joyful Memory','Myth','Occult','Reality Check','Sad Memory','Self-Indulgent','Unique Comment']"
+                 class="active" 
+                 v-on:click="rosterSort=['c_values',t]"
+                 onclick="this.parentElement.style.display='none'"
+                 style='display: inline-block; width: 50%; box-sizing: border-box;'
+                >
+                  {{translateTopics(t)}}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button class="search_hero_area search_hero_filter" v-on:click="alertUserAction('removeDisplayed');" style="margin-right: 30px; width: auto; font-size: 16px; font-size:16px; width:90px; width: auto;">{{strings.remove_displayed_heroes}}</button>
@@ -2005,7 +2042,7 @@ icon-bar span img {
       </template>
       <template v-else-if="displayStyle === 'list'">  <!-- Lista -->
         <table id="myHeroes" class="displaylistTable" style="margin-left:auto;margin-right:auto;">
-         <tr v-for="key in displayMyHeroes">
+         <tr v-for="key in roster" v-if="displayMyHeroes.includes(key)">
            <td>
              <div class="hero_potrait" @contextmenu="rightClickHero( key, $event)">
                <img v-bind:src="getHeroAssets(key).icon" onerror="this.onerror=null; this.src=app.getHeroAssets(this.alt, 'onerror').icon" style="width:70px;vertical-align: middle;top:15px;" v-on:click="addHero(thisHeroData(key)._id)" v-bind:alt="thisHeroData(key)._id" v-bind:titolo="thisHeroData(key).name"/>
@@ -3491,8 +3528,7 @@ icon-bar span img {
         components: {
           pagination: pagination,
           "hero-icon": hero_icon,
-          hero_selector: hero_selector,
-          //"route-maker": route_maker
+          hero_selector: hero_selector
         },
         data: function () {
             return {
@@ -6369,6 +6405,17 @@ icon-bar span img {
           this.getUserHeroesBoot(); // get heroes list from file
         };
       },
+      sortCharacters: function (a,o=['data','name']) {
+        !Array.isArray(o)?o=[null,o]:null;
+        if (!o[0] || o[0] === 'data') {
+          if (o[1]!='rarity' && o[1]!='date') return a.sort((x, y) => { return (this.thisHeroData(x)[o[1]] > this.thisHeroData(y)[o[1]] ) - (this.thisHeroData(x)[o[1]] < this.thisHeroData(y)[o[1]] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+          else if (o[1] =="rarity") return a.sort((x, y) => { return (this.thisHeroData(x)[o[1]] < this.thisHeroData(y)[o[1]] ) - (this.thisHeroData(x)[o[1]] > this.thisHeroData(y)[o[1]] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+          else return a;
+        } else if (o[0]==='c_values') {
+          return a.sort((x, y) => { return (this.thisHeroData(x).camping.values[o[1]] < this.thisHeroData(y).camping.values[o[1]] ) - (this.thisHeroData(x).camping.values[o[1]] > this.thisHeroData(y).camping.values[o[1]] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+        } else
+          return a;
+      },
       boot: function () {
         try {
           var urlParams = new URLSearchParams(window.location.search);
@@ -6430,17 +6477,18 @@ icon-bar span img {
         },
         sortedHeroDB: function () {
           this.databaseNumber;
+          if (this.databaseNumber<1) return [];
           var sortBy = this.databaseSort, list = Object.keys(this.HeroDB), banned = ["dark-tyrant-tenebria"];
-          for (var i=0; i<list.length;i++) if (this.myHeroesList[list[i]] || banned.includes(list[i])) list.splice(list.indexOf(list[i]),1),i--;
-          if (sortBy !="rarity") return list.sort((x, y) => { return (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
-          else if (sortBy =="rarity") return list.sort((x, y) => { return (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
+          for (var i=0; i<banned.length;i++) {
+            let index=list.indexOf(banned[i]);
+            if (index!=-1) list.splice(index,1);
+          };
+          return this.sortCharacters(list,sortBy);
         },
         roster: function() {
           this.rosterLength;
           var sortBy = this.rosterSort;
-          if (sortBy != "date" && sortBy !="rarity") return Object.keys(this.myHeroesList).sort((x, y) => { return (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
-          else if (sortBy =="rarity") return Object.keys(this.myHeroesList).sort((x, y) => { return (this.thisHeroData(x)[sortBy] < this.thisHeroData(y)[sortBy] ) - (this.thisHeroData(x)[sortBy] > this.thisHeroData(y)[sortBy] ) || (this.thisHeroData(x).name > this.thisHeroData(y).name ) - (this.thisHeroData(x).name < this.thisHeroData(y).name ) });
-          else return Object.keys(this.myHeroesList);
+          return this.sortCharacters(Object.keys(this.myHeroesList),sortBy);
         },
         computedGetSavedTeamsStats: function () {
           this.getSavedTeamsStats();
