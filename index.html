@@ -6479,10 +6479,7 @@ icon-bar span img {
           this.databaseNumber;
           if (this.databaseNumber<1) return [];
           var sortBy = this.databaseSort, list = Object.keys(this.HeroDB), banned = ["dark-tyrant-tenebria"];
-          for (var i=0; i<banned.length;i++) {
-            let index=list.indexOf(banned[i]);
-            if (index!=-1) list.splice(index,1);
-          };
+          for (var i=0; i<list.length;i++) if (this.myHeroesList[list[i]] || banned.includes(list[i])) list.splice(list.indexOf(list[i]),1),i--;
           return this.sortCharacters(list,sortBy);
         },
         roster: function() {
