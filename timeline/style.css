@@ -1,0 +1,683 @@
+:root {
+    --primary-color: #fff;
+    --background-color: #252B35; /*linear-gradient(54deg, #9164ff, #8bfff4);*/
+    --text-color: #3c3f64;
+    /* From CeciliaBot */
+    --font-color: #A1AEBD;
+    --bg-color: #252B35;
+    --bg-color-secondary: #1e2126;
+    --search-primary-color: #181C22;
+    --search-border-color: #0e0f11;
+    --colore-check-eroi: red;
+    --icon-bar: #1e2126;
+    --icon-bar-alt: #252B35;
+    --icon-bar-active: #4CAF50;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+body {
+    font: normal 16px/1.5 'Titillium Web', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    height: 100wv;
+}
+.modal-open {
+  overflow-x: hidden;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.date {
+    position: absolute;
+    top: calc(40% - 50px);
+    color: white;
+    transform: rotate(-45deg)
+}
+span.tevent {
+    font-size: 70px;
+    margin-left: -0.4em;
+    position: absolute;
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    top: 100%;
+    transform: translateY(-100%);
+    color: var(--icon-bar-active);
+    height: max-content;
+    opacity: 0.5;
+    max-height: 100%;
+    text-align: end;
+    /*pointer-events: none;*/
+    text-decoration: none;
+    z-index: 1;
+}
+span.tevent a {
+  text-decoration: none;
+  color: inherit;
+}
+.timeline {
+    position: relative;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding-left: 100px;
+    height: 100%; 
+}  /* set here the height of the timeline */
+.timeline .dummy {
+    visibility: none;
+    opacity: 0;
+    width: 0 !important;
+    pointer-events: none;
+}
+/* middle line */
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    top: calc(40% - 1px);
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+}
+.timeline > li > span {
+}
+.timeline > li {
+    display: flex;
+    margin: 0 5px;
+    width: 350px; /* 70px * 7 days */
+    /*min-width: 200px;*/
+    border-left: thin dashed white;
+}
+
+.timeline .banner{
+    /*display: flex;
+    position: absolute;*/
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    border: 1px var(--primary-color) solid;
+    background-color: red;
+    border-radius: 30px;
+    margin: 5px 0;
+    align-self: end;
+    cursor: pointer;
+}
+.timeline .banner.mystic {
+    position: absolute;
+    top: 40px;
+    background: purple;
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/237/281/286/space-universe-nebula-star-wallpaper-preview.jpg);
+    background-size: cover;
+    color: white;
+}
+.timeline .banner.covenant {
+    background-color: white;
+}
+.timeline .banner.limited {
+    background-color: var(--icon-bar-active);
+}
+.timeline .wrapper {
+    position: absolute;
+    top: calc(40% + 10px);
+    width: 0;
+}
+/* style for the dot over the timeline */
+.timeline > li:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%) translateX(-11px) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    border: solid thick #fff;
+    background: #4CAF50;   
+}
+:root {
+    --primary-color: #fff;
+    --background-color: #252B35; /*linear-gradient(54deg, #9164ff, #8bfff4);*/
+    --text-color: #3c3f64;
+    /* From CeciliaBot */
+    --font-color: #A1AEBD;
+    --bg-color: #252B35;
+    --bg-color-secondary: #1e2126;
+    --search-primary-color: #181C22;
+    --search-border-color: #0e0f11;
+    --colore-check-eroi: red;
+    --icon-bar: #1e2126;
+    --icon-bar-alt: #252B35;
+    --icon-bar-active: #4CAF50;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+body {
+    font: normal 16px/1.5 'Titillium Web', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    height: 100wv;
+}
+.modal-open {
+  overflow-x: hidden;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.date {
+    position: absolute;
+    top: calc(40% - 50px);
+    color: white;
+    transform: rotate(-45deg)
+}
+span.tevent {
+    font-size: 70px;
+    margin-left: -0.4em;
+    position: absolute;
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    top: 100%;
+    transform: translateY(-100%);
+    color: var(--icon-bar-active);
+    height: max-content;
+    opacity: 0.5;
+    max-height: 100%;
+    text-align: end;
+    /*pointer-events: none;*/
+    text-decoration: none;
+    z-index: 1;
+}
+span.tevent a {
+  text-decoration: none;
+  color: inherit;
+}
+.timeline {
+    position: relative;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding-left: 100px;
+    height: 100%; 
+}  /* set here the height of the timeline */
+.timeline .dummy {
+    visibility: none;
+    opacity: 0;
+    width: 0 !important;
+    pointer-events: none;
+}
+/* middle line */
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    top: calc(40% - 1px);
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+}
+.timeline > li > span {
+}
+.timeline > li {
+    display: flex;
+    margin: 0 5px;
+    width: 350px; /* 70px * 7 days */
+    /*min-width: 200px;*/
+    border-left: thin dashed white;
+}
+
+.timeline .banner{
+    /*display: flex;
+    position: absolute;*/
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    border: 1px var(--primary-color) solid;
+    background-color: red;
+    border-radius: 30px;
+    margin: 5px 0;
+    align-self: end;
+    cursor: pointer;
+}
+.timeline .banner.mystic {
+    position: absolute;
+    top: 40px;
+    background: purple;
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/237/281/286/space-universe-nebula-star-wallpaper-preview.jpg);
+    background-size: cover;
+    color: white;
+}
+.timeline .banner.covenant {
+    background-color: white;
+}
+.timeline .banner.limited {
+    background-color: var(--icon-bar-active);
+}
+.timeline .wrapper {
+    position: absolute;
+    top: calc(40% + 10px);
+    width: 0;
+}
+/* style for the dot over the timeline */
+.timeline > li:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%) translateX(-11px) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    border: solid thick #fff;
+    background: #4CAF50;   
+}
+
+
+/* style for the event arrow */
+.timeline .banner:before {
+  display: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -1px) rotateZ(45deg);
+    background: #fff;
+}
+div .icon_container {
+    /*width: 100%;*/
+    overflow: hidden;
+    position: sticky;
+    right: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    float: right;
+}
+div .icon_container > img{
+    height: inherit;
+    overflow: clip;
+}
+.upulls {
+  display: inline-block;
+  white-space: pre-line;
+}
+.modal {
+    backdrop-filter: blur(8px);
+}
+.modal {
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    box-sizing: border-box;
+}
+.modal * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.modal::-webkit-scrollbar { /*Chrome scrollbar*/
+  display: none;
+}
+.modal-content {
+    margin: 2% auto auto;
+    border: 4px solid #776048;
+    border-radius: 12px;
+    width: 80%;
+    max-height: 90%;
+    padding: 10px;
+    background-color: var(--search-primary-color);
+    color: var(--font-color);
+}
+.modal-title {
+  width: 100%;
+  font-size: 35px;
+  text-align: initial;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.modal-text {
+  width: 100%;
+  font-size: 18px;
+  text-align: initial;
+}
+.modal-three-parts {
+  display: flex; 
+  flex-direction: column;
+}
+.modal-three-parts > div {
+  padding: 16px;
+}
+.modal-three-parts > div:first-of-type {
+  flex: 0 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: solid thin #776048;
+  position:relative
+}
+.modal-three-parts > div:not(:first-of-type, :last-of-type) {
+  overflow: auto;
+  flex: 1; 
+  text-align: center;
+}
+.modal-three-parts > div:last-of-type {
+  flex: 0 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: solid thin #776048;
+  min-height: fit-content;
+  overflow: hidden;
+}
+/* Add Zoom Animation */
+.animate {
+  animation: animatezoom 0.5s;
+  -webkit-animation: animatezoom 0.5s;
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+.modal-button {
+  cursor: pointer;
+  height: 48px; 
+  min-width: 130px; 
+  background-color: var(--bg-color-secondary); 
+  border: 1px solid rgb(119, 96, 72); 
+  border-radius: 10px; 
+  color: var(--font-color); 
+  font-size: 20px; 
+  padding: 5px 20px;
+  outline: none;
+}
+.modal-button:not(:last-of-type) {
+  margin-right: 30px;
+}
+.modal-button:hover {
+  opacity: 0.6;
+}
+img.game-item {
+  height: 70px;
+  vertical-align: middle;
+}
+
+#icon_bar {
+  position: fixed;
+  z-index: 40;
+  height: 40px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--icon-bar);
+  padding: 5px;
+  color: white;
+}
+div.icon_bar_small {
+  background-color: var(--bg-color);
+  height: 100%;
+  min-width: 35px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+@media screen and (max-height: 600px) {
+  .banner {
+    height: 70px !important;
+  }
+  .banner.mystic {
+    top: calc(100% - 120px) !important;
+  }
+  .timeline .wrapper {
+    top: calc(10% + 10px);
+  }
+  .date {
+    top: calc(10% - 20px);
+    transform: rotate(0deg);
+  }
+  .timeline:before {
+    top: 10%;
+    top: calc(10% - 1px);
+  }
+  .timeline > li:before {
+      top: 10%;
+  }
+}
+
+/* style for the event arrow */
+.timeline .banner:before {
+  display: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -1px) rotateZ(45deg);
+    background: #fff;
+}
+div .icon_container {
+    /*width: 100%;*/
+    overflow: hidden;
+    position: sticky;
+    right: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    float: right;
+}
+div .icon_container > img{
+    height: inherit;
+    overflow: clip;
+}
+.upulls {
+  display: inline-block;
+  white-space: pre-line;
+}
+.modal {
+    backdrop-filter: blur(8px);
+}
+.modal {
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    box-sizing: border-box;
+}
+.modal * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.modal::-webkit-scrollbar { /*Chrome scrollbar*/
+  display: none;
+}
+.modal-content {
+    margin: 2% auto auto;
+    border: 4px solid #776048;
+    border-radius: 12px;
+    width: 80%;
+    max-height: 90%;
+    padding: 10px;
+    background-color: var(--search-primary-color);
+    color: var(--font-color);
+}
+.modal-title {
+  width: 100%;
+  font-size: 35px;
+  text-align: initial;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.modal-text {
+  width: 100%;
+  font-size: 18px;
+  text-align: initial;
+}
+.modal-three-parts {
+  display: flex; 
+  flex-direction: column;
+}
+.modal-three-parts > div {
+  padding: 16px;
+}
+.modal-three-parts > div:first-of-type {
+  flex: 0 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: solid thin #776048;
+  position:relative
+}
+.modal-three-parts > div:not(:first-of-type, :last-of-type) {
+  overflow: auto;
+  flex: 1; 
+  text-align: center;
+}
+.modal-three-parts > div:last-of-type {
+  flex: 0 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: solid thin #776048;
+  min-height: fit-content;
+  overflow: hidden;
+}
+/* Add Zoom Animation */
+.animate {
+  animation: animatezoom 0.5s;
+  -webkit-animation: animatezoom 0.5s;
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+.modal-button {
+  cursor: pointer;
+  height: 48px; 
+  min-width: 130px; 
+  background-color: var(--bg-color-secondary); 
+  border: 1px solid rgb(119, 96, 72); 
+  border-radius: 10px; 
+  color: var(--font-color); 
+  font-size: 20px; 
+  padding: 5px 20px;
+  outline: none;
+}
+.modal-button:not(:last-of-type) {
+  margin-right: 30px;
+}
+.modal-button:hover {
+  opacity: 0.6;
+}
+img.game-item {
+  height: 70px;
+  vertical-align: middle;
+}
+
+#icon_bar {
+  position: fixed;
+  z-index: 40;
+  height: 40px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--icon-bar);
+  padding: 5px;
+  color: white;
+}
+div.icon_bar_small {
+  background-color: var(--bg-color);
+  height: 100%;
+  min-width: 35px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+@media screen and (max-height: 600px) {
+  .banner {
+    height: 70px !important;
+  }
+  .banner.mystic {
+    top: calc(100% - 120px) !important;
+  }
+  .timeline .wrapper {
+    top: calc(10% + 10px);
+  }
+  .date {
+    top: calc(10% - 20px);
+    transform: rotate(0deg);
+  }
+  .timeline:before {
+    top: 10%;
+    top: calc(10% - 1px);
+  }
+  .timeline > li:before {
+      top: 10%;
+  }
+}
