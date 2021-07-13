@@ -581,7 +581,7 @@ var app = new Vue ({
           end: '2020-01-23',
           title: 'Mystic',
           subtitle: '11th Rotation',
-          c: ['c2002','c1043'],
+          c: ['c2002','c2043'],
           a: []
         },
 	      {
