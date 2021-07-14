@@ -1979,7 +1979,25 @@ var app = new Vue ({
           c: ['c5016'],
           a: ['Champion\'s Trophy']
         },
-        
+	      {
+          type: 'covenant',
+          start: '2021-07-15',
+          end: '2021-08-22',
+          title: 'Charlotte',
+          subtitle: 'Rate Up',
+          c: ['c1009'],
+          a: ['Elbris Ritual Sword']
+        },
+	      {
+          type: 'covenant',
+          start: '2021-07-15',
+          end: '2021-08-22',
+          title: 'Roana',
+          subtitle: 'Rate Up',
+          c: ['c1102'],
+          a: ['Touch of Rekos']
+        },
+	      
         /* rta seasons */
         {
           type: 'event',
