@@ -1982,7 +1982,7 @@ var app = new Vue ({
 	      {
           type: 'covenant',
           start: '2021-07-15',
-          end: '2021-08-22',
+          end: '2021-07-22',
           title: 'Charlotte',
           subtitle: 'Rate Up',
           c: ['c1009'],
@@ -1991,7 +1991,7 @@ var app = new Vue ({
 	      {
           type: 'covenant',
           start: '2021-07-15',
-          end: '2021-08-22',
+          end: '2021-07-22',
           title: 'Roana',
           subtitle: 'Rate Up',
           c: ['c1102'],
