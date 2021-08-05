@@ -5,7 +5,15 @@ To keep a smooth experience for the user HeroDatabase.json is automatically upda
 HeroDatabase.json is loaded during website startup with a get request: "https://ceciliabot.github.io/HeroDatabase.json"
 
 # Missing Character Data
-- SC Rima
+- Melany
+- Helen
+- Christy
+- Camilla
+- Penelope
+
+# Incomplete data:
+- Emilia, Rem and Ram (IDs)
+- Rem Demon Mode buff is not included
 
 # Todo:
 
