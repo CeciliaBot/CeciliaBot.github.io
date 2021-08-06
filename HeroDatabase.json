@@ -9711,5 +9711,173 @@
     "buffs": [44],
     "debuffs": [18, 17],
     "common": []
+  },
+  "helen": {
+    "id": "c3122",
+    "_id": "helen",
+    "name": "Helen",
+    "rarity": "3",
+    "role": "knight",
+    "attribute": "ice",
+    "camping": {
+      "personalities": ["Cherub", "Natural"],
+      "topics": ["Comforting Cheer", "Cute Cheer"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 0,
+        "Heroic Tale": 4,
+        "Comforting Cheer": 4,
+        "Cute Cheer": 4,
+        "Heroic Cheer": 4,
+        "Sad Memory": 4,
+        "Joyful Memory": 4,
+        "Happy Memories": 4,
+        "Unique Comment": 0,
+        "Self-Indulgent": 4,
+        "Occult": 0,
+        "Myth": 4,
+        "Bizarre Story": 0,
+        "Food Story": 8,
+        "Horror Story": 0,
+        "Gossip": 2,
+        "Dream": 4,
+        "Advice": 2,
+        "Complain": 2,
+        "Belief": 1,
+        "Interesting Story": 2
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [2, 3, 5, 7],
+    "debuffs": [],
+    "common": []
+  },
+  "christy": {
+    "id": "c3123",
+    "_id": "christy",
+    "name": "Christy",
+    "rarity": "3",
+    "role": "knight",
+    "attribute": "wind",
+    "camping": {
+      "personalities": ["Hard Worker", "Cool-Headed"],
+      "topics": ["Horror Story", "Advice"],
+      "values": {
+        "Criticism": 4,
+        "Reality Check": 3,
+        "Heroic Tale": 2,
+        "Comforting Cheer": 5,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 2,
+        "Sad Memory": 3,
+        "Joyful Memory": 4,
+        "Happy Memories": 0,
+        "Unique Comment": 3,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 0,
+        "Bizarre Story": 0,
+        "Food Story": 3,
+        "Horror Story": 0,
+        "Gossip": 0,
+        "Dream": 3,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 1,
+        "Interesting Story": 2
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [25],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1, 2],
+    "debuffs": [25],
+    "common": []
+  },
+  "camilla": {
+    "id": "c3124",
+    "_id": "camilla",
+    "name": "Camilla",
+    "rarity": "3",
+    "role": "warrior",
+    "attribute": "light",
+    "camping": {
+      "personalities": ["Realistic", "Altruistic"],
+      "topics": ["Food Story", "Dream"],
+      "values": {
+        "Criticism": 3,
+        "Reality Check": 3,
+        "Heroic Tale": 0,
+        "Comforting Cheer": 3,
+        "Cute Cheer": 4,
+        "Heroic Cheer": 4,
+        "Sad Memory": 5,
+        "Joyful Memory": 3,
+        "Happy Memories": 3,
+        "Unique Comment": 0,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 1,
+        "Bizarre Story": 0,
+        "Food Story": 0,
+        "Horror Story": 2,
+        "Gossip": 2,
+        "Dream": 3,
+        "Advice": 7,
+        "Complain": 1,
+        "Belief": 2,
+        "Interesting Story": 1
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [18],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1, 46],
+    "debuffs": [18],
+    "common": []
   }
 }
