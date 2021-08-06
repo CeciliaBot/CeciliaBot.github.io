@@ -9545,7 +9545,7 @@
     "common": []
   },
   "emilia": {
-    "id": "c0000",
+    "id": "c1116",
     "_id": "emilia",
     "name": "Emilia",
     "rarity": "5",
@@ -9601,7 +9601,7 @@
     "common": []
   },
   "rem": {
-    "id": "c0000",
+    "id": "c1114",
     "_id": "rem",
     "name": "Rem",
     "rarity": "5",
@@ -9657,7 +9657,7 @@
     "common": []
   },
   "ram": {
-    "id": "c0000",
+    "id": "c1115",
     "_id": "ram",
     "name": "Ram",
     "rarity": "5",
