@@ -177,7 +177,7 @@ span.tevent a {
     background: #fff;
 }
 .timeline div .icon_container {
-    overflow: hidden;
+    /*overflow: hidden;*/
     white-space: nowrap;
     position: sticky;
     right: 0;
@@ -189,11 +189,34 @@ span.tevent a {
 }
 .timeline div .icon_container > div{
     height: inherit;
+    position: relative;
 }
 .timeline div .icon_container img{
     height: inherit;
     width: inherit;
     overflow: clip;
+}
+div.isnew > img {
+  background-color: orange;
+  border-radius: 100px;
+  border-radius: 100%;
+  border: solid orangered;
+}
+div.isnew:after {
+	content: 'N';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: max-content;
+	/* height: 20%; */
+	background-color: orangered;
+	border-radius: 100%;
+	box-shadow: 0 0 8px 5px orangered;
+	color: white;
+	/* font-size: 12px; */
+	font-size: 75%;
+	text-align: center;
+	padding: 2px 6px;
 }
 .upulls {
   display: inline-block;
@@ -673,7 +696,7 @@ table td.r, table th.r {
     background: #fff;
 }
 .vtimeline div .icon_container {
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: sticky;
     right: 0;
     left: 0;
@@ -684,6 +707,7 @@ table td.r, table th.r {
 }
 .vtimeline div .icon_container > div{
     width: inherit;
+    position: relative;
 }
 .vtimeline div .icon_container img{
     width: inherit;
