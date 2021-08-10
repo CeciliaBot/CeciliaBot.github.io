@@ -9377,7 +9377,7 @@
     "role": "mage",
     "camping": {
       "personalities": ["Psychopath", "Obsessive"],
-      "topics": ["Happy Memory", "Advice"],
+      "topics": ["Happy Memories", "Advice"],
       "values": {
         "Criticism": 3,
         "Reality Check": 2,
