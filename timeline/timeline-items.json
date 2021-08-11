@@ -2091,7 +2091,7 @@
   },
   {
     "type": "covenant",
-    "nid": "7458121",
+    "nid": "7529105",
     "start": "2021-08-12",
     "end": "2021-08-19",
     "title": "Lilibet & Creation & Destruction Drop Rate Up",
@@ -2166,6 +2166,12 @@
     "ref": "2021-04-16",
     "name": "RTA Season 4 End",
     "alt": "RTA Skyward - END -"
+  },
+  {
+    "type": "event",
+    "start": "2021-08-14",
+    "name": "RTA Season 5 Start",
+    "alt": "RTA Ambition - START -"
   },
   {
     "type": "event",
