@@ -9935,5 +9935,61 @@
     "buffs": [1, 46],
     "debuffs": [18],
     "common": []
+  },
+  "penelope": {
+    "id": "c3125",
+    "_id": "penelope",
+    "name": "Penelope",
+    "rarity": "3",
+    "role": "assassin",
+    "attribute": "dark",
+    "camping": {
+      "personalities": ["Heroism", "Indifferent"],
+      "topics": ["Belief", "Complain"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 0,
+        "Heroic Tale": 4,
+        "Comforting Cheer": 3,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 3,
+        "Sad Memory": 3,
+        "Joyful Memory": 4,
+        "Happy Memories": 3,
+        "Unique Comment": 3,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 3,
+        "Bizarre Story": 0,
+        "Food Story": 6,
+        "Horror Story": 2,
+        "Gossip": 0,
+        "Dream": 2,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 0,
+        "Interesting Story": 2
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [5, 15],
+    "debuffs": [17, 20],
+    "common": []
   }
 }
