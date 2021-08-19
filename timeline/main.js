@@ -118,7 +118,7 @@ var app = new Vue ({
       return l;
     },
     hero: function (h) {
-      return this.HeroDB[h] || {id: 'c0000', _id: h, name: h, rarity: 5, attribute: 'fire', role: 'knight'};
+      return this.HeroDB[h] || {id: h, _id: h, name: h, rarity: 5, attribute: 'fire', role: 'knight'};
     },
     heroIcon: function (h) {
       return "https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2F"+this.hero(h).id+"_s.png";
