@@ -9991,5 +9991,61 @@
     "buffs": [5, 15],
     "debuffs": [17, 20],
     "common": []
+  },
+  "summertime-iseria": {
+    "id": "c5024",
+    "_id": "summertime-iseria",
+    "name": "Summertime Iseria",
+    "rarity": "5",
+    "role": "ranger",
+    "attribute": "fire",
+    "camping": {
+      "personalities": ["Hot and Cold", "Loyal"],
+      "topics": ["Gossip", "Advice"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 1,
+        "Heroic Tale": 3,
+        "Comforting Cheer": 6,
+        "Cute Cheer": 4,
+        "Heroic Cheer": 5,
+        "Sad Memory": 6,
+        "Joyful Memory": 4,
+        "Happy Memories": 4,
+        "Unique Comment": 1,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 1,
+        "Bizarre Story": 0,
+        "Food Story": 2,
+        "Horror Story": 0,
+        "Gossip": 1,
+        "Dream": 3,
+        "Advice": 3,
+        "Complain": 0,
+        "Belief": 0,
+        "Interesting Story": 1
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [3],
+    "debuffs": [17, 53],
+    "common": []
   }
 }
