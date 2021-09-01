@@ -10047,5 +10047,61 @@
     "buffs": [3],
     "debuffs": [17, 53],
     "common": []
+  },
+  "closer-charles": {
+    "id": "c2027",
+    "_id": "closer-charles",
+    "name": "Closer Charles",
+    "rarity": "5",
+    "role": "assassin",
+    "attribute": "dark",
+    "camping": {
+      "personalities": ["Realistic", "Cool-Headed"],
+      "topics": ["Criticism", "Reality Check"],
+      "values": {
+        "Criticism": 5,
+        "Reality Check": 5,
+        "Heroic Tale": 0,
+        "Comforting Cheer": 0,
+        "Cute Cheer": 1,
+        "Heroic Cheer": 2,
+        "Sad Memory": 0,
+        "Joyful Memory": 1,
+        "Happy Memories": 0,
+        "Unique Comment": 3,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 0,
+        "Bizarre Story": 0,
+        "Food Story": 0,
+        "Horror Story": 2,
+        "Gossip": 1,
+        "Dream": 0,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 2,
+        "Interesting Story": 1
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1, 10],
+    "debuffs": [],
+    "common": []
   }
 }
