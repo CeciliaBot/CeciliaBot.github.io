@@ -10103,5 +10103,61 @@
     "buffs": [1, 10],
     "debuffs": [],
     "common": []
+  },
+  "angel-of-light-angelica": {
+    "id": "c6062",
+    "_id": "angel-of-light-angelica",
+    "name": "Angel of Light Angelica",
+    "rarity": "4",
+    "role": "mage",
+    "attribute": "light",
+    "camping": {
+      "personalities": ["Cherub", "Cool-Headed"],
+      "topics": ["Interesting Story", "Food Story"],
+      "values": {
+        "Criticism": 2,
+        "Reality Check": 2,
+        "Heroic Tale": 2,
+        "Comforting Cheer": 2,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 2,
+        "Sad Memory": 2,
+        "Joyful Memory": 3,
+        "Happy Memories": 2,
+        "Unique Comment": 3,
+        "Self-Indulgent": 2,
+        "Occult": 0,
+        "Myth": 2,
+        "Bizarre Story": 0,
+        "Food Story": 4,
+        "Horror Story": 0,
+        "Gossip": 1,
+        "Dream": 2,
+        "Advice": 1,
+        "Complain": 1,
+        "Belief": 0,
+        "Interesting Story": 2
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [28],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [46],
+    "debuffs": [29, 28],
+    "common": []
   }
 }
