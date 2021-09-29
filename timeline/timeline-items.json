@@ -2214,6 +2214,7 @@
     "a": [{ "id": "Idol's Cheer", "new": false }]
   },
   {
+    "nid": 7754698,
     "type": "covenant",
     "start": "2021-09-23",
     "end": "2021-09-30",
@@ -2223,6 +2224,7 @@
     "a": [{ "id": "Crimson Moon of Nightmares", "new": false }]
   },
   {
+    "nid": 7754678,
     "type": "limited",
     "start": "2021-09-23",
     "end": "2021-10-07",
@@ -2232,6 +2234,7 @@
     "a": [{ "id": "Draco Plate", "new": false }]
   },
   {
+    "nid": 7802846,
     "type": "limited",
     "start": "2021-09-30",
     "end": "2021-10-14",
@@ -2251,6 +2254,15 @@
       { "id": "auxiliary-lots", "new": false }
     ],
     "a": []
+  },
+  {
+    "type": "covenant",
+    "start": "2021-10-07",
+    "end": "2021-10-14",
+    "title": "Destina & Shimandra Staff Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [{ "id": "destina", "new": false }],
+    "a": [{ "id": "Shimandra Staff", "new": false }]
   },
   {
     "type": "event",
