@@ -10159,5 +10159,61 @@
     "buffs": [46],
     "debuffs": [29, 28],
     "common": []
+  },
+  "belian": {
+    "id": "c1117",
+    "_id": "belian",
+    "name": "Belian",
+    "rarity": "5",
+    "role": "knight",
+    "attribute": "light",
+    "camping": {
+      "personalities": ["Academic", "Cool-Headed"],
+      "topics": ["Reality Check", "Comforting Cheer"],
+      "values": {
+        "Criticism": 4,
+        "Reality Check": 4,
+        "Heroic Tale": 0,
+        "Comforting Cheer": 1,
+        "Cute Cheer": 1,
+        "Heroic Cheer": 1,
+        "Sad Memory": 0,
+        "Joyful Memory": 1,
+        "Happy Memories": 0,
+        "Unique Comment": 3,
+        "Self-Indulgent": 5,
+        "Occult": 3,
+        "Myth": 5,
+        "Bizarre Story": 0,
+        "Food Story": 0,
+        "Horror Story": 0,
+        "Gossip": 2,
+        "Dream": 0,
+        "Advice": 1,
+        "Complain": 1,
+        "Belief": 0,
+        "Interesting Story": 3
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [19, 22],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [2, 4, 11, 60],
+    "debuffs": [19, 22, 25],
+    "common": []
   }
 }
