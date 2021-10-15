@@ -31,7 +31,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -75,7 +76,8 @@
         "Advice": 0,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -119,7 +121,8 @@
         "Advice": 6,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -163,7 +166,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 5
+        "Interesting Story": 5,
+        "Faith": 4
       }
     },
     "skills": [
@@ -207,7 +211,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 5
       }
     },
     "skills": [
@@ -251,7 +256,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -295,7 +301,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -339,7 +346,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 5,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 5
       }
     },
     "skills": [
@@ -383,7 +391,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -427,7 +436,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 3
       }
     },
     "skills": [
@@ -471,7 +481,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -515,7 +526,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -559,7 +571,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -603,7 +616,8 @@
         "Advice": 5,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -647,7 +661,8 @@
         "Advice": 2,
         "Complain": 1,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -691,7 +706,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
@@ -735,7 +751,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 3
       }
     },
     "skills": [
@@ -779,7 +796,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -823,7 +841,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -867,7 +886,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -911,7 +931,8 @@
         "Advice": 6,
         "Complain": 2,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -955,7 +976,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 5
       }
     },
     "skills": [
@@ -999,7 +1021,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 4
       }
     },
     "skills": [
@@ -1043,7 +1066,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 5
       }
     },
     "skills": [
@@ -1087,7 +1111,8 @@
         "Advice": 0,
         "Complain": 1,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -1131,7 +1156,8 @@
         "Advice": 7,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -1175,7 +1201,8 @@
         "Advice": 6,
         "Complain": 2,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -1219,7 +1246,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -1263,7 +1291,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -1307,7 +1336,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -1351,7 +1381,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -1395,7 +1426,8 @@
         "Advice": 4,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 3
       }
     },
     "skills": [
@@ -1439,7 +1471,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -1483,7 +1516,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 8,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 8
       }
     },
     "skills": [
@@ -1527,7 +1561,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -1571,7 +1606,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -1615,7 +1651,8 @@
         "Advice": 2,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 3
       }
     },
     "skills": [
@@ -1659,7 +1696,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -1703,7 +1741,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
@@ -1747,7 +1786,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 7,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 7
       }
     },
     "skills": [
@@ -1791,7 +1831,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -1835,7 +1876,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 1
       }
     },
     "skills": [
@@ -1879,7 +1921,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -1923,7 +1966,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 5
+        "Interesting Story": 5,
+        "Faith": 4
       }
     },
     "skills": [
@@ -1967,7 +2011,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 0
       }
     },
     "skills": [
@@ -2011,7 +2056,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 5
       }
     },
     "skills": [
@@ -2055,7 +2101,8 @@
         "Advice": 2,
         "Complain": 3,
         "Belief": 5,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 5
       }
     },
     "skills": [
@@ -2099,7 +2146,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 4
       }
     },
     "skills": [
@@ -2143,7 +2191,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 5,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 5
       }
     },
     "skills": [
@@ -2187,7 +2236,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -2231,7 +2281,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -2275,7 +2326,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -2319,7 +2371,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
@@ -2363,7 +2416,8 @@
         "Advice": 1,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -2407,7 +2461,8 @@
         "Advice": 0,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -2451,7 +2506,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
@@ -2495,7 +2551,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -2539,7 +2596,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -2583,7 +2641,8 @@
         "Advice": 0,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -2627,7 +2686,8 @@
         "Advice": 3,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -2671,7 +2731,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -2715,7 +2776,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 7,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 7
       }
     },
     "skills": [
@@ -2759,7 +2821,8 @@
         "Advice": 6,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -2803,7 +2866,8 @@
         "Advice": 8,
         "Complain": 3,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -2847,7 +2911,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -2891,7 +2956,8 @@
         "Advice": 8,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -2935,7 +3001,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -2979,7 +3046,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3023,7 +3091,8 @@
         "Advice": 1,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 7
+        "Interesting Story": 7,
+        "Faith": 2
       }
     },
     "skills": [
@@ -3067,7 +3136,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -3111,7 +3181,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3155,7 +3226,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -3199,7 +3271,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -3243,7 +3316,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3286,7 +3360,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 4
       }
     },
     "skills": [
@@ -3330,7 +3405,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3374,7 +3450,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3418,7 +3495,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 4
       }
     },
     "skills": [
@@ -3462,7 +3540,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3506,7 +3585,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -3550,7 +3630,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -3594,7 +3675,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -3638,7 +3720,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 5
       }
     },
     "skills": [
@@ -3682,7 +3765,8 @@
         "Advice": 4,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -3726,7 +3810,8 @@
         "Advice": 2,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3770,7 +3855,8 @@
         "Advice": 3,
         "Complain": 1,
         "Belief": 1,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 1
       }
     },
     "skills": [
@@ -3814,7 +3900,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3858,7 +3945,8 @@
         "Advice": 8,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3902,7 +3990,8 @@
         "Advice": 3,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -3946,7 +4035,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 4
       }
     },
     "skills": [
@@ -3990,7 +4080,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -4034,7 +4125,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -4078,7 +4170,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 1
       }
     },
     "skills": [
@@ -4122,7 +4215,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -4166,7 +4260,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -4210,7 +4305,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -4254,7 +4350,8 @@
         "Advice": 6,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -4298,7 +4395,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -4342,7 +4440,8 @@
         "Advice": 3,
         "Complain": 1,
         "Belief": 2,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 2
       }
     },
     "skills": [
@@ -4386,7 +4485,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 4
       }
     },
     "skills": [
@@ -4430,7 +4530,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -4474,7 +4575,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 6
       }
     },
     "skills": [
@@ -4518,7 +4620,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 6,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -4562,7 +4665,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -4606,7 +4710,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -4650,7 +4755,8 @@
         "Advice": 2,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 0
       }
     },
     "skills": [
@@ -4694,7 +4800,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -4738,7 +4845,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -4782,7 +4890,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -4826,7 +4935,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 4
       }
     },
     "skills": [
@@ -4870,7 +4980,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -4914,7 +5025,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 4
       }
     },
     "skills": [
@@ -4958,7 +5070,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 2
       }
     },
     "skills": [
@@ -5002,7 +5115,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -5046,7 +5160,8 @@
         "Advice": 5,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -5090,7 +5205,8 @@
         "Advice": 3,
         "Complain": 1,
         "Belief": 1,
-        "Interesting Story": 7
+        "Interesting Story": 7,
+        "Faith": 1
       }
     },
     "skills": [
@@ -5134,7 +5250,8 @@
         "Advice": 1,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -5178,7 +5295,8 @@
         "Advice": 2,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -5222,7 +5340,8 @@
         "Advice": 2,
         "Complain": 1,
         "Belief": 6,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 6
       }
     },
     "skills": [
@@ -5266,7 +5385,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 0,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 0
       }
     },
     "skills": [
@@ -5310,7 +5430,8 @@
         "Advice": 8,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -5354,7 +5475,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 1
       }
     },
     "skills": [
@@ -5398,7 +5520,8 @@
         "Advice": 5,
         "Complain": 1,
         "Belief": 5,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 5
       }
     },
     "skills": [
@@ -5442,7 +5565,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -5486,7 +5610,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -5530,7 +5655,8 @@
         "Advice": 0,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -5574,7 +5700,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 6
       }
     },
     "skills": [
@@ -5618,7 +5745,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 0
       }
     },
     "skills": [
@@ -5662,7 +5790,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -5706,7 +5835,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -5750,7 +5880,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -5794,7 +5925,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 5
       }
     },
     "skills": [
@@ -5838,7 +5970,8 @@
         "Advice": 2,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -5882,7 +6015,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 0,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 0
       }
     },
     "skills": [
@@ -5926,7 +6060,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 4
       }
     },
     "skills": [
@@ -5970,7 +6105,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -6014,7 +6150,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -6058,7 +6195,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
@@ -6102,7 +6240,8 @@
         "Advice": 4,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 8
+        "Interesting Story": 8,
+        "Faith": 3
       }
     },
     "skills": [
@@ -6145,7 +6284,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -6189,7 +6329,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -6233,7 +6374,8 @@
         "Advice": 0,
         "Complain": 1,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -6277,7 +6419,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -6321,7 +6464,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -6365,7 +6509,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -6409,7 +6554,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -6453,7 +6599,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -6497,7 +6644,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 1
       }
     },
     "skills": [
@@ -6541,7 +6689,8 @@
         "Advice": 1,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 7
+        "Interesting Story": 7,
+        "Faith": 2
       }
     },
     "skills": [
@@ -6585,7 +6734,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -6629,7 +6779,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -6673,7 +6824,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 3
       }
     },
     "skills": [
@@ -6717,7 +6869,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -6761,7 +6914,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -6805,7 +6959,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -6849,7 +7004,8 @@
         "Advice": 1,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 2
       }
     },
     "skills": [
@@ -6893,7 +7049,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -6937,7 +7094,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
@@ -6981,7 +7139,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -7025,7 +7184,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 5
       }
     },
     "skills": [
@@ -7069,7 +7229,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -7113,7 +7274,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -7157,7 +7319,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -7201,7 +7364,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -7245,7 +7409,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -7289,7 +7454,8 @@
         "Advice": 2,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -7333,7 +7499,8 @@
         "Advice": 8,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -7377,7 +7544,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -7421,7 +7589,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 0,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 0
       }
     },
     "skills": [
@@ -7465,7 +7634,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -7509,7 +7679,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -7553,7 +7724,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -7597,7 +7769,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -7641,7 +7814,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 5
       }
     },
     "skills": [
@@ -7685,7 +7859,8 @@
         "Advice": 3,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -7729,7 +7904,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 1
       }
     },
     "skills": [
@@ -7773,7 +7949,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -7817,7 +7994,8 @@
         "Advice": 0,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
@@ -7861,7 +8039,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -7905,7 +8084,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 3,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -7949,7 +8129,8 @@
         "Advice": 4,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -7992,7 +8173,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8036,7 +8218,8 @@
         "Advice": 0,
         "Complain": 0,
         "Belief": 5,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 5
       }
     },
     "skills": [
@@ -8080,7 +8263,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 0,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8124,7 +8308,8 @@
         "Advice": 1,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 2
       }
     },
     "skills": [
@@ -8168,7 +8353,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -8212,7 +8398,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 0,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8256,7 +8443,8 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8300,7 +8488,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -8344,7 +8533,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 1
       }
     },
     "skills": [
@@ -8388,7 +8578,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
@@ -8432,7 +8623,8 @@
         "Advice": 2,
         "Complain": 3,
         "Belief": 7,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 7
       }
     },
     "skills": [
@@ -8476,7 +8668,8 @@
         "Advice": 4,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -8520,7 +8713,8 @@
         "Advice": 2,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -8564,7 +8758,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 6
       }
     },
     "skills": [
@@ -8608,7 +8803,8 @@
         "Advice": 4,
         "Complain": 1,
         "Belief": 4,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 4
       }
     },
     "skills": [
@@ -8652,7 +8848,8 @@
         "Advice": 5,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8696,7 +8893,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 4,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 4
       }
     },
     "skills": [
@@ -8740,7 +8938,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8784,7 +8983,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8828,7 +9028,8 @@
         "Advice": 4,
         "Complain": 1,
         "Belief": 3,
-        "Interesting Story": 6
+        "Interesting Story": 6,
+        "Faith": 3
       }
     },
     "skills": [
@@ -8872,7 +9073,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -8916,7 +9118,8 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -8960,7 +9163,8 @@
         "Advice": 1,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -9004,7 +9208,8 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 6
       }
     },
     "skills": [
@@ -9048,7 +9253,8 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
@@ -9092,7 +9298,8 @@
         "Advice": 4,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
@@ -9136,7 +9343,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 1
       }
     },
     "skills": [
@@ -9180,7 +9388,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
@@ -9224,7 +9433,8 @@
         "Advice": 4,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 1
       }
     },
     "skills": [
@@ -9268,7 +9478,8 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
@@ -9312,7 +9523,8 @@
         "Advice": 2,
         "Complain": 5,
         "Belief": 3,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 3
       }
     },
     "skills": [
@@ -9356,7 +9568,8 @@
         "Advice": 3,
         "Complain": 3,
         "Belief": 3,
-        "Interesting Story": 0
+        "Interesting Story": 0,
+        "Faith": 3
       }
     },
     "skills": [
@@ -9377,7 +9590,7 @@
     "role": "mage",
     "camping": {
       "personalities": ["Psychopath", "Obsessive"],
-      "topics": ["Happy Memories", "Advice"],
+      "topics": ["Happy Memory", "Advice"],
       "values": {
         "Criticism": 3,
         "Reality Check": 2,
@@ -9400,7 +9613,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 3
       }
     },
     "skills": [
@@ -9444,7 +9658,8 @@
         "Advice": 3,
         "Complain": 2,
         "Belief": 6,
-        "Interesting Story": 4
+        "Interesting Story": 4,
+        "Faith": 6
       }
     },
     "skills": [
@@ -9488,7 +9703,8 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 6,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 6
       }
     },
     "skills": [
@@ -9532,7 +9748,8 @@
         "Advice": 5,
         "Complain": 0,
         "Belief": 4,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 4
       }
     },
     "skills": [
@@ -9576,25 +9793,14 @@
         "Advice": 5,
         "Complain": 2,
         "Belief": 2,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 2
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [1, 5],
     "debuffs": [],
@@ -9632,25 +9838,14 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 8,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 8
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [18],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [18], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [1],
     "debuffs": [22, 27],
@@ -9688,25 +9883,14 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [17],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [17], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [44],
     "debuffs": [18, 17],
@@ -9744,25 +9928,14 @@
         "Advice": 0,
         "Complain": 3,
         "Belief": 6,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 6
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [20],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [20], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [],
     "debuffs": [20, "stigma"],
@@ -9800,25 +9973,14 @@
         "Advice": 2,
         "Complain": 2,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [2, 3, 5, 7],
     "debuffs": [],
@@ -9856,25 +10018,14 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 1,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 1
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [25],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [25], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [1, 2],
     "debuffs": [25],
@@ -9912,25 +10063,14 @@
         "Advice": 7,
         "Complain": 1,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [18],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [18], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [1, 46],
     "debuffs": [18],
@@ -9968,25 +10108,14 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [5, 15],
     "debuffs": [17, 20],
@@ -10024,25 +10153,14 @@
         "Advice": 3,
         "Complain": 0,
         "Belief": 0,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 0
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [3],
     "debuffs": [17, 53],
@@ -10080,25 +10198,14 @@
         "Advice": 2,
         "Complain": 0,
         "Belief": 2,
-        "Interesting Story": 1
+        "Interesting Story": 1,
+        "Faith": 2
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [1, 10],
     "debuffs": [],
@@ -10136,25 +10243,14 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 2
+        "Interesting Story": 2,
+        "Faith": 0
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [28],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [28], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [46],
     "debuffs": [29, 28],
@@ -10192,28 +10288,62 @@
         "Advice": 1,
         "Complain": 1,
         "Belief": 0,
-        "Interesting Story": 3
+        "Interesting Story": 3,
+        "Faith": 0
       }
     },
     "skills": [
-      {
-        "buff": [],
-        "debuff": [19, 22],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      },
-      {
-        "buff": [],
-        "debuff": [],
-        "common": []
-      }
+      { "buff": [], "debuff": [19, 22], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
     ],
     "buffs": [2, 4, 11, 60],
     "debuffs": [19, 22, 25],
+    "common": []
+  },
+  "ran": {
+    "id": "c1118",
+    "_id": "ran",
+    "name": "Ran",
+    "rarity": "5",
+    "role": "assassin",
+    "attribute": "ice",
+    "camping": {
+      "personalities": ["Traumatized", "Realistic"],
+      "topics": ["Faith", "Interesting Story"],
+      "values": {
+        "Criticism": 6,
+        "Reality Check": 3,
+        "Heroic Tale": 1,
+        "Comforting Cheer": 0,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 2,
+        "Sad Memory": 3,
+        "Joyful Memory": 3,
+        "Happy Memories": 0,
+        "Unique Comment": 3,
+        "Self-Indulgent": 1,
+        "Occult": 3,
+        "Myth": 0,
+        "Bizarre Story": 0,
+        "Food Story": 0,
+        "Horror Story": 2,
+        "Gossip": 1,
+        "Dream": 2,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 7,
+        "Interesting Story": 1,
+        "Faith": 7
+      }
+    },
+    "skills": [
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] },
+      { "buff": [], "debuff": [], "common": [] }
+    ],
+    "buffs": [1, 12, 46],
+    "debuffs": [18, "stigma"],
     "common": []
   }
 }
