@@ -2301,7 +2301,7 @@
     "subtitle": "41st Rotation",
     "c": [
       { "id": "apocalypse-ravi", "new": false },
-      { "id": "shadow-rose", "new": true }
+      { "id": "shadow-rose", "new": false }
     ],
     "a": []
   },
