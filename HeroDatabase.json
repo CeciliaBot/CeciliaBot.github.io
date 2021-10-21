@@ -8,7 +8,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Cool-Headed", "Arrogant"],
-      "topics": ["Belif", "Complain"],
+      "topics": ["Belief", "Complain"],
       "values": {
         "Criticism": 7,
         "Reality Check": 2,
@@ -323,7 +323,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Traumatized", "Free"],
-      "topics": ["Food Story", "Belif"],
+      "topics": ["Food Story", "Belief"],
       "values": {
         "Criticism": 4,
         "Reality Check": 0,
@@ -953,7 +953,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Traumatized", "Pessimistic"],
-      "topics": ["Criticism", "Belif"],
+      "topics": ["Criticism", "Belief"],
       "values": {
         "Criticism": 6,
         "Reality Check": 3,
@@ -1358,7 +1358,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Hard Worker", "Envious"],
-      "topics": ["Belif", "Joyful Memory"],
+      "topics": ["Belief", "Joyful Memory"],
       "values": {
         "Criticism": 5,
         "Reality Check": 1,
@@ -2033,7 +2033,7 @@
     "role": "knight",
     "camping": {
       "personalities": ["Cool-Headed", "Traumatized"],
-      "topics": ["Self-Indulgent", "Belif"],
+      "topics": ["Self-Indulgent", "Belief"],
       "values": {
         "Criticism": 5,
         "Reality Check": 2,
@@ -2213,7 +2213,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Heroism", "Envious"],
-      "topics": ["Belif", "Reality Check"],
+      "topics": ["Belief", "Reality Check"],
       "values": {
         "Criticism": 3,
         "Reality Check": 0,
@@ -2483,7 +2483,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Realistic", "Cool-Headed"],
-      "topics": ["Belif", "Interesting Story"],
+      "topics": ["Belief", "Interesting Story"],
       "values": {
         "Criticism": 5,
         "Reality Check": 5,
@@ -2708,7 +2708,7 @@
     "role": "ranger",
     "camping": {
       "personalities": ["Loyal", "Cool-Headed"],
-      "topics": ["Belif", "Heroic Tale"],
+      "topics": ["Belief", "Heroic Tale"],
       "values": {
         "Criticism": 2,
         "Reality Check": 3,
@@ -2888,7 +2888,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Cool-Headed", "Pessimistic"],
-      "topics": ["Reality Check", "Belif"],
+      "topics": ["Reality Check", "Belief"],
       "values": {
         "Criticism": 5,
         "Reality Check": 5,
@@ -3382,7 +3382,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Obsessive", "Psychopath"],
-      "topics": ["Self-Indulgent", "Belif"],
+      "topics": ["Self-Indulgent", "Belief"],
       "values": {
         "Criticism": 3,
         "Reality Check": 2,
@@ -3427,7 +3427,7 @@
     "role": "mage",
     "camping": {
       "personalities": ["Psychopath", "Obsessive"],
-      "topics": ["Joyful Memory", "Belif"],
+      "topics": ["Joyful Memory", "Belief"],
       "values": {
         "Criticism": 3,
         "Reality Check": 2,
@@ -3652,7 +3652,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Loyal", "Heroism"],
-      "topics": ["Belif", "Horror Story"],
+      "topics": ["Belief", "Horror Story"],
       "values": {
         "Criticism": 0,
         "Reality Check": 1,
@@ -4417,7 +4417,7 @@
     "role": "mage",
     "camping": {
       "personalities": ["Realistic", "Academic"],
-      "topics": ["Belif", "Myth"],
+      "topics": ["Belief", "Myth"],
       "values": {
         "Criticism": 5,
         "Reality Check": 5,
@@ -5137,7 +5137,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Altruistic", "Envious"],
-      "topics": ["Happy Memories", "Belif"],
+      "topics": ["Happy Memories", "Belief"],
       "values": {
         "Criticism": 3,
         "Reality Check": 0,
@@ -6172,7 +6172,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Heroism", "Realistic"],
-      "topics": ["Belif", "Complain"],
+      "topics": ["Belief", "Complain"],
       "values": {
         "Criticism": 3,
         "Reality Check": 3,
@@ -6846,7 +6846,7 @@
     "role": "knight",
     "camping": {
       "personalities": ["Individualistic", "Envious"],
-      "topics": ["Belif", "Sad Memory"],
+      "topics": ["Belief", "Sad Memory"],
       "values": {
         "Criticism": 5,
         "Reality Check": 2,
@@ -6981,7 +6981,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Academic", "Optimistic"],
-      "topics": ["Belif", "Joyful Memory"],
+      "topics": ["Belief", "Joyful Memory"],
       "values": {
         "Criticism": 2,
         "Reality Check": 2,
@@ -7161,7 +7161,7 @@
     "role": "knight",
     "camping": {
       "personalities": ["Traumatized", "Loyal"],
-      "topics": ["Heroic Tale", "Belif"],
+      "topics": ["Heroic Tale", "Belief"],
       "values": {
         "Criticism": 3,
         "Reality Check": 1,
@@ -7566,7 +7566,7 @@
     "role": "knight",
     "camping": {
       "personalities": ["Escapist", "Indifferent"],
-      "topics": ["Unique Comment", "Belif"],
+      "topics": ["Unique Comment", "Belief"],
       "values": {
         "Criticism": 2,
         "Reality Check": 0,
@@ -7791,7 +7791,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Traumatized", "Pessimistic"],
-      "topics": ["Reality Check", "Belif"],
+      "topics": ["Reality Check", "Belief"],
       "values": {
         "Criticism": 6,
         "Reality Check": 3,
@@ -7881,7 +7881,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Arrogant", "Hard Worker"],
-      "topics": ["Belif", "Advice"],
+      "topics": ["Belief", "Advice"],
       "values": {
         "Criticism": 7,
         "Reality Check": 1,
@@ -8150,7 +8150,7 @@
     "attribute": "light",
     "role": "knight",
     "camping": {
-      "topics": ["Belif", "Unique Comment"],
+      "topics": ["Belief", "Unique Comment"],
       "values": {
         "Criticism": 0,
         "Reality Check": 0,
@@ -8240,7 +8240,7 @@
     "role": "knight",
     "camping": {
       "personalities": ["Escapist", "Indifferent"],
-      "topics": ["Unique Comment", "Belif"],
+      "topics": ["Unique Comment", "Belief"],
       "values": {
         "Criticism": 2,
         "Reality Check": 0,
@@ -8510,7 +8510,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Arrogant", "Hard Worker"],
-      "topics": ["Belif", "Advice"],
+      "topics": ["Belief", "Advice"],
       "values": {
         "Criticism": 7,
         "Reality Check": 1,
@@ -8690,7 +8690,7 @@
     "role": "warrior",
     "camping": {
       "personalities": ["Loyal", "Selfish"],
-      "topics": ["Belif", "Complain"],
+      "topics": ["Belief", "Complain"],
       "values": {
         "Criticism": 3,
         "Reality Check": 1,
@@ -9095,7 +9095,7 @@
     "role": "assassin",
     "camping": {
       "personalities": ["Altruistic", "Heroism"],
-      "topics": ["Advice", "Belif"],
+      "topics": ["Advice", "Belief"],
       "values": {
         "Criticism": 0,
         "Reality Check": 0,
@@ -9410,7 +9410,7 @@
     "role": "knight",
     "camping": {
       "personalities": ["Loyal", "Hard Worker"],
-      "topics": ["Belif", "Advice"],
+      "topics": ["Belief", "Advice"],
       "values": {
         "Criticism": 2,
         "Reality Check": 2,
@@ -10085,7 +10085,7 @@
     "attribute": "dark",
     "camping": {
       "personalities": ["Heroism", "Indifferent"],
-      "topics": ["Belif", "Complain"],
+      "topics": ["Belief", "Complain"],
       "values": {
         "Criticism": 0,
         "Reality Check": 0,
@@ -10310,7 +10310,7 @@
     "attribute": "ice",
     "camping": {
       "personalities": ["Traumatized", "Realistic"],
-      "topics": ["Belif", "Interesting Story"],
+      "topics": ["Belief", "Interesting Story"],
       "values": {
         "Criticism": 6,
         "Reality Check": 3,
