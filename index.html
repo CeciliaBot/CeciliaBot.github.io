@@ -1574,11 +1574,10 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
-		<li>
-		  <b>15/10/2021</b> Add Ran and the new "Faith" topic to all characters<br>
-		  Adding Ran took longer because he is the first character to use a new topic so I had to calculate the reaction of each character to that conversation...
-		  Please contact me if any of the values are incorrect. (They should be correct)
-		</li>
+                <li style="color: red">
+                  <b>22/10/2021</b>: Removed Belief and replaced with Faith<br>
+                  If you have saved a saved team with Belief and Faith please update it.
+                </li>
                 <li style="color: #007FFF">
                   <b>08/07/2021</b>: More sorting options<br>
                   Now you can sort by the reaction value to camping topics, for example you can sort by "Advice".<br>
@@ -1860,7 +1859,7 @@ icon-bar span img {
             <div class="active dropdown" onclick="var x = this.getBoundingClientRect().right; if (document.body.getBoundingClientRect().right-x>320)document.getElementById('dropdown_sort_by_topic').style.left='100%'; else document.getElementById('dropdown_sort_by_topic').style.left='-200%'" onmouseover="document.getElementById('dropdown_sort_by_topic').style.removeProperty('display')">{{strings.topics}}
               <span style="float:right">></span>
               <div id="dropdown_sort_by_topic" class="dropdown-content" style="top:-500%;left:100%; width:320px">
-                <div v-for="t in ['Advice','Belief','Bizarre Story','Comforting Cheer','Complain','Criticism','Cute Cheer','Dream','Food Story','Gossip','Happy Memories','Heroic Cheer','Heroic Tale','Horror Story','Interesting Story','Joyful Memory','Myth','Occult','Reality Check','Sad Memory','Self-Indulgent','Unique Comment','Faith']"
+                <div v-for="t in ['Advice','Faith','Bizarre Story','Comforting Cheer','Complain','Criticism','Cute Cheer','Dream','Food Story','Gossip','Happy Memories','Heroic Cheer','Heroic Tale','Horror Story','Interesting Story','Joyful Memory','Myth','Occult','Reality Check','Sad Memory','Self-Indulgent','Unique Comment']"
                  class="active" 
                  v-on:click="databaseSort=['c_values',t]"
                  onclick="this.parentElement.style.display='none'"
@@ -2012,7 +2011,7 @@ icon-bar span img {
             <div class="active dropdown" onclick="var x = this.getBoundingClientRect().right; if (document.body.getBoundingClientRect().right-x>320)document.getElementById('dropdown_sort_by_topic_b').style.left='100%'; else document.getElementById('dropdown_sort_by_topic_b').style.left='-200%'" onmouseover="document.getElementById('dropdown_sort_by_topic_b').style.removeProperty('display')">{{strings.topics}}
               <span style="float:right">></span>
               <div id="dropdown_sort_by_topic_b" class="dropdown-content" style="top:-600%;left:100%; width:320px">
-                <div v-for="t in ['Advice','Belief','Bizarre Story','Comforting Cheer','Complain','Criticism','Cute Cheer','Dream','Food Story','Gossip','Happy Memories','Heroic Cheer','Heroic Tale','Horror Story','Interesting Story','Joyful Memory','Myth','Occult','Reality Check','Sad Memory','Self-Indulgent','Unique Comment','Faith']"
+                <div v-for="t in ['Advice','Faith','Bizarre Story','Comforting Cheer','Complain','Criticism','Cute Cheer','Dream','Food Story','Gossip','Happy Memories','Heroic Cheer','Heroic Tale','Horror Story','Interesting Story','Joyful Memory','Myth','Occult','Reality Check','Sad Memory','Self-Indulgent','Unique Comment']"
                  class="active" 
                  v-on:click="rosterSort=['c_values',t]"
                  onclick="this.parentElement.style.display='none'"
