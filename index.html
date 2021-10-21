@@ -5771,6 +5771,7 @@ icon-bar span img {
               case 'Complain':
                 return '愚痴';
                 break;
+              case 'Faith':
               case 'Belief':
                 return '信念';
                 break;
@@ -5844,6 +5845,7 @@ icon-bar span img {
               case 'Complain':
                 return '耍赖';
                 break;
+              case 'Faith':
               case 'Belief':
                 return '信念';
                 break;
@@ -5917,6 +5919,7 @@ icon-bar span img {
               case 'Complain':
                 return '耍賴';
                 break;
+              case 'Faith':
               case 'Belief':
                 return '信念';
                 break;
@@ -5990,6 +5993,7 @@ icon-bar span img {
               case 'Complain':
                 return 'Plainte';
                 break;
+              case 'Faith':
               case 'Belief':
                 return 'Croyance';
                 break;
@@ -6063,6 +6067,7 @@ icon-bar span img {
               case 'Complain':
                 return 'คำบ่น';
                 break;
+              case 'Faith':
               case 'Belief':
                 return 'ความเชื่อ';
                 break;
@@ -6136,6 +6141,7 @@ icon-bar span img {
               case 'Complain':
                 return '투정';
                 break;
+              case 'Faith':
               case 'Belief':
                 return '신념';
                 break;
@@ -6209,6 +6215,7 @@ icon-bar span img {
               case 'Complain':
                 return 'Queja';
                 break;
+              case 'Faith':
               case 'Belief':
                 return 'Creencia';
                 break;
@@ -6282,6 +6289,7 @@ icon-bar span img {
               case 'Complain':
                 return 'Reclamação';
                 break;
+              case 'Faith':
               case 'Belief':
                 return 'Crença';
                 break;
@@ -6355,6 +6363,7 @@ icon-bar span img {
               case 'Complain':
                 return 'Beschwerde';
                 break;
+              case 'Faith':
               case 'Belief':
                 return 'Glaube';
                 break;
@@ -6365,8 +6374,13 @@ icon-bar span img {
                 return n;
                 break;
             };
-          } else {
-            return n;
+          } else { // EN
+            switch (n) {
+              case 'Belief':
+                return 'Faith';
+                break;
+              default:
+           	return n;
           };
       },
       getUserHeroesBoot: function () { // read user's local storage team
