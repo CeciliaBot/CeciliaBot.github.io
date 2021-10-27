@@ -2433,7 +2433,7 @@
     "end": "2021-12-02",
     "title": "42nd Mystic rotation",
     "subtitle": "Mystic Summon",
-    "c": [{ "id": "spirit-eye-celine", "new": true }],
+    "c": [{ "id": "spirit-eye-celine", "new": true },{ "id": "blood-blade-karin", "new": false }],
     "a": []
   },
   {
