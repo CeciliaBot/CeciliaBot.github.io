@@ -10159,5 +10159,61 @@
     "buffs": [1, 6, 12, 40],
     "debuffs": [18],
     "common": []
+  },
+  "shuna": {
+    "id": "c1123",
+    "_id": "shuna",
+    "name": "Shuna",
+    "rarity": "5",
+    "role": "manauser",
+    "attribute": "fire",
+    "camping": {
+      "personalities": ["Loyal", "Religious"],
+      "topics": ["Heroic Tale", "Cute Cheer"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 1,
+        "Heroic Tale": 3,
+        "Comforting Cheer": 6,
+        "Cute Cheer": 1,
+        "Heroic Cheer": 7,
+        "Sad Memory": 7,
+        "Joyful Memory": 4,
+        "Happy Memory": 4,
+        "Unique Comment": 2,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 4,
+        "Bizarre Story": 0,
+        "Food Story": 3,
+        "Horror Story": 0,
+        "Gossip": 0,
+        "Dream": 3,
+        "Advice": 4,
+        "Complain": 2,
+        "Belief": 3,
+        "Interesting Story": 0
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [5],
+    "debuffs": [21],
+    "common": []
   }
 }
