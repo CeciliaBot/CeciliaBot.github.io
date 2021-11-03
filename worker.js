@@ -477,7 +477,7 @@ onmessage = function(e) {
                         var lastProgress = -1;
                         var tot = (Combinatorics.bigCombination(campList,4-e.locked.length-c[0].length).length * c.length).valueOf();
                         c.forEach( (cartesianLocked) => {
-                            Combinatorics.bigCombination(campList,4-e.locked.length-cartesianLocked.length).forEach(teamComb => {
+                            Combinatorics.bigCombination(campList, (4-e.locked.length-cartesianLocked.length)||1).forEach(teamComb => {
                                 //Progress Bar
                                 currIndex++
                                 if (lastProgress !== Math.round(currIndex * 100 / tot))
@@ -485,7 +485,7 @@ onmessage = function(e) {
                                     postMessage({"status": Math.round(currIndex * 100 / tot) });
 
                                 var teamComb = teamComb;
-                                if (e.cartesianLock.length + e.locked.length>3) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
+                                if (cartesianLocked.length + e.locked.length>3) teamComb = []; // Se locked = 4 allora team deve riportare array vuota
                                 var team = [].concat(teamComb, cartesianLocked, e.locked);
                                 let elementoFiltro = e.preferenzeRisultati.lockedMatter === true ? team : teamComb; // applica filtro solo ai eroi non lockati
                                 if (checkScDupe(team))
@@ -528,10 +528,10 @@ onmessage = function(e) {
                               
                                 if (!risultatoDiQuestoTeam)
                                     return;
-
+                              
                                 if (e.risultati[e.risultati.length-1].morale >= risultatoDiQuestoTeam.morale || (e.preferenzeRisultati.minMorale === true && e.preferenzeRisultati.morale > risultatoDiQuestoTeam.morale) )
                                     return;
-
+                                
                                 for (var i = 0; i<e.risultati.length;i++) {
                                     if (risultatoDiQuestoTeam.morale >= e.risultati[i].morale) {
                                         e.risultati.splice(i, 0, risultatoDiQuestoTeam );
@@ -540,14 +540,14 @@ onmessage = function(e) {
                                     };
                                 };
                             });
-                            if (e.risultati[e.risultati.length-1].team.length<3)
-                                for (var i = 0; i < e.risultati.length; i++) {
-                                    if (e.risultati[i].team.length<3) { // remove placeholders
-                                        e.risultati.splice(i);
-                                        break;
-                                    };
-                                };
                         });
+                        if (e.risultati[e.risultati.length-1].team.length<3)
+                            for (var i = 0; i < e.risultati.length; i++) {
+                                if (e.risultati[i].team.length<3) { // remove placeholders
+                                    e.risultati.splice(i);
+                                    break;
+                                };
+                            };
                     };
                 };
                 //e.risultati.sort(function (a,b) {return ((a.morale > b.morale) ? -1 : ((a.morale == b.morale) ? 0: 1))}); // riordina l'ultimo elemento aggiunto
