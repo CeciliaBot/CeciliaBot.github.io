@@ -10125,7 +10125,7 @@
     "attribute": "wind",
     "camping": {
       "personalities": ["Altruistic", "Indifferent"],
-      "topics": ["Criticism", "Criticism"],
+      "topics": ["Horror Story", "Dream"],
       "values": {
         "Criticism": 0,
         "Reality Check": 0,
