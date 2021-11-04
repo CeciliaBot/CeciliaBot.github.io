@@ -10216,5 +10216,61 @@
     "buffs": [5],
     "debuffs": [21],
     "common": []
+  },
+  "milim": {
+    "id": "c1122",
+    "_id": "milim",
+    "name": "Milim",
+    "rarity": "5",
+    "role": "mage",
+    "attribute": "fire",
+    "camping": {
+      "personalities": ["Individualistic", "Natural"],
+      "topics": ["Food Story", "Joyful Memory"],
+      "values": {
+        "Criticism": 2,
+        "Reality Check": 2,
+        "Heroic Tale": 2,
+        "Comforting Cheer": 4,
+        "Cute Cheer": 3,
+        "Heroic Cheer": 4,
+        "Sad Memory": 3,
+        "Joyful Memory": 5,
+        "Happy Memories": 4,
+        "Unique Comment": 0,
+        "Self-Indulgent": 2,
+        "Occult": 0,
+        "Myth": 2,
+        "Bizarre Story": 0,
+        "Food Story": 5,
+        "Horror Story": 0,
+        "Gossip": 1,
+        "Dream": 4,
+        "Advice": 3,
+        "Complain": 3,
+        "Belief": 2,
+        "Interesting Story": 2
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1, 10],
+    "debuffs": [],
+    "common": []
   }
 }
