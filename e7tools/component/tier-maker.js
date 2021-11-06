@@ -25,8 +25,8 @@ function canvas2png (target, fileName) {
     y: 0,
     scrollX: 0,
     scrollY: 0,
-    windowWidth: 2080,
-    windowHeight: 2000,
+    windowWidth: 1200,
+    windowHeight: 1200,
     onclone: function(doc) {
       var canvas = doc.querySelector('#tier');
       options.height=canvas.scrollHeight;
