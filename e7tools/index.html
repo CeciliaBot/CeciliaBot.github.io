@@ -65,7 +65,7 @@
             <div id="main_menu" v-show="mainMenu" class="mm_container" v-cloak>
               <h2>CeciliaBot Tools</h2>
               <div class="app_drawer">
-                <div v-for="x in [/*{title: 'Timeline', icon: 'https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2Ftimeline-icon3.png?v=1631368191379', click: 'timeline'},*/ {title: 'Character', class: 'fas fa-users', click: 'character-stats'}, {title: 'Gacha Sim', icon: 'https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2FFile11226.png?v=1632411965681', click: 'summon-simulator'}, {title: 'Tier Maker', class: 'fa fa-trophy', click: 'tierlist-maker'}, {title: 'Gear Score', class: 'fa fa-info-circle', click: 'gear-score'}]" v-on:click="mainMenuClick(x.click,x.keep)">
+                <div v-for="x in [/*{title: 'Timeline', icon: 'https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2Ftimeline-icon3.png?v=1631368191379', click: 'timeline'}, {title: 'Character', class: 'fas fa-users', click: 'character-stats'},*/ {title: 'Gacha Sim', icon: 'https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2FFile11226.png?v=1632411965681', click: 'summon-simulator'}, {title: 'Tier Maker', class: 'fa fa-trophy', click: 'tierlist-maker'}, {title: 'Gear Score', class: 'fa fa-info-circle', click: 'gear-score'}]" v-on:click="mainMenuClick(x.click,x.keep)">
                   <div>
                     <i v-if="x.class" v-bind:class="x.class" aria-hidden="true"></i>
                     <img v-else :src="x.icon" height="70%"/>
