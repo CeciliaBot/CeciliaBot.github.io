@@ -139,13 +139,13 @@ export default {
   computed: {
     floatyOptions: function () {
       if (this.mobile) {
-        var o = [{title: 'New tierlist', class: 'fa fa-plus', click: 'new'}, {title: 'Save', class: 'fa fa-save', click: 'save'}, {title: 'Export as JSON', class: 'fas fa-code', click: 'exportJSON'}, {title: this.tierType===0?'Alignment chart':'Classic tierlist', class: 'fas fa-border-all', click: 'toggletier'},/*{title: 'Compare', class: 'fa fa-code-compare', click: 'compare'},*/ {title: 'Filter and Sort', class: 'fa fa-filter', click: 'filters'}, {title: 'Home', class: 'fa fa-home', click: 'home'}];
+        var o = [{title: 'New tierlist', class: 'fa fa-plus', click: 'new'}, {title: 'Save', class: 'fa fa-save', click: 'save'}, {title: 'Export as JSON', class: 'fas fa-code', click: 'exportJSON'}, {title: this.tierType===0?'Alignment chart':'Classic tierlist', class: 'fas fa-border-all', click: 'toggletier'},/*{title: 'Compare', class: 'fa fa-code-compare', click: 'compare'},*/ {title: 'Filter and Sort', class: 'fa fa-filter', click: 'filters'}/*, {title: 'Home', class: 'fa fa-home', click: 'home'}*/];
         if (this.canSaveAsNew) o.splice( 2, 0, {title: 'Save as new', class: 'fa fa-save', click: 'saveAsNew'});
         if (this.tierType === 0) o.splice(-2, 0, {title: 'Switch Label Layout', class: 'fa fa-columns', click: 'layout'})
         if (this.tierType === 1) o.splice(-2, 0, {title: 'Rename cartesian axes', class: 'fa fa-columns', click: 'renameAxes'})
         return o;
       } else
-        return [{title: 'Home', class: 'fa fa-home', click: 'home'}]
+        return [/*{title: 'Home', class: 'fa fa-home', click: 'home'}*/]
     },
     oldTierlists: function () {
       return Object.values(this.tierlistHistory);
