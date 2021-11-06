@@ -30,7 +30,7 @@ Vue.component('floating-menu', {
     }
   },
   render: function (h) {
-    return h('div', {style: {zIndex: 10, position: 'absolute'}}, [
+    return h('div', {style: {zIndex: 10, position: 'absolute'}}, this.options.length >0 [
       this.options.length ===1
       ?
         h('div', {staticClass: 'mobile-menu ' + this.options[0].class, on: {click: ()=> this.clickEvent(this.options[0])} })
@@ -45,6 +45,6 @@ Vue.component('floating-menu', {
         ),
         h('div', {staticClass: 'fa mobile-menu', class: {'fa-bars': !this.open,'fa-times': this.open, open: this.open}, on: {click: ()=> this.open=!this.open} })
       ]
-    ]);
+    ] : null);
   }
 });
