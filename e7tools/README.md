@@ -5,3 +5,5 @@
 - Banner Timeline
 - Banners by character
 - Gear Score
+- Gear gacha
+- Summon Simulator
