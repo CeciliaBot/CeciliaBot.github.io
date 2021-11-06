@@ -304,7 +304,7 @@ const store = new Vuex.Store({
             resolve(e.target.result);
           };
           request.onupgradeneeded = e => {
-            var stores = [{name: 'pulls', keyPath: 'id'},{name: 'tierlist', keyPath: 'id'}]
+            var stores = [{name: 'pulls', keyPath: 'id'},{name: 'tierlist', keyPath: 'id'},{name: 'camping', keyPath: 'id'}]
             app.$root.$emit('snackbar', {type: 'info', title: 'IndexedDB', description: 'Running onupgradeneeded'});
             let db = e.target.result;
             for (var i=0; i<stores.length; i++) {
