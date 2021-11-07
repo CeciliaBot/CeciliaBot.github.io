@@ -9416,7 +9416,7 @@
     "id": "c1113",
     "_id": "ilynav",
     "name": "Ilynav",
-    "rarity": "5",
+    "rarity": 5,
     "role": "knight",
     "attribute": "fire",
     "camping": {
@@ -9460,7 +9460,7 @@
     "id": "c2085",
     "_id": "inferno-khawazu",
     "name": "Inferno Khawazu",
-    "rarity": "4",
+    "rarity": 4,
     "role": "warrior",
     "attribute": "dark",
     "camping": {
@@ -9504,7 +9504,7 @@
     "id": "c1034",
     "_id": "straze",
     "name": "Straze",
-    "rarity": "5",
+    "rarity": 5,
     "role": "warrior",
     "attribute": "dark",
     "camping": {
@@ -9548,7 +9548,7 @@
     "id": "c1116",
     "_id": "emilia",
     "name": "Emilia",
-    "rarity": "5",
+    "rarity": 5,
     "role": "manauser",
     "attribute": "ice",
     "camping": {
@@ -9592,7 +9592,7 @@
     "id": "c1114",
     "_id": "rem",
     "name": "Rem",
-    "rarity": "5",
+    "rarity": 5,
     "role": "warrior",
     "attribute": "ice",
     "camping": {
@@ -9636,7 +9636,7 @@
     "id": "c1115",
     "_id": "ram",
     "name": "Ram",
-    "rarity": "5",
+    "rarity": 5,
     "role": "mage",
     "attribute": "wind",
     "camping": {
@@ -9680,7 +9680,7 @@
     "id": "c3121",
     "_id": "melany",
     "name": "Melany",
-    "rarity": "3",
+    "rarity": 3,
     "role": "warrior",
     "attribute": "fire",
     "camping": {
@@ -9724,7 +9724,7 @@
     "id": "c3122",
     "_id": "helen",
     "name": "Helen",
-    "rarity": "3",
+    "rarity": 3,
     "role": "knight",
     "attribute": "ice",
     "camping": {
@@ -9768,7 +9768,7 @@
     "id": "c3123",
     "_id": "christy",
     "name": "Christy",
-    "rarity": "3",
+    "rarity": 3,
     "role": "knight",
     "attribute": "wind",
     "camping": {
@@ -9812,7 +9812,7 @@
     "id": "c3124",
     "_id": "camilla",
     "name": "Camilla",
-    "rarity": "3",
+    "rarity": 3,
     "role": "warrior",
     "attribute": "light",
     "camping": {
@@ -9856,7 +9856,7 @@
     "id": "c3125",
     "_id": "penelope",
     "name": "Penelope",
-    "rarity": "3",
+    "rarity": 3,
     "role": "assassin",
     "attribute": "dark",
     "camping": {
@@ -9900,7 +9900,7 @@
     "id": "c5024",
     "_id": "summertime-iseria",
     "name": "Summertime Iseria",
-    "rarity": "5",
+    "rarity": 5,
     "role": "ranger",
     "attribute": "fire",
     "camping": {
@@ -9944,7 +9944,7 @@
     "id": "c2027",
     "_id": "closer-charles",
     "name": "Closer Charles",
-    "rarity": "5",
+    "rarity": 5,
     "role": "assassin",
     "attribute": "dark",
     "camping": {
@@ -9988,7 +9988,7 @@
     "id": "c6062",
     "_id": "angel-of-light-angelica",
     "name": "Angel of Light Angelica",
-    "rarity": "4",
+    "rarity": 4,
     "role": "mage",
     "attribute": "light",
     "camping": {
@@ -10032,7 +10032,7 @@
     "id": "c1117",
     "_id": "belian",
     "name": "Belian",
-    "rarity": "5",
+    "rarity": 5,
     "role": "knight",
     "attribute": "light",
     "camping": {
@@ -10076,7 +10076,7 @@
     "id": "c1118",
     "_id": "ran",
     "name": "Ran",
-    "rarity": "5",
+    "rarity": 5,
     "role": "assassin",
     "attribute": "ice",
     "camping": {
@@ -10120,7 +10120,7 @@
     "id": "c1121",
     "_id": "rimuru",
     "name": "Rimuru",
-    "rarity": "5",
+    "rarity": 5,
     "role": "warrior",
     "attribute": "wind",
     "camping": {
@@ -10165,7 +10165,7 @@
     "id": "c1123",
     "_id": "shuna",
     "name": "Shuna",
-    "rarity": "5",
+    "rarity": 5,
     "role": "manauser",
     "attribute": "fire",
     "camping": {
@@ -10221,7 +10221,7 @@
     "id": "c1122",
     "_id": "milim",
     "name": "Milim",
-    "rarity": "5",
+    "rarity": 5,
     "role": "mage",
     "attribute": "fire",
     "camping": {
