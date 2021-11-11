@@ -10272,5 +10272,173 @@
     "buffs": [1, 10],
     "debuffs": [],
     "common": []
+  },
+  "shadow-knight-pyllis": {
+    "id": "c4005",
+    "_id": "shadow-knight-pyllis",
+    "name": "Shadow Knight Pyllis",
+    "rarity": "3",
+    "role": "knight",
+    "attribute": "dark",
+    "camping": {
+      "personalities": ["Loyal", "Indifferent"],
+      "topics": ["Dream", "Joyful Memory"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 1,
+        "Heroic Tale": 4,
+        "Comforting Cheer": 3,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 5,
+        "Sad Memory": 3,
+        "Joyful Memory": 3,
+        "Happy Memories": 2,
+        "Unique Comment": 1,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 1,
+        "Bizarre Story": 0,
+        "Food Story": 6,
+        "Horror Story": 0,
+        "Gossip": 0,
+        "Dream": 1,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 0,
+        "Interesting Story": 1
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [25],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [2, 5],
+    "debuffs": [25],
+    "common": []
+  },
+  "spirit-eye-celine": {
+    "id": "c2103",
+    "_id": "spirit-eye-celine",
+    "name": "Spirit Eye Celine",
+    "rarity": "5",
+    "role": "assassin",
+    "attribute": "light",
+    "camping": {
+      "personalities": ["Loyal", "Indifferent"],
+      "topics": ["Advice", "Horror Story"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 1,
+        "Heroic Tale": 4,
+        "Comforting Cheer": 3,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 5,
+        "Sad Memory": 3,
+        "Joyful Memory": 3,
+        "Happy Memories": 2,
+        "Unique Comment": 1,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 1,
+        "Bizarre Story": 0,
+        "Food Story": 6,
+        "Horror Story": 0,
+        "Gossip": 0,
+        "Dream": 1,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 0,
+        "Interesting Story": 1
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [14],
+    "debuffs": [],
+    "common": []
+  },
+  "adin": {
+    "id": "c3143",
+    "_id": "adin",
+    "name": "Adin",
+    "rarity": "3",
+    "role": "assassin",
+    "attribute": "wind",
+    "camping": {
+      "personalities": ["Optimistic", "Free"],
+      "topics": ["Sad Memory", "Dream"],
+      "values": {
+        "Criticism": 1,
+        "Reality Check": 0,
+        "Heroic Tale": 3,
+        "Comforting Cheer": 1,
+        "Cute Cheer": 5,
+        "Heroic Cheer": 4,
+        "Sad Memory": 2,
+        "Joyful Memory": 5,
+        "Happy Memories": 3,
+        "Unique Comment": 5,
+        "Self-Indulgent": 2,
+        "Occult": 2,
+        "Myth": 2,
+        "Bizarre Story": 3,
+        "Food Story": 4,
+        "Horror Story": 2,
+        "Gossip": 2,
+        "Dream": 6,
+        "Advice": 1,
+        "Complain": 2,
+        "Belief": 2,
+        "Interesting Story": 7
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1, "weakness_shared"],
+    "debuffs": [18, 29],
+    "common": []
   }
 }
