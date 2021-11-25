@@ -10440,5 +10440,61 @@
     "buffs": [1, "weakness_shared"],
     "debuffs": [18, 29],
     "common": []
+  },
+  "zahhak": {
+    "id": "c1119",
+    "_id": "zahhak",
+    "name": "Zahhak",
+    "rarity": "5",
+    "role": "warrior",
+    "attribute": "wind",
+    "camping": {
+      "personalities": ["Realistic", "Pessimistic"],
+      "topics": ["Happy Memories", "Belief"],
+      "values": {
+        "Criticism": 6,
+        "Reality Check": 6,
+        "Heroic Tale": 0,
+        "Comforting Cheer": 5,
+        "Cute Cheer": 1,
+        "Heroic Cheer": 2,
+        "Sad Memory": 0,
+        "Joyful Memory": 1,
+        "Happy Memories": 1,
+        "Unique Comment": 0,
+        "Self-Indulgent": 0,
+        "Occult": 4,
+        "Myth": 0,
+        "Bizarre Story": 3,
+        "Food Story": 0,
+        "Horror Story": 2,
+        "Gossip": 1,
+        "Dream": 0,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 2,
+        "Interesting Story": 1
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [5, 6],
+    "debuffs": [],
+    "common": []
   }
 }
