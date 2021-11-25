@@ -10445,7 +10445,7 @@
     "id": "c1119",
     "_id": "zahhak",
     "name": "Zahhak",
-    "rarity": "5",
+    "rarity": 5,
     "role": "warrior",
     "attribute": "wind",
     "camping": {
