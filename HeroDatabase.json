@@ -10496,5 +10496,61 @@
     "buffs": [5, 6],
     "debuffs": [],
     "common": []
+  },
+  "conqueror-lilias": {
+    "id": "c2089",
+    "_id": "conqueror-lilias",
+    "name": "Conqueror Lilias",
+    "rarity": 5,
+    "role": "warrior",
+    "attribute": "light",
+    "camping": {
+      "personalities": ["Narcissist", "Introvert"],
+      "topics": ["Reality Check", "Belief"],
+      "values": {
+        "Criticism": 3,
+        "Reality Check": 3,
+        "Heroic Tale": 4,
+        "Comforting Cheer": 8,
+        "Cute Cheer": 8,
+        "Heroic Cheer": 6,
+        "Sad Memory": 0,
+        "Joyful Memory": 2,
+        "Happy Memories": 2,
+        "Unique Comment": 2,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 3,
+        "Bizarre Story": 2,
+        "Food Story": 0,
+        "Horror Story": 0,
+        "Gossip": 4,
+        "Dream": 3,
+        "Advice": 5,
+        "Complain": 0,
+        "Belief": 7,
+        "Interesting Story": 3
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": ["redirected_provoke"],
+        "common": []
+      }
+    ],
+    "buffs": [41],
+    "debuffs": [17,"redirected_provoke"],
+    "common": []
   }
 }
