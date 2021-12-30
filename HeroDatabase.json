@@ -10550,7 +10550,63 @@
       }
     ],
     "buffs": [41],
-    "debuffs": [17,"redirected_provoke"],
+    "debuffs": [17, "redirected_provoke"],
+    "common": []
+  },
+  "command-model-laika": {
+    "id": "c1099",
+    "_id": "command-model-laika",
+    "name": "Command Model Laika",
+    "rarity": 5,
+    "role": "ranger",
+    "attribute": "wind",
+    "camping": {
+      "personalities": ["Indifferent", "Extrovert"],
+      "topics": ["Complain", "Advice"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 0,
+        "Heroic Tale": 4,
+        "Comforting Cheer": 3,
+        "Cute Cheer": 4,
+        "Heroic Cheer": 3,
+        "Sad Memory": 0,
+        "Joyful Memory": 4,
+        "Happy Memories": 2,
+        "Unique Comment": 1,
+        "Self-Indulgent": 2,
+        "Occult": 1,
+        "Myth": 1,
+        "Bizarre Story": 2,
+        "Food Story": 5,
+        "Horror Story": 3,
+        "Gossip": 2,
+        "Dream": 2,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 1,
+        "Interesting Story": 3
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1, 12],
+    "debuffs": [19, 26, 21],
     "common": []
   }
 }
