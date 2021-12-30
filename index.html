@@ -1560,7 +1560,7 @@ icon-bar span img {
               <h2 style="text-align: center;">{{strings.messaggio_di_benvenuto}}<br><a href="https://epicsevendb.com/" style="text-decoration: none;color:red"><u>{{strings.data_by}}</u></a>
               </h2>
               <div style="color: orangered; text-align: center;">
-                Right click a character to view that character's skills!
+                "Conqueror Lilias" data has been updated fixing incorrect values
               </div>
               <div v-if='!Object.keys(myHeroesList).length' onmouseover="" style="cursor: pointer; color: orangered; text-align: center; margin-top: 30vh; font-size: 30px;" onclick="welcome_toggle('instructions',{})">
                 First time here?<br> Click here for a quick guide.
@@ -1574,6 +1574,10 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li>
+                  <b>30/12/2021</b>: Updated ML Lilias data:<br>
+                  ML Lilias was previously added to the website with incorrect camping values. Please manually update teams that include her!
+                </li>
                 <li style="color: red">
                   <b>22/10/2021</b>: Removed Belief and replaced with Faith<br>
                   If you have saved a saved team with Belief and Faith please update it.
