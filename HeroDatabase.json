@@ -10608,5 +10608,117 @@
     "buffs": [1, 12],
     "debuffs": [19, 26, 21],
     "common": []
+  },
+  "peira": {
+    "id": "c1125",
+    "_id": "peira",
+    "name": "Peira",
+    "rarity": 5,
+    "role": "assassin",
+    "attribute": "ice",
+    "camping": {
+      "personalities": ["Pessimistic", "Envious"],
+      "topics": ["Joyful Memory", "Occult"],
+      "values": {
+        "Criticism": 6,
+        "Reality Check": 3,
+        "Heroic Tale": 2,
+        "Comforting Cheer": 5,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 3,
+        "Sad Memory": 0,
+        "Joyful Memory": 2,
+        "Happy Memories": 2,
+        "Unique Comment": 1,
+        "Self-Indulgent": 2,
+        "Occult": 6,
+        "Myth": 4,
+        "Bizarre Story": 3,
+        "Food Story": 2,
+        "Horror Story": 0,
+        "Gossip": 0,
+        "Dream": 3,
+        "Advice": 0,
+        "Complain": 0,
+        "Belief": 3,
+        "Interesting Story": 2
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [20],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1, 5, 15, "stic_escort"],
+    "debuffs": [29, 20, 61],
+    "common": []
+  },
+  "muwi": {
+    "id": "c3132",
+    "_id": "muwi",
+    "name": "Muwi",
+    "rarity": 3,
+    "role": "assassin",
+    "attribute": "ice",
+    "camping": {
+      "personalities": ["Loyal", "Indifferent"],
+      "topics": ["Sad Memory", "Belief"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 1,
+        "Heroic Tale": 4,
+        "Comforting Cheer": 3,
+        "Cute Cheer": 2,
+        "Heroic Cheer": 5,
+        "Sad Memory": 3,
+        "Joyful Memory": 3,
+        "Happy Memories": 2,
+        "Unique Comment": 1,
+        "Self-Indulgent": 0,
+        "Occult": 0,
+        "Myth": 1,
+        "Bizarre Story": 0,
+        "Food Story": 6,
+        "Horror Story": 0,
+        "Gossip": 0,
+        "Dream": 1,
+        "Advice": 2,
+        "Complain": 0,
+        "Belief": 0,
+        "Interesting Story": 1
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [32],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [1],
+    "debuffs": [18, 17, 32],
+    "common": []
   }
 }
