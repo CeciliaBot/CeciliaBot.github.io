@@ -10720,5 +10720,61 @@
     "buffs": [1],
     "debuffs": [18, 17, 32],
     "common": []
+  },
+  "lionheart-cermia": {
+    "id": "c2079",
+    "_id": "lionheart-cermia",
+    "name": "Lionheart Cermia",
+    "rarity": 5,
+    "role": "warrior",
+    "attribute": "light",
+    "camping": {
+      "personalities": ["Optimistic", "Extrovert"],
+      "topics": ["Dream", "Unique Comment"],
+      "values": {
+        "Criticism": 0,
+        "Reality Check": 0,
+        "Heroic Tale": 6,
+        "Comforting Cheer": 3,
+        "Cute Cheer": 6,
+        "Heroic Cheer": 6,
+        "Sad Memory": 1,
+        "Joyful Memory": 7,
+        "Happy Memories": 4,
+        "Unique Comment": 3,
+        "Self-Indulgent": 3,
+        "Occult": 2,
+        "Myth": 2,
+        "Bizarre Story": 3,
+        "Food Story": 4,
+        "Horror Story": 4,
+        "Gossip": 3,
+        "Dream": 4,
+        "Advice": 2,
+        "Complain": 1,
+        "Belief": 3,
+        "Interesting Story": 4
+      }
+    },
+    "skills": [
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      },
+      {
+        "buff": [],
+        "debuff": [],
+        "common": []
+      }
+    ],
+    "buffs": [2, 3, "stic_eff_res"],
+    "debuffs": [],
+    "common": []
   }
 }
