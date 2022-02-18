@@ -121,7 +121,7 @@ var app = new Vue ({
       return this.HeroDB[h] || {id: h, _id: h, name: h, rarity: 5, attribute: 'fire', role: 'knight'};
     },
     heroIcon: function (h) {
-      return "https://cdn.glitch.com/6c14ca82-3bcb-4fd6-afa7-815b95e04a14%2F"+this.hero(h).id+"_s.png";
+      return "https://res.cloudinary.com/ceciliabot/image/upload/epic-seven/face/"+this.hero(h).id+"_s.png";
     },
     bannerId: function (b)  {
       return (b.type.slice(0,1)+b.start.replace(/-/g,'')+b.c[0].id.charAt(0)+b.c[0].id.slice(-4)).toUpperCase();
@@ -309,7 +309,7 @@ var app = new Vue ({
       return array.slice().sort( (a,b) => {return a[sorter]<b[sorter]?1:-1} );
     },
     getDB: function () {
-      httpGetAsync('../HeroDatabase.json', (res) => {
+      httpGetAsync('../data/HeroDatabase.json', (res) => {
         var data = JSON.parse(res);
         this.HeroDB = data;
       });
