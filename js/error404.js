@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["error404"],{dc75:function(n,e,t){"use strict";t.r(e);var o,r,u={name:"404",data:function(){return{}},computed:{},methods:{},render:function(n){return n("div",{},["Page not found"])}},d=u,a=t("2877"),c=Object(a["a"])(d,o,r,!1,null,null,null);e["default"]=c.exports}}]);
