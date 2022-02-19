@@ -17586,5 +17586,53 @@
         ],
         "debuffs": [],
         "common": []
+    },
+    "januta": {
+        "_id": "januta",
+        "id": "c3131",
+        "name": "Januta",
+        "rarity": 3,
+        "role": "warrior",
+        "attribute": "fire"
+    },
+    "orte": {
+        "_id": "orte",
+        "id": "c3133",
+        "name": "Orte",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "wind"
+    },
+    "yoonryoung": {
+        "_id": "yoonryoung",
+        "id": "c3134",
+        "name": "Yoonryoung",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "light"
+    },
+    "hasol": {
+        "_id": "hasol",
+        "id": "c3135",
+        "name": "Hasol",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "dark"
+    },
+    "hwayoung": {
+        "_id": "hwayoung",
+        "id": "c1128",
+        "name": "Hwayoung",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "fire"
+    },
+    "bad-cat-armin": {
+        "_id": "bad-cat-armin",
+        "id": "c6008",
+        "name": "Bad Cat Armin",
+        "rarity": 4,
+        "role": "warrior",
+        "attribute": "dark"
     }
 }
