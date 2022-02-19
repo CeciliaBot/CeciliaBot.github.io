@@ -16978,7 +16978,7 @@
         "id": "c4005",
         "_id": "shadow-knight-pyllis",
         "name": "Shadow Knight Pyllis",
-        "rarity": "3",
+        "rarity": 3,
         "role": "knight",
         "attribute": "dark",
         "camping": {
@@ -17047,7 +17047,7 @@
         "id": "c2103",
         "_id": "spirit-eye-celine",
         "name": "Spirit Eye Celine",
-        "rarity": "5",
+        "rarity": 5,
         "role": "assassin",
         "attribute": "light",
         "camping": {
@@ -17111,7 +17111,7 @@
         "id": "c3143",
         "_id": "adin",
         "name": "Adin",
-        "rarity": "3",
+        "rarity": 3,
         "role": "assassin",
         "attribute": "wind",
         "camping": {
