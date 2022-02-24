@@ -17588,20 +17588,135 @@
         "common": []
     },
     "januta": {
-        "_id": "januta",
         "id": "c3131",
+        "_id": "januta",
         "name": "Januta",
         "rarity": 3,
         "role": "warrior",
-        "attribute": "fire"
+        "attribute": "fire",
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Envious"
+            ],
+            "topics": [
+                "Heroic Tale",
+                "Food Story"
+            ],
+            "values": {
+                "Criticism": 8,
+                "Reality Check": 0,
+                "Heroic Tale": 7,
+                "Comforting Cheer": 3,
+                "Cute Cheer": 6,
+                "Heroic Cheer": 3,
+                "Sad Memory": 0,
+                "Joyful Memory": 1,
+                "Happy Memories": 3,
+                "Unique Comment": 1,
+                "Self-Indulgent": 2,
+                "Occult": 5,
+                "Myth": 9,
+                "Bizarre Story": 0,
+                "Food Story": 5,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 3,
+                "Advice": 3,
+                "Complain": 0,
+                "Belief": 3,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            3
+        ],
+        "debuffs": [
+            19
+        ],
+        "common": []
     },
     "orte": {
-        "_id": "orte",
         "id": "c3133",
+        "_id": "orte",
         "name": "Orte",
         "rarity": 3,
         "role": "assassin",
-        "attribute": "wind"
+        "attribute": "wind",
+        "camping": {
+            "personalities": [
+                "Heroism",
+                "Loyal"
+            ],
+            "topics": [
+                "Happy Memories",
+                "Food Story"
+            ],
+            "values": {
+                "Criticism": 0,
+                "Reality Check": 1,
+                "Heroic Tale": 6,
+                "Comforting Cheer": 6,
+                "Cute Cheer": 2,
+                "Heroic Cheer": 8,
+                "Sad Memory": 6,
+                "Joyful Memory": 5,
+                "Happy Memories": 5,
+                "Unique Comment": 2,
+                "Self-Indulgent": 0,
+                "Occult": 0,
+                "Myth": 4,
+                "Bizarre Story": 0,
+                "Food Story": 4,
+                "Horror Story": 2,
+                "Gossip": 0,
+                "Dream": 3,
+                "Advice": 4,
+                "Complain": 0,
+                "Belief": 0,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1
+        ],
+        "debuffs": [],
+        "common": []
     },
     "yoonryoung": {
         "_id": "yoonryoung",
@@ -17620,12 +17735,69 @@
         "attribute": "dark"
     },
     "hwayoung": {
-        "_id": "hwayoung",
         "id": "c1128",
+        "_id": "hwayoung",
         "name": "Hwayoung",
         "rarity": 5,
         "role": "warrior",
-        "attribute": "fire"
+        "attribute": "fire",
+        "camping": {
+            "personalities": [
+                "Hard Worker",
+                "Free"
+            ],
+            "topics": [
+                "Comforting Cheer",
+                "Self-Indulgent"
+            ],
+            "values": {
+                "Criticism": 3,
+                "Reality Check": 1,
+                "Heroic Tale": 2,
+                "Comforting Cheer": 6,
+                "Cute Cheer": 4,
+                "Heroic Cheer": 3,
+                "Sad Memory": 4,
+                "Joyful Memory": 4,
+                "Happy Memories": 1,
+                "Unique Comment": 2,
+                "Self-Indulgent": 1,
+                "Occult": 1,
+                "Myth": 1,
+                "Bizarre Story": 2,
+                "Food Story": 4,
+                "Horror Story": 1,
+                "Gossip": 1,
+                "Dream": 7,
+                "Advice": 3,
+                "Complain": 1,
+                "Belief": 1,
+                "Interesting Story": 6
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            12,
+            5
+        ],
+        "debuffs": [],
+        "common": []
     },
     "bad-cat-armin": {
         "_id": "bad-cat-armin",
