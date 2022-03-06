@@ -17806,5 +17806,90 @@
         "rarity": 4,
         "role": "warrior",
         "attribute": "dark"
+    },
+    "pirate-captain-flan": {
+        "_id": "pirate-captain-flan",
+        "id": "c2110",
+        "name": "Pirate Captain Flan",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "dark"
+    },
+    "vigilante-leader-glenn": {
+        "id": "c4103",
+        "_id": "vigilante-leader-glenn",
+        "name": "Vigilante Leader Glenn",
+        "rarity": 3,
+        "role": "ranger",
+        "attribute": "wind",
+        "camping": {
+          "personalities": [
+            "Heroism",
+            "Loyal"
+          ],
+          "topics": [
+            "Food Story",
+            "Cute Cheer"
+          ],
+          "values": {
+            "Criticism": 0,
+            "Reality Check": 1,
+            "Heroic Tale": 6,
+            "Comforting Cheer": 6,
+            "Cute Cheer": 2,
+            "Heroic Cheer": 8,
+            "Sad Memory": 6,
+            "Joyful Memory": 5,
+            "Happy Memories": 5,
+            "Unique Comment": 2,
+            "Self-Indulgent": 0,
+            "Occult": 0,
+            "Myth": 4,
+            "Bizarre Story": 0,
+            "Food Story": 4,
+            "Horror Story": 2,
+            "Gossip": 0,
+            "Dream": 3,
+            "Advice": 4,
+            "Complain": 0,
+            "Belief": 0,
+            "Interesting Story": 1
+          }
+        },
+        "skills": [
+          {
+            "buff": [],
+            "debuff": [
+              18
+            ],
+            "common": []
+          },
+          {
+            "buff": [],
+            "debuff": [],
+            "common": []
+          },
+          {
+            "buff": [],
+            "debuff": [],
+            "common": []
+          }
+        ],
+        "buffs": [
+          44,
+          4
+        ],
+        "debuffs": [
+          18
+        ],
+        "common": []
+    },
+    "verdant-adin": {
+        "_id": "verdant-adin",
+        "id": "c4143",
+        "name": "Verdant Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "wind"
     }
 }
