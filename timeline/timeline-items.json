@@ -5402,7 +5402,26 @@
   {
     "type": "limited",
     "start": "2022-03-24",
-    "end": "2022-04-14",
+    "end": "2022-04-07",
+    "title": "Elphelt",
+    "subtitle": "Limited",
+    "c": [
+      {
+        "id": "elphelt",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "ms-confille",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "start": "2022-03-24",
+    "end": "2022-04-07",
     "title": "Jack-O' & Jack-O's Symbol Limited Drop Rate Up",
     "subtitle": "Limited",
     "c": [
