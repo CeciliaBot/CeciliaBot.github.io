@@ -4446,6 +4446,54 @@
   },
   {
     "type": "event",
+    "start": "2022-04-28",
+    "ref": "2022-06-21",
+    "name": "Custom Mystic Banner",
+    "alt": "Custom Mystic Banner"
+  },
+  {
+    "type": "event",
+    "start": "2022-06-21",
+    "ref": "2022-04-28",
+    "name": "Custom Mystic Banner END",
+    "alt": "Custom Mystic Banner END"
+  },
+  {
+    "type": "event",
+    "start": "2022-04-21",
+    "ref": "2022-05-19",
+    "name": "Custom RGB Group",
+    "alt": "Custom RGB Group"
+  },
+  {
+    "type": "event",
+    "start": "2022-05-19",
+    "ref": "2022-04-21",
+    "name": "Custom RGB Group END",
+    "alt": "Custom RGB Group END"
+  },
+  {
+    "type": "event",
+    "start": "2022-04-14",
+    "name": "ML Summon Revamp (Ticket)",
+    "alt": "ML Summon Revamp (Ticket)"
+  },
+  {
+    "type": "event",
+    "start": "2022-04-07",
+    "ref": "2022-07-21",
+    "name": "Pausing ML Hero Release",
+    "alt": "Pausing ML Hero Release"
+  },
+  {
+    "type": "event",
+    "start": "2022-07-21",
+    "ref": "2022-04-07",
+    "name": "Pausing ML Hero Release (END)",
+    "alt": "Pausing ML Hero Release"
+  },
+  {
+    "type": "event",
     "start": "2020-04-16",
     "ref": "2020-07-09",
     "name": "RTA Season 1 Start",
@@ -5044,7 +5092,12 @@
         "new": false
       }
     ],
-    "a": []
+    "a": [
+      {
+        "id": "justice-for-all",
+        "new": false
+      }
+    ]
   },
   {
     "type": "covenant",
@@ -5079,6 +5132,418 @@
       {
         "id": "watcher-schuri",
         "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "nid": "8172736",
+    "start": "2022-02-03",
+    "end": "2022-02-10",
+    "title": "Pavel & Dux Noctis Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "pavel",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dux-noctis",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-02-10",
+    "end": "2022-02-17",
+    "title": "Celine & Secret Art-Storm Sword Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "celine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "secret-artstorm-sword",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-02-10",
+    "end": "2022-02-17",
+    "title": "Eda & Twilight Calamity Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "eda",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "twilight-calamity",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "nid": "8236203",
+    "start": "2022-02-17",
+    "end": "2022-02-24",
+    "title": "Vivian & Dignus Orb Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "vivian",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dignus-orb",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "nid": "8236205",
+    "start": "2022-02-17",
+    "end": "2022-02-24",
+    "title": "Iseria & Song of Stars Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "iseria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "song-of-stars",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-02-24",
+    "end": "2022-03-03",
+    "title": "Kawerik & Black Hand of the Goddess Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "kawerik",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "black-hand-of-the-goddess",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-02-24",
+    "end": "2022-03-10",
+    "title": "Hwayoung & Indestructible Gaiters Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "hwayoung",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "indestructible-gaiters",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-02-24",
+    "end": "2022-03-17",
+    "title": "47th Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "arbiter-vildred",
+        "new": false
+      },
+      {
+        "id": "bad-cat-armin",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "nid": "8283919",
+    "start": "2022-03-03",
+    "end": "2022-03-10",
+    "title": "Tywin and Crown of Glory Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "tywin",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crown-of-glory",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-03-10",
+    "end": "2022-03-17",
+    "title": "Ervalen and Double-Edged Decrescent Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "ervalen",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "doubleedged-decrescent",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-03-10",
+    "end": "2022-03-17",
+    "title": "Krau and Holy Sacrifice Drop Rate Up",
+    "subtitle": "Rate Up",
+    "c": [
+      {
+        "id": "krau",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "holy-sacrifice",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-03-17",
+    "end": "2022-04-07",
+    "title": "48th Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "pirate-captain-flan",
+        "new": true
+      },
+      {
+        "id": "fighter-maya",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "nid": "8322174",
+    "start": "2022-03-17",
+    "end": "2022-03-31",
+    "title": "Dizzy, Necro & Undine Limited Drop Rate Up",
+    "subtitle": "Limited",
+    "c": [
+      {
+        "id": "dizzy",
+        "new": false
+      }
+    ],
+    "a": [{
+      "id": "necro-undine",
+      "new": false
+    }]
+  },
+  {
+    "type": "limited",
+    "nid": "8322176",
+    "start": "2022-03-17",
+    "end": "2022-03-31",
+    "title": "Baiken & Torn Sleeve Limited Drop Rate Up",
+    "subtitle": "Limited",
+    "c": [
+      {
+        "id": "baiken",
+        "new": false
+      }
+    ],
+    "a": [{
+      "id": "torn-sleeve",
+      "new": false
+    }]
+  },
+  {
+    "type": "limited",
+    "start": "2022-03-24",
+    "end": "2022-04-14",
+    "title": "Jack-O' & Jack-O's Symbol Limited Drop Rate Up",
+    "subtitle": "Limited",
+    "c": [
+      {
+        "id": "jacko",
+        "new": true
+      }
+    ],
+    "a": [{
+      "id": "jackos-symbol",
+      "new": true
+    }]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-04-07",
+    "end": "2022-04-28",
+    "title": "49th Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "mediator-kawerik",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-04-28",
+    "end": "2022-05-19",
+    "title": "50th Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "sage-baal-sezan",
+        "new": false
+      },
+      {
+        "id": "ambitious-tywin",
+        "new": false
+      },
+      {
+        "id": "briar-witch-iseria",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-05-19",
+    "end": "2022-06-09",
+    "title": "51st Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "maid-chloe",
+        "new": false
+      },
+      {
+        "id": "martial-artist-ken",
+        "new": false
+      },
+      {
+        "id": "blood-moon-haste",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-06-09",
+    "end": "2022-06-30",
+    "title": "52nd Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "dark-corvus",
+        "new": false
+      },
+      {
+        "id": "last-rider-krau",
+        "new": false
+      },
+      {
+        "id": "top-model-luluca",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-06-09",
+    "end": "2022-06-30",
+    "title": "52nd Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "dark-corvus",
+        "new": false
+      },
+      {
+        "id": "last-rider-krau",
+        "new": false
+      },
+      {
+        "id": "top-model-luluca",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-06-30",
+    "end": "2022-07-21",
+    "title": "53rd Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "operator-sigret",
+        "new": false
+      },
+      {
+        "id": "archdemons-shadow",
+        "new": false
+      },
+      {
+        "id": "designer-lilibet",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "start": "2022-07-21",
+    "end": "2022-08-11",
+    "title": "54th Mystic Rotation",
+    "subtitle": "Mystic Summon",
+    "c": [
+      {
+        "id": "sylvan-sage-vivian",
+        "new": true
       }
     ]
   }

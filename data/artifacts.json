@@ -397,6 +397,16 @@
         "role": "ranger",
         "gacha": true
     },
+    "jackos-symbol": {
+        "_id": "jackos-symbol",
+        "id": "",
+        "identifier": "",
+        "name": "Jack-O's Symbol",
+        "rarity": 5,
+        "role": "warrior",
+        "limited": true,
+        "gacha": true
+    },
     "junkyard-dog": {
         "_id": "junkyard-dog",
         "id": "art0052",
