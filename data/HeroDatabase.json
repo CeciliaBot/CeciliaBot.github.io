@@ -17953,5 +17953,13 @@
         "rarity": 3,
         "role": "assassin",
         "attribute": "wind"
+    },
+    "jacko": {
+        "_id": "jacko",
+        "id": "c1130",
+        "name": "Jack-O'",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "fire"
     }
 }
