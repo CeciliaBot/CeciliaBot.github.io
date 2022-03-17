@@ -6,8 +6,7 @@ Gamedata has been moved inside the data folder
 - Hasol
 - Yoonryoung
 - Bad Cat Armin
-- Pirate Captain Flan
-- Verdant Adin
+- Verdant Adin (Same as Adin)
 
 # Todo:
 

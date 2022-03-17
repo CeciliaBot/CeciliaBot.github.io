@@ -93,7 +93,7 @@ var app = new Vue ({
       VERSION: 1.0,
       today: null,
       vertical: false,
-      daySize: 30, // 30px
+      daySize: 18, // 18px
       userLang: navigator.language || navigator.userLanguage,
       settings: {dev: false, showEvents: true, showUserPull: false, colorCoded: true, reverse: false},
       userPulls: {},
