@@ -1,4 +1,46 @@
 [
+  {
+    "nid": 8259578,
+    "dt": ["02/24 (Thu) 03:00","04/07 (Thu) 02:59 UTC"],
+    "a": [
+      { "id": "abyssal-crown" },
+      { "id": "airtosurface-missile-misha" },
+      { "id": "snow-crystal" },
+      { "id": "elbris-ritual-sword" },
+      { "id": "tagehels-ancient-book" },
+      { "id": "sashe-ithanes" },
+      { "id": "silver-rain" },
+      { "id": "magarahas-tome" }
+    ]
+  },
+  {
+    "nid": 8126769,
+    "dt": ["01/03 (Thu) 03:00","01/20 (Thu) 02:59 UTC"],
+    "a": [
+      { "id": "creation-destruction" },
+      { "id": "spear-of-a-new-dawn" },
+      { "id": "rhianna-luciella" },
+      { "id": "celestine" },
+      { "id": "sepulcrum" },
+      { "id": "aurius" },
+      { "id": "barthezs-orbuculum" },
+      { "id": "andres-crossbow" }
+    ]
+  },
+  {
+    "nid": 8004157,
+    "dt": ["12/02 (Thu) 03:00","2022/01/13 (Thu) 02:59 UTC"],
+    "a": [
+      { "id": "shepherd-of-the-hollow" },
+      { "id": "idols-cheer" },
+      { "id": "crimson-moon-of-nightmares" },
+      { "id": "song-of-stars" },
+      { "id": "elyhas-knife" },
+      { "id": "eternus" },
+      { "id": "strak-gauntlet" },
+      { "id": "steadfast-gatekeeper" }
+    ]
+  },
     {
       "nid": 7879025,
       "dt": ["10/21 (Thu) 03:00","12/2 (Thu) 02:59 UTC"],
@@ -129,7 +171,7 @@
       "nid": 6268111,
       "dt": ["10/29 (Thu) after the maintenance"],
       "title": "Powder of Knowledge Shop Update",
-      "content": "Improvements will be made to include the artifact in the drop rate up event in the Powder of Knowledge shop during the event period.<br>■ Drop Rate Up Artifact Sale Information- Location: Shop > Powder of Knowledge- Purchase Limit: Once during the Drop Rate Up event period- Cost: 240 Powder of Knowledge■ Details- The Artifact in the drop rate up event will be sold in the Powder of Knowledge shop only during the event period.- A summon icon will be displayed on the drop rate up Artifact in the powder of knowledge shop. - Once the drop rate up event is over, this Artifact will no longer be sold in the Powder of Knowledge shop and the purchased limit will reset. - However, the purchase limit of 1 will not apply if the drop rate up Artifact was already on the Powder of Knowledge shop Artifact rotation list. ",
+      "content": "Improvements will be made to include the artifact in the drop rate up event in the Powder of Knowledge shop during the event period.<br>■ Drop Rate Up Artifact Sale Information<br>- Location: Shop > Powder of Knowledge<br>- Purchase Limit: Once during the Drop Rate Up event period<br>- Cost: 240 Powder of Knowledge<br><br>■ Details<br>- The Artifact in the drop rate up event will be sold in the Powder of Knowledge shop only during the event period.<br>- A summon icon will be displayed on the drop rate up Artifact in the powder of knowledge shop.<br>- Once the drop rate up event is over, this Artifact will no longer be sold in the Powder of Knowledge shop and the purchased limit will reset.<br>- However, the purchase limit of 1 will not apply if the drop rate up Artifact was already on the Powder of Knowledge shop Artifact rotation list. ",
       "a": []
     },
     {

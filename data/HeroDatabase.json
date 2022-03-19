@@ -6,6 +6,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -79,6 +80,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Envious",
@@ -154,6 +156,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -220,6 +223,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Alcoholic",
@@ -298,6 +302,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -364,6 +369,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Obsessive",
@@ -442,6 +448,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -515,6 +522,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -594,6 +602,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -672,6 +681,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Free",
@@ -742,6 +752,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -814,6 +825,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -882,6 +894,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Pessimistic",
@@ -957,6 +970,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -1037,6 +1051,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -1103,6 +1118,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -1184,6 +1200,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Envious",
@@ -1261,6 +1278,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -1333,6 +1351,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -1408,6 +1427,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -1482,6 +1502,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -1554,6 +1575,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -1620,6 +1642,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -1690,6 +1713,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -1756,6 +1780,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -1822,6 +1847,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -1893,6 +1919,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -1966,6 +1993,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -2035,6 +2063,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Religious",
@@ -2103,6 +2132,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -2187,6 +2217,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Hard Worker",
@@ -2262,6 +2293,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -2340,6 +2372,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -2410,6 +2443,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Envious",
@@ -2483,6 +2517,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Extrovert",
@@ -2557,6 +2592,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -2635,6 +2671,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -2705,6 +2742,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Hot and Cold",
@@ -2780,6 +2818,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -2846,6 +2885,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -2926,6 +2966,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -2999,6 +3040,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -3091,6 +3133,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Natural",
@@ -3166,6 +3209,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Extrovert",
@@ -3243,6 +3287,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -3313,6 +3358,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -3389,6 +3435,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Religious",
@@ -3464,6 +3511,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Extrovert",
@@ -3538,6 +3586,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Free",
@@ -3615,6 +3664,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -3685,6 +3735,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -3764,6 +3815,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Hot and Cold",
@@ -3839,6 +3891,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -3905,6 +3958,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -3977,6 +4031,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -4050,6 +4105,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -4125,6 +4181,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Envious",
@@ -4202,6 +4259,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -4289,6 +4347,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -4364,6 +4423,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Academic",
@@ -4439,6 +4499,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -4509,6 +4570,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -4580,6 +4642,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -4653,6 +4716,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -4722,6 +4786,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -4799,6 +4864,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -4872,6 +4938,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -4945,6 +5012,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Academic",
@@ -5024,6 +5092,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -5098,6 +5167,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Hard Worker",
@@ -5174,6 +5244,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -5243,6 +5314,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -5323,6 +5395,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -5399,6 +5472,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -5465,6 +5539,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -5544,6 +5619,7 @@
         "rarity": 5,
         "attribute": "light",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Obsessive",
@@ -5622,6 +5698,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -5691,6 +5768,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -5767,6 +5845,7 @@
         "rarity": 5,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -5849,6 +5928,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -5925,6 +6005,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -6004,6 +6085,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -6070,6 +6152,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -6140,6 +6223,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Academic",
@@ -6210,6 +6294,7 @@
         "rarity": 5,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -6288,6 +6373,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Academic",
@@ -6360,6 +6446,7 @@
         "rarity": 5,
         "attribute": "ice",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -6431,6 +6518,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -6503,6 +6591,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -6575,6 +6664,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Extrovert",
@@ -6653,6 +6743,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -6724,6 +6815,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Glutton",
@@ -6804,6 +6896,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -6883,6 +6976,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -6957,6 +7051,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -7026,6 +7121,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -7094,6 +7190,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -7160,6 +7257,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -7233,6 +7331,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -7303,6 +7402,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Extrovert",
@@ -7373,6 +7473,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Envious",
@@ -7456,6 +7557,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -7536,6 +7638,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Religious",
@@ -7614,6 +7717,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -7692,6 +7796,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Religious",
@@ -7778,6 +7883,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Free",
@@ -7855,6 +7961,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -7927,6 +8034,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -8002,6 +8110,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -8084,6 +8193,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -8159,6 +8269,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Obsessive",
@@ -8233,6 +8344,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -8306,6 +8418,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -8383,6 +8496,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -8456,6 +8570,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -8535,6 +8650,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Free",
@@ -8608,6 +8724,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Natural",
@@ -8678,6 +8795,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -8753,6 +8871,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -8828,6 +8947,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Free",
@@ -8913,6 +9033,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -8983,6 +9104,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -9057,6 +9179,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -9127,6 +9250,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -9205,6 +9329,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -9271,6 +9396,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -9343,6 +9469,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -9413,6 +9540,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Pessimistic",
@@ -9491,6 +9619,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Indifferent",
@@ -9557,6 +9686,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -9635,6 +9765,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Envious",
@@ -9705,6 +9836,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -9781,6 +9913,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -9856,6 +9989,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -9932,6 +10066,7 @@
         "rarity": 4,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -10006,6 +10141,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -10090,6 +10226,7 @@
         "rarity": 4,
         "attribute": "fire",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -10168,6 +10305,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -10243,6 +10381,7 @@
         "rarity": 4,
         "attribute": "dark",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Alcoholic",
@@ -10310,6 +10449,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -10385,6 +10525,7 @@
         "rarity": 4,
         "attribute": "light",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -10459,6 +10600,7 @@
         "rarity": 4,
         "attribute": "ice",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -10528,6 +10670,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Envious",
@@ -10594,6 +10737,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -10664,6 +10808,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Envious",
@@ -10736,6 +10881,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -10806,6 +10952,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -10876,6 +11023,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -10942,6 +11090,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Free",
@@ -11016,6 +11165,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -11086,6 +11236,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -11156,6 +11307,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Envious",
@@ -11229,6 +11381,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -11301,6 +11454,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Envious",
@@ -11375,6 +11529,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -11437,6 +11592,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Academic",
@@ -11515,6 +11671,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -11590,6 +11747,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -11672,6 +11830,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Hard Worker",
@@ -11746,6 +11905,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -11808,6 +11968,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Religious",
@@ -11885,6 +12046,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Religious",
@@ -11958,6 +12120,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -12020,6 +12183,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -12096,6 +12260,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -12168,6 +12333,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "knight",
+        "sex": 0,
         "camping": {
             "personalities": [
                 "Hard Worker",
@@ -12240,6 +12406,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -12312,6 +12479,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -12389,6 +12557,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Escapist",
@@ -12457,6 +12626,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -12534,6 +12704,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -12611,6 +12782,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -12688,6 +12860,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Alcoholic",
@@ -12759,6 +12932,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -12831,6 +13005,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -12901,6 +13076,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -12971,6 +13147,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "mage",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -13041,6 +13218,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -13118,6 +13296,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "manauser",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -13190,6 +13369,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Religious",
@@ -13261,6 +13441,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -13341,6 +13522,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "knight",
+        "sex": 0,
         "camping": {
             "topics": [
                 "Belief",
@@ -13407,6 +13589,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -13480,6 +13663,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Escapist",
@@ -13548,6 +13732,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Academic",
@@ -13614,6 +13799,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -13676,6 +13862,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Academic",
@@ -13751,6 +13938,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Academic",
@@ -13823,6 +14011,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -13895,6 +14084,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -13967,6 +14157,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "assassin",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -14040,6 +14231,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -14112,6 +14304,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -14182,6 +14375,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -14256,6 +14450,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -14330,6 +14525,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -14400,6 +14596,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -14471,6 +14668,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -14545,6 +14743,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "knight",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -14621,6 +14820,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -14691,6 +14891,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Free",
@@ -14760,6 +14961,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -14842,6 +15044,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -14917,6 +15120,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Hot and Cold",
@@ -14990,6 +15194,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -15060,6 +15265,7 @@
         "rarity": 3,
         "attribute": "wind",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -15137,6 +15343,7 @@
         "rarity": 3,
         "attribute": "light",
         "role": "manauser",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -15206,6 +15413,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "assassin",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -15274,6 +15482,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "warrior",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -15348,6 +15557,7 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "knight",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -15414,6 +15624,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "warrior",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -15480,6 +15691,7 @@
         "rarity": 3,
         "attribute": "dark",
         "role": "ranger",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -15552,6 +15764,7 @@
         "rarity": 3,
         "attribute": "fire",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -15630,6 +15843,7 @@
         "rarity": 5,
         "attribute": "dark",
         "role": "mage",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -15699,6 +15913,7 @@
         "rarity": 5,
         "role": "knight",
         "attribute": "fire",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Alcoholic",
@@ -15763,6 +15978,7 @@
         "rarity": 4,
         "role": "warrior",
         "attribute": "dark",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -15829,6 +16045,7 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "dark",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Narcissist",
@@ -15893,6 +16110,7 @@
         "rarity": 5,
         "role": "manauser",
         "attribute": "ice",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -15958,6 +16176,7 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "ice",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Introvert",
@@ -16027,6 +16246,7 @@
         "rarity": 5,
         "role": "mage",
         "attribute": "wind",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -16096,6 +16316,7 @@
         "rarity": 3,
         "role": "warrior",
         "attribute": "fire",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -16163,6 +16384,7 @@
         "rarity": 3,
         "role": "knight",
         "attribute": "ice",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -16230,6 +16452,7 @@
         "rarity": 3,
         "role": "knight",
         "attribute": "wind",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Hard Worker",
@@ -16299,6 +16522,7 @@
         "rarity": 3,
         "role": "warrior",
         "attribute": "light",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -16368,6 +16592,7 @@
         "rarity": 3,
         "role": "assassin",
         "attribute": "dark",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -16436,6 +16661,7 @@
         "rarity": 5,
         "role": "ranger",
         "attribute": "fire",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Hot and Cold",
@@ -16503,6 +16729,7 @@
         "rarity": 5,
         "role": "assassin",
         "attribute": "dark",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -16568,6 +16795,7 @@
         "rarity": 4,
         "role": "mage",
         "attribute": "light",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Cherub",
@@ -16637,6 +16865,7 @@
         "rarity": 5,
         "role": "knight",
         "attribute": "light",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Academic",
@@ -16711,6 +16940,7 @@
         "rarity": 5,
         "role": "assassin",
         "attribute": "ice",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -16780,6 +17010,7 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "wind",
+        "sex": 0,
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -16850,6 +17081,7 @@
         "rarity": 5,
         "role": "manauser",
         "attribute": "fire",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -16916,6 +17148,7 @@
         "rarity": 5,
         "role": "mage",
         "attribute": "fire",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -16981,6 +17214,7 @@
         "rarity": 3,
         "role": "knight",
         "attribute": "dark",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -17050,6 +17284,7 @@
         "rarity": 5,
         "role": "assassin",
         "attribute": "light",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -17114,6 +17349,7 @@
         "rarity": 3,
         "role": "assassin",
         "attribute": "wind",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -17182,6 +17418,7 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "wind",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Realistic",
@@ -17247,6 +17484,7 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "light",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "",
@@ -17316,6 +17554,7 @@
         "rarity": 5,
         "role": "ranger",
         "attribute": "wind",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Indifferent",
@@ -17385,6 +17624,7 @@
         "rarity": 5,
         "role": "assassin",
         "attribute": "ice",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Pessimistic",
@@ -17458,6 +17698,7 @@
         "rarity": 3,
         "role": "assassin",
         "attribute": "ice",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Loyal",
@@ -17528,6 +17769,7 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "light",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -17594,6 +17836,7 @@
         "rarity": 3,
         "role": "warrior",
         "attribute": "fire",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -17661,6 +17904,7 @@
         "rarity": 3,
         "role": "assassin",
         "attribute": "wind",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -17724,7 +17968,8 @@
         "name": "Yoonryoung",
         "rarity": 3,
         "role": "knight",
-        "attribute": "light"
+        "attribute": "light",
+        "sex": 2
     },
     "hasol": {
         "_id": "hasol",
@@ -17732,7 +17977,8 @@
         "name": "Hasol",
         "rarity": 3,
         "role": "knight",
-        "attribute": "dark"
+        "attribute": "dark",
+        "sex": 2
     },
     "hwayoung": {
         "id": "c1128",
@@ -17741,6 +17987,7 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "fire",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Hard Worker",
@@ -17800,12 +18047,71 @@
         "common": []
     },
     "bad-cat-armin": {
-        "_id": "bad-cat-armin",
         "id": "c6008",
+        "_id": "bad-cat-armin",
         "name": "Bad Cat Armin",
         "rarity": 4,
         "role": "warrior",
-        "attribute": "dark"
+        "attribute": "dark",
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Selfish"
+            ],
+            "topics": [
+                "Reality Check",
+                "Unique Comment"
+            ],
+            "values": {
+                "Criticism": 8,
+                "Reality Check": 0,
+                "Heroic Tale": 5,
+                "Comforting Cheer": 3,
+                "Cute Cheer": 5,
+                "Heroic Cheer": 0,
+                "Sad Memory": 0,
+                "Joyful Memory": 2,
+                "Happy Memories": 2,
+                "Unique Comment": 0,
+                "Self-Indulgent": 0,
+                "Occult": 3,
+                "Myth": 5,
+                "Bizarre Story": 0,
+                "Food Story": 3,
+                "Horror Story": 3,
+                "Gossip": 3,
+                "Dream": 0,
+                "Advice": 3,
+                "Complain": 3,
+                "Belief": 3,
+                "Interesting Story": 0
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            3,
+            5,
+            9
+        ],
+        "debuffs": [],
+        "common": []
     },
     "pirate-captain-flan": {
         "id": "c2110",
@@ -17814,6 +18120,7 @@
         "rarity": 5,
         "role": "ranger",
         "attribute": "dark",
+        "sex": 2,
         "camping": {
             "personalities": [
                 "Selfish",
@@ -17884,6 +18191,7 @@
         "rarity": 3,
         "role": "ranger",
         "attribute": "wind",
+        "sex": 1,
         "camping": {
             "personalities": [
                 "Heroism",
@@ -17952,7 +18260,8 @@
         "name": "Verdant Adin",
         "rarity": 3,
         "role": "assassin",
-        "attribute": "wind"
+        "attribute": "wind",
+        "sex": 2
     },
     "jacko": {
         "_id": "jacko",
@@ -17960,6 +18269,7 @@
         "name": "Jack-O'",
         "rarity": 5,
         "role": "warrior",
-        "attribute": "fire"
+        "attribute": "fire",
+        "sex": 2
     }
 }
