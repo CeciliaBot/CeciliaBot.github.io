@@ -18264,12 +18264,71 @@
         "sex": 2
     },
     "jacko": {
-        "_id": "jacko",
         "id": "c1130",
+        "_id": "jacko",
         "name": "Jack-O'",
         "rarity": 5,
         "role": "warrior",
         "attribute": "fire",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Cherub",
+                "Academic"
+            ],
+            "topics": [
+                "Belief",
+                "Food Story"
+            ],
+            "values": {
+                "Criticism": 2,
+                "Reality Check": 2,
+                "Heroic Tale": 2,
+                "Comforting Cheer": 3,
+                "Cute Cheer": 3,
+                "Heroic Cheer": 3,
+                "Sad Memory": 2,
+                "Joyful Memory": 2,
+                "Happy Memories": 2,
+                "Unique Comment": 0,
+                "Self-Indulgent": 7,
+                "Occult": 3,
+                "Myth": 7,
+                "Bizarre Story": 0,
+                "Food Story": 4,
+                "Horror Story": 0,
+                "Gossip": 3,
+                "Dream": 2,
+                "Advice": 2,
+                "Complain": 2,
+                "Belief": 0,
+                "Interesting Story": 3
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    20
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            15
+        ],
+        "debuffs": [],
+        "common": []
     }
 }
