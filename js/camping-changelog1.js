@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["camping-changelog1"],{"0837":function(e){e.exports=JSON.parse('[[1.1,"18/03/2022",[["new","Added Search bar"],["new","Added new filter: Gender."],["new","Added Changelog"]]]]')}}]);

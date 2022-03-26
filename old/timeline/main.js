@@ -309,7 +309,7 @@ var app = new Vue ({
       return array.slice().sort( (a,b) => {return a[sorter]<b[sorter]?1:-1} );
     },
     getDB: function () {
-      httpGetAsync('../data/HeroDatabase.json', (res) => {
+      httpGetAsync('../../data/HeroDatabase.json', (res) => {
         var data = JSON.parse(res);
         this.HeroDB = data;
       });

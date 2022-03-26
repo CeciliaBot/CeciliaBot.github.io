@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["ja-artifacts-json"],{"44c6":function(n){n.exports=JSON.parse("{}")}}]);

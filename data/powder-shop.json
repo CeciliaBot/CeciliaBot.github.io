@@ -1,7 +1,7 @@
 [
   {
     "nid": 8259578,
-    "dt": ["02/24 (Thu) 03:00","04/07 (Thu) 02:59 UTC"],
+    "dt": ["2022-02-24","2022-04-07"],
     "a": [
       { "id": "abyssal-crown" },
       { "id": "airtosurface-missile-misha" },
@@ -15,7 +15,7 @@
   },
   {
     "nid": 8126769,
-    "dt": ["01/03 (Thu) 03:00","01/20 (Thu) 02:59 UTC"],
+    "dt": ["2022-01-13","2022-02-24"],
     "a": [
       { "id": "creation-destruction" },
       { "id": "spear-of-a-new-dawn" },
@@ -29,7 +29,7 @@
   },
   {
     "nid": 8004157,
-    "dt": ["12/02 (Thu) 03:00","2022/01/13 (Thu) 02:59 UTC"],
+    "dt": ["2021-12-02","2022-01-13"],
     "a": [
       { "id": "shepherd-of-the-hollow" },
       { "id": "idols-cheer" },
@@ -43,7 +43,7 @@
   },
     {
       "nid": 7879025,
-      "dt": ["10/21 (Thu) 03:00","12/2 (Thu) 02:59 UTC"],
+      "dt": ["2021-10-21","2021-12-02"],
       "a": [
         { "id": "last-teatime" },
         { "id": "bloodstone" },
@@ -57,7 +57,7 @@
     },
     {
       "nid": 7714017,
-      "dt": ["9/9 (Thu) 03:00","10/21 (Thu) 02:59 UTC"],
+      "dt": ["2021-09-09","2021-10-21"],
       "a": [
         { "id": "sigurd-scythe" },
         { "id": "ancient-dragons-legacy" },
@@ -71,7 +71,7 @@
     },
     {
       "nid": 7418272,
-      "dt": ["7/29 (Thu) 03:00","9/9 (Thu) 02:59 UTC"],
+      "dt": ["2021-07-29","2021-09-09"],
       "a": [
         { "id": "manica-of-control" },
         { "id": "touch-of-rekos" },
@@ -85,7 +85,7 @@
     },
     {
       "nid": 7238170,
-      "dt": ["6/17 (Thu) 03:00","7/29 (Thu) 02:59 UTC"],
+      "dt": ["2021-06-17","2021-07-29"],
       "a": [
         { "id": "dignus-orb" },
         { "id": "unseen-observer" },
@@ -99,7 +99,7 @@
     },
     {
       "nid": 7109841,
-      "dt": ["5/6 (Thu) 03:00","6/17 (Thu) 02:59 UTC"],
+      "dt": ["2021-05-06","2021-06-17"],
       "a": [
         { "id": "circus-fantasia" },
         { "id": "holy-sacrifice" },
@@ -113,7 +113,7 @@
     },
     {
       "nid": 6970528,
-      "dt": ["3/25 (Thu) 03:00","5/6 (Thu) 02:59 UTC"],
+      "dt": ["2021-03-25","2021-05-06"],
       "a": [
         { "id": "secret-art-storm-sword" },
         { "id": "rod-of-amaryllis" },
@@ -127,7 +127,7 @@
     },
     {
       "nid": 6780713,
-      "dt": ["2/11 (Thu) 3:00","3/25 (Thu) 02:59 UTC"],
+      "dt": ["2021-02-11","2021-03-25"],
       "a": [
         { "id": "black-hand-of-the-goddess" },
         { "id": "dux-noctis" },
@@ -141,7 +141,7 @@
     },
     {
       "nid": 6574360,
-      "dt": ["12/31 (Thu) 03:00","2021/2/11 (Thu) 02:59 UTC"],
+      "dt": ["2020-12-31","2021-02-11"],
       "a": [
         { "id": "samsara-prayer-beads" },
         { "id": "justice-for-all" },
@@ -155,7 +155,7 @@
     },
     {
       "nid": 6342887,
-      "dt": ["11/19(Thu) 03:00","12/31(Thu) 02:59 UTC"],
+      "dt": ["2020-11-19","2020-12-31"],
       "a": [
         { "id": "alabastron" },
         { "id": "doctors-bag" },
@@ -169,14 +169,14 @@
     },
     {
       "nid": 6268111,
-      "dt": ["10/29 (Thu) after the maintenance"],
+      "dt": ["2020-10-29"],
       "title": "Powder of Knowledge Shop Update",
       "content": "Improvements will be made to include the artifact in the drop rate up event in the Powder of Knowledge shop during the event period.<br>■ Drop Rate Up Artifact Sale Information<br>- Location: Shop > Powder of Knowledge<br>- Purchase Limit: Once during the Drop Rate Up event period<br>- Cost: 240 Powder of Knowledge<br><br>■ Details<br>- The Artifact in the drop rate up event will be sold in the Powder of Knowledge shop only during the event period.<br>- A summon icon will be displayed on the drop rate up Artifact in the powder of knowledge shop.<br>- Once the drop rate up event is over, this Artifact will no longer be sold in the Powder of Knowledge shop and the purchased limit will reset.<br>- However, the purchase limit of 1 will not apply if the drop rate up Artifact was already on the Powder of Knowledge shop Artifact rotation list. ",
       "a": []
     },
     {
       "nid": 6178209,
-      "dt": ["10/8 (Thu) after the maintenance","11/19 (Thu) 11:59 UTC"],
+      "dt": ["2020-10-08","2020-11-19"],
       "a": [
         { "id": "eticas-scepter" },
         { "id": "bloodstone" },
@@ -190,7 +190,7 @@
     },
     {
       "nid": 5940028,
-      "dt": ["8/27 (Thu) 03:00","10/8 (Thu) 02:59 UTC"],
+      "dt": ["2020-08-27","2020-10-08"],
       "a": [
         { "id": "uberiuss-tooth" },
         { "id": "elbris-ritual-sword" },
@@ -204,7 +204,7 @@
     },
     {
       "nid": 5687739,
-      "dt": ["7/16 (Thu) 03:00","8/27 (Thu) 02:59 UTC"],
+      "dt": ["2020-07-16","2020-08-27"],
       "a": [
         { "id": "rhianna-luciella" },
         { "id": "rod-of-amaryllis" },
@@ -218,7 +218,7 @@
     },
     {
       "nid": 5500537,
-      "dt": ["6/11 (Thu) 03:00","7/16 (Thu) 02:59 UTC"],
+      "dt": ["2020-06-11","2020-07-16"],
       "a": [
         { "id": "abyssal-crown" },
         { "id": "bloodstone" },
@@ -232,7 +232,7 @@
     },
     {
       "nid": 5278432,
-      "dt": ["5/7 (Thu) 03:00","6/11 (Thu) 02:59 UTC"],
+      "dt": ["2020-05-07","2020-06-11"],
       "a": [
         { "id": "merciless-glutton" },
         { "id": "holy-sacrifice" },
@@ -246,7 +246,7 @@
     },
     {
       "nid": 4996354,
-      "dt": ["3/26 (Thu) 03:00","5/7 (Thu) 02:59 UTC"],
+      "dt": ["2020-03-26","2020-05-07"],
       "a": [
         { "id": "wind-rider" },
         { "id": "shimadra-staff" },
@@ -260,7 +260,7 @@
     },
     {
       "nid": 4711230,
-      "dt": ["2/13 (Thu) 03:00","3/26 (Thu) 02:59 UTC"],
+      "dt": ["2020-02-13","2020-03-26"],
       "a": [
         { "id": "time-matter" },
         { "id": "iron-fan" },
@@ -274,7 +274,7 @@
     },
     {
       "nid": 4468107,
-      "dt": ["1/2 (Thu) 03:00","2/13 (Thu) 02:59 UTC"],
+      "dt": ["2020-01-02","2020-02-13"],
       "a": [
         { "id": "sigurd-scythe" },
         { "id": "elbris-ritual-sword" },
@@ -287,8 +287,22 @@
       ]
     },
     {
+      "nid": 4289806,
+      "dt": ["2019-11-21","2020-01-02"],
+      "a": [
+        { "id": "violet-talisman" },
+        { "id": "rod-of-amaryllis" },
+        { "id": "abyssal-crown" },
+        { "id": "song-of-stars" },
+        { "id": "elyhas-knife" },
+        { "id": "waters-origin" },
+        { "id": "strak-gauntlet" },
+        { "id": "hilag-lance" }
+      ]
+    },
+    {
       "nid": 4131172,
-      "dt": ["10/09 (Wed) 18:00","11/21 (Wed) 17:59 UTC"],
+      "dt": ["2019-10-09","2019-11-21"],
       "a": [
         { "id": "eticas-scepter" },
         { "id": "bloodstone" },
@@ -302,7 +316,7 @@
     },
     {
       "nid": 3988659,
-      "dt": ["9/11 (Wed) 18:00","10/9 (Wed) 18:00 UTC"],
+      "dt": ["2019-09-11","2019-10-09"],
       "a": [
         { "id": "border-coin" },
         { "id": "holy-sacrifice" },
@@ -316,7 +330,7 @@
     },
     {
       "nid": 3784588,
-      "dt": ["8/14 (Wed) 18:00","9/11 (Wed) 18:00 UTC"],
+      "dt": ["2019-08-14","2019-09-11"],
       "a": [
         { "id": "alexas-basket" },
         { "id": "celestine" },
@@ -330,7 +344,7 @@
     },
     {
       "nid": 3526916,
-      "dt": ["7/17 (Wed) 18:00","8/14 (Wed) 18:00 UTC"],
+      "dt": ["2019-07-17","2019-08-14"],
       "a": [
         { "id": "abyssal-crown" },
         { "id": "sword-of-judgment" },
@@ -344,7 +358,7 @@
     },
     {
       "nid": 3324549,
-      "dt": ["6/19 (Wed) 18:00","7/17 (Wed) 18:00 (UTC)"],
+      "dt": ["2019-06-19","2019-07-17"],
       "a": [
         { "id": "durandal" },
         { "id": "justice-for-all" },
@@ -358,7 +372,7 @@
     },
     {
       "nid": 3235819,
-      "dt": ["5/22 (Wed) 18:00","6/19 (Wed) 18:00 UTC"],
+      "dt": ["2019-05-22","2019-06-19"],
       "a": [
         { "id": "alexas-basket" },
         { "id": "idols-cheer" },
@@ -372,7 +386,7 @@
     },
     {
       "nid": 3150600,
-      "dt": ["4/24 (Wed) 18:00 UTC","5/22 (Wed) 18:00 UTC"],
+      "dt": ["2019-04-24","2019-05-22"],
       "a": [
         { "id": "eticas-scepter" },
         { "id": "iron-fan" },
@@ -386,7 +400,7 @@
     },
     {
       "nid": 3068515,
-      "dt": ["3/27 (Wed) after 18:00","4/24 (Wed) 18:00 UTC"],
+      "dt": ["2019-03-27","2019-04-24"],
       "a": [
         { "id": "sigurd-scythe" },
         { "id": "elbris-ritual-sword" },
@@ -400,7 +414,7 @@
     },
     {
       "nid": 2951808,
-      "dt": ["2/27 (Wed) after 18:00","3/27 (Wed) 18:00 UTC"],
+      "dt": ["2019-02-27","2019-03-27"],
       "a": [
         { "id": "song-of-stars" },
         { "id": "abyssal-crown" },
@@ -414,7 +428,7 @@
     },
     {
       "nid": 2951808,
-      "dt": ["1/9 (Wed) after 18:00","2/27 (Wed) after 18:00 UTC"],
+      "dt": ["2019-01-09","2019-02-27"],
       "a": [
         { "id": "durandal" },
         { "id": "holy-sacrifice" },

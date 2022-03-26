@@ -3,8 +3,6 @@
     "type": "covenant",
     "start": "2018-11-11",
     "end": "2018-11-18",
-    "title": "Destina",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "destina",
@@ -17,8 +15,6 @@
     "type": "covenant",
     "start": "2018-11-14",
     "end": "2018-11-28",
-    "title": "Cecilia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cecilia",
@@ -31,8 +27,6 @@
     "type": "covenant",
     "start": "2018-11-22",
     "end": "2018-11-28",
-    "title": "Vildred",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vildred",
@@ -45,8 +39,6 @@
     "type": "limited",
     "start": "2018-11-29",
     "end": "2018-12-12",
-    "title": "Diene",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "diene",
@@ -59,8 +51,6 @@
     "type": "covenant",
     "start": "2018-12-14",
     "end": "2018-12-26",
-    "title": "Kayron",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kayron",
@@ -78,8 +68,6 @@
     "type": "mystic",
     "start": "2018-12-14",
     "end": "2019-01-30",
-    "title": "Mystic",
-    "subtitle": "1st Rotation",
     "c": [
       {
         "id": "maid-chloe",
@@ -96,8 +84,6 @@
     "type": "covenant",
     "start": "2018-12-26",
     "end": "2019-01-09",
-    "title": "Kise",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kise",
@@ -115,8 +101,6 @@
     "type": "covenant",
     "start": "2019-01-09",
     "end": "2019-01-23",
-    "title": "Bellona",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "bellona",
@@ -134,8 +118,6 @@
     "type": "covenant",
     "start": "2019-01-23",
     "end": "2019-02-06",
-    "title": "Violet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "violet",
@@ -153,8 +135,6 @@
     "type": "mystic",
     "start": "2019-01-30",
     "end": "2019-03-13",
-    "title": "Mystic",
-    "subtitle": "2nd Rotation",
     "c": [
       {
         "id": "specimen-sez",
@@ -171,8 +151,6 @@
     "type": "covenant",
     "start": "2019-02-06",
     "end": "2019-02-20",
-    "title": "Tamarinne",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tamarinne",
@@ -190,8 +168,6 @@
     "type": "limited",
     "start": "2019-02-13",
     "end": "2019-02-27",
-    "title": "Luna",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "luna",
@@ -204,8 +180,6 @@
     "type": "covenant",
     "start": "2019-02-20",
     "end": "2019-03-06",
-    "title": "Lidica",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lidica",
@@ -223,8 +197,6 @@
     "type": "covenant",
     "start": "2019-03-06",
     "end": "2019-03-20",
-    "title": "Charles",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charles",
@@ -242,8 +214,6 @@
     "type": "mystic",
     "start": "2019-03-13",
     "end": "2019-04-24",
-    "title": "Mystic",
-    "subtitle": "3rd Rotation",
     "c": [
       {
         "id": "silver-blade-aramintha",
@@ -260,8 +230,6 @@
     "type": "covenant",
     "start": "2019-03-20",
     "end": "2019-04-03",
-    "title": "Cermia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cermia",
@@ -279,8 +247,6 @@
     "type": "covenant",
     "start": "2019-04-03",
     "end": "2019-04-10",
-    "title": "Duble",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "krau",
@@ -297,8 +263,6 @@
     "type": "covenant",
     "start": "2019-04-10",
     "end": "2019-04-17",
-    "title": "Iseria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "iseria",
@@ -311,8 +275,6 @@
     "type": "covenant",
     "start": "2019-04-17",
     "end": "2019-04-24",
-    "title": "Duble",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ken",
@@ -329,8 +291,6 @@
     "type": "mystic",
     "start": "2019-04-24",
     "end": "2019-06-12",
-    "title": "Mystic",
-    "subtitle": "4th Rotation",
     "c": [
       {
         "id": "sage-baal-sezan",
@@ -347,8 +307,6 @@
     "type": "limited",
     "start": "2019-04-24",
     "end": "2019-05-08",
-    "title": "Baiken",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "baiken",
@@ -366,8 +324,6 @@
     "type": "limited",
     "start": "2019-05-08",
     "end": "2019-05-22",
-    "title": "Dizzy",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "dizzy",
@@ -385,8 +341,6 @@
     "type": "covenant",
     "start": "2019-05-22",
     "end": "2019-05-29",
-    "title": "Destina",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "destina",
@@ -399,8 +353,6 @@
     "type": "covenant",
     "start": "2019-05-29",
     "end": "2019-06-05",
-    "title": "Aramintha",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "aramintha",
@@ -413,8 +365,6 @@
     "type": "covenant",
     "start": "2019-06-06",
     "end": "2019-06-19",
-    "title": "Luluca",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "luluca",
@@ -432,8 +382,6 @@
     "type": "mystic",
     "start": "2019-06-12",
     "end": "2019-08-07",
-    "title": "Mystic",
-    "subtitle": "5th Rotation",
     "c": [
       {
         "id": "fallen-cecilia",
@@ -454,8 +402,6 @@
     "type": "covenant",
     "start": "2019-06-19",
     "end": "2019-06-26",
-    "title": "Tywin",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tywin",
@@ -468,8 +414,6 @@
     "type": "covenant",
     "start": "2019-06-26",
     "end": "2019-07-03",
-    "title": "Kise",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kise",
@@ -482,8 +426,6 @@
     "type": "covenant",
     "start": "2019-07-03",
     "end": "2019-07-17",
-    "title": "Lilibet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilibet",
@@ -501,8 +443,6 @@
     "type": "covenant",
     "start": "2019-07-17",
     "end": "2019-07-24",
-    "title": "Charlotte",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charlotte",
@@ -515,8 +455,6 @@
     "type": "covenant",
     "start": "2019-07-24",
     "end": "2019-07-31",
-    "title": "Sigret",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sigret",
@@ -529,8 +467,6 @@
     "type": "limited",
     "start": "2019-07-31",
     "end": "2019-08-14",
-    "title": "Seaside Bellona",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "seaside-bellona",
@@ -548,8 +484,6 @@
     "type": "mystic",
     "start": "2019-08-07",
     "end": "2019-09-05",
-    "title": "Mystic",
-    "subtitle": "6th Rotation",
     "c": [
       {
         "id": "apocalypse-ravi",
@@ -566,8 +500,6 @@
     "type": "covenant",
     "start": "2019-08-14",
     "end": "2019-08-21",
-    "title": "Kayron",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kayron",
@@ -580,8 +512,6 @@
     "type": "covenant",
     "start": "2019-08-22",
     "end": "2019-09-05",
-    "title": "Vivian",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vivian",
@@ -599,8 +529,6 @@
     "type": "covenant",
     "start": "2019-09-05",
     "end": "2019-09-11",
-    "title": "Yufine",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "yufine",
@@ -613,8 +541,6 @@
     "type": "mystic",
     "start": "2019-09-05",
     "end": "2019-10-03",
-    "title": "Mystic",
-    "subtitle": "7th Rotation",
     "c": [
       {
         "id": "judge-kise",
@@ -631,8 +557,6 @@
     "type": "covenant",
     "start": "2019-09-12",
     "end": "2019-09-19",
-    "title": "Tamarinne",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tamarinne",
@@ -645,8 +569,6 @@
     "type": "covenant",
     "start": "2019-09-19",
     "end": "2019-09-26",
-    "title": "Tenebria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tenebria",
@@ -659,8 +581,6 @@
     "type": "covenant",
     "start": "2019-09-26",
     "end": "2019-10-10",
-    "title": "Lilias",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilias",
@@ -678,8 +598,6 @@
     "type": "mystic",
     "start": "2019-10-03",
     "end": "2019-10-31",
-    "title": "Mystic",
-    "subtitle": "8th Rotation",
     "c": [
       {
         "id": "desert-jewel-basar",
@@ -696,8 +614,6 @@
     "type": "covenant",
     "start": "2019-10-10",
     "end": "2019-10-17",
-    "title": "Vildred",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vildred",
@@ -710,8 +626,6 @@
     "type": "covenant",
     "start": "2019-10-17",
     "end": "2019-10-24",
-    "title": "Sez",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sez",
@@ -724,8 +638,6 @@
     "type": "covenant",
     "start": "2019-10-24",
     "end": "2019-10-31",
-    "title": "Cecilia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cecilia",
@@ -738,8 +650,6 @@
     "type": "mystic",
     "start": "2019-10-31",
     "end": "2019-11-28",
-    "title": "Mystic",
-    "subtitle": "9th Rotation",
     "c": [
       {
         "id": "maid-chloe",
@@ -756,8 +666,6 @@
     "type": "limited",
     "start": "2019-10-31",
     "end": "2019-11-14",
-    "title": "Luna",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "luna",
@@ -775,8 +683,6 @@
     "type": "covenant",
     "start": "2019-11-07",
     "end": "2019-11-21",
-    "title": "Melissa",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "melissa",
@@ -794,8 +700,6 @@
     "type": "covenant",
     "start": "2019-11-21",
     "end": "2019-11-28",
-    "title": "Basar",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "basar",
@@ -808,8 +712,6 @@
     "type": "mystic",
     "start": "2019-11-28",
     "end": "2019-12-26",
-    "title": "Mystic",
-    "subtitle": "10th Rotation",
     "c": [
       {
         "id": "faithless-lidica",
@@ -826,8 +728,6 @@
     "type": "covenant",
     "start": "2019-11-28",
     "end": "2019-12-05",
-    "title": "Ravi",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ravi",
@@ -840,8 +740,6 @@
     "type": "covenant",
     "start": "2019-12-05",
     "end": "2019-12-19",
-    "title": "Elena",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "elena",
@@ -859,8 +757,6 @@
     "type": "covenant",
     "start": "2019-12-12",
     "end": "2019-12-19",
-    "title": "Violet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "violet",
@@ -878,8 +774,6 @@
     "type": "covenant",
     "start": "2019-12-19",
     "end": "2019-12-26",
-    "title": "Iseria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "iseria",
@@ -897,8 +791,6 @@
     "type": "mystic",
     "start": "2019-12-26",
     "end": "2020-01-23",
-    "title": "Mystic",
-    "subtitle": "11th Rotation",
     "c": [
       {
         "id": "fallen-cecilia",
@@ -915,8 +807,6 @@
     "type": "limited",
     "start": "2019-12-24",
     "end": "2020-01-02",
-    "title": "Diene",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "diene",
@@ -929,8 +819,6 @@
     "type": "covenant",
     "start": "2019-12-26",
     "end": "2020-01-02",
-    "title": "Krau",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "krau",
@@ -948,8 +836,6 @@
     "type": "covenant",
     "start": "2020-01-02",
     "end": "2020-01-16",
-    "title": "Alencia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "alencia",
@@ -967,8 +853,6 @@
     "type": "covenant",
     "start": "2020-01-09",
     "end": "2020-01-16",
-    "title": "Charles",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charles",
@@ -986,8 +870,6 @@
     "type": "covenant",
     "start": "2020-01-16",
     "end": "2020-01-23",
-    "title": "Yufine",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "yufine",
@@ -1005,8 +887,6 @@
     "type": "covenant",
     "start": "2020-01-23",
     "end": "2020-01-30",
-    "title": "Bellona",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "bellona",
@@ -1024,8 +904,6 @@
     "type": "mystic",
     "start": "2020-01-23",
     "end": "2020-02-20",
-    "title": "Mystic",
-    "subtitle": "12th Rotation",
     "c": [
       {
         "id": "ambitious-tywin",
@@ -1042,8 +920,6 @@
     "type": "covenant",
     "start": "2020-01-30",
     "end": "2020-02-13",
-    "title": "Pavel",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "pavel",
@@ -1061,8 +937,6 @@
     "type": "covenant",
     "start": "2020-02-06",
     "end": "2020-02-13",
-    "title": "Cermia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cermia",
@@ -1080,8 +954,6 @@
     "type": "covenant",
     "start": "2020-02-13",
     "end": "2020-02-20",
-    "title": "Basar",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "basar",
@@ -1099,8 +971,6 @@
     "type": "covenant",
     "start": "2020-02-20",
     "end": "2020-02-27",
-    "title": "Lidica",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lidica",
@@ -1118,8 +988,6 @@
     "type": "covenant",
     "start": "2020-02-20",
     "end": "2020-02-27",
-    "title": "Lilibet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilibet",
@@ -1137,8 +1005,6 @@
     "type": "mystic",
     "start": "2020-02-20",
     "end": "2020-03-29",
-    "title": "Mystic",
-    "subtitle": "13th Rotation",
     "c": [
       {
         "id": "martial-artist-ken",
@@ -1155,8 +1021,6 @@
     "type": "limited",
     "start": "2020-02-27",
     "end": "2020-03-12",
-    "title": "Cerise",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "cerise",
@@ -1174,8 +1038,6 @@
     "type": "covenant",
     "start": "2020-03-05",
     "end": "2020-03-12",
-    "title": "Charlotte",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charlotte",
@@ -1193,8 +1055,6 @@
     "type": "covenant",
     "start": "2020-03-12",
     "end": "2020-03-26",
-    "title": "Kawerik",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kawerik",
@@ -1212,8 +1072,6 @@
     "type": "covenant",
     "start": "2020-03-19",
     "end": "2020-03-26",
-    "title": "Tenebria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tenebria",
@@ -1230,8 +1088,6 @@
     "type": "covenant",
     "start": "2020-03-19",
     "end": "2020-03-26",
-    "title": "Vivian",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vivian",
@@ -1249,8 +1105,6 @@
     "type": "mystic",
     "start": "2020-03-29",
     "end": "2020-04-16",
-    "title": "Mystic",
-    "subtitle": "14th Rotation",
     "c": [
       {
         "id": "little-queen-charlotte",
@@ -1267,8 +1121,6 @@
     "type": "covenant",
     "start": "2020-03-26",
     "end": "2020-04-02",
-    "title": "Iseria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "iseria",
@@ -1286,8 +1138,6 @@
     "type": "covenant",
     "start": "2020-03-26",
     "end": "2020-04-02",
-    "title": "Iseria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilias",
@@ -1305,8 +1155,6 @@
     "type": "covenant",
     "start": "2020-04-02",
     "end": "2020-04-09",
-    "title": "Kise",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kise",
@@ -1324,8 +1172,6 @@
     "type": "covenant",
     "start": "2020-04-09",
     "end": "2020-04-23",
-    "title": "Roana",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "roana",
@@ -1343,8 +1189,6 @@
     "type": "covenant",
     "start": "2020-04-16",
     "end": "2020-04-23",
-    "title": "Kayron",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kayron",
@@ -1362,8 +1206,6 @@
     "type": "covenant",
     "start": "2020-04-16",
     "end": "2020-04-23",
-    "title": "Krau",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "krau",
@@ -1381,8 +1223,6 @@
     "type": "mystic",
     "start": "2020-04-16",
     "end": "2020-05-14",
-    "title": "Mystic",
-    "subtitle": "15th Rotation",
     "c": [
       {
         "id": "specter-tenebria",
@@ -1399,8 +1239,6 @@
     "type": "covenant",
     "start": "2020-04-23",
     "end": "2020-04-30",
-    "title": "Luluca",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "luluca",
@@ -1418,8 +1256,6 @@
     "type": "covenant",
     "start": "2020-04-23",
     "end": "2020-04-30",
-    "title": "Melissa",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "melissa",
@@ -1437,8 +1273,6 @@
     "type": "covenant",
     "start": "2020-04-30",
     "end": "2020-05-07",
-    "title": "Destina",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "destina",
@@ -1456,8 +1290,6 @@
     "type": "limited",
     "start": "2020-04-30",
     "end": "2020-05-14",
-    "title": "Baiken",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "baiken",
@@ -1475,8 +1307,6 @@
     "type": "limited",
     "start": "2020-05-07",
     "end": "2020-05-21",
-    "title": "Dizzy",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "dizzy",
@@ -1494,8 +1324,6 @@
     "type": "limited",
     "start": "2020-05-14",
     "end": "2020-05-21",
-    "title": "Elphelt",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "elphelt",
@@ -1513,8 +1341,6 @@
     "type": "mystic",
     "start": "2020-05-14",
     "end": "2020-06-11",
-    "title": "Mystic",
-    "subtitle": "16th Rotation",
     "c": [
       {
         "id": "blood-moon-haste",
@@ -1531,8 +1357,6 @@
     "type": "covenant",
     "start": "2020-05-21",
     "end": "2020-06-04",
-    "title": "Ray",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ray",
@@ -1550,8 +1374,6 @@
     "type": "covenant",
     "start": "2020-05-28",
     "end": "2020-06-04",
-    "title": "Elena",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "elena",
@@ -1569,8 +1391,6 @@
     "type": "covenant",
     "start": "2020-05-28",
     "end": "2020-06-04",
-    "title": "Ludwig",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ludwig",
@@ -1588,8 +1408,6 @@
     "type": "covenant",
     "start": "2020-06-04",
     "end": "2020-06-11",
-    "title": "Sigret",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sigret",
@@ -1607,8 +1425,6 @@
     "type": "covenant",
     "start": "2020-06-04",
     "end": "2020-06-11",
-    "title": "Vildred",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vildred",
@@ -1626,8 +1442,6 @@
     "type": "mystic",
     "start": "2020-06-11",
     "end": "2020-06-25",
-    "title": "Mystic",
-    "subtitle": "17th Rotation",
     "c": [
       {
         "id": "ruele-of-light",
@@ -1644,8 +1458,6 @@
     "type": "covenant",
     "start": "2020-06-11",
     "end": "2020-06-18",
-    "title": "Tamarinne",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tamarinne",
@@ -1663,8 +1475,6 @@
     "type": "covenant",
     "start": "2020-06-18",
     "end": "2020-07-02",
-    "title": "Celine",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "celine",
@@ -1682,8 +1492,6 @@
     "type": "limited",
     "start": "2020-06-25",
     "end": "2020-07-09",
-    "title": "Seaside Bellona",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "seaside-bellona",
@@ -1701,8 +1509,6 @@
     "type": "mystic",
     "start": "2020-06-25",
     "end": "2020-07-16",
-    "title": "Mystic",
-    "subtitle": "18th Rotation",
     "c": [
       {
         "id": "remnant-violet",
@@ -1719,8 +1525,6 @@
     "type": "covenant",
     "start": "2020-06-25",
     "end": "2020-07-02",
-    "title": "Lilibet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilibet",
@@ -1738,8 +1542,6 @@
     "type": "covenant",
     "start": "2020-07-02",
     "end": "2020-07-09",
-    "title": "Lilias",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilias",
@@ -1757,8 +1559,6 @@
     "type": "covenant",
     "start": "2020-07-02",
     "end": "2020-07-09",
-    "title": "Haste",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "haste",
@@ -1776,8 +1576,6 @@
     "type": "covenant",
     "start": "2020-07-09",
     "end": "2020-07-19",
-    "title": "Aramintha",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "aramintha",
@@ -1795,8 +1593,6 @@
     "type": "covenant",
     "start": "2020-07-09",
     "end": "2020-07-19",
-    "title": "Ravi",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ravi",
@@ -1814,8 +1610,6 @@
     "type": "mystic",
     "start": "2020-07-16",
     "end": "2020-08-06",
-    "title": "Mystic",
-    "subtitle": "19th Rotation",
     "c": [
       {
         "id": "arbiter-vildred",
@@ -1832,8 +1626,6 @@
     "type": "covenant",
     "start": "2020-07-16",
     "end": "2020-07-30",
-    "title": "Mui",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "mui",
@@ -1851,8 +1643,6 @@
     "type": "covenant",
     "start": "2020-07-23",
     "end": "2020-07-30",
-    "title": "Bellona",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "bellona",
@@ -1870,8 +1660,6 @@
     "type": "covenant",
     "start": "2020-07-23",
     "end": "2020-07-30",
-    "title": "Violet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "violet",
@@ -1889,8 +1677,6 @@
     "type": "limited",
     "start": "2020-07-30",
     "end": "2020-08-13",
-    "title": "Holiday Yufine",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "holiday-yufine",
@@ -1908,8 +1694,6 @@
     "type": "covenant",
     "start": "2020-08-06",
     "end": "2020-08-13",
-    "title": "Cermia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cermia",
@@ -1927,8 +1711,6 @@
     "type": "mystic",
     "start": "2020-08-06",
     "end": "2020-08-27",
-    "title": "Mystic",
-    "subtitle": "20th Rotation",
     "c": [
       {
         "id": "briar-witch-iseria",
@@ -1945,8 +1727,6 @@
     "type": "covenant",
     "start": "2020-08-13",
     "end": "2020-08-20",
-    "title": "Cecilia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cecilia",
@@ -1964,8 +1744,6 @@
     "type": "covenant",
     "start": "2020-08-13",
     "end": "2020-08-20",
-    "title": "Kise",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kise",
@@ -1983,8 +1761,6 @@
     "type": "covenant",
     "start": "2020-08-20",
     "end": "2020-08-27",
-    "title": "Lidica",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lidica",
@@ -2002,8 +1778,6 @@
     "type": "covenant",
     "start": "2020-08-20",
     "end": "2020-08-27",
-    "title": "Tywin",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tywin",
@@ -2021,8 +1795,6 @@
     "type": "covenant",
     "start": "2020-08-27",
     "end": "2020-09-10",
-    "title": "Choux",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "choux",
@@ -2040,8 +1812,6 @@
     "type": "mystic",
     "start": "2020-08-27",
     "end": "2020-09-17",
-    "title": "Mystic",
-    "subtitle": "21st Rotation",
     "c": [
       {
         "id": "dark-corvus",
@@ -2058,8 +1828,6 @@
     "type": "covenant",
     "start": "2020-09-03",
     "end": "2020-09-10",
-    "title": "Vivian",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vivian",
@@ -2077,8 +1845,6 @@
     "type": "covenant",
     "start": "2020-09-03",
     "end": "2020-09-10",
-    "title": "Kawerik",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kawerik",
@@ -2096,8 +1862,6 @@
     "type": "covenant",
     "start": "2020-09-10",
     "end": "2020-09-17",
-    "title": "Chloe",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "chloe",
@@ -2115,8 +1879,6 @@
     "type": "covenant",
     "start": "2020-09-10",
     "end": "2020-09-17",
-    "title": "Kayron",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kayron",
@@ -2134,8 +1896,6 @@
     "type": "covenant",
     "start": "2020-09-17",
     "end": "2020-09-24",
-    "title": "Sez",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sez",
@@ -2153,8 +1913,6 @@
     "type": "covenant",
     "start": "2020-09-17",
     "end": "2020-09-24",
-    "title": "Ludwig",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ludwig",
@@ -2172,8 +1930,6 @@
     "type": "mystic",
     "start": "2020-09-17",
     "end": "2020-10-08",
-    "title": "Mystic",
-    "subtitle": "22nd Rotation",
     "c": [
       {
         "id": "last-rider-krau",
@@ -2190,8 +1946,6 @@
     "type": "limited",
     "start": "2020-09-24",
     "end": "2020-10-08",
-    "title": "Landy",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "landy",
@@ -2209,8 +1963,6 @@
     "type": "covenant",
     "start": "2020-10-01",
     "end": "2020-10-08",
-    "title": "Tenebria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tenebria",
@@ -2228,8 +1980,6 @@
     "type": "covenant",
     "start": "2020-10-01",
     "end": "2020-10-08",
-    "title": "Ken",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ken",
@@ -2247,8 +1997,6 @@
     "type": "covenant",
     "start": "2020-10-08",
     "end": "2020-10-15",
-    "title": "Baal &  Sezan",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "baal-sezan",
@@ -2266,8 +2014,6 @@
     "type": "covenant",
     "start": "2020-10-08",
     "end": "2020-10-15",
-    "title": "Yufine",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "yufine",
@@ -2285,8 +2031,6 @@
     "type": "mystic",
     "start": "2020-10-08",
     "end": "2020-10-29",
-    "title": "Mystic",
-    "subtitle": "23rd Rotation",
     "c": [
       {
         "id": "faithless-lidica",
@@ -2303,8 +2047,6 @@
     "type": "covenant",
     "start": "2020-10-15",
     "end": "2020-10-22",
-    "title": "Krau",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "krau",
@@ -2322,8 +2064,6 @@
     "type": "covenant",
     "start": "2020-10-15",
     "end": "2020-10-29",
-    "title": "Ervalen",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ervalen",
@@ -2341,8 +2081,6 @@
     "type": "covenant",
     "start": "2020-10-22",
     "end": "2020-10-29",
-    "title": "Charles",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charles",
@@ -2360,8 +2098,6 @@
     "type": "covenant",
     "start": "2020-10-22",
     "end": "2020-10-29",
-    "title": "Roana",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "roana",
@@ -2379,8 +2115,6 @@
     "type": "limited",
     "start": "2020-10-29",
     "end": "2020-11-12",
-    "title": "Luna",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "luna",
@@ -2398,8 +2132,6 @@
     "type": "covenant",
     "start": "2020-10-29",
     "end": "2020-11-05",
-    "title": "Haste",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "haste",
@@ -2417,8 +2149,6 @@
     "type": "mystic",
     "start": "2020-10-29",
     "end": "2020-11-19",
-    "title": "Mystic",
-    "subtitle": "24th Rotation",
     "c": [
       {
         "id": "top-model-luluca",
@@ -2435,8 +2165,6 @@
     "type": "covenant",
     "start": "2020-11-05",
     "end": "2020-11-12",
-    "title": "Melissa",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "melissa",
@@ -2454,8 +2182,6 @@
     "type": "covenant",
     "start": "2020-11-05",
     "end": "2020-11-12",
-    "title": "Tamarinne",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tamarinne",
@@ -2473,8 +2199,6 @@
     "type": "covenant",
     "start": "2020-11-12",
     "end": "2020-11-19",
-    "title": "Pavel",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "pavel",
@@ -2492,8 +2216,6 @@
     "type": "covenant",
     "start": "2020-11-12",
     "end": "2020-11-19",
-    "title": "Vildred",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vildred",
@@ -2511,8 +2233,6 @@
     "type": "covenant",
     "start": "2020-11-19",
     "end": "2020-12-03",
-    "title": "Flan",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "flan",
@@ -2530,8 +2250,6 @@
     "type": "mystic",
     "start": "2020-11-19",
     "end": "2020-12-10",
-    "title": "Mystic",
-    "subtitle": "25th Rotation",
     "c": [
       {
         "id": "maid-chloe",
@@ -2548,8 +2266,6 @@
     "type": "covenant",
     "start": "2020-11-26",
     "end": "2020-12-03",
-    "title": "Bellona",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "bellona",
@@ -2567,8 +2283,6 @@
     "type": "covenant",
     "start": "2020-11-26",
     "end": "2020-12-03",
-    "title": "Charlotte",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charlotte",
@@ -2586,8 +2300,6 @@
     "type": "covenant",
     "start": "2020-12-03",
     "end": "2020-12-10",
-    "title": "Basar",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "basar",
@@ -2605,8 +2317,6 @@
     "type": "covenant",
     "start": "2020-12-03",
     "end": "2020-12-10",
-    "title": "Lidica",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lidica",
@@ -2624,8 +2334,6 @@
     "type": "covenant",
     "start": "2020-12-10",
     "end": "2020-12-17",
-    "title": "Ravi",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ravi",
@@ -2643,8 +2351,6 @@
     "type": "covenant",
     "start": "2020-12-10",
     "end": "2020-12-17",
-    "title": "Lilias",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilias",
@@ -2662,8 +2368,6 @@
     "type": "mystic",
     "start": "2020-12-10",
     "end": "2020-12-31",
-    "title": "Mystic",
-    "subtitle": "26th Rotation",
     "c": [
       {
         "id": "operator-sigret",
@@ -2680,8 +2384,6 @@
     "type": "covenant",
     "start": "2020-12-17",
     "end": "2020-12-24",
-    "title": "Elena",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "elena",
@@ -2699,8 +2401,6 @@
     "type": "covenant",
     "start": "2020-12-17",
     "end": "2020-12-31",
-    "title": "Mort",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "mort",
@@ -2718,8 +2418,6 @@
     "type": "limited",
     "start": "2020-12-24",
     "end": "2021-01-07",
-    "title": "Fairytale Tenebria",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "fairytale-tenebria",
@@ -2737,8 +2435,6 @@
     "type": "covenant",
     "start": "2020-12-31",
     "end": "2021-01-07",
-    "title": "Sigret",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sigret",
@@ -2756,8 +2452,6 @@
     "type": "covenant",
     "start": "2020-12-31",
     "end": "2021-01-07",
-    "title": "Lilibet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilibet",
@@ -2775,8 +2469,6 @@
     "type": "mystic",
     "start": "2020-12-31",
     "end": "2021-01-21",
-    "title": "Mystic",
-    "subtitle": "27th Rotation",
     "c": [
       {
         "id": "silver-blade-aramintha",
@@ -2793,8 +2485,6 @@
     "type": "covenant",
     "start": "2021-01-07",
     "end": "2021-01-14",
-    "title": "Cermia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cermia",
@@ -2812,8 +2502,6 @@
     "type": "covenant",
     "start": "2021-01-07",
     "end": "2021-01-14",
-    "title": "Celine",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "celine",
@@ -2831,8 +2519,6 @@
     "type": "covenant",
     "start": "2021-01-14",
     "end": "2021-01-21",
-    "title": "Alencia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "alencia",
@@ -2850,8 +2536,6 @@
     "type": "covenant",
     "start": "2021-01-14",
     "end": "2021-01-21",
-    "title": "Vivian",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vivian",
@@ -2869,8 +2553,6 @@
     "type": "covenant",
     "start": "2021-01-21",
     "end": "2021-01-28",
-    "title": "Cecilia",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cecilia",
@@ -2888,8 +2570,6 @@
     "type": "covenant",
     "start": "2021-01-21",
     "end": "2021-01-28",
-    "title": "Ludwig",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ludwig",
@@ -2907,8 +2587,6 @@
     "type": "mystic",
     "start": "2021-01-21",
     "end": "2021-02-11",
-    "title": "Mystic",
-    "subtitle": "28th Rotation",
     "c": [
       {
         "id": "archdemons-shadow",
@@ -2925,8 +2603,6 @@
     "type": "covenant",
     "start": "2021-01-28",
     "end": "2021-02-11",
-    "title": "Politis",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "politis",
@@ -2944,8 +2620,6 @@
     "type": "covenant",
     "start": "2021-01-28",
     "end": "2021-02-04",
-    "title": "Tywin",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tywin",
@@ -2963,8 +2637,6 @@
     "type": "covenant",
     "start": "2021-02-04",
     "end": "2021-02-11",
-    "title": "Luluca",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "luluca",
@@ -2982,8 +2654,6 @@
     "type": "covenant",
     "start": "2021-02-11",
     "end": "2021-02-18",
-    "title": "Kise",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kise",
@@ -3001,8 +2671,6 @@
     "type": "limited",
     "start": "2021-02-11",
     "end": "2021-02-25",
-    "title": "Landy, Diene, Cerise",
-    "subtitle": "Group Banner",
     "c": [
       {
         "id": "landy",
@@ -3036,8 +2704,6 @@
     "type": "mystic",
     "start": "2021-02-11",
     "end": "2021-03-04",
-    "title": "Mystic",
-    "subtitle": "29th Rotation",
     "c": [
       {
         "id": "fallen-cecilia",
@@ -3054,8 +2720,6 @@
     "type": "covenant",
     "start": "2021-02-18",
     "end": "2021-02-25",
-    "title": "Tenebria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tenebria",
@@ -3073,8 +2737,6 @@
     "type": "covenant",
     "start": "2021-02-25",
     "end": "2021-03-04",
-    "title": "Kayron",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kayron",
@@ -3092,8 +2754,6 @@
     "type": "covenant",
     "start": "2021-02-25",
     "end": "2021-03-04",
-    "title": "Pavel",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "pavel",
@@ -3111,8 +2771,6 @@
     "type": "mystic",
     "start": "2021-03-04",
     "end": "2021-03-25",
-    "title": "Mystic",
-    "subtitle": "30th Rotation",
     "c": [
       {
         "id": "designer-lilibet",
@@ -3129,8 +2787,6 @@
     "type": "covenant",
     "start": "2021-03-04",
     "end": "2021-03-11",
-    "title": "Chloe",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "chloe",
@@ -3148,8 +2804,6 @@
     "type": "covenant",
     "start": "2021-03-04",
     "end": "2021-03-11",
-    "title": "Ray",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ray",
@@ -3167,8 +2821,6 @@
     "type": "covenant",
     "start": "2021-03-11",
     "end": "2021-03-18",
-    "title": "Violet",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "violet",
@@ -3186,8 +2838,6 @@
     "type": "covenant",
     "start": "2021-03-11",
     "end": "2021-03-25",
-    "title": "Eda",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "eda",
@@ -3205,8 +2855,6 @@
     "type": "covenant",
     "start": "2021-03-18",
     "end": "2021-03-25",
-    "title": "Charles",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charles",
@@ -3224,8 +2872,6 @@
     "type": "mystic",
     "start": "2021-03-25",
     "end": "2021-04-15",
-    "title": "Mystic",
-    "subtitle": "31st Rotation",
     "c": [
       {
         "id": "desert-jewel-basar",
@@ -3242,8 +2888,6 @@
     "type": "covenant",
     "start": "2021-03-25",
     "end": "2021-04-01",
-    "title": "Vivian",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vivian",
@@ -3261,8 +2905,6 @@
     "type": "covenant",
     "start": "2021-03-25",
     "end": "2021-04-01",
-    "title": "Tamarinne",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tamarinne",
@@ -3280,8 +2922,6 @@
     "type": "limited",
     "start": "2021-03-31",
     "end": "2021-04-15",
-    "title": "Baiken, Dizzy, Elphelt",
-    "subtitle": "Group Rate Up",
     "c": [
       {
         "id": "baiken",
@@ -3315,8 +2955,6 @@
     "type": "covenant",
     "start": "2021-04-08",
     "end": "2021-04-22",
-    "title": "Bomb Model Kanna",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "bomb-model-kanna",
@@ -3334,8 +2972,6 @@
     "type": "mystic",
     "start": "2021-04-15",
     "end": "2021-05-06",
-    "title": "Mystic",
-    "subtitle": "32nd Rotation",
     "c": [
       {
         "id": "solitaria-of-the-snow",
@@ -3361,8 +2997,6 @@
     "type": "covenant",
     "start": "2021-04-15",
     "end": "2021-04-22",
-    "title": "Elena",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "elena",
@@ -3380,8 +3014,6 @@
     "type": "covenant",
     "start": "2021-04-22",
     "end": "2021-04-29",
-    "title": "Roana",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "roana",
@@ -3399,8 +3031,6 @@
     "type": "covenant",
     "start": "2021-04-22",
     "end": "2021-04-29",
-    "title": "Yufine",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "yufine",
@@ -3418,8 +3048,6 @@
     "type": "covenant",
     "start": "2021-04-29",
     "end": "2021-05-06",
-    "title": "Lilias",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilias",
@@ -3437,8 +3065,6 @@
     "type": "covenant",
     "start": "2021-04-29",
     "end": "2021-05-06",
-    "title": "Vildred",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vildred",
@@ -3456,8 +3082,6 @@
     "type": "mystic",
     "start": "2021-05-06",
     "end": "2021-05-27",
-    "title": "Mystic",
-    "subtitle": "33rd Rotation",
     "c": [
       {
         "id": "little-queen-charlotte",
@@ -3483,8 +3107,6 @@
     "type": "covenant",
     "start": "2021-05-06",
     "end": "2021-05-20",
-    "title": "Senya",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "senya",
@@ -3502,8 +3124,6 @@
     "type": "covenant",
     "start": "2021-05-06",
     "end": "2021-05-13",
-    "title": "Ervalen",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ervalen",
@@ -3521,8 +3141,6 @@
     "type": "covenant",
     "start": "2021-05-13",
     "end": "2021-05-20",
-    "title": "Kawerik",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kawerik",
@@ -3540,8 +3158,6 @@
     "type": "covenant",
     "start": "2021-05-20",
     "end": "2021-05-27",
-    "title": "Choux",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "choux",
@@ -3559,8 +3175,6 @@
     "type": "covenant",
     "start": "2021-05-20",
     "end": "2021-05-27",
-    "title": "Sigret",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sigret",
@@ -3578,8 +3192,6 @@
     "type": "mystic",
     "start": "2021-05-27",
     "end": "2021-06-17",
-    "title": "Mystic",
-    "subtitle": "34th Rotation",
     "c": [
       {
         "id": "mediator-kawerik",
@@ -3596,8 +3208,6 @@
     "type": "covenant",
     "start": "2021-05-27",
     "end": "2021-06-03",
-    "title": "Celine",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "celine",
@@ -3615,8 +3225,6 @@
     "type": "covenant",
     "start": "2021-05-27",
     "end": "2021-06-03",
-    "title": "Flan",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "flan",
@@ -3634,8 +3242,6 @@
     "type": "covenant",
     "start": "2021-06-03",
     "end": "2021-06-10",
-    "title": "Mort",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "mort",
@@ -3653,8 +3259,6 @@
     "type": "covenant",
     "start": "2021-06-03",
     "end": "2021-06-17",
-    "title": "Ilynav",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ilynav",
@@ -3672,8 +3276,6 @@
     "type": "covenant",
     "start": "2021-06-10",
     "end": "2021-06-17",
-    "title": "Kayron",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kayron",
@@ -3691,8 +3293,6 @@
     "type": "mystic",
     "start": "2021-06-17",
     "end": "2021-07-08",
-    "title": "Mystic",
-    "subtitle": "35th Rotation",
     "c": [
       {
         "id": "ruele-of-light",
@@ -3714,8 +3314,6 @@
     "type": "covenant",
     "start": "2021-06-17",
     "end": "2021-06-24",
-    "title": "Iseria",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "iseria",
@@ -3733,8 +3331,6 @@
     "type": "covenant",
     "start": "2021-06-17",
     "end": "2021-06-24",
-    "title": "Melissa",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "melissa",
@@ -3752,8 +3348,6 @@
     "type": "covenant",
     "start": "2021-06-24",
     "end": "2021-07-01",
-    "title": "Ravi",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ravi",
@@ -3771,8 +3365,6 @@
     "type": "covenant",
     "start": "2021-06-24",
     "end": "2021-07-01",
-    "title": "Krau",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "krau",
@@ -3790,8 +3382,6 @@
     "type": "limited",
     "start": "2021-07-01",
     "end": "2021-07-15",
-    "title": "Seaside Bellona",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "seaside-bellona",
@@ -3809,8 +3399,6 @@
     "type": "covenant",
     "start": "2021-07-01",
     "end": "2021-07-08",
-    "title": "Sez",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sez",
@@ -3828,8 +3416,6 @@
     "type": "mystic",
     "start": "2021-07-08",
     "end": "2021-07-29",
-    "title": "Mystic",
-    "subtitle": "36th Rotation",
     "c": [
       {
         "id": "straze",
@@ -3846,8 +3432,6 @@
     "type": "covenant",
     "start": "2021-07-08",
     "end": "2021-07-15",
-    "title": "Lidica",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lidica",
@@ -3865,8 +3449,6 @@
     "type": "covenant",
     "start": "2021-07-15",
     "end": "2021-07-22",
-    "title": "Roana",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "roana",
@@ -3884,8 +3466,6 @@
     "type": "covenant",
     "start": "2021-07-15",
     "end": "2021-07-22",
-    "title": "Charlotte",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charlotte",
@@ -3903,8 +3483,6 @@
     "type": "limited",
     "start": "2021-07-22",
     "end": "2021-08-05",
-    "title": "Holiday Yufine",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "holiday-yufine",
@@ -3922,8 +3500,6 @@
     "type": "covenant",
     "start": "2021-07-22",
     "end": "2021-07-29",
-    "title": "Mui",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "mui",
@@ -3941,8 +3517,6 @@
     "type": "covenant",
     "start": "2021-07-29",
     "end": "2021-08-05",
-    "title": "Basar",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "basar",
@@ -3960,8 +3534,6 @@
     "type": "mystic",
     "start": "2021-07-29",
     "end": "2021-08-19",
-    "title": "Mystic",
-    "subtitle": "37th Rotation",
     "c": [
       {
         "id": "specter-tenebria",
@@ -3979,8 +3551,6 @@
     "nid": "7455419",
     "start": "2021-08-05",
     "end": "2021-08-19",
-    "title": "Rem & Azure Comet Limited Summon Drop Rate Up",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "rem",
@@ -3999,8 +3569,6 @@
     "nid": "7455268",
     "start": "2021-08-05",
     "end": "2021-08-19",
-    "title": "Emilia & Guardian Ice Crystals Limited Drop Rate Up",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "emilia",
@@ -4019,8 +3587,6 @@
     "nid": "7458121",
     "start": "2021-08-05",
     "end": "2021-08-12",
-    "title": "Luluca & Spirit's Breath Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "luluca",
@@ -4039,8 +3605,6 @@
     "nid": "7529105",
     "start": "2021-08-12",
     "end": "2021-08-19",
-    "title": "Lilibet & Creation & Destruction Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilibet",
@@ -4058,8 +3622,6 @@
     "type": "mystic",
     "start": "2021-08-19",
     "end": "2021-09-09",
-    "title": "Mystic",
-    "subtitle": "38th Rotation",
     "c": [
       {
         "id": "closer-charles",
@@ -4077,8 +3639,6 @@
     "nid": "7621807",
     "start": "2021-08-19",
     "end": "2021-08-26",
-    "title": "Cermia and Border Coin Drop Rate Up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cermia",
@@ -4097,8 +3657,6 @@
     "nid": "7621775",
     "start": "2021-08-19",
     "end": "2021-08-26",
-    "title": "Baal & Sezan and Last Teatime Drop Rate Up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "baal-sezan",
@@ -4117,8 +3675,6 @@
     "nid": "7654860",
     "start": "2021-08-26",
     "end": "2021-09-02",
-    "title": "Bellona and Iron Fan Drop Rate Up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "bellona",
@@ -4137,8 +3693,6 @@
     "nid": "7654830",
     "start": "2021-08-26",
     "end": "2021-09-09",
-    "title": "Summertime Iseria and Star of the Deep Sea Drop Rate Up!",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "summertime-iseria",
@@ -4157,8 +3711,6 @@
     "nid": "7684754",
     "start": "2021-09-02",
     "end": "2021-09-09",
-    "title": "Alencia & Alencinox's Wrath Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "alencia",
@@ -4176,8 +3728,6 @@
     "type": "mystic",
     "start": "2021-09-09",
     "end": "2021-09-30",
-    "title": "Mystic",
-    "subtitle": "39th Rotation",
     "c": [
       {
         "id": "specimen-sez",
@@ -4195,8 +3745,6 @@
     "nid": 7714132,
     "start": "2021-09-09",
     "end": "2021-09-16",
-    "title": "Lilias & Bastion of Perlutia Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "lilias",
@@ -4215,8 +3763,6 @@
     "nid": 7714097,
     "start": "2021-09-09",
     "end": "2021-09-16",
-    "title": "Vivian & Dignus Orb Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vivian",
@@ -4235,8 +3781,6 @@
     "nid": "7743189",
     "start": "2021-09-16",
     "end": "2021-09-23",
-    "title": "Ken & Samsara Prayer Beads Drop Rate Up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ken",
@@ -4255,8 +3799,6 @@
     "nid": "7743172",
     "start": "2021-09-16",
     "end": "2021-09-23",
-    "title": "Tamarinne & Idol's Cheer Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tamarinne",
@@ -4275,8 +3817,6 @@
     "type": "covenant",
     "start": "2021-09-23",
     "end": "2021-09-30",
-    "title": "Tenebria & Crimson Moon of Nightmares Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tenebria",
@@ -4295,8 +3835,6 @@
     "type": "limited",
     "start": "2021-09-23",
     "end": "2021-10-07",
-    "title": "Luna & Draco Plate Drop Rate Up",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "luna",
@@ -4315,8 +3853,6 @@
     "type": "limited",
     "start": "2021-09-30",
     "end": "2021-10-14",
-    "title": "Landy & Wall of Order Drop Rate Up",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "landy",
@@ -4334,8 +3870,6 @@
     "type": "mystic",
     "start": "2021-09-30",
     "end": "2021-10-21",
-    "title": "Mystic",
-    "subtitle": "40th Rotation",
     "c": [
       {
         "id": "belian",
@@ -4352,8 +3886,6 @@
     "type": "covenant",
     "start": "2021-10-07",
     "end": "2021-10-14",
-    "title": "Destina & Shimandra Staff Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "destina",
@@ -4372,8 +3904,6 @@
     "nid": "7854509",
     "start": "2021-10-14",
     "end": "2021-10-21",
-    "title": "Kise & Alabastron Drop Rate up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kise",
@@ -4392,8 +3922,6 @@
     "nid": "7854515",
     "start": "2021-10-14",
     "end": "2021-10-28",
-    "title": "Ran & Sword of Winter Shadow Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ran",
@@ -4411,8 +3939,6 @@
     "type": "covenant",
     "start": "2021-10-21",
     "end": "2021-10-28",
-    "title": "Politis & Knowledge Seed Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "politis",
@@ -4430,8 +3956,6 @@
     "type": "mystic",
     "start": "2021-10-21",
     "end": "2021-11-11",
-    "title": "Mystic",
-    "subtitle": "41st Rotation",
     "c": [
       {
         "id": "apocalypse-ravi",
@@ -4445,186 +3969,10 @@
     "a": []
   },
   {
-    "type": "event",
-    "start": "2022-04-28",
-    "ref": "2022-06-21",
-    "name": "Custom Mystic Banner",
-    "alt": "Custom Mystic Banner"
-  },
-  {
-    "type": "event",
-    "start": "2022-06-21",
-    "ref": "2022-04-28",
-    "name": "Custom Mystic Banner END",
-    "alt": "Custom Mystic Banner END"
-  },
-  {
-    "type": "event",
-    "start": "2022-04-21",
-    "ref": "2022-05-19",
-    "name": "Custom RGB Group",
-    "alt": "Custom RGB Group"
-  },
-  {
-    "type": "event",
-    "start": "2022-05-19",
-    "ref": "2022-04-21",
-    "name": "Custom RGB Group END",
-    "alt": "Custom RGB Group END"
-  },
-  {
-    "type": "event",
-    "start": "2022-04-14",
-    "name": "ML Summon Revamp (Ticket)",
-    "alt": "ML Summon Revamp (Ticket)"
-  },
-  {
-    "type": "event",
-    "start": "2022-04-07",
-    "ref": "2022-07-21",
-    "name": "Pausing ML Hero Release",
-    "alt": "Pausing ML Hero Release"
-  },
-  {
-    "type": "event",
-    "start": "2022-07-21",
-    "ref": "2022-04-07",
-    "name": "Pausing ML Hero Release (END)",
-    "alt": "Pausing ML Hero Release"
-  },
-  {
-    "type": "event",
-    "start": "2020-04-16",
-    "ref": "2020-07-09",
-    "name": "RTA Season 1 Start",
-    "alt": "RTA Showdown - START -"
-  },
-  {
-    "type": "event",
-    "start": "2020-07-09",
-    "ref": "2020-04-16",
-    "name": "RTA Season 1 End",
-    "alt": "RTA Showdown - END -"
-  },
-  {
-    "type": "event",
-    "start": "2020-09-04",
-    "ref": "2020-11-26",
-    "name": "RTA Season 2 Start",
-    "alt": "RTA Endeavor - START -"
-  },
-  {
-    "type": "event",
-    "start": "2020-11-26",
-    "ref": "2020-09-04",
-    "name": "RTA Season 2 End",
-    "alt": "RTA Endeavor - START -"
-  },
-  {
-    "type": "event",
-    "start": "2020-12-25",
-    "ref": "2021-03-18",
-    "name": "RTA Season 3 Start",
-    "alt": "RTA Ardor - START -"
-  },
-  {
-    "type": "event",
-    "start": "2021-03-18",
-    "ref": "2020-12-25",
-    "name": "RTA Season 3 End",
-    "alt": "RTA Ardor - END -"
-  },
-  {
-    "type": "event",
-    "start": "2021-04-16",
-    "ref": "2021-07-08",
-    "name": "RTA Season 4 Start",
-    "alt": "RTA Skyward - START -"
-  },
-  {
-    "type": "event",
-    "start": "2021-07-08",
-    "ref": "2021-04-16",
-    "name": "RTA Season 4 End",
-    "alt": "RTA Skyward - END -"
-  },
-  {
-    "type": "event",
-    "start": "2021-08-14",
-    "ref": "2021-11-06",
-    "name": "RTA Season 5 Start",
-    "alt": "RTA Ambition - START -"
-  },
-  {
-    "type": "event",
-    "start": "2021-11-06",
-    "ref": "2021-08-14",
-    "name": "RTA Season 5 End",
-    "alt": "RTA Ambition - END -"
-  },
-  {
-    "type": "event",
-    "nid": 7455420,
-    "start": "2021-08-05",
-    "name": "New 3 stars heroes",
-    "alt": "Wintenberg",
-    "c": [
-      {
-        "id": "melany",
-        "new": true
-      },
-      {
-        "id": "helen",
-        "new": true
-      },
-      {
-        "id": "christy",
-        "new": true
-      },
-      {
-        "id": "camilla",
-        "new": true
-      },
-      {
-        "id": "penelope",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "event",
-    "nid": 7455420,
-    "start": "2021-08-05",
-    "name": "3 New EEs",
-    "alt": "EE for Choux, Assas. Cartuja, Kitty Clarissa",
-    "c": [
-      {
-        "id": "choux",
-        "new": false
-      },
-      {
-        "id": "assassin-cartuja",
-        "new": false
-      },
-      {
-        "id": "kitty-clarissa",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "event",
-    "start": "2018-11-11",
-    "name": "Global release!",
-    "alt": "Global server open"
-  },
-  {
     "type": "covenant",
     "nid": "7902121",
     "start": "2021-10-28",
     "end": "2021-11-04",
-    "title": "Charlotte & Elbris Ritual Sword Drop Rate Up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charlotte",
@@ -4643,8 +3991,6 @@
     "nid": "7902193",
     "start": "2021-10-28",
     "end": "2021-11-11",
-    "title": "Rimuru & Anti-Magic Mask Limited Summon!",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "rimuru",
@@ -4662,8 +4008,6 @@
     "type": "mystic",
     "start": "2021-11-11",
     "end": "2021-12-02",
-    "title": "42nd Mystic rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "spirit-eye-celine",
@@ -4680,8 +4024,6 @@
     "type": "limited",
     "start": "2021-11-04",
     "end": "2021-11-18",
-    "title": "Milim & Upgraded Dragon Knuckles Limited Summon",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "milim",
@@ -4700,8 +4042,6 @@
     "nid": "7947586",
     "start": "2021-11-11",
     "end": "2021-11-18",
-    "title": "Vildred and Sword of Summer Twilight Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vildred",
@@ -4719,8 +4059,6 @@
     "type": "covenant",
     "start": "2021-11-18",
     "end": "2021-11-25",
-    "title": "Tywin and Crown of Glory Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tywin",
@@ -4738,8 +4076,6 @@
     "type": "covenant",
     "start": "2021-11-18",
     "end": "2021-11-25",
-    "title": "Roana and Touch of Rekos Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "roana",
@@ -4757,8 +4093,6 @@
     "type": "mystic",
     "start": "2021-12-02",
     "end": "2021-12-23",
-    "title": "43rd Mystic Rotation",
-    "subtitle": "Mystic summon",
     "c": [
       {
         "id": "judge-kise",
@@ -4776,8 +4110,6 @@
     "nid": "7988384",
     "start": "2021-11-25",
     "end": "2021-12-02",
-    "title": "Flan & Unseen Observer Drop Rate Up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "flan",
@@ -4796,8 +4128,6 @@
     "nid": "7988364",
     "start": "2021-11-25",
     "end": "2021-12-09",
-    "title": "Zahhak & Pure White Trust Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "zahhak",
@@ -4815,8 +4145,6 @@
     "type": "covenant",
     "start": "2021-12-02",
     "end": "2021-12-09",
-    "title": "Sigret & Cradle of Life Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "sigret",
@@ -4834,8 +4162,6 @@
     "type": "limited",
     "start": "2021-12-09",
     "end": "2021-12-23",
-    "title": "Fairytale Tenebria & Fairy Tale for a Nightmare Limited Summon!",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "fairytale-tenebria",
@@ -4854,8 +4180,6 @@
     "nid": "8027114",
     "start": "2021-12-09",
     "end": "2021-12-16",
-    "title": "Ray & Doctor's Bag Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ray",
@@ -4873,8 +4197,6 @@
     "type": "covenant",
     "start": "2021-12-16",
     "end": "2021-12-23",
-    "title": "Elena & Stella Harpa Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "elena",
@@ -4892,8 +4214,6 @@
     "type": "mystic",
     "start": "2021-12-23",
     "end": "2022-01-13",
-    "title": "44th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "conqueror-lilias",
@@ -4910,8 +4230,6 @@
     "nid": "8063996",
     "start": "2021-12-23",
     "end": "2021-12-30",
-    "title": "Ilynav & Wings of Light and Shadow Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ilynav",
@@ -4930,8 +4248,6 @@
     "nid": "8063989",
     "start": "2021-12-23",
     "end": "2021-12-30",
-    "title": "Bomb Model Kanna and Air-to-Surface Missile: MISHA Drop Rate Up!",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "bomb-model-kanna",
@@ -4950,8 +4266,6 @@
     "nid": "8085172",
     "start": "2021-12-30",
     "end": "2022-01-06",
-    "title": "Violet & Violet Talisman Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "violet",
@@ -4970,8 +4284,6 @@
     "nid": "8085162",
     "start": "2021-12-30",
     "end": "2022-01-13",
-    "title": "Command Model Laika & Glo-Wings 21 Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "command-model-laika",
@@ -4990,8 +4302,6 @@
     "nid": "8106481",
     "start": "2022-01-06",
     "end": "2022-01-13",
-    "title": "Alencia & Alencinox's Wrath Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "alencia",
@@ -5009,8 +4319,6 @@
     "type": "covenant",
     "start": "2022-01-13",
     "end": "2022-01-20",
-    "title": "Cermia & Border Coin Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cermia",
@@ -5028,8 +4336,6 @@
     "type": "covenant",
     "start": "2022-01-13",
     "end": "2022-01-20",
-    "title": "Cecilia & Rise of a Monarch Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "cecilia",
@@ -5047,8 +4353,6 @@
     "type": "limited",
     "start": "2022-01-20",
     "end": "2022-02-03",
-    "title": "Cerise & Guiding Light Drop Rate Up",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "cerise",
@@ -5066,8 +4370,6 @@
     "type": "mystic",
     "start": "2022-01-13",
     "end": "2022-02-03",
-    "title": "45th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "remnant-violet",
@@ -5084,8 +4386,6 @@
     "nid": "8143065",
     "start": "2022-01-20",
     "end": "2022-01-27",
-    "title": "Charles & Justice for All Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "charles",
@@ -5103,8 +4403,6 @@
     "type": "covenant",
     "start": "2022-01-27",
     "end": "2022-02-10",
-    "title": "Peira & Goblet of Oath Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "peira",
@@ -5122,8 +4420,6 @@
     "type": "mystic",
     "start": "2022-02-03",
     "end": "2022-02-24",
-    "title": "46th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "lionheart-cermia",
@@ -5140,8 +4436,6 @@
     "nid": "8172736",
     "start": "2022-02-03",
     "end": "2022-02-10",
-    "title": "Pavel & Dux Noctis Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "pavel",
@@ -5159,8 +4453,6 @@
     "type": "covenant",
     "start": "2022-02-10",
     "end": "2022-02-17",
-    "title": "Celine & Secret Art-Storm Sword Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "celine",
@@ -5178,8 +4470,6 @@
     "type": "covenant",
     "start": "2022-02-10",
     "end": "2022-02-17",
-    "title": "Eda & Twilight Calamity Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "eda",
@@ -5198,8 +4488,6 @@
     "nid": "8236203",
     "start": "2022-02-17",
     "end": "2022-02-24",
-    "title": "Vivian & Dignus Orb Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "vivian",
@@ -5218,8 +4506,6 @@
     "nid": "8236205",
     "start": "2022-02-17",
     "end": "2022-02-24",
-    "title": "Iseria & Song of Stars Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "iseria",
@@ -5237,8 +4523,6 @@
     "type": "covenant",
     "start": "2022-02-24",
     "end": "2022-03-03",
-    "title": "Kawerik & Black Hand of the Goddess Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "kawerik",
@@ -5256,8 +4540,6 @@
     "type": "covenant",
     "start": "2022-02-24",
     "end": "2022-03-10",
-    "title": "Hwayoung & Indestructible Gaiters Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "hwayoung",
@@ -5275,8 +4557,6 @@
     "type": "mystic",
     "start": "2022-02-24",
     "end": "2022-03-17",
-    "title": "47th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "arbiter-vildred",
@@ -5293,8 +4573,6 @@
     "nid": "8283919",
     "start": "2022-03-03",
     "end": "2022-03-10",
-    "title": "Tywin and Crown of Glory Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "tywin",
@@ -5312,8 +4590,6 @@
     "type": "covenant",
     "start": "2022-03-10",
     "end": "2022-03-17",
-    "title": "Ervalen and Double-Edged Decrescent Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "ervalen",
@@ -5331,8 +4607,6 @@
     "type": "covenant",
     "start": "2022-03-10",
     "end": "2022-03-17",
-    "title": "Krau and Holy Sacrifice Drop Rate Up",
-    "subtitle": "Rate Up",
     "c": [
       {
         "id": "krau",
@@ -5350,8 +4624,6 @@
     "type": "mystic",
     "start": "2022-03-17",
     "end": "2022-04-07",
-    "title": "48th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "pirate-captain-flan",
@@ -5368,60 +4640,75 @@
     "nid": "8322174",
     "start": "2022-03-17",
     "end": "2022-03-31",
-    "title": "Dizzy, Necro & Undine Limited Drop Rate Up",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "dizzy",
         "new": false
       }
     ],
-    "a": [{
-      "id": "necro-undine",
-      "new": false
-    }]
+    "a": [
+      {
+        "id": "necro-undine",
+        "new": false
+      }
+    ]
   },
   {
     "type": "limited",
     "nid": "8322176",
     "start": "2022-03-17",
     "end": "2022-03-31",
-    "title": "Baiken & Torn Sleeve Limited Drop Rate Up",
-    "subtitle": "Limited",
     "c": [
       {
         "id": "baiken",
         "new": false
       }
     ],
-    "a": [{
-      "id": "torn-sleeve",
-      "new": false
-    }]
+    "a": [
+      {
+        "id": "torn-sleeve",
+        "new": false
+      }
+    ]
   },
   {
     "type": "limited",
     "start": "2022-03-24",
-    "end": "2022-04-14",
-    "title": "Jack-O' & Jack-O's Symbol Limited Drop Rate Up",
-    "subtitle": "Limited",
+    "end": "2022-04-07",
+    "c": [
+      {
+        "id": "elphelt",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "ms-confille",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "start": "2022-03-24",
+    "end": "2022-04-07",
     "c": [
       {
         "id": "jacko",
         "new": true
       }
     ],
-    "a": [{
-      "id": "jackos-symbol",
-      "new": true
-    }]
+    "a": [
+      {
+        "id": "jackos-symbol",
+        "new": true
+      }
+    ]
   },
   {
     "type": "mystic",
     "start": "2022-04-07",
     "end": "2022-04-28",
-    "title": "49th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "mediator-kawerik",
@@ -5433,8 +4720,6 @@
     "type": "mystic",
     "start": "2022-04-28",
     "end": "2022-05-19",
-    "title": "50th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "sage-baal-sezan",
@@ -5454,8 +4739,6 @@
     "type": "mystic",
     "start": "2022-05-19",
     "end": "2022-06-09",
-    "title": "51st Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "maid-chloe",
@@ -5475,29 +4758,6 @@
     "type": "mystic",
     "start": "2022-06-09",
     "end": "2022-06-30",
-    "title": "52nd Mystic Rotation",
-    "subtitle": "Mystic Summon",
-    "c": [
-      {
-        "id": "dark-corvus",
-        "new": false
-      },
-      {
-        "id": "last-rider-krau",
-        "new": false
-      },
-      {
-        "id": "top-model-luluca",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2022-06-09",
-    "end": "2022-06-30",
-    "title": "52nd Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "dark-corvus",
@@ -5517,8 +4777,6 @@
     "type": "mystic",
     "start": "2022-06-30",
     "end": "2022-07-21",
-    "title": "53rd Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "operator-sigret",
@@ -5538,8 +4796,6 @@
     "type": "mystic",
     "start": "2022-07-21",
     "end": "2022-08-11",
-    "title": "54th Mystic Rotation",
-    "subtitle": "Mystic Summon",
     "c": [
       {
         "id": "sylvan-sage-vivian",
