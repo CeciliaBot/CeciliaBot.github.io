@@ -4802,5 +4802,19 @@
         "new": true
       }
     ]
+  },
+  {
+    "id": "S20220428CSTIC",
+    "type": "mystic",
+    "start": "2022-04-28",
+    "end": "2022-07-21",
+    "name": "Double Custom Mystic Banner"
+  },
+  {
+    "id": "S20220428CNANT",
+    "type": "limited",
+    "start": "2022-04-21",
+    "end": "2022-05-19",
+    "name": "Custom Triple RGB Group Summon"
   }
 ]
