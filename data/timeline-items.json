@@ -4713,6 +4713,10 @@
       {
         "id": "mediator-kawerik",
         "new": false
+      },
+      {
+        "id": "celestial-mecedes",
+        "new": false
       }
     ]
   },
@@ -4799,6 +4803,40 @@
     "c": [
       {
         "id": "sylvan-sage-vivian",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-04-07",
+    "end": "2022-04-14",
+    "c": [
+      {
+        "id": "ludwig",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "time-matter",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-04-07",
+    "end": "2022-04-21",
+    "c": [
+      {
+        "id": "aria",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "scroll-of-shadows",
         "new": true
       }
     ]
