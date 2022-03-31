@@ -570,6 +570,15 @@
         "role": "warrior",
         "gacha": true
     },
+    "scroll-of-shadows": {
+        "_id": "scroll-of-shadows",
+        "id": "art0152",
+        "identifier": "",
+        "name": "Scroll of Shadows",
+        "rarity": 5,
+        "role": "mage",
+        "gacha": true
+    },
     "secret-art-storm-sword": {
         "_id": "secret-art-storm-sword",
         "id": "art0096",

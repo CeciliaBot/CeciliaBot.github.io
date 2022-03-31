@@ -18330,5 +18330,14 @@
         ],
         "debuffs": [],
         "common": []
+    },
+    "aria": {
+        "id": "c1129",
+        "_id": "Aria",
+        "name": "Aria",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "ice",
+        "sex": 2
     }
 }
