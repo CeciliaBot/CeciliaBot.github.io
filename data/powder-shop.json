@@ -1,5 +1,19 @@
 [
   {
+    "nid": 8374619,
+    "dt": ["2022-04-07","2022-05-19"],
+    "a": [
+      { "id": "violet-talisman" },
+      { "id": "shimandra-staff" },
+      { "id": "eticas-scepter" },
+      { "id": "glowings-21" },
+      { "id": "dust-devil" },
+      { "id": "wondrous-potion-vial" },
+      { "id": "hell-cutter" },
+      { "id": "adamant-shield" }
+    ]
+  },
+  {
     "nid": 8259578,
     "dt": ["2022-02-24","2022-04-07"],
     "a": [
