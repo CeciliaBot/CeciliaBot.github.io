@@ -18338,6 +18338,69 @@
         "rarity": 5,
         "role": "mage",
         "attribute": "ice",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Cool-Headed"
+            ],
+            "topics": [
+                "Horror Story",
+                "Sad Memory"
+            ],
+            "values": {
+                "Criticism": 7,
+                "Reality Check": 2,
+                "Heroic Tale": 5,
+                "Comforting Cheer": 3,
+                "Cute Cheer": 4,
+                "Heroic Cheer": 0,
+                "Sad Memory": 0,
+                "Joyful Memory": 1,
+                "Happy Memories": 2,
+                "Unique Comment": 3,
+                "Self-Indulgent": 0,
+                "Occult": 3,
+                "Myth": 5,
+                "Bizarre Story": 0,
+                "Food Story": 3,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 0,
+                "Advice": 3,
+                "Complain": 0,
+                "Belief": 0,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    22
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            2,
+            5,
+            15,
+            7
+        ],
+        "debuffs": [
+            22
+        ],
+        "common": []
     }
 }
