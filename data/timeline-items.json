@@ -4857,6 +4857,23 @@
   },
   {
     "type": "covenant",
+    "start": "2022-04-14",
+    "end": "2022-04-21",
+    "c": [
+      {
+        "id": "senya",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "spear-of-a-new-down",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
     "start": "2022-04-21",
     "end": "2022-04-28",
     "c": [
