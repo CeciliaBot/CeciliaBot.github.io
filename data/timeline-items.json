@@ -4854,5 +4854,39 @@
     "start": "2022-04-21",
     "end": "2022-05-19",
     "name": "Custom Triple RGB Group Summon"
+  },
+  {
+    "type": "covenant",
+    "start": "2022-04-21",
+    "end": "2022-04-28",
+    "c": [
+      {
+        "id": "charlotte",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "elbris-ritual-sword",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "start": "2022-04-21",
+    "end": "2022-04-28",
+    "c": [
+      {
+        "id": "yufine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "merciless-glutton",
+        "new": false
+      }
+    ]
   }
 ]
