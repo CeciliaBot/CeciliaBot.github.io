@@ -1,8 +1,10 @@
 [
   {
     "type": "covenant",
-    "start": "2018-11-11",
-    "end": "2018-11-18",
+    "dt": [
+      "2018-11-11",
+      "2018-11-18"
+    ],
     "c": [
       {
         "id": "destina",
@@ -13,8 +15,10 @@
   },
   {
     "type": "covenant",
-    "start": "2018-11-14",
-    "end": "2018-11-28",
+    "dt": [
+      "2018-11-14",
+      "2018-11-28"
+    ],
     "c": [
       {
         "id": "cecilia",
@@ -25,8 +29,10 @@
   },
   {
     "type": "covenant",
-    "start": "2018-11-22",
-    "end": "2018-11-28",
+    "dt": [
+      "2018-11-22",
+      "2018-11-28"
+    ],
     "c": [
       {
         "id": "vildred",
@@ -37,8 +43,10 @@
   },
   {
     "type": "limited",
-    "start": "2018-11-29",
-    "end": "2018-12-12",
+    "dt": [
+      "2018-11-29",
+      "2018-12-12"
+    ],
     "c": [
       {
         "id": "diene",
@@ -49,8 +57,10 @@
   },
   {
     "type": "covenant",
-    "start": "2018-12-14",
-    "end": "2018-12-26",
+    "dt": [
+      "2018-12-14",
+      "2018-12-26"
+    ],
     "c": [
       {
         "id": "kayron",
@@ -59,15 +69,17 @@
     ],
     "a": [
       {
-        "id": "Celestine",
+        "id": "celestine",
         "new": true
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2018-12-14",
-    "end": "2019-01-30",
+    "dt": [
+      "2018-12-14",
+      "2019-01-30"
+    ],
     "c": [
       {
         "id": "maid-chloe",
@@ -82,8 +94,10 @@
   },
   {
     "type": "covenant",
-    "start": "2018-12-26",
-    "end": "2019-01-09",
+    "dt": [
+      "2018-12-26",
+      "2019-01-09"
+    ],
     "c": [
       {
         "id": "kise",
@@ -92,15 +106,17 @@
     ],
     "a": [
       {
-        "id": "Alexa's Basket",
+        "id": "alexas-basket",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-01-09",
-    "end": "2019-01-23",
+    "dt": [
+      "2019-01-09",
+      "2019-01-23"
+    ],
     "c": [
       {
         "id": "bellona",
@@ -109,15 +125,17 @@
     ],
     "a": [
       {
-        "id": "Iron Fan",
+        "id": "iron-fan",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-01-23",
-    "end": "2019-02-06",
+    "dt": [
+      "2019-01-23",
+      "2019-02-06"
+    ],
     "c": [
       {
         "id": "violet",
@@ -126,15 +144,17 @@
     ],
     "a": [
       {
-        "id": "Violet Talisman",
+        "id": "violet-talisman",
         "new": true
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2019-01-30",
-    "end": "2019-03-13",
+    "dt": [
+      "2019-01-30",
+      "2019-03-13"
+    ],
     "c": [
       {
         "id": "specimen-sez",
@@ -149,8 +169,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-02-06",
-    "end": "2019-02-20",
+    "dt": [
+      "2019-02-06",
+      "2019-02-20"
+    ],
     "c": [
       {
         "id": "tamarinne",
@@ -159,15 +181,17 @@
     ],
     "a": [
       {
-        "id": "Idol's Cheer",
+        "id": "idols-cheer",
         "new": true
       }
     ]
   },
   {
     "type": "limited",
-    "start": "2019-02-13",
-    "end": "2019-02-27",
+    "dt": [
+      "2019-02-13",
+      "2019-02-27"
+    ],
     "c": [
       {
         "id": "luna",
@@ -178,8 +202,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-02-20",
-    "end": "2019-03-06",
+    "dt": [
+      "2019-02-20",
+      "2019-03-06"
+    ],
     "c": [
       {
         "id": "lidica",
@@ -188,15 +214,17 @@
     ],
     "a": [
       {
-        "id": "Sword of Judgment",
+        "id": "sword-of-judgment",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-03-06",
-    "end": "2019-03-20",
+    "dt": [
+      "2019-03-06",
+      "2019-03-20"
+    ],
     "c": [
       {
         "id": "charles",
@@ -205,15 +233,17 @@
     ],
     "a": [
       {
-        "id": "Justice for All",
+        "id": "justice-for-all",
         "new": true
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2019-03-13",
-    "end": "2019-04-24",
+    "dt": [
+      "2019-03-13",
+      "2019-04-24"
+    ],
     "c": [
       {
         "id": "silver-blade-aramintha",
@@ -228,8 +258,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-03-20",
-    "end": "2019-04-03",
+    "dt": [
+      "2019-03-20",
+      "2019-04-03"
+    ],
     "c": [
       {
         "id": "cermia",
@@ -238,15 +270,17 @@
     ],
     "a": [
       {
-        "id": "Border Coin",
+        "id": "border-coin",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-04-03",
-    "end": "2019-04-10",
+    "dt": [
+      "2019-04-03",
+      "2019-04-10"
+    ],
     "c": [
       {
         "id": "krau",
@@ -261,8 +295,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-04-10",
-    "end": "2019-04-17",
+    "dt": [
+      "2019-04-10",
+      "2019-04-17"
+    ],
     "c": [
       {
         "id": "iseria",
@@ -273,8 +309,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-04-17",
-    "end": "2019-04-24",
+    "dt": [
+      "2019-04-17",
+      "2019-04-24"
+    ],
     "c": [
       {
         "id": "ken",
@@ -289,8 +327,10 @@
   },
   {
     "type": "mystic",
-    "start": "2019-04-24",
-    "end": "2019-06-12",
+    "dt": [
+      "2019-04-24",
+      "2019-06-12"
+    ],
     "c": [
       {
         "id": "sage-baal-sezan",
@@ -305,8 +345,10 @@
   },
   {
     "type": "limited",
-    "start": "2019-04-24",
-    "end": "2019-05-08",
+    "dt": [
+      "2019-04-24",
+      "2019-05-08"
+    ],
     "c": [
       {
         "id": "baiken",
@@ -315,15 +357,17 @@
     ],
     "a": [
       {
-        "id": "Torn Sleeve",
+        "id": "torn-sleeve",
         "new": true
       }
     ]
   },
   {
     "type": "limited",
-    "start": "2019-05-08",
-    "end": "2019-05-22",
+    "dt": [
+      "2019-05-08",
+      "2019-05-22"
+    ],
     "c": [
       {
         "id": "dizzy",
@@ -332,15 +376,17 @@
     ],
     "a": [
       {
-        "id": "Necro & Undine",
+        "id": "necro-undine",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-05-22",
-    "end": "2019-05-29",
+    "dt": [
+      "2019-05-22",
+      "2019-05-29"
+    ],
     "c": [
       {
         "id": "destina",
@@ -351,8 +397,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-05-29",
-    "end": "2019-06-05",
+    "dt": [
+      "2019-05-29",
+      "2019-06-05"
+    ],
     "c": [
       {
         "id": "aramintha",
@@ -363,8 +411,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-06-06",
-    "end": "2019-06-19",
+    "dt": [
+      "2019-06-06",
+      "2019-06-19"
+    ],
     "c": [
       {
         "id": "luluca",
@@ -373,15 +423,17 @@
     ],
     "a": [
       {
-        "id": "Spirit's Breath",
+        "id": "spirits-breath",
         "new": true
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2019-06-12",
-    "end": "2019-08-07",
+    "dt": [
+      "2019-06-12",
+      "2019-08-07"
+    ],
     "c": [
       {
         "id": "fallen-cecilia",
@@ -400,8 +452,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-06-19",
-    "end": "2019-06-26",
+    "dt": [
+      "2019-06-19",
+      "2019-06-26"
+    ],
     "c": [
       {
         "id": "tywin",
@@ -412,8 +466,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-06-26",
-    "end": "2019-07-03",
+    "dt": [
+      "2019-06-26",
+      "2019-07-03"
+    ],
     "c": [
       {
         "id": "kise",
@@ -424,8 +480,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-07-03",
-    "end": "2019-07-17",
+    "dt": [
+      "2019-07-03",
+      "2019-07-17"
+    ],
     "c": [
       {
         "id": "lilibet",
@@ -434,15 +492,17 @@
     ],
     "a": [
       {
-        "id": "Creation & Destruction",
+        "id": "creation-destruction",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-07-17",
-    "end": "2019-07-24",
+    "dt": [
+      "2019-07-17",
+      "2019-07-24"
+    ],
     "c": [
       {
         "id": "charlotte",
@@ -453,8 +513,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-07-24",
-    "end": "2019-07-31",
+    "dt": [
+      "2019-07-24",
+      "2019-07-31"
+    ],
     "c": [
       {
         "id": "sigret",
@@ -465,8 +527,10 @@
   },
   {
     "type": "limited",
-    "start": "2019-07-31",
-    "end": "2019-08-14",
+    "dt": [
+      "2019-07-31",
+      "2019-08-14"
+    ],
     "c": [
       {
         "id": "seaside-bellona",
@@ -475,15 +539,17 @@
     ],
     "a": [
       {
-        "id": "Reingar's Special Drink",
+        "id": "reingars-special-drink",
         "new": true
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2019-08-07",
-    "end": "2019-09-05",
+    "dt": [
+      "2019-08-07",
+      "2019-09-05"
+    ],
     "c": [
       {
         "id": "apocalypse-ravi",
@@ -498,8 +564,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-08-14",
-    "end": "2019-08-21",
+    "dt": [
+      "2019-08-14",
+      "2019-08-21"
+    ],
     "c": [
       {
         "id": "kayron",
@@ -510,8 +578,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-08-22",
-    "end": "2019-09-05",
+    "dt": [
+      "2019-08-22",
+      "2019-09-05"
+    ],
     "c": [
       {
         "id": "vivian",
@@ -520,15 +590,17 @@
     ],
     "a": [
       {
-        "id": "Dingus Orb",
+        "id": "dingus-orb",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-09-05",
-    "end": "2019-09-11",
+    "dt": [
+      "2019-09-05",
+      "2019-09-11"
+    ],
     "c": [
       {
         "id": "yufine",
@@ -539,8 +611,10 @@
   },
   {
     "type": "mystic",
-    "start": "2019-09-05",
-    "end": "2019-10-03",
+    "dt": [
+      "2019-09-05",
+      "2019-10-03"
+    ],
     "c": [
       {
         "id": "judge-kise",
@@ -555,8 +629,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-09-12",
-    "end": "2019-09-19",
+    "dt": [
+      "2019-09-12",
+      "2019-09-19"
+    ],
     "c": [
       {
         "id": "tamarinne",
@@ -567,8 +643,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-09-19",
-    "end": "2019-09-26",
+    "dt": [
+      "2019-09-19",
+      "2019-09-26"
+    ],
     "c": [
       {
         "id": "tenebria",
@@ -579,8 +657,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-09-26",
-    "end": "2019-10-10",
+    "dt": [
+      "2019-09-26",
+      "2019-10-10"
+    ],
     "c": [
       {
         "id": "lilias",
@@ -589,15 +669,17 @@
     ],
     "a": [
       {
-        "id": "Bastion of Perlutia",
+        "id": "bastion-of-perlutia",
         "new": true
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2019-10-03",
-    "end": "2019-10-31",
+    "dt": [
+      "2019-10-03",
+      "2019-10-31"
+    ],
     "c": [
       {
         "id": "desert-jewel-basar",
@@ -612,8 +694,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-10-10",
-    "end": "2019-10-17",
+    "dt": [
+      "2019-10-10",
+      "2019-10-17"
+    ],
     "c": [
       {
         "id": "vildred",
@@ -624,8 +708,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-10-17",
-    "end": "2019-10-24",
+    "dt": [
+      "2019-10-17",
+      "2019-10-24"
+    ],
     "c": [
       {
         "id": "sez",
@@ -636,8 +722,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-10-24",
-    "end": "2019-10-31",
+    "dt": [
+      "2019-10-24",
+      "2019-10-31"
+    ],
     "c": [
       {
         "id": "cecilia",
@@ -648,8 +736,10 @@
   },
   {
     "type": "mystic",
-    "start": "2019-10-31",
-    "end": "2019-11-28",
+    "dt": [
+      "2019-10-31",
+      "2019-11-28"
+    ],
     "c": [
       {
         "id": "maid-chloe",
@@ -664,8 +754,10 @@
   },
   {
     "type": "limited",
-    "start": "2019-10-31",
-    "end": "2019-11-14",
+    "dt": [
+      "2019-10-31",
+      "2019-11-14"
+    ],
     "c": [
       {
         "id": "luna",
@@ -674,15 +766,17 @@
     ],
     "a": [
       {
-        "id": "Draco Plate",
+        "id": "draco-plate",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-11-07",
-    "end": "2019-11-21",
+    "dt": [
+      "2019-11-07",
+      "2019-11-21"
+    ],
     "c": [
       {
         "id": "melissa",
@@ -691,15 +785,17 @@
     ],
     "a": [
       {
-        "id": "Bloody Rose",
+        "id": "bloody-rose",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-11-21",
-    "end": "2019-11-28",
+    "dt": [
+      "2019-11-21",
+      "2019-11-28"
+    ],
     "c": [
       {
         "id": "basar",
@@ -710,8 +806,10 @@
   },
   {
     "type": "mystic",
-    "start": "2019-11-28",
-    "end": "2019-12-26",
+    "dt": [
+      "2019-11-28",
+      "2019-12-26"
+    ],
     "c": [
       {
         "id": "faithless-lidica",
@@ -726,8 +824,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-11-28",
-    "end": "2019-12-05",
+    "dt": [
+      "2019-11-28",
+      "2019-12-05"
+    ],
     "c": [
       {
         "id": "ravi",
@@ -738,8 +838,10 @@
   },
   {
     "type": "covenant",
-    "start": "2019-12-05",
-    "end": "2019-12-19",
+    "dt": [
+      "2019-12-05",
+      "2019-12-19"
+    ],
     "c": [
       {
         "id": "elena",
@@ -748,3524 +850,17 @@
     ],
     "a": [
       {
-        "id": "Stella Harpa",
+        "id": "stella-harpa",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2019-12-12",
-    "end": "2019-12-19",
-    "c": [
-      {
-        "id": "violet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Violet Talisman",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2019-12-19",
-    "end": "2019-12-26",
-    "c": [
-      {
-        "id": "iseria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Song of Stars",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2019-12-26",
-    "end": "2020-01-23",
-    "c": [
-      {
-        "id": "fallen-cecilia",
-        "new": false
-      },
-      {
-        "id": "benevolent-romann",
-        "new": true
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "limited",
-    "start": "2019-12-24",
-    "end": "2020-01-02",
-    "c": [
-      {
-        "id": "diene",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2019-12-26",
-    "end": "2020-01-02",
-    "c": [
-      {
-        "id": "krau",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Noble Oath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-01-02",
-    "end": "2020-01-16",
-    "c": [
-      {
-        "id": "alencia",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Alencinox's Wrath",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-01-09",
-    "end": "2020-01-16",
-    "c": [
-      {
-        "id": "charles",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Justice for All",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-01-16",
-    "end": "2020-01-23",
-    "c": [
-      {
-        "id": "yufine",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Merciless Glutton",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-01-23",
-    "end": "2020-01-30",
-    "c": [
-      {
-        "id": "bellona",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Iron Fan",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-01-23",
-    "end": "2020-02-20",
-    "c": [
-      {
-        "id": "ambitious-tywin",
-        "new": true
-      },
-      {
-        "id": "blood-blade-karin",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-01-30",
-    "end": "2020-02-13",
-    "c": [
-      {
-        "id": "pavel",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Dux Noctis",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-02-06",
-    "end": "2020-02-13",
-    "c": [
-      {
-        "id": "cermia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Border Coin",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-02-13",
-    "end": "2020-02-20",
-    "c": [
-      {
-        "id": "basar",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Abyssal Crown",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-02-20",
-    "end": "2020-02-27",
-    "c": [
-      {
-        "id": "lidica",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Judgment",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-02-20",
-    "end": "2020-02-27",
-    "c": [
-      {
-        "id": "lilibet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Creation & Destruction",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-02-20",
-    "end": "2020-03-29",
-    "c": [
-      {
-        "id": "martial-artist-ken",
-        "new": false
-      },
-      {
-        "id": "tempest-surin",
-        "new": true
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "limited",
-    "start": "2020-02-27",
-    "end": "2020-03-12",
-    "c": [
-      {
-        "id": "cerise",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Guiding Light",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-03-05",
-    "end": "2020-03-12",
-    "c": [
-      {
-        "id": "charlotte",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Holy Sacrifice",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-03-12",
-    "end": "2020-03-26",
-    "c": [
-      {
-        "id": "kawerik",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Black Hand of the Goddess",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-03-19",
-    "end": "2020-03-26",
-    "c": [
-      {
-        "id": "tenebria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-03-19",
-    "end": "2020-03-26",
-    "c": [
-      {
-        "id": "vivian",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Dingus Orb",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-03-29",
-    "end": "2020-04-16",
-    "c": [
-      {
-        "id": "little-queen-charlotte",
-        "new": true
-      },
-      {
-        "id": "auxiliary-lots",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-03-26",
-    "end": "2020-04-02",
-    "c": [
-      {
-        "id": "iseria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Song of Stars",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-03-26",
-    "end": "2020-04-02",
-    "c": [
-      {
-        "id": "lilias",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bastion of Perlutia",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-04-02",
-    "end": "2020-04-09",
-    "c": [
-      {
-        "id": "kise",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alabastron",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-04-09",
-    "end": "2020-04-23",
-    "c": [
-      {
-        "id": "roana",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Touch of Rekos",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-04-16",
-    "end": "2020-04-23",
-    "c": [
-      {
-        "id": "kayron",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alexa's Basket",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-04-16",
-    "end": "2020-04-23",
-    "c": [
-      {
-        "id": "krau",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Holy Sacrifice",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-04-16",
-    "end": "2020-05-14",
-    "c": [
-      {
-        "id": "specter-tenebria",
-        "new": false
-      },
-      {
-        "id": "sinful-angelica",
-        "new": true
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-04-23",
-    "end": "2020-04-30",
-    "c": [
-      {
-        "id": "luluca",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Spirit's Breath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-04-23",
-    "end": "2020-04-30",
-    "c": [
-      {
-        "id": "melissa",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bloody Rose",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-04-30",
-    "end": "2020-05-07",
-    "c": [
-      {
-        "id": "destina",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Shimandra Staff",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2020-04-30",
-    "end": "2020-05-14",
-    "c": [
-      {
-        "id": "baiken",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Torn Sleeve",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2020-05-07",
-    "end": "2020-05-21",
-    "c": [
-      {
-        "id": "dizzy",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Necro & Undine",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2020-05-14",
-    "end": "2020-05-21",
-    "c": [
-      {
-        "id": "elphelt",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Ms. Confille",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-05-14",
-    "end": "2020-06-11",
-    "c": [
-      {
-        "id": "blood-moon-haste",
-        "new": true
-      },
-      {
-        "id": "shadow-rose",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-05-21",
-    "end": "2020-06-04",
-    "c": [
-      {
-        "id": "ray",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Doctor's Bag",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-05-28",
-    "end": "2020-06-04",
-    "c": [
-      {
-        "id": "elena",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Stella Harpa",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-05-28",
-    "end": "2020-06-04",
-    "c": [
-      {
-        "id": "ludwig",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Time Matter",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-06-04",
-    "end": "2020-06-11",
-    "c": [
-      {
-        "id": "sigret",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Cradle of Life",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-06-04",
-    "end": "2020-06-11",
-    "c": [
-      {
-        "id": "vildred",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Wind Rider",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-06-11",
-    "end": "2020-06-25",
-    "c": [
-      {
-        "id": "ruele-of-light",
-        "new": false
-      },
-      {
-        "id": "general-purrgis",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-06-11",
-    "end": "2020-06-18",
-    "c": [
-      {
-        "id": "tamarinne",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Idol's Cheer",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-06-18",
-    "end": "2020-07-02",
-    "c": [
-      {
-        "id": "celine",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Secret Art - Storm Sword",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2020-06-25",
-    "end": "2020-07-09",
-    "c": [
-      {
-        "id": "seaside-bellona",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Reingar's Special Drink",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-06-25",
-    "end": "2020-07-16",
-    "c": [
-      {
-        "id": "remnant-violet",
-        "new": true
-      },
-      {
-        "id": "crimson-armin",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-06-25",
-    "end": "2020-07-02",
-    "c": [
-      {
-        "id": "lilibet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Creation & Destruction",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-07-02",
-    "end": "2020-07-09",
-    "c": [
-      {
-        "id": "lilias",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bastion of Perlutia",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-07-02",
-    "end": "2020-07-09",
-    "c": [
-      {
-        "id": "haste",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Rhianna & Luciella",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-07-09",
-    "end": "2020-07-19",
-    "c": [
-      {
-        "id": "aramintha",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Rhianna & Luciella",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-07-09",
-    "end": "2020-07-19",
-    "c": [
-      {
-        "id": "ravi",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Durandal",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-07-16",
-    "end": "2020-08-06",
-    "c": [
-      {
-        "id": "arbiter-vildred",
-        "new": false
-      },
-      {
-        "id": "watcher-schuri",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-07-16",
-    "end": "2020-07-30",
-    "c": [
-      {
-        "id": "mui",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Circus Fantasia",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-07-23",
-    "end": "2020-07-30",
-    "c": [
-      {
-        "id": "bellona",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Iron Fan",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-07-23",
-    "end": "2020-07-30",
-    "c": [
-      {
-        "id": "violet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Violet Talisman",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2020-07-30",
-    "end": "2020-08-13",
-    "c": [
-      {
-        "id": "holiday-yufine",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Champion's Trophy",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-08-06",
-    "end": "2020-08-13",
-    "c": [
-      {
-        "id": "cermia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Border Coin",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-08-06",
-    "end": "2020-08-27",
-    "c": [
-      {
-        "id": "briar-witch-iseria",
-        "new": true
-      },
-      {
-        "id": "fighter-maya",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-08-13",
-    "end": "2020-08-20",
-    "c": [
-      {
-        "id": "cecilia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Rise of a Monarch",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-08-13",
-    "end": "2020-08-20",
-    "c": [
-      {
-        "id": "kise",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alabastron",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-08-20",
-    "end": "2020-08-27",
-    "c": [
-      {
-        "id": "lidica",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Judgment",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-08-20",
-    "end": "2020-08-27",
-    "c": [
-      {
-        "id": "tywin",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Crown of Glory",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-08-27",
-    "end": "2020-09-10",
-    "c": [
-      {
-        "id": "choux",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Snow Crystal",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-08-27",
-    "end": "2020-09-17",
-    "c": [
-      {
-        "id": "dark-corvus",
-        "new": false
-      },
-      {
-        "id": "challenger-dominiel",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-09-03",
-    "end": "2020-09-10",
-    "c": [
-      {
-        "id": "vivian",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Dingus Orb",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-09-03",
-    "end": "2020-09-10",
-    "c": [
-      {
-        "id": "kawerik",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Black Hand of th Goddess",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-09-10",
-    "end": "2020-09-17",
-    "c": [
-      {
-        "id": "chloe",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "A Little Queen's Huge Crown",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-09-10",
-    "end": "2020-09-17",
-    "c": [
-      {
-        "id": "kayron",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sepherd of the Hollow",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-09-17",
-    "end": "2020-09-24",
-    "c": [
-      {
-        "id": "sez",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Manica of Control",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-09-17",
-    "end": "2020-09-24",
-    "c": [
-      {
-        "id": "ludwig",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Time Matter",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-09-17",
-    "end": "2020-10-08",
-    "c": [
-      {
-        "id": "last-rider-krau",
-        "new": true
-      },
-      {
-        "id": "celestial-mercedes",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "limited",
-    "start": "2020-09-24",
-    "end": "2020-10-08",
-    "c": [
-      {
-        "id": "landy",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Wall of Order",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-01",
-    "end": "2020-10-08",
-    "c": [
-      {
-        "id": "tenebria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Crimson Moon of Nightmares",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-01",
-    "end": "2020-10-08",
-    "c": [
-      {
-        "id": "ken",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Samsara Prayer Beads",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-08",
-    "end": "2020-10-15",
-    "c": [
-      {
-        "id": "baal-sezan",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Last Teatime",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-08",
-    "end": "2020-10-15",
-    "c": [
-      {
-        "id": "yufine",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Merciless Glutton",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-10-08",
-    "end": "2020-10-29",
-    "c": [
-      {
-        "id": "faithless-lidica",
-        "new": false
-      },
-      {
-        "id": "assassin-coli",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-15",
-    "end": "2020-10-22",
-    "c": [
-      {
-        "id": "krau",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Holy Sacrifice",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-15",
-    "end": "2020-10-29",
-    "c": [
-      {
-        "id": "ervalen",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Double-Edged Decrescent",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-22",
-    "end": "2020-10-29",
-    "c": [
-      {
-        "id": "charles",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Justice for All",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-22",
-    "end": "2020-10-29",
-    "c": [
-      {
-        "id": "roana",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Touch of Rekos",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2020-10-29",
-    "end": "2020-11-12",
-    "c": [
-      {
-        "id": "luna",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Draco Plate",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-10-29",
-    "end": "2020-11-05",
-    "c": [
-      {
-        "id": "haste",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Rihanna & Luciella",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-10-29",
-    "end": "2020-11-19",
-    "c": [
-      {
-        "id": "top-model-luluca",
-        "new": true
-      },
-      {
-        "id": "assassin-cidd",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-11-05",
-    "end": "2020-11-12",
-    "c": [
-      {
-        "id": "melissa",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bloody Rose",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-11-05",
-    "end": "2020-11-12",
-    "c": [
-      {
-        "id": "tamarinne",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Idol's Cheer",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-11-12",
-    "end": "2020-11-19",
-    "c": [
-      {
-        "id": "pavel",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Dux Noctis",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-11-12",
-    "end": "2020-11-19",
-    "c": [
-      {
-        "id": "vildred",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Summer Twilight",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-11-19",
-    "end": "2020-12-03",
-    "c": [
-      {
-        "id": "flan",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Unseen Observer",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-11-19",
-    "end": "2020-12-10",
-    "c": [
-      {
-        "id": "maid-chloe",
-        "new": false
-      },
-      {
-        "id": "assassin-cartuja",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-11-26",
-    "end": "2020-12-03",
-    "c": [
-      {
-        "id": "bellona",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Iron Fan",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-11-26",
-    "end": "2020-12-03",
-    "c": [
-      {
-        "id": "charlotte",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Noble Oath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-03",
-    "end": "2020-12-10",
-    "c": [
-      {
-        "id": "basar",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Abyssal Crown",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-03",
-    "end": "2020-12-10",
-    "c": [
-      {
-        "id": "lidica",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Judgment",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-10",
-    "end": "2020-12-17",
-    "c": [
-      {
-        "id": "ravi",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sigurd Scythe",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-10",
-    "end": "2020-12-17",
-    "c": [
-      {
-        "id": "lilias",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bastion of Perlutia",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-12-10",
-    "end": "2020-12-31",
-    "c": [
-      {
-        "id": "operator-sigret",
-        "new": true
-      },
-      {
-        "id": "blaze-dingo",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-17",
-    "end": "2020-12-24",
-    "c": [
-      {
-        "id": "elena",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Stella Harpa",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-17",
-    "end": "2020-12-31",
-    "c": [
-      {
-        "id": "mort",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Ancient Dragon's Legacy",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2020-12-24",
-    "end": "2021-01-07",
-    "c": [
-      {
-        "id": "fairytale-tenebria",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Fairy Tale for a Nightmare",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-31",
-    "end": "2021-01-07",
-    "c": [
-      {
-        "id": "sigret",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Cradle of Life",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2020-12-31",
-    "end": "2021-01-07",
-    "c": [
-      {
-        "id": "lilibet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Creation & Destruction",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2020-12-31",
-    "end": "2021-01-21",
-    "c": [
-      {
-        "id": "silver-blade-aramintha",
-        "new": false
-      },
-      {
-        "id": "kitty-clarissa",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-07",
-    "end": "2021-01-14",
-    "c": [
-      {
-        "id": "cermia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Border Coin",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-07",
-    "end": "2021-01-14",
-    "c": [
-      {
-        "id": "celine",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Secret Art - Storm Sword",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-14",
-    "end": "2021-01-21",
-    "c": [
-      {
-        "id": "alencia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alencinox's Wrath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-14",
-    "end": "2021-01-21",
-    "c": [
-      {
-        "id": "vivian",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Dingus Orb",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-21",
-    "end": "2021-01-28",
-    "c": [
-      {
-        "id": "cecilia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Rise of a Monarch",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-21",
-    "end": "2021-01-28",
-    "c": [
-      {
-        "id": "ludwig",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Time Matter",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-01-21",
-    "end": "2021-02-11",
-    "c": [
-      {
-        "id": "archdemons-shadow",
-        "new": true
-      },
-      {
-        "id": "crescent-moon-rin",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-28",
-    "end": "2021-02-11",
-    "c": [
-      {
-        "id": "politis",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Knowledge Seed",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-01-28",
-    "end": "2021-02-04",
-    "c": [
-      {
-        "id": "tywin",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Crown of Glory",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-02-04",
-    "end": "2021-02-11",
-    "c": [
-      {
-        "id": "luluca",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Spirit's Breath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-02-11",
-    "end": "2021-02-18",
-    "c": [
-      {
-        "id": "kise",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alabastron",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2021-02-11",
-    "end": "2021-02-25",
-    "c": [
-      {
-        "id": "landy",
-        "new": false
-      },
-      {
-        "id": "diene",
-        "new": false
-      },
-      {
-        "id": "cerise",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Wall of Order",
-        "new": false
-      },
-      {
-        "id": "Guiding Light",
-        "new": false
-      },
-      {
-        "id": "Unfaiding Memories",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-02-11",
-    "end": "2021-03-04",
-    "c": [
-      {
-        "id": "fallen-cecilia",
-        "new": false
-      },
-      {
-        "id": "champion-zerato",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-02-18",
-    "end": "2021-02-25",
-    "c": [
-      {
-        "id": "tenebria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Crimson Moon of Nightmares",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-02-25",
-    "end": "2021-03-04",
-    "c": [
-      {
-        "id": "kayron",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alexa's Basket",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-02-25",
-    "end": "2021-03-04",
-    "c": [
-      {
-        "id": "pavel",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Dux Noctis",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-03-04",
-    "end": "2021-03-25",
-    "c": [
-      {
-        "id": "designer-lilibet",
-        "new": true
-      },
-      {
-        "id": "roaming-warrior-leo",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-03-04",
-    "end": "2021-03-11",
-    "c": [
-      {
-        "id": "chloe",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "A Little Queen's Huge Crown",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-03-04",
-    "end": "2021-03-11",
-    "c": [
-      {
-        "id": "ray",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Doctor's Bag",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-03-11",
-    "end": "2021-03-18",
-    "c": [
-      {
-        "id": "violet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Violet Talisman",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-03-11",
-    "end": "2021-03-25",
-    "c": [
-      {
-        "id": "eda",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Twilight Calamity",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-03-18",
-    "end": "2021-03-25",
-    "c": [
-      {
-        "id": "charles",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Justice for All",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-03-25",
-    "end": "2021-04-15",
-    "c": [
-      {
-        "id": "desert-jewel-basar",
-        "new": false
-      },
-      {
-        "id": "great-chief-khawana",
-        "new": true
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-03-25",
-    "end": "2021-04-01",
-    "c": [
-      {
-        "id": "vivian",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Dingus Orb",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-03-25",
-    "end": "2021-04-01",
-    "c": [
-      {
-        "id": "tamarinne",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Idol's cheer",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2021-03-31",
-    "end": "2021-04-15",
-    "c": [
-      {
-        "id": "baiken",
-        "new": false
-      },
-      {
-        "id": "dizzy",
-        "new": false
-      },
-      {
-        "id": "elphelt",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Torn Sleeve",
-        "new": false
-      },
-      {
-        "id": "Necro & Undine",
-        "new": false
-      },
-      {
-        "id": "Ms. Confille",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-04-08",
-    "end": "2021-04-22",
-    "c": [
-      {
-        "id": "bomb-model-kanna",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Air-to-Surface Missile: MISHA",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-04-15",
-    "end": "2021-05-06",
-    "c": [
-      {
-        "id": "solitaria-of-the-snow",
-        "new": true
-      },
-      {
-        "id": "troublemaker-crozet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Elbris Ritual Sword",
-        "new": false
-      },
-      {
-        "id": "Bloodstone",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-04-15",
-    "end": "2021-04-22",
-    "c": [
-      {
-        "id": "elena",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Stella Harpa",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-04-22",
-    "end": "2021-04-29",
-    "c": [
-      {
-        "id": "roana",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Touch of Rekos",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-04-22",
-    "end": "2021-04-29",
-    "c": [
-      {
-        "id": "yufine",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Merciless Glutton",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-04-29",
-    "end": "2021-05-06",
-    "c": [
-      {
-        "id": "lilias",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bastion of Perlutia",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-04-29",
-    "end": "2021-05-06",
-    "c": [
-      {
-        "id": "vildred",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Summer Twilight",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-05-06",
-    "end": "2021-05-27",
-    "c": [
-      {
-        "id": "little-queen-charlotte",
-        "new": false
-      },
-      {
-        "id": "wanderer-silk",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Wind Rider",
-        "new": false
-      },
-      {
-        "id": "Song of Stars",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-05-06",
-    "end": "2021-05-20",
-    "c": [
-      {
-        "id": "senya",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Spear of a New Dawn",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-05-06",
-    "end": "2021-05-13",
-    "c": [
-      {
-        "id": "ervalen",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Double-Edged Decrescent",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-05-13",
-    "end": "2021-05-20",
-    "c": [
-      {
-        "id": "kawerik",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Black Hand of the Goddess",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-05-20",
-    "end": "2021-05-27",
-    "c": [
-      {
-        "id": "choux",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Snow Crystal",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-05-20",
-    "end": "2021-05-27",
-    "c": [
-      {
-        "id": "sigret",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Cradle of Life",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-05-27",
-    "end": "2021-06-17",
-    "c": [
-      {
-        "id": "mediator-kawerik",
-        "new": true
-      },
-      {
-        "id": "shooting-star-achates",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-05-27",
-    "end": "2021-06-03",
-    "c": [
-      {
-        "id": "celine",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Secret Art – Storm Sword",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-05-27",
-    "end": "2021-06-03",
-    "c": [
-      {
-        "id": "flan",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Unseen Observer",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-06-03",
-    "end": "2021-06-10",
-    "c": [
-      {
-        "id": "mort",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Ancient Dragon's Legacy",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-06-03",
-    "end": "2021-06-17",
-    "c": [
-      {
-        "id": "ilynav",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Wings of Light and Shadow",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-06-10",
-    "end": "2021-06-17",
-    "c": [
-      {
-        "id": "kayron",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Shepherd of the Hollow",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-06-17",
-    "end": "2021-07-08",
-    "c": [
-      {
-        "id": "ruele-of-light",
-        "new": false
-      },
-      {
-        "id": "inferno-khawazu",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Merciless Glutton",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-06-17",
-    "end": "2021-06-24",
-    "c": [
-      {
-        "id": "iseria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Song of Stars",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-06-17",
-    "end": "2021-06-24",
-    "c": [
-      {
-        "id": "melissa",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bloody Rose",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-06-24",
-    "end": "2021-07-01",
-    "c": [
-      {
-        "id": "ravi",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sigurd Scythe",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-06-24",
-    "end": "2021-07-01",
-    "c": [
-      {
-        "id": "krau",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Holy Sacrifice",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2021-07-01",
-    "end": "2021-07-15",
-    "c": [
-      {
-        "id": "seaside-bellona",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Reingar's Special Drink",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-07-01",
-    "end": "2021-07-08",
-    "c": [
-      {
-        "id": "sez",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Manica of Control",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-07-08",
-    "end": "2021-07-29",
-    "c": [
-      {
-        "id": "straze",
-        "new": true
-      },
-      {
-        "id": "benevolent-romann",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-07-08",
-    "end": "2021-07-15",
-    "c": [
-      {
-        "id": "lidica",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Judgment",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-07-15",
-    "end": "2021-07-22",
-    "c": [
-      {
-        "id": "roana",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Touch of Rekos",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-07-15",
-    "end": "2021-07-22",
-    "c": [
-      {
-        "id": "charlotte",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Elbris Ritual Sword",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2021-07-22",
-    "end": "2021-08-05",
-    "c": [
-      {
-        "id": "holiday-yufine",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Champion's Trophy",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-07-22",
-    "end": "2021-07-29",
-    "c": [
-      {
-        "id": "mui",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Circus Fantasia",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-07-29",
-    "end": "2021-08-05",
-    "c": [
-      {
-        "id": "basar",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Abyssal Crown",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-07-29",
-    "end": "2021-08-19",
-    "c": [
-      {
-        "id": "specter-tenebria",
-        "new": false
-      },
-      {
-        "id": "crimson-armin",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "limited",
-    "nid": "7455419",
-    "start": "2021-08-05",
-    "end": "2021-08-19",
-    "c": [
-      {
-        "id": "rem",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Azure Comet",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "nid": "7455268",
-    "start": "2021-08-05",
-    "end": "2021-08-19",
-    "c": [
-      {
-        "id": "emilia",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Guardian Ice Crystal",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7458121",
-    "start": "2021-08-05",
-    "end": "2021-08-12",
-    "c": [
-      {
-        "id": "luluca",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Spirit's Breath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7529105",
-    "start": "2021-08-12",
-    "end": "2021-08-19",
-    "c": [
-      {
-        "id": "lilibet",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Creation & Destruction",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-08-19",
-    "end": "2021-09-09",
-    "c": [
-      {
-        "id": "closer-charles",
-        "new": true
-      },
-      {
-        "id": "tempest-surin",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "nid": "7621807",
-    "start": "2021-08-19",
-    "end": "2021-08-26",
-    "c": [
-      {
-        "id": "cermia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Border Coin",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7621775",
-    "start": "2021-08-19",
-    "end": "2021-08-26",
-    "c": [
-      {
-        "id": "baal-sezan",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Last Teatime",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7654860",
-    "start": "2021-08-26",
-    "end": "2021-09-02",
-    "c": [
-      {
-        "id": "bellona",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Iron Fan",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "nid": "7654830",
-    "start": "2021-08-26",
-    "end": "2021-09-09",
-    "c": [
-      {
-        "id": "summertime-iseria",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Star of the Deep Sea",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7684754",
-    "start": "2021-09-02",
-    "end": "2021-09-09",
-    "c": [
-      {
-        "id": "alencia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alencinox's Wrath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-09-09",
-    "end": "2021-09-30",
-    "c": [
-      {
-        "id": "specimen-sez",
-        "new": false
-      },
-      {
-        "id": "angel-of-light-angelica",
-        "new": true
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "nid": 7714132,
-    "start": "2021-09-09",
-    "end": "2021-09-16",
-    "c": [
-      {
-        "id": "lilias",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Bastion of Perlutia",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": 7714097,
-    "start": "2021-09-09",
-    "end": "2021-09-16",
-    "c": [
-      {
-        "id": "vivian",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Dignus Orb",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7743189",
-    "start": "2021-09-16",
-    "end": "2021-09-23",
-    "c": [
-      {
-        "id": "ken",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Samsara Prayer",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7743172",
-    "start": "2021-09-16",
-    "end": "2021-09-23",
-    "c": [
-      {
-        "id": "tamarinne",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Idol's Cheer",
-        "new": false
-      }
-    ]
-  },
-  {
-    "nid": 7754698,
-    "type": "covenant",
-    "start": "2021-09-23",
-    "end": "2021-09-30",
-    "c": [
-      {
-        "id": "tenebria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Crimson Moon of Nightmares",
-        "new": false
-      }
-    ]
-  },
-  {
-    "nid": 7754678,
-    "type": "limited",
-    "start": "2021-09-23",
-    "end": "2021-10-07",
-    "c": [
-      {
-        "id": "luna",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Draco Plate",
-        "new": false
-      }
-    ]
-  },
-  {
-    "nid": 7802846,
-    "type": "limited",
-    "start": "2021-09-30",
-    "end": "2021-10-14",
-    "c": [
-      {
-        "id": "landy",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Wall of Order",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-09-30",
-    "end": "2021-10-21",
-    "c": [
-      {
-        "id": "belian",
-        "new": true
-      },
-      {
-        "id": "auxiliary-lots",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "start": "2021-10-07",
-    "end": "2021-10-14",
-    "c": [
-      {
-        "id": "destina",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Shimandra Staff",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7854509",
-    "start": "2021-10-14",
-    "end": "2021-10-21",
-    "c": [
-      {
-        "id": "kise",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Alabastron",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7854515",
-    "start": "2021-10-14",
-    "end": "2021-10-28",
-    "c": [
-      {
-        "id": "ran",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Winter Shadow",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-10-21",
-    "end": "2021-10-28",
-    "c": [
-      {
-        "id": "politis",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Knowledge Seed",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-10-21",
-    "end": "2021-11-11",
-    "c": [
-      {
-        "id": "apocalypse-ravi",
-        "new": false
-      },
-      {
-        "id": "shadow-rose",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "nid": "7902121",
-    "start": "2021-10-28",
-    "end": "2021-11-04",
-    "c": [
-      {
-        "id": "charlotte",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Elbris Ritual Sword",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "nid": "7902193",
-    "start": "2021-10-28",
-    "end": "2021-11-11",
-    "c": [
-      {
-        "id": "rimuru",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Anti-Magic Mask",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-11-11",
-    "end": "2021-12-02",
-    "c": [
-      {
-        "id": "spirit-eye-celine",
-        "new": true
-      },
-      {
-        "id": "blood-blade-karin",
-        "new": false
-      }
-    ],
-    "a": []
-  },
-  {
-    "type": "limited",
-    "start": "2021-11-04",
-    "end": "2021-11-18",
-    "c": [
-      {
-        "id": "milim",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "Upgraded Dragon Knuckles",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7947586",
-    "start": "2021-11-11",
-    "end": "2021-11-18",
-    "c": [
-      {
-        "id": "vildred",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Sword of Summer Twilight",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-11-18",
-    "end": "2021-11-25",
-    "c": [
-      {
-        "id": "tywin",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Crown of Glory",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-11-18",
-    "end": "2021-11-25",
-    "c": [
-      {
-        "id": "roana",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Touch of Rekos",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-12-02",
-    "end": "2021-12-23",
-    "c": [
-      {
-        "id": "judge-kise",
-        "new": false
-      },
-      {
-        "id": "general-purrgis",
-        "new": false
-      }
+    "dt": [
+      "2019-12-12",
+      "2019-12-19"
     ],
-    "a": []
-  },
-  {
-    "type": "covenant",
-    "nid": "7988384",
-    "start": "2021-11-25",
-    "end": "2021-12-02",
-    "c": [
-      {
-        "id": "flan",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "unseen-observer",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "7988364",
-    "start": "2021-11-25",
-    "end": "2021-12-09",
-    "c": [
-      {
-        "id": "zahhak",
-        "new": true
-      }
-    ],
-    "a": [
-      {
-        "id": "pure-white-trust",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-12-02",
-    "end": "2021-12-09",
-    "c": [
-      {
-        "id": "sigret",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "cradle-of-life",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2021-12-09",
-    "end": "2021-12-23",
-    "c": [
-      {
-        "id": "fairytale-tenebria",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "fairy-tale-for-a-nightmare",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "8027114",
-    "start": "2021-12-09",
-    "end": "2021-12-16",
-    "c": [
-      {
-        "id": "ray",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "doctors-bag",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2021-12-16",
-    "end": "2021-12-23",
-    "c": [
-      {
-        "id": "elena",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "Stella Harpa",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2021-12-23",
-    "end": "2022-01-13",
-    "c": [
-      {
-        "id": "conqueror-lilias",
-        "new": true
-      },
-      {
-        "id": "sinful-angelica",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "8063996",
-    "start": "2021-12-23",
-    "end": "2021-12-30",
-    "c": [
-      {
-        "id": "ilynav",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "wings-of-light-and-shadow",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "8063989",
-    "start": "2021-12-23",
-    "end": "2021-12-30",
-    "c": [
-      {
-        "id": "bomb-model-kanna",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "airtosurface-missile-misha",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "8085172",
-    "start": "2021-12-30",
-    "end": "2022-01-06",
     "c": [
       {
         "id": "violet",
@@ -4281,111 +876,99 @@
   },
   {
     "type": "covenant",
-    "nid": "8085162",
-    "start": "2021-12-30",
-    "end": "2022-01-13",
-    "c": [
-      {
-        "id": "command-model-laika",
-        "new": true
-      }
+    "dt": [
+      "2019-12-19",
+      "2019-12-26"
     ],
-    "a": [
-      {
-        "id": "glowings-21",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "nid": "8106481",
-    "start": "2022-01-06",
-    "end": "2022-01-13",
     "c": [
       {
-        "id": "alencia",
+        "id": "iseria",
         "new": false
       }
     ],
     "a": [
       {
-        "id": "alencinoxs-wrath",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2022-01-13",
-    "end": "2022-01-20",
-    "c": [
-      {
-        "id": "cermia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "border-coin",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2022-01-13",
-    "end": "2022-01-20",
-    "c": [
-      {
-        "id": "cecilia",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "rise-of-a-monarch",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "limited",
-    "start": "2022-01-20",
-    "end": "2022-02-03",
-    "c": [
-      {
-        "id": "cerise",
-        "new": false
-      }
-    ],
-    "a": [
-      {
-        "id": "guiding-light",
+        "id": "song-of-stars",
         "new": false
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2022-01-13",
-    "end": "2022-02-03",
+    "dt": [
+      "2019-12-26",
+      "2020-01-23"
+    ],
     "c": [
       {
-        "id": "remnant-violet",
+        "id": "fallen-cecilia",
         "new": false
       },
       {
-        "id": "challenger-dominiel",
+        "id": "benevolent-romann",
+        "new": true
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2019-12-24",
+      "2020-01-02"
+    ],
+    "c": [
+      {
+        "id": "diene",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2019-12-26",
+      "2020-01-02"
+    ],
+    "c": [
+      {
+        "id": "krau",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "noble-oath",
         "new": false
       }
     ]
   },
   {
     "type": "covenant",
-    "nid": "8143065",
-    "start": "2022-01-20",
-    "end": "2022-01-27",
+    "dt": [
+      "2020-01-02",
+      "2020-01-16"
+    ],
+    "c": [
+      {
+        "id": "alencia",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "alencinoxs-wrath",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-01-09",
+      "2020-01-16"
+    ],
     "c": [
       {
         "id": "charles",
@@ -4401,93 +984,255 @@
   },
   {
     "type": "covenant",
-    "start": "2022-01-27",
-    "end": "2022-02-10",
+    "dt": [
+      "2020-01-16",
+      "2020-01-23"
+    ],
     "c": [
       {
-        "id": "peira",
-        "new": true
+        "id": "yufine",
+        "new": false
       }
     ],
     "a": [
       {
-        "id": "goblet-of-oath",
+        "id": "merciless-glutton",
         "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-01-23",
+      "2020-01-30"
+    ],
+    "c": [
+      {
+        "id": "bellona",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "iron-fan",
+        "new": false
       }
     ]
   },
   {
     "type": "mystic",
-    "start": "2022-02-03",
-    "end": "2022-02-24",
+    "dt": [
+      "2020-01-23",
+      "2020-02-20"
+    ],
     "c": [
       {
-        "id": "lionheart-cermia",
+        "id": "ambitious-tywin",
         "new": true
       },
       {
-        "id": "watcher-schuri",
+        "id": "blood-blade-karin",
         "new": false
       }
-    ]
+    ],
+    "a": []
   },
   {
     "type": "covenant",
-    "nid": "8172736",
-    "start": "2022-02-03",
-    "end": "2022-02-10",
+    "dt": [
+      "2020-01-30",
+      "2020-02-13"
+    ],
     "c": [
       {
         "id": "pavel",
-        "new": false
+        "new": true
       }
     ],
     "a": [
       {
         "id": "dux-noctis",
-        "new": false
+        "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2022-02-10",
-    "end": "2022-02-17",
+    "dt": [
+      "2020-02-06",
+      "2020-02-13"
+    ],
     "c": [
       {
-        "id": "celine",
+        "id": "cermia",
         "new": false
       }
     ],
     "a": [
       {
-        "id": "secret-artstorm-sword",
+        "id": "border-coin",
         "new": false
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2022-02-10",
-    "end": "2022-02-17",
+    "dt": [
+      "2020-02-13",
+      "2020-02-20"
+    ],
     "c": [
       {
-        "id": "eda",
+        "id": "basar",
         "new": false
       }
     ],
     "a": [
       {
-        "id": "twilight-calamity",
+        "id": "abyssal-crown",
         "new": false
       }
     ]
   },
   {
     "type": "covenant",
-    "nid": "8236203",
-    "start": "2022-02-17",
-    "end": "2022-02-24",
+    "dt": [
+      "2020-02-20",
+      "2020-02-27"
+    ],
+    "c": [
+      {
+        "id": "lidica",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-judgment",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-02-20",
+      "2020-02-27"
+    ],
+    "c": [
+      {
+        "id": "lilibet",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "creation-destruction",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-02-20",
+      "2020-03-29"
+    ],
+    "c": [
+      {
+        "id": "martial-artist-ken",
+        "new": false
+      },
+      {
+        "id": "tempest-surin",
+        "new": true
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2020-02-27",
+      "2020-03-12"
+    ],
+    "c": [
+      {
+        "id": "cerise",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "guiding-light",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-03-05",
+      "2020-03-12"
+    ],
+    "c": [
+      {
+        "id": "charlotte",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "holy-sacrifice",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-03-12",
+      "2020-03-26"
+    ],
+    "c": [
+      {
+        "id": "kawerik",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "black-hand-of-the-goddess",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-03-19",
+      "2020-03-26"
+    ],
+    "c": [
+      {
+        "id": "tenebria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-03-19",
+      "2020-03-26"
+    ],
     "c": [
       {
         "id": "vivian",
@@ -4496,16 +1241,35 @@
     ],
     "a": [
       {
-        "id": "dignus-orb",
+        "id": "dingus-orb",
         "new": false
       }
     ]
   },
   {
+    "type": "mystic",
+    "dt": [
+      "2020-03-29",
+      "2020-04-16"
+    ],
+    "c": [
+      {
+        "id": "little-queen-charlotte",
+        "new": true
+      },
+      {
+        "id": "auxiliary-lots",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
     "type": "covenant",
-    "nid": "8236205",
-    "start": "2022-02-17",
-    "end": "2022-02-24",
+    "dt": [
+      "2020-03-26",
+      "2020-04-02"
+    ],
     "c": [
       {
         "id": "iseria",
@@ -4521,92 +1285,86 @@
   },
   {
     "type": "covenant",
-    "start": "2022-02-24",
-    "end": "2022-03-03",
+    "dt": [
+      "2020-03-26",
+      "2020-04-02"
+    ],
     "c": [
       {
-        "id": "kawerik",
+        "id": "lilias",
         "new": false
       }
     ],
     "a": [
       {
-        "id": "black-hand-of-the-goddess",
+        "id": "bastion-of-perlutia",
         "new": false
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2022-02-24",
-    "end": "2022-03-10",
+    "dt": [
+      "2020-04-02",
+      "2020-04-09"
+    ],
     "c": [
       {
-        "id": "hwayoung",
-        "new": true
+        "id": "kise",
+        "new": false
       }
     ],
     "a": [
       {
-        "id": "indestructible-gaiters",
-        "new": true
-      }
-    ]
-  },
-  {
-    "type": "mystic",
-    "start": "2022-02-24",
-    "end": "2022-03-17",
-    "c": [
-      {
-        "id": "arbiter-vildred",
-        "new": false
-      },
-      {
-        "id": "bad-cat-armin",
+        "id": "alabastron",
         "new": true
       }
     ]
   },
   {
     "type": "covenant",
-    "nid": "8283919",
-    "start": "2022-03-03",
-    "end": "2022-03-10",
+    "dt": [
+      "2020-04-09",
+      "2020-04-23"
+    ],
     "c": [
       {
-        "id": "tywin",
+        "id": "roana",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "touch-of-rekos",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-04-16",
+      "2020-04-23"
+    ],
+    "c": [
+      {
+        "id": "kayron",
         "new": false
       }
     ],
     "a": [
       {
-        "id": "crown-of-glory",
+        "id": "alexas-basket",
         "new": false
       }
     ]
   },
   {
     "type": "covenant",
-    "start": "2022-03-10",
-    "end": "2022-03-17",
-    "c": [
-      {
-        "id": "ervalen",
-        "new": false
-      }
+    "dt": [
+      "2020-04-16",
+      "2020-04-23"
     ],
-    "a": [
-      {
-        "id": "doubleedged-decrescent",
-        "new": false
-      }
-    ]
-  },
-  {
-    "type": "covenant",
-    "start": "2022-03-10",
-    "end": "2022-03-17",
     "c": [
       {
         "id": "krau",
@@ -4622,42 +1380,85 @@
   },
   {
     "type": "mystic",
-    "start": "2022-03-17",
-    "end": "2022-04-07",
+    "dt": [
+      "2020-04-16",
+      "2020-05-14"
+    ],
     "c": [
       {
-        "id": "pirate-captain-flan",
-        "new": true
+        "id": "specter-tenebria",
+        "new": false
       },
       {
-        "id": "fighter-maya",
-        "new": false
+        "id": "sinful-angelica",
+        "new": true
       }
-    ]
+    ],
+    "a": []
   },
   {
-    "type": "limited",
-    "nid": "8322174",
-    "start": "2022-03-17",
-    "end": "2022-03-31",
+    "type": "covenant",
+    "dt": [
+      "2020-04-23",
+      "2020-04-30"
+    ],
     "c": [
       {
-        "id": "dizzy",
+        "id": "luluca",
         "new": false
       }
     ],
     "a": [
       {
-        "id": "necro-undine",
+        "id": "spirits-breath",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-04-23",
+      "2020-04-30"
+    ],
+    "c": [
+      {
+        "id": "melissa",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bloody-rose",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-04-30",
+      "2020-05-07"
+    ],
+    "c": [
+      {
+        "id": "destina",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "shimadra-staff",
         "new": false
       }
     ]
   },
   {
     "type": "limited",
-    "nid": "8322176",
-    "start": "2022-03-17",
-    "end": "2022-03-31",
+    "dt": [
+      "2020-04-30",
+      "2020-05-14"
+    ],
     "c": [
       {
         "id": "baiken",
@@ -4673,8 +1474,3718 @@
   },
   {
     "type": "limited",
-    "start": "2022-03-24",
-    "end": "2022-04-07",
+    "dt": [
+      "2020-05-07",
+      "2020-05-21"
+    ],
+    "c": [
+      {
+        "id": "dizzy",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "necro-undine",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2020-05-14",
+      "2020-05-21"
+    ],
+    "c": [
+      {
+        "id": "elphelt",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "ms-confille",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-05-14",
+      "2020-06-11"
+    ],
+    "c": [
+      {
+        "id": "blood-moon-haste",
+        "new": true
+      },
+      {
+        "id": "shadow-rose",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-05-21",
+      "2020-06-04"
+    ],
+    "c": [
+      {
+        "id": "ray",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "doctors-bag",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-05-28",
+      "2020-06-04"
+    ],
+    "c": [
+      {
+        "id": "elena",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "stella-harpa",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-05-28",
+      "2020-06-04"
+    ],
+    "c": [
+      {
+        "id": "ludwig",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "time-matter",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-06-04",
+      "2020-06-11"
+    ],
+    "c": [
+      {
+        "id": "sigret",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "cradle-of-life",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-06-04",
+      "2020-06-11"
+    ],
+    "c": [
+      {
+        "id": "vildred",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "wind-rider",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-06-11",
+      "2020-06-25"
+    ],
+    "c": [
+      {
+        "id": "ruele-of-light",
+        "new": false
+      },
+      {
+        "id": "general-purrgis",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-06-11",
+      "2020-06-18"
+    ],
+    "c": [
+      {
+        "id": "tamarinne",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "idols-cheer",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-06-18",
+      "2020-07-02"
+    ],
+    "c": [
+      {
+        "id": "celine",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "secret-art-storm-sword",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2020-06-25",
+      "2020-07-09"
+    ],
+    "c": [
+      {
+        "id": "seaside-bellona",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "reingars-special-drink",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-06-25",
+      "2020-07-16"
+    ],
+    "c": [
+      {
+        "id": "remnant-violet",
+        "new": true
+      },
+      {
+        "id": "crimson-armin",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-06-25",
+      "2020-07-02"
+    ],
+    "c": [
+      {
+        "id": "lilibet",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "creation-destruction",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-07-02",
+      "2020-07-09"
+    ],
+    "c": [
+      {
+        "id": "lilias",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bastion-of-perlutia",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-07-02",
+      "2020-07-09"
+    ],
+    "c": [
+      {
+        "id": "haste",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "rhianna-luciella",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-07-09",
+      "2020-07-19"
+    ],
+    "c": [
+      {
+        "id": "aramintha",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "eticas-scepter",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-07-09",
+      "2020-07-19"
+    ],
+    "c": [
+      {
+        "id": "ravi",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "durandal",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-07-16",
+      "2020-08-06"
+    ],
+    "c": [
+      {
+        "id": "arbiter-vildred",
+        "new": false
+      },
+      {
+        "id": "watcher-schuri",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-07-16",
+      "2020-07-30"
+    ],
+    "c": [
+      {
+        "id": "mui",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "circus-fantasia",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-07-23",
+      "2020-07-30"
+    ],
+    "c": [
+      {
+        "id": "bellona",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "iron-fan",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-07-23",
+      "2020-07-30"
+    ],
+    "c": [
+      {
+        "id": "violet",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "violet-talisman",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2020-07-30",
+      "2020-08-13"
+    ],
+    "c": [
+      {
+        "id": "holiday-yufine",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "champions-trophy",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-08-06",
+      "2020-08-13"
+    ],
+    "c": [
+      {
+        "id": "cermia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "border-coin",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-08-06",
+      "2020-08-27"
+    ],
+    "c": [
+      {
+        "id": "briar-witch-iseria",
+        "new": true
+      },
+      {
+        "id": "fighter-maya",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-08-13",
+      "2020-08-20"
+    ],
+    "c": [
+      {
+        "id": "cecilia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "rise-of-a-monarch",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-08-13",
+      "2020-08-20"
+    ],
+    "c": [
+      {
+        "id": "kise",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "alabastron",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-08-20",
+      "2020-08-27"
+    ],
+    "c": [
+      {
+        "id": "lidica",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-judgment",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-08-20",
+      "2020-08-27"
+    ],
+    "c": [
+      {
+        "id": "tywin",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crown-of-glory",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-08-27",
+      "2020-09-10"
+    ],
+    "c": [
+      {
+        "id": "choux",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "snow-crystal",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-08-27",
+      "2020-09-17"
+    ],
+    "c": [
+      {
+        "id": "dark-corvus",
+        "new": false
+      },
+      {
+        "id": "challenger-dominiel",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-09-03",
+      "2020-09-10"
+    ],
+    "c": [
+      {
+        "id": "vivian",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dingus-orb",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-09-03",
+      "2020-09-10"
+    ],
+    "c": [
+      {
+        "id": "kawerik",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "black-hand-of-the-goddess",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-09-10",
+      "2020-09-17"
+    ],
+    "c": [
+      {
+        "id": "chloe",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "a-little-queens-huge-crown",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-09-10",
+      "2020-09-17"
+    ],
+    "c": [
+      {
+        "id": "kayron",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "shepherd-of-the-hollow",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-09-17",
+      "2020-09-24"
+    ],
+    "c": [
+      {
+        "id": "sez",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "manica-of-control",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-09-17",
+      "2020-09-24"
+    ],
+    "c": [
+      {
+        "id": "ludwig",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "time-matter",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-09-17",
+      "2020-10-08"
+    ],
+    "c": [
+      {
+        "id": "last-rider-krau",
+        "new": true
+      },
+      {
+        "id": "celestial-mercedes",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2020-09-24",
+      "2020-10-08"
+    ],
+    "c": [
+      {
+        "id": "landy",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "wall-of-order",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-01",
+      "2020-10-08"
+    ],
+    "c": [
+      {
+        "id": "tenebria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crimson-moon-of-nightmares",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-01",
+      "2020-10-08"
+    ],
+    "c": [
+      {
+        "id": "ken",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "samsara-prayer-beads",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-08",
+      "2020-10-15"
+    ],
+    "c": [
+      {
+        "id": "baal-sezan",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "last-teatime",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-08",
+      "2020-10-15"
+    ],
+    "c": [
+      {
+        "id": "yufine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "merciless-glutton",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-10-08",
+      "2020-10-29"
+    ],
+    "c": [
+      {
+        "id": "faithless-lidica",
+        "new": false
+      },
+      {
+        "id": "assassin-coli",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-15",
+      "2020-10-22"
+    ],
+    "c": [
+      {
+        "id": "krau",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "holy-sacrifice",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-15",
+      "2020-10-29"
+    ],
+    "c": [
+      {
+        "id": "ervalen",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "doubleedged-decrescent",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-22",
+      "2020-10-29"
+    ],
+    "c": [
+      {
+        "id": "charles",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "justice-for-all",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-22",
+      "2020-10-29"
+    ],
+    "c": [
+      {
+        "id": "roana",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "touch-of-rekos",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2020-10-29",
+      "2020-11-12"
+    ],
+    "c": [
+      {
+        "id": "luna",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "draco-plate",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-10-29",
+      "2020-11-05"
+    ],
+    "c": [
+      {
+        "id": "haste",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "rihanna-luciella",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-10-29",
+      "2020-11-19"
+    ],
+    "c": [
+      {
+        "id": "top-model-luluca",
+        "new": true
+      },
+      {
+        "id": "assassin-cidd",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-11-05",
+      "2020-11-12"
+    ],
+    "c": [
+      {
+        "id": "melissa",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bloody-rose",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-11-05",
+      "2020-11-12"
+    ],
+    "c": [
+      {
+        "id": "tamarinne",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "idols-cheer",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-11-12",
+      "2020-11-19"
+    ],
+    "c": [
+      {
+        "id": "pavel",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dux-noctis",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-11-12",
+      "2020-11-19"
+    ],
+    "c": [
+      {
+        "id": "vildred",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-summer-twilight",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-11-19",
+      "2020-12-03"
+    ],
+    "c": [
+      {
+        "id": "flan",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "unseen-observer",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-11-19",
+      "2020-12-10"
+    ],
+    "c": [
+      {
+        "id": "maid-chloe",
+        "new": false
+      },
+      {
+        "id": "assassin-cartuja",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-11-26",
+      "2020-12-03"
+    ],
+    "c": [
+      {
+        "id": "bellona",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "iron-fan",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-11-26",
+      "2020-12-03"
+    ],
+    "c": [
+      {
+        "id": "charlotte",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "noble-oath",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-03",
+      "2020-12-10"
+    ],
+    "c": [
+      {
+        "id": "basar",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "abyssal-crown",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-03",
+      "2020-12-10"
+    ],
+    "c": [
+      {
+        "id": "lidica",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-judgment",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-10",
+      "2020-12-17"
+    ],
+    "c": [
+      {
+        "id": "ravi",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sigurd-scythe",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-10",
+      "2020-12-17"
+    ],
+    "c": [
+      {
+        "id": "lilias",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bastion-of-perlutia",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-12-10",
+      "2020-12-31"
+    ],
+    "c": [
+      {
+        "id": "operator-sigret",
+        "new": true
+      },
+      {
+        "id": "blaze-dingo",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-17",
+      "2020-12-24"
+    ],
+    "c": [
+      {
+        "id": "elena",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "stella-harpa",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-17",
+      "2020-12-31"
+    ],
+    "c": [
+      {
+        "id": "mort",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "ancient-dragons-legacy",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2020-12-24",
+      "2021-01-07"
+    ],
+    "c": [
+      {
+        "id": "fairytale-tenebria",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "fairy-tale-for-a-nightmare",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-31",
+      "2021-01-07"
+    ],
+    "c": [
+      {
+        "id": "sigret",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "cradle-of-life",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2020-12-31",
+      "2021-01-07"
+    ],
+    "c": [
+      {
+        "id": "lilibet",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "creation-destruction",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2020-12-31",
+      "2021-01-21"
+    ],
+    "c": [
+      {
+        "id": "silver-blade-aramintha",
+        "new": false
+      },
+      {
+        "id": "kitty-clarissa",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-07",
+      "2021-01-14"
+    ],
+    "c": [
+      {
+        "id": "cermia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "border-coin",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-07",
+      "2021-01-14"
+    ],
+    "c": [
+      {
+        "id": "celine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "secret-art-storm-sword",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-14",
+      "2021-01-21"
+    ],
+    "c": [
+      {
+        "id": "alencia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "alencinoxs-wrath",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-14",
+      "2021-01-21"
+    ],
+    "c": [
+      {
+        "id": "vivian",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dingus-orb",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-21",
+      "2021-01-28"
+    ],
+    "c": [
+      {
+        "id": "cecilia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "rise-of-a-monarch",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-21",
+      "2021-01-28"
+    ],
+    "c": [
+      {
+        "id": "ludwig",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "time-matter",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-01-21",
+      "2021-02-11"
+    ],
+    "c": [
+      {
+        "id": "archdemons-shadow",
+        "new": true
+      },
+      {
+        "id": "crescent-moon-rin",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-28",
+      "2021-02-11"
+    ],
+    "c": [
+      {
+        "id": "politis",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "knowledge-seed",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-01-28",
+      "2021-02-04"
+    ],
+    "c": [
+      {
+        "id": "tywin",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crown-of-glory",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-02-04",
+      "2021-02-11"
+    ],
+    "c": [
+      {
+        "id": "luluca",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "spirits-breath",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-02-11",
+      "2021-02-18"
+    ],
+    "c": [
+      {
+        "id": "kise",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "alabastron",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-02-11",
+      "2021-02-25"
+    ],
+    "c": [
+      {
+        "id": "landy",
+        "new": false
+      },
+      {
+        "id": "diene",
+        "new": false
+      },
+      {
+        "id": "cerise",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "wall-of-order",
+        "new": false
+      },
+      {
+        "id": "guiding-light",
+        "new": false
+      },
+      {
+        "id": "unfaiding-memories",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-02-11",
+      "2021-03-04"
+    ],
+    "c": [
+      {
+        "id": "fallen-cecilia",
+        "new": false
+      },
+      {
+        "id": "champion-zerato",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-02-18",
+      "2021-02-25"
+    ],
+    "c": [
+      {
+        "id": "tenebria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crimson-moon-of-nightmares",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-02-25",
+      "2021-03-04"
+    ],
+    "c": [
+      {
+        "id": "kayron",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "alexas-basket",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-02-25",
+      "2021-03-04"
+    ],
+    "c": [
+      {
+        "id": "pavel",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dux-noctis",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-03-04",
+      "2021-03-25"
+    ],
+    "c": [
+      {
+        "id": "designer-lilibet",
+        "new": true
+      },
+      {
+        "id": "roaming-warrior-leo",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-03-04",
+      "2021-03-11"
+    ],
+    "c": [
+      {
+        "id": "chloe",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "a-little-queens-huge-crown",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-03-04",
+      "2021-03-11"
+    ],
+    "c": [
+      {
+        "id": "ray",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "doctors-bag",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-03-11",
+      "2021-03-18"
+    ],
+    "c": [
+      {
+        "id": "violet",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "violet-talisman",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-03-11",
+      "2021-03-25"
+    ],
+    "c": [
+      {
+        "id": "eda",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "twilight-calamity",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-03-18",
+      "2021-03-25"
+    ],
+    "c": [
+      {
+        "id": "charles",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "justice-for-all",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-03-25",
+      "2021-04-15"
+    ],
+    "c": [
+      {
+        "id": "desert-jewel-basar",
+        "new": false
+      },
+      {
+        "id": "great-chief-khawana",
+        "new": true
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-03-25",
+      "2021-04-01"
+    ],
+    "c": [
+      {
+        "id": "vivian",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dingus-orb",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-03-25",
+      "2021-04-01"
+    ],
+    "c": [
+      {
+        "id": "tamarinne",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "idols-cheer",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-03-31",
+      "2021-04-15"
+    ],
+    "c": [
+      {
+        "id": "baiken",
+        "new": false
+      },
+      {
+        "id": "dizzy",
+        "new": false
+      },
+      {
+        "id": "elphelt",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "torn-sleeve",
+        "new": false
+      },
+      {
+        "id": "necro-undine",
+        "new": false
+      },
+      {
+        "id": "ms-confille",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-04-08",
+      "2021-04-22"
+    ],
+    "c": [
+      {
+        "id": "bomb-model-kanna",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "airtosurface-missile-misha",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-04-15",
+      "2021-05-06"
+    ],
+    "c": [
+      {
+        "id": "solitaria-of-the-snow",
+        "new": true
+      },
+      {
+        "id": "troublemaker-crozet",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-04-15",
+      "2021-04-22"
+    ],
+    "c": [
+      {
+        "id": "elena",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "stella-harpa",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-04-22",
+      "2021-04-29"
+    ],
+    "c": [
+      {
+        "id": "roana",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "touch-of-rekos",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-04-22",
+      "2021-04-29"
+    ],
+    "c": [
+      {
+        "id": "yufine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "merciless-glutton",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-04-29",
+      "2021-05-06"
+    ],
+    "c": [
+      {
+        "id": "lilias",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bastion-of-perlutia",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-04-29",
+      "2021-05-06"
+    ],
+    "c": [
+      {
+        "id": "vildred",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-summer-twilight",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-05-06",
+      "2021-05-27"
+    ],
+    "c": [
+      {
+        "id": "little-queen-charlotte",
+        "new": false
+      },
+      {
+        "id": "wanderer-silk",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "wind-rider",
+        "new": false
+      },
+      {
+        "id": "song-of-stars",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-05-06",
+      "2021-05-20"
+    ],
+    "c": [
+      {
+        "id": "senya",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "spear-of-a-new-dawn",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-05-06",
+      "2021-05-13"
+    ],
+    "c": [
+      {
+        "id": "ervalen",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "doubleedged-decrescent",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-05-13",
+      "2021-05-20"
+    ],
+    "c": [
+      {
+        "id": "kawerik",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "black-hand-of-the-goddess",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-05-20",
+      "2021-05-27"
+    ],
+    "c": [
+      {
+        "id": "choux",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "snow-crystal",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-05-20",
+      "2021-05-27"
+    ],
+    "c": [
+      {
+        "id": "sigret",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "cradle-of-life",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-05-27",
+      "2021-06-17"
+    ],
+    "c": [
+      {
+        "id": "mediator-kawerik",
+        "new": true
+      },
+      {
+        "id": "shooting-star-achates",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-05-27",
+      "2021-06-03"
+    ],
+    "c": [
+      {
+        "id": "celine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "secret-art–storm-sword",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-05-27",
+      "2021-06-03"
+    ],
+    "c": [
+      {
+        "id": "flan",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "unseen-observer",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-06-03",
+      "2021-06-10"
+    ],
+    "c": [
+      {
+        "id": "mort",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "ancient-dragons-legacy",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-06-03",
+      "2021-06-17"
+    ],
+    "c": [
+      {
+        "id": "ilynav",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "wings-of-light-and-shadow",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-06-10",
+      "2021-06-17"
+    ],
+    "c": [
+      {
+        "id": "kayron",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "shepherd-of-the-hollow",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-06-17",
+      "2021-07-08"
+    ],
+    "c": [
+      {
+        "id": "ruele-of-light",
+        "new": false
+      },
+      {
+        "id": "inferno-khawazu",
+        "new": true
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-06-17",
+      "2021-06-24"
+    ],
+    "c": [
+      {
+        "id": "iseria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "song-of-stars",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-06-17",
+      "2021-06-24"
+    ],
+    "c": [
+      {
+        "id": "melissa",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bloody-rose",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-06-24",
+      "2021-07-01"
+    ],
+    "c": [
+      {
+        "id": "ravi",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sigurd-scythe",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-06-24",
+      "2021-07-01"
+    ],
+    "c": [
+      {
+        "id": "krau",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "holy-sacrifice",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-07-01",
+      "2021-07-15"
+    ],
+    "c": [
+      {
+        "id": "seaside-bellona",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "reingars-special-drink",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-07-01",
+      "2021-07-08"
+    ],
+    "c": [
+      {
+        "id": "sez",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "manica-of-control",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-07-08",
+      "2021-07-29"
+    ],
+    "c": [
+      {
+        "id": "straze",
+        "new": true
+      },
+      {
+        "id": "benevolent-romann",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-07-08",
+      "2021-07-15"
+    ],
+    "c": [
+      {
+        "id": "lidica",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-judgment",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-07-15",
+      "2021-07-22"
+    ],
+    "c": [
+      {
+        "id": "roana",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "touch-of-rekos",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-07-15",
+      "2021-07-22"
+    ],
+    "c": [
+      {
+        "id": "charlotte",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "elbris-ritual-sword",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-07-22",
+      "2021-08-05"
+    ],
+    "c": [
+      {
+        "id": "holiday-yufine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "champions-trophy",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-07-22",
+      "2021-07-29"
+    ],
+    "c": [
+      {
+        "id": "mui",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "circus-fantasia",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-07-29",
+      "2021-08-05"
+    ],
+    "c": [
+      {
+        "id": "basar",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "abyssal-crown",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-07-29",
+      "2021-08-19"
+    ],
+    "c": [
+      {
+        "id": "specter-tenebria",
+        "new": false
+      },
+      {
+        "id": "crimson-armin",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-08-05",
+      "2021-08-19"
+    ],
+    "c": [
+      {
+        "id": "rem",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "azure-comet",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-08-05",
+      "2021-08-19"
+    ],
+    "c": [
+      {
+        "id": "emilia",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "guardian-ice-crystal",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-08-05",
+      "2021-08-12"
+    ],
+    "c": [
+      {
+        "id": "luluca",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "spirits-breath",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-08-12",
+      "2021-08-19"
+    ],
+    "c": [
+      {
+        "id": "lilibet",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "creation-destruction",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-08-19",
+      "2021-09-09"
+    ],
+    "c": [
+      {
+        "id": "closer-charles",
+        "new": true
+      },
+      {
+        "id": "tempest-surin",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-08-19",
+      "2021-08-26"
+    ],
+    "c": [
+      {
+        "id": "cermia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "border-coin",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-08-19",
+      "2021-08-26"
+    ],
+    "c": [
+      {
+        "id": "baal-sezan",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "last-teatime",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-08-26",
+      "2021-09-02"
+    ],
+    "c": [
+      {
+        "id": "bellona",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "iron-fan",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-08-26",
+      "2021-09-09"
+    ],
+    "c": [
+      {
+        "id": "summertime-iseria",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "star-of-the-deep-sea",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-09-02",
+      "2021-09-09"
+    ],
+    "c": [
+      {
+        "id": "alencia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "alencinoxs-wrath",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-09-09",
+      "2021-09-30"
+    ],
+    "c": [
+      {
+        "id": "specimen-sez",
+        "new": false
+      },
+      {
+        "id": "angel-of-light-angelica",
+        "new": true
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-09-09",
+      "2021-09-16"
+    ],
+    "c": [
+      {
+        "id": "lilias",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bastion-of-perlutia",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-09-09",
+      "2021-09-16"
+    ],
+    "c": [
+      {
+        "id": "vivian",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dignus-orb",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-09-16",
+      "2021-09-23"
+    ],
+    "c": [
+      {
+        "id": "ken",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "samsara-prayer-beads",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-09-16",
+      "2021-09-23"
+    ],
+    "c": [
+      {
+        "id": "tamarinne",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "idols-cheer",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-09-23",
+      "2021-09-30"
+    ],
+    "c": [
+      {
+        "id": "tenebria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crimson-moon-of-nightmares",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-09-23",
+      "2021-10-07"
+    ],
+    "c": [
+      {
+        "id": "luna",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "draco-plate",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-09-30",
+      "2021-10-14"
+    ],
+    "c": [
+      {
+        "id": "landy",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "wall-of-order",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-09-30",
+      "2021-10-21"
+    ],
+    "c": [
+      {
+        "id": "belian",
+        "new": true
+      },
+      {
+        "id": "auxiliary-lots",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-10-07",
+      "2021-10-14"
+    ],
+    "c": [
+      {
+        "id": "destina",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "shimadra-staff",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-10-14",
+      "2021-10-21"
+    ],
+    "c": [
+      {
+        "id": "kise",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "alabastron",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-10-14",
+      "2021-10-28"
+    ],
+    "c": [
+      {
+        "id": "ran",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-winter-shadow",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-10-21",
+      "2021-10-28"
+    ],
+    "c": [
+      {
+        "id": "politis",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "knowledge-seed",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-10-21",
+      "2021-11-11"
+    ],
+    "c": [
+      {
+        "id": "apocalypse-ravi",
+        "new": false
+      },
+      {
+        "id": "shadow-rose",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-10-28",
+      "2021-11-04"
+    ],
+    "c": [
+      {
+        "id": "charlotte",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "elbris-ritual-sword",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-10-28",
+      "2021-11-11"
+    ],
+    "c": [
+      {
+        "id": "rimuru",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "antimagic-mask",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-11-11",
+      "2021-12-02"
+    ],
+    "c": [
+      {
+        "id": "spirit-eye-celine",
+        "new": true
+      },
+      {
+        "id": "blood-blade-karin",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-11-04",
+      "2021-11-18"
+    ],
+    "c": [
+      {
+        "id": "milim",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "upgraded-dragon-knuckles",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-11-11",
+      "2021-11-18"
+    ],
+    "c": [
+      {
+        "id": "vildred",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-summer-twilight",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-11-18",
+      "2021-11-25"
+    ],
+    "c": [
+      {
+        "id": "tywin",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crown-of-glory",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-11-18",
+      "2021-11-25"
+    ],
+    "c": [
+      {
+        "id": "roana",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "touch-of-rekos",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-12-02",
+      "2021-12-23"
+    ],
+    "c": [
+      {
+        "id": "judge-kise",
+        "new": false
+      },
+      {
+        "id": "general-purrgis",
+        "new": false
+      }
+    ],
+    "a": []
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-11-25",
+      "2021-12-02"
+    ],
+    "c": [
+      {
+        "id": "flan",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "unseen-observer",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-11-25",
+      "2021-12-09"
+    ],
+    "c": [
+      {
+        "id": "zahhak",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "pure-white-trust",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-12-02",
+      "2021-12-09"
+    ],
+    "c": [
+      {
+        "id": "sigret",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "cradle-of-life",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2021-12-09",
+      "2021-12-23"
+    ],
+    "c": [
+      {
+        "id": "fairytale-tenebria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "fairy-tale-for-a-nightmare",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-12-09",
+      "2021-12-16"
+    ],
+    "c": [
+      {
+        "id": "ray",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "doctors-bag",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-12-16",
+      "2021-12-23"
+    ],
+    "c": [
+      {
+        "id": "elena",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "stella-harpa",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2021-12-23",
+      "2022-01-13"
+    ],
+    "c": [
+      {
+        "id": "conqueror-lilias",
+        "new": true
+      },
+      {
+        "id": "sinful-angelica",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-12-23",
+      "2021-12-30"
+    ],
+    "c": [
+      {
+        "id": "ilynav",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "wings-of-light-and-shadow",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-12-23",
+      "2021-12-30"
+    ],
+    "c": [
+      {
+        "id": "bomb-model-kanna",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "airtosurface-missile-misha",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-12-30",
+      "2022-01-06"
+    ],
+    "c": [
+      {
+        "id": "violet",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "violet-talisman",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2021-12-30",
+      "2022-01-13"
+    ],
+    "c": [
+      {
+        "id": "command-model-laika",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "glowings-21",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-01-06",
+      "2022-01-13"
+    ],
+    "c": [
+      {
+        "id": "alencia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "alencinoxs-wrath",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-01-13",
+      "2022-01-20"
+    ],
+    "c": [
+      {
+        "id": "cermia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "border-coin",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-01-13",
+      "2022-01-20"
+    ],
+    "c": [
+      {
+        "id": "cecilia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "rise-of-a-monarch",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2022-01-20",
+      "2022-02-03"
+    ],
+    "c": [
+      {
+        "id": "cerise",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "guiding-light",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2022-01-13",
+      "2022-02-03"
+    ],
+    "c": [
+      {
+        "id": "remnant-violet",
+        "new": false
+      },
+      {
+        "id": "challenger-dominiel",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-01-20",
+      "2022-01-27"
+    ],
+    "c": [
+      {
+        "id": "charles",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "justice-for-all",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-01-27",
+      "2022-02-10"
+    ],
+    "c": [
+      {
+        "id": "peira",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "goblet-of-oath",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2022-02-03",
+      "2022-02-24"
+    ],
+    "c": [
+      {
+        "id": "lionheart-cermia",
+        "new": true
+      },
+      {
+        "id": "watcher-schuri",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-02-03",
+      "2022-02-10"
+    ],
+    "c": [
+      {
+        "id": "pavel",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dux-noctis",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-02-10",
+      "2022-02-17"
+    ],
+    "c": [
+      {
+        "id": "celine",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "secret-artstorm-sword",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-02-10",
+      "2022-02-17"
+    ],
+    "c": [
+      {
+        "id": "eda",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "twilight-calamity",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-02-17",
+      "2022-02-24"
+    ],
+    "c": [
+      {
+        "id": "vivian",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "dignus-orb",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-02-17",
+      "2022-02-24"
+    ],
+    "c": [
+      {
+        "id": "iseria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "song-of-stars",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-02-24",
+      "2022-03-03"
+    ],
+    "c": [
+      {
+        "id": "kawerik",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "black-hand-of-the-goddess",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-02-24",
+      "2022-03-10"
+    ],
+    "c": [
+      {
+        "id": "hwayoung",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "indestructible-gaiters",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2022-02-24",
+      "2022-03-17"
+    ],
+    "c": [
+      {
+        "id": "arbiter-vildred",
+        "new": false
+      },
+      {
+        "id": "bad-cat-armin",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-03-03",
+      "2022-03-10"
+    ],
+    "c": [
+      {
+        "id": "tywin",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crown-of-glory",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-03-10",
+      "2022-03-17"
+    ],
+    "c": [
+      {
+        "id": "ervalen",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "doubleedged-decrescent",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-03-10",
+      "2022-03-17"
+    ],
+    "c": [
+      {
+        "id": "krau",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "holy-sacrifice",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "mystic",
+    "dt": [
+      "2022-03-17",
+      "2022-04-07"
+    ],
+    "c": [
+      {
+        "id": "pirate-captain-flan",
+        "new": true
+      },
+      {
+        "id": "fighter-maya",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2022-03-17",
+      "2022-03-31"
+    ],
+    "c": [
+      {
+        "id": "dizzy",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "necro-undine",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2022-03-17",
+      "2022-03-31"
+    ],
+    "c": [
+      {
+        "id": "baiken",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "torn-sleeve",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2022-03-24",
+      "2022-04-07"
+    ],
     "c": [
       {
         "id": "elphelt",
@@ -4690,8 +5201,10 @@
   },
   {
     "type": "limited",
-    "start": "2022-03-24",
-    "end": "2022-04-07",
+    "dt": [
+      "2022-03-24",
+      "2022-04-07"
+    ],
     "c": [
       {
         "id": "jacko",
@@ -4707,8 +5220,10 @@
   },
   {
     "type": "mystic",
-    "start": "2022-04-07",
-    "end": "2022-04-28",
+    "dt": [
+      "2022-04-07",
+      "2022-04-28"
+    ],
     "c": [
       {
         "id": "mediator-kawerik",
@@ -4722,8 +5237,10 @@
   },
   {
     "type": "mystic",
-    "start": "2022-04-28",
-    "end": "2022-05-19",
+    "dt": [
+      "2022-04-28",
+      "2022-05-19"
+    ],
     "c": [
       {
         "id": "sage-baal-sezan",
@@ -4741,8 +5258,10 @@
   },
   {
     "type": "mystic",
-    "start": "2022-05-19",
-    "end": "2022-06-09",
+    "dt": [
+      "2022-05-19",
+      "2022-06-09"
+    ],
     "c": [
       {
         "id": "maid-chloe",
@@ -4760,8 +5279,10 @@
   },
   {
     "type": "mystic",
-    "start": "2022-06-09",
-    "end": "2022-06-30",
+    "dt": [
+      "2022-06-09",
+      "2022-06-30"
+    ],
     "c": [
       {
         "id": "dark-corvus",
@@ -4779,8 +5300,10 @@
   },
   {
     "type": "mystic",
-    "start": "2022-06-30",
-    "end": "2022-07-21",
+    "dt": [
+      "2022-06-30",
+      "2022-07-21"
+    ],
     "c": [
       {
         "id": "operator-sigret",
@@ -4798,8 +5321,10 @@
   },
   {
     "type": "mystic",
-    "start": "2022-07-21",
-    "end": "2022-08-11",
+    "dt": [
+      "2022-07-21",
+      "2022-08-11"
+    ],
     "c": [
       {
         "id": "sylvan-sage-vivian",
@@ -4809,8 +5334,10 @@
   },
   {
     "type": "covenant",
-    "start": "2022-04-07",
-    "end": "2022-04-14",
+    "dt": [
+      "2022-04-07",
+      "2022-04-14"
+    ],
     "c": [
       {
         "id": "ludwig",
@@ -4826,8 +5353,10 @@
   },
   {
     "type": "covenant",
-    "start": "2022-04-07",
-    "end": "2022-04-21",
+    "dt": [
+      "2022-04-07",
+      "2022-04-21"
+    ],
     "c": [
       {
         "id": "aria",
@@ -4842,23 +5371,27 @@
     ]
   },
   {
-    "id": "S20220428CSTIC",
     "type": "mystic",
-    "start": "2022-04-28",
-    "end": "2022-07-21",
+    "dt": [
+      "2022-04-28",
+      "2022-07-21"
+    ],
     "name": "Double Custom Mystic Banner"
   },
   {
-    "id": "S20220428CNANT",
     "type": "limited",
-    "start": "2022-04-21",
-    "end": "2022-05-19",
+    "dt": [
+      "2022-04-21",
+      "2022-05-19"
+    ],
     "name": "Custom Triple RGB Group Summon"
   },
   {
     "type": "covenant",
-    "start": "2022-04-14",
-    "end": "2022-04-21",
+    "dt": [
+      "2022-04-14",
+      "2022-04-21"
+    ],
     "c": [
       {
         "id": "senya",
@@ -4874,8 +5407,10 @@
   },
   {
     "type": "covenant",
-    "start": "2022-04-21",
-    "end": "2022-04-28",
+    "dt": [
+      "2022-04-21",
+      "2022-04-28"
+    ],
     "c": [
       {
         "id": "charlotte",
@@ -4891,8 +5426,10 @@
   },
   {
     "type": "covenant",
-    "start": "2022-04-21",
-    "end": "2022-04-28",
+    "dt": [
+      "2022-04-21",
+      "2022-04-28"
+    ],
     "c": [
       {
         "id": "yufine",
