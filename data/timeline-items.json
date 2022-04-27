@@ -5518,5 +5518,24 @@
         "new": false
       }
     ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-05-05",
+      "2022-05-19"
+    ],
+    "c": [
+      {
+        "id": "taeyou",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "spear-of-purification",
+        "new": true
+      }
+    ]
   }
 ]
