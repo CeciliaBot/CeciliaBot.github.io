@@ -17969,7 +17969,71 @@
         "rarity": 3,
         "role": "knight",
         "attribute": "light",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Hard Worker"
+            ],
+            "topics": [
+                "Complain",
+                "Belief"
+            ],
+            "values": {
+                "Criticism": 7,
+                "Reality Check": 1,
+                "Heroic Tale": 7,
+                "Comforting Cheer": 8,
+                "Cute Cheer": 6,
+                "Heroic Cheer": 2,
+                "Sad Memory": 3,
+                "Joyful Memory": 3,
+                "Happy Memories": 2,
+                "Unique Comment": 0,
+                "Self-Indulgent": 0,
+                "Occult": 3,
+                "Myth": 5,
+                "Bizarre Story": 0,
+                "Food Story": 6,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 3,
+                "Advice": 5,
+                "Complain": 0,
+                "Belief": 1,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    18,
+                    61
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            12,
+            3,
+            5
+        ],
+        "debuffs": [
+            18,
+            61
+        ],
+        "common": []
     },
     "hasol": {
         "_id": "hasol",
@@ -18402,5 +18466,14 @@
             22
         ],
         "common": []
+    },
+    "taeyou": {
+        "_id": "taeyou",
+        "id": "c1127",
+        "name": "Taeyou",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "ice",
+        "sex": 1
     }
 }

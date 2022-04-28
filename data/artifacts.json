@@ -651,6 +651,15 @@
         "role": "knight",
         "gacha": true
     },
+    "spear-of-purification": {
+        "_id": "spear-of-purification",
+        "id": "art0156",
+        "identifier": "",
+        "name": "Spear of Purification",
+        "rarity": 5,
+        "role": "warrior",
+        "gacha": true
+    },
     "spirits-breath": {
         "_id": "spirits-breath",
         "id": "art0049",
