@@ -18042,7 +18042,64 @@
         "rarity": 3,
         "role": "knight",
         "attribute": "dark",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Extrovert",
+                "Free"
+            ],
+            "topics": [
+                "Criticism",
+                "Joyful Memory"
+            ],
+            "values": {
+                "Criticism": 1,
+                "Reality Check": 0,
+                "Heroic Tale": 3,
+                "Comforting Cheer": 4,
+                "Cute Cheer": 5,
+                "Heroic Cheer": 4,
+                "Sad Memory": 1,
+                "Joyful Memory": 4,
+                "Happy Memories": 3,
+                "Unique Comment": 2,
+                "Self-Indulgent": 3,
+                "Occult": 2,
+                "Myth": 2,
+                "Bizarre Story": 4,
+                "Food Story": 2,
+                "Horror Story": 4,
+                "Gossip": 3,
+                "Dream": 6,
+                "Advice": 3,
+                "Complain": 1,
+                "Belief": 1,
+                "Interesting Story": 7
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            3
+        ],
+        "debuffs": [],
+        "common": []
     },
     "hwayoung": {
         "id": "c1128",

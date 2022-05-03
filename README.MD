@@ -3,10 +3,8 @@
 Gamedata has been moved inside the data folder
 
 # Missing Character Data
-- Hasol
-- Yoonryoung
-- Bad Cat Armin
 - Verdant Adin (Same as Adin)
+- Taeyou
 
 # Todo:
 
