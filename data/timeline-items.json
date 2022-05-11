@@ -5537,5 +5537,62 @@
         "new": true
       }
     ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-05-12",
+      "2022-05-19"
+    ],
+    "c": [
+      {
+        "id": "lilias",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "bastion-of-perlutia",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-05-19",
+      "2022-05-26"
+    ],
+    "c": [
+      {
+        "id": "politis",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "knowledge-seed",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-05-19",
+      "2022-05-26"
+    ],
+    "c": [
+      {
+        "id": "mort",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "ancient-dragons-legacy",
+        "new": false
+      }
+    ]
   }
 ]
