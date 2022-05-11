@@ -18531,6 +18531,63 @@
         "rarity": 5,
         "role": "warrior",
         "attribute": "ice",
-        "sex": 1
+        "sex": 1,
+        "camping": {
+            "personalities": [
+                "Traumatized",
+                "Cool-Headed"
+            ],
+            "topics": [
+                "Criticism",
+                "Reality Check"
+            ],
+            "values": {
+                "Criticism": 5,
+                "Reality Check": 2,
+                "Heroic Tale": 1,
+                "Comforting Cheer": 0,
+                "Cute Cheer": 1,
+                "Heroic Cheer": 0,
+                "Sad Memory": 3,
+                "Joyful Memory": 4,
+                "Happy Memories": 0,
+                "Unique Comment": 6,
+                "Self-Indulgent": 1,
+                "Occult": 3,
+                "Myth": 0,
+                "Bizarre Story": 0,
+                "Food Story": 0,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 2,
+                "Advice": 0,
+                "Complain": 0,
+                "Belief": 5,
+                "Interesting Story": 2
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            46
+        ],
+        "debuffs": [],
+        "common": []
     }
 }

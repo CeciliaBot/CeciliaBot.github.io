@@ -4,7 +4,6 @@ Gamedata has been moved inside the data folder
 
 # Missing Character Data
 - Verdant Adin (Same as Adin)
-- Taeyou
 
 # Todo:
 
