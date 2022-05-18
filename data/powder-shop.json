@@ -1,5 +1,19 @@
 [
   {
+    "nid": 8502426,
+    "dt": ["2022-05-19","2022-06-30"],
+    "a": [
+      { "id": "merciless-glutton" },
+      { "id": "crown-of-glory" },
+      { "id": "sword-of-summer-twilight" },
+      { "id": "stella-harpa" },
+      { "id": "els-fist" },
+      { "id": "hilag-lance" },
+      { "id": "kaladra" },
+      { "id": "infinity-basket" }
+    ]
+  },
+  {
     "nid": 8374619,
     "dt": ["2022-04-07","2022-05-19"],
     "a": [
