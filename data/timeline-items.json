@@ -5253,6 +5253,10 @@
       {
         "id": "briar-witch-iseria",
         "new": false
+      },
+      {
+        "id": "assassin-cidd",
+        "new": false
       }
     ]
   },
@@ -5273,6 +5277,10 @@
       },
       {
         "id": "blood-moon-haste",
+        "new": false
+      },
+      {
+        "id": "assassin-coli",
         "new": false
       }
     ]
