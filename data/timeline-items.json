@@ -5585,11 +5585,60 @@
     ]
   },
   {
+    "type": "covenant",
+    "dt": [
+      "2022-05-26",
+      "2022-06-02"
+    ],
+    "c": [
+      {
+        "id": "haste",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "rhianna-luciella",
+        "new": false
+      }
+    ]
+  },
+  {
     "type": "limited",
     "dt": [
       "2022-05-26",
+      "2022-06-09"
+    ],
+    "c": [
+      {
+        "id": "rem",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "azure-comet",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2022-06-02",
       "2022-06-16"
     ],
-    "name": "Collab rerun"
+    "c": [
+      {
+        "id": "emilia",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "guardian-ice-crystal",
+        "new": false
+      }
+    ]
   }
 ]
