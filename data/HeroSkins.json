@@ -238,8 +238,15 @@
     "diene": [
         {
             "id": "npc1216",
-            "_id": "diene_magical_girl_d",
+            "_id": "diene-magical-girl-d",
             "name": "Magical Girl D"
+        }
+    ],
+    "maid-chloe": [
+        {
+            "id": "c2049_s01",
+            "_id": "maid-chloe-energetic",
+            "name": "Energetic"
         }
     ]
 }

@@ -18589,5 +18589,14 @@
         ],
         "debuffs": [],
         "common": []
+    },
+    "yulha": {
+        "_id": "yulha",
+        "id": "c1131",
+        "name": "Yulha",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "wind",
+        "sex": 2
     }
 }

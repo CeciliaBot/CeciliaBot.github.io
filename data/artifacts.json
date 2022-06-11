@@ -660,6 +660,15 @@
         "role": "warrior",
         "gacha": true
     },
+    "sphere-of-sadism": {
+        "_id": "sphere-of-sadism",
+        "id": "art0160",
+        "identifier": "",
+        "name": "Sphere of Sadism",
+        "rarity": 5,
+        "role": "knight",
+        "gacha": true
+    },
     "spirits-breath": {
         "_id": "spirits-breath",
         "id": "art0049",
