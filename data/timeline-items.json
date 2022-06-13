@@ -5678,5 +5678,24 @@
         "new": false
       }
     ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-06-16",
+      "2022-06-30"
+    ],
+    "c": [
+      {
+        "id": "yulha",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "sphere-of-sadism",
+        "new": true
+      }
+    ]
   }
 ]
