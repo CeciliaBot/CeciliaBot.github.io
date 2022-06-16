@@ -18597,6 +18597,66 @@
         "rarity": 5,
         "role": "knight",
         "attribute": "wind",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Narcissist",
+                "Psychopath"
+            ],
+            "topics": [
+                "Dream",
+                "Heroic Tale"
+            ],
+            "values": {
+                "Criticism": 6,
+                "Reality Check": 5,
+                "Heroic Tale": 3,
+                "Comforting Cheer": 8,
+                "Cute Cheer": 5,
+                "Heroic Cheer": 3,
+                "Sad Memory": 4,
+                "Joyful Memory": 0,
+                "Happy Memories": 0,
+                "Unique Comment": 7,
+                "Self-Indulgent": 1,
+                "Occult": 3,
+                "Myth": 2,
+                "Bizarre Story": 5,
+                "Food Story": 0,
+                "Horror Story": 5,
+                "Gossip": 1,
+                "Dream": 4,
+                "Advice": 5,
+                "Complain": 0,
+                "Belief": 7,
+                "Interesting Story": 2
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    "stic_redirected_provoke"
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            5
+        ],
+        "debuffs": [
+            "stic_redirected_provoke"
+        ],
+        "common": []
     }
 }
