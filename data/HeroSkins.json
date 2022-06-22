@@ -248,5 +248,12 @@
             "_id": "maid-chloe-energetic",
             "name": "Energetic"
         }
+    ],
+    "cermia": [
+        {
+            "id": "c1079",
+            "_id": "beachside-merrymaker-cermia",
+            "name": "Beachside Merrymaker Cermia"
+        }
     ]
 }
