@@ -590,7 +590,7 @@
     ],
     "a": [
       {
-        "id": "dingus-orb",
+        "id": "dignus-orb",
         "new": true
       }
     ]
@@ -1222,7 +1222,7 @@
     ],
     "a": [
       {
-        "id": "",
+        "id": "time-matter",
         "new": false
       }
     ]
@@ -1241,7 +1241,7 @@
     ],
     "a": [
       {
-        "id": "dingus-orb",
+        "id": "dignus-orb",
         "new": false
       }
     ]
@@ -2069,7 +2069,7 @@
     ],
     "a": [
       {
-        "id": "dingus-orb",
+        "id": "dignus-orb",
         "new": false
       }
     ]
@@ -2409,7 +2409,7 @@
     ],
     "a": [
       {
-        "id": "rihanna-luciella",
+        "id": "rhianna-luciella",
         "new": false
       }
     ]
@@ -2861,7 +2861,7 @@
     ],
     "a": [
       {
-        "id": "dingus-orb",
+        "id": "dignus-orb",
         "new": false
       }
     ]
@@ -3028,7 +3028,7 @@
         "new": false
       },
       {
-        "id": "unfaiding-memories",
+        "id": "unfading-memories",
         "new": false
       }
     ]
@@ -3253,7 +3253,7 @@
     ],
     "a": [
       {
-        "id": "dingus-orb",
+        "id": "dignus-orb",
         "new": false
       }
     ]
@@ -3598,7 +3598,7 @@
     ],
     "a": [
       {
-        "id": "secret-art–storm-sword",
+        "id": "secret-art-storm-sword",
         "new": false
       }
     ]
@@ -4951,7 +4951,7 @@
     ],
     "a": [
       {
-        "id": "secret-artstorm-sword",
+        "id": "secret-art-storm-sword",
         "new": false
       }
     ]
@@ -5337,6 +5337,10 @@
       {
         "id": "sylvan-sage-vivian",
         "new": true
+      },
+      {
+        "id": "assassin-cartuja",
+        "new": false
       }
     ]
   },
@@ -5408,7 +5412,7 @@
     ],
     "a": [
       {
-        "id": "spear-of-a-new-down",
+        "id": "spear-of-a-new-dawn",
         "new": false
       }
     ]
@@ -5674,7 +5678,7 @@
     ],
     "a": [
       {
-        "id": "a-littles-queen-huge-crown",
+        "id": "a-little-queens-huge-crown",
         "new": false
       }
     ]
@@ -5752,6 +5756,63 @@
       {
         "id": "star-of-the-deep-sea",
         "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-07-07",
+      "2022-07-14"
+    ],
+    "c": [
+      {
+        "id": "tenebria",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "crimson-moon-of-nightmares",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-07-14",
+      "2022-07-21"
+    ],
+    "c": [
+      {
+        "id": "baal-sezan",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "last-teatime",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-07-14",
+      "2022-07-21"
+    ],
+    "c": [
+      {
+        "id": "vildred",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "sword-of-summer-twilight",
+        "new": true
       }
     ]
   }
