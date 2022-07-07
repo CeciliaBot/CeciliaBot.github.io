@@ -5324,6 +5324,10 @@
       {
         "id": "designer-lilibet",
         "new": false
+      },
+      {
+        "id": "champion-zerato",
+        "new": false
       }
     ]
   },
@@ -5774,7 +5778,7 @@
     "a": [
       {
         "id": "crimson-moon-of-nightmares",
-        "new": true
+        "new": false
       }
     ]
   },
@@ -5793,7 +5797,7 @@
     "a": [
       {
         "id": "last-teatime",
-        "new": true
+        "new": false
       }
     ]
   },
@@ -5812,7 +5816,7 @@
     "a": [
       {
         "id": "sword-of-summer-twilight",
-        "new": true
+        "new": false
       }
     ]
   }

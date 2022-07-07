@@ -18658,5 +18658,23 @@
             "stic_redirected_provoke"
         ],
         "common": []
+    },
+    "sylvan-sage-vivian": {
+        "_id": "sylvan-sage-vivian",
+        "id": "c2088",
+        "name": "Sylvan Sage Vivian",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "light",
+        "sex": 2
+    },
+    "summers-disciple-alexa": {
+        "_id": "summers-disciple-alexa",
+        "id": "c4012",
+        "name": "Summer's Disciple Alexa",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "ice",
+        "sex": 2
     }
 }
