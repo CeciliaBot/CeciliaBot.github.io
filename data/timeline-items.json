@@ -5819,5 +5819,57 @@
         "new": false
       }
     ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-07-21",
+      "2022-07-28"
+    ],
+    "c": [
+      {
+        "id": "aramintha",
+        "new": false
+      }
+    ],
+    "a": [
+      {
+        "id": "eticas-scepter",
+        "new": false
+      }
+    ]
+  },
+  {
+    "type": "covenant",
+    "dt": [
+      "2022-07-21",
+      "2022-08-04"
+    ],
+    "c": [
+      {
+        "id": "sharun",
+        "new": true
+      }
+    ],
+    "a": [
+      {
+        "id": "sacred-tree-branch",
+        "new": true
+      }
+    ]
+  },
+  {
+    "type": "limited",
+    "dt": [
+      "2022-07-28",
+      "2022-08-11"
+    ],
+    "c": [
+      {
+        "id": "summer-break-charlotte",
+        "new": true
+      }
+    ],
+    "a": []
   }
 ]
