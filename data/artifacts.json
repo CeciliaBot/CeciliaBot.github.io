@@ -561,6 +561,15 @@
         "role": "manauser",
         "gacha": true
     },
+    "sacred-tree-branch": {
+        "_id": "sacred-tree-branch",
+        "id": "art0164",
+        "identifier": "",
+        "name": "Sacred Tree Branch",
+        "rarity": 5,
+        "role": "manauser",
+        "gacha": true
+    },
     "samsara-prayer-beads": {
         "_id": "samsara-prayer-beads",
         "id": "art0104",
@@ -1552,6 +1561,15 @@
         "name": "Labyrinth Cube",
         "rarity": 3,
         "role": "",
+        "gacha": true
+    },
+    "mature-sunglasses": {
+        "_id": "mature-sunglasses",
+        "id": "art0161",
+        "identifier": "",
+        "name": "Mature Sunglasses",
+        "rarity": 5,
+        "role": "knight",
         "gacha": true
     },
     "mighty-yaksha": {

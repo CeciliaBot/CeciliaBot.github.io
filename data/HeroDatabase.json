@@ -18676,5 +18676,23 @@
         "role": "assassin",
         "attribute": "ice",
         "sex": 2
+    },
+    "sharun": {
+        "_id": "sharun",
+        "id": "c1132",
+        "name": "Sharun",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "wind",
+        "sex": 2
+    },
+    "summer-break-charlotte": {
+        "_id": "summer-break-charlotte",
+        "id": "c5009",
+        "name": "Summer Break Charlotte",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "ice",
+        "sex": 2
     }
 }
