@@ -18666,7 +18666,65 @@
         "rarity": 5,
         "role": "mage",
         "attribute": "light",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Debate Addict",
+                "Hard Worker"
+            ],
+            "topics": [
+                "Reality Check",
+                "Complain"
+            ],
+            "values": {
+                "Criticism": 7,
+                "Reality Check": 4,
+                "Heroic Tale": 2,
+                "Comforting Cheer": 5,
+                "Cute Cheer": 2,
+                "Heroic Cheer": 3,
+                "Sad Memory": 3,
+                "Joyful Memory": 3,
+                "Happy Memories": 0,
+                "Unique Comment": 0,
+                "Self-Indulgent": 1,
+                "Occult": 0,
+                "Myth": 3,
+                "Bizarre Story": 0,
+                "Food Story": 3,
+                "Horror Story": 0,
+                "Gossip": 3,
+                "Dream": 5,
+                "Advice": 5,
+                "Complain": 2,
+                "Belief": 1,
+                "Interesting Story": 2
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            3,
+            9
+        ],
+        "debuffs": [],
+        "common": []
     },
     "summers-disciple-alexa": {
         "_id": "summers-disciple-alexa",
@@ -18684,7 +18742,72 @@
         "rarity": 5,
         "role": "manauser",
         "attribute": "wind",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Academic",
+                "Loyal"
+            ],
+            "topics": [
+                "Belief",
+                "Dream"
+            ],
+            "values": {
+                "Criticism": 2,
+                "Reality Check": 3,
+                "Heroic Tale": 3,
+                "Comforting Cheer": 4,
+                "Cute Cheer": 2,
+                "Heroic Cheer": 6,
+                "Sad Memory": 3,
+                "Joyful Memory": 2,
+                "Happy Memories": 2,
+                "Unique Comment": 0,
+                "Self-Indulgent": 5,
+                "Occult": 3,
+                "Myth": 6,
+                "Bizarre Story": 0,
+                "Food Story": 2,
+                "Horror Story": 0,
+                "Gossip": 2,
+                "Dream": 1,
+                "Advice": 3,
+                "Complain": 1,
+                "Belief": 0,
+                "Interesting Story": 2
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    "stic_venom"
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            5,
+            4,
+            9,
+            11
+        ],
+        "debuffs": [
+            "stic_venom",
+            19
+        ],
+        "common": []
     },
     "summer-break-charlotte": {
         "_id": "summer-break-charlotte",
