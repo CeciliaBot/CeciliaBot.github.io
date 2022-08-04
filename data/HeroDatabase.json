@@ -18817,5 +18817,14 @@
         "role": "knight",
         "attribute": "ice",
         "sex": 2
+    },
+    "moon-buuny-dominiel": {
+        "_id": "moon-buuny-dominiel",
+        "id": "c6037",
+        "name": "Moon Bunny Dominiel",
+        "rarity": 4,
+        "role": "manauser",
+        "attribute": "ligt",
+        "sex": 2
     }
 }
