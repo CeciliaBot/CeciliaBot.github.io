@@ -1,1 +1,1 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["ja-artifacts-json"],{"44c6":function(n){n.exports=JSON.parse("{}")}}]);
+"use strict";(self["webpackChunkv3"]=self["webpackChunkv3"]||[]).push([[570],{2885:function(e){e.exports={}}}]);
