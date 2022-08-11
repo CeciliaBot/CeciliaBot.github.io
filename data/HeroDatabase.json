@@ -18816,7 +18816,68 @@
         "rarity": 5,
         "role": "knight",
         "attribute": "ice",
-        "sex": 2
+        "sex": 2,
+        "camping": {
+            "personalities": [
+                "Hot and Cold",
+                "Arrogant"
+            ],
+            "topics": [
+                "Complain",
+                "Joyful Memory"
+            ],
+            "values": {
+                "Criticism": 5,
+                "Reality Check": 0,
+                "Heroic Tale": 5,
+                "Comforting Cheer": 6,
+                "Cute Cheer": 7,
+                "Heroic Cheer": 0,
+                "Sad Memory": 3,
+                "Joyful Memory": 2,
+                "Happy Memories": 4,
+                "Unique Comment": 1,
+                "Self-Indulgent": 0,
+                "Occult": 3,
+                "Myth": 5,
+                "Bizarre Story": 0,
+                "Food Story": 3,
+                "Horror Story": 0,
+                "Gossip": 1,
+                "Dream": 2,
+                "Advice": 4,
+                "Complain": 0,
+                "Belief": 0,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    18
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            3
+        ],
+        "debuffs": [
+            20
+        ],
+        "common": []
     },
     "moon-bunny-dominiel": {
         "_id": "moon-bunny-dominiel",
