@@ -18885,7 +18885,43 @@
         "name": "Moon Bunny Dominiel",
         "rarity": 4,
         "role": "manauser",
-        "attribute": "ligt",
+        "attribute": "light",
+        "sex": 2
+    },
+    "commander-pavel": {
+        "_id": "commander-pavel",
+        "id": "c2080",
+        "name": "Commander Pavel",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "light",
+        "sex": 1
+    },
+    "edward-elric": {
+        "_id": "edward-elric",
+        "id": "c1134",
+        "name": "Edward Elric",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "fire",
+        "sex": 1
+    },
+    "roy-mustang": {
+        "_id": "roy-mustang",
+        "id": "c1135",
+        "name": "Roy Mustang",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "fire",
+        "sex": 1
+    },
+    "riza-hawkeye": {
+        "_id": "riza-hawkeye",
+        "id": "c1136",
+        "name": "Riza Hawkeye",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "ice",
         "sex": 2
     }
 }
