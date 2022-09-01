@@ -6442,30 +6442,35 @@ icon-bar span img {
       boot: function () {
         try {
           var urlParams = new URLSearchParams(window.location.search);
-          $.ajax({
+          $.when(
+            $.ajax({
               url: "./data/HeroDatabase.json",
               type: 'GET',
-              contentType: 'application/json',
-              success: (response) => {
-                let db = {};
-                for (var hero in response) {
-                    if (response[hero].camping && response[hero].camping.values)
-                        db[hero] = response[hero];
-                }
-                this.HeroDB = db;
-                if (!urlParams.get("camproster")) { // get roster from file
-                  this.getUserHeroesBoot();
-                } else {// get roster from url
-                  this.getUserHeroesURL(urlParams.get("camproster"));
-                  window.history.pushState("", "", window.location.pathname); // remove ?camproster= from the URL to avoid accidental refreshes replacing your current team
-                };
-                this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
-                this.inizializzazione = false;
-              },
-              error: (jqXHR, textStatus, errorThrown) => {
-                console.log("Can't download Hero Database!");
-              }
-          });
+              contentType: 'application/json'
+            }),
+            $.ajax({
+              url: "./data/CampingData.json",
+              type: 'GET',
+              contentType: 'application/json'
+            })
+          ).then((data, cData) => {
+            var db = {}
+            for (var hero in cData[0]) {
+              if (data[0][hero])
+                db[hero] = Object.assign({}, cData[0][hero], data[0][hero])
+            }
+            this.HeroDB = db;
+            if (!urlParams.get("camproster")) { // get roster from file
+              this.getUserHeroesBoot();
+            } else {// get roster from url
+              this.getUserHeroesURL(urlParams.get("camproster"));
+              window.history.pushState("", "", window.location.pathname); // remove ?camproster= from the URL to avoid accidental refreshes replacing your current team
+            };
+              this.filtroTuttiGliEroi({tipo:'refresh',casella:'',value:'',className: 'search_hero_filter', name: 'bodyLoad'},'AllHeroes');
+              this.inizializzazione = false;
+          }).catch( err => {
+            alert('Fetch error')
+          })
           this.impostaLingua();
           this.inizializzaione();
         } catch (err) {
