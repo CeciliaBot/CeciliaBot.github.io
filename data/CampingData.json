@@ -17061,5 +17061,129 @@
             20
         ],
         "common": []
+    },
+    "riza-hawkeye": {
+        "camping": {
+            "personalities": [
+                "Loyal",
+                "Cool-Headed"
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Gossip"
+            ],
+            "values": {
+                "Criticism": 2,
+                "Reality Check": 3,
+                "Heroic Tale": 3,
+                "Comforting Cheer": 3,
+                "Cute Cheer": 1,
+                "Heroic Cheer": 5,
+                "Sad Memory": 3,
+                "Joyful Memory": 3,
+                "Happy Memories": 2,
+                "Unique Comment": 3,
+                "Self-Indulgent": 0,
+                "Occult": 0,
+                "Myth": 1,
+                "Bizarre Story": 0,
+                "Food Story": 2,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 1,
+                "Advice": 2,
+                "Complain": 0,
+                "Belief": 0,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    26
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            12
+        ],
+        "debuffs": [
+            26
+        ],
+        "common": []
+    },
+    "commander-pavel": {
+        "camping": {
+            "personalities": [
+                "Realistic",
+                "Cool-Headed"
+            ],
+            "topics": [
+                "Belief",
+                "Dream"
+            ],
+            "values": {
+                "Criticism": 5,
+                "Reality Check": 5,
+                "Heroic Tale": 0,
+                "Comforting Cheer": 0,
+                "Cute Cheer": 1,
+                "Heroic Cheer": 2,
+                "Sad Memory": 0,
+                "Joyful Memory": 1,
+                "Happy Memories": 0,
+                "Unique Comment": 3,
+                "Self-Indulgent": 0,
+                "Occult": 0,
+                "Myth": 0,
+                "Bizarre Story": 0,
+                "Food Story": 0,
+                "Horror Story": 2,
+                "Gossip": 1,
+                "Dream": 0,
+                "Advice": 2,
+                "Complain": 0,
+                "Belief": 2,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    17
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1
+        ],
+        "debuffs": [
+            17
+        ],
+        "common": []
     }
 }
