@@ -17062,6 +17062,70 @@
         ],
         "common": []
     },
+    "edward-elric": {
+        "camping": {
+            "personalities": [
+                "Academic",
+                "Hard Worker"
+            ],
+            "topics": [
+                "Sad Memory",
+                "Complain"
+            ],
+            "values": {
+                "Criticism": 4,
+                "Reality Check": 3,
+                "Heroic Tale": 2,
+                "Comforting Cheer": 6,
+                "Cute Cheer": 3,
+                "Heroic Cheer": 3,
+                "Sad Memory": 3,
+                "Joyful Memory": 3,
+                "Happy Memories": 0,
+                "Unique Comment": 0,
+                "Self-Indulgent": 5,
+                "Occult": 3,
+                "Myth": 5,
+                "Bizarre Story": 0,
+                "Food Story": 3,
+                "Horror Story": 0,
+                "Gossip": 2,
+                "Dream": 3,
+                "Advice": 3,
+                "Complain": 1,
+                "Belief": 1,
+                "Interesting Story": 3
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            5
+        ],
+        "debuffs": [
+            17,
+            22,
+            25,
+            28,
+            61
+        ],
+        "common": []
+    },
     "riza-hawkeye": {
         "camping": {
             "personalities": [
