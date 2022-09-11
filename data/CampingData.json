@@ -17126,6 +17126,62 @@
         ],
         "common": []
     },
+    "roy-mustang": {
+        "camping": {
+            "personalities": [
+                "Heroism",
+                "Envious"
+            ],
+            "topics": [
+                "Reality Check",
+                "Belief"
+            ],
+            "values": {
+                "Criticism": 3,
+                "Reality Check": 0,
+                "Heroic Tale": 5,
+                "Comforting Cheer": 3,
+                "Cute Cheer": 3,
+                "Heroic Cheer": 6,
+                "Sad Memory": 3,
+                "Joyful Memory": 4,
+                "Happy Memories": 4,
+                "Unique Comment": 3,
+                "Self-Indulgent": 2,
+                "Occult": 2,
+                "Myth": 7,
+                "Bizarre Story": 0,
+                "Food Story": 4,
+                "Horror Story": 2,
+                "Gossip": 0,
+                "Dream": 5,
+                "Advice": 2,
+                "Complain": 0,
+                "Belief": 3,
+                "Interesting Story": 2
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
     "riza-hawkeye": {
         "camping": {
             "personalities": [
