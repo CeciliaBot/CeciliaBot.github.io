@@ -6105,5 +6105,103 @@
             "new": false
          }
       ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-09-15",
+         "2022-09-22"
+      ],
+      "c": [
+         {
+            "id": "lidica",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-judgment",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-09-15",
+         "2022-09-22"
+      ],
+      "c": [
+         {
+            "id": "ran",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-winter-shadow",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-09-22",
+         "2022-09-29"
+      ],
+      "c": [
+         {
+            "id": "violet",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "violet-talisman",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-09-22",
+         "2022-09-29"
+      ],
+      "c": [
+         {
+            "id": "mui",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "circus-fantasia",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "mystic",
+      "dt": [
+         "2022-09-22",
+         "2022-10-13"
+      ],
+      "c": [
+         {
+            "id": "apocalypse-ravi",
+            "new": false
+         },
+         {
+            "id": "faithless-lidica",
+            "new": false
+         },
+         {
+            "id": "solitaria-of-the-snow",
+            "new": false
+         }
+      ],
+      "a": []
    }
 ]
