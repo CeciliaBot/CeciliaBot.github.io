@@ -1,5 +1,19 @@
 [
   {
+    "nid": 8889484,
+    "dt": ["2022-09-22","2022-11-03"],
+    "a": [
+      { "id": "border-coin" },
+      { "id": "holy-sacrifice" },
+      { "id": "alabastron" },
+      { "id": "touch-of-rekos" },
+      { "id": "sepulcrum" },
+      { "id": "aurius" },
+      { "id": "barthezs-orbuculum" },
+      { "id": "andres-crossbow" }
+    ]
+  },
+  {
     "nid": 8748316,
     "dt": ["2022-08-11","2022-09-22"],
     "a": [
