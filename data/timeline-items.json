@@ -6203,5 +6203,118 @@
          }
       ],
       "a": []
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-09-29",
+         "2022-10-06"
+      ],
+      "c": [
+         {
+            "id": "iseria",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "song-of-stars",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-09-29",
+         "2022-10-06"
+      ],
+      "c": [
+         {
+            "id": "iseria",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "song-of-stars",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-09-29",
+         "2022-10-06"
+      ],
+      "c": [
+         {
+            "id": "sez",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "manica-of-control",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-06",
+         "2022-10-13"
+      ],
+      "c": [
+         {
+            "id": "lilibet",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "creation-destruction",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-06",
+         "2022-10-20"
+      ],
+      "c": [
+         {
+            "id": "lua",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "spatiotemporal-fan",
+            "new": true
+         }
+      ]
+   },
+   {
+      "type": "mystic",
+      "dt": [
+         "2022-10-13",
+         "2022-11-03"
+      ],
+      "c": [
+         {
+            "id": "astromancer-elena",
+            "new": true
+         },
+         {
+            "id": "wanderer-silk",
+            "new": false
+         }
+      ],
+      "a": []
    }
 ]
