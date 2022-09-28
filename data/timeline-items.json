@@ -6231,25 +6231,6 @@
       ],
       "c": [
          {
-            "id": "iseria",
-            "new": false
-         }
-      ],
-      "a": [
-         {
-            "id": "song-of-stars",
-            "new": false
-         }
-      ]
-   },
-   {
-      "type": "covenant",
-      "dt": [
-         "2022-09-29",
-         "2022-10-06"
-      ],
-      "c": [
-         {
             "id": "sez",
             "new": false
          }
