@@ -681,6 +681,15 @@
         "role": "ranger",
         "gacha": true
     },
+    "spatiotemporal-fan": {
+        "_id": "spatiotemporal-fan",
+        "id": "art0166",
+        "identifier": "",
+        "name": "Spatiotemporal Fan",
+        "rarity": 5,
+        "role": "ranger",
+        "gacha": true
+    },
     "spear-of-a-new-dawn": {
         "_id": "spear-of-a-new-dawn",
         "id": "art0130",

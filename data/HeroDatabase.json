@@ -2638,5 +2638,25 @@
         "attribute": "ice",
         "sex": 2,
         "zodiac": "ram"
+    },
+    "lua": {
+        "_id": "lua",
+        "id": "c1126",
+        "name": "Lua",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "astromancer-elena": {
+        "_id": "astromancer-elena",
+        "id": "c2091",
+        "name": "Astromancer Elena",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "scales"
     }
 }
