@@ -17062,6 +17062,71 @@
         ],
         "common": []
     },
+    "moon-bunny-dominiel": {
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Envious"
+            ],
+            "topics": [
+                "Food Story",
+                "Heroic Tale"
+            ],
+            "values": {
+                "Criticism": 8,
+                "Reality Check": 0,
+                "Heroic Tale": 7,
+                "Comforting Cheer": 3,
+                "Cute Cheer": 6,
+                "Heroic Cheer": 3,
+                "Sad Memory": 0,
+                "Joyful Memory": 1,
+                "Happy Memories": 3,
+                "Unique Comment": 1,
+                "Self-Indulgent": 2,
+                "Occult": 5,
+                "Myth": 9,
+                "Bizarre Story": 0,
+                "Food Story": 5,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 3,
+                "Advice": 3,
+                "Complain": 0,
+                "Belief": 3,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    21
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            12,
+            5,
+            46
+        ],
+        "debuffs": [
+            21
+        ],
+        "common": []
+    },
     "edward-elric": {
         "camping": {
             "personalities": [

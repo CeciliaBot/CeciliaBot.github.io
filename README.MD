@@ -5,4 +5,5 @@ E7 Tools Source code: https://github.com/CeciliaBot/E7Tools
 # Missing Character Data
 - Adin SCs (Same as Adin)
 - Summer's Disciple Alexa
-- Moon Bunny Dominiel
+- Astromancer Elena
+- Lua
