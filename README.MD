@@ -6,4 +6,3 @@ E7 Tools Source code: https://github.com/CeciliaBot/E7Tools
 - Adin SCs (Same as Adin)
 - Summer's Disciple Alexa
 - Astromancer Elena
-- Lua
