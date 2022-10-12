@@ -6297,5 +6297,62 @@
          }
       ],
       "a": []
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-13",
+         "2022-10-20"
+      ],
+      "c": [
+         {
+            "id": "zahhak",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "pure-white-trust",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-13",
+         "2022-10-20"
+      ],
+      "c": [
+         {
+            "id": "melissa",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "bloody-rose",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-20",
+         "2022-10-27"
+      ],
+      "c": [
+         {
+            "id": "celine",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "secret-art-storm-sword",
+            "new": false
+         }
+      ]
    }
 ]
