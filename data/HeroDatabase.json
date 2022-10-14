@@ -2658,5 +2658,15 @@
         "attribute": "light",
         "sex": 2,
         "zodiac": "scales"
+    },
+    "unbound-knight-arowell": {
+        "_id": "unbound-knight-arowell",
+        "id": "c4004",
+        "name": "Unbound Knight Arowell",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "scales"
     }
 }

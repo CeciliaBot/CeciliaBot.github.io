@@ -17433,5 +17433,125 @@
             21
         ],
         "common": []
+    },
+    "astromancer-elena": {
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Religious"
+            ],
+            "topics": [
+                "Self-Indulgent",
+                "Happy Memories"
+            ],
+            "values": {
+                "Criticism": 5,
+                "Reality Check": 0,
+                "Heroic Tale": 5,
+                "Comforting Cheer": 6,
+                "Cute Cheer": 4,
+                "Heroic Cheer": 2,
+                "Sad Memory": 4,
+                "Joyful Memory": 2,
+                "Happy Memories": 4,
+                "Unique Comment": 2,
+                "Self-Indulgent": 0,
+                "Occult": 3,
+                "Myth": 8,
+                "Bizarre Story": 0,
+                "Food Story": 4,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 2,
+                "Advice": 5,
+                "Complain": 2,
+                "Belief": 3,
+                "Interesting Story": 0
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [
+            61,
+            "stic_no_counter"
+        ],
+        "common": []
+    },
+    "unbound-knight-arowell": {
+        "camping": {
+            "personalities": [
+                "Hard Worker",
+                "Free"
+            ],
+            "topics": [
+                "Interesting Story",
+                "Happy Memories"
+            ],
+            "values": {
+                "Criticism": 3,
+                "Reality Check": 1,
+                "Heroic Tale": 2,
+                "Comforting Cheer": 6,
+                "Cute Cheer": 4,
+                "Heroic Cheer": 3,
+                "Sad Memory": 4,
+                "Joyful Memory": 4,
+                "Happy Memories": 1,
+                "Unique Comment": 2,
+                "Self-Indulgent": 1,
+                "Occult": 1,
+                "Myth": 1,
+                "Bizarre Story": 2,
+                "Food Story": 4,
+                "Horror Story": 1,
+                "Gossip": 1,
+                "Dream": 7,
+                "Advice": 3,
+                "Complain": 1,
+                "Belief": 1,
+                "Interesting Story": 6
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            5,
+            "stic_escort"
+        ],
+        "debuffs": [
+            20
+        ],
+        "common": []
     }
 }
