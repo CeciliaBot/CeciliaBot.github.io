@@ -2509,6 +2509,26 @@
         "sex": 2,
         "zodiac": "lion"
     },
+    "holy-flame-adin": {
+        "_id": "holy-flame-adin",
+        "id": "c4141",
+        "name": "Holy Flame Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "serene-purity-adin": {
+        "_id": "serene-purity-adin",
+        "id": "c4142",
+        "name": "Serene Purity Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "lion"
+    },
     "jacko": {
         "id": "c1130",
         "_id": "jacko",

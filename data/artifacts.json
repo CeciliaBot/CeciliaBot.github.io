@@ -1209,6 +1209,16 @@
         "limited": true,
         "gacha": false
     },
+    "prelude-to-a-new-era": {
+        "_id": "prelude-to-a-new-era",
+        "id": "art0165",
+        "identifier": "",
+        "name": "Prelude to a New Era",
+        "rarity": 4,
+        "role": "",
+        "limited": true,
+        "gacha": false
+    },
     "radiant-forever": {
         "_id": "radiant-forever",
         "id": "art0045",
