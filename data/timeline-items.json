@@ -6394,25 +6394,6 @@
       ]
    },
    {
-      "type": "covenant",
-      "dt": [
-         "2022-10-27",
-         "2022-11-03"
-      ],
-      "c": [
-         {
-            "id": "haste",
-            "new": false
-         }
-      ],
-      "a": [
-         {
-            "id": "secret-art-storm-sword",
-            "new": false
-         }
-      ]
-   },
-   {
       "type": "limited",
       "dt": [
          "2022-10-27",
