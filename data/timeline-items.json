@@ -6438,5 +6438,50 @@
             "new": true
          }
       ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-11-03",
+         "2022-11-10"
+      ],
+      "c": [
+         {
+            "id": "hwayoung",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "indestructible-gaiters",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "mystic",
+      "dt": [
+         "2022-11-03",
+         "2022-11-24"
+      ],
+      "c": [
+         {
+            "id": "straze",
+            "new": false
+         },
+         {
+            "id": "ruele-of-light",
+            "new": false
+         },
+         {
+            "id": "specter-tenebria",
+            "new": false
+         },
+         {
+            "id": "closer-charles",
+            "new": false
+         }
+      ],
+      "a": []
    }
 ]
