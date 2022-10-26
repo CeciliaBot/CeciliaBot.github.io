@@ -6354,5 +6354,89 @@
             "new": false
          }
       ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-27",
+         "2022-11-03"
+      ],
+      "c": [
+         {
+            "id": "haste",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "rhianna-luciella",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-27",
+         "2022-11-03"
+      ],
+      "c": [
+         {
+            "id": "cecilia",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "rise-of-a-monarch",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-10-27",
+         "2022-11-03"
+      ],
+      "c": [
+         {
+            "id": "haste",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "secret-art-storm-sword",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "limited",
+      "dt": [
+         "2022-10-27",
+         "2022-11-24"
+      ],
+      "name": "Custom Triple RGB Group Summon"
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-11-03",
+         "2022-11-17"
+      ],
+      "c": [
+         {
+            "id": "arunka",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-autumn-eclipse",
+            "new": true
+         }
+      ]
    }
 ]

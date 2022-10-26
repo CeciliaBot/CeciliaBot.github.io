@@ -745,6 +745,15 @@
         "role": "manauser",
         "gacha": true
     },
+    "sword-of-autumn-eclipse": {
+        "_id": "sword-of-autumn-eclipse",
+        "id": "art0167",
+        "identifier": "",
+        "name": "Sword of Autumn Eclipse",
+        "rarity": 5,
+        "role": "warrior",
+        "gacha": true
+    },
     "sword-of-ezera": {
         "_id": "sword-of-ezera",
         "id": "art0046",

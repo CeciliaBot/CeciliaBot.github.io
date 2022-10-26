@@ -2688,5 +2688,15 @@
         "attribute": "light",
         "sex": 2,
         "zodiac": "scales"
+    },
+    "arunka": {
+        "_id": "arunka",
+        "id": "c1124",
+        "name": "Arunka",
+        "rarity": 3,
+        "role": "warrior",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "scorpion"
     }
 }
