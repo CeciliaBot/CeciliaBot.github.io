@@ -6464,5 +6464,81 @@
          }
       ],
       "a": []
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-11-10",
+         "2022-11-17"
+      ],
+      "c": [
+         {
+            "id": "peira",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "goblet-of-oath",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-11-10",
+         "2022-11-17"
+      ],
+      "c": [
+         {
+            "id": "choux",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "snow-crystal",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-11-17",
+         "2022-11-24"
+      ],
+      "c": [
+         {
+            "id": "basar",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "abyssal-crown",
+            "new": false
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2022-11-17",
+         "2022-11-24"
+      ],
+      "c": [
+         {
+            "id": "yulah",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "sphere-of-sadism",
+            "new": false
+         }
+      ]
    }
 ]
