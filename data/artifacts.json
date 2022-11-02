@@ -608,6 +608,15 @@
         "role": "mage",
         "gacha": true
     },
+    "seal-of-capture": {
+        "_id": "seal-of-capture",
+        "id": "art0168",
+        "identifier": "",
+        "name": "Seal of Capture",
+        "rarity": 5,
+        "role": "ranger",
+        "gacha": true
+    },
     "secret-art-storm-sword": {
         "_id": "secret-art-storm-sword",
         "id": "art0096",
