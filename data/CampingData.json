@@ -17553,5 +17553,67 @@
             20
         ],
         "common": []
+    },
+    "arunka": {
+        "camping": {
+            "personalities": [
+                "Heroism",
+                "Extrovert"
+            ],
+            "topics": [
+                "Reality Check",
+                "Advice"
+            ],
+            "values": {
+                "Criticism": 0,
+                "Reality Check": 0,
+                "Heroic Tale": 6,
+                "Comforting Cheer": 6,
+                "Cute Cheer": 4,
+                "Heroic Cheer": 6,
+                "Sad Memory": 3,
+                "Joyful Memory": 6,
+                "Happy Memories": 5,
+                "Unique Comment": 2,
+                "Self-Indulgent": 2,
+                "Occult": 1,
+                "Myth": 4,
+                "Bizarre Story": 2,
+                "Food Story": 3,
+                "Horror Story": 5,
+                "Gossip": 2,
+                "Dream": 4,
+                "Advice": 4,
+                "Complain": 0,
+                "Belief": 1,
+                "Interesting Story": 3
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    32
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1
+        ],
+        "debuffs": [
+            32
+        ],
+        "common": []
     }
 }
