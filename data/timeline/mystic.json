@@ -999,8 +999,7 @@
             "new": true
          },
          {
-            "id": "assassin-cartuja",
-            "new": false
+            "id": "assassin-cartuja"
          }
       ]
    },
@@ -1022,16 +1021,13 @@
       ],
       "c": [
          {
-            "id": "fallen-cecilia",
-            "new": false
+            "id": "fallen-cecilia"
          },
          {
-            "id": "silver-blade-aramintha",
-            "new": false
+            "id": "silver-blade-aramintha"
          },
          {
-            "id": "desert-jewel-basar",
-            "new": false
+            "id": "desert-jewel-basar"
          },
          {
             "id": "moon-bunny-dominiel",
@@ -1052,8 +1048,7 @@
             "new": true
          },
          {
-            "id": "crescent-moon-rin",
-            "new": false
+            "id": "crescent-moon-rin"
          }
       ],
       "a": []
@@ -1066,20 +1061,16 @@
       ],
       "c": [
          {
-            "id": "apocalypse-ravi",
-            "new": false
+            "id": "apocalypse-ravi"
          },
          {
-            "id": "faithless-lidica",
-            "new": false
+            "id": "faithless-lidica"
          },
          {
-            "id": "solitaria-of-the-snow",
-            "new": false
+            "id": "solitaria-of-the-snow"
          },
          {
-            "id": "great-chief-khawana",
-            "new": false
+            "id": "great-chief-khawana"
          }
       ],
       "a": []
@@ -1097,8 +1088,7 @@
             "new": true
          },
          {
-            "id": "wanderer-silk",
-            "new": false
+            "id": "wanderer-silk"
          }
       ],
       "a": [],
@@ -1113,20 +1103,35 @@
       ],
       "c": [
          {
-            "id": "straze",
-            "new": false
+            "id": "straze"
          },
          {
-            "id": "ruele-of-light",
-            "new": false
+            "id": "ruele-of-light"
          },
          {
-            "id": "specter-tenebria",
-            "new": false
+            "id": "specter-tenebria"
          },
          {
-            "id": "closer-charles",
-            "new": false
+            "id": "closer-charles"
+         },
+         {
+            "id": "roaming-warrior-leo"
+         }
+      ],
+      "a": []
+   },
+   {
+      "type": "mystic",
+      "dt": [
+         "2022-11-24T09:00:00Z",
+         "2022-12-15T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "zio"
+         },
+         {
+            "id": "shooting-star-achates"
          }
       ],
       "a": []

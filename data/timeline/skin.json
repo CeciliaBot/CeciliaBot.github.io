@@ -878,5 +878,21 @@
                 "new": true
             }
         ]
+    },
+    {
+        "nid": 9010034,
+        "type": "pass",
+        "dt": [
+            "2022-11-10T09:00:00Z",
+            "2022-12-08T02:59:59Z"
+        ],
+        "name": "Epic★Pass 「A Victor's Prestige Season」",
+        "c": [
+            {
+                "id": "choux",
+                "new": true
+            }
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/9459cbd173c749ef8bdaabcb99181f3e/9a51a8bcb18843f696cd70236293ea0e.jpg"
     }
 ]

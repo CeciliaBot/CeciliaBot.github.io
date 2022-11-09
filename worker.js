@@ -1,7 +1,7 @@
 importScripts('https://cdn.jsdelivr.net/npm/js-combinatorics@0.5.5/combinatorics.min.js');
 
-var AoEHeroes = ["astromancer-elena","roy-mustang","edward-elric","commander-pavel","summer-break-charlotte","sylvan-sage-vivian","sharun","taeyou","aria","bad-cat-armin","pirate-captain-flan","command-model-laika","adin","ran","belian","summertime-iseria","rem","melany","closer-charles","straze","eaton","senya","lucy","batisse","solitaria-of-the-snow","bomb-model-kanna","designer-lilibet","eda","politis","archdemons-shadow","fairytale-tenebria","mort","operator-sigret","ainos","ian","landy","last-rider-krau","choux","doll-maker-pearlhorizon","briar-witch-iseria","holiday-yufine","mui","adventurer-ras","kawerik","cerise","dark-tyrant-tenebria","specter-tenebria","tempest-surin","pavel","ambitious-tywin","alencia","benevolent-romann","elena","cecilia","vildred","charlotte","baal-sezan","yufine","ravi","kayron","charles","yuna","sez","haste","tywin","lidica","aramintha","tenebria","basar","tamarinne","ludwig","bellona","luluca","zeno","vivian","lilias","dizzy","faithless-lidica","fallen-cecilia","judge-kise","kise","arbiter-vildred","sage-baal-sezan","specimen-sez","martial-artist-ken","silver-blade-aramintha","desert-jewel-basar","seaside-bellona","silk","mercedes","armin","zerato","corvus","cartuja","schuri","dingo","clarissa","leo","purrgis","crozet","dominiel","romann","khawana","shadow-rose","celestial-mercedes","champion-zerato","blood-blade-karin","watcher-schuri","blaze-dingo","kitty-clarissa","roaming-warrior-leo","auxiliary-lots","general-purrgis","ras","sven","church-of-ilryos-axe","rikoris","adlay","carrot","jena","jecht","elson","hurado","kiris","celeste","pearlhorizon","gloomyrain","kikirat-v2","chaos-sect-axe","captain-rikoris","researcher-carrot","lena"];
-var dispelHeroes = ["unbound-knight-arowell","astromancer-elena","lua","edward-elric","riza-hawkeye","sharun","taeyou","aria","conqueror-lilias","shuna","belian","summertime-iseria","straze","adventurer-ras","alencia","arowell","basar","bask","bellona","benevolent-romann","blood-moon-haste","bomb-model-kanna","briar-witch-iseria","butcher-corps-inquisitor","captain-rikoris","carmainerose","cecilia","chaos-inquisitor","charles","chloe","crescent-moon-rin","eda","elphelt","faithless-lidica","falconer-kluri","flan","hurado","ian","iseria","kawerik","kikirat-v2","kitty-clarissa","lidica","ludwig","melissa","mui","operator-sigret","politis","ras","rikoris","rin","romann","sage-baal-sezan","shadow-rose","sol","solitaria-of-the-snow","tamarinne","taranor-royal-guard","tywin","watcher-schuri","yufine"];
+var AoEHeroes = ["savior-adin","astromancer-elena","roy-mustang","edward-elric","commander-pavel","summer-break-charlotte","sylvan-sage-vivian","sharun","taeyou","aria","bad-cat-armin","pirate-captain-flan","command-model-laika","adin","ran","belian","summertime-iseria","rem","melany","closer-charles","straze","eaton","senya","lucy","batisse","solitaria-of-the-snow","bomb-model-kanna","designer-lilibet","eda","politis","archdemons-shadow","fairytale-tenebria","mort","operator-sigret","ainos","ian","landy","last-rider-krau","choux","doll-maker-pearlhorizon","briar-witch-iseria","holiday-yufine","mui","adventurer-ras","kawerik","cerise","dark-tyrant-tenebria","specter-tenebria","tempest-surin","pavel","ambitious-tywin","alencia","benevolent-romann","elena","cecilia","vildred","charlotte","baal-sezan","yufine","ravi","kayron","charles","yuna","sez","haste","tywin","lidica","aramintha","tenebria","basar","tamarinne","ludwig","bellona","luluca","zeno","vivian","lilias","dizzy","faithless-lidica","fallen-cecilia","judge-kise","kise","arbiter-vildred","sage-baal-sezan","specimen-sez","martial-artist-ken","silver-blade-aramintha","desert-jewel-basar","seaside-bellona","silk","mercedes","armin","zerato","corvus","cartuja","schuri","dingo","clarissa","leo","purrgis","crozet","dominiel","romann","khawana","shadow-rose","celestial-mercedes","champion-zerato","blood-blade-karin","watcher-schuri","blaze-dingo","kitty-clarissa","roaming-warrior-leo","auxiliary-lots","general-purrgis","ras","sven","church-of-ilryos-axe","rikoris","adlay","carrot","jena","jecht","elson","hurado","kiris","celeste","pearlhorizon","gloomyrain","kikirat-v2","chaos-sect-axe","captain-rikoris","researcher-carrot","lena"];
+var dispelHeroes = ["savior-adin","zio","unbound-knight-arowell","astromancer-elena","lua","edward-elric","riza-hawkeye","sharun","taeyou","aria","conqueror-lilias","shuna","belian","summertime-iseria","straze","adventurer-ras","alencia","arowell","basar","bask","bellona","benevolent-romann","blood-moon-haste","bomb-model-kanna","briar-witch-iseria","butcher-corps-inquisitor","captain-rikoris","carmainerose","cecilia","chaos-inquisitor","charles","chloe","crescent-moon-rin","eda","elphelt","faithless-lidica","falconer-kluri","flan","hurado","ian","iseria","kawerik","kikirat-v2","kitty-clarissa","lidica","ludwig","melissa","mui","operator-sigret","politis","ras","rikoris","rin","romann","sage-baal-sezan","shadow-rose","sol","solitaria-of-the-snow","tamarinne","taranor-royal-guard","tywin","watcher-schuri","yufine"];
 var cleanserHeroes = ["achates","aither","ambitious-tywin","angel-of-light-angelica","angelic-montmorancy","celine","desert-jewel-basar","designer-lilibet","destina","diene","dingo","eaton","elena","emilia","fighter-maya","great-chief-khawana","holiday-yufine","khawazu","kizuna-ai","lilias","magic-scholar-doris","montmorancy","nemunas","penelope","ran","ray","rem","rose","ruele-of-light","shooting-star-achates","shuna","sonia","spirit-eye-celine","taeyou","tamarinne","tempest-surin","troublemaker-crozet","violet"];
 var topics_results = {};
 var scHeroes = {
@@ -70,43 +70,69 @@ function giaInTop(team, top) {
 };
 
 //******************** Check required class ********************/
-var knights = 0, warriors = 0, assassins = 0, rangers = 0, mages = 0, manausers = 0;
+var classLength = 0, needsToCheckClass = false, attributeLength = 0, needsToCheckAttribute = false;
+var classesRequested = {}, attributeRequested = {};
 function setRequestedClass (classe) {
-    if (classe.length>0)
-        for (var i = 0; i < classe.length; i++){
-            if (classe[i] === "knight") knights++
-            else if (classe[i] === "warrior") warriors++
-            else if (classe[i] === "assassin") assassins++
-            else if (classe[i] === "ranger") rangers++
-            else if (classe[i] === "mage") mages++
-            else if (classe[i] === "manauser") manausers++
-        };
-};
+    var length = 0, realLength = 0;
+    Object.values(classe).forEach( n => {
+        length += Math.max(0, n);
+        realLength += n
+    })
+    if (realLength != length || length > 0) needsToCheckClass = true;
+    else needsToCheckClass = false;
+    classLength = length;
+    classesRequested = classe;
+}
+function setRequestedAttribute (attribute) {
+    var length = 0, realLength = 0;
+    Object.values(attribute).forEach( n => {
+        length += Math.max(0, n);
+        realLength += n
+    })
+    if (realLength != length || length > 0) needsToCheckAttribute = true;
+    else needsToCheckAttribute = false;
+    attributeLength = length;
+    attributeRequested = attribute;
+}
 function checkHeroClass(team, HeroDB) {
-    var _knights = 0, _warriors = 0, _assassins = 0, _rangers = 0, _mages = 0, _manausers = 0;
+    var teamRes = {}
     for (var i = 0; i < team.length; i++) {
         var thisHeroClass = HeroDB[team[i]].role;
-        if (thisHeroClass === "knight") _knights++
-        else if (thisHeroClass === "warrior") _warriors++
-        else if (thisHeroClass === "assassin") _assassins++
-        else if (thisHeroClass === "ranger") _rangers++
-        else if (thisHeroClass === "mage") _mages++
-        else if (thisHeroClass === "manauser") _manausers++
-    };
+        if (!teamRes[thisHeroClass]) teamRes[thisHeroClass] = 0;
+        teamRes[thisHeroClass]++;
+    }
+    for (var key in classesRequested) {
+        var r = teamRes[key] || 0;
+        if ( ( classesRequested[key] < 0 && r > 0) || ( classesRequested[key] > 0 && r < classesRequested[key] ) )
+            return false
+    }
+    return true;
+}
+function checkHeroAttribute(team, HeroDB) {
+    var teamRes = {}
+    for (var i = 0; i < team.length; i++) {
+        var thisHeroAttribute = HeroDB[team[i]].attribute;
+        if (!teamRes[thisHeroAttribute]) teamRes[thisHeroAttribute] = 0;
+        teamRes[thisHeroAttribute]++;
+    }
+    for (var key in attributeRequested) {
+        var r = teamRes[key] || 0;
+        if ( (attributeRequested[key] < 0 && r > 0) || (attributeRequested[key] > 0 && r < attributeRequested[key]))
+            return false
+    }
 
-    if (_knights >= knights && _warriors >= warriors && _assassins >= assassins && _rangers >= rangers && _mages >= mages && _manausers >= manausers)
-        return true;
-
-    return false;
-};
+    return true;
+}
 
 onmessage = function(e) {
          var e = e.data;
          e.risultati = [];
          var HeroDB = e.HeroDB;
          var campList = e.campList;
-         knights = 0, warriors = 0, assassins = 0, rangers = 0, mages = 0, manausers = 0;
          var isCartesian = e.cartesianLock.flat().length>0 ? true : false;
+         setRequestedClass(e.classe)
+         setRequestedAttribute(e.elemento)
+
          console.log("Is cartesian product? " + isCartesian)
 
             const nuovoCampSimulatorTeam2 = function(inputTeam, locked = [], opts = {}) {
@@ -151,11 +177,11 @@ onmessage = function(e) {
 
                 if (isCartesian === false) {
                     var hasAdvSettings = false;
-                    if ( ((e.locked.length + e.classe.length) > 4 && !e.preferenzeRisultati.lockedMatter) || ((e.locked.length + e.elemento.length) > 4 && !e.preferenzeRisultati.lockedMatter) || e.elemento.length > 4) { // team size error
+                    if ( ((e.locked.length + classLength) > 4 && !e.preferenzeRisultati.lockedMatter) || ((e.locked.length + attributeLength) > 4 && !e.preferenzeRisultati.lockedMatter) || attributeLength > 4) { // team size error
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate
                         var useExperimental = true; // set to false if the new loop is not working correctly
-                        if (e.classe.length > 0 || e.elemento.length > 0 || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel || e.mustIncludeCleanser || e.preferenzeRisultati.n > 2000) hasAdvSettings = true;
+                        if (needsToCheckClass || needsToCheckAttribute || e.debuffs.length > 0 || e.buffs.length > 0 || e.AoE === true || e.noS1debuffs === true || e.noDebuffs === true || e.mustIncludeDispel || e.mustIncludeCleanser || e.preferenzeRisultati.n > 2000) hasAdvSettings = true;
                         if (e.type == "friendship") hasAdvSettings = false;
                         if (useExperimental && hasAdvSettings === false && e.locked.length <= 1) { // use only with no advanced settings
                             if (Object.keys(topics_results).length === 0) { // create topics combos (once for page visit)
@@ -369,7 +395,6 @@ onmessage = function(e) {
                              };
                         } else {
                             e.risultati = Array(e.preferenzeRisultati.n).fill({morale: -100, team: []});
-                            setRequestedClass(e.classe);
                             var currIndex = 0;
                             var lastProgress = -1;
                             var tot = Combinatorics.bigCombination(campList,4-e.locked.length).length.valueOf();
@@ -386,16 +411,13 @@ onmessage = function(e) {
                                 if (checkScDupe(team))
                                     return;
 
-                                if (e.classe.length > 0 && !checkHeroClass(elementoFiltro, HeroDB))
+                                if (needsToCheckClass && !checkHeroClass(elementoFiltro, HeroDB))
                                     return;
 
                                 if (!e.locked.every(i => team.includes(i)))
                                     return;
-                                
-                                /*if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
-                                    return;*/
 
-                                if (e.elemento.length > 0 && !e.elemento.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat().includes(i)))
+                                if (needsToCheckAttribute && !checkHeroAttribute(elementoFiltro, HeroDB))
                                     return;
 
                                 if (e.buffs.length > 0 && !e.buffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat().includes(i)))
@@ -469,11 +491,10 @@ onmessage = function(e) {
                     };
                     if ((e.cartesianLock.length + e.locked.length) < 4 && campList.length < 4-(e.cartesianLock.length + e.locked.length)) { // can't calculate not enough heroes to fill remaining slots
                         return postMessage({error: "not_enough_heroes"});
-                    } else if ( ((e.cartesianLock.length + e.locked.length + e.classe.length) > 4 && !e.preferenzeRisultati.lockedMatter) || ((e.cartesianLock.length + e.locked.length + e.elemento.length) > 4 && !e.preferenzeRisultati.lockedMatter)) { // Too many locked heroes
+                    } else if ( ((e.cartesianLock.length + e.locked.length + classLength) > 4 && !e.preferenzeRisultati.lockedMatter) || ((e.cartesianLock.length + e.locked.length + attributeLength) > 4 && !e.preferenzeRisultati.lockedMatter)) { // Too many locked heroes
                         return postMessage({error: "team_size_exceeded"});
                     } else { // can calculate 
                         e.risultati = Array(e.preferenzeRisultati.n).fill({morale: -100, team: []});
-                        setRequestedClass(e.classe);
                         if ( (e.cartesianLock.length + e.locked.length) > 3 ) campList = ["Ras"]; // placeholder Ras if all heroes are used in multilock or lock-> avoid RangeError
                         var c = printCombos(e.cartesianLock);
                         var currIndex = 0;
@@ -497,13 +518,10 @@ onmessage = function(e) {
                                 if (!e.locked.every(i => team.includes(i)))
                                     return;
 
-                                if (e.classe.length > 0 && !checkHeroClass(elementoFiltro, HeroDB))
+                                if (needsToCheckClass && !checkHeroClass(elementoFiltro, HeroDB))
                                     return;
 
-                                /*if (e.classe.length > 0 && !e.classe.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].role }).flat().includes(i))) 
-                                    return;*/
-
-                                if (e.elemento.length > 0 && !e.elemento.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].attribute }).flat().includes(i)))
+                                if (needsToCheckAttribute && !checkHeroAttribute(elementoFiltro, HeroDB))
                                     return;
 
                                 if (e.buffs.length > 0 && !e.buffs.every(i => elementoFiltro.map(function (hero, i) { return HeroDB[hero].buffs }).flat().includes(i)))

@@ -9775,7 +9775,9 @@
                     33
                 ],
                 "buff": [],
-                "debuff": []
+                "debuff": [
+                    18
+                ]
             },
             {
                 "common": [],
@@ -9788,7 +9790,9 @@
         "buffs": [
             2
         ],
-        "debuffs": [],
+        "debuffs": [
+            18
+        ],
         "common": [
             33
         ]

@@ -1574,6 +1574,11 @@ icon-bar span img {
             </div>
             <div id="whats_new_content" style="display: none;">
               <ul>
+                <li style="color: #007FFF">
+                  <b>09/11/2022</b>: Improvements to advanced settings<br>
+                  You can now select the number of Attributes (Fire / Ice / Earth / Light / Dark) you want in your team.<br>
+                  You can now select a negative value (for both roles and attributes) and that attribute/role will be excluded from your teams.<br>
+                </li>
                 <li>
                   <b>30/12/2021</b>: Updated ML Lilias data:<br>
                   ML Lilias was previously added to the website with incorrect camping values. Please manually update teams that include her!
@@ -2160,26 +2165,31 @@ icon-bar span img {
             <img v-bind:src="'https://assets.epicsevendb.com/class/' + value.icon + '.png'" style="height:60px;width:60px;" />
             <p style="position:relative;text-align:center;">{{value.string}}</p>
           </div>
-
       </div>
       <br><br>
       <div id="advanced_elemento" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
-        <center>{{strings.elemento}}:</center>
-          <input type="checkbox" id="checkbox_fire" name="elemento" value="fire" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_fire" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_profire.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.fire}}</p></label>
-
-          <input type="checkbox" id="checkbox_ice" name="elemento" value="ice" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_ice" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proice.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.ice}}</p></label>
-
-          <input type="checkbox" id="checkbox_earth" name="elemento" value="wind" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_earth" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_proearth.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.earth}}</p></label>
-        
-          <input type="checkbox" id="checkbox_light" name="elemento" value="light" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_light" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_prolight.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.light}}</p></label>
-        
-          <input type="checkbox" id="checkbox_dark" name="elemento" value="dark" style="display:none" onclick="app.aggiornaImposatazioniAvanzate()">
-          <label for="checkbox_dark" class="label noselect"> <img src="https://assets.epicsevendb.com/attribute/cm_icon_promdark.png" style="height:60px;width:60px;" /><p style="position:relative;text-align:center;">{{strings.dark}}</p></label>
-        
+        <center>{{strings.classe}}:</center>
+          <div class="adv_settings_elem noselect" v-for="(value,key) in {
+                    fire: {string: strings['fire'], icon: 'cm_icon_profire'}, 
+                    ice: {string: strings['ice'], icon: 'cm_icon_proice'}, 
+                    wind: {string: strings['earth'], icon: 'cm_icon_proearth'}, 
+                    light: {string: strings['light'], icon: 'cm_icon_prolight'}, 
+                    dark: {string: strings['dark'], icon: 'cm_icon_promdark'}
+                  }
+          " >
+            <div class="class-quantity-container" v-bind:value="key">
+              <span class="quantity_curr_quantity" style="display: none;">
+              </span>
+              <span class="incrementa" onclick="app.editAttributeQuantity(this)">
+                +
+              </span>
+              <span class="decrementa" onclick="app.editAttributeQuantity(this)">
+                -
+              </span>
+            </div>
+            <img v-bind:src="'https://assets.epicsevendb.com/attribute/' + value.icon + '.png'" style="height:60px;width:60px;" />
+            <p style="position:relative;text-align:center;">{{value.string}}</p>
+          </div>
       </div>
       <br><br>
       <div id="advanced_buff" class="box_advanced_settings" style="height:auto;width:100%;display:inline-block;padding-bottom: 25px;padding-top: 5px;">
@@ -3595,8 +3605,8 @@ icon-bar span img {
               rosterSort: 'date',
 
               locked: [],
-              classe: [],
-              elemento: [],
+              classe: {knight: 0, warrior: 0, assassin: 0, manauser: 0, ranger: 0, mage: 0},
+              elemento: {fire: 0, ice: 0, wind: 0, dark: 0, light: 0},
               debuffs: [],
               buffs: [],
               AoE: false,
@@ -4366,40 +4376,49 @@ icon-bar span img {
           },
           editClassQuantity: function (e) {
             var target = e.parentNode, _classe = e.parentNode.attributes.value.value, n = 0;
+            if (!this.classe[_classe]) this.classe[_classe] = 0
             if (e.className === "incrementa"){
-              if (this.classe.length > 3) return snackbarMessage(this.strings["team_size_exceeded"]);
-              this.classe.push(_classe);
+              var length = 0
+              Object.values(this.classe).forEach( n => length += Math.max(0, n) );
+              if (length > 3 && this.classe[_classe] > -1) return snackbarMessage(this.strings["team_size_exceeded"]);
+              this.classe[_classe] ++;
             } else if (e.className === "decrementa") {
-              if (this.classe.indexOf(_classe) === -1) return
-              this.classe.splice(this.classe.indexOf(_classe), 1);
+              if (this.classe[_classe] === -1) return
+              this.classe[_classe]--
             }
 
-            for (var i = 0; i < this.classe.length; i++)
-              if (this.classe[i] === _classe ) n++;
+            target.firstElementChild.innerHTML = this.classe[_classe];
+            if (this.classe[_classe]===0) target.firstElementChild.style.display = "none"
+            else target.firstElementChild.style.display = ""
+          },
+          editAttributeQuantity: function (e) {
+            var target = e.parentNode, _classe = e.parentNode.attributes.value.value, n = 0;
+            if (!this.elemento[_classe]) this.elemento[_classe] = 0
+            if (e.className === "incrementa"){
+              var length = 0
+              Object.values(this.elemento).forEach( n => length += Math.max(0, n) );
+              if (length > 3 && this.elemento[_classe] > -1) return snackbarMessage(this.strings["team_size_exceeded"]);
+              this.elemento[_classe] ++;
+            } else if (e.className === "decrementa") {
+              if (this.elemento[_classe] === -1) return
+              this.elemento[_classe]--
+            }
 
-            target.firstElementChild.innerHTML = n;
-            if (n===0) target.firstElementChild.style.display = "none"
+            target.firstElementChild.innerHTML = this.elemento[_classe];
+            if (this.elemento[_classe]===0) target.firstElementChild.style.display = "none"
             else target.firstElementChild.style.display = ""
           },
           aggiornaImposatazioniAvanzate: function () {
-                //this.classe = [];
-                this.elemento = [];
                 this.debuffs = [];
                 this.buffs = [];
 
                 //Raccogli le impostazioni avanzate
-                //var classi = document.getElementsByName("classe");
-                var elemento_checkbox = document.getElementsByName("elemento");
                 var debuffs_checkbox = document.getElementsByName("debuff");
                 var buffs_checkbox = document.getElementsByName("buff");
                 //for(var i = 0; i < classi.length; i++)  
                 //{  
                 //    if (classi[i].checked) this.classe.push(classi[i].value);
-                //}; 
-                for(var i = 0; i < elemento_checkbox.length; i++)  
-                {  
-                    if (elemento_checkbox[i].checked) this.elemento.push(elemento_checkbox[i].value);
-                }; 
+                //};
                 for(var i = 0; i < debuffs_checkbox.length; i++)  
                 {  
                     if (debuffs_checkbox[i].checked) this.debuffs.push(parseInt(debuffs_checkbox[i].value));

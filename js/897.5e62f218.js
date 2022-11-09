@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkv3"]=self["webpackChunkv3"]||[]).push([[897],{9897:function(n,t,e){e.r(t),e.d(t,{default:function(){return s}});var a=e(6252);function r(n,t,e,r,u,c){return(0,a.wg)(),(0,a.iD)("div",null," Covenant stat component")}var u={name:"CovenantStats"},c=e(3744);const o=(0,c.Z)(u,[["render",r]]);var s=o}}]);
