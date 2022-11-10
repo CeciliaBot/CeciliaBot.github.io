@@ -763,6 +763,15 @@
         "role": "warrior",
         "gacha": true
     },
+    "sword-of-cycling-seasons": {
+        "_id": "sword-of-cycling-seasons",
+        "id": "art0169",
+        "identifier": "",
+        "name": "Sword of Cycling Seasons",
+        "rarity": 5,
+        "role": "assassin",
+        "gacha": false
+    },
     "sword-of-ezera": {
         "_id": "sword-of-ezera",
         "id": "art0046",

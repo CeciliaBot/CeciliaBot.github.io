@@ -2698,5 +2698,26 @@
         "attribute": "wind",
         "sex": 2,
         "zodiac": "scorpion"
+    },
+    "savior-adin": {
+        "_id": "savior-adin",
+        "id": "c4144",
+        "name": "Savior Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "leo",
+        "gacha": false
+    },
+    "zio": {
+        "_id": "zio",
+        "id": "c1133",
+        "name": "Zio",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "dark",
+        "sex": 1,
+        "zodiac": "ram"
     }
 }
