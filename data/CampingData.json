@@ -17619,5 +17619,68 @@
             32
         ],
         "common": []
+    },
+    "savior-adin": {
+        "camping": {
+            "personalities": [
+                "Heroism",
+                "Free"
+            ],
+            "topics": [
+                "Dream",
+                "Complain"
+            ],
+            "values": {
+                "Criticism": 1,
+                "Reality Check": 0,
+                "Heroic Tale": 3,
+                "Comforting Cheer": 4,
+                "Cute Cheer": 3,
+                "Heroic Cheer": 4,
+                "Sad Memory": 4,
+                "Joyful Memory": 4,
+                "Happy Memories": 4,
+                "Unique Comment": 4,
+                "Self-Indulgent": 1,
+                "Occult": 1,
+                "Myth": 4,
+                "Bizarre Story": 2,
+                "Food Story": 3,
+                "Horror Story": 3,
+                "Gossip": 1,
+                "Dream": 6,
+                "Advice": 3,
+                "Complain": 1,
+                "Belief": 0,
+                "Interesting Story": 6
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    29
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            6
+        ],
+        "debuffs": [
+            29
+        ],
+        "common": []
     }
 }
