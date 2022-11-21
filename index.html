@@ -2768,6 +2768,33 @@ icon-bar span img {
   </script>
 
 <script>
+if (!Array.prototype.flat) {
+    Object.defineProperty(Array.prototype, 'flat', {
+      value: function(depth = 1) {
+        return this.reduce(function (flat, toFlatten) {
+          return flat.concat((Array.isArray(toFlatten) && (depth>1)) ? toFlatten.flat(depth-1) : toFlatten);
+        }, []);
+      }
+    });
+}
+if (!Object.keys) { // can be improved
+    Object.keys = function (obj) {
+        var res = [];
+        for (var key in obj) {
+            res.push(key)
+        }
+        return res;
+    }
+}
+if (!Object.values) {
+    Object.values = function (obj) {
+        return Object.keys(obj).map(function (e) {
+            return obj[e];
+        });
+    };
+}
+
+
     var userSettings = JSON.parse(localStorage.getItem('Settings') ? localStorage.getItem('Settings') : "{}");
     
     function defaultThemeColor() {
@@ -3338,7 +3365,7 @@ icon-bar span img {
               ctx.props.role_attr? h('div', {class: "attribute-role", style: {backgroundImage: "url(https://assets.epicsevendb.com/class/cm_icon_role_"+ roleIcon[ctx.props.data.role] +".png),url(https://assets.epicsevendb.com/attribute/cm_icon_pro"+ attrIcon[ctx.props.data.attribute] +".png)"}}) : null,
               ctx.props.showstars? h('div', {class: "wrapper-hero-info rarity-"+ctx.props.data.rarity}) : null,
               ctx.props.selected? h('div', {class: "top-right animate-flicker", style: {fontSize: ctx.props.scale*24+"px"}},'🔒') : null
-            ],
+            ]
           ),
           ctx.props.removable ? h('span', {class: "removeHero", style: {fontSize: 20*ctx.props.scale+"px"}, attrs: {title: "Remove " + ctx.props.name}}, '×') : null,
           ctx.props.displayname ? h('p',{class: "heroNameLabel", style: {width: (ctx.props.size*ctx.props.scale + (ctx.props.removable ? 20*ctx.props.scale : 0) ) + "px", fontSize: 14*ctx.props.scale+"px", height: 50*ctx.props.scale+"px"}}, ctx.props.name) : null

@@ -34,7 +34,23 @@ if (!Array.prototype.flat) {
         }, []);
       }
     });
-};
+}
+if (!Object.keys) { // can be improved
+    Object.keys = function (obj) {
+        var res = [];
+        for (var key in obj) {
+            res.push(key)
+        }
+        return res;
+    }
+}
+if (!Object.values) {
+    Object.values = function (obj) {
+        return Object.keys(obj).map(function (e) {
+            return obj[e];
+        });
+    };
+}
 
 //// SUPPORT FUNCTIONS
 function everyLocked(team, lock) {
