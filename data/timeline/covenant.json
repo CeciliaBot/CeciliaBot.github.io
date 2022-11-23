@@ -6039,5 +6039,68 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/1d57a0363ed44b91a5d96bb9f83f2aae/8625db85a2b14d88b9494c355e04ad64.jpg"
+   },
+   {
+      "nid": 9042562,
+      "type": "covenant",
+      "dt": [
+         "2022-11-24T08:00:00Z",
+         "2022-12-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "krau",
+            "new": false
+         }
+      ],
+      "a": [
+         {
+            "id": "holy-sacrifice",
+            "new": false
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/6bb3f006a3584cbda5a3d09da2cf0b7c/d637156ef4564e919c27ee3db45a0066.jpg"
+   },
+   {
+      "nid": 9042630,
+      "type": "limited",
+      "dt": [
+         "2022-11-24T08:00:00Z",
+         "2022-12-08T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aewinter",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "the-armament",
+            "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/44b35ba9091f4718abf268c55a58efd6/d385e22da5f9446aaf2fd8a346e97cbd.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2022-12-01T03:00:00Z",
+         "2022-12-15T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aeningning",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "exif-detective-ed-gadget",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }
 ]

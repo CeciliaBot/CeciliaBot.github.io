@@ -437,5 +437,24 @@
             }
         ],
         "a": []
+    },
+    {
+        "nid": 9042457,
+        "dt": [
+            "2022-11-24T08:00:00Z"
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/265132cf2b104ba9b3e83300d8010c07/86d30041eb2d4ef993a82074dd3c97a3.jpg",
+        "c": [
+            {
+                "id": "haste"
+            },
+            {
+                "id": "bomb-model-kanna"
+            },
+            {
+                "id": "assassin-cidd"
+            }
+        ],
+        "a": []
     }
 ]
