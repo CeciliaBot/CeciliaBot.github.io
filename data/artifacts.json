@@ -297,6 +297,16 @@
         "role": "mage",
         "gacha": true
     },
+    "exif-detective-ed-gadget": {
+        "_id": "exif-detective-ed-gadget",
+        "id": "art0173",
+        "identifier": "",
+        "name": "EXIF Detective (E.d.) Gadget",
+        "rarity": 5,
+        "role": "manauser",
+        "gacha": true,
+        "limited": true
+    },
     "fairy-tale-for-a-nightmare": {
         "_id": "fairy-tale-for-a-nightmare",
         "id": "art0123",
@@ -809,6 +819,16 @@
         "role": "assassin",
         "gacha": true
     },
+    "the-armament": {
+        "_id": "the-armament",
+        "id": "art0172",
+        "identifier": "",
+        "name": "The Armament",
+        "rarity": 5,
+        "role": "assassin",
+        "gacha": true,
+        "limited": true
+    },
     "time-matter": {
         "_id": "time-matter",
         "id": "art0027",
@@ -1232,6 +1252,16 @@
         "identifier": "ef403",
         "name": "Portrait of the Saviors",
         "rarity": 4,
+        "role": "",
+        "limited": true,
+        "gacha": false
+    },
+    "pos": {
+        "_id": "pos",
+        "id": "art0174",
+        "identifier": "",
+        "name": "P.O.S",
+        "rarity": 5,
         "role": "",
         "limited": true,
         "gacha": false

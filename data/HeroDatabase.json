@@ -2637,7 +2637,7 @@
         "role": "warrior",
         "attribute": "fire",
         "sex": 1,
-        "zodiac": "goat"
+        "zodiac": "ram"
     },
     "roy-mustang": {
         "_id": "roy-mustang",
@@ -2719,5 +2719,25 @@
         "attribute": "dark",
         "sex": 1,
         "zodiac": "ram"
+    },
+    "aewinter": {
+        "_id": "aewinter",
+        "id": "c1139",
+        "name": "ae-WINTER",
+        "rarity": 5,
+        "role": "assassin",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "aeningning": {
+        "_id": "aeningning",
+        "id": "c1140",
+        "name": "ae-NINGNING",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "scorpion"
     }
 }
