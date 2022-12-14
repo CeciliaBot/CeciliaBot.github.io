@@ -2739,5 +2739,25 @@
         "attribute": "fire",
         "sex": 2,
         "zodiac": "scorpion"
+    },
+    "aegiselle": {
+        "_id": "aegiselle",
+        "id": "c1138",
+        "name": "ae-GISELLE",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "aekarina": {
+        "_id": "aekarina",
+        "id": "npc1234",
+        "name": "ae-KARINA",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "goat"
     }
 }

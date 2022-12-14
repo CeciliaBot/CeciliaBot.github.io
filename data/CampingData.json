@@ -10449,6 +10449,9 @@
         "common": []
     },
     "butcher-corps-inquisitor": {
+        "linked_hero": [
+            "chaos-inquisitor"
+        ],
         "camping": {
             "personalities": [
                 "Psychopath",
@@ -10577,6 +10580,9 @@
         "common": []
     },
     "carmainerose": {
+        "linked_hero": [
+            "zealot-carmainerose"
+        ],
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -10646,6 +10652,9 @@
         "common": []
     },
     "carrot": {
+        "linked_hero": [
+            "researcher-carrot"
+        ],
         "camping": {
             "personalities": [
                 "Cool-Headed",
@@ -10917,6 +10926,9 @@
         ]
     },
     "church-of-ilryos-axe": {
+        "linked_hero": [
+            "chaos-sect-axe"
+        ],
         "camping": {
             "personalities": [
                 "Religious",
@@ -11110,6 +11122,9 @@
         "common": []
     },
     "doris": {
+        "linked_hero": [
+            "magic-scholar-doris"
+        ],
         "camping": {
             "personalities": [
                 "Introvert",
@@ -11441,6 +11456,9 @@
         "common": []
     },
     "glenn": {
+        "linked_hero": [
+            "vigilante-leader-glenn"
+        ],
         "camping": {
             "personalities": [
                 "Heroism",
@@ -11785,6 +11803,9 @@
         "common": []
     },
     "hazel": {
+        "linked_hero": [
+            "mascot-hazel"
+        ],
         "camping": {
             "personalities": [
                 "Loyal",
@@ -11849,6 +11870,9 @@
         "common": []
     },
     "helga": {
+        "linked_hero": [
+            "mercenary-helga"
+        ],
         "camping": {
             "personalities": [
                 "Arrogant",
@@ -12380,6 +12404,9 @@
         ]
     },
     "kluri": {
+        "linked_hero": [
+            "falconer-kluri"
+        ],
         "camping": {
             "personalities": [
                 "Escapist",
@@ -12502,6 +12529,9 @@
         "common": []
     },
     "lorina": {
+        "linked_hero": [
+            "commander-lorina"
+        ],
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -12958,6 +12988,9 @@
         "common": []
     },
     "montmorancy": {
+        "linked_hero": [
+            "angelic-montmorancy"
+        ],
         "camping": {
             "personalities": [
                 "Introvert",
@@ -13287,6 +13320,9 @@
         "common": []
     },
     "pearlhorizon": {
+        "linked_hero": [
+            "doll-maker-pearlhorizon"
+        ],
         "camping": {
             "personalities": [
                 "Individualistic",
@@ -13355,6 +13391,9 @@
         "common": []
     },
     "pyllis": {
+        "linked_hero": [
+            "shadow-knight-pyllis"
+        ],
         "camping": {
             "personalities": [
                 "Loyal",
@@ -13425,6 +13464,9 @@
         "common": []
     },
     "ras": {
+        "linked_hero": [
+            "adventurer-ras"
+        ],
         "camping": {
             "personalities": [
                 "Heroism",
@@ -13697,6 +13739,9 @@
         "common": []
     },
     "rikoris": {
+        "linked_hero": [
+            "captain-rikoris"
+        ],
         "camping": {
             "personalities": [
                 "Hot and Cold",
@@ -13764,6 +13809,9 @@
         "common": []
     },
     "rima": {
+        "linked_hero": [
+            "muse-rima"
+        ],
         "camping": {
             "personalities": [
                 "Traumatized",
@@ -13828,6 +13876,9 @@
         ]
     },
     "roozid": {
+        "linked_hero": [
+            "righteous-thief-roozid"
+        ],
         "camping": {
             "personalities": [
                 "Altruistic",
@@ -14212,6 +14263,9 @@
         "common": []
     },
     "wanda": {
+        "linked_hero": [
+            "allrounder-wanda"
+        ],
         "camping": {
             "personalities": [
                 "Selfish",
@@ -14346,69 +14400,6 @@
         "debuffs": [
             19,
             29
-        ],
-        "common": []
-    },
-    "dark-tyrant-tenebria": {
-        "camping": {
-            "personalities": [
-                "Psychopath",
-                "Obsessive"
-            ],
-            "topics": [
-                "Happy Memory",
-                "Advice"
-            ],
-            "values": {
-                "Criticism": 3,
-                "Reality Check": 2,
-                "Heroic Tale": 0,
-                "Comforting Cheer": 3,
-                "Cute Cheer": 1,
-                "Heroic Cheer": 1,
-                "Sad Memory": 4,
-                "Joyful Memory": 0,
-                "Happy Memories": 0,
-                "Unique Comment": 8,
-                "Self-Indulgent": 1,
-                "Occult": 4,
-                "Myth": 0,
-                "Bizarre Story": 10,
-                "Food Story": 0,
-                "Horror Story": 8,
-                "Gossip": 0,
-                "Dream": 4,
-                "Advice": 5,
-                "Complain": 0,
-                "Belief": 6,
-                "Interesting Story": 1
-            }
-        },
-        "skills": [
-            {
-                "common": [],
-                "buff": [],
-                "debuff": [
-                    24
-                ]
-            },
-            {
-                "common": [],
-                "buff": [],
-                "debuff": []
-            },
-            {
-                "common": [],
-                "buff": [],
-                "debuff": [
-                    20
-                ]
-            }
-        ],
-        "buffs": [],
-        "debuffs": [
-            24,
-            20
         ],
         "common": []
     },
@@ -15702,6 +15693,12 @@
         "common": []
     },
     "adin": {
+        "linked_hero": [
+            "verdant-adin",
+            "serene-purity-adin",
+            "holy-flame-adin",
+            "savior-adin"
+        ],
         "camping": {
             "personalities": [
                 "Optimistic",
@@ -17800,6 +17797,69 @@
         "buffs": [
             12,
             15
+        ],
+        "debuffs": [
+            20
+        ],
+        "common": []
+    },
+    "aeningning": {
+        "camping": {
+            "personalities": [
+                "Cherub",
+                "Indifferent"
+            ],
+            "topics": [
+                "Food Story",
+                "Heroic Tale"
+            ],
+            "values": {
+                "Criticism": 0,
+                "Reality Check": 0,
+                "Heroic Tale": 3,
+                "Comforting Cheer": 2,
+                "Cute Cheer": 3,
+                "Heroic Cheer": 2,
+                "Sad Memory": 2,
+                "Joyful Memory": 3,
+                "Happy Memories": 2,
+                "Unique Comment": 1,
+                "Self-Indulgent": 2,
+                "Occult": 0,
+                "Myth": 2,
+                "Bizarre Story": 0,
+                "Food Story": 8,
+                "Horror Story": 0,
+                "Gossip": 1,
+                "Dream": 2,
+                "Advice": 1,
+                "Complain": 1,
+                "Belief": 0,
+                "Interesting Story": 2
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    20
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            5
         ],
         "debuffs": [
             20

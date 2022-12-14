@@ -326,6 +326,16 @@
         "limited": true,
         "gacha": false
     },
+    "frame-of-light": {
+        "_id": "frame-of-light",
+        "id": "art0171",
+        "identifier": "",
+        "name": "Frame of Light",
+        "rarity": 5,
+        "role": "mage",
+        "limited": true,
+        "gacha": true
+    },
     "fullmetals-automail": {
         "_id": "fullmetals-automail",
         "id": "art0157",

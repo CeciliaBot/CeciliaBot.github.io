@@ -1,5 +1,19 @@
 [
   {
+    "nid": 9105601,
+    "dt": [1671073199000, 1674701999000],
+    "a": [
+      { "id": "uberiuss-tooth" },
+      { "id": "touch-of-rekos" },
+      { "id": "bloody-rose" },
+      { "id": "sword-of-judgment" },
+      { "id": "dust-devil" },
+      { "id": "wondrous-potion-vial" },
+      { "id": "els-fist" },
+      { "id": "adamant-shield" }
+    ]
+  },
+  {
     "nid": 8993147,
     "dt": [1667444400000, 1671073199000],
     "a": [

@@ -894,5 +894,18 @@
             }
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/9459cbd173c749ef8bdaabcb99181f3e/9a51a8bcb18843f696cd70236293ea0e.jpg"
+    },
+    {
+        "nid": 9105601,
+        "type": "shop",
+        "dt": [
+            1671073200000
+        ],
+        "name": "Shop",
+        "c": [
+            {
+                "id": "choux"
+            }
+        ]
     }
 ]

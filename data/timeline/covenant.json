@@ -6123,7 +6123,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/5ae18f3d20df4aa898e920ae132966f7/fad0007334bb49de8b06b9a7c53d9bb7.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9105556,
       "type": "covenant",
       "dt": [
          "2022-12-15T03:00:00Z",
@@ -6139,10 +6139,10 @@
             "id": "knowledge-seed"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/2c424aff13f14ec3a71ed4c590950a1c/f751d900ee1147bab13de49b01b33538.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9105619,
       "type": "limited",
       "dt": [
          "2022-12-15T03:00:00Z",
@@ -6150,13 +6150,34 @@
       ],
       "c": [
          {
-            "id": "ae-giselle",
+            "id": "aegiselle",
             "new": true
          }
       ],
       "a": [
          {
             "id": "frame-of-light",
+            "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/cc8af0df926b4c679e274296a2248f46/79168cb3eba740a5928d9cb8c00a713b.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2022-12-22T03:00:00Z",
+         "2023-01-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aekarina",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "rocket-punch-gauntlet",
             "new": true
          }
       ],

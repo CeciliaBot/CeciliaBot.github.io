@@ -155,11 +155,13 @@
     },
     {
         "nid": [
-            8875623
+            8875623,
+            9084838
         ],
         "type": "season",
         "dt": [
-            1663581600000
+            1663581600000,
+            1670821200000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/application_no/96001/default/COMMUNITY7126dfa31f684522adad3c9faf3c0c8f/ee54cf9aea224212b28960f380f9b11a.jpg",
         "name": "Arena Triumph Season (Seasaon 13)"
