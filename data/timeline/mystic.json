@@ -1157,6 +1157,26 @@
          },
          {
             "id": "judge-kise"
+         },
+         {
+            "id": "inferno-khawazu"
+         }
+      ],
+      "a": []
+   },
+   {
+      "nid": 9132219,
+      "type": "mystic",
+      "dt": [
+         "2023-01-05T03:00:00Z",
+         "2023-01-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "death-dealer-ray"
+         },
+         {
+            "id": "crimson-armin"
          }
       ],
       "a": []

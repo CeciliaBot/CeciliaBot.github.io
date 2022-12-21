@@ -118,11 +118,13 @@
     },
     {
         "nid": [
-            8950283
+            8950283,
+            9129156
         ],
         "type": "season",
         "dt": [
-            1665828000000
+            1665828000000,
+            1673085540000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/application_no/96001/default/COMMUNITYd7d3b1f3700b48028e2584cd19ae2120/411da70846604dbcb2e154124f6cb759.jpg",
         "name": "Guild War Triumph Season (Season 10)"

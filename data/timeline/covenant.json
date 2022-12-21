@@ -6163,10 +6163,10 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/cc8af0df926b4c679e274296a2248f46/79168cb3eba740a5928d9cb8c00a713b.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9129240,
       "type": "limited",
       "dt": [
-         "2022-12-22T03:00:00Z",
+         "2022-12-22T08:00:00Z",
          "2023-01-05T02:59:59Z"
       ],
       "c": [
@@ -6179,6 +6179,25 @@
          {
             "id": "rocket-punch-gauntlet",
             "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/23eabb7c4fb34f18ae05c073b9a3c0ae/0caf024f28ed4461ae35dbf2bd8b4793.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2022-12-29T03:00:00Z",
+         "2023-01-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "alencia"
+         }
+      ],
+      "a": [
+         {
+            "id": "alencinoxs-wrath"
          }
       ],
       "thumbnail": ""
