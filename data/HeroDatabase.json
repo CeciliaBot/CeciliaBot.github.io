@@ -2657,7 +2657,7 @@
         "role": "ranger",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "goat"
     },
     "lua": {
         "_id": "lua",
