@@ -6184,7 +6184,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/23eabb7c4fb34f18ae05c073b9a3c0ae/0caf024f28ed4461ae35dbf2bd8b4793.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9155433,
       "type": "covenant",
       "dt": [
          "2022-12-29T03:00:00Z",
@@ -6198,6 +6198,82 @@
       "a": [
          {
             "id": "alencinoxs-wrath"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/3acd5e2017ba48d5b22d24f903409648/cd12de0f52984b7ea2d250a39232fd17.jpg"
+   },
+   {
+      "nid": 9178036,
+      "type": "covenant",
+      "dt": [
+         "2023-01-05T09:00:00Z",
+         "2023-01-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ilynav"
+         }
+      ],
+      "a": [
+         {
+            "id": "wings-of-light-and-shadow"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/7b8752cdd56f45f29ea872b48da8bf7e/bd1097fcd15f408eaa87e176a8889723.jpg"
+   },
+   {
+      "nid": 9178052,
+      "type": "covenant",
+      "dt": [
+         "2023-01-05T09:00:00Z",
+         "2023-01-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "elena"
+         }
+      ],
+      "a": [
+         {
+            "id": "stella-harpa"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/e384c6b5962749f6aedf6919306586dd/132e7c86cd08487da1404b48076f663d.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-01-12T03:00:00Z",
+         "2023-01-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "command-model-laika"
+         }
+      ],
+      "a": [
+         {
+            "id": "glowings-21"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-01-12T03:00:00Z",
+         "2023-01-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "senya"
+         }
+      ],
+      "a": [
+         {
+            "id": "spear-of-a-new-dawn"
          }
       ],
       "thumbnail": ""

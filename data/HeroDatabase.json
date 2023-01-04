@@ -1147,7 +1147,7 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "bull"
     },
     "guider-aither": {
         "id": "c2018",
@@ -2477,7 +2477,7 @@
         "role": "warrior",
         "attribute": "dark",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "ram"
     },
     "pirate-captain-flan": {
         "id": "c2110",
