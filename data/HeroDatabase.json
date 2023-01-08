@@ -2769,5 +2769,15 @@
         "attribute": "dark",
         "sex": 1,
         "zodiac": "crab"
+    },
+    "shepherd-jena": {
+        "id": "c4052",
+        "_id": "shepherd-jena",
+        "name": "Shepherd Jena",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "ram"
     }
 }
