@@ -2129,16 +2129,6 @@
         "sex": 2,
         "zodiac": "waterbearer"
     },
-    "dark-tyrant-tenebria": {
-        "id": "c2050_skin1",
-        "_id": "dark-tyrant-tenebria",
-        "name": "Dark Tyrant Tenebria",
-        "rarity": 5,
-        "attribute": "dark",
-        "role": "mage",
-        "sex": 2,
-        "zodiac": "twins"
-    },
     "ilynav": {
         "id": "c1113",
         "_id": "ilynav",

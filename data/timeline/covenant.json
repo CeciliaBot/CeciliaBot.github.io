@@ -6241,7 +6241,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/e384c6b5962749f6aedf6919306586dd/132e7c86cd08487da1404b48076f663d.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9204765,
       "type": "covenant",
       "dt": [
          "2023-01-12T03:00:00Z",
@@ -6257,10 +6257,10 @@
             "id": "glowings-21"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/c53daaa4fe2c49818f5e902fe25a2df2/dd397164014445078d333080ae3e2404.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9204794,
       "type": "covenant",
       "dt": [
          "2023-01-12T03:00:00Z",
@@ -6274,6 +6274,82 @@
       "a": [
          {
             "id": "spear-of-a-new-dawn"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/9e83e8d60d9e4b6bbbfe4a86a3e09e69/0cb473329d744772bc6788cedd3531c3.jpg"
+   },
+   {
+      "nid": 9221632,
+      "type": "covenant",
+      "dt": [
+         "2023-01-19T09:00:00Z",
+         "2023-01-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "eda"
+         }
+      ],
+      "a": [
+         {
+            "id": "twilight-calamity"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/bc65cad2ae4040d4afbc751275b26605/4c4f8762b8bf4f5f98ab990f14899251.jpg"
+   },
+   {
+      "nid": 9221643,
+      "type": "covenant",
+      "dt": [
+         "2023-01-19T09:00:00Z",
+         "2023-01-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ken"
+         }
+      ],
+      "a": [
+         {
+            "id": "samsara-prayer-beads"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/83e1ea65f758423d935447062a2996c6/64980ce174214b39b0f562644fa82c40.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-01-26T03:00:00Z",
+         "2023-02-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "beehoo"
+         }
+      ],
+      "a": [
+         {
+            "id": "sphere-of-inferno"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-01-26T03:00:00Z",
+         "2023-02-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aria"
+         }
+      ],
+      "a": [
+         {
+            "id": "scroll-of-shadows"
          }
       ],
       "thumbnail": ""
