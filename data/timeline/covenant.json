@@ -6317,7 +6317,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/83e1ea65f758423d935447062a2996c6/64980ce174214b39b0f562644fa82c40.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9244556,
       "type": "covenant",
       "dt": [
          "2023-01-26T03:00:00Z",
@@ -6331,13 +6331,14 @@
       ],
       "a": [
          {
-            "id": "sphere-of-inferno"
+            "id": "sphere-of-inferno",
+            "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/a2d595e39b444b488dbdf3c1521e35a7/1915bb374f0949f4b8c41d61db719aab.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9244558,
       "type": "covenant",
       "dt": [
          "2023-01-26T03:00:00Z",
@@ -6353,6 +6354,6 @@
             "id": "scroll-of-shadows"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/539ded61adb34f8f98e5c20e405d4e3d/107da6fdb03d4d76a008d42140336a80.jpg"
    }
 ]
