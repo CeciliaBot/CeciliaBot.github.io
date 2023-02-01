@@ -6342,7 +6342,7 @@
       "type": "covenant",
       "dt": [
          "2023-01-26T03:00:00Z",
-         "2023-02-02T02:59:59Z"
+         "2023-02-09T02:59:59Z"
       ],
       "c": [
          {
@@ -6355,5 +6355,62 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/539ded61adb34f8f98e5c20e405d4e3d/107da6fdb03d4d76a008d42140336a80.jpg"
+   },
+   {
+      "nid": 9260597,
+      "type": "covenant",
+      "dt": [
+         "2023-02-02T09:00:00Z",
+         "2023-02-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "yufine"
+         }
+      ],
+      "a": [
+         {
+            "id": "merciless-glutton"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/9e5e944e25654e12b7456131cb7d5851/69d2b18b03c34605b76148970fae64d3.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-02-09T03:00:00Z",
+         "2023-02-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tywin"
+         }
+      ],
+      "a": [
+         {
+            "id": "crown-of-glory"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-02-09T03:00:00Z",
+         "2023-02-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ervalen"
+         }
+      ],
+      "a": [
+         {
+            "id": "doubleedged-decrescent"
+         }
+      ],
+      "thumbnail": ""
    }
 ]
