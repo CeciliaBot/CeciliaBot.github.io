@@ -6376,7 +6376,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/9e5e944e25654e12b7456131cb7d5851/69d2b18b03c34605b76148970fae64d3.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9275067,
       "type": "covenant",
       "dt": [
          "2023-02-09T03:00:00Z",
@@ -6392,10 +6392,10 @@
             "id": "crown-of-glory"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/caab8fce5b3e4ef9966e4fe9f08284bb/9fcbe4d79d2243b7a61eca0f81eb4b67.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9275071,
       "type": "covenant",
       "dt": [
          "2023-02-09T03:00:00Z",
@@ -6411,6 +6411,6 @@
             "id": "doubleedged-decrescent"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://page.onstove.com/epicseven/global/view/9275071"
    }
 ]
