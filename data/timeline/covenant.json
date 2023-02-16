@@ -6484,19 +6484,21 @@
    },
    {
       "nid": 0,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2023-02-23T03:00:00Z",
          "2023-03-09T02:59:59Z"
       ],
       "c": [
          {
-            "id": "amid"
+            "id": "amid",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "fan-of-light-and-dark"
+            "id": "fan-of-light-and-dark",
+            "new": true
          }
       ],
       "thumbnail": ""

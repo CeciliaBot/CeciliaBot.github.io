@@ -962,5 +962,21 @@
                 "id": "little-queen-charlotte"
             }
         ]
+    },
+    {
+        "nid": 9294356,
+        "type": "pass",
+        "dt": [
+            "2023-02-16T09:00:00Z",
+            "2023-03-16T02:59:59Z"
+        ],
+        "name": "Epic★Pass 「Romantic Vacation Season」",
+        "c": [
+            {
+                "id": "ran",
+                "new": true
+            }
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/88b746e082864cb5a7a936cd08ed64de/60af76f916a048a2a1b69fee5584b05c.jpg"
     }
 ]

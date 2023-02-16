@@ -2849,5 +2849,16 @@
         "role": "warrior",
         "sex": 2,
         "zodiac": "scorpion"
+    },
+    "amid": {
+        "id": "c1143",
+        "_id": "amid",
+        "name": "Amid",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "bull",
+        "limited": true
     }
 }
