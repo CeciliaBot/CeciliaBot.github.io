@@ -18789,5 +18789,124 @@
             24
         ],
         "common": []
+    },
+    "lone-crescent-bellona": {
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Individualistic"
+            ],
+            "topics": [
+                "Horror Story",
+                "Cute Cheer"
+            ],
+            "values": {
+                "Criticism": 7,
+                "Reality Check": 2,
+                "Heroic Tale": 5,
+                "Comforting Cheer": 5,
+                "Cute Cheer": 5,
+                "Heroic Cheer": 2,
+                "Sad Memory": 1,
+                "Joyful Memory": 3,
+                "Happy Memories": 4,
+                "Unique Comment": 0,
+                "Self-Indulgent": 0,
+                "Occult": 3,
+                "Myth": 5,
+                "Bizarre Story": 0,
+                "Food Story": 4,
+                "Horror Story": 0,
+                "Gossip": 0,
+                "Dream": 2,
+                "Advice": 5,
+                "Complain": 2,
+                "Belief": 1,
+                "Interesting Story": 1
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            12,
+            "stic_vigor"
+        ],
+        "debuffs": [],
+        "common": []
+    },
+    "amid": {
+        "camping": {
+            "personalities": [
+                "Altruistic",
+                "Free"
+            ],
+            "topics": [
+                "Dream",
+                "Heroic Tale"
+            ],
+            "values": {
+                "Criticism": 1,
+                "Reality Check": 0,
+                "Heroic Tale": 0,
+                "Comforting Cheer": 4,
+                "Cute Cheer": 5,
+                "Heroic Cheer": 3,
+                "Sad Memory": 6,
+                "Joyful Memory": 4,
+                "Happy Memories": 4,
+                "Unique Comment": 2,
+                "Self-Indulgent": 1,
+                "Occult": 1,
+                "Myth": 2,
+                "Bizarre Story": 2,
+                "Food Story": 1,
+                "Horror Story": 1,
+                "Gossip": 2,
+                "Dream": 7,
+                "Advice": 6,
+                "Complain": 2,
+                "Belief": 0,
+                "Interesting Story": 6
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            46,
+            "stic_swift_attack"
+        ],
+        "debuffs": [],
+        "common": []
     }
 }
