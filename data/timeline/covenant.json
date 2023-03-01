@@ -6464,7 +6464,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/65458d50ffe24cc8a61b1f7697f9e4e0/495a6c1aa6444d0ab81504043bd1c685.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9310391,
       "type": "covenant",
       "dt": [
          "2023-02-23T03:00:00Z",
@@ -6480,10 +6480,10 @@
             "id": "doctors-bag"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/cc186d9cf40e4dcbb1f0bacd7190b46c/0a981a003cf046148cd5bc9b8b644a30.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9310373,
       "type": "limited",
       "dt": [
          "2023-02-23T03:00:00Z",
@@ -6499,6 +6499,63 @@
          {
             "id": "fan-of-light-and-dark",
             "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/f9984475179247b0922aa903c0e9bc11/83e83d5a6d93482c8c03015a614efbe0.jpg"
+   },
+   {
+      "nid": 9327796,
+      "type": "covenant",
+      "dt": [
+         "2023-03-02T09:00:00Z",
+         "2023-03-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "choux"
+         }
+      ],
+      "a": [
+         {
+            "id": "snow-crystal"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/ca5aef3feb494562ad0c4a1a2b42a4fe/bccb70715975419b8cd8701db9c92e9b.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-03-09T03:00:00Z",
+         "2023-03-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tamarinne"
+         }
+      ],
+      "a": [
+         {
+            "id": "idols-cheer"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-03-09T03:00:00Z",
+         "2023-03-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "pavel"
+         }
+      ],
+      "a": [
+         {
+            "id": "dux-noctis"
          }
       ],
       "thumbnail": ""
