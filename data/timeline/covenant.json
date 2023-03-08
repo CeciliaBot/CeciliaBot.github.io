@@ -6523,7 +6523,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/ca5aef3feb494562ad0c4a1a2b42a4fe/bccb70715975419b8cd8701db9c92e9b.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9344705,
       "type": "covenant",
       "dt": [
          "2023-03-09T03:00:00Z",
@@ -6539,10 +6539,10 @@
             "id": "idols-cheer"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/af0a8df9a0254ff8bf16cba4d80cf288/b55c728d394e4ac28c1c37bb1561b1aa.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9344702,
       "type": "covenant",
       "dt": [
          "2023-03-09T03:00:00Z",
@@ -6558,6 +6558,6 @@
             "id": "dux-noctis"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/3d5b440a25434914b1749252f1a96dca/429dfb1441e144edaa7a3c6612a4a61a.jpg"
    }
 ]
