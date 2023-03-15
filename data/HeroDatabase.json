@@ -2860,5 +2860,15 @@
         "sex": 2,
         "zodiac": "bull",
         "limited": true
+    },
+    "eligos": {
+        "id": "c1084",
+        "_id": "eligos",
+        "name": "Eligos",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "maiden"
     }
 }

@@ -1249,6 +1249,9 @@
          },
          {
             "id": "ambitious-tywin"
+         },
+         {
+            "id": "angel-of-light-angelica"
          }
       ],
       "a": [],
@@ -1261,7 +1264,26 @@
          "2023-03-09T03:00:00Z",
          "2023-04-20T02:59:59Z"
       ],
-      "name": "Custom Mystic Banner (1 Five star)",
+      "name": "Double Custom Mystic Banner (Second hero added later)",
       "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/cbd7b5039edc4b5aa6b1766f71191bd9/c6b6fd5ccf7e415898a32c301e991b23_1651043570.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-03-30T03:00:00Z",
+         "2023-04-20T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "architect-laika",
+            "new": true
+         },
+         {
+            "id": "tempest-surin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
