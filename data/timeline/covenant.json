@@ -6580,25 +6580,6 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/4867243a39134b4bb59a89f98f3e32c4/bd8c7d6792514966b4258949f0b3fafe.jpg"
    },
    {
-      "nid": 0,
-      "type": "covenant",
-      "dt": [
-         "2023-03-16T09:00:00Z",
-         "2023-03-23T02:59:59Z"
-      ],
-      "c": [
-         {
-            "id": "kayron"
-         }
-      ],
-      "a": [
-         {
-            "id": "shepherd-of-the-hollow"
-         }
-      ],
-      "thumbnail": ""
-   },
-   {
       "nid": 9359570,
       "type": "covenant",
       "dt": [
