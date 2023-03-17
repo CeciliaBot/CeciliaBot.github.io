@@ -2862,7 +2862,7 @@
         "limited": true
     },
     "eligos": {
-        "id": "c1084",
+        "id": "c1142",
         "_id": "eligos",
         "name": "Eligos",
         "rarity": 5,
@@ -2870,5 +2870,15 @@
         "role": "ranger",
         "sex": 1,
         "zodiac": "maiden"
+    },
+    "architect-laika": {
+        "id": "c2099",
+        "_id": "architect-laika",
+        "name": "Architect Laika",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "archer"
     }
 }
