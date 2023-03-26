@@ -2718,7 +2718,7 @@
         "role": "assassin",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "goat"
     },
     "aeningning": {
         "_id": "aeningning",
@@ -2748,7 +2748,7 @@
         "role": "knight",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "ram"
     },
     "death-dealer-ray": {
         "_id": "death-dealer-ray",
