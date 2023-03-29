@@ -6637,5 +6637,62 @@
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-03-30T09:00:00Z",
+         "2023-04-06T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lilias"
+         }
+      ],
+      "a": [
+         {
+            "id": "bastion-of-perlutia"
+         }
+      ],
+      "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/981b40b6d1e4449e8f5af81b94a6388a/cb0a1d5b33df4e02be4c130d507324a6_1652252634.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-04-06T03:00:00Z",
+         "2023-04-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ravi"
+         }
+      ],
+      "a": [
+         {
+            "id": "sigurd-scythe"
+         }
+      ],
+      "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/75592cee2a3c4f8098ae64f5abf66a8b/5658cfe34b2c409e8f4c867f54cb8a80_1654678258.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-04-06T03:00:00Z",
+         "2023-04-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "vildred"
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-summer-twilight"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/application_no/96001/default/COMMUNITY243a65ae40aa414ca37fc4f592da18f2/cd9416cbde5d4e97beaf670b4b1ee1ee.jpg"
    }
 ]
