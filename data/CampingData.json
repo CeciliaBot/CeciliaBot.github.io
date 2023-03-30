@@ -19212,5 +19212,66 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "ainos-20": {
+        "camping": {
+            "personalities": [
+                "Arrogant",
+                "Academic"
+            ],
+            "topics": [
+                "Unique Comment",
+                "Advice"
+            ],
+            "values": {
+                "Criticism": 7,
+                "Reality Check": 2,
+                "Heroic Tale": 5,
+                "Comforting Cheer": 4,
+                "Cute Cheer": 5,
+                "Heroic Cheer": 1,
+                "Sad Memory": 0,
+                "Joyful Memory": 0,
+                "Happy Memories": 2,
+                "Unique Comment": 0,
+                "Self-Indulgent": 5,
+                "Occult": 6,
+                "Myth": 10,
+                "Bizarre Story": 0,
+                "Food Story": 3,
+                "Horror Story": 0,
+                "Gossip": 2,
+                "Dream": 0,
+                "Advice": 4,
+                "Complain": 1,
+                "Belief": 0,
+                "Interesting Story": 2
+            }
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    18
+                ],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            },
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1,
+            3
+        ],
+        "debuffs": [],
+        "common": []
     }
 }
