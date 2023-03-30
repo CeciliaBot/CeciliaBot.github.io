@@ -2880,5 +2880,15 @@
         "role": "mage",
         "sex": 2,
         "zodiac": "archer"
+    },
+    "ainos-20": {
+        "id": "c4105",
+        "_id": "ainos-20",
+        "name": "Ainos 2.0",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "archer"
     }
 }
