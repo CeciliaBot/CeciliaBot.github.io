@@ -798,7 +798,7 @@
         "identifier": "",
         "name": "Star of the Deep Sea",
         "rarity": 5,
-        "role": "",
+        "role": "ranger",
         "limited": true,
         "gacha": true
     },
