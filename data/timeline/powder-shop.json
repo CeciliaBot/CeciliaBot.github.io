@@ -1,5 +1,19 @@
 [
   {
+    "nid": 9422834,
+    "dt": [1681959600000, 1685588399000],
+    "a": [
+      { "id": "manica-of-control" },
+      { "id": "celestine" },
+      { "id": "twilight-calamity" },
+      { "id": "unseen-observer" },
+      { "id": "silver-rain" },
+      { "id": "eternus" },
+      { "id": "sepulcrum" },
+      { "id": "steadfast-gatekeeper" }
+    ]
+  },
+  {
     "nid": 9344640,
     "dt": [1678330800000, 1681959599000],
     "a": [
