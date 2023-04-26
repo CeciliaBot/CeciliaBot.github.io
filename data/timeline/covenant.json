@@ -6734,7 +6734,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/27dde70d830f4949b25805ade4abe228/06cdd26ffdf64102a1dbe23a26aa432c.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9422858,
       "type": "covenant",
       "dt": [
          "2023-04-20T03:00:00Z",
@@ -6750,10 +6750,10 @@
             "id": "shimadra-staff"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/6c4c39fad50a4915b84e0c906b4a8c0f/f59c98dbbf85424384d648390fa8a9d1.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9422871,
       "type": "covenant",
       "dt": [
          "2023-04-20T03:00:00Z",
@@ -6769,15 +6769,92 @@
             "id": "last-teatime"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/8c3027f7e4d145b9bd0367278d27b2b1/86ee090869434d15903ca228d43b8cb4.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9422834,
       "type": "limited",
       "dt": [
          "2023-04-20T03:00:00Z",
          "2023-05-18T02:59:59Z"
       ],
-      "name": "Custom Triple RGB Group Summon"
+      "name": "Custom Triple RGB Group Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/8fe2bcd117be4f4391496ebb9d20b9a6/c6b487f4357345edad44195f782615b4.jpg"
+   },
+   {
+      "nid": 9435392,
+      "type": "covenant",
+      "dt": [
+         "2023-04-27T09:00:00Z",
+         "2023-05-04T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "iseria"
+         }
+      ],
+      "a": [
+         {
+            "id": "song-of-stars"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/e6ac9cad54534c80997e68af8bea0579/9a9866faabda414dadf0b939e4f9ac18.jpg"
+   },
+   {
+      "nid": 9435408,
+      "type": "covenant",
+      "dt": [
+         "2023-04-27T09:00:00Z",
+         "2023-05-04T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "bellona"
+         }
+      ],
+      "a": [
+         {
+            "id": "iron-fan"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/31c873b1e4334078a3d1ec3e93e4ddcd/4dfd02f713054475b8d8e8bbd73f908d.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-05-27T03:00:00Z",
+         "2023-05-18T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "milim"
+         }
+      ],
+      "a": [
+         {
+            "id": "upgraded-dragon-knuckles"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-05-27T03:00:00Z",
+         "2023-05-18T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "rimuru"
+         }
+      ],
+      "a": [
+         {
+            "id": "antimagic-mask"
+         }
+      ],
+      "thumbnail": ""
    }
 ]

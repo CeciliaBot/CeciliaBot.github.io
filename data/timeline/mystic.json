@@ -1305,6 +1305,27 @@
          },
          {
             "id": "martial-artist-ken"
+         },
+         {
+            "id": "auxiliary-lots"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-05-11T03:00:00Z",
+         "2023-06-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "twisted-eidolon-kayron"
+         },
+         {
+            "id": "shadow-rose"
          }
       ],
       "a": [],
