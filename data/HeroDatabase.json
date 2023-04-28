@@ -2890,5 +2890,15 @@
         "role": "manauser",
         "sex": 2,
         "zodiac": "archer"
+    },
+    "twisted-eidolon-kayron": {
+        "id": "c2023",
+        "_id": "twisted-eidolon-kayron",
+        "name": "Twisted Eidolon Kayron",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "scorpion"
     }
 }

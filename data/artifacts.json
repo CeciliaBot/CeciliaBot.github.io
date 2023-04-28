@@ -1087,6 +1087,16 @@
         "limited": true,
         "gacha": false
     },
+    "cutie-pando": {
+        "_id": "cutie-pando",
+        "id": "art0179",
+        "identifier": "",
+        "name": "Cutie Pando",
+        "rarity": 4,
+        "role": "",
+        "limited": true,
+        "gacha": false
+    },
     "crimson-seed": {
         "_id": "crimson-seed",
         "id": "art0059",
