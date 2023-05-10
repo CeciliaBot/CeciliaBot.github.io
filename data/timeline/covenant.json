@@ -6820,7 +6820,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/31c873b1e4334078a3d1ec3e93e4ddcd/4dfd02f713054475b8d8e8bbd73f908d.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9447354,
       "type": "covenant",
       "dt": [
          "2023-05-04T03:00:00Z",
@@ -6836,10 +6836,10 @@
             "id": "upgraded-dragon-knuckles"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/9620396b7cbf4ad598d887e9534a8436/fc5818de31ca4e86ba969db6f2641613.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9447356,
       "type": "covenant",
       "dt": [
          "2023-05-04T03:00:00Z",
@@ -6853,6 +6853,44 @@
       "a": [
          {
             "id": "antimagic-mask"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/02ad3941d2b74c3e983046bc6e03ddce/08b3ec8de8e840a3828a793cfd5ccc67.jpg"
+   },
+   {
+      "nid": 9462992,
+      "type": "covenant",
+      "dt": [
+         "2023-05-11T09:00:00Z",
+         "2023-05-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "benimaru"
+         }
+      ],
+      "a": [
+         {
+            "id": "benimarus-tachi"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/e0603f51e4b94a74890b2025025f2279/d88e498e2c7b4b9a88d9f415675a622b.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-05-18T09:00:00Z",
+         "2023-05-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "charlotte"
+         }
+      ],
+      "a": [
+         {
+            "id": "elbris-ritual-sword"
          }
       ],
       "thumbnail": ""

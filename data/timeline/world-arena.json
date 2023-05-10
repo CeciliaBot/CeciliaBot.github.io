@@ -119,11 +119,13 @@
     },
     {
         "nid": [
-            9327653
+            9327653,
+            9463000
         ],
         "type": "season",
         "dt": [
-            1677906000000
+            1677906000000,
+            1685156399000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/457c87d7d3704a1ca5776a7dac41fcb4/a1dcd5aa9f804d25a8dca6f89cbb467e.jpg",
         "name": "World Arena Indomitable Season (Season 10)"
