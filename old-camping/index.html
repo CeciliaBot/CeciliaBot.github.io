@@ -3568,6 +3568,19 @@ if (!Object.values) {
     }
   };
 
+  var CampData = {"personalities":["Introvert","Hot and Cold","Cherub","Narcissist","Arrogant","Debate Addict","Academic","Heroism","Traumatized","Loyal","Realistic","Selfish","Individualistic","Altruistic","Glutton","Alcoholic","Lovesick","Lustful","Psychopath","Religious","Optimistic","Pessimistic","Indifferent","Natural","Obsessive","Hard Worker","Extrovert","Envious","Cool-Headed","Free","Escapist"],"topics":[{"name":"Criticism","values":[-1,-2,-2,3,5,5,2,-5,3,-1,3,3,2,-3,null,2,null,null,3,-3,-2,3,0,-2,0,2,0,3,2,1,2]},{"name":"Reality Check","values":[-3,0,-2,3,-3,3,2,-3,-3,1,3,0,2,-3,null,-2,null,null,2,0,-2,3,0,-2,-3,1,0,0,2,-1,-3]},{"name":"Heroic Tale","values":[1,0,2,3,5,-3,0,3,1,3,-1,0,0,-3,null,3,null,null,-3,0,3,-2,1,2,0,2,3,2,0,0,-1]},{"name":"Comforting Cheer","values":[3,3,2,5,3,0,1,3,-3,3,0,0,2,3,null,3,null,null,3,3,0,5,0,2,-1,5,3,-2,-2,1,3]},{"name":"Cute Cheer","values":[3,3,2,5,4,0,1,1,1,1,1,1,1,3,null,2,null,null,0,0,3,-3,1,2,1,2,3,2,0,2,2]},{"name":"Heroic Cheer","values":[3,0,2,3,-3,1,1,3,0,5,2,0,2,2,null,3,null,null,-3,2,3,-1,0,2,1,2,3,3,0,1,-3]},{"name":"Sad Memory","values":[0,3,2,0,0,-3,0,3,3,3,0,0,1,5,null,1,null,null,4,4,1,-2,0,2,-3,3,-2,-1,0,1,3]},{"name":"Joyful Memory","values":[2,2,2,0,0,0,0,3,3,2,0,2,3,3,null,2,null,null,0,2,4,1,1,2,0,3,3,1,1,1,3]},{"name":"Happy Memories","values":[2,2,2,0,2,0,0,3,0,2,0,0,2,3,null,1,null,null,-2,2,2,1,0,2,-1,-3,2,1,0,1,2]},{"name":"Unique Comment","values":[0,1,0,2,0,-1,-3,2,3,0,0,0,0,0,null,1,null,null,5,2,3,-1,1,0,3,0,0,1,3,2,1]},{"name":"Self-Indulgent","values":[-3,-3,2,0,-3,1,5,-1,1,-2,-1,-2,0,-2,null,2,null,null,1,0,1,-2,0,2,-1,-3,2,2,0,1,-2]},{"name":"Occult","values":[0,0,-1,-3,3,-3,3,0,3,-2,-1,0,0,-1,null,-2,null,null,3,-3,1,4,0,-1,1,0,1,2,0,1,2]},{"name":"Myth","values":[1,0,2,2,5,3,5,3,0,1,-1,0,0,1,null,0,null,null,-3,3,1,-3,0,2,0,0,1,4,0,1,-3]},{"name":"Bizarre Story","values":[2,0,-1,-3,-3,-3,0,-2,-2,-1,-2,0,-2,-1,null,-2,null,null,5,-2,1,3,0,-1,5,0,2,0,0,2,-2]},{"name":"Food Story","values":[0,0,4,0,3,0,0,2,0,2,0,0,1,0,null,3,null,null,-3,1,3,-2,4,4,0,3,1,2,0,1,2]},{"name":"Horror Story","values":[-1,-2,-5,-3,-2,0,-5,2,0,0,2,3,0,-2,null,-3,null,null,5,0,1,-2,-2,-5,3,-1,3,0,0,1,-2]},{"name":"Gossip","values":[3,1,1,1,-1,3,2,-2,-3,-3,1,3,-2,1,null,0,null,null,-3,-1,1,-3,0,1,0,-3,2,0,0,1,1]},{"name":"Dream","values":[1,2,2,2,0,2,0,2,2,1,-3,0,2,3,null,2,null,null,2,2,2,0,0,2,2,3,2,3,0,4,0]},{"name":"Advice","values":[3,1,1,2,3,3,1,2,-2,2,2,0,2,5,null,3,null,null,3,2,0,0,0,1,2,2,2,-2,0,1,2]},{"name":"Complain","values":[-3,-1,1,-2,-2,2,1,-3,-3,-1,0,3,2,1,null,2,null,null,-5,2,1,-2,0,1,-5,-5,0,-2,0,1,2]},{"name":"Belief","values":[3,0,0,4,-3,-1,0,-1,5,-3,2,3,1,-3,0,3,0,0,3,3,2,-3,0,1,3,1,1,3,0,-1,-3]},{"name":"Interesting Story","values":[2,1,1,1,-1,1,2,1,1,0,-1,0,1,1,null,3,null,null,1,0,2,1,1,1,0,1,2,1,1,5,3]}]}
+  function CampDataBuilder(personalities = []) {
+    var res = {},
+        p = Array.isArray(personalities) ? personalities : [-1, -1];
+    
+    for (var i = 0; i < CampData.topics.length; i++) {
+        var topic = CampData.topics[i];
+        res[topic.name] = Math.max(topic.values[p[0]] || 0, 0) + Math.max(topic.values[p[1]] || 0, 0);
+    }
+    return res;
+  }
+
+
     var app = new Vue({
         el: '#app',
         components: {
@@ -6502,8 +6515,12 @@ if (!Object.values) {
           ).then((data, cData) => {
             var db = {}
             for (var hero in cData[0]) {
-              if (data[0][hero])
+              if (data[0][hero] && cData[0][hero].camping) {
+                if (!cData[0][hero].camping.values) {
+                  cData[0][hero].camping.values = CampDataBuilder(cData[0][hero].camping.personalities);
+                }
                 db[hero] = Object.assign({}, cData[0][hero], data[0][hero])
+              }
             }
             this.HeroDB = db;
             if (!urlParams.get("camproster")) { // get roster from file

@@ -2900,5 +2900,16 @@
         "role": "assassin",
         "sex": 1,
         "zodiac": "scorpion"
+    },
+    "benimaru": {
+        "id": "c1146",
+        "_id": "benimaru",
+        "name": "Benimaru",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "archer",
+        "limited": true
     }
 }

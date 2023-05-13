@@ -116,6 +116,16 @@
         "role": "knight",
         "gacha": true
     },
+    "benimarus-tachi": {
+        "_id": "benimarus-tachi",
+        "id": "art0180",
+        "identifier": "",
+        "name": "Benimaru's Tachi",
+        "rarity": 5,
+        "role": "warrior",
+        "gacha": true,
+        "limited": true
+    },
     "black-hand-of-the-goddess": {
         "_id": "black-hand-of-the-goddess",
         "id": "art0088",
