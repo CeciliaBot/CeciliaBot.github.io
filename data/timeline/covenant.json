@@ -6821,7 +6821,7 @@
    },
    {
       "nid": 9447354,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2023-05-04T03:00:00Z",
          "2023-05-18T02:59:59Z"
@@ -6840,7 +6840,7 @@
    },
    {
       "nid": 9447356,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2023-05-04T03:00:00Z",
          "2023-05-18T02:59:59Z"
@@ -6859,28 +6859,30 @@
    },
    {
       "nid": 9462992,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2023-05-11T09:00:00Z",
          "2023-05-25T02:59:59Z"
       ],
       "c": [
          {
-            "id": "benimaru"
+            "id": "benimaru",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "benimarus-tachi"
+            "id": "benimarus-tachi",
+            "new": true
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/e0603f51e4b94a74890b2025025f2279/d88e498e2c7b4b9a88d9f415675a622b.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9478554,
       "type": "covenant",
       "dt": [
-         "2023-05-18T09:00:00Z",
+         "2023-05-18T03:00:00Z",
          "2023-05-25T02:59:59Z"
       ],
       "c": [
@@ -6891,6 +6893,84 @@
       "a": [
          {
             "id": "elbris-ritual-sword"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/99de654a7a6941158a145be17f875840/2818207aa32e4aaeb95c6ceaa7446626.jpg"
+   },
+   {
+      "nid": 9491066,
+      "type": "covenant",
+      "dt": [
+         "2023-05-25T09:00:00Z",
+         "2023-06-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "kise"
+         }
+      ],
+      "a": [
+         {
+            "id": "alabastron"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/2747697454d24a92a0a0bf009479fecf/f897d77d623444909b1bda362c0fdd9b.jpg"
+   },
+   {
+      "nid": 9491079,
+      "type": "covenant",
+      "dt": [
+         "2023-05-25T09:00:00Z",
+         "2023-06-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "zahhak"
+         }
+      ],
+      "a": [
+         {
+            "id": "pure-white-trust"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/82cee1338bfc425fa556317afdbc0bbc/98c5593ac5fe4b019199f47f8b7310c2.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-06-01T03:00:00Z",
+         "2023-06-08T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ludwig"
+         }
+      ],
+      "a": [
+         {
+            "id": "time-matter"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-06-01T03:00:00Z",
+         "2023-06-15T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "abigail",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "golden-rose",
+            "new": true
          }
       ],
       "thumbnail": ""

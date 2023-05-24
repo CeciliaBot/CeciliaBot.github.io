@@ -1322,10 +1322,39 @@
       ],
       "c": [
          {
-            "id": "twisted-eidolon-kayron"
+            "id": "twisted-eidolon-kayron",
+            "new": true
          },
          {
             "id": "shadow-rose"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-06-01T03:00:00Z",
+         "2023-06-22T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "top-model-luluca"
+         },
+         {
+            "id": "last-rider-krau"
+         },
+         {
+            "id": "dark-corvus"
+         },
+         {
+            "id": "blood-moon-haste"
+         },
+         {
+            "id": "last-piece-karin",
+            "new": true
          }
       ],
       "a": [],
