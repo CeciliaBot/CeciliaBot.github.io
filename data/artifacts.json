@@ -392,6 +392,15 @@
         "role": "assassin",
         "gacha": true
     },
+    "golden-rose": {
+        "_id": "golden-rose",
+        "id": "art0181",
+        "identifier": "",
+        "name": "Golden Rose",
+        "rarity": 5,
+        "role": "warrior",
+        "gacha": true
+    },
     "guardian-ice-crystal": {
         "_id": "guardian-ice-crystal",
         "id": "art0134",

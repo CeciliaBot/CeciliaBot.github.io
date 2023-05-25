@@ -978,5 +978,31 @@
             }
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/88b746e082864cb5a7a936cd08ed64de/60af76f916a048a2a1b69fee5584b05c.jpg"
+    },
+    {
+        "nid": 9491052,
+        "type": "shop",
+        "dt": [
+            "2023-05-25T09:00:00Z"
+        ],
+        "name": "Shop",
+        "c": [
+            {
+                "id": "apocalypse-ravi"
+            }
+        ]
+    },
+    {
+        "nid": 9491052,
+        "type": "rta_skin",
+        "dt": [
+            "2023-05-27T05:00:00Z"
+        ],
+        "c": [
+            {
+                "id": "mediator-kawerik",
+                "new": true
+            }
+        ]
     }
 ]

@@ -2911,5 +2911,25 @@
         "sex": 1,
         "zodiac": "archer",
         "limited": true
+    },
+    "abigail": {
+        "id": "c1144",
+        "_id": "abigail",
+        "name": "abigail",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "last-piece-karin": {
+        "id": "c6011",
+        "_id": "last-piece-karin",
+        "name": "Last Piece Karin",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "ram"
     }
 }

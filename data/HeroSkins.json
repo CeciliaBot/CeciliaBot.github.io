@@ -290,5 +290,12 @@
             "_id": "ran-pure-white-heart",
             "name": "Pure White Heart"
         }
+    ],
+    "mediator-kawerik": [
+        {
+            "id": "c2073_s01",
+            "_id": "mediator-kawerik-calamitys-equilibrium",
+            "name": "Calamity's Equilibrium"
+        }
     ]
 }

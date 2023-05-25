@@ -8649,5 +8649,49 @@
         "common": [
             "aoe"
         ]
+    },
+    "abigail": {
+        "camping": {
+            "personalities": [
+                0,
+                13
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Happy Memories"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "last-piece-karin": {
+        "camping": {
+            "personalities": [
+                4,
+                8
+            ],
+            "topics": [
+                "Heoric Tale",
+                "Gossip"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
