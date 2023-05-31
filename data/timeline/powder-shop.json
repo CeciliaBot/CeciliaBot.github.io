@@ -1,5 +1,19 @@
 [
   {
+    "nid": 9503906,
+    "dt": [1685588400000, 1688180399000],
+    "a": [
+      { "id": "durandal" },
+      { "id": "crown-of-glory" },
+      { "id": "sword-of-winter-shadow" },
+      { "id": "doctors-bag" },
+      { "id": "strak-gauntlet" },
+      { "id": "aurius" },
+      { "id": "barthezs-orbuculum" },
+      { "id": "magarahas-tome" }
+    ]
+  },
+  {
     "nid": 9422834,
     "dt": [1681959600000, 1685588399000],
     "a": [

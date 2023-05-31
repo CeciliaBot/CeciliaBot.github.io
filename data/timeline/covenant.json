@@ -6936,7 +6936,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/82cee1338bfc425fa556317afdbc0bbc/98c5593ac5fe4b019199f47f8b7310c2.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9504300,
       "type": "covenant",
       "dt": [
          "2023-06-01T03:00:00Z",
@@ -6952,10 +6952,10 @@
             "id": "time-matter"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/a7fd1211fa924261b206b96e0b6114ea/f2a127d32e074278a051f77427d4e673.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9504313,
       "type": "covenant",
       "dt": [
          "2023-06-01T03:00:00Z",
@@ -6973,6 +6973,6 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/bae0a5770a4b4196901820ca514749a4/f719ce32b3694e3aa5d7e2910c805026.jpg"
    }
 ]
