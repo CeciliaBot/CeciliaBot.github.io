@@ -401,11 +401,11 @@
         "role": "warrior",
         "gacha": true
     },
-    "guardian-ice-crystal": {
-        "_id": "guardian-ice-crystal",
+    "guardian-ice-crystals": {
+        "_id": "guardian-ice-crystals",
         "id": "art0134",
         "identifier": "",
-        "name": "Guardian Ice Crystal",
+        "name": "Guardian Ice Crystals",
         "rarity": 5,
         "role": "manauser",
         "limited": true,

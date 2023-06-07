@@ -2931,5 +2931,15 @@
         "role": "assassin",
         "sex": 2,
         "zodiac": "ram"
+    },
+    "requiem-roana": {
+        "id": "c2102",
+        "_id": "requiem-roana",
+        "name": "Requiem Roana",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "waterbearer"
     }
 }

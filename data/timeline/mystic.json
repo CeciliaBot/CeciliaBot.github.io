@@ -1359,5 +1359,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-06-22T09:00:00Z",
+         "2023-07-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "requiem-roana",
+            "new": true
+         },
+         {
+            "id": "general-purrgis"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
