@@ -6976,7 +6976,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/bae0a5770a4b4196901820ca514749a4/f719ce32b3694e3aa5d7e2910c805026.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9517507,
       "type": "covenant",
       "dt": [
          "2023-06-08T09:00:00Z",
@@ -6992,10 +6992,10 @@
             "id": "knowledge-seed"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/2f314901ec73470d82acfd320b4d3803/8e44a58bf2a14adc9ca9aa8432f53c32.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9530803,
       "type": "covenant",
       "dt": [
          "2023-06-15T03:00:00Z",
@@ -7011,11 +7011,11 @@
             "id": "justice-for-all"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/90ee8df875cf49259fd8d8f92d2ec5a3/7c16acd81d4c411faebab79d61028a1a.jpg"
    },
    {
-      "nid": 0,
-      "type": "covenant",
+      "nid": 9530811,
+      "type": "limited",
       "dt": [
          "2023-06-15T03:00:00Z",
          "2023-06-29T02:59:59Z"
@@ -7028,6 +7028,63 @@
       "a": [
          {
             "id": "mature-sunglasses"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/4800ff5e0cac446080583c2f2fb0bd23/f4b6f18fbb6b48e3a9cb86f58ae611e1.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-06-22T05:00:00Z",
+         "2023-06-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "peira"
+         }
+      ],
+      "a": [
+         {
+            "id": "goblet-of-oath"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-06-29T03:00:00Z",
+         "2023-07-06T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "senya"
+         }
+      ],
+      "a": [
+         {
+            "id": "spear-of-a-new-dawn"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-06-29T03:00:00Z",
+         "2023-07-06T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "hwayoung"
+         }
+      ],
+      "a": [
+         {
+            "id": "indestructible-gaiters"
          }
       ],
       "thumbnail": ""

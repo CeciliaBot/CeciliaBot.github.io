@@ -120,7 +120,8 @@
     {
         "nid": [
             9327653,
-            9463000
+            9463000,
+            9545732
         ],
         "type": "season",
         "dt": [
@@ -129,5 +130,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/457c87d7d3704a1ca5776a7dac41fcb4/a1dcd5aa9f804d25a8dca6f89cbb467e.jpg",
         "name": "World Arena Indomitable Season (Season 10)"
+    },
+    {
+        "nid": [
+            9546011
+        ],
+        "type": "season",
+        "dt": [
+            1687582800000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/b853a0c0c7914990a37fd0a0ce601b0a/1559b114d1bb4b7bbb420101b15080ee.jpg",
+        "name": "World Arena Valorous Season (Season 11)"
     }
 ]

@@ -297,5 +297,12 @@
             "_id": "mediator-kawerik-calamitys-equilibrium",
             "name": "Calamity's Equilibrium"
         }
+    ],
+    "free-spirit-tieria": [
+        {
+            "id": "c3026_s01",
+            "_id": "free-spirit-tieria-red-lotus-fighter",
+            "name": "Red Lotus Fighter"
+        }
     ]
 }
