@@ -1004,5 +1004,18 @@
                 "new": true
             }
         ]
+    },
+    {
+        "nid": 9546011,
+        "type": "skin",
+        "dt": [
+            "2023-06-22T09:00:00Z"
+        ],
+        "c": [
+            {
+                "id": "free-spirit-tiera",
+                "new": true
+            }
+        ]
     }
 ]
