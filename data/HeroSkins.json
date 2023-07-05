@@ -304,5 +304,12 @@
             "_id": "free-spirit-tieria-red-lotus-fighter",
             "name": "Red Lotus Fighter"
         }
+    ],
+    "celine": [
+        {
+            "id": "c1103_s01",
+            "_id": "celine-sparkling-summer",
+            "name": "Sparkling Summer"
+        }
     ]
 }

@@ -748,6 +748,16 @@
         "role": "warrior",
         "gacha": true
     },
+    "sole-consolation": {
+        "_id": "sole-consolation",
+        "id": "art0182",
+        "identifier": "",
+        "name": "Sole Consolation",
+        "rarity": 5,
+        "role": "manauser",
+        "gacha": true,
+        "limited": true
+    },
     "song-of-stars": {
         "_id": "song-of-stars",
         "id": "art5_2",

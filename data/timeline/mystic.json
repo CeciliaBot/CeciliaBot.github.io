@@ -1378,5 +1378,29 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-07-13T03:00:00Z",
+         "2023-08-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "operator-sigret"
+         },
+         {
+            "id": "archdemons-shadow"
+         },
+         {
+            "id": "designer-lilibet"
+         },
+         {
+            "id": "sylvan-sage-vivian"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

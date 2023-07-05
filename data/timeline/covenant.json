@@ -7033,7 +7033,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/4800ff5e0cac446080583c2f2fb0bd23/f4b6f18fbb6b48e3a9cb86f58ae611e1.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9544180,
       "type": "covenant",
       "dt": [
          "2023-06-22T05:00:00Z",
@@ -7049,10 +7049,10 @@
             "id": "goblet-of-oath"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/b415d612e130407fa587632d078f53b6/088df39ffb2a417cb0108fbdd343aa6b.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9561093,
       "type": "covenant",
       "dt": [
          "2023-06-29T03:00:00Z",
@@ -7068,10 +7068,10 @@
             "id": "spear-of-a-new-dawn"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/1e4ffa07c9fe447db5b8e7bf8d12e633/d6b7120a09454f39ab9fc3f672e972a5.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9561103,
       "type": "covenant",
       "dt": [
          "2023-06-29T03:00:00Z",
@@ -7085,6 +7085,65 @@
       "a": [
          {
             "id": "indestructible-gaiters"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/ab110a58e43e4c96aeb8e5a40c281203/ff4de1a238dd42ab92c398846a8fe23c.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-07-06T09:00:00Z",
+         "2023-07-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "celine"
+         }
+      ],
+      "a": [
+         {
+            "id": "secret-art-storm-sword"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2023-07-06T09:00:00Z",
+         "2023-07-20T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ocean-breeze-luluca",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "sole-consolation",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-07-13T03:00:00Z",
+         "2023-07-20T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "violet"
+         }
+      ],
+      "a": [
+         {
+            "id": "violet-talisman"
          }
       ],
       "thumbnail": ""

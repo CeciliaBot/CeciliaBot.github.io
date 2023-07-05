@@ -2941,5 +2941,15 @@
         "role": "mage",
         "sex": 2,
         "zodiac": "waterbearer"
+    },
+    "ocean-breeze-luluca": {
+        "id": "c5082",
+        "_id": "ocean-breeze-luluca",
+        "name": "Ocean Breeze Luluca",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "twins"
     }
 }
