@@ -8693,5 +8693,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "ocean-breeze-luluca": {
+        "camping": {
+            "personalities": [
+                3,
+                28
+            ],
+            "topics": [
+                "Self-Indulgent",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

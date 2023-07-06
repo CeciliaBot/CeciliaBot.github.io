@@ -2951,5 +2951,15 @@
         "role": "manauser",
         "sex": 2,
         "zodiac": "twins"
+    },
+    "lethe": {
+        "id": "c5149",
+        "_id": "lethe",
+        "name": "Lethe",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "maiden"
     }
 }
