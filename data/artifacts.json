@@ -584,6 +584,16 @@
         "role": "ranger",
         "gacha": false
     },
+    "prayer-of-solitude": {
+        "_id": "prayer-of-solitude",
+        "id": "art0183",
+        "identifier": "",
+        "name": "Prayer of Solitude",
+        "rarity": 5,
+        "role": "warrior",
+        "gacha": true,
+        "limited": true
+    },
     "proof-of-valor": {
         "_id": "proof-of-valor",
         "id": "art0051",

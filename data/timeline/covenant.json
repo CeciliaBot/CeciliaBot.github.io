@@ -7090,7 +7090,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/ab110a58e43e4c96aeb8e5a40c281203/ff4de1a238dd42ab92c398846a8fe23c.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9577046,
       "type": "covenant",
       "dt": [
          "2023-07-06T09:00:00Z",
@@ -7106,10 +7106,10 @@
             "id": "secret-art-storm-sword"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/74d907cf723c45b489f9953f7120817a.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9577065,
       "type": "limited",
       "dt": [
          "2023-07-06T09:00:00Z",
@@ -7127,10 +7127,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/780a2dd005484a2bb383713af39ee004.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9595090,
       "type": "covenant",
       "dt": [
          "2023-07-13T03:00:00Z",
@@ -7144,6 +7144,82 @@
       "a": [
          {
             "id": "violet-talisman"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9899e295880f4c1994ac759760cf0e30.jpg"
+   },
+   {
+      "nid": 9612173,
+      "type": "covenant",
+      "dt": [
+         "2023-07-20T09:00:00Z",
+         "2023-08-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lethe"
+         }
+      ],
+      "a": [
+         {
+            "id": "prayer-of-solitude"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/faf9f6e93d8a403da8f4f3a31c0d4cba.jpg"
+   },
+   {
+      "nid": 9609119,
+      "type": "covenant",
+      "dt": [
+         "2023-07-20T09:00:00Z",
+         "2023-07-27T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "pavel"
+         }
+      ],
+      "a": [
+         {
+            "id": "dux-noctis"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2018a622b7954e1ca220c9addec2310e.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-07-27T03:00:00Z",
+         "2023-08-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "alencia"
+         }
+      ],
+      "a": [
+         {
+            "id": "alencinoxs-wrath"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-07-27T03:00:00Z",
+         "2023-08-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "alencia"
+         }
+      ],
+      "a": [
+         {
+            "id": "alencinoxs-wrath"
          }
       ],
       "thumbnail": ""

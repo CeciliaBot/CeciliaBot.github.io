@@ -2960,6 +2960,16 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "waterbearer"
+    },
+    "navy-captain-landy": {
+        "id": "c2109",
+        "_id": "navy-captain-landy",
+        "name": "Navy Captain Landy",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "leo"
     }
 }
