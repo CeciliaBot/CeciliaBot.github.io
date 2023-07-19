@@ -7204,24 +7204,5 @@
          }
       ],
       "thumbnail": ""
-   },
-   {
-      "nid": 0,
-      "type": "covenant",
-      "dt": [
-         "2023-07-27T03:00:00Z",
-         "2023-08-03T02:59:59Z"
-      ],
-      "c": [
-         {
-            "id": "alencia"
-         }
-      ],
-      "a": [
-         {
-            "id": "alencinoxs-wrath"
-         }
-      ],
-      "thumbnail": ""
    }
 ]
