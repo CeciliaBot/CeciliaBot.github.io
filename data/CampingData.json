@@ -8715,5 +8715,71 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "requiem-roana": {
+        "camping": {
+            "personalities": [
+                24,
+                27
+            ],
+            "topics": [
+                "Comforting Cheer",
+                "Sad Memory"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": [] 
+    },
+    "lethe": {
+        "camping": {
+            "personalities": [
+                0,
+                8
+            ],
+            "topics": [
+                "Unique Comment",
+                "Horror Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "navy-captain-landy": {
+        "camping": {
+            "personalities": [
+                28,
+                4
+            ],
+            "topics": [
+                "Belief",
+                "Sad Memory"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
