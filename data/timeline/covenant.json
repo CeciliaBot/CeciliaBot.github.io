@@ -7189,7 +7189,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2018a622b7954e1ca220c9addec2310e.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9630548,
       "type": "covenant",
       "dt": [
          "2023-07-27T03:00:00Z",
@@ -7205,19 +7205,90 @@
             "id": "alencinoxs-wrath"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1dca7dcddb7d46858984f5f6fd949a9b.jpg"
+   },
+   {
+      "nid": 9651734,
+      "type": "covenant",
+      "dt": [
+         "2023-08-03T09:00:00Z",
+         "2023-08-10T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "basar"
+         }
+      ],
+      "a": [
+         {
+            "id": "abyssal-crown"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/458cb32458b3457ea0e3ba9e7a89a822.jpg"
+   },
+   {
+      "nid": 9651698,
+      "type": "limited",
+      "dt": [
+         "2023-08-03T09:00:00Z",
+         "2023-08-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "landy"
+         }
+      ],
+      "a": [
+         {
+            "id": "wall-of-order"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/471fa9968ea8423a83d643804f219aab.jpg"
    },
    {
       "nid": 0,
       "type": "limited",
       "dt": [
-         "2023-08-10T03:00:00Z",
+         "2023-08-10T09:00:00Z",
          "2023-08-24T02:59:59Z"
       ],
-      "name": "Guilty Gear Collab",
-      "c": [],
-      "a": [],
+<<<<<<< HEAD
+      "name": "Guilty Gear Collab (Custom Group Summon)",
+      "c": [
+         {
+            "id": "dizzy"
+         },
+         {
+            "id": "baiken"
+         },
+         {
+            "id": "elphelt"
+         },
+         {
+            "id": "jacko"
+         },
+         {
+            "id": "elphelt"
+         }
+      ],
+      "a": [
+         {
+            "id": "necro-undine"
+         },
+         {
+            "id": "torn-sleeve"
+         },
+         {
+            "id": "ms-confille"
+         },
+         {
+            "id": "jackos-symbol"
+         }
+      ],
       "thumbnail": ""
+=======
+      "name": "Guilty Gear Collab"
+>>>>>>> 87eb98c8cfaec97e035c7e671e95aea6393e3d97
    },
    {
       "nid": 0,
@@ -7226,9 +7297,6 @@
          "2023-08-17T03:00:00Z",
          "2023-08-31T02:59:59Z"
       ],
-      "name": "Re:ZERO Collab",
-      "c": [],
-      "a": [],
-      "thumbnail": ""
+      "name": "Re:ZERO Collab"
    }
 ]
