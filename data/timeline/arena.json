@@ -191,5 +191,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/a6d988f3723d4382aced23e7f8971dc6/c7c4f1f415994664a91802a02d68df27.jpg",
         "name": "Arena Valorous Season (Seasaon 15)"
+    },
+    {
+        "nid": [
+            9689764
+        ],
+        "type": "season",
+        "dt": [
+            1692612000000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ee9b2ad32d984a55aa2f3260f83af625.jpg",
+        "name": "Arena Insight Season (Seasaon 16)"
     }
 ]

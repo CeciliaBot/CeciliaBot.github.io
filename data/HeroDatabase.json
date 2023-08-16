@@ -2971,5 +2971,15 @@
         "role": "knight",
         "sex": 2,
         "zodiac": "leo"
+    },
+    "infinite-horizon-achates": {
+        "id": "c60017",
+        "_id": "infinite-horizon-achates",
+        "name": "Infinite Horizon Achates",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish"
     }
 }
