@@ -8714,7 +8714,10 @@
         ],
         "buffs": [],
         "debuffs": [],
-        "common": []
+        "common": [
+            "aoe",
+            "cleanse"
+        ]
     },
     "requiem-roana": {
         "camping": {
@@ -8736,7 +8739,9 @@
         ],
         "buffs": [],
         "debuffs": [],
-        "common": [] 
+        "common": [
+            "aoe"
+        ] 
     },
     "lethe": {
         "camping": {
@@ -8758,7 +8763,9 @@
         ],
         "buffs": [],
         "debuffs": [],
-        "common": []
+        "common": [
+            "aoe"
+        ]
     },
     "navy-captain-landy": {
         "camping": {
@@ -8780,6 +8787,32 @@
         ],
         "buffs": [],
         "debuffs": [],
-        "common": []
+        "common": [
+            "aoe"
+        ]
+    },
+    "infinite-horizon-achates": {
+        "camping": {
+            "personalities": [
+                30,
+                24
+            ],
+            "topics": [
+                "Advice",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": [
+            "cleanse"
+        ]
     }
 }
