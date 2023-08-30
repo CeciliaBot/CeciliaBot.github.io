@@ -2915,7 +2915,7 @@
     "abigail": {
         "id": "c1144",
         "_id": "abigail",
-        "name": "abigail",
+        "name": "Abigail",
         "rarity": 5,
         "attribute": "fire",
         "role": "warrior",
@@ -2981,5 +2981,35 @@
         "role": "manauser",
         "sex": 2,
         "zodiac": "fish"
+    },
+    "brieg": {
+        "id": "c1145",
+        "_id": "brieg",
+        "name": "Brieg",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "veronica": {
+        "id": "c1146",
+        "_id": "veronica",
+        "name": "Veronica",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "urban-shadow-choux": {
+        "id": "c2101",
+        "_id": "urban-shadow-choux",
+        "name": "Urban Shadow Choux",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "ram"
     }
 }

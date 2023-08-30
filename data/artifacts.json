@@ -162,6 +162,15 @@
         "role": "warrior",
         "gacha": true
     },
+    "broken-will-of-the-priest": {
+        "_id": "broken-will-of-the-priest",
+        "id": "art0184",
+        "identifier": "",
+        "name": "Broken Will of the Priest",
+        "rarity": 5,
+        "role": "knight",
+        "gacha": true
+    },
     "celestine": {
         "_id": "celestine",
         "id": "art0032",
@@ -1337,6 +1346,16 @@
         "id": "art0064",
         "identifier": "ef405",
         "name": "One Year of Gratitude",
+        "rarity": 4,
+        "role": "",
+        "limited": true,
+        "gacha": false
+    },
+    "our-beautiful-seasons": {
+        "_id": "our-beautiful-seasons",
+        "id": "art0000",
+        "identifier": "",
+        "name": "Our Beautiful Seasons",
         "rarity": 4,
         "role": "",
         "limited": true,

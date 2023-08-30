@@ -7265,9 +7265,6 @@
          },
          {
             "id": "jacko"
-         },
-         {
-            "id": "elphelt"
          }
       ],
       "a": [
@@ -7323,5 +7320,62 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d39c370cd51947068e36377ded041f6e.jpg"
+   },
+   {
+      "nid": 9719108,
+      "type": "covenant",
+      "dt": [
+         "2023-08-31T09:00:00Z",
+         "2023-09-07T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "roana"
+         }
+      ],
+      "a": [
+         {
+            "id": "touch-of-rekos"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c8c62545759c42448f4862dacbfb7f02.jpg"
+   },
+   {
+      "nid": 9719293,
+      "type": "covenant",
+      "dt": [
+         "2023-08-31T09:00:00Z",
+         "2023-09-07T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "krau"
+         }
+      ],
+      "a": [
+         {
+            "id": "holy-sacrifice"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a6b7fa9d7b0348c1a454b6f74331fe8e.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-09-07T03:00:00Z",
+         "2023-09-21T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "brieg"
+         }
+      ],
+      "a": [
+         {
+            "id": "broken-will-of-the-priest"
+         }
+      ],
+      "thumbnail": ""
    }
 ]

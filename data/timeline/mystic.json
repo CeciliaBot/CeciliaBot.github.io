@@ -1452,5 +1452,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-09-14T03:00:00Z",
+         "2023-10-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "urban-shadow-choux",
+            "new": true
+         },
+         {
+            "id": "sinful-angelica"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
