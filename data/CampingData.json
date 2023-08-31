@@ -8814,5 +8814,71 @@
         "common": [
             "cleanse"
         ]
+    },
+    "brieg": {
+        "camping": {
+            "personalities": [
+                7,
+                28
+            ],
+            "topics": [
+                "Happy Memories",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "veronica": {
+        "camping": {
+            "personalities": [
+                0,
+                7
+            ],
+            "topics": [
+                "Heroic Cheer",
+                "Joyful Memory"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "urban-shadow-choux": {
+        "camping": {
+            "personalities": [
+                23,
+                11
+            ],
+            "topics": [
+                "Complain",
+                "Criticism"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
