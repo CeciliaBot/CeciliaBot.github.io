@@ -7360,7 +7360,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a6b7fa9d7b0348c1a454b6f74331fe8e.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9733780,
       "type": "covenant",
       "dt": [
          "2023-09-07T03:00:00Z",
@@ -7368,14 +7368,35 @@
       ],
       "c": [
          {
-            "id": "brieg"
+            "id": "brieg",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "broken-will-of-the-priest"
+            "id": "broken-will-of-the-priest",
+            "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/920c1a57f6d242f597a5799f5ab32351.jpg"
+   },
+   {
+      "nid": 9733784,
+      "type": "covenant",
+      "dt": [
+         "2023-09-07T03:00:00Z",
+         "2023-09-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "chloe"
+         }
+      ],
+      "a": [
+         {
+            "id": "a-little-queens-huge-crown"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/025ea1cd72cd4099856bcd21e0cd4e57.jpg"
    }
 ]
