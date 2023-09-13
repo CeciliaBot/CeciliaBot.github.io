@@ -446,6 +446,15 @@
         "role": "knight",
         "gacha": true
     },
+    "hostess-of-the-banquet": {
+        "_id": "hostess-of-the-banquet",
+        "id": "art0186",
+        "identifier": "",
+        "name": "Hostess of the Banquet",
+        "rarity": 5,
+        "role": "assassin",
+        "gacha": true
+    },
     "idols-cheer": {
         "_id": "idols-cheer",
         "id": "art0039",

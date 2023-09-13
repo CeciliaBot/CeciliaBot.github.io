@@ -311,5 +311,12 @@
             "_id": "celine-sparkling-summer",
             "name": "Sparkling Summer"
         }
+    ],
+    "last-rider-krau": [
+        {
+            "id": "c2070_s01",
+            "_id": "last-rider-krau-hidden-piece",
+            "name": "Hidden Piece"
+        }
     ]
 }

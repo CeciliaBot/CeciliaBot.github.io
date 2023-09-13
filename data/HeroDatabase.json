@@ -3011,5 +3011,15 @@
         "role": "warrior",
         "sex": 2,
         "zodiac": "ram"
+    },
+    "midnight-gala-lilias": {
+        "id": "c5089",
+        "_id": "midnight-gala-lilias",
+        "name": "Midnight Gala Lilias",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "scales"
     }
 }
