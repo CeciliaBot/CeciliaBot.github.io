@@ -154,5 +154,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/a0268f947f1e4548a09964a84fe2d1a3/97bd29209e9044e69108502107c88709.jpg",
         "name": "Guild War Valorous Season (Season 12)"
+    },
+    {
+        "nid": [
+            9744111
+        ],
+        "type": "season",
+        "dt": [
+            1694858400000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/55f1948572224d289e8b3561153bcc5d.jpg",
+        "name": "Guild War Valorous Season (Season 13)"
     }
 ]
