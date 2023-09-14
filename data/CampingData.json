@@ -8880,5 +8880,29 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "midnight-gala-lilias": {
+        "camping": {
+            "personalities": [
+                7,
+                10
+            ],
+            "topics": [
+                "Self-Indulgent",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [
+            1
+        ],
+        "debuffs": [],
+        "common": []
     }
 }
