@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkv3"]=self["webpackChunkv3"]||[]).push([[2772],{7966:function(n,u,e){e.r(u),e.d(u,{default:function(){return d}});var r=e(6252);function t(n,u,e,t,o,a){return(0,r.wg)(),(0,r.iD)("div",null,"404 Not found")}var o={name:"NotFoundIndex"},a=e(3744);const c=(0,a.Z)(o,[["render",t]]);var d=c}}]);
