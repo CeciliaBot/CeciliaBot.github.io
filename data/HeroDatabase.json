@@ -7,7 +7,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "ambitious-tywin": {
         "id": "c2042",
@@ -17,7 +20,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "apocalypse-ravi": {
         "id": "c2019",
@@ -27,7 +33,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "aramintha": {
         "id": "c1048",
@@ -37,7 +46,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "arbiter-vildred": {
         "id": "c2007",
@@ -47,7 +59,10 @@
         "attribute": "dark",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "archdemons-shadow": {
         "id": "c5004",
@@ -57,7 +72,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "baal-sezan": {
         "id": "c1015",
@@ -67,7 +85,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "baiken": {
         "id": "c1093",
@@ -77,7 +98,12 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "basar": {
         "id": "c1053",
@@ -87,7 +113,10 @@
         "attribute": "wind",
         "role": "mage",
         "sex": 1,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "bellona": {
         "id": "c1071",
@@ -97,7 +126,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "blood-moon-haste": {
         "id": "c2039",
@@ -107,7 +139,10 @@
         "attribute": "dark",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "bomb-model-kanna": {
         "id": "c1097",
@@ -117,7 +152,10 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "briar-witch-iseria": {
         "id": "c2024",
@@ -127,7 +165,10 @@
         "attribute": "dark",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "cecilia": {
         "id": "c1002",
@@ -137,7 +178,10 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "celine": {
         "id": "c1103",
@@ -147,7 +191,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "cerise": {
         "id": "c1081",
@@ -157,7 +204,10 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "cermia": {
         "id": "c1079",
@@ -167,7 +217,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "charles": {
         "id": "c1027",
@@ -177,7 +230,10 @@
         "attribute": "wind",
         "role": "knight",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "charlotte": {
         "id": "c1009",
@@ -187,7 +243,10 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "chloe": {
         "id": "c1049",
@@ -197,7 +256,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "choux": {
         "id": "c1101",
@@ -207,7 +269,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "dark-corvus": {
         "id": "c2012",
@@ -217,7 +282,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "desert-jewel-basar": {
         "id": "c2053",
@@ -227,7 +295,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "designer-lilibet": {
         "id": "c2095",
@@ -237,7 +308,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "destina": {
         "id": "c2022",
@@ -247,7 +321,10 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "diene": {
         "id": "c1076",
@@ -257,7 +334,11 @@
         "attribute": "ice",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0,
+            1
+        ]
     },
     "dizzy": {
         "id": "c1094",
@@ -267,7 +348,12 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "eda": {
         "id": "c1111",
@@ -277,7 +363,10 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "elena": {
         "id": "c1091",
@@ -287,7 +376,10 @@
         "attribute": "ice",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "elphelt": {
         "id": "c1105",
@@ -297,7 +389,12 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "ervalen": {
         "id": "c1108",
@@ -307,7 +404,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "fairytale-tenebria": {
         "id": "c5050",
@@ -317,7 +417,11 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0,
+            1
+        ]
     },
     "faithless-lidica": {
         "id": "c2046",
@@ -327,7 +431,10 @@
         "attribute": "light",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "fallen-cecilia": {
         "id": "c2002",
@@ -337,7 +444,10 @@
         "attribute": "dark",
         "role": "knight",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "flan": {
         "id": "c1110",
@@ -347,7 +457,10 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "haste": {
         "id": "c1039",
@@ -357,7 +470,10 @@
         "attribute": "fire",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "holiday-yufine": {
         "id": "c5016",
@@ -367,7 +483,11 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0,
+            1
+        ]
     },
     "iseria": {
         "id": "c1024",
@@ -377,7 +497,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "judge-kise": {
         "id": "c2006",
@@ -387,7 +510,10 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "kawerik": {
         "id": "c1073",
@@ -397,7 +523,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 1,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "kayron": {
         "id": "c1023",
@@ -407,7 +536,10 @@
         "attribute": "fire",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "ken": {
         "id": "c1047",
@@ -417,7 +549,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "kise": {
         "id": "c1006",
@@ -427,7 +562,10 @@
         "attribute": "ice",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "krau": {
         "id": "c1070",
@@ -437,7 +575,10 @@
         "attribute": "ice",
         "role": "knight",
         "sex": 1,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "landy": {
         "id": "c1109",
@@ -447,7 +588,11 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0,
+            1
+        ]
     },
     "last-rider-krau": {
         "id": "c2070",
@@ -457,7 +602,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 1,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "lidica": {
         "id": "c1046",
@@ -467,7 +615,10 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "lilias": {
         "id": "c1089",
@@ -477,7 +628,10 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "lilibet": {
         "id": "c1095",
@@ -487,7 +641,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "little-queen-charlotte": {
         "id": "c2009",
@@ -497,7 +654,10 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "ludwig": {
         "id": "c1069",
@@ -507,7 +667,10 @@
         "attribute": "wind",
         "role": "mage",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "luluca": {
         "id": "c1082",
@@ -517,7 +680,10 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "luna": {
         "id": "c1066",
@@ -527,7 +693,11 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0,
+            1
+        ]
     },
     "maid-chloe": {
         "id": "c2049",
@@ -537,7 +707,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "martial-artist-ken": {
         "id": "c2047",
@@ -547,7 +720,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "mediator-kawerik": {
         "id": "c2073",
@@ -557,7 +733,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "melissa": {
         "id": "c1096",
@@ -567,7 +746,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "mort": {
         "id": "c1104",
@@ -577,7 +759,10 @@
         "attribute": "wind",
         "role": "knight",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "mui": {
         "id": "c1044",
@@ -587,7 +772,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "operator-sigret": {
         "id": "c2072",
@@ -597,7 +785,10 @@
         "attribute": "dark",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "pavel": {
         "id": "c1080",
@@ -607,7 +798,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "politis": {
         "id": "c1112",
@@ -617,7 +811,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "ravi": {
         "id": "c1019",
@@ -627,7 +824,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "ray": {
         "id": "c1090",
@@ -637,7 +837,10 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "remnant-violet": {
         "id": "c2074",
@@ -647,7 +850,10 @@
         "attribute": "dark",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "roana": {
         "id": "c1102",
@@ -657,7 +863,10 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "ruele-of-light": {
         "id": "c1022",
@@ -667,7 +876,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "sage-baal-sezan": {
         "id": "c2015",
@@ -677,7 +889,10 @@
         "attribute": "light",
         "role": "mage",
         "sex": 1,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "seaside-bellona": {
         "id": "c5071",
@@ -687,7 +902,11 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0,
+            1
+        ]
     },
     "senya": {
         "id": "c1106",
@@ -697,7 +916,10 @@
         "attribute": "wind",
         "role": "knight",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "sez": {
         "id": "c1038",
@@ -707,7 +929,10 @@
         "attribute": "ice",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "sigret": {
         "id": "c1072",
@@ -717,7 +942,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "silver-blade-aramintha": {
         "id": "c2048",
@@ -727,7 +955,10 @@
         "attribute": "light",
         "role": "mage",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "sol": {
         "id": "c1092",
@@ -737,7 +968,11 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            1,
+            2
+        ]
     },
     "solitaria-of-the-snow": {
         "id": "c2111",
@@ -747,7 +982,10 @@
         "attribute": "light",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "specimen-sez": {
         "id": "c2038",
@@ -757,7 +995,10 @@
         "attribute": "light",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "specter-tenebria": {
         "id": "c2050",
@@ -767,7 +1008,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "tamarinne": {
         "id": "c1067",
@@ -777,7 +1021,10 @@
         "attribute": "fire",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "tenebria": {
         "id": "c1050",
@@ -787,7 +1034,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "top-model-luluca": {
         "id": "c2082",
@@ -797,7 +1047,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "tywin": {
         "id": "c1042",
@@ -807,7 +1060,10 @@
         "attribute": "ice",
         "role": "knight",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "vildred": {
         "id": "c1007",
@@ -817,7 +1073,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "violet": {
         "id": "c1074",
@@ -827,7 +1086,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "vivian": {
         "id": "c1088",
@@ -837,7 +1099,10 @@
         "attribute": "wind",
         "role": "mage",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "yufine": {
         "id": "c1016",
@@ -847,7 +1112,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "yuna": {
         "id": "c1030",
@@ -857,7 +1125,10 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "zeno": {
         "id": "c1083",
@@ -867,7 +1138,8 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 1,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": []
     },
     "achates": {
         "id": "c1017",
@@ -877,7 +1149,10 @@
         "attribute": "fire",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "angelica": {
         "id": "c1062",
@@ -887,7 +1162,10 @@
         "attribute": "ice",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "armin": {
         "id": "c1008",
@@ -897,7 +1175,10 @@
         "attribute": "wind",
         "role": "knight",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "assassin-cartuja": {
         "id": "c2013",
@@ -907,7 +1188,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "assassin-cidd": {
         "id": "c2014",
@@ -917,7 +1201,10 @@
         "attribute": "dark",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "assassin-coli": {
         "id": "c2033",
@@ -927,7 +1214,10 @@
         "attribute": "dark",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "auxiliary-lots": {
         "id": "c2031",
@@ -937,7 +1227,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 1,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "benevolent-romann": {
         "id": "c2043",
@@ -947,7 +1240,10 @@
         "attribute": "light",
         "role": "mage",
         "sex": 1,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "blaze-dingo": {
         "id": "c2021",
@@ -957,7 +1253,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "blood-blade-karin": {
         "id": "c2011",
@@ -967,7 +1266,10 @@
         "attribute": "dark",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "cartuja": {
         "id": "c1013",
@@ -977,7 +1279,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "celestial-mercedes": {
         "id": "c2005",
@@ -987,7 +1292,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "challenger-dominiel": {
         "id": "c2037",
@@ -997,7 +1305,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "champion-zerato": {
         "id": "c2010",
@@ -1007,7 +1318,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "cidd": {
         "id": "c1014",
@@ -1017,7 +1331,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "clarissa": {
         "id": "c1028",
@@ -1027,7 +1344,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "coli": {
         "id": "c1033",
@@ -1037,7 +1357,10 @@
         "attribute": "ice",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "corvus": {
         "id": "c1012",
@@ -1047,7 +1370,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "crescent-moon-rin": {
         "id": "c2054",
@@ -1057,7 +1383,10 @@
         "attribute": "dark",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "crimson-armin": {
         "id": "c2008",
@@ -1067,7 +1396,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "crozet": {
         "id": "c1036",
@@ -1077,7 +1409,10 @@
         "attribute": "ice",
         "role": "knight",
         "sex": 1,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "dingo": {
         "id": "c1021",
@@ -1087,7 +1422,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "dominiel": {
         "id": "c1037",
@@ -1097,7 +1435,10 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "fighter-maya": {
         "id": "c2032",
@@ -1107,7 +1448,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "free-spirit-tieria": {
         "id": "c3026",
@@ -1117,7 +1461,10 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "furious": {
         "id": "c1087",
@@ -1127,7 +1474,10 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "general-purrgis": {
         "id": "c2035",
@@ -1137,7 +1487,10 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "great-chief-khawana": {
         "id": "c2086",
@@ -1147,7 +1500,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "guider-aither": {
         "id": "c2018",
@@ -1157,7 +1513,10 @@
         "attribute": "light",
         "role": "mage",
         "sex": 1,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "karin": {
         "id": "c1011",
@@ -1167,7 +1526,10 @@
         "attribute": "ice",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "khawana": {
         "id": "c1086",
@@ -1177,7 +1539,10 @@
         "attribute": "fire",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "khawazu": {
         "id": "c1085",
@@ -1187,7 +1552,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "kitty-clarissa": {
         "id": "c2028",
@@ -1197,7 +1565,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "kizuna-ai": {
         "id": "c1107",
@@ -1207,7 +1578,11 @@
         "attribute": "fire",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            1,
+            2
+        ]
     },
     "leo": {
         "id": "c1029",
@@ -1217,7 +1592,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "lots": {
         "id": "c1031",
@@ -1227,7 +1605,10 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "maya": {
         "id": "c1032",
@@ -1237,7 +1618,10 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "mercedes": {
         "id": "c1005",
@@ -1247,7 +1631,8 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": []
     },
     "purrgis": {
         "id": "c1035",
@@ -1257,7 +1642,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "rin": {
         "id": "c1054",
@@ -1267,7 +1655,10 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "roaming-warrior-leo": {
         "id": "c2029",
@@ -1277,7 +1668,10 @@
         "attribute": "dark",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "romann": {
         "id": "c1043",
@@ -1287,7 +1681,10 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "rose": {
         "id": "c1003",
@@ -1297,7 +1694,10 @@
         "attribute": "ice",
         "role": "knight",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "schuri": {
         "id": "c1020",
@@ -1307,7 +1707,10 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "serila": {
         "id": "c1040",
@@ -1317,7 +1720,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "shadow-rose": {
         "id": "c2003",
@@ -1327,7 +1733,10 @@
         "attribute": "dark",
         "role": "knight",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "shooting-star-achates": {
         "id": "c2017",
@@ -1337,7 +1746,10 @@
         "attribute": "dark",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "silk": {
         "id": "c1004",
@@ -1347,7 +1759,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "sinful-angelica": {
         "id": "c2062",
@@ -1357,7 +1772,10 @@
         "attribute": "dark",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "surin": {
         "id": "c1065",
@@ -1367,7 +1785,10 @@
         "attribute": "fire",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "tempest-surin": {
         "id": "c2065",
@@ -1377,7 +1798,10 @@
         "attribute": "light",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "troublemaker-crozet": {
         "id": "c2036",
@@ -1387,7 +1811,10 @@
         "attribute": "dark",
         "role": "knight",
         "sex": 1,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "wanderer-silk": {
         "id": "c2004",
@@ -1397,7 +1824,10 @@
         "attribute": "light",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "watcher-schuri": {
         "id": "c2020",
@@ -1407,7 +1837,10 @@
         "attribute": "light",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "zerato": {
         "id": "c1010",
@@ -1417,7 +1850,10 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "adlay": {
         "id": "c3043",
@@ -1427,7 +1863,10 @@
         "attribute": "wind",
         "role": "mage",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "adventurer-ras": {
         "id": "c5001",
@@ -1437,7 +1876,8 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": []
     },
     "ainos": {
         "id": "c3105",
@@ -1447,7 +1887,10 @@
         "attribute": "dark",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "ains": {
         "id": "c3093",
@@ -1457,7 +1900,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "aither": {
         "id": "c1018",
@@ -1467,7 +1913,10 @@
         "attribute": "ice",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "alexa": {
         "id": "c3012",
@@ -1477,7 +1926,10 @@
         "attribute": "ice",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "allrounder-wanda": {
         "id": "c4065",
@@ -1487,7 +1939,8 @@
         "attribute": "dark",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": []
     },
     "angelic-montmorancy": {
         "id": "c4042",
@@ -1497,7 +1950,10 @@
         "attribute": "ice",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "arowell": {
         "id": "c3004",
@@ -1507,7 +1963,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "azalea": {
         "id": "c3031",
@@ -1517,7 +1976,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "bask": {
         "id": "c3006",
@@ -1527,7 +1989,8 @@
         "attribute": "ice",
         "role": "knight",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": []
     },
     "batisse": {
         "id": "c3095",
@@ -1537,7 +2000,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "butcher-corps-inquisitor": {
         "id": "c3001",
@@ -1547,7 +2013,10 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "captain-rikoris": {
         "id": "c4034",
@@ -1557,7 +2026,8 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": []
     },
     "carmainerose": {
         "id": "c3071",
@@ -1567,7 +2037,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "carrot": {
         "id": "c3051",
@@ -1577,7 +2050,10 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "celeste": {
         "id": "c3064",
@@ -1587,7 +2063,10 @@
         "attribute": "light",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "chaos-inquisitor": {
         "id": "c4001",
@@ -1597,7 +2076,8 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "chaos-sect-axe": {
         "id": "c4025",
@@ -1607,7 +2087,8 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "church-of-ilryos-axe": {
         "id": "c3025",
@@ -1617,7 +2098,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "commander-lorina": {
         "id": "c4035",
@@ -1627,7 +2111,8 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "doll-maker-pearlhorizon": {
         "id": "c4073",
@@ -1637,7 +2122,8 @@
         "attribute": "wind",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": []
     },
     "doris": {
         "id": "c3044",
@@ -1647,7 +2133,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "eaton": {
         "id": "c3094",
@@ -1657,7 +2146,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 0,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "elson": {
         "id": "c3054",
@@ -1667,7 +2159,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "enott": {
         "id": "c3022",
@@ -1677,7 +2172,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "falconer-kluri": {
         "id": "c4003",
@@ -1687,7 +2185,8 @@
         "attribute": "wind",
         "role": "knight",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": []
     },
     "glenn": {
         "id": "c3103",
@@ -1697,7 +2196,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "gloomyrain": {
         "id": "c3074",
@@ -1707,7 +2209,10 @@
         "attribute": "light",
         "role": "mage",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "godmother": {
         "id": "c3101",
@@ -1717,7 +2222,10 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "gunther": {
         "id": "c3024",
@@ -1727,7 +2235,10 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "hataan": {
         "id": "c3091",
@@ -1737,7 +2248,10 @@
         "attribute": "fire",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "hazel": {
         "id": "c3041",
@@ -1747,7 +2261,10 @@
         "attribute": "fire",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "helga": {
         "id": "c3023",
@@ -1757,7 +2274,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "hurado": {
         "id": "c3055",
@@ -1767,7 +2287,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 1,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "ian": {
         "id": "c3102",
@@ -1777,7 +2300,10 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "jecht": {
         "id": "c3053",
@@ -1787,7 +2313,10 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "jena": {
         "id": "c3052",
@@ -1797,7 +2326,10 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "judith": {
         "id": "c3011",
@@ -1807,7 +2339,10 @@
         "attribute": "fire",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "kikirat-v2": {
         "id": "c3084",
@@ -1817,7 +2352,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 0,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "kiris": {
         "id": "c3063",
@@ -1827,7 +2365,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "kluri": {
         "id": "c3003",
@@ -1837,7 +2378,10 @@
         "attribute": "wind",
         "role": "knight",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "lena": {
         "id": "c3092",
@@ -1847,7 +2391,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "lorina": {
         "id": "c3035",
@@ -1857,7 +2404,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "lucy": {
         "id": "c3113",
@@ -1867,7 +2417,10 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "magic-scholar-doris": {
         "id": "c4044",
@@ -1877,7 +2430,8 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": []
     },
     "mascot-hazel": {
         "id": "c4041",
@@ -1887,7 +2441,8 @@
         "attribute": "fire",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": []
     },
     "mercenary-helga": {
         "id": "c4023",
@@ -1897,7 +2452,8 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": []
     },
     "mirsa": {
         "id": "c3014",
@@ -1907,7 +2463,10 @@
         "attribute": "light",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "mistychain": {
         "id": "c3072",
@@ -1917,7 +2476,10 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "montmorancy": {
         "id": "c3042",
@@ -1927,7 +2489,10 @@
         "attribute": "ice",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "mucacha": {
         "id": "c3033",
@@ -1937,7 +2502,10 @@
         "attribute": "wind",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "muse-rima": {
         "id": "c4062",
@@ -1947,7 +2515,8 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": []
     },
     "nemunas": {
         "id": "c3061",
@@ -1957,7 +2526,10 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "otillie": {
         "id": "c3045",
@@ -1967,7 +2539,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "pearlhorizon": {
         "id": "c3073",
@@ -1977,7 +2552,10 @@
         "attribute": "wind",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "pyllis": {
         "id": "c3005",
@@ -1987,7 +2565,10 @@
         "attribute": "dark",
         "role": "knight",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "ras": {
         "id": "c1001",
@@ -1997,7 +2578,8 @@
         "attribute": "fire",
         "role": "knight",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": []
     },
     "requiemroar": {
         "id": "c3075",
@@ -2007,7 +2589,10 @@
         "attribute": "dark",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "researcher-carrot": {
         "id": "c4051",
@@ -2017,7 +2602,8 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": []
     },
     "righteous-thief-roozid": {
         "id": "c4013",
@@ -2027,7 +2613,8 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": []
     },
     "rikoris": {
         "id": "c3034",
@@ -2037,7 +2624,10 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "rima": {
         "id": "c3062",
@@ -2047,7 +2637,10 @@
         "attribute": "ice",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "roozid": {
         "id": "c3013",
@@ -2057,7 +2650,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "sonia": {
         "id": "c3104",
@@ -2067,7 +2663,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "sven": {
         "id": "c3015",
@@ -2077,7 +2676,10 @@
         "attribute": "dark",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "taranor-guard": {
         "id": "c3032",
@@ -2087,7 +2689,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "taranor-royal-guard": {
         "id": "c3002",
@@ -2097,7 +2702,10 @@
         "attribute": "ice",
         "role": "knight",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "tieria": {
         "id": "c3021",
@@ -2107,7 +2715,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "wanda": {
         "id": "c3065",
@@ -2117,7 +2728,10 @@
         "attribute": "dark",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "zealot-carmainerose": {
         "id": "c4071",
@@ -2127,7 +2741,8 @@
         "attribute": "fire",
         "role": "mage",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": []
     },
     "ilynav": {
         "id": "c1113",
@@ -2137,7 +2752,10 @@
         "role": "knight",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "inferno-khawazu": {
         "id": "c2085",
@@ -2147,7 +2765,10 @@
         "role": "warrior",
         "attribute": "dark",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "straze": {
         "id": "c1034",
@@ -2157,7 +2778,10 @@
         "role": "warrior",
         "attribute": "dark",
         "sex": 1,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "emilia": {
         "id": "c1116",
@@ -2167,7 +2791,12 @@
         "role": "manauser",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "rem": {
         "id": "c1114",
@@ -2177,7 +2806,12 @@
         "role": "warrior",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "ram": {
         "id": "c1115",
@@ -2187,7 +2821,11 @@
         "role": "mage",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            1,
+            2
+        ]
     },
     "melany": {
         "id": "c3121",
@@ -2197,7 +2835,10 @@
         "role": "warrior",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "helen": {
         "id": "c3122",
@@ -2207,7 +2848,10 @@
         "role": "knight",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "christy": {
         "id": "c3123",
@@ -2217,7 +2861,10 @@
         "role": "knight",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "camilla": {
         "id": "c3124",
@@ -2227,7 +2874,10 @@
         "role": "warrior",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "penelope": {
         "id": "c3125",
@@ -2237,7 +2887,10 @@
         "role": "assassin",
         "attribute": "dark",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "summertime-iseria": {
         "id": "c5024",
@@ -2247,7 +2900,11 @@
         "role": "ranger",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0,
+            1
+        ]
     },
     "closer-charles": {
         "id": "c2027",
@@ -2257,7 +2914,10 @@
         "role": "assassin",
         "attribute": "dark",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "angel-of-light-angelica": {
         "id": "c6062",
@@ -2267,7 +2927,10 @@
         "role": "mage",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "belian": {
         "id": "c1117",
@@ -2277,7 +2940,10 @@
         "role": "knight",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "ran": {
         "id": "c1118",
@@ -2287,7 +2953,10 @@
         "role": "assassin",
         "attribute": "ice",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "rimuru": {
         "id": "c1121",
@@ -2297,7 +2966,12 @@
         "role": "warrior",
         "attribute": "wind",
         "sex": 0,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "shuna": {
         "id": "c1123",
@@ -2307,7 +2981,11 @@
         "role": "manauser",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            1,
+            2
+        ]
     },
     "milim": {
         "id": "c1122",
@@ -2317,7 +2995,12 @@
         "role": "mage",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "shadow-knight-pyllis": {
         "id": "c4005",
@@ -2327,7 +3010,8 @@
         "role": "knight",
         "attribute": "dark",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": []
     },
     "spirit-eye-celine": {
         "id": "c2103",
@@ -2337,7 +3021,10 @@
         "role": "assassin",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "adin": {
         "id": "c3143",
@@ -2347,7 +3034,8 @@
         "role": "assassin",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "zahhak": {
         "id": "c1119",
@@ -2357,7 +3045,10 @@
         "role": "warrior",
         "attribute": "wind",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "conqueror-lilias": {
         "id": "c2089",
@@ -2367,7 +3058,10 @@
         "role": "warrior",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "command-model-laika": {
         "id": "c1099",
@@ -2377,7 +3071,10 @@
         "role": "ranger",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "peira": {
         "id": "c1125",
@@ -2387,7 +3084,10 @@
         "role": "assassin",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "muwi": {
         "id": "c3132",
@@ -2397,7 +3097,10 @@
         "role": "assassin",
         "attribute": "ice",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "lionheart-cermia": {
         "id": "c2079",
@@ -2407,7 +3110,10 @@
         "role": "warrior",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "januta": {
         "id": "c3131",
@@ -2417,7 +3123,10 @@
         "role": "warrior",
         "attribute": "fire",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     },
     "orte": {
         "id": "c3133",
@@ -2427,7 +3136,10 @@
         "role": "assassin",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "yoonryoung": {
         "_id": "yoonryoung",
@@ -2437,7 +3149,10 @@
         "role": "knight",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "hasol": {
         "_id": "hasol",
@@ -2447,7 +3162,10 @@
         "role": "knight",
         "attribute": "dark",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "hwayoung": {
         "id": "c1128",
@@ -2457,7 +3175,10 @@
         "role": "warrior",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "bad-cat-armin": {
         "id": "c6008",
@@ -2467,7 +3188,10 @@
         "role": "warrior",
         "attribute": "dark",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "pirate-captain-flan": {
         "id": "c2110",
@@ -2477,7 +3201,10 @@
         "role": "ranger",
         "attribute": "dark",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "vigilante-leader-glenn": {
         "id": "c4103",
@@ -2487,7 +3214,8 @@
         "role": "ranger",
         "attribute": "wind",
         "sex": 1,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": []
     },
     "verdant-adin": {
         "_id": "verdant-adin",
@@ -2497,7 +3225,8 @@
         "role": "assassin",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "holy-flame-adin": {
         "_id": "holy-flame-adin",
@@ -2507,7 +3236,8 @@
         "role": "assassin",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "serene-purity-adin": {
         "_id": "serene-purity-adin",
@@ -2517,7 +3247,8 @@
         "role": "assassin",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "jacko": {
         "id": "c1130",
@@ -2527,7 +3258,12 @@
         "role": "warrior",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "aria": {
         "id": "c1129",
@@ -2537,7 +3273,10 @@
         "role": "mage",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "taeyou": {
         "_id": "taeyou",
@@ -2547,7 +3286,10 @@
         "role": "warrior",
         "attribute": "ice",
         "sex": 1,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "yulha": {
         "_id": "yulha",
@@ -2557,7 +3299,10 @@
         "role": "knight",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "sylvan-sage-vivian": {
         "_id": "sylvan-sage-vivian",
@@ -2567,7 +3312,10 @@
         "role": "mage",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "summers-disciple-alexa": {
         "_id": "summers-disciple-alexa",
@@ -2577,7 +3325,8 @@
         "role": "assassin",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": []
     },
     "sharun": {
         "_id": "sharun",
@@ -2587,7 +3336,10 @@
         "role": "manauser",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "summer-break-charlotte": {
         "_id": "summer-break-charlotte",
@@ -2597,7 +3349,11 @@
         "role": "knight",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0,
+            1
+        ]
     },
     "moon-bunny-dominiel": {
         "_id": "moon-bunny-dominiel",
@@ -2607,7 +3363,10 @@
         "role": "manauser",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "commander-pavel": {
         "_id": "commander-pavel",
@@ -2617,7 +3376,10 @@
         "role": "ranger",
         "attribute": "light",
         "sex": 1,
-        "zodiac": "bull"
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     },
     "edward-elric": {
         "_id": "edward-elric",
@@ -2627,7 +3389,12 @@
         "role": "warrior",
         "attribute": "fire",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "roy-mustang": {
         "_id": "roy-mustang",
@@ -2637,7 +3404,12 @@
         "role": "mage",
         "attribute": "fire",
         "sex": 1,
-        "zodiac": "lion"
+        "zodiac": "lion",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "riza-hawkeye": {
         "_id": "riza-hawkeye",
@@ -2647,7 +3419,11 @@
         "role": "ranger",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            1,
+            2
+        ]
     },
     "lua": {
         "_id": "lua",
@@ -2657,7 +3433,10 @@
         "role": "ranger",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "astromancer-elena": {
         "_id": "astromancer-elena",
@@ -2667,7 +3446,10 @@
         "role": "ranger",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     },
     "unbound-knight-arowell": {
         "_id": "unbound-knight-arowell",
@@ -2677,7 +3459,8 @@
         "role": "knight",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": []
     },
     "arunka": {
         "_id": "arunka",
@@ -2687,7 +3470,10 @@
         "role": "warrior",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "savior-adin": {
         "_id": "savior-adin",
@@ -2698,7 +3484,7 @@
         "attribute": "light",
         "sex": 2,
         "zodiac": "leo",
-        "gacha": false
+        "tags": []
     },
     "zio": {
         "_id": "zio",
@@ -2708,7 +3494,10 @@
         "role": "mage",
         "attribute": "dark",
         "sex": 1,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "aewinter": {
         "_id": "aewinter",
@@ -2718,7 +3507,12 @@
         "role": "assassin",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "aeningning": {
         "_id": "aeningning",
@@ -2728,7 +3522,12 @@
         "role": "manauser",
         "attribute": "fire",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "aegiselle": {
         "_id": "aegiselle",
@@ -2738,7 +3537,12 @@
         "role": "mage",
         "attribute": "wind",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "aekarina": {
         "_id": "aekarina",
@@ -2748,7 +3552,12 @@
         "role": "knight",
         "attribute": "ice",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "death-dealer-ray": {
         "_id": "death-dealer-ray",
@@ -2758,7 +3567,10 @@
         "role": "manauser",
         "attribute": "dark",
         "sex": 1,
-        "zodiac": "crab"
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     },
     "shepherd-jena": {
         "id": "c4052",
@@ -2768,7 +3580,8 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": []
     },
     "beehoo": {
         "id": "c1141",
@@ -2778,7 +3591,10 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "peacemaker-furious": {
         "id": "c2087",
@@ -2788,7 +3604,10 @@
         "attribute": "dark",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "juni": {
         "id": "c3151",
@@ -2798,7 +3617,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "talaz": {
         "id": "c3152",
@@ -2808,7 +3630,10 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "leo"
+        "zodiac": "leo",
+        "tags": [
+            0
+        ]
     },
     "lilka": {
         "id": "c3153",
@@ -2818,7 +3643,10 @@
         "attribute": "wind",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     },
     "talia": {
         "id": "c3154",
@@ -2828,7 +3656,10 @@
         "attribute": "light",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "goat"
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     },
     "suthan": {
         "id": "c3155",
@@ -2838,7 +3669,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 1,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "lone-crescent-bellona": {
         "id": "c2071",
@@ -2848,7 +3682,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "amid": {
         "id": "c1143",
@@ -2859,7 +3696,10 @@
         "role": "manauser",
         "sex": 2,
         "zodiac": "bull",
-        "limited": true
+        "tags": [
+            0,
+            1
+        ]
     },
     "eligos": {
         "id": "c1142",
@@ -2869,7 +3709,10 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     },
     "architect-laika": {
         "id": "c2099",
@@ -2879,7 +3722,10 @@
         "attribute": "light",
         "role": "mage",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "ainos-20": {
         "id": "c4105",
@@ -2889,7 +3735,8 @@
         "attribute": "dark",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": []
     },
     "twisted-eidolon-kayron": {
         "id": "c2023",
@@ -2899,7 +3746,10 @@
         "attribute": "light",
         "role": "assassin",
         "sex": 1,
-        "zodiac": "scorpion"
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     },
     "benimaru": {
         "id": "c1146",
@@ -2910,7 +3760,11 @@
         "role": "warrior",
         "sex": 1,
         "zodiac": "archer",
-        "limited": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "abigail": {
         "id": "c1144",
@@ -2920,7 +3774,10 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "last-piece-karin": {
         "id": "c6011",
@@ -2930,7 +3787,10 @@
         "attribute": "light",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "requiem-roana": {
         "id": "c2102",
@@ -2940,7 +3800,10 @@
         "attribute": "dark",
         "role": "mage",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     },
     "ocean-breeze-luluca": {
         "id": "c5082",
@@ -2950,7 +3813,11 @@
         "attribute": "wind",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "twins"
+        "zodiac": "twins",
+        "tags": [
+            0,
+            1
+        ]
     },
     "lethe": {
         "id": "c5149",
@@ -2960,7 +3827,11 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "waterbearer"
+        "zodiac": "waterbearer",
+        "tags": [
+            0,
+            1
+        ]
     },
     "navy-captain-landy": {
         "id": "c2109",
@@ -2970,7 +3841,10 @@
         "attribute": "light",
         "role": "knight",
         "sex": 2,
-        "zodiac": "leo"
+        "zodiac": "leo",
+        "tags": [
+            0
+        ]
     },
     "infinite-horizon-achates": {
         "id": "c6017",
@@ -2980,7 +3854,10 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "fish"
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     },
     "brieg": {
         "id": "c1145",
@@ -2990,7 +3867,10 @@
         "attribute": "ice",
         "role": "knight",
         "sex": 1,
-        "zodiac": "archer"
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     },
     "veronica": {
         "id": "c1150",
@@ -3000,7 +3880,8 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 2,
-        "zodiac": "maiden"
+        "zodiac": "maiden",
+        "tags": []
     },
     "urban-shadow-choux": {
         "id": "c2101",
@@ -3010,7 +3891,10 @@
         "attribute": "dark",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "ram"
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
     },
     "midnight-gala-lilias": {
         "id": "c5089",
@@ -3020,6 +3904,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "scales"
+        "zodiac": "scales",
+        "tags": [
+            0,
+            1
+        ]
     }
 }

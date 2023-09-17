@@ -6,7 +6,9 @@
         "name": "A Little Queen's Huge Crown",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "a-symbol-of-unity": {
         "_id": "a-symbol-of-unity",
@@ -14,7 +16,7 @@
         "identifier": "",
         "name": "A Symbol of Unity",
         "rarity": 5,
-        "gacha": false
+        "tags": []
     },
     "abyssal-crown": {
         "_id": "abyssal-crown",
@@ -23,7 +25,9 @@
         "name": "Abyssal Crown",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "airtosurface-missile-misha": {
         "_id": "airtosurface-missile-misha",
@@ -32,7 +36,9 @@
         "name": "Air-to-Surface Missile: MISHA",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "alabastron": {
         "_id": "alabastron",
@@ -41,7 +47,9 @@
         "name": "Alabastron",
         "rarity": 5,
         "role": "assassin",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "alencinoxs-wrath": {
         "_id": "alencinoxs-wrath",
@@ -50,7 +58,9 @@
         "name": "Alencinox's Wrath",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "alexas-basket": {
         "_id": "alexas-basket",
@@ -59,7 +69,9 @@
         "name": "Alexa's Basket",
         "rarity": 5,
         "role": "assassin",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "an-offer-you-cant-refuse": {
         "_id": "an-offer-you-cant-refuse",
@@ -68,7 +80,9 @@
         "name": "An Offer You Can't Refuse",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "ancient-dragons-legacy": {
         "_id": "ancient-dragons-legacy",
@@ -77,7 +91,9 @@
         "name": "Ancient Dragon's Legacy",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "antimagic-mask": {
         "_id": "antimagic-mask",
@@ -86,8 +102,11 @@
         "name": "Anti-Magic Mask",
         "rarity": 5,
         "role": "warrior",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "azure-comet": {
         "_id": "azure-comet",
@@ -96,8 +115,11 @@
         "name": "Azure Comet",
         "rarity": 5,
         "role": "warrior",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "bastion-of-hope": {
         "_id": "bastion-of-hope",
@@ -105,7 +127,7 @@
         "identifier": "",
         "name": "Bastion of Hope",
         "rarity": 5,
-        "gacha": false
+        "tags": []
     },
     "bastion-of-perlutia": {
         "_id": "bastion-of-perlutia",
@@ -114,7 +136,9 @@
         "name": "Bastion of Perlutia",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "benimarus-tachi": {
         "_id": "benimarus-tachi",
@@ -123,8 +147,11 @@
         "name": "Benimaru's Tachi",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true,
-        "limited": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "black-hand-of-the-goddess": {
         "_id": "black-hand-of-the-goddess",
@@ -133,7 +160,9 @@
         "name": "Black Hand of the Goddess",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "bloodstone": {
         "_id": "bloodstone",
@@ -142,7 +171,9 @@
         "name": "Bloodstone",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "bloody-rose": {
         "_id": "bloody-rose",
@@ -151,7 +182,9 @@
         "name": "Bloody Rose",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "border-coin": {
         "_id": "border-coin",
@@ -160,7 +193,9 @@
         "name": "Border Coin",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "broken-will-of-the-priest": {
         "_id": "broken-will-of-the-priest",
@@ -169,7 +204,9 @@
         "name": "Broken Will of the Priest",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "celestine": {
         "_id": "celestine",
@@ -178,7 +215,9 @@
         "name": "Celestine",
         "rarity": 5,
         "role": "manauser",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "champions-trophy": {
         "_id": "champions-trophy",
@@ -187,7 +226,10 @@
         "name": "Champion's Trophy",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0,
+            1
+        ]
     },
     "chatty": {
         "_id": "chatty",
@@ -196,8 +238,7 @@
         "name": "Chatty",
         "rarity": 5,
         "role": "mage",
-        "limited": true,
-        "gacha": true
+        "tags": []
     },
     "circus-fantasia": {
         "_id": "circus-fantasia",
@@ -206,7 +247,9 @@
         "name": "Circus Fantasia",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "cradle-of-life": {
         "_id": "cradle-of-life",
@@ -215,7 +258,9 @@
         "name": "Cradle of Life",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "creation-destruction": {
         "_id": "creation-destruction",
@@ -224,7 +269,9 @@
         "name": "Creation & Destruction",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "crimson-moon-of-nightmares": {
         "_id": "crimson-moon-of-nightmares",
@@ -233,7 +280,10 @@
         "name": "Crimson Moon of Nightmares",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0,
+            1
+        ]
     },
     "crown-of-glory": {
         "_id": "crown-of-glory",
@@ -242,7 +292,9 @@
         "name": "Crown of Glory",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "cruel-mischief": {
         "_id": "cruel-mischief",
@@ -251,7 +303,7 @@
         "name": "Cruel Mischief",
         "rarity": 5,
         "role": "",
-        "gacha": false
+        "tags": []
     },
     "dignus-orb": {
         "_id": "dignus-orb",
@@ -260,7 +312,9 @@
         "name": "Dignus Orb",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "doctors-bag": {
         "_id": "doctors-bag",
@@ -269,7 +323,9 @@
         "name": "Doctor's Bag",
         "rarity": 5,
         "role": "manauser",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "doubleedged-decrescent": {
         "_id": "doubleedged-decrescent",
@@ -278,7 +334,9 @@
         "name": "Double-Edged Decrescent",
         "rarity": 5,
         "role": "assassin",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "draco-plate": {
         "_id": "draco-plate",
@@ -287,7 +345,10 @@
         "name": "Draco Plate",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0,
+            1
+        ]
     },
     "durandal": {
         "_id": "durandal",
@@ -296,7 +357,9 @@
         "name": "Durandal",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "dux-noctis": {
         "_id": "dux-noctis",
@@ -305,7 +368,9 @@
         "name": "Dux Noctis",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "elbris-ritual-sword": {
         "_id": "elbris-ritual-sword",
@@ -314,7 +379,9 @@
         "name": "Elbris Ritual Sword",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "eticas-scepter": {
         "_id": "eticas-scepter",
@@ -323,7 +390,9 @@
         "name": "Etica's Scepter",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "exif-detective-ed-gadget": {
         "_id": "exif-detective-ed-gadget",
@@ -332,8 +401,11 @@
         "name": "EXIF Detective (E.d.) Gadget",
         "rarity": 5,
         "role": "manauser",
-        "gacha": true,
-        "limited": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "fairy-tale-for-a-nightmare": {
         "_id": "fairy-tale-for-a-nightmare",
@@ -342,7 +414,10 @@
         "name": "Fairy Tale for a Nightmare",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0,
+            1
+        ]
     },
     "fan-of-light-and-dark": {
         "_id": "fan-of-light-and-dark",
@@ -351,7 +426,9 @@
         "name": "Fan of Light and Dark",
         "rarity": 5,
         "role": "manauser",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "flawless-garments": {
         "_id": "flawless-garments",
@@ -360,8 +437,10 @@
         "name": "Flawless Garments",
         "rarity": 5,
         "role": "manauser",
-        "limited": true,
-        "gacha": false
+        "tags": [
+            1,
+            2
+        ]
     },
     "frame-of-light": {
         "_id": "frame-of-light",
@@ -370,8 +449,11 @@
         "name": "Frame of Light",
         "rarity": 5,
         "role": "mage",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "fullmetals-automail": {
         "_id": "fullmetals-automail",
@@ -380,8 +462,11 @@
         "name": "Fullmetal's Automail",
         "rarity": 5,
         "role": "warrior",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "glowings-21": {
         "_id": "glowings-21",
@@ -390,7 +475,9 @@
         "name": "Glo-Wings 21",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "goblet-of-oath": {
         "_id": "goblet-of-oath",
@@ -399,7 +486,9 @@
         "name": "Goblet of Oath",
         "rarity": 5,
         "role": "assassin",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "golden-rose": {
         "_id": "golden-rose",
@@ -408,7 +497,9 @@
         "name": "Golden Rose",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "guardian-ice-crystals": {
         "_id": "guardian-ice-crystals",
@@ -417,8 +508,11 @@
         "name": "Guardian Ice Crystals",
         "rarity": 5,
         "role": "manauser",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "guide-to-a-decision": {
         "_id": "guide-to-a-decision",
@@ -426,7 +520,7 @@
         "identifier": "",
         "name": "Guide to a Descision",
         "rarity": 5,
-        "gacha": false
+        "tags": []
     },
     "guiding-light": {
         "_id": "guiding-light",
@@ -435,7 +529,10 @@
         "name": "Guiding Light",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
+        "tags": [
+            0,
+            1
+        ]
     },
     "holy-sacrifice": {
         "_id": "holy-sacrifice",
@@ -444,7 +541,9 @@
         "name": "Holy Sacrifice",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "hostess-of-the-banquet": {
         "_id": "hostess-of-the-banquet",
@@ -453,7 +552,10 @@
         "name": "Hostess of the Banquet",
         "rarity": 5,
         "role": "assassin",
-        "gacha": true
+        "tags": [
+            0,
+            1
+        ]
     },
     "idols-cheer": {
         "_id": "idols-cheer",
@@ -462,7 +564,9 @@
         "name": "Idol's Cheer",
         "rarity": 5,
         "role": "manauser",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "ignition-cloth-gloves": {
         "_id": "ignition-cloth-gloves",
@@ -471,8 +575,11 @@
         "name": "Ignition Cloth Gloves",
         "rarity": 5,
         "role": "mage",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "indestructible-gaiters": {
         "_id": "indestructible-gaiters",
@@ -481,7 +588,9 @@
         "name": "Indestructible Gaiters",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "iron-fan": {
         "_id": "iron-fan",
@@ -490,7 +599,9 @@
         "name": "Iron Fan",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "jackos-symbol": {
         "_id": "jackos-symbol",
@@ -499,8 +610,11 @@
         "name": "Jack-O's Symbol",
         "rarity": 5,
         "role": "warrior",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "junkyard-dog": {
         "_id": "junkyard-dog",
@@ -509,8 +623,10 @@
         "name": "Junkyard Dog",
         "rarity": 5,
         "role": "warrior",
-        "limited": true,
-        "gacha": true
+        "tags": [
+            1,
+            2
+        ]
     },
     "justice-for-all": {
         "_id": "justice-for-all",
@@ -519,7 +635,9 @@
         "name": "Justice for All",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "knowledge-seed": {
         "_id": "knowledge-seed",
@@ -528,7 +646,9 @@
         "name": "Knowledge Seed",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "last-teatime": {
         "_id": "last-teatime",
@@ -537,7 +657,9 @@
         "name": "Last Teatime",
         "rarity": 5,
         "role": "mage",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "magic-for-friends": {
         "_id": "magic-for-friends",
@@ -546,7 +668,7 @@
         "name": "Magic for Friends",
         "rarity": 5,
         "role": "mage",
-        "gacha": false
+        "tags": []
     },
     "manica-of-control": {
         "_id": "manica-of-control",
@@ -555,7 +677,9 @@
         "name": "Manica of Control",
         "rarity": 5,
         "role": "assassin",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "merciless-glutton": {
         "_id": "merciless-glutton",
@@ -564,7 +688,9 @@
         "name": "Merciless Glutton",
         "rarity": 5,
         "role": "warrior",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "ms-confille": {
         "_id": "ms-confille",
@@ -573,1252 +699,11 @@
         "name": "Ms. Confille",
         "rarity": 5,
         "role": "ranger",
-        "gacha": true
-    },
-    "necro-undine": {
-        "_id": "necro-undine",
-        "id": "art0047",
-        "identifier": "efm10",
-        "name": "Necro & Undine",
-        "rarity": 5,
-        "role": "mage",
-        "gacha": true
-    },
-    "noble-oath": {
-        "_id": "noble-oath",
-        "id": "art0033",
-        "identifier": "efk06",
-        "name": "Noble Oath",
-        "rarity": 5,
-        "role": "knight",
-        "gacha": true
-    },
-    "otherworldly-machinery": {
-        "_id": "otherworldly-machinery",
-        "id": "art0028",
-        "identifier": "efr06",
-        "name": "Otherworldly Machinery",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": false
-    },
-    "prayer-of-solitude": {
-        "_id": "prayer-of-solitude",
-        "id": "art0183",
-        "identifier": "",
-        "name": "Prayer of Solitude",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true,
-        "limited": true
-    },
-    "proof-of-valor": {
-        "_id": "proof-of-valor",
-        "id": "art0051",
-        "identifier": "ef501",
-        "name": "Proof of Valor",
-        "rarity": 5,
-        "role": "",
-        "gacha": false
-    },
-    "pure-white-trust": {
-        "_id": "pure-white-trust",
-        "id": "art0146",
-        "identifier": "",
-        "name": "Pure White Trust",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true
-    },
-    "reingars-special-drink": {
-        "_id": "reingars-special-drink",
-        "id": "art0062",
-        "identifier": "efr10",
-        "name": "Reingar's Special Drink",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": true
-    },
-    "rhianna-luciella": {
-        "_id": "rhianna-luciella",
-        "id": "art5_11",
-        "identifier": "efa01",
-        "name": "Rhianna & Luciella",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true
-    },
-    "rise-of-a-monarch": {
-        "_id": "rise-of-a-monarch",
-        "id": "art0102",
-        "identifier": "efk12",
-        "name": "Rise of a Monarch",
-        "rarity": 5,
-        "role": "knight",
-        "gacha": true
-    },
-    "rocket-punch-gauntlet": {
-        "_id": "rocket-punch-gauntlet",
-        "id": "art0170",
-        "identifier": "",
-        "name": "Rocket Punch Gauntlet",
-        "rarity": 5,
-        "role": "knight",
-        "gacha": true,
-        "limited": true
-    },
-    "rod-of-amaryllis": {
-        "_id": "rod-of-amaryllis",
-        "id": "art0001",
-        "identifier": "efh01",
-        "name": "Rod of Amaryllis",
-        "rarity": 5,
-        "role": "manauser",
-        "gacha": true
-    },
-    "sacred-tree-branch": {
-        "_id": "sacred-tree-branch",
-        "id": "art0164",
-        "identifier": "",
-        "name": "Sacred Tree Branch",
-        "rarity": 5,
-        "role": "manauser",
-        "gacha": true
-    },
-    "samsara-prayer-beads": {
-        "_id": "samsara-prayer-beads",
-        "id": "art0104",
-        "identifier": "efw20",
-        "name": "Samsara Prayer Beads",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true
-    },
-    "scroll-of-shadows": {
-        "_id": "scroll-of-shadows",
-        "id": "art0152",
-        "identifier": "",
-        "name": "Scroll of Shadows",
-        "rarity": 5,
-        "role": "mage",
-        "gacha": true
-    },
-    "seal-of-capture": {
-        "_id": "seal-of-capture",
-        "id": "art0168",
-        "identifier": "",
-        "name": "Seal of Capture",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": true
-    },
-    "secret-art-storm-sword": {
-        "_id": "secret-art-storm-sword",
-        "id": "art0096",
-        "identifier": "efa14",
-        "name": "Secret Art - Storm Sword",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true
-    },
-    "severed-horn-wand": {
-        "_id": "severed-horn-wand",
-        "id": "art0132",
-        "identifier": "",
-        "name": "Severed Horn Wand",
-        "rarity": 5,
-        "role": "mage",
-        "gacha": false
-    },
-    "sharpshooters-handgun": {
-        "_id": "sharpshooters-handgun",
-        "id": "art0159",
-        "identifier": "",
-        "name": "Sharpshooter's Handgun",
-        "rarity": 5,
-        "role": "ranger",
-        "limited": true,
-        "gacha": false
-    },
-    "shepherd-of-the-hollow": {
-        "_id": "shepherd-of-the-hollow",
-        "id": "art0109",
-        "identifier": "efa15",
-        "name": "Shepherd of the Hollow",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true
-    },
-    "shimadra-staff": {
-        "_id": "shimadra-staff",
-        "id": "art5_4",
-        "identifier": "efh02",
-        "name": "Shimadra Staff",
-        "rarity": 5,
-        "role": "manauser",
-        "gacha": true
-    },
-    "sigurd-scythe": {
-        "_id": "sigurd-scythe",
-        "id": "art5_21",
-        "identifier": "efw01",
-        "name": "Sigurd Scythe",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true
-    },
-    "snow-crystal": {
-        "_id": "snow-crystal",
-        "id": "art0101",
-        "identifier": "efw19",
-        "name": "Snow Crystal",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true
-    },
-    "sole-consolation": {
-        "_id": "sole-consolation",
-        "id": "art0182",
-        "identifier": "",
-        "name": "Sole Consolation",
-        "rarity": 5,
-        "role": "manauser",
-        "gacha": true,
-        "limited": true
-    },
-    "song-of-stars": {
-        "_id": "song-of-stars",
-        "id": "art5_2",
-        "identifier": "efr02",
-        "name": "Song of Stars",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": true
-    },
-    "spatiotemporal-fan": {
-        "_id": "spatiotemporal-fan",
-        "id": "art0166",
-        "identifier": "",
-        "name": "Spatiotemporal Fan",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": true
-    },
-    "spear-of-a-new-dawn": {
-        "_id": "spear-of-a-new-dawn",
-        "id": "art0130",
-        "identifier": "efk15",
-        "name": "Spear of a New Dawn",
-        "rarity": 5,
-        "role": "knight",
-        "gacha": true
-    },
-    "spear-of-purification": {
-        "_id": "spear-of-purification",
-        "id": "art0156",
-        "identifier": "",
-        "name": "Spear of Purification",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true
-    },
-    "sphere-of-inferno": {
-        "_id": "sphere-of-inferno",
-        "id": "art0175",
-        "identifier": "",
-        "name": "Sphere of Inferno",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": true
-    },
-    "sphere-of-sadism": {
-        "_id": "sphere-of-sadism",
-        "id": "art0160",
-        "identifier": "",
-        "name": "Sphere of Sadism",
-        "rarity": 5,
-        "role": "knight",
-        "gacha": true
-    },
-    "spirits-breath": {
-        "_id": "spirits-breath",
-        "id": "art0049",
-        "identifier": "efm11",
-        "name": "Spirit's Breath",
-        "rarity": 5,
-        "role": "mage",
-        "gacha": true
-    },
-    "star-of-the-deep-sea": {
-        "_id": "star-of-the-deep-sea",
-        "id": "art0141",
-        "identifier": "",
-        "name": "Star of the Deep Sea",
-        "rarity": 5,
-        "role": "ranger",
-        "limited": true,
-        "gacha": true
-    },
-    "stella-harpa": {
-        "_id": "stella-harpa",
-        "id": "art0078",
-        "identifier": "efh09",
-        "name": "Stella Harpa",
-        "rarity": 5,
-        "role": "manauser",
-        "gacha": true
-    },
-    "sword-of-autumn-eclipse": {
-        "_id": "sword-of-autumn-eclipse",
-        "id": "art0167",
-        "identifier": "",
-        "name": "Sword of Autumn Eclipse",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true
-    },
-    "sword-of-cycling-seasons": {
-        "_id": "sword-of-cycling-seasons",
-        "id": "art0169",
-        "identifier": "",
-        "name": "Sword of Cycling Seasons",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": false
-    },
-    "sword-of-ezera": {
-        "_id": "sword-of-ezera",
-        "id": "art0046",
-        "identifier": "efk08",
-        "name": "Sword of Ezera",
-        "rarity": 5,
-        "role": "knight",
-        "limited": false,
-        "gacha": false
-    },
-    "sword-of-judgment": {
-        "_id": "sword-of-judgment",
-        "id": "art0041",
-        "identifier": "efr09",
-        "name": "Sword of Judgment",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": true
-    },
-    "sword-of-summer-twilight": {
-        "_id": "sword-of-summer-twilight",
-        "id": "art0117",
-        "identifier": "efa17",
-        "name": "Sword of Summer Twilight",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true
-    },
-    "sword-of-winter-shadow": {
-        "_id": "sword-of-winter-shadow",
-        "id": "art0144",
-        "identifier": "",
-        "name": "Sword of Winter Shadow",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true
-    },
-    "the-armament": {
-        "_id": "the-armament",
-        "id": "art0172",
-        "identifier": "",
-        "name": "The Armament",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true,
-        "limited": true
-    },
-    "time-matter": {
-        "_id": "time-matter",
-        "id": "art0027",
-        "identifier": "efm06",
-        "name": "Time Matter",
-        "rarity": 5,
-        "role": "mage",
-        "gacha": true
-    },
-    "torn-sleeve": {
-        "_id": "torn-sleeve",
-        "id": "art0050",
-        "identifier": "efa09",
-        "name": "Torn Sleeve",
-        "rarity": 5,
-        "role": "assassin",
-        "limited": true,
-        "gacha": true
-    },
-    "touch-of-rekos": {
-        "_id": "touch-of-rekos",
-        "id": "art0091",
-        "identifier": "efh11",
-        "name": "Touch of Rekos",
-        "rarity": 5,
-        "role": "manauser",
-        "gacha": true
-    },
-    "twilight-calamity": {
-        "_id": "twilight-calamity",
-        "id": "art0125",
-        "identifier": "efm21",
-        "name": "Twilight Calamity",
-        "rarity": 5,
-        "role": "mage",
-        "gacha": true
-    },
-    "uberiuss-tooth": {
-        "_id": "uberiuss-tooth",
-        "id": "art0030",
-        "identifier": "efw06",
-        "name": "Uberius's Tooth",
-        "rarity": 5,
-        "role": "warrior",
-        "gacha": true
-    },
-    "unfading-memories": {
-        "_id": "unfading-memories",
-        "id": "art0079",
-        "identifier": "efh10",
-        "name": "Unfading Memories",
-        "rarity": 5,
-        "role": "manauser",
-        "gacha": true
-    },
-    "unseen-observer": {
-        "_id": "unseen-observer",
-        "id": "art0119",
-        "identifier": "efr16",
-        "name": "Unseen Observer",
-        "rarity": 5,
-        "role": "ranger",
-        "gacha": true
-    },
-    "upgraded-dragon-knuckles": {
-        "_id": "upgraded-dragon-knuckles",
-        "id": "art0138",
-        "identifier": "",
-        "name": "Upgraded Dragon Knuckles",
-        "rarity": 5,
-        "role": "mage",
-        "limited": true,
-        "gacha": true
-    },
-    "victorious-flag": {
-        "_id": "victorious-flag",
-        "id": "art0087",
-        "identifier": "",
-        "name": "Victorious Flag",
-        "rarity": 5,
-        "gacha": false
-    },
-    "violet-talisman": {
-        "_id": "violet-talisman",
-        "id": "art0040",
-        "identifier": "efa08",
-        "name": "Violet Talisman",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true
-    },
-    "wall-of-order": {
-        "_id": "wall-of-order",
-        "id": "art0107",
-        "identifier": "efr15",
-        "name": "Wall of Order",
-        "rarity": 5,
-        "role": "ranger",
-        "limited": true,
-        "gacha": true
-    },
-    "war-horn": {
-        "_id": "war-horn",
-        "id": "art0129",
-        "identifier": "ef505",
-        "name": "War Horn",
-        "rarity": 5,
-        "role": "",
-        "gacha": false
-    },
-    "wind-rider": {
-        "_id": "wind-rider",
-        "id": "art4_1",
-        "identifier": "efa02",
-        "name": "Wind Rider",
-        "rarity": 5,
-        "role": "assassin",
-        "gacha": true
-    },
-    "wings-of-light-and-shadow": {
-        "_id": "wings-of-light-and-shadow",
-        "id": "art0133",
-        "identifier": "",
-        "name": "Wings of Light and Shadow",
-        "rarity": 5,
-        "role": "knight",
-        "gacha": true
-    },
-    "a-song-for-everybody": {
-        "_id": "a-song-for-everybody",
-        "id": "art0092",
-        "identifier": "",
-        "name": "A Song for Everybody",
-        "rarity": 4,
-        "limited": true,
-        "gacha": false
-    },
-    "adamant-shield": {
-        "_id": "adamant-shield",
-        "id": "art5_3",
-        "identifier": "efk04",
-        "name": "Adamant Shield",
-        "rarity": 4,
-        "role": "knight",
-        "gacha": true
-    },
-    "ambrote": {
-        "_id": "ambrote",
-        "id": "art0034",
-        "identifier": "efr07",
-        "name": "Ambrote",
-        "rarity": 4,
-        "role": "ranger",
-        "limited": false,
-        "gacha": false
-    },
-    "andres-crossbow": {
-        "_id": "andres-crossbow",
-        "id": "art0076",
-        "identifier": "efr11",
-        "name": "Andre's Crossbow",
-        "rarity": 4,
-        "role": "ranger",
-        "gacha": true
-    },
-    "aurius": {
-        "_id": "aurius",
-        "id": "art5_6",
-        "identifier": "efk03",
-        "name": "Aurius",
-        "rarity": 4,
-        "role": "knight",
-        "gacha": true
-    },
-    "barthezs-orbuculum": {
-        "_id": "barthezs-orbuculum",
-        "id": "art0066",
-        "identifier": "efm15",
-        "name": "Barthez's Orbuculum",
-        "rarity": 4,
-        "role": "mage",
-        "gacha": true
-    },
-    "blazing-full-moon-trophy": {
-        "_id": "blazing-full-moon-trophy",
-        "id": "art0143",
-        "identifier": "",
-        "name": "Blazing Full Moon Trophy",
-        "rarity": 4,
-        "gacha": false
-    },
-    "brilliant-confidence": {
-        "_id": "brilliant-confidence",
-        "id": "art0147",
-        "identifier": "",
-        "name": "Brilliant Confidence",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "card-of-small-miracles": {
-        "_id": "card-of-small-miracles",
-        "id": "art0035",
-        "identifier": "ef401",
-        "name": "Card of Small Miracles",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "cutie-pando": {
-        "_id": "cutie-pando",
-        "id": "art0179",
-        "identifier": "",
-        "name": "Cutie Pando",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "crimson-seed": {
-        "_id": "crimson-seed",
-        "id": "art0059",
-        "identifier": "efw10",
-        "name": "Crimson Seed",
-        "rarity": 4,
-        "role": "warrior",
-        "limited": true,
-        "gacha": false
-    },
-    "days-of-destiny": {
-        "_id": "days-of-destiny",
-        "id": "art0120",
-        "identifier": "",
-        "name": "Days of Destiny",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "dust-devil": {
-        "_id": "dust-devil",
-        "id": "art4_7",
-        "identifier": "efa05",
-        "name": "Dust Devil",
-        "rarity": 4,
-        "role": "assassin",
-        "gacha": true
-    },
-    "els-fist": {
-        "_id": "els-fist",
-        "id": "art5_20",
-        "identifier": "efw03",
-        "name": "El's Fist",
-        "rarity": 4,
-        "role": "warrior",
-        "gacha": true
-    },
-    "elyhas-knife": {
-        "_id": "elyhas-knife",
-        "id": "art4_12",
-        "identifier": "efa04",
-        "name": "Elyha's Knife",
-        "rarity": 4,
-        "role": "assassin",
-        "gacha": true
-    },
-    "eternus": {
-        "_id": "eternus",
-        "id": "art0055",
-        "identifier": "efh08",
-        "name": "Eternus",
-        "rarity": 4,
-        "role": "manauser",
-        "gacha": true
-    },
-    "flower-shower": {
-        "_id": "flower-shower",
-        "id": "art0097",
-        "identifier": "efw15",
-        "name": "Flower Shower",
-        "rarity": 4,
-        "role": "warrior",
-        "gacha": false
-    },
-    "golden-cocoa-cookie": {
-        "_id": "golden-cocoa-cookie",
-        "id": "art0085",
-        "identifier": "ef411",
-        "name": "Golden Cocoa Cookie",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "hell-cutter": {
-        "_id": "hell-cutter",
-        "id": "art4_4",
-        "identifier": "efw04",
-        "name": "Hell Cutter",
-        "rarity": 4,
-        "role": "warrior",
-        "gacha": true
-    },
-    "hilag-lance": {
-        "_id": "hilag-lance",
-        "id": "art4_5",
-        "identifier": "efk05",
-        "name": "Hilag Lance",
-        "rarity": 4,
-        "role": "knight",
-        "gacha": true
-    },
-    "iela-violin": {
-        "_id": "iela-violin",
-        "id": "art4_3",
-        "identifier": "efm08",
-        "name": "Iela Violin",
-        "rarity": 4,
-        "role": "mage",
-        "limited": true,
-        "gacha": false
-    },
-    "infinity-basket": {
-        "_id": "infinity-basket",
-        "id": "art4_16",
-        "identifier": "efr03",
-        "name": "Infinity Basket",
-        "rarity": 4,
-        "role": "ranger",
-        "gacha": true
-    },
-    "kaladra": {
-        "_id": "kaladra",
-        "id": "art0004",
-        "identifier": "efm04",
-        "name": "Kal'adra",
-        "rarity": 4,
-        "role": "mage",
-        "gacha": true
-    },
-    "love-potion": {
-        "_id": "love-potion",
-        "id": "art0042",
-        "identifier": "ef402",
-        "name": "Love Potion",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "magarahas-tome": {
-        "_id": "magarahas-tome",
-        "id": "art5_18",
-        "identifier": "efh05",
-        "name": "Magaraha's Tome",
-        "rarity": 4,
-        "role": "manauser",
-        "gacha": true
-    },
-    "midnight-bloom": {
-        "_id": "midnight-bloom",
-        "id": "art0065",
-        "identifier": "ef406",
-        "name": "Midnight Bloom",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "moonlight-dreamblade": {
-        "_id": "moonlight-dreamblade",
-        "id": "art5_12",
-        "identifier": "efa03",
-        "name": "Moonlight Dreamblade",
-        "rarity": 4,
-        "role": "assassin",
-        "gacha": true
-    },
-    "moonlights-vestige": {
-        "_id": "moonlights-vestige",
-        "id": "art0112",
-        "identifier": "",
-        "name": "Moonlight's Vestige",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "new-year-cookies": {
-        "_id": "new-year-cookies",
-        "id": "art0081",
-        "identifier": "ef410",
-        "name": "New Year Cookies",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "nostalgic-music-box": {
-        "_id": "nostalgic-music-box",
-        "id": "art0148",
-        "identifier": "",
-        "name": "Nostalgic Music Box",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "official-levulin-beach-volleyball": {
-        "_id": "official-levulin-beach-volleyball",
-        "id": "art0135",
-        "identifier": "",
-        "name": "Official Levulin Beach Volleyball",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "one-year-of-gratitude": {
-        "_id": "one-year-of-gratitude",
-        "id": "art0064",
-        "identifier": "ef405",
-        "name": "One Year of Gratitude",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "our-beautiful-seasons": {
-        "_id": "our-beautiful-seasons",
-        "id": "art0187",
-        "identifier": "",
-        "name": "Our Beautiful Seasons",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "portrait-of-the-saviors": {
-        "_id": "portrait-of-the-saviors",
-        "id": "art0048",
-        "identifier": "ef403",
-        "name": "Portrait of the Saviors",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "pos": {
-        "_id": "pos",
-        "id": "art0174",
-        "identifier": "",
-        "name": "P.O.S",
-        "rarity": 5,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "prelude-to-a-new-era": {
-        "_id": "prelude-to-a-new-era",
-        "id": "art0165",
-        "identifier": "",
-        "name": "Prelude to a New Era",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "radiant-forever": {
-        "_id": "radiant-forever",
-        "id": "art0045",
-        "identifier": "efm09",
-        "name": "Radiant Forever",
-        "rarity": 4,
-        "role": "mage",
-        "limited": true,
-        "gacha": false
-    },
-    "rainbow-scale": {
-        "_id": "rainbow-scale",
-        "id": "art0063",
-        "identifier": "ef404",
-        "name": "Rainbow Scale",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "records-of-unity": {
-        "_id": "records-of-unity",
-        "id": "art0142",
-        "identifier": "",
-        "name": "Records of Unity",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "resolute-soldier-series": {
-        "_id": "resolute-soldier-series",
-        "id": "art0080",
-        "identifier": "",
-        "name": "Resolute Soldier Series",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "rosa-hargana": {
-        "_id": "rosa-hargana",
-        "id": "art4_14",
-        "identifier": "efr05",
-        "name": "Rosa Hargana",
-        "rarity": 4,
-        "role": "ranger",
-        "gacha": true
-    },
-    "santa-muerte": {
-        "_id": "santa-muerte",
-        "id": "art0031",
-        "identifier": "efa06",
-        "name": "Santa Muerte",
-        "rarity": 4,
-        "role": "assassin",
-        "limited": true,
-        "gacha": false
-    },
-    "sashe-ithanes": {
-        "_id": "sashe-ithanes",
-        "id": "art4_6",
-        "identifier": "efr04",
-        "name": "Sashe Ithanes",
-        "rarity": 4,
-        "role": "ranger",
-        "gacha": true
-    },
-    "sepulcrum": {
-        "_id": "sepulcrum",
-        "id": "art0054",
-        "identifier": "efw12",
-        "name": "Sepulcrum",
-        "rarity": 4,
-        "role": "warrior",
-        "gacha": true
-    },
-    "shepherds-of-chaos": {
-        "_id": "shepherds-of-chaos",
-        "id": "art0060",
-        "identifier": "efa10",
-        "name": "Shepherds of Chaos",
-        "rarity": 4,
-        "role": "assassin",
-        "limited": true,
-        "gacha": true
-    },
-    "silver-rain": {
-        "_id": "silver-rain",
-        "id": "art0056",
-        "identifier": "efa11",
-        "name": "Silver Rain",
-        "rarity": 4,
-        "role": "assassin",
-        "gacha": true
-    },
-    "siraren": {
-        "_id": "siraren",
-        "id": "art5_15",
-        "identifier": "efm05",
-        "name": "Sira-Ren",
-        "rarity": 4,
-        "role": "mage",
-        "gacha": true
-    },
-    "spooky-solayu-stories": {
-        "_id": "spooky-solayu-stories",
-        "id": "art0068",
-        "identifier": "ef407",
-        "name": "Spooky Solayu Stories",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "steadfast-gatekeeper": {
-        "_id": "steadfast-gatekeeper",
-        "id": "art0073",
-        "identifier": "efk10",
-        "name": "Steadfast Gatekeeper",
-        "rarity": 4,
-        "role": "knight",
-        "gacha": true
-    },
-    "strak-gauntlet": {
-        "_id": "strak-gauntlet",
-        "id": "art4_2",
-        "identifier": "efw05",
-        "name": "Strak Gauntlet",
-        "rarity": 4,
-        "role": "warrior",
-        "gacha": true
-    },
-    "super-duper-water-gun-shooter": {
-        "_id": "super-duper-water-gun-shooter",
-        "id": "art0099",
-        "identifier": "",
-        "name": "Super Duper Water Gun Shooter",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "tagehels-ancient-book": {
-        "_id": "tagehels-ancient-book",
-        "id": "art5_19",
-        "identifier": "efm03",
-        "name": "Tagehel's Ancient Book",
-        "rarity": 4,
-        "role": "mage",
-        "gacha": true
-    },
-    "tear-of-the-desert": {
-        "_id": "tear-of-the-desert",
-        "id": "art0053",
-        "identifier": "efm12",
-        "name": "Tear of the Desert",
-        "rarity": 4,
-        "role": "mage",
-        "gacha": false
-    },
-    "the-guardian-stars-blessing": {
-        "_id": "the-guardian-stars-blessing",
-        "id": "art0127",
-        "identifier": "",
-        "name": "The Guardian Star's Blessing",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "to-a-new-world": {
-        "_id": "to-a-new-world",
-        "id": "art0110",
-        "identifier": "ef414",
-        "name": "To a New World",
-        "rarity": 4,
-        "role": "",
-        "limited": true,
-        "gacha": false
-    },
-    "waters-origin": {
-        "_id": "waters-origin",
-        "id": "art4_8",
-        "identifier": "efh03",
-        "name": "Water's Origin",
-        "rarity": 4,
-        "role": "manauser",
-        "gacha": true
-    },
-    "wondrous-potion-vial": {
-        "_id": "wondrous-potion-vial",
-        "id": "art4_13",
-        "identifier": "efh04",
-        "name": "Wondrous Potion Vial",
-        "rarity": 4,
-        "role": "manauser",
-        "gacha": true
-    },
-    "iii-the-empress": {
-        "_id": "iii-the-empress",
-        "id": "art0153",
-        "identifier": "",
-        "name": "III. The Empress",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "iv-the-emperor": {
-        "_id": "iv-the-emperor",
-        "id": "art0154",
-        "identifier": "",
-        "name": "IV. The Emperor",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "vi-the-lovers": {
-        "_id": "vi-the-lovers",
-        "id": "art0177",
-        "identifier": "",
-        "name": "VI. The Lovers",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "vii-the-chariot": {
-        "_id": "vii-the-chariot",
-        "id": "art0163",
-        "identifier": "",
-        "name": "VII. The Chariot",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "xiii-death": {
-        "_id": "xiii-death",
-        "id": "art0113",
-        "identifier": "",
-        "name": "XIII. Death",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "xiv-temperance": {
-        "_id": "xiv-temperance",
-        "id": "art0128",
-        "identifier": "",
-        "name": "XIV. Temperance",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "xvi-the-tower": {
-        "_id": "xvi-the-tower",
-        "id": "art0114",
-        "identifier": "ef418",
-        "name": "XVI. The Tower",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "xviii-the-moon": {
-        "_id": "xviii-the-moon",
-        "id": "art0115",
-        "identifier": "",
-        "name": "XVIII. The Moon",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "xix-the-sun": {
-        "_id": "xix-the-sun",
-        "id": "art0162",
-        "identifier": "",
-        "name": "XIX. The Sun",
-        "rarity": 4,
-        "role": "",
-        "gacha": false
-    },
-    "alsacian-spear": {
-        "_id": "alsacian-spear",
-        "id": "art3_7",
-        "identifier": "ef307",
-        "name": "Alsacian Spear",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "ancient-sheath": {
-        "_id": "ancient-sheath",
-        "id": "art3_4",
-        "identifier": "ef304",
-        "name": "Ancient Sheath",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "aqua-rose": {
-        "_id": "aqua-rose",
-        "id": "art3_14",
-        "identifier": "ef314",
-        "name": "Aqua Rose",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "ascending-axe": {
-        "_id": "ascending-axe",
-        "id": "art3_15",
-        "identifier": "ef315",
-        "name": "Ascending Axe",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "atmas-portal": {
-        "_id": "atmas-portal",
-        "id": "art3_6",
-        "identifier": "ef306",
-        "name": "Atma's Portal",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "butterfly-mandolin": {
-        "_id": "butterfly-mandolin",
-        "id": "art3_18",
-        "identifier": "ef318",
-        "name": "Butterfly Mandolin",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "cursed-compass": {
-        "_id": "cursed-compass",
-        "id": "art3_9",
-        "identifier": "ef309",
-        "name": "Cursed Compass",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "daydream-joker": {
-        "_id": "daydream-joker",
-        "id": "art3_17",
-        "identifier": "ef317",
-        "name": "Daydream Joker",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "devils-brand": {
-        "_id": "devils-brand",
-        "id": "art3_12",
-        "identifier": "ef312",
-        "name": "Devil's Brand",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "egg-of-delusion": {
-        "_id": "egg-of-delusion",
-        "id": "art3_2",
-        "identifier": "ef302",
-        "name": "Egg of Delusion",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "envoys-pipe": {
-        "_id": "envoys-pipe",
-        "id": "art3_19",
-        "identifier": "ef319",
-        "name": "Envoy's Pipe",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "exorcists-tonfa": {
-        "_id": "exorcists-tonfa",
-        "id": "art3_16",
-        "identifier": "ef316",
-        "name": "Exorcist's Tonfa",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "forest-totem": {
-        "_id": "forest-totem",
-        "id": "art3_21",
-        "identifier": "ef321",
-        "name": "Forest Totem",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "goblins-lamp": {
-        "_id": "goblins-lamp",
-        "id": "art3_13",
-        "identifier": "ef313",
-        "name": "Goblin's Lamp",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "grail-of-blood": {
-        "_id": "grail-of-blood",
-        "id": "art3_1",
-        "identifier": "ef301",
-        "name": "Grail of Blood",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
-    },
-    "labyrinth-cube": {
-        "_id": "labyrinth-cube",
-        "id": "art3_8",
-        "identifier": "ef308",
-        "name": "Labyrinth Cube",
-        "rarity": 3,
-        "role": "",
-        "gacha": true
+        "tags": [
+            0,
+            1,
+            2
+        ]
     },
     "mature-sunglasses": {
         "_id": "mature-sunglasses",
@@ -1827,7 +712,1421 @@
         "name": "Mature Sunglasses",
         "rarity": 5,
         "role": "knight",
-        "gacha": true
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "necro-undine": {
+        "_id": "necro-undine",
+        "id": "art0047",
+        "identifier": "efm10",
+        "name": "Necro & Undine",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+    "noble-oath": {
+        "_id": "noble-oath",
+        "id": "art0033",
+        "identifier": "efk06",
+        "name": "Noble Oath",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "otherworldly-machinery": {
+        "_id": "otherworldly-machinery",
+        "id": "art0028",
+        "identifier": "efr06",
+        "name": "Otherworldly Machinery",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": []
+    },
+    "prayer-of-solitude": {
+        "_id": "prayer-of-solitude",
+        "id": "art0183",
+        "identifier": "",
+        "name": "Prayer of Solitude",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "proof-of-valor": {
+        "_id": "proof-of-valor",
+        "id": "art0051",
+        "identifier": "ef501",
+        "name": "Proof of Valor",
+        "rarity": 5,
+        "role": "",
+        "tags": []
+    },
+    "pure-white-trust": {
+        "_id": "pure-white-trust",
+        "id": "art0146",
+        "identifier": "",
+        "name": "Pure White Trust",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "reingars-special-drink": {
+        "_id": "reingars-special-drink",
+        "id": "art0062",
+        "identifier": "efr10",
+        "name": "Reingar's Special Drink",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "rhianna-luciella": {
+        "_id": "rhianna-luciella",
+        "id": "art5_11",
+        "identifier": "efa01",
+        "name": "Rhianna & Luciella",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "rise-of-a-monarch": {
+        "_id": "rise-of-a-monarch",
+        "id": "art0102",
+        "identifier": "efk12",
+        "name": "Rise of a Monarch",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "rocket-punch-gauntlet": {
+        "_id": "rocket-punch-gauntlet",
+        "id": "art0170",
+        "identifier": "",
+        "name": "Rocket Punch Gauntlet",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+    "rod-of-amaryllis": {
+        "_id": "rod-of-amaryllis",
+        "id": "art0001",
+        "identifier": "efh01",
+        "name": "Rod of Amaryllis",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "sacred-tree-branch": {
+        "_id": "sacred-tree-branch",
+        "id": "art0164",
+        "identifier": "",
+        "name": "Sacred Tree Branch",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "samsara-prayer-beads": {
+        "_id": "samsara-prayer-beads",
+        "id": "art0104",
+        "identifier": "efw20",
+        "name": "Samsara Prayer Beads",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "scroll-of-shadows": {
+        "_id": "scroll-of-shadows",
+        "id": "art0152",
+        "identifier": "",
+        "name": "Scroll of Shadows",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "seal-of-capture": {
+        "_id": "seal-of-capture",
+        "id": "art0168",
+        "identifier": "",
+        "name": "Seal of Capture",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": []
+    },
+    "secret-art-storm-sword": {
+        "_id": "secret-art-storm-sword",
+        "id": "art0096",
+        "identifier": "efa14",
+        "name": "Secret Art - Storm Sword",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "severed-horn-wand": {
+        "_id": "severed-horn-wand",
+        "id": "art0132",
+        "identifier": "",
+        "name": "Severed Horn Wand",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            1,
+            2
+        ]
+    },
+    "sharpshooters-handgun": {
+        "_id": "sharpshooters-handgun",
+        "id": "art0159",
+        "identifier": "",
+        "name": "Sharpshooter's Handgun",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            1,
+            2
+        ]
+    },
+    "shepherd-of-the-hollow": {
+        "_id": "shepherd-of-the-hollow",
+        "id": "art0109",
+        "identifier": "efa15",
+        "name": "Shepherd of the Hollow",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "shimadra-staff": {
+        "_id": "shimadra-staff",
+        "id": "art5_4",
+        "identifier": "efh02",
+        "name": "Shimadra Staff",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "sigurd-scythe": {
+        "_id": "sigurd-scythe",
+        "id": "art5_21",
+        "identifier": "efw01",
+        "name": "Sigurd Scythe",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "snow-crystal": {
+        "_id": "snow-crystal",
+        "id": "art0101",
+        "identifier": "efw19",
+        "name": "Snow Crystal",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "sole-consolation": {
+        "_id": "sole-consolation",
+        "id": "art0182",
+        "identifier": "",
+        "name": "Sole Consolation",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "song-of-stars": {
+        "_id": "song-of-stars",
+        "id": "art5_2",
+        "identifier": "efr02",
+        "name": "Song of Stars",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "spatiotemporal-fan": {
+        "_id": "spatiotemporal-fan",
+        "id": "art0166",
+        "identifier": "",
+        "name": "Spatiotemporal Fan",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "spear-of-a-new-dawn": {
+        "_id": "spear-of-a-new-dawn",
+        "id": "art0130",
+        "identifier": "efk15",
+        "name": "Spear of a New Dawn",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "spear-of-purification": {
+        "_id": "spear-of-purification",
+        "id": "art0156",
+        "identifier": "",
+        "name": "Spear of Purification",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "sphere-of-inferno": {
+        "_id": "sphere-of-inferno",
+        "id": "art0175",
+        "identifier": "",
+        "name": "Sphere of Inferno",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "sphere-of-sadism": {
+        "_id": "sphere-of-sadism",
+        "id": "art0160",
+        "identifier": "",
+        "name": "Sphere of Sadism",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "spirits-breath": {
+        "_id": "spirits-breath",
+        "id": "art0049",
+        "identifier": "efm11",
+        "name": "Spirit's Breath",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "star-of-the-deep-sea": {
+        "_id": "star-of-the-deep-sea",
+        "id": "art0141",
+        "identifier": "",
+        "name": "Star of the Deep Sea",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "stella-harpa": {
+        "_id": "stella-harpa",
+        "id": "art0078",
+        "identifier": "efh09",
+        "name": "Stella Harpa",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "sword-of-autumn-eclipse": {
+        "_id": "sword-of-autumn-eclipse",
+        "id": "art0167",
+        "identifier": "",
+        "name": "Sword of Autumn Eclipse",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "sword-of-cycling-seasons": {
+        "_id": "sword-of-cycling-seasons",
+        "id": "art0169",
+        "identifier": "",
+        "name": "Sword of Cycling Seasons",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": []
+    },
+    "sword-of-ezera": {
+        "_id": "sword-of-ezera",
+        "id": "art0046",
+        "identifier": "efk08",
+        "name": "Sword of Ezera",
+        "rarity": 5,
+        "role": "knight",
+        "tags": []
+    },
+    "sword-of-judgment": {
+        "_id": "sword-of-judgment",
+        "id": "art0041",
+        "identifier": "efr09",
+        "name": "Sword of Judgment",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "sword-of-summer-twilight": {
+        "_id": "sword-of-summer-twilight",
+        "id": "art0117",
+        "identifier": "efa17",
+        "name": "Sword of Summer Twilight",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "sword-of-winter-shadow": {
+        "_id": "sword-of-winter-shadow",
+        "id": "art0144",
+        "identifier": "",
+        "name": "Sword of Winter Shadow",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "the-armament": {
+        "_id": "the-armament",
+        "id": "art0172",
+        "identifier": "",
+        "name": "The Armament",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+    "time-matter": {
+        "_id": "time-matter",
+        "id": "art0027",
+        "identifier": "efm06",
+        "name": "Time Matter",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "torn-sleeve": {
+        "_id": "torn-sleeve",
+        "id": "art0050",
+        "identifier": "efa09",
+        "name": "Torn Sleeve",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+    "touch-of-rekos": {
+        "_id": "touch-of-rekos",
+        "id": "art0091",
+        "identifier": "efh11",
+        "name": "Touch of Rekos",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "twilight-calamity": {
+        "_id": "twilight-calamity",
+        "id": "art0125",
+        "identifier": "efm21",
+        "name": "Twilight Calamity",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "uberiuss-tooth": {
+        "_id": "uberiuss-tooth",
+        "id": "art0030",
+        "identifier": "efw06",
+        "name": "Uberius's Tooth",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "unfading-memories": {
+        "_id": "unfading-memories",
+        "id": "art0079",
+        "identifier": "efh10",
+        "name": "Unfading Memories",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "unseen-observer": {
+        "_id": "unseen-observer",
+        "id": "art0119",
+        "identifier": "efr16",
+        "name": "Unseen Observer",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "upgraded-dragon-knuckles": {
+        "_id": "upgraded-dragon-knuckles",
+        "id": "art0138",
+        "identifier": "",
+        "name": "Upgraded Dragon Knuckles",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+    "victorious-flag": {
+        "_id": "victorious-flag",
+        "id": "art0087",
+        "identifier": "",
+        "name": "Victorious Flag",
+        "rarity": 5,
+        "tags": [
+            0
+        ]
+    },
+    "violet-talisman": {
+        "_id": "violet-talisman",
+        "id": "art0040",
+        "identifier": "efa08",
+        "name": "Violet Talisman",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "wall-of-order": {
+        "_id": "wall-of-order",
+        "id": "art0107",
+        "identifier": "efr15",
+        "name": "Wall of Order",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "war-horn": {
+        "_id": "war-horn",
+        "id": "art0129",
+        "identifier": "ef505",
+        "name": "War Horn",
+        "rarity": 5,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "wind-rider": {
+        "_id": "wind-rider",
+        "id": "art4_1",
+        "identifier": "efa02",
+        "name": "Wind Rider",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "wings-of-light-and-shadow": {
+        "_id": "wings-of-light-and-shadow",
+        "id": "art0133",
+        "identifier": "",
+        "name": "Wings of Light and Shadow",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "a-song-for-everybody": {
+        "_id": "a-song-for-everybody",
+        "id": "art0092",
+        "identifier": "",
+        "name": "A Song for Everybody",
+        "rarity": 4,
+        "tags": []
+    },
+    "adamant-shield": {
+        "_id": "adamant-shield",
+        "id": "art5_3",
+        "identifier": "efk04",
+        "name": "Adamant Shield",
+        "rarity": 4,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "ambrote": {
+        "_id": "ambrote",
+        "id": "art0034",
+        "identifier": "efr07",
+        "name": "Ambrote",
+        "rarity": 4,
+        "role": "ranger",
+        "tags": []
+    },
+    "andres-crossbow": {
+        "_id": "andres-crossbow",
+        "id": "art0076",
+        "identifier": "efr11",
+        "name": "Andre's Crossbow",
+        "rarity": 4,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "aurius": {
+        "_id": "aurius",
+        "id": "art5_6",
+        "identifier": "efk03",
+        "name": "Aurius",
+        "rarity": 4,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "barthezs-orbuculum": {
+        "_id": "barthezs-orbuculum",
+        "id": "art0066",
+        "identifier": "efm15",
+        "name": "Barthez's Orbuculum",
+        "rarity": 4,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "blazing-full-moon-trophy": {
+        "_id": "blazing-full-moon-trophy",
+        "id": "art0143",
+        "identifier": "",
+        "name": "Blazing Full Moon Trophy",
+        "rarity": 4,
+        "tags": []
+    },
+    "brilliant-confidence": {
+        "_id": "brilliant-confidence",
+        "id": "art0147",
+        "identifier": "",
+        "name": "Brilliant Confidence",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "card-of-small-miracles": {
+        "_id": "card-of-small-miracles",
+        "id": "art0035",
+        "identifier": "ef401",
+        "name": "Card of Small Miracles",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "cutie-pando": {
+        "_id": "cutie-pando",
+        "id": "art0179",
+        "identifier": "",
+        "name": "Cutie Pando",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "crimson-seed": {
+        "_id": "crimson-seed",
+        "id": "art0059",
+        "identifier": "efw10",
+        "name": "Crimson Seed",
+        "rarity": 4,
+        "role": "warrior",
+        "tags": []
+    },
+    "days-of-destiny": {
+        "_id": "days-of-destiny",
+        "id": "art0120",
+        "identifier": "",
+        "name": "Days of Destiny",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "dust-devil": {
+        "_id": "dust-devil",
+        "id": "art4_7",
+        "identifier": "efa05",
+        "name": "Dust Devil",
+        "rarity": 4,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "els-fist": {
+        "_id": "els-fist",
+        "id": "art5_20",
+        "identifier": "efw03",
+        "name": "El's Fist",
+        "rarity": 4,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "elyhas-knife": {
+        "_id": "elyhas-knife",
+        "id": "art4_12",
+        "identifier": "efa04",
+        "name": "Elyha's Knife",
+        "rarity": 4,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "eternus": {
+        "_id": "eternus",
+        "id": "art0055",
+        "identifier": "efh08",
+        "name": "Eternus",
+        "rarity": 4,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "flower-shower": {
+        "_id": "flower-shower",
+        "id": "art0097",
+        "identifier": "efw15",
+        "name": "Flower Shower",
+        "rarity": 4,
+        "role": "warrior",
+        "tags": []
+    },
+    "golden-cocoa-cookie": {
+        "_id": "golden-cocoa-cookie",
+        "id": "art0085",
+        "identifier": "ef411",
+        "name": "Golden Cocoa Cookie",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "hell-cutter": {
+        "_id": "hell-cutter",
+        "id": "art4_4",
+        "identifier": "efw04",
+        "name": "Hell Cutter",
+        "rarity": 4,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "hilag-lance": {
+        "_id": "hilag-lance",
+        "id": "art4_5",
+        "identifier": "efk05",
+        "name": "Hilag Lance",
+        "rarity": 4,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "iela-violin": {
+        "_id": "iela-violin",
+        "id": "art4_3",
+        "identifier": "efm08",
+        "name": "Iela Violin",
+        "rarity": 4,
+        "role": "mage",
+        "tags": []
+    },
+    "infinity-basket": {
+        "_id": "infinity-basket",
+        "id": "art4_16",
+        "identifier": "efr03",
+        "name": "Infinity Basket",
+        "rarity": 4,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "kaladra": {
+        "_id": "kaladra",
+        "id": "art0004",
+        "identifier": "efm04",
+        "name": "Kal'adra",
+        "rarity": 4,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "love-potion": {
+        "_id": "love-potion",
+        "id": "art0042",
+        "identifier": "ef402",
+        "name": "Love Potion",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "magarahas-tome": {
+        "_id": "magarahas-tome",
+        "id": "art5_18",
+        "identifier": "efh05",
+        "name": "Magaraha's Tome",
+        "rarity": 4,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "midnight-bloom": {
+        "_id": "midnight-bloom",
+        "id": "art0065",
+        "identifier": "ef406",
+        "name": "Midnight Bloom",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "moonlight-dreamblade": {
+        "_id": "moonlight-dreamblade",
+        "id": "art5_12",
+        "identifier": "efa03",
+        "name": "Moonlight Dreamblade",
+        "rarity": 4,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "moonlights-vestige": {
+        "_id": "moonlights-vestige",
+        "id": "art0112",
+        "identifier": "",
+        "name": "Moonlight's Vestige",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "new-year-cookies": {
+        "_id": "new-year-cookies",
+        "id": "art0081",
+        "identifier": "ef410",
+        "name": "New Year Cookies",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "nostalgic-music-box": {
+        "_id": "nostalgic-music-box",
+        "id": "art0148",
+        "identifier": "",
+        "name": "Nostalgic Music Box",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "official-levulin-beach-volleyball": {
+        "_id": "official-levulin-beach-volleyball",
+        "id": "art0135",
+        "identifier": "",
+        "name": "Official Levulin Beach Volleyball",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "one-year-of-gratitude": {
+        "_id": "one-year-of-gratitude",
+        "id": "art0064",
+        "identifier": "ef405",
+        "name": "One Year of Gratitude",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "our-beautiful-seasons": {
+        "_id": "our-beautiful-seasons",
+        "id": "art0187",
+        "identifier": "",
+        "name": "Our Beautiful Seasons",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "portrait-of-the-saviors": {
+        "_id": "portrait-of-the-saviors",
+        "id": "art0048",
+        "identifier": "ef403",
+        "name": "Portrait of the Saviors",
+        "rarity": 4,
+        "role": "",
+        "tags": [
+            1,
+            2
+        ]
+    },
+    "pos": {
+        "_id": "pos",
+        "id": "art0174",
+        "identifier": "",
+        "name": "P.O.S",
+        "rarity": 5,
+        "role": "",
+        "tags": [
+            1,
+            2
+        ]
+    },
+    "prelude-to-a-new-era": {
+        "_id": "prelude-to-a-new-era",
+        "id": "art0165",
+        "identifier": "",
+        "name": "Prelude to a New Era",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "radiant-forever": {
+        "_id": "radiant-forever",
+        "id": "art0045",
+        "identifier": "efm09",
+        "name": "Radiant Forever",
+        "rarity": 4,
+        "role": "mage",
+        "tags": []
+    },
+    "rainbow-scale": {
+        "_id": "rainbow-scale",
+        "id": "art0063",
+        "identifier": "ef404",
+        "name": "Rainbow Scale",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "records-of-unity": {
+        "_id": "records-of-unity",
+        "id": "art0142",
+        "identifier": "",
+        "name": "Records of Unity",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "resolute-soldier-series": {
+        "_id": "resolute-soldier-series",
+        "id": "art0080",
+        "identifier": "",
+        "name": "Resolute Soldier Series",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "rosa-hargana": {
+        "_id": "rosa-hargana",
+        "id": "art4_14",
+        "identifier": "efr05",
+        "name": "Rosa Hargana",
+        "rarity": 4,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "santa-muerte": {
+        "_id": "santa-muerte",
+        "id": "art0031",
+        "identifier": "efa06",
+        "name": "Santa Muerte",
+        "rarity": 4,
+        "role": "assassin",
+        "tags": []
+    },
+    "sashe-ithanes": {
+        "_id": "sashe-ithanes",
+        "id": "art4_6",
+        "identifier": "efr04",
+        "name": "Sashe Ithanes",
+        "rarity": 4,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
+    "sepulcrum": {
+        "_id": "sepulcrum",
+        "id": "art0054",
+        "identifier": "efw12",
+        "name": "Sepulcrum",
+        "rarity": 4,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "shepherds-of-chaos": {
+        "_id": "shepherds-of-chaos",
+        "id": "art0060",
+        "identifier": "efa10",
+        "name": "Shepherds of Chaos",
+        "rarity": 4,
+        "role": "assassin",
+        "tags": []
+    },
+    "silver-rain": {
+        "_id": "silver-rain",
+        "id": "art0056",
+        "identifier": "efa11",
+        "name": "Silver Rain",
+        "rarity": 4,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
+    "siraren": {
+        "_id": "siraren",
+        "id": "art5_15",
+        "identifier": "efm05",
+        "name": "Sira-Ren",
+        "rarity": 4,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "spooky-solayu-stories": {
+        "_id": "spooky-solayu-stories",
+        "id": "art0068",
+        "identifier": "ef407",
+        "name": "Spooky Solayu Stories",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "steadfast-gatekeeper": {
+        "_id": "steadfast-gatekeeper",
+        "id": "art0073",
+        "identifier": "efk10",
+        "name": "Steadfast Gatekeeper",
+        "rarity": 4,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
+    "strak-gauntlet": {
+        "_id": "strak-gauntlet",
+        "id": "art4_2",
+        "identifier": "efw05",
+        "name": "Strak Gauntlet",
+        "rarity": 4,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "super-duper-water-gun-shooter": {
+        "_id": "super-duper-water-gun-shooter",
+        "id": "art0099",
+        "identifier": "",
+        "name": "Super Duper Water Gun Shooter",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "tagehels-ancient-book": {
+        "_id": "tagehels-ancient-book",
+        "id": "art5_19",
+        "identifier": "efm03",
+        "name": "Tagehel's Ancient Book",
+        "rarity": 4,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "tear-of-the-desert": {
+        "_id": "tear-of-the-desert",
+        "id": "art0053",
+        "identifier": "efm12",
+        "name": "Tear of the Desert",
+        "rarity": 4,
+        "role": "mage",
+        "tags": []
+    },
+    "the-guardian-stars-blessing": {
+        "_id": "the-guardian-stars-blessing",
+        "id": "art0127",
+        "identifier": "",
+        "name": "The Guardian Star's Blessing",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "to-a-new-world": {
+        "_id": "to-a-new-world",
+        "id": "art0110",
+        "identifier": "ef414",
+        "name": "To a New World",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "waters-origin": {
+        "_id": "waters-origin",
+        "id": "art4_8",
+        "identifier": "efh03",
+        "name": "Water's Origin",
+        "rarity": 4,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "wondrous-potion-vial": {
+        "_id": "wondrous-potion-vial",
+        "id": "art4_13",
+        "identifier": "efh04",
+        "name": "Wondrous Potion Vial",
+        "rarity": 4,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
+    "iii-the-empress": {
+        "_id": "iii-the-empress",
+        "id": "art0153",
+        "identifier": "",
+        "name": "III. The Empress",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "iv-the-emperor": {
+        "_id": "iv-the-emperor",
+        "id": "art0154",
+        "identifier": "",
+        "name": "IV. The Emperor",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "vi-the-lovers": {
+        "_id": "vi-the-lovers",
+        "id": "art0177",
+        "identifier": "",
+        "name": "VI. The Lovers",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "vii-the-chariot": {
+        "_id": "vii-the-chariot",
+        "id": "art0163",
+        "identifier": "",
+        "name": "VII. The Chariot",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xiii-death": {
+        "_id": "xiii-death",
+        "id": "art0113",
+        "identifier": "",
+        "name": "XIII. Death",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xiv-temperance": {
+        "_id": "xiv-temperance",
+        "id": "art0128",
+        "identifier": "",
+        "name": "XIV. Temperance",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xvi-the-tower": {
+        "_id": "xvi-the-tower",
+        "id": "art0114",
+        "identifier": "ef418",
+        "name": "XVI. The Tower",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xviii-the-moon": {
+        "_id": "xviii-the-moon",
+        "id": "art0115",
+        "identifier": "",
+        "name": "XVIII. The Moon",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xix-the-sun": {
+        "_id": "xix-the-sun",
+        "id": "art0162",
+        "identifier": "",
+        "name": "XIX. The Sun",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "alsacian-spear": {
+        "_id": "alsacian-spear",
+        "id": "art3_7",
+        "identifier": "ef307",
+        "name": "Alsacian Spear",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "ancient-sheath": {
+        "_id": "ancient-sheath",
+        "id": "art3_4",
+        "identifier": "ef304",
+        "name": "Ancient Sheath",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "aqua-rose": {
+        "_id": "aqua-rose",
+        "id": "art3_14",
+        "identifier": "ef314",
+        "name": "Aqua Rose",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "ascending-axe": {
+        "_id": "ascending-axe",
+        "id": "art3_15",
+        "identifier": "ef315",
+        "name": "Ascending Axe",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "atmas-portal": {
+        "_id": "atmas-portal",
+        "id": "art3_6",
+        "identifier": "ef306",
+        "name": "Atma's Portal",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "butterfly-mandolin": {
+        "_id": "butterfly-mandolin",
+        "id": "art3_18",
+        "identifier": "ef318",
+        "name": "Butterfly Mandolin",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "cursed-compass": {
+        "_id": "cursed-compass",
+        "id": "art3_9",
+        "identifier": "ef309",
+        "name": "Cursed Compass",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "daydream-joker": {
+        "_id": "daydream-joker",
+        "id": "art3_17",
+        "identifier": "ef317",
+        "name": "Daydream Joker",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "devils-brand": {
+        "_id": "devils-brand",
+        "id": "art3_12",
+        "identifier": "ef312",
+        "name": "Devil's Brand",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "egg-of-delusion": {
+        "_id": "egg-of-delusion",
+        "id": "art3_2",
+        "identifier": "ef302",
+        "name": "Egg of Delusion",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "envoys-pipe": {
+        "_id": "envoys-pipe",
+        "id": "art3_19",
+        "identifier": "ef319",
+        "name": "Envoy's Pipe",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "exorcists-tonfa": {
+        "_id": "exorcists-tonfa",
+        "id": "art3_16",
+        "identifier": "ef316",
+        "name": "Exorcist's Tonfa",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "forest-totem": {
+        "_id": "forest-totem",
+        "id": "art3_21",
+        "identifier": "ef321",
+        "name": "Forest Totem",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "goblins-lamp": {
+        "_id": "goblins-lamp",
+        "id": "art3_13",
+        "identifier": "ef313",
+        "name": "Goblin's Lamp",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "grail-of-blood": {
+        "_id": "grail-of-blood",
+        "id": "art3_1",
+        "identifier": "ef301",
+        "name": "Grail of Blood",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
+    },
+    "labyrinth-cube": {
+        "_id": "labyrinth-cube",
+        "id": "art3_8",
+        "identifier": "ef308",
+        "name": "Labyrinth Cube",
+        "rarity": 3,
+        "role": "",
+        "tags": [
+            0
+        ]
     },
     "mighty-yaksha": {
         "_id": "mighty-yaksha",
@@ -1836,7 +2135,9 @@
         "name": "Mighty Yaksha",
         "rarity": 3,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "oath-key": {
         "_id": "oath-key",
@@ -1845,7 +2146,9 @@
         "name": "Oath Key",
         "rarity": 3,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "prophetic-candlestick": {
         "_id": "prophetic-candlestick",
@@ -1854,7 +2157,9 @@
         "name": "Prophetic Candlestick",
         "rarity": 3,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "ranons-memorandum": {
         "_id": "ranons-memorandum",
@@ -1863,7 +2168,9 @@
         "name": "Ranon's Memorandum",
         "rarity": 3,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "sword-of-the-morning": {
         "_id": "sword-of-the-morning",
@@ -1872,7 +2179,9 @@
         "name": "Sword of the Morning",
         "rarity": 3,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "timeless-anchor": {
         "_id": "timeless-anchor",
@@ -1881,7 +2190,9 @@
         "name": "Timeless Anchor",
         "rarity": 3,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "bloodbead-dagger": {
         "_id": "bloodbead-dagger",
@@ -1890,7 +2201,9 @@
         "name": "Bloodbead Dagger",
         "rarity": 2,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "deadly-sword": {
         "_id": "deadly-sword",
@@ -1899,7 +2212,9 @@
         "name": "Deadly Sword",
         "rarity": 2,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "elfs-bow": {
         "_id": "elfs-bow",
@@ -1908,7 +2223,9 @@
         "name": "Elf's Bow",
         "rarity": 2,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "fairys-grimoire": {
         "_id": "fairys-grimoire",
@@ -1917,7 +2234,9 @@
         "name": "Fairy's Grimoire",
         "rarity": 2,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "firm-shield": {
         "_id": "firm-shield",
@@ -1926,7 +2245,9 @@
         "name": "Firm Shield",
         "rarity": 2,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "staff-of-wisdom": {
         "_id": "staff-of-wisdom",
@@ -1935,7 +2256,9 @@
         "name": "Staff of Wisdom",
         "rarity": 2,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "biting-wind-star": {
         "_id": "biting-wind-star",
@@ -1944,7 +2267,9 @@
         "name": "Biting Wind Star",
         "rarity": 1,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "demons-pistol": {
         "_id": "demons-pistol",
@@ -1953,7 +2278,9 @@
         "name": "Demon's Pistol",
         "rarity": 1,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "dream-scroll": {
         "_id": "dream-scroll",
@@ -1962,7 +2289,9 @@
         "name": "Dream Scroll",
         "rarity": 1,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "enhanced-gauntlet": {
         "_id": "enhanced-gauntlet",
@@ -1971,7 +2300,9 @@
         "name": "Enhanced Gauntlet",
         "rarity": 1,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "sword-of-the-sun": {
         "_id": "sword-of-the-sun",
@@ -1980,7 +2311,9 @@
         "name": "Sword of the Sun",
         "rarity": 1,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     },
     "venus-orb": {
         "_id": "venus-orb",
@@ -1989,6 +2322,8 @@
         "name": "Venus Orb",
         "rarity": 1,
         "role": "",
-        "gacha": true
+        "tags": [
+            0
+        ]
     }
 }
