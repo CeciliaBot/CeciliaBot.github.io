@@ -14,7 +14,7 @@ Korean Stove Event:
 
 [Urban Shadow Choux is Here! What's Your Favorite Skill 3 Scene?](https://page.onstove.com/epicseven/kr/view/9748310) {2 Leifs)
 
-Global = 글로벌 | Asia = 글로벌
+Global = 글로벌 | Asia = 아시아
 
 ### Coupons:
 \-
