@@ -13,7 +13,7 @@
     "a-symbol-of-unity": {
         "_id": "a-symbol-of-unity",
         "id": "art0121",
-        "identifier": "",
+        "identifier": "ef504",
         "name": "A Symbol of Unity",
         "rarity": 5,
         "tags": []
@@ -76,7 +76,7 @@
     "an-offer-you-cant-refuse": {
         "_id": "an-offer-you-cant-refuse",
         "id": "art0178",
-        "identifier": "",
+        "identifier": "efr24",
         "name": "An Offer You Can't Refuse",
         "rarity": 5,
         "role": "ranger",
@@ -98,7 +98,7 @@
     "antimagic-mask": {
         "_id": "antimagic-mask",
         "id": "art0139",
-        "identifier": "",
+        "identifier": "efw23",
         "name": "Anti-Magic Mask",
         "rarity": 5,
         "role": "warrior",
@@ -111,7 +111,7 @@
     "azure-comet": {
         "_id": "azure-comet",
         "id": "art0131",
-        "identifier": "",
+        "identifier": "efw22",
         "name": "Azure Comet",
         "rarity": 5,
         "role": "warrior",
@@ -124,7 +124,7 @@
     "bastion-of-hope": {
         "_id": "bastion-of-hope",
         "id": "art0145",
-        "identifier": "",
+        "identifier": "ef507",
         "name": "Bastion of Hope",
         "rarity": 5,
         "tags": []
@@ -143,7 +143,7 @@
     "benimarus-tachi": {
         "_id": "benimarus-tachi",
         "id": "art0180",
-        "identifier": "",
+        "identifier": "efw30",
         "name": "Benimaru's Tachi",
         "rarity": 5,
         "role": "warrior",
@@ -167,7 +167,7 @@
     "bloodstone": {
         "_id": "bloodstone",
         "id": "art4_17",
-        "identifier": "efr01",
+        "identifier": "ef416",
         "name": "Bloodstone",
         "rarity": 5,
         "role": "ranger",
@@ -200,7 +200,7 @@
     "broken-will-of-the-priest": {
         "_id": "broken-will-of-the-priest",
         "id": "art0185",
-        "identifier": "",
+        "identifier": "efk20",
         "name": "Broken Will of the Priest",
         "rarity": 5,
         "role": "knight",
@@ -375,7 +375,7 @@
     "elbris-ritual-sword": {
         "_id": "elbris-ritual-sword",
         "id": "art5_1",
-        "identifier": "efk02",
+        "identifier": "ef510",
         "name": "Elbris Ritual Sword",
         "rarity": 5,
         "role": "knight",
@@ -397,7 +397,7 @@
     "exif-detective-ed-gadget": {
         "_id": "exif-detective-ed-gadget",
         "id": "art0173",
-        "identifier": "",
+        "identifier": "efh17",
         "name": "EXIF Detective (E.d.) Gadget",
         "rarity": 5,
         "role": "manauser",
@@ -422,7 +422,7 @@
     "fan-of-light-and-dark": {
         "_id": "fan-of-light-and-dark",
         "id": "art0176",
-        "identifier": "",
+        "identifier": "efh18",
         "name": "Fan of Light and Dark",
         "rarity": 5,
         "role": "manauser",
@@ -433,7 +433,7 @@
     "flawless-garments": {
         "_id": "flawless-garments",
         "id": "art0140",
-        "identifier": "",
+        "identifier": "efh15",
         "name": "Flawless Garments",
         "rarity": 5,
         "role": "manauser",
@@ -445,7 +445,7 @@
     "frame-of-light": {
         "_id": "frame-of-light",
         "id": "art0171",
-        "identifier": "",
+        "identifier": "efm28",
         "name": "Frame of Light",
         "rarity": 5,
         "role": "mage",
@@ -458,7 +458,7 @@
     "fullmetals-automail": {
         "_id": "fullmetals-automail",
         "id": "art0157",
-        "identifier": "",
+        "identifier": "efw28",
         "name": "Fullmetal's Automail",
         "rarity": 5,
         "role": "warrior",
@@ -471,7 +471,7 @@
     "glowings-21": {
         "_id": "glowings-21",
         "id": "art0149",
-        "identifier": "",
+        "identifier": "efr19",
         "name": "Glo-Wings 21",
         "rarity": 5,
         "role": "ranger",
@@ -482,7 +482,7 @@
     "goblet-of-oath": {
         "_id": "goblet-of-oath",
         "id": "art0150",
-        "identifier": "",
+        "identifier": "efa19",
         "name": "Goblet of Oath",
         "rarity": 5,
         "role": "assassin",
@@ -493,7 +493,7 @@
     "golden-rose": {
         "_id": "golden-rose",
         "id": "art0181",
-        "identifier": "",
+        "identifier": "efw31",
         "name": "Golden Rose",
         "rarity": 5,
         "role": "warrior",
@@ -504,7 +504,7 @@
     "guardian-ice-crystals": {
         "_id": "guardian-ice-crystals",
         "id": "art0134",
-        "identifier": "",
+        "identifier": "efh14",
         "name": "Guardian Ice Crystals",
         "rarity": 5,
         "role": "manauser",
@@ -517,8 +517,8 @@
     "guide-to-a-decision": {
         "_id": "guide-to-a-decision",
         "id": "art0136",
-        "identifier": "",
-        "name": "Guide to a Descision",
+        "identifier": "ef506",
+        "name": "Guide to a Decision",
         "rarity": 5,
         "tags": []
     },
@@ -548,7 +548,7 @@
     "hostess-of-the-banquet": {
         "_id": "hostess-of-the-banquet",
         "id": "art0186",
-        "identifier": "",
+        "identifier": "efa22",
         "name": "Hostess of the Banquet",
         "rarity": 5,
         "role": "assassin",
@@ -571,7 +571,7 @@
     "ignition-cloth-gloves": {
         "_id": "ignition-cloth-gloves",
         "id": "art0158",
-        "identifier": "",
+        "identifier": "efm26",
         "name": "Ignition Cloth Gloves",
         "rarity": 5,
         "role": "mage",
@@ -584,7 +584,7 @@
     "indestructible-gaiters": {
         "_id": "indestructible-gaiters",
         "id": "art0155",
-        "identifier": "",
+        "identifier": "efw26",
         "name": "Indestructible Gaiters",
         "rarity": 5,
         "role": "warrior",
@@ -606,7 +606,7 @@
     "jackos-symbol": {
         "_id": "jackos-symbol",
         "id": "art0151",
-        "identifier": "",
+        "identifier": "efw25",
         "name": "Jack-O's Symbol",
         "rarity": 5,
         "role": "warrior",
@@ -664,7 +664,7 @@
     "magic-for-friends": {
         "_id": "magic-for-friends",
         "id": "art0137",
-        "identifier": "",
+        "identifier": "efm23",
         "name": "Magic for Friends",
         "rarity": 5,
         "role": "mage",
@@ -708,7 +708,7 @@
     "mature-sunglasses": {
         "_id": "mature-sunglasses",
         "id": "art0161",
-        "identifier": "",
+        "identifier": "efk18",
         "name": "Mature Sunglasses",
         "rarity": 5,
         "role": "knight",
@@ -753,7 +753,7 @@
     "prayer-of-solitude": {
         "_id": "prayer-of-solitude",
         "id": "art0183",
-        "identifier": "",
+        "identifier": "efw32",
         "name": "Prayer of Solitude",
         "rarity": 5,
         "role": "warrior",
@@ -774,7 +774,7 @@
     "pure-white-trust": {
         "_id": "pure-white-trust",
         "id": "art0146",
-        "identifier": "",
+        "identifier": "efw24",
         "name": "Pure White Trust",
         "rarity": 5,
         "role": "warrior",
@@ -819,7 +819,7 @@
     "rocket-punch-gauntlet": {
         "_id": "rocket-punch-gauntlet",
         "id": "art0170",
-        "identifier": "",
+        "identifier": "efk19",
         "name": "Rocket Punch Gauntlet",
         "rarity": 5,
         "role": "knight",
@@ -832,7 +832,7 @@
     "rod-of-amaryllis": {
         "_id": "rod-of-amaryllis",
         "id": "art0001",
-        "identifier": "efh01",
+        "identifier": "ef514",
         "name": "Rod of Amaryllis",
         "rarity": 5,
         "role": "manauser",
@@ -843,7 +843,7 @@
     "sacred-tree-branch": {
         "_id": "sacred-tree-branch",
         "id": "art0164",
-        "identifier": "",
+        "identifier": "efh16",
         "name": "Sacred Tree Branch",
         "rarity": 5,
         "role": "manauser",
@@ -865,7 +865,7 @@
     "scroll-of-shadows": {
         "_id": "scroll-of-shadows",
         "id": "art0152",
-        "identifier": "",
+        "identifier": "efm25",
         "name": "Scroll of Shadows",
         "rarity": 5,
         "role": "mage",
@@ -876,7 +876,7 @@
     "seal-of-capture": {
         "_id": "seal-of-capture",
         "id": "art0168",
-        "identifier": "",
+        "identifier": "efr22",
         "name": "Seal of Capture",
         "rarity": 5,
         "role": "ranger",
@@ -896,7 +896,7 @@
     "severed-horn-wand": {
         "_id": "severed-horn-wand",
         "id": "art0132",
-        "identifier": "",
+        "identifier": "efm22",
         "name": "Severed Horn Wand",
         "rarity": 5,
         "role": "mage",
@@ -908,7 +908,7 @@
     "sharpshooters-handgun": {
         "_id": "sharpshooters-handgun",
         "id": "art0159",
-        "identifier": "",
+        "identifier": "efr20",
         "name": "Sharpshooter's Handgun",
         "rarity": 5,
         "role": "ranger",
@@ -942,7 +942,7 @@
     "sigurd-scythe": {
         "_id": "sigurd-scythe",
         "id": "art5_21",
-        "identifier": "efw01",
+        "identifier": "ef513",
         "name": "Sigurd Scythe",
         "rarity": 5,
         "role": "warrior",
@@ -964,7 +964,7 @@
     "sole-consolation": {
         "_id": "sole-consolation",
         "id": "art0182",
-        "identifier": "",
+        "identifier": "efh19",
         "name": "Sole Consolation",
         "rarity": 5,
         "role": "manauser",
@@ -987,7 +987,7 @@
     "spatiotemporal-fan": {
         "_id": "spatiotemporal-fan",
         "id": "art0166",
-        "identifier": "",
+        "identifier": "efr21",
         "name": "Spatiotemporal Fan",
         "rarity": 5,
         "role": "ranger",
@@ -1009,7 +1009,7 @@
     "spear-of-purification": {
         "_id": "spear-of-purification",
         "id": "art0156",
-        "identifier": "",
+        "identifier": "efw27",
         "name": "Spear of Purification",
         "rarity": 5,
         "role": "warrior",
@@ -1020,7 +1020,7 @@
     "sphere-of-inferno": {
         "_id": "sphere-of-inferno",
         "id": "art0175",
-        "identifier": "",
+        "identifier": "efr23",
         "name": "Sphere of Inferno",
         "rarity": 5,
         "role": "ranger",
@@ -1031,7 +1031,7 @@
     "sphere-of-sadism": {
         "_id": "sphere-of-sadism",
         "id": "art0160",
-        "identifier": "",
+        "identifier": "efk17",
         "name": "Sphere of Sadism",
         "rarity": 5,
         "role": "knight",
@@ -1053,7 +1053,7 @@
     "star-of-the-deep-sea": {
         "_id": "star-of-the-deep-sea",
         "id": "art0141",
-        "identifier": "",
+        "identifier": "efr18",
         "name": "Star of the Deep Sea",
         "rarity": 5,
         "role": "ranger",
@@ -1076,7 +1076,7 @@
     "sword-of-autumn-eclipse": {
         "_id": "sword-of-autumn-eclipse",
         "id": "art0167",
-        "identifier": "",
+        "identifier": "efw29",
         "name": "Sword of Autumn Eclipse",
         "rarity": 5,
         "role": "warrior",
@@ -1087,7 +1087,7 @@
     "sword-of-cycling-seasons": {
         "_id": "sword-of-cycling-seasons",
         "id": "art0169",
-        "identifier": "",
+        "identifier": "efa20",
         "name": "Sword of Cycling Seasons",
         "rarity": 5,
         "role": "assassin",
@@ -1127,7 +1127,7 @@
     "sword-of-winter-shadow": {
         "_id": "sword-of-winter-shadow",
         "id": "art0144",
-        "identifier": "",
+        "identifier": "efa18",
         "name": "Sword of Winter Shadow",
         "rarity": 5,
         "role": "assassin",
@@ -1138,7 +1138,7 @@
     "the-armament": {
         "_id": "the-armament",
         "id": "art0172",
-        "identifier": "",
+        "identifier": "efa21",
         "name": "The Armament",
         "rarity": 5,
         "role": "assassin",
@@ -1230,7 +1230,7 @@
     "upgraded-dragon-knuckles": {
         "_id": "upgraded-dragon-knuckles",
         "id": "art0138",
-        "identifier": "",
+        "identifier": "efm24",
         "name": "Upgraded Dragon Knuckles",
         "rarity": 5,
         "role": "mage",
@@ -1243,7 +1243,7 @@
     "victorious-flag": {
         "_id": "victorious-flag",
         "id": "art0087",
-        "identifier": "",
+        "identifier": "ef502",
         "name": "Victorious Flag",
         "rarity": 5,
         "tags": [
@@ -1280,9 +1280,7 @@
         "name": "War Horn",
         "rarity": 5,
         "role": "",
-        "tags": [
-            0
-        ]
+        "tags": []
     },
     "wind-rider": {
         "_id": "wind-rider",
@@ -1298,7 +1296,7 @@
     "wings-of-light-and-shadow": {
         "_id": "wings-of-light-and-shadow",
         "id": "art0133",
-        "identifier": "",
+        "identifier": "efk16",
         "name": "Wings of Light and Shadow",
         "rarity": 5,
         "role": "knight",
@@ -1309,7 +1307,7 @@
     "a-song-for-everybody": {
         "_id": "a-song-for-everybody",
         "id": "art0092",
-        "identifier": "",
+        "identifier": "ef412",
         "name": "A Song for Everybody",
         "rarity": 4,
         "tags": []
@@ -1370,7 +1368,7 @@
     "blazing-full-moon-trophy": {
         "_id": "blazing-full-moon-trophy",
         "id": "art0143",
-        "identifier": "",
+        "identifier": "ef425",
         "name": "Blazing Full Moon Trophy",
         "rarity": 4,
         "tags": []
@@ -1378,7 +1376,7 @@
     "brilliant-confidence": {
         "_id": "brilliant-confidence",
         "id": "art0147",
-        "identifier": "",
+        "identifier": "ef426",
         "name": "Brilliant Confidence",
         "rarity": 4,
         "role": "",
@@ -1396,7 +1394,7 @@
     "cutie-pando": {
         "_id": "cutie-pando",
         "id": "art0179",
-        "identifier": "",
+        "identifier": "ef434",
         "name": "Cutie Pando",
         "rarity": 4,
         "role": "",
@@ -1414,7 +1412,7 @@
     "days-of-destiny": {
         "_id": "days-of-destiny",
         "id": "art0120",
-        "identifier": "",
+        "identifier": "ef420",
         "name": "Days of Destiny",
         "rarity": 4,
         "role": "",
@@ -1578,7 +1576,7 @@
     "moonlights-vestige": {
         "_id": "moonlights-vestige",
         "id": "art0112",
-        "identifier": "",
+        "identifier": "ef415",
         "name": "Moonlight's Vestige",
         "rarity": 4,
         "role": "",
@@ -1596,7 +1594,7 @@
     "nostalgic-music-box": {
         "_id": "nostalgic-music-box",
         "id": "art0148",
-        "identifier": "",
+        "identifier": "ef427",
         "name": "Nostalgic Music Box",
         "rarity": 4,
         "role": "",
@@ -1605,7 +1603,7 @@
     "official-levulin-beach-volleyball": {
         "_id": "official-levulin-beach-volleyball",
         "id": "art0135",
-        "identifier": "",
+        "identifier": "ef423",
         "name": "Official Levulin Beach Volleyball",
         "rarity": 4,
         "role": "",
@@ -1623,7 +1621,7 @@
     "our-beautiful-seasons": {
         "_id": "our-beautiful-seasons",
         "id": "art0187",
-        "identifier": "",
+        "identifier": "ef435",
         "name": "Our Beautiful Seasons",
         "rarity": 4,
         "role": "",
@@ -1644,7 +1642,7 @@
     "pos": {
         "_id": "pos",
         "id": "art0174",
-        "identifier": "",
+        "identifier": "ef508",
         "name": "P.O.S",
         "rarity": 5,
         "role": "",
@@ -1656,7 +1654,7 @@
     "prelude-to-a-new-era": {
         "_id": "prelude-to-a-new-era",
         "id": "art0165",
-        "identifier": "",
+        "identifier": "ef432",
         "name": "Prelude to a New Era",
         "rarity": 4,
         "role": "",
@@ -1683,7 +1681,7 @@
     "records-of-unity": {
         "_id": "records-of-unity",
         "id": "art0142",
-        "identifier": "",
+        "identifier": "ef424",
         "name": "Records of Unity",
         "rarity": 4,
         "role": "",
@@ -1692,7 +1690,7 @@
     "resolute-soldier-series": {
         "_id": "resolute-soldier-series",
         "id": "art0080",
-        "identifier": "",
+        "identifier": "ef409",
         "name": "Resolute Soldier Series",
         "rarity": 4,
         "role": "",
@@ -1721,7 +1719,7 @@
     "sashe-ithanes": {
         "_id": "sashe-ithanes",
         "id": "art4_6",
-        "identifier": "efr04",
+        "identifier": "ef512",
         "name": "Sashe Ithanes",
         "rarity": 4,
         "role": "ranger",
@@ -1805,7 +1803,7 @@
     "super-duper-water-gun-shooter": {
         "_id": "super-duper-water-gun-shooter",
         "id": "art0099",
-        "identifier": "",
+        "identifier": "ef413",
         "name": "Super Duper Water Gun Shooter",
         "rarity": 4,
         "role": "",
@@ -1834,7 +1832,7 @@
     "the-guardian-stars-blessing": {
         "_id": "the-guardian-stars-blessing",
         "id": "art0127",
-        "identifier": "",
+        "identifier": "ef421",
         "name": "The Guardian Star's Blessing",
         "rarity": 4,
         "role": "",
@@ -1874,7 +1872,7 @@
     "iii-the-empress": {
         "_id": "iii-the-empress",
         "id": "art0153",
-        "identifier": "",
+        "identifier": "ef428",
         "name": "III. The Empress",
         "rarity": 4,
         "role": "",
@@ -1883,7 +1881,7 @@
     "iv-the-emperor": {
         "_id": "iv-the-emperor",
         "id": "art0154",
-        "identifier": "",
+        "identifier": "ef429",
         "name": "IV. The Emperor",
         "rarity": 4,
         "role": "",
@@ -1892,7 +1890,7 @@
     "vi-the-lovers": {
         "_id": "vi-the-lovers",
         "id": "art0177",
-        "identifier": "",
+        "identifier": "ef433",
         "name": "VI. The Lovers",
         "rarity": 4,
         "role": "",
@@ -1901,7 +1899,7 @@
     "vii-the-chariot": {
         "_id": "vii-the-chariot",
         "id": "art0163",
-        "identifier": "",
+        "identifier": "ef431",
         "name": "VII. The Chariot",
         "rarity": 4,
         "role": "",
@@ -1910,7 +1908,7 @@
     "xiii-death": {
         "_id": "xiii-death",
         "id": "art0113",
-        "identifier": "",
+        "identifier": "ef417",
         "name": "XIII. Death",
         "rarity": 4,
         "role": "",
@@ -1919,7 +1917,7 @@
     "xiv-temperance": {
         "_id": "xiv-temperance",
         "id": "art0128",
-        "identifier": "",
+        "identifier": "ef422",
         "name": "XIV. Temperance",
         "rarity": 4,
         "role": "",
@@ -1937,7 +1935,7 @@
     "xviii-the-moon": {
         "_id": "xviii-the-moon",
         "id": "art0115",
-        "identifier": "",
+        "identifier": "ef419",
         "name": "XVIII. The Moon",
         "rarity": 4,
         "role": "",
@@ -1946,7 +1944,7 @@
     "xix-the-sun": {
         "_id": "xix-the-sun",
         "id": "art0162",
-        "identifier": "",
+        "identifier": "ef430",
         "name": "XIX. The Sun",
         "rarity": 4,
         "role": "",
