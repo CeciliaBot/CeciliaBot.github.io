@@ -79,5 +79,5 @@ export default async function handler(req, res) {
         })
     })
 
-    return res.end( JSON.stringify(response) );
+    return res.end( JSON.stringify(heroes) );
 }
