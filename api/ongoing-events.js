@@ -25,7 +25,7 @@ function setHeroesAndArtifacts(banner, heroes, artifacts) {
         }
     })
     banner.a = (banner.a || []).map(artifact => {
-        var a = hero.id;
+        var a = artifact.id;
         return {
             id: artifacts[a] || { id: a, _id: a, name: a, rarity: 1, role: 'knight', tags: []},
             new: artifact.new
