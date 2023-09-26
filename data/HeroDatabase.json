@@ -3909,5 +3909,18 @@
             0,
             1
         ]
+    },
+    "nahkwol": {
+        "id": "c1149",
+        "_id": "nahkwol",
+        "name": "Nahkwol",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     }
 }

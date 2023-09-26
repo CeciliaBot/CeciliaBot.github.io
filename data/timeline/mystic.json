@@ -1471,5 +1471,29 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f5418d75366648a3b80c912c6c329ca2.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-10-05T03:00:00Z",
+         "2023-10-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "apocalypse-ravi"
+         },
+         {
+            "id": "faithless-lidica"
+         },
+         {
+            "id": "solitaria-of-the-snow"
+         },
+         {
+            "id": "commander-pavel"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

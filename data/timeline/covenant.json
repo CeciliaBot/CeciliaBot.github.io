@@ -7419,7 +7419,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/be8f5e491404457e8f669ac6975064cf.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9759778,
       "type": "limited",
       "dt": [
          "2023-09-21T03:00:00Z",
@@ -7437,10 +7437,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ee2f2e2898a74b74b4e1d49d1086d85d.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9759772,
       "type": "covenant",
       "dt": [
          "2023-09-21T03:00:00Z",
@@ -7454,6 +7454,46 @@
       "a": [
          {
             "id": "ancient-dragons-legacy"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/48d6670956904baaa56ecaa44dd4435c.jpg"
+   },
+   {
+      "nid": 9770286,
+      "type": "covenant",
+      "dt": [
+         "2023-09-27T09:00:00Z",
+         "2023-10-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "nahkwol",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "elegiac-candle",
+            "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d9172ae7259f442da1b5e719b321141f.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-10-05T03:00:00Z",
+         "2023-10-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "flan"
+         }
+      ],
+      "a": [
+         {
+            "id": "unseen-observer"
          }
       ],
       "thumbnail": ""

@@ -318,5 +318,12 @@
             "_id": "last-rider-krau-hidden-piece",
             "name": "Hidden Piece"
         }
+    ],
+    "sinful-angelica": [
+        {
+            "id": "c2062_s01",
+            "_id": "sinful-angelica-prophet-of-the-stars",
+            "name": "Prophet of the Stars"
+        }
     ]
 }

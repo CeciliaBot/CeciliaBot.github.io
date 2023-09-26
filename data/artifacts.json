@@ -383,6 +383,17 @@
             0
         ]
     },
+    "elegiac-candle": {
+        "_id": "elegiac-candle",
+        "id": "art0188",
+        "identifier": "",
+        "name": "Elegiac Candle",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
     "eticas-scepter": {
         "_id": "eticas-scepter",
         "id": "art5_9",
