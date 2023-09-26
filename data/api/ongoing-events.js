@@ -4,7 +4,7 @@ import path from 'path';
 function readFileSafe(fileName, fallback) {
     try {
         //return JSON.parse(readFileSync(path.join(process.cwd(), fileName)))
-        return JSON.parse(readFileSync(path.join(process.cwd(), fileName)))
+        return JSON.parse(readFileSync( fileName ))
     } catch(err) {
         return fallback || []
     }
