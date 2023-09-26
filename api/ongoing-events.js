@@ -8,9 +8,35 @@ function readTimeline(fileName) {
         return []
     }
 }
+function readDB(fileName) {
+    try {
+        return JSON.parse(readFileSync(path.join(process.cwd(), 'data', fileName)))
+    } catch(err) {
+        return {}
+    }
+}
+
+function setHeroesAndArtifacts(banner, heroes, artifacts) {
+    banner.c = (banner.c || []).map(hero => {
+        var h = hero.id;
+        return {
+            id: heroes[h] || { id: h, _id: h, name: h, rarity: 1, attribute: 'fire', role: 'knight', tags: []},
+            new: hero.new
+        }
+    })
+    banner.a = (banner.a || []).map(artifact => {
+        var a = hero.id;
+        return {
+            id: artifacts[a] || { id: a, _id: a, name: a, rarity: 1, role: 'knight', tags: []},
+            new: artifact.new
+        }
+    })
+}
 
 export default async function handler(req, res) {
-    var covenant = readTimeline('covenant.json'),
+    var heroes = readDB('HeroDatabase.json'),
+        artifacts = readDB('artifacts.json'),
+        covenant = readTimeline('covenant.json'),
         mystic = readTimeline('mystic.json'),
         powder = readTimeline('powder-shop.json'),
         covenant_coin = readTimeline('covenant-coin-shop.json'),
@@ -41,6 +67,7 @@ export default async function handler(req, res) {
             var d1 = new Date(dates[0]).getTime();
 
             if (d1 > now) {
+                setHeroesAndArtifacts(banner, heroes, artifacts)
                 response[name].coming_soon.push(banner)
             }
             else {
@@ -51,6 +78,7 @@ export default async function handler(req, res) {
                 var d2 = new Date(dates[1]).getTime();
 
                 if (d2 > now) {
+                    setHeroesAndArtifacts(banner, heroes, artifacts)
                     response[name].ongoing.push(banner)
                 }
             }
