@@ -12,18 +12,30 @@ If you have suggestions contact me on discord!
 ----------------------------------------------------------------------------------------
 
 ::: text-center
+:CharlotteNoted:
+:::
+
+::: text-center
 **Global Stove Event:**
 :::
 
+
 None
+
 
 ::: text-center
 **Korean Stove Event:**
 :::
 
+
+
 [Which is your favorite Lilias?](https://page.onstove.com/epicseven/kr/view/9761932) (2 Leifs)
 
-~Global = 글로벌 | Asia = 아시아 (for saying what server you're in)~
+
+
+::: text-small
+Global = 글로벌 | Asia = 아시아 (for saying what server you're in)
+:::
 
 ----------------------------------------------------------------------------------------
 
@@ -33,7 +45,9 @@ None
 
 None
 
-~iOS users can use [this link](https://event-epic7.smilegatemegaport.com/coupon) to redeem coupons!~
+::: text-small
+iOS users can use [this link](https://event-epic7.smilegatemegaport.com/coupon) to redeem coupons!
+:::
 
 ---
 
@@ -42,7 +56,3 @@ All windows displayed here can be resized and moved around. You can also minimiz
 You can remove and add timelines by opening the *Timeline manager*. You can sort them the way you want by *dragging* the icons on the left.
 
 If you click an event you can view the stove post directly from the timeline or you can choose to view it in Epic Seven's ONSTOVE website.
-
-&nbsp;
-
-&nbsp;
