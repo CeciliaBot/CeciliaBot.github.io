@@ -51,7 +51,7 @@ export default async function handler(req, res) {
                 var d2 = new Date(dates[1]).getTime();
 
                 if (d2 > now) {
-                    response[name].ongonig.push(banner)
+                    response[name].ongoing.push(banner)
                 }
             }
         })
