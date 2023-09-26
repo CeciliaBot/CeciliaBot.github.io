@@ -28,7 +28,7 @@ function setHeroesAndArtifacts(banner, heroes, artifacts) {
 }
 
 export default async function handler(req, res) {
-    var heroes = readFileSafe('HeroDatabase.json', {}),
+    var heroes = readFileSafe('./HeroDatabase.json', {}),
         artifacts = readFileSafe('artifacts.json', {}),
         covenant = readFileSafe('timeline/covenant.json', []),
         mystic = readFileSafe('timeline/mystic.json', []),
