@@ -3,14 +3,14 @@ import path from 'path';
 
 function readTimeline(fileName) {
     try {
-        return JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'timeline', fileName)))
+        return JSON.parse(readFileSync(path.join(process.cwd(), 'timeline', fileName)))
     } catch(err) {
         return []
     }
 }
 function readDB(fileName) {
     try {
-        return JSON.parse(readFileSync(path.join(process.cwd(), 'data', fileName)))
+        return JSON.parse(readFileSync(path.join(process.cwd(), fileName)))
     } catch(err) {
         return {}
     }
