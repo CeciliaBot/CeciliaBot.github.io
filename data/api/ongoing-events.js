@@ -27,13 +27,13 @@ function setHeroesAndArtifacts(banner, heroes, artifacts) {
 }
 
 export default async function handler(req, res) {
-    var heroes = readFileSafe('data/HeroDatabase.json', {}),
-        artifacts = readFileSafe('data/artifacts.json', {}),
-        covenant = readFileSafe('data/timeline/covenant.json', []),
-        mystic = readFileSafe('data/timeline/mystic.json', []),
-        powder = readFileSafe('data/timeline/powder-shop.json', []),
-        covenant_coin = readFileSafe('data/timeline/covenant-coin-shop.json', []),
-        galaxy_coin = readFileSafe('data/timeline/galaxy-coin-shop.json', []),
+    var heroes = readFileSafe('/HeroDatabase.json', {}),
+        artifacts = readFileSafe('/artifacts.json', {}),
+        covenant = readFileSafe('/timeline/covenant.json', []),
+        mystic = readFileSafe('/timeline/mystic.json', []),
+        powder = readFileSafe('/timeline/powder-shop.json', []),
+        covenant_coin = readFileSafe('/timeline/covenant-coin-shop.json', []),
+        galaxy_coin = readFileSafe('/timeline/galaxy-coin-shop.json', []),
         response = {},
         now = Date.now();
 
