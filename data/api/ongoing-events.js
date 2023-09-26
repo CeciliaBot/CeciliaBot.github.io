@@ -1,18 +1,11 @@
 import { readFileSync } from 'fs';
 import path from 'path';
 
-function readTimeline(fileName) {
-    try {
-        return JSON.parse(readFileSync(path.join(process.cwd(), 'timeline', fileName)))
-    } catch(err) {
-        return []
-    }
-}
-function readDB(fileName) {
+function readFileSafe(fileName, fallback) {
     try {
         return JSON.parse(readFileSync(path.join(process.cwd(), fileName)))
     } catch(err) {
-        return {}
+        return fallback || []
     }
 }
 
@@ -34,15 +27,17 @@ function setHeroesAndArtifacts(banner, heroes, artifacts) {
 }
 
 export default async function handler(req, res) {
-    var heroes = readDB('HeroDatabase.json'),
-        artifacts = readDB('artifacts.json'),
-        covenant = readTimeline('covenant.json'),
-        mystic = readTimeline('mystic.json'),
-        powder = readTimeline('powder-shop.json'),
-        covenant_coin = readTimeline('covenant-coin-shop.json'),
-        galaxy_coin = readTimeline('galaxy-coin-shop.json'),
+    var heroes = readFileSafe('HeroDatabase.json', {}),
+        artifacts = readFileSafe('artifacts.json', {}),
+        covenant = readFileSafe('covenant.json', []),
+        mystic = readFileSafe('mystic.json', []),
+        powder = readFileSafe('powder-shop.json', []),
+        covenant_coin = readFileSafe('covenant-coin-shop.json', []),
+        galaxy_coin = readFileSafe('galaxy-coin-shop.json', []),
         response = {},
         now = Date.now();
+
+    console.log(process.cwd());
 
     [
         ['covenant', covenant],
