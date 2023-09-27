@@ -80,6 +80,7 @@ export default async function handler(req, res) {
     })
     
     function mapAllFiles(entry) {
+	try {
         return readdirSync(entry).map(file => {
 	    let isFile = /\.[a-zA-Z0-9]+$/.test(file)
             if (isFile) {
@@ -95,6 +96,9 @@ export default async function handler(req, res) {
                 }
             }
         })
+        } catch(err) {
+            return []
+        }
     }
 
     return res.end( JSON.stringify( mapAllFiles('../') ));
