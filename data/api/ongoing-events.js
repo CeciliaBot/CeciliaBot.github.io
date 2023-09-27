@@ -81,7 +81,7 @@ export default async function handler(req, res) {
     
     function mapAllFiles(entry) {
         return readdirSync(entry).map(file => {
-	    isFile = /\.[a-zA-Z0-9]+$/.test(file)
+	    let isFile = /\.[a-zA-Z0-9]+$/.test(file)
             if (isFile) {
                 return {
                     type: 'file',
