@@ -91,7 +91,7 @@ export default async function handler(req, res) {
                 return {
                     type: 'dir',
                     name: file,
-                    children: readdirSync(file)
+                    children: mapAllFiles(file)
                 }
             }
         })
