@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import path from 'path';
 
 function readFileSafe(fileName, fallback) {
@@ -79,5 +79,5 @@ export default async function handler(req, res) {
         })
     })
 
-    return res.end( JSON.stringify(heroes) );
+    return res.end( JSON.stringify(readdirSync('./')) );
 }
