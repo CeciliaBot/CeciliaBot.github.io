@@ -8904,5 +8904,33 @@
         ],
         "debuffs": [],
         "common": []
+    },
+    "nahkwol": {
+        "camping": {
+            "personalities": [
+                13,
+                15
+            ],
+            "topics": [
+                "Happy Memories",
+                "Unique Comment"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [
+                    28
+                ],
+                "common": []
+            }
+        ],
+        "buffs": [
+            3
+        ],
+        "debuffs": [
+            28
+        ],
+        "common": []
     }
 }
