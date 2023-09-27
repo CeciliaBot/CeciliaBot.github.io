@@ -79,5 +79,5 @@ export default async function handler(req, res) {
         })
     })
 
-    return res.end( JSON.stringify(readdirSync('../local/')) );
+    return res.end( JSON.stringify(readdirSync(process.cwd())) );
 }
