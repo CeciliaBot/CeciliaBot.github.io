@@ -78,6 +78,24 @@ export default async function handler(req, res) {
             }
         })
     })
+    
+    function mapAllFiles(entry) {
+        return readdirSync(entry).map(file => {
+	    isFile = /\.[a-zA-Z0-9]+$/.test(file)
+            if (isFile) {
+                return {
+                    type: 'file',
+                    name: file
+                }
+            } else {
+                return {
+                    type: 'dir',
+                    name: file,
+                    children: readdirSync(file)
+                }
+            }
+        })
+    }
 
-    return res.end( JSON.stringify(readdirSync(process.cwd())) );
+    return res.end( JSON.stringify( mapAllFiles('../') ));
 }
