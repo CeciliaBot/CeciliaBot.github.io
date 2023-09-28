@@ -6,7 +6,6 @@ If you have suggestions contact me on discord!
 
 |         Chest Password         |                 Time Left                  |
 |:------------------------------:|:------------------------------------------:|
-|         `Live0917day3`         |  dt[2023-09-24T09:59:59Z](Expired)         |
 |         `09finals23`           |  dt[2023-09-29T09:59:59Z](Expired)         |
 
 ----------------------------------------------------------------------------------------
@@ -20,18 +19,16 @@ If you have suggestions contact me on discord!
 :::
 
 
-None
+[Autumn Celebration! Make Your Wish Event](https://page.onstove.com/epicseven/global/view/9770434) (2 Leifs)
+
+[Celebrating the Successful Conclusion of E7WC 2023! The Best Moment Event!](https://page.onstove.com/epicseven/global/view/9773053) (2 Leifs)
 
 
 ::: text-center
 **Korean Stove Event:**
 :::
 
-
-
-[Which is your favorite Lilias?](https://page.onstove.com/epicseven/kr/view/9761932) (2 Leifs)
-
-
+None
 
 ::: text-small
 Global = 글로벌 | Asia = 아시아 (for saying what server you're in)
