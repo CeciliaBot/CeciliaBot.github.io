@@ -6,7 +6,7 @@ If you have suggestions contact me on discord!
 
 |         Chest Password         |                 Time Left                  |
 |:------------------------------:|:------------------------------------------:|
-|         `09finals23`           |  dt[2023-09-29T09:59:59Z](Expired)         |
+|                                      None                                   |
 
 ----------------------------------------------------------------------------------------
 
@@ -18,11 +18,7 @@ If you have suggestions contact me on discord!
 **Global Stove Event:**
 :::
 
-
-[Autumn Celebration! Make Your Wish Event](https://page.onstove.com/epicseven/global/view/9770434) (2 Leifs)
-
-[Celebrating the Successful Conclusion of E7WC 2023! The Best Moment Event!](https://page.onstove.com/epicseven/global/view/9773053) (2 Leifs)
-
+[Angelica’s Special Week! Who’s Your Favorite Angelica?](https://page.onstove.com/epicseven/global/view/9789721) (2 Leifs)
 
 ::: text-center
 **Korean Stove Event:**
