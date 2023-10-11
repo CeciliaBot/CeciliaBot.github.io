@@ -144,5 +144,14 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/b853a0c0c7914990a37fd0a0ce601b0a/1559b114d1bb4b7bbb420101b15080ee.jpg",
         "name": "World Arena Valorous Season (Season 11)"
+    },
+    {
+        "nid": 0,
+        "type": "season",
+        "dt": [
+            1697850000000
+        ],
+        "thumbnail": "",
+        "name": "World Arena Season 12"
     }
 ]
