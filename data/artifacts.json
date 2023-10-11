@@ -1205,6 +1205,17 @@
             0
         ]
     },
+    "tyrants-descent": {
+        "_id": "tyrants-descent",
+        "id": "art0185",
+        "identifier": "",
+        "name": "Tyrant's Descent",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
     "uberiuss-tooth": {
         "_id": "uberiuss-tooth",
         "id": "art0030",

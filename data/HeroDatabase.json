@@ -3922,5 +3922,31 @@
         "tags": [
             0
         ]
+    },
+    "abyssal-yufine": {
+        "id": "c2016",
+        "_id": "abyssal-yufine",
+        "name": "Abyssal Yufine",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
+    },
+    "kane": {
+        "id": "c1152",
+        "_id": "kane",
+        "name": "Kane",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "leo",
+        "tags": [
+            0
+        ]
     }
 }
