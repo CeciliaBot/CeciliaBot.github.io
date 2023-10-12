@@ -8932,5 +8932,49 @@
             28
         ],
         "common": []
+    },
+    "abyssal-yufine": {
+        "camping": {
+            "personalities": [
+                8,
+                24
+            ],
+            "topics": [
+                "Food Story",
+                "Complain"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "kane": {
+        "camping": {
+            "personalities": [
+                18,
+                10
+            ],
+            "topics": [
+                "Criticism",
+                "Reality Check"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
