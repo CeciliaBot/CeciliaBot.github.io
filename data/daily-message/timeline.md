@@ -18,7 +18,7 @@ If you have suggestions contact me on discord!
 **Global Stove Event:**
 :::
 
-[Angelica’s Special Week! Who’s Your Favorite Angelica?](https://page.onstove.com/epicseven/global/view/9789721) (2 Leifs)
+[Hero Concept Art Voting Event](https://page.onstove.com/epicseven/global/view/9801842) (2 Leifs)
 
 ::: text-center
 **Korean Stove Event:**
