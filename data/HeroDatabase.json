@@ -3483,7 +3483,7 @@
         "role": "assassin",
         "attribute": "light",
         "sex": 2,
-        "zodiac": "leo",
+        "zodiac": "lion",
         "tags": []
     },
     "zio": {
@@ -3630,7 +3630,7 @@
         "attribute": "ice",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "leo",
+        "zodiac": "lion",
         "tags": [
             0
         ]
@@ -3841,7 +3841,7 @@
         "attribute": "light",
         "role": "knight",
         "sex": 2,
-        "zodiac": "leo",
+        "zodiac": "lion",
         "tags": [
             0
         ]
@@ -3944,7 +3944,7 @@
         "attribute": "fire",
         "role": "warrior",
         "sex": 1,
-        "zodiac": "leo",
+        "zodiac": "lion",
         "tags": [
             0
         ]

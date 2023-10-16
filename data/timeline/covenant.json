@@ -7545,12 +7545,14 @@
       ],
       "c": [
          {
-            "id": "kane"
+            "id": "kane",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "tyrants-descent"
+            "id": "tyrants-descent",
+            "new": true
          }
       ],
       "thumbnail": ""
