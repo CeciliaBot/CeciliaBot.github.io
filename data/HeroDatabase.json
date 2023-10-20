@@ -1721,9 +1721,7 @@
         "role": "mage",
         "sex": 2,
         "zodiac": "waterbearer",
-        "tags": [
-            0
-        ]
+        "tags": []
     },
     "shadow-rose": {
         "id": "c2003",
@@ -1951,9 +1949,7 @@
         "role": "manauser",
         "sex": 2,
         "zodiac": "fish",
-        "tags": [
-            0
-        ]
+        "tags": []
     },
     "arowell": {
         "id": "c3004",
