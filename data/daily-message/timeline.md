@@ -18,7 +18,9 @@ If you have suggestions contact me on discord!
 **Global Stove Event:**
 :::
 
-[Hero Concept Art Voting Event](https://page.onstove.com/epicseven/global/view/9801842) (2 Leifs)
+[Trick or Treat Event](https://ko.surveymonkey.com/r/E7trickortreat) (Reward TBD)
+
+[Abyssal Yufine Story Quiz Event!](https://page.onstove.com/epicseven/global/view/9814314) (2 Liefs)
 
 ::: text-center
 **Korean Stove Event:**
