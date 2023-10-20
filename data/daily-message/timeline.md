@@ -36,7 +36,7 @@ Global = 글로벌 | Asia = 아시아 (for saying what server you're in)
 **Coupons**
 :::
 
-None
+`E7WC2023RECAP` dt(2023-10-26T14:59:59Z)[Expired]
 
 ::: text-small
 iOS users can use [this link](https://event-epic7.smilegatemegaport.com/coupon) to redeem coupons!
