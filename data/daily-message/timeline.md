@@ -18,6 +18,10 @@ If you have suggestions contact me on discord!
 **Global Stove Event:**
 :::
 
+[Rift Update Celebration Quiz Event!](https://page.onstove.com/epicseven/global/view/9818874) (300 Energy)
+
+[Rift Update Celebration Screenshot Event](https://page.onstove.com/epicseven/global/view/9818861) (2 Leifs)
+
 [Trick or Treat Event](https://ko.surveymonkey.com/r/E7trickortreat) (Reward TBD)
 
 [Abyssal Yufine Story Quiz Event!](https://page.onstove.com/epicseven/global/view/9814314) (2 Liefs)
