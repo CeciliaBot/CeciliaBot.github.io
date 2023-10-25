@@ -7499,7 +7499,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/625b020952a74c999534b031072ac14f.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9799863,
       "type": "covenant",
       "dt": [
          "2023-10-12T09:00:00Z",
@@ -7515,10 +7515,10 @@
             "id": "idols-cheer"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c45d5ca4e7d947878c207ac619b5594b.png"
    },
    {
-      "nid": 0,
+      "nid": 9799871,
       "type": "covenant",
       "dt": [
          "2023-10-12T09:00:00Z",
@@ -7534,10 +7534,10 @@
             "id": "rhianna-luciella"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c45d5ca4e7d947878c207ac619b5594b.png"
    },
    {
-      "nid": 0,
+      "nid": 9814517,
       "type": "covenant",
       "dt": [
          "2023-10-19T03:00:00Z",
@@ -7555,10 +7555,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c45d5ca4e7d947878c207ac619b5594b.png"
    },
    {
-      "nid": 0,
+      "nid": 9814528,
       "type": "covenant",
       "dt": [
          "2023-10-19T03:00:00Z",
@@ -7572,6 +7572,63 @@
       "a": [
          {
             "id": "rise-of-a-monarch"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c45d5ca4e7d947878c207ac619b5594b.png"
+   },
+   {
+      "nid": 9828982,
+      "type": "covenant",
+      "dt": [
+         "2023-10-26T09:00:00Z",
+         "2023-11-02T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "destina"
+         }
+      ],
+      "a": [
+         {
+            "id": "shimadra-staff"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c45d5ca4e7d947878c207ac619b5594b.png"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-11-02T03:00:00Z",
+         "2023-11-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "kayron"
+         }
+      ],
+      "a": [
+         {
+            "id": "shepherd-of-the-hollow"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-11-02T03:00:00Z",
+         "2023-11-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "bellona"
+         }
+      ],
+      "a": [
+         {
+            "id": "iron-fan"
          }
       ],
       "thumbnail": ""
