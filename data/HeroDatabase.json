@@ -3944,5 +3944,44 @@
         "tags": [
             0
         ]
+    },
+    "claudia": {
+        "id": "c3156",
+        "_id": "claudia",
+        "name": "Claudia",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
+    },
+    "ezra": {
+        "id": "c3157",
+        "_id": "ezra",
+        "name": "Ezra",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
+    },
+    "amiki": {
+        "id": "c3158",
+        "_id": "amiki",
+        "name": "Amiki",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     }
 }

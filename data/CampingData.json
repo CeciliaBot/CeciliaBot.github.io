@@ -8976,5 +8976,71 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "claudia": {
+        "camping": {
+            "personalities": [
+                26,
+                13
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Advice"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "ezra": {
+        "camping": {
+            "personalities": [
+                14,
+                10
+            ],
+            "topics": [
+                "Reality Check",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "amika": {
+        "camping": {
+            "personalities": [
+                1,
+                8
+            ],
+            "topics": [
+                "Sad Memory",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
