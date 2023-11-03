@@ -7632,5 +7632,15 @@
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 9845412,
+      "type": "limited",
+      "dt": [
+         "2023-11-09T09:00:00Z",
+         "2023-12-07T02:59:59Z"
+      ],
+      "name": "Custom Triple RGB Group Summon",
+      "thumbnail": ""
    }
 ]
