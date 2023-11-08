@@ -7642,5 +7642,83 @@
       ],
       "name": "Custom Triple RGB Group Summon",
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-11-09T09:00:00Z",
+         "2023-11-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ravi"
+         }
+      ],
+      "a": [
+         {
+            "id": "sigurd-scythe"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-11-09T09:00:00Z",
+         "2023-11-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tenebria"
+         }
+      ],
+      "a": [
+         {
+            "id": "crimson-moon-of-nightmares"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-11-16T03:00:00Z",
+         "2023-11-23T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "taeyou"
+         }
+      ],
+      "a": [
+         {
+            "id": "spear-of-purification"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-11-16T03:00:00Z",
+         "2023-11-30T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "fumyr",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "umbreal-keystones",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }
 ]

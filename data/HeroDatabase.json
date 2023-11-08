@@ -3978,8 +3978,21 @@
         "rarity": 3,
         "attribute": "ice",
         "role": "warrior",
-        "sex": 1,
+        "sex": 2,
         "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
+    },
+    "fumyr": {
+        "id": "c1153",
+        "_id": "fumyr",
+        "name": "Fumyr",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull",
         "tags": [
             0
         ]

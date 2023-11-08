@@ -1249,6 +1249,17 @@
             0
         ]
     },
+    "umbral-keystones": {
+        "_id": "umbral-keystones",
+        "id": "art0189",
+        "identifier": "",
+        "name": "Umbral Keystones",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0
+        ]
+    },
     "upgraded-dragon-knuckles": {
         "_id": "upgraded-dragon-knuckles",
         "id": "art0138",
