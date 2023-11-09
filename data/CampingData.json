@@ -9042,5 +9042,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "fumyr": {
+        "camping": {
+            "personalities": [
+                6,
+                18
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Unique Comment"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
