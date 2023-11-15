@@ -7596,7 +7596,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c45d5ca4e7d947878c207ac619b5594b.png"
    },
    {
-      "nid": 0,
+      "nid": 9841508,
       "type": "covenant",
       "dt": [
          "2023-11-02T03:00:00Z",
@@ -7612,10 +7612,10 @@
             "id": "shepherd-of-the-hollow"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f4f1424f73904f6fbe034179b76c896b.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9841508,
       "type": "covenant",
       "dt": [
          "2023-11-02T03:00:00Z",
@@ -7631,20 +7631,20 @@
             "id": "iron-fan"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/54ed67095fe04530a062b090c1800632.jpg"
    },
    {
-      "nid": 9845412,
+      "nid": 9855685,
       "type": "limited",
       "dt": [
          "2023-11-09T09:00:00Z",
          "2023-12-07T02:59:59Z"
       ],
       "name": "Custom Triple RGB Group Summon",
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/063572073b3941c7bdcf854463e784d2.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9855685,
       "type": "covenant",
       "dt": [
          "2023-11-09T09:00:00Z",
@@ -7660,10 +7660,10 @@
             "id": "sigurd-scythe"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/cc42cc25205548889512cc1adcfe495a.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9855685,
       "type": "covenant",
       "dt": [
          "2023-11-09T09:00:00Z",
@@ -7679,10 +7679,10 @@
             "id": "crimson-moon-of-nightmares"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a6fb024fffc548c59fdeb43802762677.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9866289,
       "type": "covenant",
       "dt": [
          "2023-11-16T03:00:00Z",
@@ -7698,10 +7698,10 @@
             "id": "spear-of-purification"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/995ec5a30eab465fb272f47eb77d8fae.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9866289,
       "type": "covenant",
       "dt": [
          "2023-11-16T03:00:00Z",
@@ -7719,6 +7719,6 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3771e67194c749f1b8befb36f3883343.jpg"
    }
 ]
