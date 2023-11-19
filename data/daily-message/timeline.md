@@ -18,7 +18,11 @@ If you have suggestions contact me on discord!
 **Global Stove Event:**
 :::
 
-[Yufine’s Week! Who’s Your Favorite Yufine?](https://page.onstove.com/epicseven/global/view/9830429) (2 Leifs)
+[Replay the E7! Comment Event](https://page.onstove.com/epicseven/global/view/9841671) (2 Leifs)
+
+[Fumyr Story Quiz Event!](https://page.onstove.com/epicseven/global/view/9868034) (2 Leifs)
+
+[Epic Seven Match History Official Release Screenshot Event](https://page.onstove.com/epicseven/global/view/9867179) (2 Leifs)
 
 ::: text-center
 **Korean Stove Event:**
@@ -40,7 +44,7 @@ Global = 글로벌 | Asia = 아시아 (for saying what server you're in)
 
 |            Coupon              |                 Time Left                  |
 |:------------------------------:|:------------------------------------------:|
-|         `E7WC2023RECAP`        |     dt[2023-10-26T14:59:59Z](Expired)      |
+|                                      None                                   |
 
 ::: text-small
 iOS users can use [this link](https://event-epic7.smilegatemegaport.com/coupon) to redeem coupons!
