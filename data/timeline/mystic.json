@@ -1544,5 +1544,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-12-07T03:00:00Z",
+         "2023-12-28T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "eternal-wanderer-ludwig",
+            "new": true
+         },
+         {
+            "id": "fighter-maya"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
