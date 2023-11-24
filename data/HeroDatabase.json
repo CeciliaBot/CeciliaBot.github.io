@@ -3996,5 +3996,18 @@
         "tags": [
             0
         ]
+    },
+    "eternal-wanderer-ludwig": {
+        "id": "c2069",
+        "_id": "eternal-wanderer-ludwig",
+        "name": "Eternal Wanderer Ludwig",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     }
 }
