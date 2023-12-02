@@ -1,0 +1,1 @@
+.widget-title-bar{height:35px;background:var(--background-modifier-darken-alpha);box-shadow:0 0 8px 2px #000;color:#fff;font-size:1.1em}.widget-title-bar>p{padding:5px 10px}.widget-style{border-radius:6px;display:flex;flex-direction:column}.widget-body{flex:1 1;overflow:auto;padding:5px}.banner-timer{text-align:center;right:5px;bottom:5px;color:#fff;font-weight:500}
