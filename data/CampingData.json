@@ -6725,6 +6725,9 @@
         "common": []
     },
     "christy": {
+        "linked_hero": [
+            "silvertide-christy"
+        ],
         "camping": {
             "personalities": [
                 25,
@@ -9091,7 +9094,7 @@
         "camping": {
             "personalities": [
                 25,
-                28
+                6
             ],
             "topics": [
                 "Horror Story",
