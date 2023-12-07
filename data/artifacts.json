@@ -752,6 +752,17 @@
             0
         ]
     },
+    "old-gardening-shears": {
+        "_id": "old-gardening-shears",
+        "id": "art0191",
+        "identifier": "",
+        "name": "Old Gardening Shears",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
     "otherworldly-machinery": {
         "_id": "otherworldly-machinery",
         "id": "art0028",

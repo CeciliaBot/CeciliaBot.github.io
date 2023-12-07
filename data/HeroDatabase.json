@@ -4009,5 +4009,29 @@
         "tags": [
             0
         ]
+    },
+    "silvertide-christy": {
+        "id": "c4123",
+        "_id": "silvertide-christy",
+        "name": "Silvertide Christy",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "goat",
+        "tags": []
+    },
+    "byblis": {
+        "id": "c1154",
+        "_id": "byblis",
+        "name": "Byblis",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     }
 }

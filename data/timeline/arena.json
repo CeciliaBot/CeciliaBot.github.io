@@ -204,5 +204,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ee9b2ad32d984a55aa2f3260f83af625.jpg",
         "name": "Arena Insight Season (Season 16)"
+    },
+    {
+        "nid": [
+            9900760
+        ],
+        "type": "season",
+        "dt": [
+            1702288800000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e2c4a0c0952b47339c3ea2386007c028.jpg",
+        "name": "Arena Oath Season (Season 17)"
     }
 ]

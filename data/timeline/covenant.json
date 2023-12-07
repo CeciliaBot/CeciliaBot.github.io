@@ -7777,5 +7777,83 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/b14db14122b74258aceef203bb1e8b37.jpg"
+   },
+   {
+      "nid": 9900760,
+      "type": "covenant",
+      "dt": [
+         "2023-12-07T09:00:00Z",
+         "2023-12-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aramintha"
+         }
+      ],
+      "a": [
+         {
+            "id": "eticas-scepter"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/0060126a5844413a8b797239f63cbd7c.jpg"
+   },
+   {
+      "nid": 9900760,
+      "type": "covenant",
+      "dt": [
+         "2023-12-07T09:00:00Z",
+         "2023-12-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "sharun"
+         }
+      ],
+      "a": [
+         {
+            "id": "sacred-tree-branch"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d71c5afb61df488daa3db7352c6c47fb.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-12-14T03:00:00Z",
+         "2023-12-21T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lilibet"
+         }
+      ],
+      "a": [
+         {
+            "id": "creation-destruction"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2023-12-14T03:00:00Z",
+         "2023-12-28T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "byblis",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "old-gardening-shears",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }
 ]

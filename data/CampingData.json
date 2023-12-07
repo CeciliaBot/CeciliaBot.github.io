@@ -9086,5 +9086,49 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "silvertide-christy": {
+        "camping": {
+            "personalities": [
+                25,
+                28
+            ],
+            "topics": [
+                "Horror Story",
+                "Advice"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "byblis": {
+        "camping": {
+            "personalities": [
+                24,
+                28
+            ],
+            "topics": [
+                "Reality Check",
+                "Self-Indulgent"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
