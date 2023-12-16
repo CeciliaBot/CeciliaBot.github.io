@@ -7817,7 +7817,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d71c5afb61df488daa3db7352c6c47fb.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9912382,
       "type": "covenant",
       "dt": [
          "2023-12-14T03:00:00Z",
@@ -7825,19 +7825,19 @@
       ],
       "c": [
          {
-            "id": "lilibet"
+            "id": "lidica"
          }
       ],
       "a": [
          {
-            "id": "creation-destruction"
+            "id": "sword-of-judgment"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/51e67d26cf0844d4bac8f990833f5890.jpg"
    },
    {
-      "nid": 0,
-      "type": "covenant",
+      "nid": 9912382,
+      "type": "limited",
       "dt": [
          "2023-12-14T03:00:00Z",
          "2023-12-28T02:59:59Z"
@@ -7854,6 +7854,6 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c02ad8d93b1a437491bddf493cc50b39.jpg"
    }
 ]
