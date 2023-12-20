@@ -1563,5 +1563,29 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c1916fc9afc34552be9f6272ee8fc985.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2023-12-28T03:00:00Z",
+         "2024-01-18T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "specimen-sez"
+         },
+         {
+            "id": "spirit-eye-celine"
+         },
+         {
+            "id": "belian"
+         },
+         {
+            "id": "judge-kise"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

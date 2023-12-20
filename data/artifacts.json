@@ -760,7 +760,8 @@
         "rarity": 5,
         "role": "ranger",
         "tags": [
-            0
+            0,
+            1
         ]
     },
     "otherworldly-machinery": {
@@ -913,6 +914,18 @@
         "role": "assassin",
         "tags": [
             0
+        ]
+    },
+    "seductive-flower": {
+        "_id": "seductive-flower",
+        "id": "art0192",
+        "identifier": "efa23",
+        "name": "Seductive Flower",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0,
+            1
         ]
     },
     "severed-horn-wand": {

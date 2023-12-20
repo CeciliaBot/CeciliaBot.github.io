@@ -4031,7 +4031,22 @@
         "sex": 2,
         "zodiac": "fish",
         "tags": [
-            0
+            0,
+            1
+        ]
+    },
+    "blooming-lidica": {
+        "id": "c5046",
+        "_id": "blooming-lidica",
+        "name": "Blooming Lidica",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "maiden",
+        "tags": [
+            0,
+            1
         ]
     }
 }
