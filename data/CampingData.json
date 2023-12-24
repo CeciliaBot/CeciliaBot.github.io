@@ -9133,5 +9133,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "blooming-lidica": {
+        "camping": {
+            "personalities": [
+                27,
+                18
+            ],
+            "topics": [
+                "Unique Comment",
+                "Horror Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
