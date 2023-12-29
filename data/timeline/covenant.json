@@ -7876,7 +7876,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a2a0d59dabcd40eb86a277dba0f9f528.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9937594,
       "type": "covenant",
       "dt": [
          "2023-12-28T03:00:00Z",
@@ -7892,10 +7892,10 @@
             "id": "stella-harpa"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/fb0d175b5a7c4d27bcf9bae3ca075536.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9937594,
       "type": "limited",
       "dt": [
          "2023-12-28T03:00:00Z",
@@ -7913,6 +7913,6 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9f14a2f740a3420bab2a04f02d55a9d5.jpg"
    }
 ]
