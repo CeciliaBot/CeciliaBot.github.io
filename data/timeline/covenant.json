@@ -7914,5 +7914,64 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9f14a2f740a3420bab2a04f02d55a9d5.jpg"
+   },
+   {
+      "nid": 9951018,
+      "type": "covenant",
+      "dt": [
+         "2024-01-04T08:00:00Z",
+         "2024-01-11T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "eda"
+         }
+      ],
+      "a": [
+         {
+            "id": "twilight-calamity"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/6266a3986b6a4976a1893ebb96f2826c.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-01-11T08:00:00Z",
+         "2024-01-18T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "melissa"
+         }
+      ],
+      "a": [
+         {
+            "id": "bloody-rose"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-01-11T08:00:00Z",
+         "2024-01-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "elvira",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "beguiling-wings",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }
 ]

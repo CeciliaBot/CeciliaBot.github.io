@@ -1590,5 +1590,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-01-18T03:00:00Z",
+         "2024-02-08T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "dragon-king-sharun",
+            "new": true
+         },
+         {
+            "id": "kitty-clarissa"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

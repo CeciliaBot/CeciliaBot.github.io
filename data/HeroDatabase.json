@@ -4048,5 +4048,44 @@
             0,
             1
         ]
+    },
+    "leah": {
+        "id": "c3148",
+        "_id": "leah",
+        "name": "Leah",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
+    },
+    "elvira": {
+        "id": "c1148",
+        "_id": "elvira",
+        "name": "Elvira",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
+    },
+    "dragon-king-sharun": {
+        "id": "c2132",
+        "_id": "dragon-king-sharun",
+        "name": "Dragon King Sharun",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     }
 }

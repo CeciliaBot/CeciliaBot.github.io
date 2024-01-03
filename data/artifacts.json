@@ -140,6 +140,17 @@
             0
         ]
     },
+    "beguiling-wings": {
+        "_id": "beguiling-wings",
+        "id": "art0192",
+        "identifier": "efa24",
+        "name": "Beguiling Wings",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
     "benimarus-tachi": {
         "_id": "benimarus-tachi",
         "id": "art0180",
