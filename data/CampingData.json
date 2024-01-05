@@ -9155,5 +9155,71 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "leah": {
+        "camping": {
+            "personalities": [
+                20,
+                26
+            ],
+            "topics": [
+                "Dream",
+                "Horror Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "elvira": {
+        "camping": {
+            "personalities": [
+                4,
+                27
+            ],
+            "topics": [
+                "Self-Indulgent",
+                "Sad Memory"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "dragon-king-sharun": {
+        "camping": {
+            "personalities": [
+                23,
+                22
+            ],
+            "topics": [
+                "Comforting Cheer",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
