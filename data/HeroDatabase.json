@@ -206,7 +206,8 @@
         "sex": 2,
         "zodiac": "waterbearer",
         "tags": [
-            0
+            0,
+            1
         ]
     },
     "cermia": {
