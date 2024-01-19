@@ -332,5 +332,12 @@
             "_id": "belian-harmonic-conductor",
             "name": "Harmonic Conductor"
         }
+    ],
+    "senya": [
+        {
+            "id": "c1106_s01",
+            "_id": "belian-wolf",
+            "name": "Wolf"
+        }
     ]
 }

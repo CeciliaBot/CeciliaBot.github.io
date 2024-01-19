@@ -7935,7 +7935,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/6266a3986b6a4976a1893ebb96f2826c.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9962782,
       "type": "covenant",
       "dt": [
          "2024-01-11T08:00:00Z",
@@ -7951,14 +7951,14 @@
             "id": "bloody-rose"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/0f0b5c880d5a49e099213df47f8cd330.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9962782,
       "type": "covenant",
       "dt": [
-         "2024-01-11T08:00:00Z",
-         "2024-01-25T02:59:59Z"
+         "2024-01-11T03:00:00Z",
+         "2024-02-01T02:59:59Z"
       ],
       "c": [
          {
@@ -7970,6 +7970,44 @@
          {
             "id": "beguiling-wings",
             "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/97d4fb131650410399946f2a7c4fada1.jpg"
+   },
+   {
+      "nid": 9975648,
+      "type": "covenant",
+      "dt": [
+         "2024-01-18T08:00:00Z",
+         "2024-01-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "command-model-laika"
+         }
+      ],
+      "a": [
+         {
+            "id": "glowings-21"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/736c0c22d8d144bfa2849dd1bcc3b305.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-01-25T03:00:00Z",
+         "2024-02-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aria"
+         }
+      ],
+      "a": [
+         {
+            "id": "scroll-of-shadows"
          }
       ],
       "thumbnail": ""
