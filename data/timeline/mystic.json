@@ -1629,9 +1629,22 @@
          },
          {
             "id": "ruele-of-light"
+         },
+         {
+            "id": "assassin-coli"
          }
       ],
       "a": [],
+      "thumbnail": ""
+   },
+   {
+      "nid": 10003853,
+      "type": "mystic",
+      "dt": [
+         "2024-02-29T08:00:00Z",
+         "2024-03-21T02:59:59Z"
+      ],
+      "name": "Mystic Summon Event (No new MLs will be release during the event)",
       "thumbnail": ""
    }
 ]

@@ -1121,8 +1121,8 @@
     },
     "sweet-miracle": {
         "_id": "sweet-miracle",
-        "id": "art0193",
-        "identifier": "",
+        "id": "art0198",
+        "identifier": "efw35",
         "name": "Sweet Miracle",
         "rarity": 5,
         "role": "warrior",
@@ -1673,8 +1673,8 @@
     },
     "new-years-festival-souvenir": {
         "_id": "new-years-festival-souvenir",
-        "id": "art0194",
-        "identifier": "",
+        "id": "art0196",
+        "identifier": "ef436",
         "name": "New Year's Festival Souvenir",
         "rarity": 4,
         "role": "",
@@ -2017,6 +2017,15 @@
         "id": "art0114",
         "identifier": "ef418",
         "name": "XVI. The Tower",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xvii-the-star": {
+        "_id": "xvii-the-star",
+        "id": "art0199",
+        "identifier": "ef438",
+        "name": "XVII. The Star",
         "rarity": 4,
         "role": "",
         "tags": []

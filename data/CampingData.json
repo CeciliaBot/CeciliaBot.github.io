@@ -9221,5 +9221,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "laia": {
+        "camping": {
+            "personalities": [
+                8,
+                27
+            ],
+            "topics": [
+                "Dream",
+                "Advice"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
