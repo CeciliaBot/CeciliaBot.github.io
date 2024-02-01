@@ -4088,5 +4088,19 @@
         "tags": [
             0
         ]
+    },
+    "laia": {
+        "id": "c1153",
+        "_id": "laia",
+        "name": "Laia",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "ram",
+        "tags": [
+            0,
+            1
+        ]
     }
 }

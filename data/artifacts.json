@@ -1119,6 +1119,18 @@
             0
         ]
     },
+    "sweet-miracle": {
+        "_id": "sweet-miracle",
+        "id": "art0193",
+        "identifier": "",
+        "name": "Sweet Miracle",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "sword-of-autumn-eclipse": {
         "_id": "sword-of-autumn-eclipse",
         "id": "art0167",
@@ -1655,6 +1667,15 @@
         "id": "art0081",
         "identifier": "ef410",
         "name": "New Year Cookies",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "new-years-festival-souvenir": {
+        "_id": "new-years-festival-souvenir",
+        "id": "art0194",
+        "identifier": "",
+        "name": "New Year's Festival Souvenir",
         "rarity": 4,
         "role": "",
         "tags": []

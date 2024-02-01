@@ -157,5 +157,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/409b520dfe53498eab77db76a163dd75.jpg",
         "name": "World Arena Insight Season (Season 12)"
+    },
+    {
+        "nid": [
+            10002464
+        ],
+        "type": "season",
+        "dt": [
+            1706936400000
+        ],
+        "thumbnail": "",
+        "name": "World Arena Oath Season (Season 13)"
     }
 ]

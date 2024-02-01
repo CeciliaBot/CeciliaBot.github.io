@@ -1609,5 +1609,29 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1ccb0d9baa1442e49851d4030cc703c8.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-02-08T03:00:00Z",
+         "2024-02-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "maid-chloe"
+         },
+         {
+            "id": "zio"
+         },
+         {
+            "id": "conqueror-lilias"
+         },
+         {
+            "id": "ruele-of-light"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
