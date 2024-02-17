@@ -7994,7 +7994,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/736c0c22d8d144bfa2849dd1bcc3b305.jpg"
    },
    {
-      "nid": 0,
+      "nid": 9987982,
       "type": "covenant",
       "dt": [
          "2024-01-25T03:00:00Z",
@@ -8052,19 +8052,88 @@
    },
    {
       "nid": 10002464,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2024-02-08T03:00:00Z",
          "2024-02-22T02:59:59Z"
       ],
       "c": [
          {
-            "id": "laia"
+            "id": "laia",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "sweet-miracle"
+            "id": "sweet-miracle",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 10029379,
+      "type": "limited",
+      "dt": [
+         "2024-02-15T08:00:00Z",
+         "2024-03-14T02:59:59Z"
+      ],
+      "name": "Custom Triple RGB Group Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5c91176280184053906ff6c11d1d0719.jpg"
+   },
+   {
+      "nid": 10029379,
+      "type": "covenant",
+      "dt": [
+         "2024-02-15T08:00:00Z",
+         "2024-02-22T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "kise"
+         }
+      ],
+      "a": [
+         {
+            "id": "alabastron"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/90f8560a146141f383d4a68b82b1fb61.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-02-22T03:00:00Z",
+         "2024-02-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ran"
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-winter-shadow"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2024-02-22T03:00:00Z",
+         "2024-03-07T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "amid"
+         }
+      ],
+      "a": [
+         {
+            "id": "fan-of-light-and-dark"
          }
       ],
       "thumbnail": ""

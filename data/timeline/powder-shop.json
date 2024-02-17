@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10015697,
+    "dt": [1707361200000, 1710989999000 ],
+    "a": [
+      { "id": "circus-fantasia" },
+      { "id": "elbris-ritual-sword" },
+      { "id": "alexas-basket" },
+      { "id": "stella-harpa" },
+      { "id": "strak-gauntlet" },
+      { "id": "aurius" },
+      { "id": "magarahas-tome" },
+      { "id": "rosa-hargana" }
+    ]
+  },
+  {
     "nid": 9937594,
     "dt": [1703732400000, 1707361199000 ],
     "a": [
