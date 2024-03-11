@@ -207,11 +207,13 @@
     },
     {
         "nid": [
-            9900760
+            9900760,
+            10053533
         ],
         "type": "season",
         "dt": [
-            1702288800000
+            1702288800000,
+            1709528400000 
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e2c4a0c0952b47339c3ea2386007c028.jpg",
         "name": "Arena Oath Season (Season 17)"

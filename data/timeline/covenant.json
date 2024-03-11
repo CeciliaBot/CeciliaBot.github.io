@@ -8101,7 +8101,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/90f8560a146141f383d4a68b82b1fb61.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10041604,
       "type": "covenant",
       "dt": [
          "2024-02-22T03:00:00Z",
@@ -8117,10 +8117,10 @@
             "id": "sword-of-winter-shadow"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8ae3aaeee8384d87827175a5871c0905.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10041604,
       "type": "limited",
       "dt": [
          "2024-02-22T03:00:00Z",
@@ -8136,6 +8136,63 @@
             "id": "fan-of-light-and-dark"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2f3de124910345b5aaa8d4cfe12d01ab.jpg"
+   },
+   {
+      "nid": 10053533,
+      "type": "covenant",
+      "dt": [
+         "2024-02-29T08:00:00Z",
+         "2024-03-07T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "senya"
+         }
+      ],
+      "a": [
+         {
+            "id": "spear-of-a-new-dawn"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ee070e17d65845aa95d91523a0ae8175.jpg"
+   },
+   {
+      "nid": 10064672,
+      "type": "covenant",
+      "dt": [
+         "2024-03-07T03:00:00Z",
+         "2024-03-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "luluca"
+         }
+      ],
+      "a": [
+         {
+            "id": "spirits-breath"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9be99424354b44a5bfc74ec75e554d24.jpg"
+   },
+   {
+      "nid": 10064672,
+      "type": "covenant",
+      "dt": [
+         "2024-03-07T03:00:00Z",
+         "2024-03-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lilias"
+         }
+      ],
+      "a": [
+         {
+            "id": "bastion-of-perlutia"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/bd591934b09c4baca2b8615ed2ee21a9.jpg"
    }
 ]
