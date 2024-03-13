@@ -1,6 +1,20 @@
 [
   {
     "nid": 10015697,
+    "dt": [1710990000000, 1714618799000 ],
+    "a": [
+      { "id": "abyssal-crown" },
+      { "id": "song-of-stars" },
+      { "id": "uberiuss-tooth" },
+      { "id": "sphere-of-sadism" },
+      { "id": "barthezs-orbuculum" },
+      { "id": "andres-crossbow" },
+      { "id": "elyhas-knife" },
+      { "id": "wondrous-potion-vial" }
+    ]
+  },
+  {
+    "nid": 10015697,
     "dt": [1707361200000, 1710989999000 ],
     "a": [
       { "id": "circus-fantasia" },
