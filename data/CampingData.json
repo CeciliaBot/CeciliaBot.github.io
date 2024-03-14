@@ -9243,5 +9243,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "jenua": {
+        "camping": {
+            "personalities": [
+                9,
+                15
+            ],
+            "topics": [
+                "Heroic Cheer",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

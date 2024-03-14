@@ -4102,5 +4102,18 @@
             0,
             1
         ]
+    },
+    "jenua": {
+        "id": "c1055",
+        "_id": "jenua",
+        "name": "Jenua",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     }
 }

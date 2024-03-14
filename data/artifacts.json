@@ -316,6 +316,17 @@
         "role": "",
         "tags": []
     },
+    "dark-blood-keeper": {
+        "_id": "dark-blood-keeper",
+        "id": "art0200",
+        "identifier": "efa25",
+        "name": "Dark Blood Keeper",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0
+        ]
+    },
     "dignus-orb": {
         "_id": "dignus-orb",
         "id": "art0061",
