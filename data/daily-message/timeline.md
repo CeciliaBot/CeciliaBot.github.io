@@ -18,11 +18,13 @@ If you have suggestions contact me on discord!
 **Global Stove Event:**
 :::
 
-[Replay the E7! Comment Event](https://page.onstove.com/epicseven/global/view/9841671) (2 Leifs)
+[Rift Update Celebration Quiz Event!](https://page.onstove.com/epicseven/global/view/9818874) (300 Energy)
 
-[Fumyr Story Quiz Event!](https://page.onstove.com/epicseven/global/view/9868034) (2 Leifs)
+[Rift Update Celebration Screenshot Event](https://page.onstove.com/epicseven/global/view/9818861) (2 Leifs)
 
-[Epic Seven Match History Official Release Screenshot Event](https://page.onstove.com/epicseven/global/view/9867179) (2 Leifs)
+[Trick or Treat Event](https://ko.surveymonkey.com/r/E7trickortreat) (Reward TBD)
+
+[Abyssal Yufine Story Quiz Event!](https://page.onstove.com/epicseven/global/view/9814314) (2 Liefs)
 
 ::: text-center
 **Korean Stove Event:**
@@ -44,7 +46,7 @@ Global = 글로벌 | Asia = 아시아 (for saying what server you're in)
 
 |            Coupon              |                 Time Left                  |
 |:------------------------------:|:------------------------------------------:|
-|                                      None                                   |
+|         `E7WC2023RECAP`        |     dt[2023-10-26T14:59:59Z](Expired)      |
 
 ::: text-small
 iOS users can use [this link](https://event-epic7.smilegatemegaport.com/coupon) to redeem coupons!
