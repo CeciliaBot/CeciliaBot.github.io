@@ -1676,5 +1676,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-04-11T03:00:00Z",
+         "2024-05-02T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "sea-phantom-politis",
+            "new": true
+         },
+         {
+            "id": "assassin-cartuja"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

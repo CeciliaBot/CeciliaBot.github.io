@@ -8272,5 +8272,43 @@
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 10094643,
+      "type": "covenant",
+      "dt": [
+         "2024-03-28T09:00:00Z",
+         "2024-04-04T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lua"
+         }
+      ],
+      "a": [
+         {
+            "id": "spatiotemporal-fan"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8016bcde3fd34a7abc32af73f2e03468.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-04-04T03:00:00Z",
+         "2024-04-11T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ken"
+         }
+      ],
+      "a": [
+         {
+            "id": "samsara-prayer-beads"
+         }
+      ],
+      "thumbnail": ""
    }
 ]

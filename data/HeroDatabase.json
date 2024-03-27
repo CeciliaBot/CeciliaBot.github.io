@@ -4115,5 +4115,44 @@
         "tags": [
             0
         ]
+    },
+    "sea-phantom-politis": {
+        "id": "c1112",
+        "_id": "sea-phantom-politis",
+        "name": "Sea Phantom Politis",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
+    },
+    "ragnvald": {
+        "id": "c0000",
+        "_id": "ragnvald",
+        "name": "Ragnvald",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
+    },
+    "pernilla": {
+        "id": "c0000",
+        "_id": "pernilla",
+        "name": "Pernilla",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
     }
 }

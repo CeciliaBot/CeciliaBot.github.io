@@ -217,5 +217,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e2c4a0c0952b47339c3ea2386007c028.jpg",
         "name": "Arena Oath Season (Season 17)"
+    },
+    {
+        "nid": [
+            10094643
+        ],
+        "type": "season",
+        "dt": [
+            1711965600000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7a4d9a92e61e4b858dde4008c4694fb3.jpg",
+        "name": "Arena Contention Season (Season 18)"
     }
 ]
