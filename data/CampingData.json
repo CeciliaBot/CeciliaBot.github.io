@@ -9265,5 +9265,71 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "sea-phantom-politis": {
+        "camping": {
+            "personalities": [
+                8,
+                11
+            ],
+            "topics": [
+                "Reality Check",
+                "Unique Comment"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "ragnvald": {
+        "camping": {
+            "personalities": [
+                12,
+                29
+            ],
+            "topics": [
+                "Happy Memories",
+                "Gossip"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "pernilla": {
+        "camping": {
+            "personalities": [
+                0,
+                9
+            ],
+            "topics": [
+                "Sad Memory",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
