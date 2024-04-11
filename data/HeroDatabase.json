@@ -4154,5 +4154,49 @@
         "tags": [
             0
         ]
+    },
+    "ainz-ooal-gown": {
+        "id": "c1155",
+        "_id": "ainz-ooal-gown",
+        "name": "Ainz Ooal Gown",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "bull",
+        "tags": [
+            1,
+            2
+        ]
+    },
+    "albedo": {
+        "id": "c1156",
+        "_id": "albedo",
+        "name": "Albedo",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "archer",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+    "shalltear": {
+        "id": "c1157",
+        "_id": "shalltear",
+        "name": "Shalltear",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "archer",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     }
 }

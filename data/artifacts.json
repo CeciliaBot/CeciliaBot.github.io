@@ -1,4 +1,17 @@
 {
+    "3F": {
+        "_id": "3f",
+        "id": "art0193",
+        "identifier": "efk21",
+        "name": "3F",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
     "a-little-queens-huge-crown": {
         "_id": "a-little-queens-huge-crown",
         "id": "art0105",
@@ -1107,6 +1120,18 @@
             0
         ]
     },
+    "staff-of-ainz-ooal-gown": {
+        "_id": "staff-of-ainz-ooal-gown",
+        "id": "art0195",
+        "identifier": "efm29",
+        "name": "Staff of Ainz Ooal Gown",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            1,
+            2
+        ]
+    },
     "star-of-the-deep-sea": {
         "_id": "star-of-the-deep-sea",
         "id": "art0141",
@@ -1726,6 +1751,18 @@
         "rarity": 4,
         "role": "",
         "tags": []
+    },
+    "pipette-lance": {
+        "_id": "pipette-lance",
+        "id": "art0194",
+        "identifier": "efw36",
+        "name": "Pipette Lance",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            1,
+            2
+        ]
     },
     "portrait-of-the-saviors": {
         "_id": "portrait-of-the-saviors",

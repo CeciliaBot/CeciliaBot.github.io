@@ -9331,5 +9331,49 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "ainz-ooal-gown": {
+        "camping": {
+            "personalities": [
+                28,
+                7
+            ],
+            "topics": [
+                "Reality Check",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "albedo": {
+        "camping": {
+            "personalities": [
+                28,
+                9
+            ],
+            "topics": [
+                "Belief",
+                "Unique Comment"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
