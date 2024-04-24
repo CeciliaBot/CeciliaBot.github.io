@@ -180,5 +180,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d6df9b3d9d174a18b322491a75b66dbf.jpg",
         "name": "Guild War Oath Season (Season 14)"
+    },
+    {
+        "nid": [
+            10130930
+        ],
+        "type": "season",
+        "dt": [
+            1714212000000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/b4200c6dc7304e55954026a1b728aa9a.jpg",
+        "name": "Guild War Contention Season (Season 15)"
     }
 ]

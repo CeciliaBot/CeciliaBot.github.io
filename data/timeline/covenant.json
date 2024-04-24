@@ -8369,7 +8369,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/42a42f8af5934de3b0876eb5e312d7b9.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10121331,
       "type": "covenant",
       "dt": [
          "2024-04-18T03:00:00Z",
@@ -8389,19 +8389,61 @@
    },
    {
       "nid": 0,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2024-04-18T03:00:00Z",
          "2024-05-02T02:59:59Z"
       ],
       "c": [
          {
-            "id": "albedo"
+            "id": "albedo",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "3f"
+            "id": "3f",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2024-04-25T08:00:00Z",
+         "2024-05-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "shalltear",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "pipette-lance",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-05-02T03:00:00Z",
+         "2024-05-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "basar"
+         }
+      ],
+      "a": [
+         {
+            "id": "abyssal-crown"
          }
       ],
       "thumbnail": ""

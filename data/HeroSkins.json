@@ -339,5 +339,12 @@
             "_id": "senya-wolf",
             "name": "Wolf"
         }
+    ],
+    "briar-witch-iseria": [
+        {
+            "id": "c2024_s01",
+            "_id": "briar-witch-iseria-knight-commander",
+            "name": "Knight Commander"
+        }
     ]
 }

@@ -4198,5 +4198,18 @@
             1,
             2
         ]
+    },
+    "wandering-prince-cidd": {
+        "id": "c6014",
+        "_id": "wandering-prince-cidd",
+        "name": "Wandering Prince Cidd",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     }
 }
