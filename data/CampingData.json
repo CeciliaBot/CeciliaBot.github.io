@@ -9375,5 +9375,49 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "shalltear": {
+        "camping": {
+            "personalities": [
+                4,
+                27
+            ],
+            "topics": [
+                "Unique Comment",
+                "Complain"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "wandering-prince-cidd": {
+        "camping": {
+            "personalities": [
+                7,
+                26
+            ],
+            "topics": [
+                "Happy Memories",
+                "Horror Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
