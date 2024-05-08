@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10138052,
+    "dt": [1714618800000, 1718247599000 ],
+    "a": [
+      { "id": "sword-of-summer-twilight" },
+      { "id": "celestine" },
+      { "id": "scroll-of-shadows" },
+      { "id": "sword-of-judgment" },
+      { "id": "dust-devil" },
+      { "id": "waters-origin" },
+      { "id": "els-fist" },
+      { "id": "sashe-ithanes" }
+    ]
+  },
+  {
     "nid": 10015697,
     "dt": [1710990000000, 1714618799000 ],
     "a": [

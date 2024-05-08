@@ -1723,5 +1723,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-05-23T03:00:00Z",
+         "2024-06-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "dragon-bride-senya",
+            "new": true
+         },
+         {
+            "id": "crescent-moon-rin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

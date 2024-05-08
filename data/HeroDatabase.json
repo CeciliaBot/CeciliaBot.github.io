@@ -4210,5 +4210,31 @@
         "tags": [
             0
         ]
+    },
+    "dragon-bride-senya": {
+        "id": "c2106",
+        "_id": "dragon-bride-senya",
+        "name": "Dragon Bride Senya",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
+    },
+    "birgitta": {
+        "id": "c1160",
+        "_id": "birgitta",
+        "name": "Birgitta",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     }
 }

@@ -8385,10 +8385,10 @@
             "id": "last-teatime"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7e4213bc45ca40839053c4d099173982.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10121344,
       "type": "limited",
       "dt": [
          "2024-04-18T03:00:00Z",
@@ -8406,10 +8406,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3dc7c9c2d99744d4808d6d4bcdbad079.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10121344,
       "type": "limited",
       "dt": [
          "2024-04-25T08:00:00Z",
@@ -8427,10 +8427,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/bb8bb990421f4152a22d5a5d5ab3cbff.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10138052,
       "type": "covenant",
       "dt": [
          "2024-05-02T03:00:00Z",
@@ -8444,6 +8444,84 @@
       "a": [
          {
             "id": "abyssal-crown"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a34579dd6410450bb352e8c4728b6287.jpg"
+   },
+   {
+      "nid": 10153610,
+      "type": "covenant",
+      "dt": [
+         "2024-05-09T10:00:00Z",
+         "2024-05-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "roana"
+         }
+      ],
+      "a": [
+         {
+            "id": "touch-of-rekos"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/189033b9b9704b6498951064151ca9e8.jpg"
+   },
+   {
+      "nid": 10153610,
+      "type": "covenant",
+      "dt": [
+         "2024-05-09T10:00:00Z",
+         "2024-05-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tywin"
+         }
+      ],
+      "a": [
+         {
+            "id": "crown-of-glory"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/683a180b00cd4872aeaee1c06a3e505a.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-05-16T03:00:00Z",
+         "2024-05-23T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ervalen"
+         }
+      ],
+      "a": [
+         {
+            "id": "doubleedged-decrescent"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-05-16T03:00:00Z",
+         "2024-05-30T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "birgitta",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "birdseye-view",
+            "new": true
          }
       ],
       "thumbnail": ""
