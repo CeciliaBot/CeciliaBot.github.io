@@ -8525,5 +8525,74 @@
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-05-23T09:00:00Z",
+         "2024-05-30T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "peira"
+         }
+      ],
+      "a": [
+         {
+            "id": "goblet-of-oath"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-05-30T03:00:00Z",
+         "2024-06-06T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "pavel"
+         }
+      ],
+      "a": [
+         {
+            "id": "dux-noctis"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2024-05-30T03:00:00Z",
+         "2024-06-20T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "cerise"
+         },
+         {
+            "id": "ocean-breeze-luluca"
+         },
+         {
+            "id": "lethe"
+         }
+      ],
+      "a": [
+         {
+            "id": "guiding-light"
+         },
+         {
+            "id": "sole-consolation"
+         },
+         {
+            "id": "prayer-of-solitude"
+         }
+      ],
+      "thumbnail": ""
    }
 ]

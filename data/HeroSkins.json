@@ -346,5 +346,12 @@
             "_id": "briar-witch-iseria-knight-commander",
             "name": "Knight Commander"
         }
+    ],
+    "peira": [
+        {
+            "id": "c1125_s01",
+            "_id": "peira-code-name-s",
+            "name": "Code Name S"
+        }
     ]
 }
