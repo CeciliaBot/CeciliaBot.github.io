@@ -177,6 +177,17 @@
             2
         ]
     },
+    "birds-eye-view": {
+        "_id": "birds-eye-view",
+        "id": "art0201",
+        "identifier": "",
+        "name": "Bird's Eye View",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
     "black-hand-of-the-goddess": {
         "_id": "black-hand-of-the-goddess",
         "id": "art0088",
