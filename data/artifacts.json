@@ -177,11 +177,11 @@
             2
         ]
     },
-    "birds-eye-view": {
-        "_id": "birds-eye-view",
+    "birdseye-view": {
+        "_id": "birdseye-view",
         "id": "art0201",
         "identifier": "",
-        "name": "Bird's Eye View",
+        "name": "Bird's-Eye View",
         "rarity": 5,
         "role": "manauser",
         "tags": [
