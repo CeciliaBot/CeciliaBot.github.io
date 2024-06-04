@@ -8520,7 +8520,7 @@
       ],
       "a": [
          {
-            "id": "birdseye-view",
+            "id": "birds-eye-view",
             "new": true
          }
       ],
@@ -8594,5 +8594,43 @@
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 10209334,
+      "type": "covenant",
+      "dt": [
+         "2024-06-05T09:00:00Z",
+         "2024-06-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "violet"
+         }
+      ],
+      "a": [
+         {
+            "id": "violet-talisman"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/cd9d1e3ddd95482cb88f0d322b851d8a.jpg"
+   },
+   {
+      "nid": 10209334,
+      "type": "covenant",
+      "dt": [
+         "2024-06-13T03:00:00Z",
+         "2024-06-20T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "celine"
+         }
+      ],
+      "a": [
+         {
+            "id": "secret-art-storm-sword"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/cd9d1e3ddd95482cb88f0d322b851d8a.jpg"
    }
 ]

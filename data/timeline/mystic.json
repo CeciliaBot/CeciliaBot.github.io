@@ -1742,5 +1742,29 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 10209334,
+      "type": "mystic",
+      "dt": [
+         "2024-06-20T03:00:00Z",
+         "2024-07-04T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "fallen-cecilia"
+         },
+         {
+            "id": "abyssal-yufine"
+         },
+         {
+            "id": "blood-moon-haste"
+         },
+         {
+            "id": "sylvan-sage-vivian"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
