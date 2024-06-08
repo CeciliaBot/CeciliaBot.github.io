@@ -9419,5 +9419,71 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "dragon-bride-senya": {
+        "camping": {
+            "personalities": [
+                13,
+                20
+            ],
+            "topics": [
+                "Unique Comment",
+                "Reality Check"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "birgitta": {
+        "camping": {
+            "personalities": [
+                12,
+                29
+            ],
+            "topics": [
+                "Reality Check",
+                "Gossip"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "bernard": {
+        "camping": {
+            "personalities": [
+                0,
+                6
+            ],
+            "topics": [
+                "Unique Comment",
+                "Interesting Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
