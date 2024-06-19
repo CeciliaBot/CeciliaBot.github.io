@@ -1766,5 +1766,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-07-04T03:00:00Z",
+         "2024-07-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "new-moon-luna",
+            "new": true
+         },
+         {
+            "id": "wanderer-silk"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

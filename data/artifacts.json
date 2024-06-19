@@ -909,6 +909,18 @@
             0
         ]
     },
+    "ruyi-jingu-bang": {
+        "_id": "ruyi-jingu-bang",
+        "id": "art0000",
+        "identifier": "",
+        "name": "Ruyi Jingu Bang",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "sacred-tree-branch": {
         "_id": "sacred-tree-branch",
         "id": "art0164",
@@ -1688,6 +1700,17 @@
         "rarity": 4,
         "role": "",
         "tags": []
+    },
+    "midnight-pizza-delivery": {
+        "_id": "midnight-pizza-delivery",
+        "id": "art0000",
+        "identifier": "",
+        "name": "Midnight Pizza Delivery",
+        "rarity": 4,
+        "role": "",
+        "tags": [
+            1
+        ]
     },
     "moonlight-dreamblade": {
         "_id": "moonlight-dreamblade",

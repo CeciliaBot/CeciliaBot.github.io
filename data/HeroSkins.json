@@ -353,5 +353,12 @@
             "_id": "peira-code-name-s",
             "name": "Code Name S"
         }
+    ],
+    "luna": [
+        {
+            "id": "c1066_s01",
+            "_id": "luna-uncensored",
+            "name": "Uncensored"
+        }
     ]
 }

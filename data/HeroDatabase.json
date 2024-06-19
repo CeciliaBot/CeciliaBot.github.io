@@ -4249,5 +4249,32 @@
         "tags": [
             0
         ]
+    },
+    "immortal-wukong": {
+        "id": "c1161",
+        "_id": "immortal-wukong",
+        "name": "Immortal Wukong",
+        "rarity": 5,
+        "attribute": "earth",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scorpion",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "new-moon-luna": {
+        "id": "c2066",
+        "_id": "new-moon-luna",
+        "name": "New Moon Luna",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     }
 }
