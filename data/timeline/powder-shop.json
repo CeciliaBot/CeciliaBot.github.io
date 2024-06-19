@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10222558,
+    "dt": [1718247600000, 1721876399000 ],
+    "a": [
+      { "id": "snow-crystal" },
+      { "id": "wings-of-light-and-shadow" },
+      { "id": "wind-rider" },
+      { "id": "touch-of-rekos" },
+      { "id": "hell-cutter" },
+      { "id": "adamant-shield" },
+      { "id": "kaladra" },
+      { "id": "infinity-basket" }
+    ]
+  },
+  {
     "nid": 10138052,
     "dt": [1714618800000, 1718247599000 ],
     "a": [
