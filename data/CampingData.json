@@ -9485,5 +9485,49 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "immortal-wukong": {
+        "camping": {
+            "personalities": [
+                4,
+                15
+            ],
+            "topics": [
+                "Complain",
+                "Heroic Tale"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "new-moon-luna": {
+        "camping": {
+            "personalities": [
+                8,
+                13
+            ],
+            "topics": [
+                "Sad Memory",
+                "Comforting Cheer"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

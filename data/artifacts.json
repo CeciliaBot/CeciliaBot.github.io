@@ -911,8 +911,8 @@
     },
     "ruyi-jingu-bang": {
         "_id": "ruyi-jingu-bang",
-        "id": "art0000",
-        "identifier": "",
+        "id": "art0202",
+        "identifier": "efw36",
         "name": "Ruyi Jingu Bang",
         "rarity": 5,
         "role": "warrior",
@@ -1703,11 +1703,11 @@
     },
     "midnight-pizza-delivery": {
         "_id": "midnight-pizza-delivery",
-        "id": "art0000",
+        "id": "art0203",
         "identifier": "",
         "name": "Midnight Pizza Delivery",
         "rarity": 4,
-        "role": "",
+        "role": "art4_39",
         "tags": [
             1
         ]
