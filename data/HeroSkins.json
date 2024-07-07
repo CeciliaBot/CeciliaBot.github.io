@@ -357,8 +357,15 @@
     "luna": [
         {
             "id": "c1066_s01",
-            "_id": "luna-uncensored",
-            "name": "Uncensored"
+            "_id": "luna-glacial-purity",
+            "name": "Glacial Purity"
+        }
+    ],
+    "cerise": [
+        {
+            "id": "c1081_s01",
+            "_id": "cerise-cobalt-pearl-cerise",
+            "name": "Cobalt Pearl Cerise"
         }
     ]
 }

@@ -1033,5 +1033,20 @@
             }
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/b3e7f70011664cf8b1afc8bac204bc49.jpg"
+    },
+    {
+        "nid": 0,
+        "type": "pass",
+        "dt": [
+            "2024-07-11T03:00:00Z",
+            "2024-08-08T02:59:59Z"
+        ],
+        "name": "Epic★Pass 「Seaside Jewel 2022 Season」",
+        "c": [
+            {
+                "id": "cerise"
+            }
+        ],
+        "thumbnail": ""
     }
 ]
