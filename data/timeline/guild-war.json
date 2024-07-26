@@ -183,11 +183,13 @@
     },
     {
         "nid": [
-            10130930
+            10130930,
+            10316318
         ],
         "type": "season",
         "dt": [
-            1714212000000
+            1714212000000,
+            1721469599000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/b4200c6dc7304e55954026a1b728aa9a.jpg",
         "name": "Guild War Contention Season (Season 15)"

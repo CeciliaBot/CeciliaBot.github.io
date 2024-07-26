@@ -8674,7 +8674,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2aaca0abc3c1452c9e7b8e0212f8558d.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10247651,
       "type": "covenant",
       "dt": [
          "2024-06-27T03:00:00Z",
@@ -8690,7 +8690,7 @@
             "id": "doctors-bag"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/cf2300b8cd0b489cbf6ed8c364104bac.jpg"
    },
    {
       "nid": 10263040,
@@ -8750,6 +8750,25 @@
       "thumbnail": ""
    },
    {
+      "nid": 10316318,
+      "type": "covenant",
+      "dt": [
+         "2024-07-18T08:00:00Z",
+         "2024-07-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "kise"
+         }
+      ],
+      "a": [
+         {
+            "id": "alabastron"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1c23239bf15c41ef8e4142e44d6a0f37.jpg"
+   },
+   {
       "nid": 10276969,
       "type": "limited",
       "dt": [
@@ -8758,5 +8777,24 @@
       ],
       "name": "Custom Triple RGB Group Summon",
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/51b873105371418aa6f273e45882c56e.jpg"
+   },
+   {
+      "nid": 10343269,
+      "type": "covenant",
+      "dt": [
+         "2024-07-25T03:00:00Z",
+         "2024-08-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "abigail"
+         }
+      ],
+      "a": [
+         {
+            "id": "golden-rose"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d7e040b302264cfca434041f6d5d4211.jpg"
    }
 ]

@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10343269,
+    "dt": [1721876400000, 1725505199000 ],
+    "a": [
+      { "id": "eticas-scepter" },
+      { "id": "dux-noctis" },
+      { "id": "pure-white-trust" },
+      { "id": "noble-oath" },
+      { "id": "siraren" },
+      { "id": "rosa-hargana" },
+      { "id": "moonlight-dreamblade" },
+      { "id": "eternus" }
+    ]
+  },
+  {
     "nid": 10222558,
     "dt": [1718247600000, 1721876399000 ],
     "a": [
