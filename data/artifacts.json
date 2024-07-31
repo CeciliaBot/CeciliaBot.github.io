@@ -718,6 +718,18 @@
             0
         ]
     },
+    "magic-bubble-maker": {
+        "_id": "magic-bubble-maker",
+        "id": "art0000",
+        "identifier": "",
+        "name": "Magic Bubble Maker",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "magic-for-friends": {
         "_id": "magic-for-friends",
         "id": "art0137",

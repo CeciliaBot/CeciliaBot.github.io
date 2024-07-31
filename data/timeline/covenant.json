@@ -8796,5 +8796,64 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d7e040b302264cfca434041f6d5d4211.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-08-01T09:00:00Z",
+         "2024-08-08T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "charlotte"
+         }
+      ],
+      "a": [
+         {
+            "id": "elbris-ritual-sword"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-08-08T03:00:00Z",
+         "2024-08-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "arunka"
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-autumn-eclipse"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2024-08-08T03:00:00Z",
+         "2024-08-22T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "festive-eda",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "magic-bubble-maker",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }
 ]

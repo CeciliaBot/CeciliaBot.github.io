@@ -4275,5 +4275,32 @@
         "tags": [
             0
         ]
+    },
+    "festive-eda": {
+        "id": "c5111",
+        "_id": "festive-eda",
+        "name": "Festive Eda",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "fish",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "empyrean-ilynav": {
+        "id": "c5111",
+        "_id": "empyrean-ilynav",
+        "name": "Empyrean Ilynav",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     }
 }

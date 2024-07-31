@@ -1800,5 +1800,24 @@
       ],
       "name": "Special Mystic Summon (Keeps the same pity count)",
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7cd20ab263594322a830e0005f98a67c.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-08-15T03:00:00Z",
+         "2024-09-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "empyrean-ilynav",
+            "new": true
+         },
+         {
+            "id": "shooting-star-achates"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
