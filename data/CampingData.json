@@ -9529,5 +9529,49 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "festive-eda": {
+        "camping": {
+            "personalities": [
+                0,
+                25
+            ],
+            "topics": [
+                "Dream",
+                "Joyful Memory"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "empyrean-ilynav": {
+        "camping": {
+            "personalities": [
+                7,
+                13
+            ],
+            "topics": [
+                "Heroic Cheer",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
