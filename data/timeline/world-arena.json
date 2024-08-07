@@ -173,11 +173,13 @@
     },
     {
         "nid": [
-            10197422
+            10197422,
+            10393901
         ],
         "type": "season",
         "dt": [
-            1717218000000
+            1717218000000,
+            1724468399000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/33671deccb9e48d7ab1f4f4d388c429c.jpg",
         "name": "World Arena Contention Season (Season 14)"

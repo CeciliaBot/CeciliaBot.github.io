@@ -8731,7 +8731,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/026b58cbbc6d45e2acbf58e46f9a6f09.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10276969,
       "type": "covenant",
       "dt": [
          "2024-07-11T03:00:00Z",
@@ -8747,7 +8747,7 @@
             "id": "time-matter"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a0bf74c289b344069a626f720f6ad081.jpg"
    },
    {
       "nid": 10316318,
@@ -8798,7 +8798,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d7e040b302264cfca434041f6d5d4211.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10370452,
       "type": "covenant",
       "dt": [
          "2024-08-01T09:00:00Z",
@@ -8814,14 +8814,14 @@
             "id": "elbris-ritual-sword"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d9a72c43365245ce927f77dd4a9b27a5.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10393467,
       "type": "covenant",
       "dt": [
          "2024-08-08T03:00:00Z",
-         "2024-08-14T02:59:59Z"
+         "2024-08-15T02:59:59Z"
       ],
       "c": [
          {
@@ -8833,10 +8833,10 @@
             "id": "sword-of-autumn-eclipse"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/47d36dac451e49b1ac5bda1e5305c52b.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10393467,
       "type": "limited",
       "dt": [
          "2024-08-08T03:00:00Z",
@@ -8854,6 +8854,6 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e8cd888d36f14884b1fc5dd6a4c4fcc6.jpg"
    }
 ]
