@@ -8855,5 +8855,64 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e8cd888d36f14884b1fc5dd6a4c4fcc6.jpg"
+   },
+   {
+      "nid": 10406748,
+      "type": "covenant",
+      "dt": [
+         "2024-08-14T09:00:00Z",
+         "2024-08-22T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "hwayoung"
+         }
+      ],
+      "a": [
+         {
+            "id": "indestructible-gaiters"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a656e04b6c464b6baac9a8cac2cf0904.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-08-22T03:00:00Z",
+         "2024-08-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "choux"
+         }
+      ],
+      "a": [
+         {
+            "id": "snow-crystal"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2024-08-22T03:00:00Z",
+         "2024-09-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "frida",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "spotted-mouse-hair-tie",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }
 ]

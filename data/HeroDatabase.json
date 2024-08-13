@@ -4302,5 +4302,19 @@
         "tags": [
             0
         ]
+    },
+    "frida": {
+        "id": "c1163",
+        "_id": "frida",
+        "name": "Frida",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "bull",
+        "tags": [
+            0,
+            1
+        ]
     }
 }

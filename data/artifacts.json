@@ -1154,6 +1154,18 @@
             0
         ]
     },
+    "spotted-mouse-hair-tie": {
+        "_id": "spotted-mouse-hair-tie",
+        "id": "art0000",
+        "identifier": "",
+        "name": "Spotted Mouse Hair Tie",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "staff-of-ainz-ooal-gown": {
         "_id": "staff-of-ainz-ooal-gown",
         "id": "art0195",
