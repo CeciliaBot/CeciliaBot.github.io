@@ -9573,5 +9573,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "frida": {
+        "camping": {
+            "personalities": [
+                25,
+                8
+            ],
+            "topics": [
+                "Dream",
+                "Reality Check"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
