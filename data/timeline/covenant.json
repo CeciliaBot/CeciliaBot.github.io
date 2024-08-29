@@ -8876,7 +8876,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a656e04b6c464b6baac9a8cac2cf0904.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10424155,
       "type": "covenant",
       "dt": [
          "2024-08-22T03:00:00Z",
@@ -8892,10 +8892,10 @@
             "id": "snow-crystal"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3068d667a52d41be9b79771e95af3690.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10424155,
       "type": "limited",
       "dt": [
          "2024-08-22T03:00:00Z",
@@ -8913,6 +8913,25 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/70234e627d8c4f4bae26954bc1cb2cc6.jpg"
+   },
+   {
+      "nid": 10437567,
+      "type": "covenant",
+      "dt": [
+         "2024-08-29T03:00:00Z",
+         "2024-09-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "iseria"
+         }
+      ],
+      "a": [
+         {
+            "id": "song-of-stars"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/48fa490f677142fc9f29fec174113029.jpg"
    }
 ]
