@@ -1819,5 +1819,29 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/607597871aa5417b953e17b84465338e.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-09-05T03:00:00Z",
+         "2024-09-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "pirate-captain-flan"
+         },
+         {
+            "id": "lionheart-cermia"
+         },
+         {
+            "id": "judge-kise"
+         },
+         {
+            "id": "mediator-kawerik"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
