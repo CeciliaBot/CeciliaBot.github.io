@@ -316,8 +316,7 @@
         "rarity": 5,
         "role": "mage",
         "tags": [
-            0,
-            1
+            0
         ]
     },
     "crown-of-glory": {
@@ -1962,6 +1961,15 @@
         "tags": [
             0
         ]
+    },
+    "special-strawberry-cake": {
+        "_id": "special-strawberry-cake",
+        "id": "art0206",
+        "identifier": "",
+        "name": "Special Strawberry Cake",
+        "rarity": 4,
+        "role": "",
+        "tags": []
     },
     "spooky-solayu-stories": {
         "_id": "spooky-solayu-stories",

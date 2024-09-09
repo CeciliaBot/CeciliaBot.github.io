@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10450714,
+    "dt": [1725505200000, 1729133999000 ],
+    "a": [
+      { "id": "goblet-of-oath" },
+      { "id": "rod-of-amaryllis" },
+      { "id": "black-hand-of-the-goddess" },
+      { "id": "iron-fan" },
+      { "id": "silver-rain" },
+      { "id": "magarahas-tome" },
+      { "id": "sepulcrum" },
+      { "id": "hilag-lance" }
+    ]
+  },
+  {
     "nid": 10343269,
     "dt": [1721876400000, 1725505199000 ],
     "a": [
