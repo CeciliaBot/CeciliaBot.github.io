@@ -4316,5 +4316,44 @@
             0,
             1
         ]
+    },
+    "harsetti": {
+        "id": "c0000",
+        "_id": "harsetti",
+        "name": "Harsetti",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
+    },
+    "fenris": {
+        "id": "c0000",
+        "_id": "fenris",
+        "name": "Fenris",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
+    },
+    "revna": {
+        "id": "c0000",
+        "_id": "revna",
+        "name": "Revna",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     }
 }

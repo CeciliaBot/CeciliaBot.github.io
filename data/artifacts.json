@@ -874,6 +874,17 @@
             1
         ]
     },
+    "renewed-will": {
+        "_id": "renewed-will",
+        "id": "art0000",
+        "identifier": "",
+        "name": "Renewed Will",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
     "rhianna-luciella": {
         "_id": "rhianna-luciella",
         "id": "art5_11",

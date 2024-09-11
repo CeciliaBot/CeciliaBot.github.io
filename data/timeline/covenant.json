@@ -8971,5 +8971,81 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9e734440817440f2944b1967f40575e2.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-09-12T03:00:00Z",
+         "2024-09-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "alencia"
+         }
+      ],
+      "a": [
+         {
+            "id": "alencinoxs-wrath"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-09-12T03:00:00Z",
+         "2024-09-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "abigail"
+         }
+      ],
+      "a": [
+         {
+            "id": "golden-rose"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-09-19T03:00:00Z",
+         "2024-09-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "yulha"
+         }
+      ],
+      "a": [
+         {
+            "id": "sphere-of-sadism"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-09-19T03:00:00Z",
+         "2024-10-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "fenris"
+         }
+      ],
+      "a": [
+         {
+            "id": "renewed-will"
+         }
+      ],
+      "thumbnail": ""
    }
 ]

@@ -1839,6 +1839,28 @@
          },
          {
             "id": "mediator-kawerik"
+         },
+         {
+            "id": "crimson-armin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-08-26T03:00:00Z",
+         "2024-10-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "harsetti",
+            "new": true
+         },
+         {
+            "id": "roaming-warrior-leo"
          }
       ],
       "a": [],
