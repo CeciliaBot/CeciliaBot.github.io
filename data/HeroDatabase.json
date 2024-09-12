@@ -4318,7 +4318,7 @@
         ]
     },
     "harsetti": {
-        "id": "c0000",
+        "id": "c1153",
         "_id": "harsetti",
         "name": "Harsetti",
         "rarity": 5,
@@ -4331,7 +4331,7 @@
         ]
     },
     "fenris": {
-        "id": "c0000",
+        "id": "c1158",
         "_id": "fenris",
         "name": "Fenris",
         "rarity": 5,
@@ -4344,7 +4344,7 @@
         ]
     },
     "revna": {
-        "id": "c0000",
+        "id": "c3160",
         "_id": "revna",
         "name": "Revna",
         "rarity": 3,

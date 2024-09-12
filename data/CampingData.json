@@ -9595,5 +9595,71 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "harsetti": {
+        "camping": {
+            "personalities": [
+                4,
+                27
+            ],
+            "topics": [
+                "Heroic Tale",
+                "Heroic Cheer"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "fenris": {
+        "camping": {
+            "personalities": [
+                12,
+                29
+            ],
+            "topics": [
+                "Happy Memories",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "revna": {
+        "camping": {
+            "personalities": [
+                10,
+                26
+            ],
+            "topics": [
+                "Reality Check",
+                "Advice"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
