@@ -232,11 +232,13 @@
     },
     {
         "nid": [
-            10233419
+            10233419,
+            10475831
         ],
         "type": "season",
         "dt": [
-            1719255600000
+            1719255600000,
+            1730034000000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f8ff18c8e43d4f16b54dcec29c952a7b.jpg",
         "name": "Arena Pursuit Season (Season 19) - New Emperor League"
