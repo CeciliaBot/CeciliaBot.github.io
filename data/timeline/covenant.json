@@ -8973,7 +8973,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9e734440817440f2944b1967f40575e2.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10465198,
       "type": "covenant",
       "dt": [
          "2024-09-12T03:00:00Z",
@@ -8989,10 +8989,10 @@
             "id": "alencinoxs-wrath"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/338d0c76a69a4cf39fc454c63a47f4bb.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10465198,
       "type": "covenant",
       "dt": [
          "2024-09-12T03:00:00Z",
@@ -9008,10 +9008,10 @@
             "id": "golden-rose"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9433a09df6ac447e90d969974cc67391.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10470200,
       "type": "covenant",
       "dt": [
          "2024-09-19T03:00:00Z",
@@ -9027,10 +9027,10 @@
             "id": "sphere-of-sadism"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a73c966eb9044a30ae0c741b7bcd682f.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10470200,
       "type": "covenant",
       "dt": [
          "2024-09-19T03:00:00Z",
@@ -9038,12 +9038,71 @@
       ],
       "c": [
          {
-            "id": "fenris"
+            "id": "fenris",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "renewed-will"
+            "id": "renewed-will",
+            "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9aaf3691187f4f0c8d6d6bfb34c9c0f6.jpg"
+   },
+   {
+      "nid": 10475831,
+      "type": "covenant",
+      "dt": [
+         "2024-09-26T09:00:00Z",
+         "2024-10-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tenebria"
+         }
+      ],
+      "a": [
+         {
+            "id": "crimson-moon-of-nightmares"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/4707027b54d5415093400bf2a7966bfb.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-10-03T03:00:00Z",
+         "2024-10-10T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "charles"
+         }
+      ],
+      "a": [
+         {
+            "id": "justice-for-all"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2024-10-03T03:00:00Z",
+         "2024-10-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "midnight-gala-lilias"
+         }
+      ],
+      "a": [
+         {
+            "id": "hostess-of-the-banquet"
          }
       ],
       "thumbnail": ""
