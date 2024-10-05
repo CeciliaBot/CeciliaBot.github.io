@@ -9661,5 +9661,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "inheritor-amiki": {
+        "camping": {
+            "personalities": [
+                25,
+                13
+            ],
+            "topics": [
+                "Sad Memory",
+                "Advice"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
