@@ -4368,5 +4368,19 @@
         "tags": [
             0
         ]
+    },
+    "afternoon-soak-flan": {
+        "id": "c5110",
+        "_id": "afternoon-soak-flan",
+        "name": "Afternoon Soak Flan",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins",
+        "tags": [
+            0,
+            1
+        ]
     }
 }
