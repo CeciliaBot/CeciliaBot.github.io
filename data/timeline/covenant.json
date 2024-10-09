@@ -9070,7 +9070,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/4707027b54d5415093400bf2a7966bfb.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10479210,
       "type": "covenant",
       "dt": [
          "2024-10-03T03:00:00Z",
@@ -9086,10 +9086,10 @@
             "id": "justice-for-all"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/6764fbe7df6d410daba6b8aeec65df47.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10479210,
       "type": "limited",
       "dt": [
          "2024-10-03T03:00:00Z",
@@ -9105,7 +9105,26 @@
             "id": "hostess-of-the-banquet"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/32c7d823f1eb469d93f256459a292b5c.jpg"
+   },
+   {
+      "nid": 10486031,
+      "type": "covenant",
+      "dt": [
+         "2024-10-10T09:00:00Z",
+         "2024-10-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "vildred"
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-summer-twilight"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d16e847f6d2c4751a4ffb97fa3b90688.jpg"
    },
    {
       "nid": 0,
@@ -9124,6 +9143,25 @@
          {
             "id": "dreamlike-holiday",
             "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2024-10-17T03:00:00Z",
+         "2024-10-31T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "landy"
+         }
+      ],
+      "a": [
+         {
+            "id": "wall-of-order"
          }
       ],
       "thumbnail": ""
