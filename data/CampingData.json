@@ -9683,5 +9683,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "afternoon-soak-flan": {
+        "camping": {
+            "personalities": [
+                26,
+                10
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Advice"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

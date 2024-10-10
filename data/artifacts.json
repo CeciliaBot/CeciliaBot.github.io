@@ -395,6 +395,18 @@
             1
         ]
     },
+    "dreamlike-holiday": {
+        "_id": "dreamlike-holiday",
+        "id": "art0207",
+        "identifier": "efr27",
+        "name": "Dreamlike Holiday",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "durandal": {
         "_id": "durandal",
         "id": "art0002",
