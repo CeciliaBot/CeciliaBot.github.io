@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10491522,
+    "dt": [1729134000000, 1732762799000 ],
+    "a": [
+      { "id": "indestructible-gaiters" },
+      { "id": "bastion-of-perlutia" },
+      { "id": "alexas-basket" },
+      { "id": "doctors-bag" },
+      { "id": "strak-gauntlet" },
+      { "id": "steadfast-gatekeeper" },
+      { "id": "tagehels-ancient-book" },
+      { "id": "andres-crossbow" }
+    ]
+  },
+  {
     "nid": 10450714,
     "dt": [1725505200000, 1729133999000 ],
     "a": [

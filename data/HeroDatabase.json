@@ -4382,5 +4382,18 @@
             0,
             1
         ]
+    },
+    "hellion-lua": {
+        "id": "c2126",
+        "_id": "hellion-lua",
+        "name": "Hellion Lua",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
     }
 }

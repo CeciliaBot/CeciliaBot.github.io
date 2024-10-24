@@ -9127,7 +9127,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d16e847f6d2c4751a4ffb97fa3b90688.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10491522,
       "type": "limited",
       "dt": [
          "2024-10-17T03:00:00Z",
@@ -9145,10 +9145,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/920c8544d3b648a28b990313cc291a08.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10491522,
       "type": "limited",
       "dt": [
          "2024-10-17T03:00:00Z",
@@ -9162,6 +9162,44 @@
       "a": [
          {
             "id": "wall-of-order"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/49eb0c4b7deb49769711018cac2badf7.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-10-31T03:00:00Z",
+         "2024-11-07T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "krau"
+         }
+      ],
+      "a": [
+         {
+            "id": "holy-sacrifice"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-10-31T03:00:00Z",
+         "2024-11-07T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "mui"
+         }
+      ],
+      "a": [
+         {
+            "id": "circus-fantasia"
          }
       ],
       "thumbnail": ""

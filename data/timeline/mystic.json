@@ -1889,5 +1889,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-11-07T03:00:00Z",
+         "2024-11-28T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "hellion-lua",
+            "new": true
+         },
+         {
+            "id": "troublemaker-crozet"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

@@ -9705,5 +9705,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "hellion-lua": {
+        "camping": {
+            "personalities": [
+                18,
+                23
+            ],
+            "topics": [
+                "Unique Comment",
+                "Bizarre Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
