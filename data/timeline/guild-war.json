@@ -196,11 +196,13 @@
     },
     {
         "nid": [
-            10406748
+            10406748,
+            10511535
         ],
         "type": "season",
         "dt": [
-            1723888800000
+            1723888800000,
+            1731146399000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e0a54c70cf6d45f3bc2572f3ff9a7d1b.jpg",
         "name": "Guild War Pursuit Season (Season 16)"

@@ -613,6 +613,17 @@
             0
         ]
     },
+    "homage-to-tarman": {
+        "_id": "homage-to-tarman",
+        "id": "art0210",
+        "identifier": "efh22",
+        "name": "Homage to Tarman",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
     "hostess-of-the-banquet": {
         "_id": "hostess-of-the-banquet",
         "id": "art0186",

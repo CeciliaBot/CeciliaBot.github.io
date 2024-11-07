@@ -9727,5 +9727,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "schniel": {
+        "camping": {
+            "personalities": [
+                23,
+                13
+            ],
+            "topics": [
+                "Advice",
+                "Reality Check"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

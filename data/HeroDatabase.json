@@ -4395,5 +4395,18 @@
         "tags": [
             0
         ]
+    },
+    "schniel": {
+        "id": "c1060",
+        "_id": "schniel",
+        "name": "Schniel",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     }
 }

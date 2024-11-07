@@ -9183,10 +9183,10 @@
             "id": "holy-sacrifice"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1ba74a15331f40438e422950b23f1130.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10505948,
       "type": "covenant",
       "dt": [
          "2024-10-31T03:00:00Z",
@@ -9200,6 +9200,84 @@
       "a": [
          {
             "id": "circus-fantasia"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 10505948,
+      "type": "covenant",
+      "dt": [
+         "2024-11-07T09:00:00Z",
+         "2024-11-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "eda"
+         }
+      ],
+      "a": [
+         {
+            "id": "twilight-calamity"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ace4ddd32ff1418fa61f07ce14ed15b2.jpg"
+   },
+   {
+      "nid": 10511535,
+      "type": "covenant",
+      "dt": [
+         "2024-11-07T09:00:00Z",
+         "2024-11-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ray"
+         }
+      ],
+      "a": [
+         {
+            "id": "doctors-bag"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/32e3ca6a5df24ec9a5240c719352ddea.jpg"
+   },
+   {
+      "nid": 10511535,
+      "type": "covenant",
+      "dt": [
+         "2024-11-14T03:00:00Z",
+         "2024-11-21T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ran"
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-winter-shadow"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e251b2b8129245139cf09031b4029695.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-11-14T03:00:00Z",
+         "2024-11-28T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "schniel",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "homage-to-tarman",
+            "new": true
          }
       ],
       "thumbnail": ""
