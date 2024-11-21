@@ -9338,5 +9338,26 @@
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-12-12T03:00:00Z",
+         "2024-12-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "young-senya",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "proof-of-friendship",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }
 ]
