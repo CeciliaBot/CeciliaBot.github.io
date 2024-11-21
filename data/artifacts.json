@@ -865,6 +865,18 @@
             1
         ]
     },
+    "proof-of-friendship": {
+        "_id": "proof-of-friendship",
+        "id": "art0000",
+        "identifier": "",
+        "name": "Proof of Friendship",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "proof-of-valor": {
         "_id": "proof-of-valor",
         "id": "art0051",

@@ -4408,5 +4408,32 @@
         "tags": [
             0
         ]
+    },
+    "young-senya": {
+        "id": "c0000",
+        "_id": "young-senya",
+        "name": "Young Senya",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "westwind-executioner-schuri": {
+        "id": "c6020",
+        "_id": "westwind-executioner-schuri",
+        "name": "Westwind Executioner Schuri",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
     }
 }

@@ -1911,5 +1911,32 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-11-28T03:00:00Z",
+         "2024-12-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "last-rider-krau"
+         },
+         {
+            "id": "twisted-eidolon-kayron"
+         },
+         {
+            "id": "dark-corvus"
+         },
+         {
+            "id": "pirate-captain-flan"
+         },
+         {
+            "id": "westwind-executioner-schuri"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10523164,
+    "dt": [1732762800000, 1736391599000 ],
+    "a": [
+      { "id": "knowledge-seed" },
+      { "id": "bloodstone" },
+      { "id": "sigurd-scythe" },
+      { "id": "rise-of-a-monarch" },
+      { "id": "barthezs-orbuculum" },
+      { "id": "sashe-ithanes" },
+      { "id": "elyhas-knife" },
+      { "id": "wondrous-potion-vial" }
+    ]
+  },
+  {
     "nid": 10491522,
     "dt": [1729134000000, 1732762799000 ],
     "a": [

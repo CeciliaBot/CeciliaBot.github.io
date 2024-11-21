@@ -9243,7 +9243,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/32e3ca6a5df24ec9a5240c719352ddea.jpg"
    },
    {
-      "nid": 10511535,
+      "nid": 10516863,
       "type": "covenant",
       "dt": [
          "2024-11-14T03:00:00Z",
@@ -9259,10 +9259,10 @@
             "id": "sword-of-winter-shadow"
          }
       ],
-      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e251b2b8129245139cf09031b4029695.jpg"
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/001f79758ada4d16aabf98e7cd80384f.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10516863,
       "type": "covenant",
       "dt": [
          "2024-11-14T03:00:00Z",
@@ -9278,6 +9278,63 @@
          {
             "id": "homage-to-tarman",
             "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7415c59f53c14dd886da31cc50b69fb9.jpg"
+   },
+   {
+      "nid": 10523164,
+      "type": "covenant",
+      "dt": [
+         "2024-11-21T09:00:00Z",
+         "2024-11-28T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "jenua"
+         }
+      ],
+      "a": [
+         {
+            "id": "dark-blood-keeper"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/519449112dec44388c472a20f6a876af.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-11-28T03:00:00Z",
+         "2024-12-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "kane"
+         }
+      ],
+      "a": [
+         {
+            "id": "tyrants-descent"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-11-28T03:00:00Z",
+         "2024-12-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aria"
+         }
+      ],
+      "a": [
+         {
+            "id": "scroll-of-shadows"
          }
       ],
       "thumbnail": ""
