@@ -9749,5 +9749,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "westwind-executioner-schuri": {
+        "camping": {
+            "personalities": [
+                4,
+                7
+            ],
+            "topics": [
+                "Self-Indulgent",
+                "Heroic Tale"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

@@ -1933,7 +1933,8 @@
             "id": "pirate-captain-flan"
          },
          {
-            "id": "westwind-executioner-schuri"
+            "id": "westwind-executioner-schuri",
+            "new": true
          }
       ],
       "a": [],
