@@ -187,11 +187,13 @@
     },
     {
         "nid": [
-            10475831
+            10475831,
+            10533432
         ],
         "type": "season",
         "dt": [
-            1727499600000
+            1727499600000,
+            1734145199000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/50286c637cbc4a138e1c6b8ed300e8bb.jpg",
         "name": "World Arena Pursuit Season (Season 15)"

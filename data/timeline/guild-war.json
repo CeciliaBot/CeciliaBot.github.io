@@ -206,5 +206,16 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e0a54c70cf6d45f3bc2572f3ff9a7d1b.jpg",
         "name": "Guild War Pursuit Season (Season 16)"
+    },
+    {
+        "nid": [
+            10533432
+        ],
+        "type": "season",
+        "dt": [
+            1733565600000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/96f9cd5bbd974bb9b2e3f3f29aeb0892.jpg",
+        "name": "Guild War Grit Season (Season 17)"
     }
 ]

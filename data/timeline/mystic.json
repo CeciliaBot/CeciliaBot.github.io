@@ -1939,5 +1939,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2024-12-19T03:00:00Z",
+         "2025-01-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "bystander-hwayoung",
+            "new": true
+         },
+         {
+            "id": "benevolent-romann"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

@@ -9340,11 +9340,49 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/769e574f07394c2db96ce90e9d4bbd53.jpg"
    },
    {
+      "nid": 10533432,
+      "type": "covenant",
+      "dt": [
+         "2024-12-05T08:00:00Z",
+         "2024-12-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aramintha"
+         }
+      ],
+      "a": [
+         {
+            "id": "eticas-scepter"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5155eb421da942019510907733c2fae4.jpg"
+   },
+   {
+      "nid": 10533432,
+      "type": "covenant",
+      "dt": [
+         "2024-12-05T08:00:00Z",
+         "2024-12-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "zahhak"
+         }
+      ],
+      "a": [
+         {
+            "id": "pure-white-trust"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7b6985bf29fc45a4a09b118122157177.jpg"
+   },
+   {
       "nid": 0,
       "type": "covenant",
       "dt": [
          "2024-12-12T03:00:00Z",
-         "2024-12-26T02:59:59Z"
+         "2025-01-02T02:59:59Z"
       ],
       "c": [
          {
@@ -9356,6 +9394,25 @@
          {
             "id": "proof-of-friendship",
             "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2024-12-12T03:00:00Z",
+         "2024-12-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "alencia"
+         }
+      ],
+      "a": [
+         {
+            "id": "alencinoxs-wrath"
          }
       ],
       "thumbnail": ""

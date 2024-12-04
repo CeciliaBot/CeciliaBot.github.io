@@ -4435,5 +4435,18 @@
         "tags": [
             0
         ]
+    },
+    "bystander-hwayoung": {
+        "id": "c2128",
+        "_id": "bystander-hwayoung",
+        "name": "Bystander Hwayoung",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     }
 }

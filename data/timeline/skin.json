@@ -1048,5 +1048,18 @@
             }
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c12693b0fa174a3db37e46b80cef1c40.png"
+    },
+    {
+        "nid": 10276969,
+        "type": "rta_skin",
+        "dt": [
+            "2024-12-14T03:00:00Z"
+        ],
+        "c": [
+            {
+                "id": "pirate-captain-flan"
+            }
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c869252e991d429f841a3209afa7b668.png"
     }
 ]
