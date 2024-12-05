@@ -9771,5 +9771,49 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "young-senya": {
+        "camping": {
+            "personalities": [
+                20,
+                25
+            ],
+            "topics": [
+                "Dream",
+                "Comforting Cheer"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "bystander-hwayoung": {
+        "camping": {
+            "personalities": [
+                7,
+                30
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Dream"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
