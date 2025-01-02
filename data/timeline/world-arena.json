@@ -197,5 +197,14 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/50286c637cbc4a138e1c6b8ed300e8bb.jpg",
         "name": "World Arena Pursuit Season (Season 15)"
+    },
+    {
+        "nid": [],
+        "type": "season",
+        "dt": [
+            1736571600000
+        ],
+        "thumbnail": "",
+        "name": "World Arena 2025-1 Season (Season 16)"
     }
 ]

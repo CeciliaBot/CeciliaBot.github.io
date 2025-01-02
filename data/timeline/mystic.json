@@ -1958,5 +1958,33 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2025-01-09T03:00:00Z",
+         "2025-01-30T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "archdemons-shadow"
+         },
+         {
+            "id": "operator-sigret"
+         },
+         {
+            "id": "specter-tenebria"
+         },
+         {
+            "id": "apocalypse-ravi"
+         },
+         {
+            "id": "new-kid-adin",
+            "new": true
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

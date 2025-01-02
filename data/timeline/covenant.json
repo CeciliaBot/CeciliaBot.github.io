@@ -9437,7 +9437,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/374584ea3aed4e96ad661d5e27a33700.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10553202,
       "type": "covenant",
       "dt": [
          "2024-12-26T03:00:00Z",
@@ -9453,10 +9453,10 @@
             "id": "manica-of-control"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/28b097c3bfc74f9cb681fccf68d6ad03.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10553202,
       "type": "covenant",
       "dt": [
          "2024-12-26T03:00:00Z",
@@ -9472,6 +9472,63 @@
             "id": "merciless-glutton"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/da0e02872d454f17865e8c36fa6b82bc.jpg"
+   },
+   {
+      "nid": 10560705,
+      "type": "limited",
+      "dt": [
+         "2025-01-02T09:00:00Z",
+         "2025-01-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "byblis"
+         }
+      ],
+      "a": [
+         {
+            "id": "old-gardening-shears"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/0934cb9be94a40979a953624fa88319d.jpg"
+   },
+   {
+      "nid": 10560705,
+      "type": "covenant",
+      "dt": [
+         "2025-01-02T09:00:00Z",
+         "2025-01-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "haste"
+         }
+      ],
+      "a": [
+         {
+            "id": "rhianna-luciella"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/64c72966b53e46a88c656e40d4de02a3.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-01-09T03:00:00Z",
+         "2025-01-23T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "blooming-lidica"
+         }
+      ],
+      "a": [
+         {
+            "id": "seductive-flower"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/64c72966b53e46a88c656e40d4de02a3.jpg"
    }
 ]

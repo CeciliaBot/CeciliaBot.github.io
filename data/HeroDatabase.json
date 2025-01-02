@@ -4448,5 +4448,18 @@
         "tags": [
             0
         ]
+    },
+    "new-kid-adin": {
+        "id": "c2165",
+        "_id": "new-kid-adin",
+        "name": "New Kid Adin",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     }
 }

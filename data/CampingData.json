@@ -9815,5 +9815,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "new-kid-adin": {
+        "camping": {
+            "personalities": [
+                18,
+                23
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
