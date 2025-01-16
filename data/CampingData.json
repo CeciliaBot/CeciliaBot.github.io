@@ -9837,5 +9837,49 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "fenne": {
+        "camping": {
+            "personalities": [
+                23,
+                27
+            ],
+            "topics": [
+                "Happy Memories",
+                "Dream"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "lone-wolf-peira": {
+        "camping": {
+            "personalities": [
+                27,
+                21
+            ],
+            "topics": [
+                "Joyful Memory",
+                "Occult"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

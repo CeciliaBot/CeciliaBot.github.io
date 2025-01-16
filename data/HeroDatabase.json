@@ -4461,5 +4461,31 @@
         "tags": [
             0
         ]
+    },
+    "fenne": {
+        "id": "c1170",
+        "_id": "fenne",
+        "name": "Fenne",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
+    },
+    "lone-wolf-peira": {
+        "id": "c2125",
+        "_id": "lone-wolf-peira",
+        "name": "Lone Wolf Peira",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
     }
 }

@@ -877,6 +877,17 @@
             1
         ]
     },
+    "proof-of-love": {
+        "_id": "proof-of-love",
+        "id": "art0212",
+        "identifier": "efh25",
+        "name": "Proof of Love",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
     "proof-of-valor": {
         "_id": "proof-of-valor",
         "id": "art0051",

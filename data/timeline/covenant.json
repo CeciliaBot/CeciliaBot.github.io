@@ -9379,7 +9379,7 @@
    },
    {
       "nid": 10538699,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2024-12-12T03:00:00Z",
          "2025-01-02T02:59:59Z"
@@ -9530,5 +9530,81 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/64c72966b53e46a88c656e40d4de02a3.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-01-16T09:00:00Z",
+         "2025-01-23T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "kayron"
+         }
+      ],
+      "a": [
+         {
+            "id": "shepherd-of-the-hollow"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-01-23T03:00:00Z",
+         "2025-02-06T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "fenne"
+         }
+      ],
+      "a": [
+         {
+            "id": "proof-of-love"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-01-23T03:00:00Z",
+         "2025-01-30T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "elena"
+         }
+      ],
+      "a": [
+         {
+            "id": "stella-harpa"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-01-30T03:00:00Z",
+         "2025-02-06T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "chloe"
+         }
+      ],
+      "a": [
+         {
+            "id": "a-little-queens-huge-crown"
+         }
+      ],
+      "thumbnail": ""
    }
 ]

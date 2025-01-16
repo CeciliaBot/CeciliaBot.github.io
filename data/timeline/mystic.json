@@ -1986,5 +1986,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2025-01-30T03:00:00Z",
+         "2025-02-20T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lone-wolf-peira",
+            "new": true
+         },
+         {
+            "id": "tempest-surin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
