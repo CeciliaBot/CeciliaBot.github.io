@@ -1420,7 +1420,8 @@
         "rarity": 5,
         "role": "manauser",
         "tags": [
-            0
+            0,
+            1
         ]
     },
     "unseen-observer": {
@@ -1787,9 +1788,7 @@
         "name": "Midnight Pizza Delivery",
         "rarity": 4,
         "role": "art4_39",
-        "tags": [
-            1
-        ]
+        "tags": []
     },
     "moonlight-dreamblade": {
         "_id": "moonlight-dreamblade",

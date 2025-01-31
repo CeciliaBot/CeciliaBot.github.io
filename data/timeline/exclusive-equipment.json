@@ -655,5 +655,21 @@
         ],
         "a": [],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c1f5c1f8f2a54b6ab64b7fa3b7454d34.jpg"
+    },
+    {
+        "nid": 10579275,
+        "dt": [
+            "2025-01-16T09:00:00Z"
+        ],
+        "c": [
+            {
+                "id": "blooming-lidica"
+            },
+            {
+                "id": "sez"
+            }
+        ],
+        "a": [],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/eaf1489e59624131a87d77f96f60fc15.jpg"
     }
 ]

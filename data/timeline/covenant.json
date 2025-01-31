@@ -9532,7 +9532,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/64c72966b53e46a88c656e40d4de02a3.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10579275,
       "type": "covenant",
       "dt": [
          "2025-01-16T09:00:00Z",
@@ -9548,10 +9548,10 @@
             "id": "shepherd-of-the-hollow"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/74f0463e3631407ebb3c9363bb48c578.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10586433,
       "type": "covenant",
       "dt": [
          "2025-01-23T03:00:00Z",
@@ -9569,10 +9569,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5a12b0f007774dafa3c97473e51c1cf3.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10586433,
       "type": "covenant",
       "dt": [
          "2025-01-23T03:00:00Z",
@@ -9588,7 +9588,7 @@
             "id": "stella-harpa"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ddca8c23ef7d4e7d9e4969a5ae0bd0df.jpg"
    },
    {
       "nid": 0,
@@ -9605,6 +9605,44 @@
       "a": [
          {
             "id": "a-little-queens-huge-crown"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-02-06T03:00:00Z",
+         "2025-02-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "birgitta"
+         }
+      ],
+      "a": [
+         {
+            "id": "birdseye-view"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-02-06T03:00:00Z",
+         "2025-02-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "cecilia"
+         }
+      ],
+      "a": [
+         {
+            "id": "rise-of-a-monarch"
          }
       ],
       "thumbnail": ""
