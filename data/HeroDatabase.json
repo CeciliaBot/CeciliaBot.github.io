@@ -4487,5 +4487,19 @@
         "tags": [
             0
         ]
+    },
+    "tori": {
+        "id": "c1171",
+        "_id": "tori",
+        "name": "Tori",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "lion",
+        "tags": [
+            0,
+            1
+        ]
     }
 }

@@ -498,6 +498,18 @@
             0
         ]
     },
+    "feed-of-criticism": {
+        "_id": "feed-of-criticism",
+        "id": "art0213",
+        "identifier": "",
+        "name": "Feed of Criticism",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "flawless-garments": {
         "_id": "flawless-garments",
         "id": "art0140",
@@ -2177,6 +2189,15 @@
         "id": "art0128",
         "identifier": "ef422",
         "name": "XIV. Temperance",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xv-the-devil": {
+        "_id": "xv-the-devil",
+        "id": "art0211",
+        "identifier": "",
+        "name": "XV. The Devil",
         "rarity": 4,
         "role": "",
         "tags": []

@@ -2005,5 +2005,29 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2025-02-20T03:00:00Z",
+         "2025-03-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "designer-lilibet"
+         },
+         {
+            "id": "silver-blade-aramintha"
+         },
+         {
+            "id": "straze"
+         },
+         {
+            "id": "solitaria-of-the-snow"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

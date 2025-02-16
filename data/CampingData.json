@@ -9881,5 +9881,27 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "tori": {
+        "camping": {
+            "personalities": [
+                0,
+                30
+            ],
+            "topics": [
+                "Reality Check",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }
