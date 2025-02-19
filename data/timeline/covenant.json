@@ -9656,12 +9656,14 @@
       ],
       "c": [
          {
-            "id": "tori"
+            "id": "tori",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "feed-of-criticism"
+            "id": "feed-of-criticism",
+            "new": true
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d124519208f04b5aa6ce7ce15f1b217e.jpg"
@@ -9686,7 +9688,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c144f8df8e364ba2be4410614bf4e626.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10618573,
       "type": "covenant",
       "dt": [
          "2025-02-20T03:00:00Z",
@@ -9702,6 +9704,6 @@
             "id": "abyssal-crown"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5ee272b77853413f99fc4325c02778fe.jpg"
    }
 ]
