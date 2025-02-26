@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10571489,
+    "dt": [1736391600000, 1740020399000 ],
+    "a": [
+      { "id": "doubleedged-decrescent" },
+      { "id": "rod-of-amaryllis" },
+      { "id": "bloody-rose" },
+      { "id": "sphere-of-inferno" },
+      { "id": "dust-devil" },
+      { "id": "waters-origin" },
+      { "id": "els-fist" },
+      { "id": "aurius" }
+    ]
+  },
+  {
     "nid": 10618573,
     "dt": [1740020400000, 1743649199000 ],
     "a": [
