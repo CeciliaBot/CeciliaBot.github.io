@@ -2032,5 +2032,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2025-03-14T03:00:00Z",
+         "2025-04-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "successor-taeyou",
+            "new": true
+         },
+         {
+            "id": "angel-of-light-angelica"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

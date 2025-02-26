@@ -4501,5 +4501,18 @@
             0,
             1
         ]
+    },
+    "successor-taeyou": {
+        "id": "c2127",
+        "_id": "successor-taeyou",
+        "name": "Successor Taeyou",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
     }
 }
