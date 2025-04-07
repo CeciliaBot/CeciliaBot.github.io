@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10672575,
+    "dt": [1743649200000, 1747277999000 ],
+    "a": [
+      { "id": "twilight-calamity" },
+      { "id": "an-offer-you-cant-refuse" },
+      { "id": "durandal" },
+      { "id": "holy-sacrifice" },
+      { "id": "siraren" },
+      { "id": "rosa-hargana" },
+      { "id": "moonlight-dreamblade" },
+      { "id": "eternus" }
+    ]
+  },
+  {
     "nid": 10571489,
     "dt": [1736391600000, 1740020399000 ],
     "a": [

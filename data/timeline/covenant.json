@@ -9787,13 +9787,13 @@
       ],
       "a": [
          {
-            "id": "the-armament"
+            "id": "last-teatime"
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/cc3fa024c6f542fe9e9cdd5973216d35.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10653111,
       "type": "covenant",
       "dt": [
          "2025-03-20T03:00:00Z",
@@ -9809,10 +9809,10 @@
             "id": "idols-cheer"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5de348c9f9c144a68dbecfd587a730aa.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10653111,
       "type": "limited",
       "dt": [
          "2025-03-20T03:00:00Z",
@@ -9828,6 +9828,63 @@
             "id": "sweet-miracle"
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f3e69676c5cb44d88d86fe0262aab91f.jpg"
+   },
+   {
+      "nid": 10661609,
+      "type": "covenant",
+      "dt": [
+         "2025-03-27T03:00:00Z",
+         "2025-04-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "nahkwol"
+         }
+      ],
+      "a": [
+         {
+            "id": "elegiac-candle"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/b35c754b1d4a4f7289bcd522cadf7398.jpg"
+   },
+   {
+      "nid": 10672575,
+      "type": "covenant",
+      "dt": [
+         "2025-04-03T03:00:00Z",
+         "2025-04-10T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lilias"
+         }
+      ],
+      "a": [
+         {
+            "id": "bastion-of-perlutia"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/b35c754b1d4a4f7289bcd522cadf7398.jpg"
+   },
+   {
+      "nid": 10672575,
+      "type": "covenant",
+      "dt": [
+         "2025-04-03T03:00:00Z",
+         "2025-04-10T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "vivian"
+         }
+      ],
+      "a": [
+         {
+            "id": "dignus-orb"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/606b271faa5749ac9d73a898ba288877.jpg"
    }
 ]

@@ -199,12 +199,15 @@
         "name": "World Arena Pursuit Season (Season 15)"
     },
     {
-        "nid": [],
+        "nid": [
+            10654333
+        ],
         "type": "season",
         "dt": [
-            1736571600000
+            1736571600000,
+            1743821999000
         ],
         "thumbnail": "",
-        "name": "World Arena 2025-1 Season (Season 16)"
+        "name": "World Arena Spring 2025 Season (Season 16)"
     }
 ]
