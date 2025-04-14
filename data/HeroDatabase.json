@@ -4514,5 +4514,68 @@
         "tags": [
             0
         ]
+    },
+    "boss-arunka": {
+        "id": "c2124",
+        "_id": "boss-arunka",
+        "name": "Boss Arunka",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
+    },
+    "victorika": {
+        "id": "c1166",
+        "_id": "victorika",
+        "name": "Victorika",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "lion",
+        "tags": []
+    },
+    "guard-captain-krau": {
+        "id": "c5070",
+        "_id": "guard-captain-krau",
+        "name": "Guard Captain Krau",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "ram",
+        "tags": [
+            0
+        ]
+    },
+    "rinak": {
+        "id": "c1168",
+        "_id": "rinak",
+        "name": "Rinak",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
+    },
+    "robin": {
+        "id": "c1169",
+        "_id": "robin",
+        "name": "Robin",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "goat",
+        "tags": [
+            0
+        ]
     }
 }

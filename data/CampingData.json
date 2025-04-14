@@ -9903,5 +9903,115 @@
         "buffs": [],
         "debuffs": [],
         "common": []
+    },
+    "successor-taeyou": {
+        "camping": {
+            "personalities": [
+                0,
+                28
+            ],
+            "topics": [
+                "Sad Memory",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "boss-arunka": {
+        "camping": {
+            "personalities": [
+                9,
+                29
+            ],
+            "topics": [
+                "Happy Memories",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "victorika": {
+        "camping": {
+            "personalities": [
+                13,
+                25
+            ],
+            "topics": [
+                "Self-Indulgent",
+                "Belief"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "guard-captain-krau": {
+        "camping": {
+            "personalities": [
+                12,
+                15
+            ],
+            "topics": [
+                "Criticism",
+                "Food Story"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
+    },
+    "rinak": {
+        "camping": {
+            "personalities": [
+                4,
+                1
+            ],
+            "topics": [
+                "Dream",
+                "Self-Indulgent"
+            ]
+        },
+        "skills": [
+            {
+                "buff": [],
+                "debuff": [],
+                "common": []
+            }
+        ],
+        "buffs": [],
+        "debuffs": [],
+        "common": []
     }
 }

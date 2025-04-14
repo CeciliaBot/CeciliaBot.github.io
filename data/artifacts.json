@@ -1356,6 +1356,17 @@
             2
         ]
     },
+    "thorn-of-the-blue-rose": {
+        "_id": "thorn-of-the-blue-rose",
+        "id": "art0214",
+        "identifier": "efw37",
+        "name": "Thorn of the Blue Rose",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
     "time-matter": {
         "_id": "time-matter",
         "id": "art0027",

@@ -672,5 +672,61 @@
                 "id": "an-offer-you-cant-refuse"
             }
         ]
+    },
+    {
+        "nid": 10684372,
+        "dt": [
+            "2025-04-10T09:00:00Z"
+        ],
+        "c": [
+            {
+                "id": "martial-artist-ken"
+            },
+            {
+                "id": "fallen-cecilia"
+            },
+            {
+                "id": "spirit-eye-celine"
+            },
+            {
+                "id": "sylvan-sage-vivian"
+            },
+            {
+                "id": "dragon-king-sharun"
+            },
+            {
+                "id": "lidica"
+            },
+            {
+                "id": "kayron"
+            },
+            {
+                "id": "seaside-bellona"
+            },
+            {
+                "id": "lethe"
+            },
+            {
+                "id": "destina"
+            },
+            {
+                "id": "landy"
+            },
+            {
+                "id": "watcher-schuri"
+            }
+        ],
+        "a": [
+            {
+                "id": "reingars-special-drink"
+            },
+            {
+                "id": "wall-of-order"
+            },
+            {
+                "id": "fairy-tale-for-a-nightmare"
+            }
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8a1727f40de1472ab7f7f5b4b3c1d70c.jpg"
     }
 ]
