@@ -361,6 +361,18 @@
             0
         ]
     },
+    "discreet-hands": {
+        "_id": "discreet-hands",
+        "id": "art0217",
+        "identifier": "efa27",
+        "name": "Discreet Hands",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "doctors-bag": {
         "_id": "doctors-bag",
         "id": "art0094",
@@ -750,6 +762,18 @@
         "role": "mage",
         "tags": [
             0
+        ]
+    },
+    "moas": {
+        "_id": "moas",
+        "id": "art0216",
+        "identifier": "efk22",
+        "name": "M.O.A.S",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0,
+            1
         ]
     },
     "magic-bubble-maker": {

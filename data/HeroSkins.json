@@ -25,7 +25,7 @@
             "id": "c2050_s01",
             "_id": "specter-tenebria-dark-tyrant",
             "name": "Dark Tyrant"
-        } 
+        }
     ],
     "tempest-surin": [
         {
@@ -399,6 +399,13 @@
             "id": "c2088_s01",
             "_id": "sylvan-sage-vivian-lilac-fragrance",
             "name": "Lilac Fragrance"
+        }
+    ],
+    "politis": [
+        {
+            "id": "c1112_s01",
+            "_id": "politis-maiden-of-the-fox-shrine",
+            "name": "Maiden of the Fox Shrine"
         }
     ]
 }

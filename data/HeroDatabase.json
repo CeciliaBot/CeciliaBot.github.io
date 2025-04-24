@@ -2350,8 +2350,7 @@
         "role": "knight",
         "sex": 0,
         "zodiac": "goat",
-        "tags": [
-        ]
+        "tags": []
     },
     "kiris": {
         "id": "c3063",
@@ -4560,9 +4559,10 @@
         "attribute": "wind",
         "role": "assassin",
         "sex": 2,
-        "zodiac": "maiden",
+        "zodiac": "bull",
         "tags": [
-            0
+            0,
+            1
         ]
     },
     "robin": {

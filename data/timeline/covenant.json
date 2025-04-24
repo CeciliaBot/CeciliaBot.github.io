@@ -628,7 +628,8 @@
       "nid": 4131191,
       "type": "covenant",
       "dt": [
-         1570644000000,1571237999000
+         1570644000000,
+         1571237999000
       ],
       "c": [
          {
@@ -1177,8 +1178,8 @@
       "nid": 4996953,
       "type": "covenant",
       "dt": [
-            1585191600000,
-            1585796399000
+         1585191600000,
+         1585796399000
       ],
       "c": [
          {
@@ -2101,7 +2102,8 @@
       "nid": 6183239,
       "type": "covenant",
       "dt": [
-         1602144000000,1602730799000
+         1602144000000,
+         1602730799000
       ],
       "c": [
          {
@@ -2890,7 +2892,7 @@
       "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/cec6dba99b0f403a80940c62a2f202ed/4221eef18de04d47ae0ea65427aa6005_1614150250.jpg"
    },
    {
-      "nid":  6901807,
+      "nid": 6901807,
       "type": "covenant",
       "dt": [
          1614848400000,
@@ -9896,12 +9898,14 @@
       ],
       "c": [
          {
-            "id": "guard-captain-krau"
+            "id": "guard-captain-krau",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "thorn-of-the-blue-rose"
+            "id": "thorn-of-the-blue-rose",
+            "new": true
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1700518546fc4abaa51d4faaa8a68952.jpg"
@@ -9926,8 +9930,8 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/fb89368a38384a46bd659cc29b960444.jpg"
    },
    {
-      "nid": 0,
-      "type": "covenant",
+      "nid": 10692053,
+      "type": "limited",
       "dt": [
          "2025-04-17T09:00:00Z",
          "2025-05-01T02:59:59Z"
@@ -9940,6 +9944,80 @@
       "a": [
          {
             "id": "unfading-memories"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5d4133d72e4143cf9b5377cd7767149a.jpg"
+   },
+   {
+      "nid": 10698459,
+      "type": "limited",
+      "dt": [
+         "2025-04-24T09:00:00Z",
+         "2025-05-08T02:59:59Z"
+      ],
+      "a": [
+         {
+            "id": "moas"
+         }
+      ],
+      "name": "Knight Class Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/10a7d3eb0d3446e8a1d9cf75645a3642.jpg"
+   },
+   {
+      "nid": 10698459,
+      "type": "covenant",
+      "dt": [
+         "2025-04-24T09:00:00Z",
+         "2025-05-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "luluca"
+         }
+      ],
+      "a": [
+         {
+            "id": "spirits-breath"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d3a9307f2bb84bbbbe3ce30bb5bdff41.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "limited",
+      "dt": [
+         "2025-05-01T03:00:00Z",
+         "2025-05-15T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "rinak",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "discreet-hands",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-05-01T03:00:00Z",
+         "2025-05-08T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lidica"
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-judgment"
          }
       ],
       "thumbnail": ""
