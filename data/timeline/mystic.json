@@ -2082,5 +2082,51 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2025-05-15T03:00:00Z",
+         "2025-06-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ruele-of-light"
+         },
+         {
+            "id": "judge-kise"
+         },
+         {
+            "id": "commander-pavel"
+         },
+         {
+            "id": "belian"
+         },
+         {
+            "id": "sinful-angelica"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "mystic",
+      "dt": [
+         "2025-06-05T03:00:00Z",
+         "2025-06-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "disciplinary-prefect-aria",
+            "new": true
+         },
+         {
+            "id": "general-purrgis"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

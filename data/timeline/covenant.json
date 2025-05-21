@@ -9983,7 +9983,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d3a9307f2bb84bbbbe3ce30bb5bdff41.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10710882,
       "type": "limited",
       "dt": [
          "2025-05-01T03:00:00Z",
@@ -10001,10 +10001,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a7ff746132bc4d4e8152b69c1081b35e.jpg"
    },
    {
-      "nid": 0,
+      "nid": 10710882,
       "type": "covenant",
       "dt": [
          "2025-05-01T03:00:00Z",
@@ -10018,6 +10018,141 @@
       "a": [
          {
             "id": "sword-of-judgment"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8a22ce10619e41e1becb826543605d89.jpg"
+   },
+   {
+      "nid": 10723389,
+      "type": "covenant",
+      "dt": [
+         "2025-05-08T09:00:00Z",
+         "2025-05-15T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "kayron"
+         }
+      ],
+      "a": [
+         {
+            "id": "shepherd-of-the-hollow"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e235a8242bef4f3daa26bcd20b09b52f.jpg"
+   },
+   {
+      "nid": 10733343,
+      "type": "covenant",
+      "dt": [
+         "2025-05-15T03:00:00Z",
+         "2025-05-22T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "bellona"
+         }
+      ],
+      "a": [
+         {
+            "id": "iron-fan"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5a651e3c013d42ae898d6d9638fe83aa.jpg"
+   },
+   {
+      "nid": 10733343,
+      "type": "covenant",
+      "dt": [
+         "2025-05-15T03:00:00Z",
+         "2025-05-22T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ken"
+         }
+      ],
+      "a": [
+         {
+            "id": "samsara-prayer-beads"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/963d9ad4fcbe42ae834f1bb544892264.jpg"
+   },
+   {
+      "nid": 10747357,
+      "type": "covenant",
+      "dt": [
+         "2025-05-22T09:00:00Z",
+         "2025-05-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ludwig"
+         }
+      ],
+      "a": [
+         {
+            "id": "time-matter"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c8b1449da2ff44178d927e9329e2d22d.jpg"
+   },
+   {
+      "nid": 10747357,
+      "type": "covenant",
+      "dt": [
+         "2025-05-22T09:00:00Z",
+         "2025-05-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lua"
+         }
+      ],
+      "a": [
+         {
+            "id": "spatiotemporal-fan"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/06ac1618d9694a4ca51c983301499630.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-05-29T03:00:00Z",
+         "2025-06-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "charlotte"
+         }
+      ],
+      "a": [
+         {
+            "id": "elbris-ritual-sword"
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-05-29T03:00:00Z",
+         "2025-06-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "charlotte",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "elbris-ritual-sword",
+            "new": true
          }
       ],
       "thumbnail": ""
