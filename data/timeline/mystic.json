@@ -2128,5 +2128,32 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 10814440,
+      "type": "mystic",
+      "dt": [
+         "2025-06-26T03:00:00Z",
+         "2025-07-10T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "abyssal-yufine"
+         },
+         {
+            "id": "desert-jewel-basar"
+         },
+         {
+            "id": "pirate-captain-flan"
+         },
+         {
+            "id": "arbiter-vildred"
+         },
+         {
+            "id": "last-piece-karin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

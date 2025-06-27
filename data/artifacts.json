@@ -86,6 +86,17 @@
             0
         ]
     },
+    "an-assassins-pledge": {
+        "_id": "an-assassins-pledge",
+        "id": "art0000",
+        "identifier": "",
+        "name": "An Assassin's Pledge",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
     "an-offer-you-cant-refuse": {
         "_id": "an-offer-you-cant-refuse",
         "id": "art0178",
@@ -1288,6 +1299,18 @@
         "name": "Star of the Deep Sea",
         "rarity": 5,
         "role": "ranger",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "strike-of-aspiration": {
+        "_id": "strike-of-aspiration",
+        "id": "art0222",
+        "identifier": "",
+        "name": "Strike of Aspiration",
+        "rarity": 5,
+        "role": "warrior",
         "tags": [
             0,
             1

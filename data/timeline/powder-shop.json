@@ -1,5 +1,19 @@
 [
   {
+    "nid": 10814440,
+    "dt": [1750906800000, 1754535599000 ],
+    "a": [
+      { "id": "creation-destruction" },
+      { "id": "justice-for-all" },
+      { "id": "wind-rider" },
+      { "id": "idols-cheer" },
+      { "id": "strak-gauntlet" },
+      { "id": "steadfast-gatekeeper" },
+      { "id": "tagehels-ancient-book" },
+      { "id": "andres-crossbow" }
+    ]
+  },
+  {
     "nid": 10733343,
     "dt": [1747278000000, 1750906799000 ],
     "a": [
