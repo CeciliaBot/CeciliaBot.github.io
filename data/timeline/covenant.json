@@ -10145,16 +10145,107 @@
       ],
       "c": [
          {
-            "id": "charlotte",
+            "id": "robin",
             "new": true
          }
       ],
       "a": [
          {
-            "id": "elbris-ritual-sword",
+            "id": "an-assassins-pledge",
             "new": true
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-06-05T03:00:00Z",
+         "2025-06-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "taeyou",
+         }
+      ],
+      "a": [
+         {
+            "id": "spear-of-purification",
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-06-12T03:00:00Z",
+         "2025-06-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "sharun",
+         }
+      ],
+      "a": [
+         {
+            "id": "sacred-tree-branch",
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-06-12T03:00:00Z",
+         "2025-06-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "immortal-wukong",
+         }
+      ],
+      "a": [
+         {
+            "id": "ruyi-jingu-bang",
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-06-26T03:00:00Z",
+         "2025-07-03T02:59:59Z"
+      ],
+      "a": [
+         {
+            "id": "strike-of-aspiration",
+         }
+      ],
+      "name": "Warrior Class Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/481ca487bbf54202adfd916d8b33a3c4.jpg"
+   },
+   {
+      "nid": 0,
+      "type": "covenant",
+      "dt": [
+         "2025-06-26T03:00:00Z",
+         "2025-07-03T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ilynav",
+         }
+      ],
+      "a": [
+         {
+            "id": "wings-of-light-and-shadow",
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8cb2c07d70b5436fbae2ff552b8f432c.jpg"
    }
 ]
