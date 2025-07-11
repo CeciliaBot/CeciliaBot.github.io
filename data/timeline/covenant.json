@@ -10231,7 +10231,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/481ca487bbf54202adfd916d8b33a3c4.jpg"
    },
    {
-      "nid": 10814440,
+      "nid": 10863501,
       "type": "covenant",
       "dt": [
          "2025-06-26T03:00:00Z",
@@ -10248,5 +10248,43 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8cb2c07d70b5436fbae2ff552b8f432c.jpg"
+   },
+   {
+      "nid": 10863501,
+      "type": "covenant",
+      "dt": [
+         "2025-07-03T03:00:00Z",
+         "2025-07-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "argent-waves-hwayoung"
+         }
+      ],
+      "a": [
+         {
+            "id": "summer-photogenic"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/13fa2dc78f2a4fce8bfc9a4613eee05d.jpg"
+   },
+   {
+      "nid": 10782468,
+      "type": "covenant",
+      "dt": [
+         "2025-07-10T03:00:00Z",
+         "2025-07-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "celine"
+         }
+      ],
+      "a": [
+         {
+            "id": "secret-art-sword-storm"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f6f4c72c86a64c8da3eff34a93510099.jpg"
    }
 ]
