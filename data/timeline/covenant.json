@@ -10258,12 +10258,14 @@
       ],
       "c": [
          {
-            "id": "argent-waves-hwayoung"
+            "id": "argent-waves-hwayoung",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "summer-photogenic"
+            "id": "summer-photogenic",
+            "new": true
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/13fa2dc78f2a4fce8bfc9a4613eee05d.jpg"
