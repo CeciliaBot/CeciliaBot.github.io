@@ -2148,6 +2148,18 @@
             0
         ]
     },
+     "summer-photgenic": {
+        "_id": "summer-photogenic",
+        "id": "art0219",
+        "identifier": "",
+        "name": "Summer Photogenic",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "super-duper-water-gun-shooter": {
         "_id": "super-duper-water-gun-shooter",
         "id": "art0099",
