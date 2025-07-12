@@ -4601,6 +4601,20 @@
         "sex": 2,
         "zodiac": "lion",
         "tags": [
+            0,
+            1
+        ]
+    },
+        "witch-of-the-mere-tenebria": {
+        "id": "c6050",
+        "_id": "witch-of-the-mere-tenebria",
+        "name": "Witch of the Mere Tenebria",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "fish",
+        "tags": [
             0
         ]
     },
@@ -4614,7 +4628,8 @@
         "sex": 2,
         "zodiac": "scorpion",
         "tags": [
-            0
+            0,
+            1
         ]
     }
 }
