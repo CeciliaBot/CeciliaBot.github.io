@@ -280,5 +280,17 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8b502c0dcd3f4a5c9554def5fbbfa62d.jpg",
         "name": "Arena 2025-2 Season (Season 22)"
+    },
+        {
+        "nid": [
+            
+        ],
+        "type": "season",
+        "dt": [
+            "2025-07-21T10:00:00Z",
+            "2020-09-05T05:00:00Z"
+        ],
+        "thumbnail": "",
+        "name": "Arena 2025-2 Season (Season 23)"
     }
 ]
