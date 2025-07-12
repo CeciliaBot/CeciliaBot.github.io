@@ -966,6 +966,17 @@
             0
         ]
     },
+    "queens-whistle": {
+        "_id": "queens-whistle",
+        "id": "art0223",
+        "identifier": "",
+        "name": "Queen's Whistle",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
     "reingars-special-drink": {
         "_id": "reingars-special-drink",
         "id": "art0062",
