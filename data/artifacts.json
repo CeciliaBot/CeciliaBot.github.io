@@ -1329,7 +1329,7 @@
     },
     "summer-photogenic": {
         "_id": "summer-photogenic",
-        "id": "art0219",
+        "id": "art0221",
         "identifier": "",
         "name": "Summer Photogenic",
         "rarity": 5,
@@ -2261,6 +2261,15 @@
         "id": "art0163",
         "identifier": "ef431",
         "name": "VII. The Chariot",
+        "rarity": 4,
+        "role": "",
+        "tags": []
+    },
+    "xii-the-manged-man": {
+        "_id": "xii-the-manged-man",
+        "id": "art0219",
+        "identifier": "",
+        "name": "XII. The Hanged Man",
         "rarity": 4,
         "role": "",
         "tags": []
