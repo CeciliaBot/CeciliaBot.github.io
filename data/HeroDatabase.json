@@ -4590,5 +4590,31 @@
         "tags": [
             0
         ]
+    },
+    "argent-waves-hwayoung": {
+        "id": "c5128",
+        "_id": "argent-waves-hwayoung",
+        "name": "Argent Waves Hwayoung",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
+    },
+        "aram": {
+        "id": "c5175",
+        "_id": "aram",
+        "name": "Aram",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "scorpion",
+        "tags": [
+            0
+        ]
     }
 }
