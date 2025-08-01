@@ -2174,5 +2174,32 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 10863501,
+      "type": "mystic",
+      "dt": [
+         "2025-08-07T03:00:00Z",
+         "2025-08-28T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "briar-witch-iseria",
+         },
+         {
+            "id": "lionheart-cermia"
+         },
+         {
+            "id": "spirit-eye-celine"
+         },
+         {
+            "id": "lone-crescent-bellona"
+         },
+         {
+            "id": "champion-zerato"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
