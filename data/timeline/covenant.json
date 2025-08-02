@@ -10342,5 +10342,15 @@
             "id": "snow-crystal"
          }
       ]
+   },
+   {
+      "nid": 8433212,
+      "type": "limited",
+      "dt": [
+         "2025-08-07T03:00:00Z",
+         "2025-08-28T02:59:59Z"
+      ],
+      "name": "Summer Triple RGB Group Summon",
+      "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/7879490df2914df7bbb97eea535f940a/4734b5342ef142cf83d0dd413b0f4c60_1650443396.jpg"
    }
 ]
