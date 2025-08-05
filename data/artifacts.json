@@ -974,7 +974,8 @@
         "rarity": 5,
         "role": "manauser",
         "tags": [
-            0
+            0,
+            1
         ]
     },
     "reingars-special-drink": {
