@@ -10290,22 +10290,67 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f6f4c72c86a64c8da3eff34a93510099.jpg"
    },
    {
-      "nid": ,
       "type": "limited",
       "dt": [
-         "2025-07-24T09:00:00Z",
-         "2025-08-07T02:59:59Z"
+         "2025-07-17T09:00:00Z",
+         "2025-07-31T02:59:59Z"
       ],
       "c": [
          {
-            "id": "aram"
+            "id": "aram",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "queens-whistle"
+            "id": "queens-whistle",
+            "new": true
+         }
+      ]
+   }
+   ,
+   {
+      "type": "covenant",
+      "dt": [
+         "2025-07-24T03:00:00Z",
+         "2025-07-31T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "elvira"
          }
       ],
-      "thumbnail": ""
+      "a": [
+         {
+            "id": "beguiling-wings"
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2025-07-31T09:00:00Z",
+         "2025-08-07T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "choux"
+         }
+      ],
+      "a": [
+         {
+            "id": "snow-crystal"
+         }
+      ]
+   },
+   {
+      "nid": 8433212,
+      "type": "limited",
+      "dt": [
+         "2025-08-07T03:00:00Z",
+         "2025-08-28T02:59:59Z"
+      ],
+      "name": "Summer Triple RGB Group Summon",
+      "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/7879490df2914df7bbb97eea535f940a/4734b5342ef142cf83d0dd413b0f4c60_1650443396.jpg"
    }
 ]
