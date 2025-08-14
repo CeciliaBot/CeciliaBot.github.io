@@ -350,6 +350,18 @@
         "role": "",
         "tags": []
     },
+    "cureall-magic-wand": {
+        "_id": "cureall-magic-wand",
+        "id": "art0227",
+        "identifier": "",
+        "name": "Cure-All Magic Wand",
+        "rarity": 5,
+        "role": "",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "dark-blood-keeper": {
         "_id": "dark-blood-keeper",
         "id": "art0200",
