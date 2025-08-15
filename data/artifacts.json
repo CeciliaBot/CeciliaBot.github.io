@@ -356,7 +356,7 @@
         "identifier": "",
         "name": "Cure-All Magic Wand",
         "rarity": 5,
-        "role": "",
+        "role": "manauser",
         "tags": [
             0,
             1
