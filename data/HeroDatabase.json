@@ -4631,5 +4631,30 @@
             0,
             1
         ]
+    },
+        "lady-of-the-scales": {
+        "id": "c6005",
+        "_id": "lady-of-the-scales",
+        "name": "Lady of the Scales",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
+    },
+        "genesis-ras": {
+        "id": "npc1362",
+        "_id": "genesis-ras",
+        "name": "Genesis Ras",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "scales",
+        "tags": [
+        ]
     }
 }
