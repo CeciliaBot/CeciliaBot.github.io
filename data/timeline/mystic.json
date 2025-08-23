@@ -2201,5 +2201,23 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": ,
+      "type": "mystic",
+      "dt": [
+         "2025-08-28T03:00:00Z",
+         "2025-09-18T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lady-of-the-scales"
+         },
+         {
+            "id": "kitty-clarissa"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
