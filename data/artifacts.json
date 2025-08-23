@@ -23,6 +23,16 @@
             0
         ]
     },
+    "a-precious-connection": {
+        "_id": "a-precious-connection",
+        "id": "",
+        "identifier": "",
+        "name": "A Precious Connection",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+        ]
+    },
     "a-symbol-of-unity": {
         "_id": "a-symbol-of-unity",
         "id": "art0121",
