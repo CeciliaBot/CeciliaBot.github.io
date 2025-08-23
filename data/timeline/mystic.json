@@ -2211,7 +2211,8 @@
       ],
       "c": [
          {
-            "id": "lady-of-the-scales"
+            "id": "lady-of-the-scales",
+            "new": true
          },
          {
             "id": "kitty-clarissa"
