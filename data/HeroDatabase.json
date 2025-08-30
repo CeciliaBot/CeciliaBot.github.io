@@ -4646,7 +4646,7 @@
         ]
     },
         "genesis-ras": {
-        "id": "npc1362",
+        "id": "c2001",
         "_id": "genesis-ras",
         "name": "Genesis Ras",
         "rarity": 5,
@@ -4655,6 +4655,19 @@
         "sex": 1,
         "zodiac": "scales",
         "tags": [
+        ]
+    },
+        "setsuka": {
+        "id": "c1176",
+        "_id": "setsuka",
+        "name": "setsuka",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "scorpion",
+        "tags": [
+            0
         ]
     }
 }
