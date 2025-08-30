@@ -25,7 +25,7 @@
     },
     "a-precious-connection": {
         "_id": "a-precious-connection",
-        "id": "",
+        "id": "art0229",
         "identifier": "",
         "name": "A Precious Connection",
         "rarity": 5,
@@ -804,6 +804,17 @@
         "name": "Last Teatime",
         "rarity": 5,
         "role": "mage",
+        "tags": [
+            0
+        ]
+    },
+    "lethal-whispers": {
+        "_id": "lethal-whispers",
+        "id": "art0228",
+        "identifier": "",
+        "name": "Lethal Whispers",
+        "rarity": 5,
+        "role": "assassin",
         "tags": [
             0
         ]
