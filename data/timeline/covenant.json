@@ -10307,8 +10307,7 @@
             "new": true
          }
       ]
-   }
-   ,
+   },
    {
       "type": "covenant",
       "dt": [
@@ -10368,5 +10367,41 @@
       ],
       "name": "Soul Weaver Class Summon",
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/12236755e7ee41cb856ff09812475162.jpg"
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2025-08-28T09:00:00Z",
+         "2025-09-04T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "beehoo"
+         }
+      ],
+      "a": [
+         {
+            "id": "sphree-of-inferno"
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2025-09-04T03:00:00Z",
+         "2025-09-18T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "setsuka",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "lethal-whispers",
+            "new": true
+         }
+      ]
    }
 ]
