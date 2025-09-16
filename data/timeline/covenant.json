@@ -10403,5 +10403,39 @@
             "new": true
          }
       ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2025-09-04T09:00:00Z",
+         "2025-09-11T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tenebria"
+         }
+      ],
+      "a": [
+         {
+            "id": "crimson-moon-of-nightmares"
+         }
+      ]
+   },
+   {
+      "type": "covenant",
+      "dt": [
+         "2025-09-18T03:00:00Z",
+         "2025-09-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "politis"
+         }
+      ],
+      "a": [
+         {
+            "id": "knowledge-seed"
+         }
+      ]
    }
 ]
