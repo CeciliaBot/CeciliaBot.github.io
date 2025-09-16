@@ -2220,5 +2220,33 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 10863501,
+      "type": "mystic",
+      "dt": [
+         "2025-09-18T03:00:00Z",
+         "2025-10-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "zio"
+         },
+         {
+            "id": "maid-chloe"
+         },
+         {
+            "id": "faithless-lidica"
+         },
+         {
+            "id": "closer-charles"
+         },
+         {
+            "id": "wretched-rose"
+            "new": true
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
