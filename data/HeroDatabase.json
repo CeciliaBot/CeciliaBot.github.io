@@ -4670,4 +4670,18 @@
             0
         ]
     }
+    ,
+        "wretched-rose": {
+        "id": "c6003",
+        "_id": "wretched-rose",
+        "name": "Wretched Rose",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "twins",
+        "tags": [
+            0
+        ]
+    }
 }
