@@ -708,7 +708,7 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "maiden",
+        "zodiac": "twins",
         "tags": [
             0
         ]
@@ -3991,7 +3991,7 @@
         "attribute": "ice",
         "role": "mage",
         "sex": 2,
-        "zodiac": "bull",
+        "zodiac": "fish",
         "tags": [
             0
         ]
