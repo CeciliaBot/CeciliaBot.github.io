@@ -264,6 +264,19 @@
             0
         ]
     },
+    "butterfly-hair-ornament": {
+        "_id": "butterfly-hair-ornament",
+        "id": "art0226",
+        "identifier": "",
+        "name": "Butterfly Hair Ornament",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
     "celestine": {
         "_id": "celestine",
         "id": "art0032",
@@ -763,6 +776,19 @@
             2
         ]
     },
+    "jumbo-berry-parfait": {
+        "_id": "jumbo-berry-parfait",
+        "id": "art0224",
+        "identifier": "",
+        "name": "Jumbo Berry Parfait",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
     "junkyard-dog": {
         "_id": "junkyard-dog",
         "id": "art0052",
@@ -872,6 +898,19 @@
         "role": "warrior",
         "tags": [
             0
+        ]
+    },
+    "mirrored-lotus-ring": {
+        "_id": "mirrored-lotus-ring",
+        "id": "art0225",
+        "identifier": "",
+        "name": "Mirrored Lotus Ring",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0,
+            1,
+            2
         ]
     },
     "ms-confille": {
