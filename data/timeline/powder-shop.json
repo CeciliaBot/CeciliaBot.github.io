@@ -1,5 +1,19 @@
 [
   {
+    "nid": 11066469,
+    "dt": [1758164400000, 1761793199000 ],
+    "a": [
+      { "id": "umbral-keystones" },
+      { "id": "glowings-21" },
+      { "id": "spear-of-purification" },
+      { "id": "broken-will-of-the-priest" },
+      { "id": "barthezs-orbuculum" },
+      { "id": "andres-crossbow" },
+      { "id": "silver-rain" },
+      { "id": "waters-origin" }
+    ]
+  },
+  {
     "nid": 10962176,
     "dt": [1754535600000, 1758164399000 ],
     "a": [
@@ -859,20 +873,6 @@
       { "id": "siraren" },
       { "id": "elyhas-knife" },
       { "id": "adamant-shield" }
-    ]
-  },
-  {
-    "nid": 11066469,
-    "dt": [1758164400000, 1761793199000],
-    "a": [
-      { "id": "umbral-keystones" },
-      { "id": "glowings-21" },
-      { "id": "spear-of-purification" },
-      { "id": "broken-will-of-the-priest" },
-      { "id": "barthezs-orbuculum" },
-      { "id": "andres-crossbow" },
-      { "id": "silver-rain" },
-      { "id": "waters-origin" }
     ]
   }
 ]
