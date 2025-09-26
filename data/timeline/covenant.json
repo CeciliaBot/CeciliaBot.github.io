@@ -10437,5 +10437,47 @@
             "id": "knowledge-seed"
          }
       ]
-   }
+   },
+   {
+      "nid": 11080010,
+      "type": "limited",
+      "dt": [
+         "2025-09-25T08:00:00Z",
+         "2025-10-09T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "frieren",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "mirrored-lotus-ring",
+            "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/8db48eb00dad4c5eb40210aae9084910.jpg"
+   },
+   {
+      "nid": 11080010,
+      "type": "limited",
+      "dt": [
+         "2024-10-02T03:00:00Z",
+         "2024-10-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "fern",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "butterfly-hair-ornament",
+            "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/88b2c5d90f52440795efcd8d313d9f6c.jpg"
+   }   
 ]
