@@ -4683,5 +4683,48 @@
         "tags": [
             0
         ]
+    },
+        "frieren": {
+        "id": "c1172",
+        "_id": "frieren",
+        "name": "Frieren",
+        "rarity": 5,
+        "attribute": "earth",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "lion",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+        "fern": {
+        "id": "c1173",
+        "_id": "fern",
+        "name": "Fern",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "scorpion",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+        "stark": {
+        "id": "c1174",
+        "_id": "stark",
+        "name": "Stark",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "goat",
+        "tags": [
+            2
+        ]
     }
 }
