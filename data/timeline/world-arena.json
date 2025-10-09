@@ -7,7 +7,7 @@
         "type": "season",
         "dt": [
             1587024000000,
-            1594263540000
+            1594263599000
         ],
         "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/745532036dba4a1d9fc8f5e1564bbc01/f7b24a9494404e659c0bd1ef35b4c73c_1586856496.jpg",
         "name": "World Arena Showdown Season (Season 1)"
@@ -20,7 +20,7 @@
         "type": "season",
         "dt": [
             1599188400000,
-            1606359540000
+            1606359599000
         ],
         "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/fa9b8fc5db5a4c64a4735c65948a3235/99638d3f6831404f96dfc5c40e0e99b5_1599029463.jpg",
         "name": "World Arena Endeavor Season (Season 2)"
@@ -33,7 +33,7 @@
         "type": "season",
         "dt": [
             1608865200000,
-            1616036340000
+            1616036399000
         ],
         "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/7c7d943bc48d48be9d2100c280a07a3b/e283844fbe9a41a09e043d3377c09cbe_1608698438.jpg",
         "name": "World Arena Ardor Season (Season 3)"
@@ -46,7 +46,7 @@
         "type": "season",
         "dt": [
             1618542000000,
-            1625713140000
+            1625713199000
         ],
         "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/47013d833c224253b7ab5f41758cd7d4/f54b258efd40480ebcb98d188cb5bd06_1618304900.jpg",
         "name": "World Arena 「Skyward Season」 (Season 4)"
@@ -59,7 +59,7 @@
         "type": "season",
         "dt": [
             1628917200000,
-            1636167600000
+            1636167659000
         ],
         "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/efe4c23bd5eb4366a5b3c781317429ae/cc74c03074c044879451281af8937deb_1628661153.jpg",
         "name": "World Arena Ambition Season (Season 5)"
@@ -72,7 +72,7 @@
         "type": "season",
         "dt": [
             1638594000000,
-            1645844400000
+            1645844459000
         ],
         "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/f4b44248102f4a5d99ad00e886f701fe/a0b1fdc81f6544dda322ff1bb300f14f_1638261839.jpg",
         "name": "World Arena 「Conviction Season」 (Season 6)"
@@ -85,7 +85,7 @@
         "type": "season",
         "dt": [
             1648720800000,
-            1655521200000
+            1655521259000
         ],
         "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/d2d54afd094f4ae5a7ffa2037aa806c1/4148020aad4a4b8a800cf239c0785bc7_1648621801.jpg",
         "name": "World Arena Resolution Season (Season 7)"
@@ -140,7 +140,7 @@
         "type": "season",
         "dt": [
             1687582800000,
-            1694833140000
+            1694833199000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/b853a0c0c7914990a37fd0a0ce601b0a/1559b114d1bb4b7bbb420101b15080ee.jpg",
         "name": "World Arena Valorous Season (Season 11)"
@@ -212,15 +212,28 @@
     },
     {
         "nid": [
-            10863476,
-            10710882
+            10710882,
+            10863476
         ],
         "type": "season",
         "dt": [
             1746243300000,
-            1754103540000
+            1754103599000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2ad9b765fa3e4b4ca727309a87375666.jpg",
         "name": "World Arena Summer 2025 Season (Season 17)"
+    },
+    {
+        "nid": [
+            11027271,
+            0
+        ],
+        "type": "season",
+        "dt": [
+            1756530000000,
+            1763780399000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/bf4147e83b8a4e71af905ee874ae800d.jpg",
+        "name": "World Arena Fall 2025 Season (Season 18)"
     }
 ]
