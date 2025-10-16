@@ -10498,5 +10498,24 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/44c33adf92a04be9b76ab36ae6075076.jpg"
-   }   
+   },
+   {
+      "nid": 11123412,
+      "type": "covenant",
+      "dt": [
+         "2025-10-16T03:00:00Z",
+         "2025-10-23T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "peira"
+         }
+      ],
+      "a": [
+         {
+            "id": "goblet-of-oath"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c02b9e2907eb4c279d4e66397c632c8d.jpg"
+   }  
 ]
