@@ -10517,5 +10517,39 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c02b9e2907eb4c279d4e66397c632c8d.jpg"
-   }  
+   },
+   {
+      "nid": 11137008,
+      "type": "limited",
+      "dt": [
+         "2025-10-23T09:00:00Z",
+         "2025-11-13T02:59:59Z"
+      ],
+      "a": [
+         {
+            "id": "master-of-the-nightmare"
+         }
+      ],
+      "name": "Theif Class Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2a8bf979245e451abeac63ec8793e575.jpg"
+   },
+   {
+      "nid": 11137008,
+      "type": "limited",
+      "dt": [
+         "2025-10-23T09:00:00Z",
+         "2025-11-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "afternoon-soak-flan"
+         }
+      ],
+      "a": [
+         {
+            "id": "dreamlike-holiday"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3a9fc93284714fabb28437de718a3a84.jpg"
+   }   
 ]

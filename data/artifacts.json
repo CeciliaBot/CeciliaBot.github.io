@@ -889,6 +889,18 @@
             0
         ]
     },
+    "master-of-the-nightmare": {
+        "_id": "master-of-the-nightmare",
+        "id": "",
+        "identifier": "",
+        "name": "Master of the Nightmare",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "merciless-glutton": {
         "_id": "merciless-glutton",
         "id": "art0083",
