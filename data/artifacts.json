@@ -891,11 +891,23 @@
     },
     "master-of-the-nightmare": {
         "_id": "master-of-the-nightmare",
-        "id": "",
+        "id": "art0232",
         "identifier": "",
         "name": "Master of the Nightmare",
         "rarity": 5,
-        "role": "mage",
+        "role": "assassin",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "mature-sunglasses": {
+        "_id": "mature-sunglasses",
+        "id": "art0161",
+        "identifier": "efk18",
+        "name": "Mature Sunglasses",
+        "rarity": 5,
+        "role": "knight",
         "tags": [
             0,
             1
@@ -936,18 +948,6 @@
             0,
             1,
             2
-        ]
-    },
-    "mature-sunglasses": {
-        "_id": "mature-sunglasses",
-        "id": "art0161",
-        "identifier": "efk18",
-        "name": "Mature Sunglasses",
-        "rarity": 5,
-        "role": "knight",
-        "tags": [
-            0,
-            1
         ]
     },
     "necro-undine": {
