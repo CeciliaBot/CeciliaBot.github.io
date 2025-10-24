@@ -10527,7 +10527,8 @@
       ],
       "a": [
          {
-            "id": "master-of-the-nightmare"
+            "id": "master-of-the-nightmare",
+            "new": true
          }
       ],
       "name": "Theif Class Summon",
