@@ -10552,5 +10552,43 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3a9fc93284714fabb28437de718a3a84.jpg"
-   }   
+   },
+   {
+      "nid": 11186129,
+      "type": "covenant",
+      "dt": [
+         "2025-11-06T09:00:00Z",
+         "2025-11-27T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "saria"
+         }
+      ],
+      "a": [
+         {
+            "id": "verdant-awakening"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1d91a37674d14c14b1fe33237bcf0d1d.jpg"
+   }  ,
+   {
+      "nid": 11186129,
+      "type": "covenant",
+      "dt": [
+         "2025-11-13T09:00:00Z",
+         "2025-11-20T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "charles"
+         }
+      ],
+      "a": [
+         {
+            "id": "justice-for-all"
+         }
+      ],
+      "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/73a57a8204e74b508620c525cf7cc650/438b1a839fb94dc180ef3032044b9fb4_1551868940.jpg"
+   }     
 ]

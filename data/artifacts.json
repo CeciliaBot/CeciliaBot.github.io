@@ -1648,6 +1648,16 @@
             2
         ]
     },
+    "verdant-awakening": {
+        "_id": "verdant-awakening",
+        "id": "art0230",
+        "identifier": "",
+        "name": "Verdant Awakening",
+        "rarity": 5,
+        "tags": [
+            0
+        ]
+    },
     "victorious-flag": {
         "_id": "victorious-flag",
         "id": "art0087",

@@ -4726,5 +4726,18 @@
         "tags": [
             2
         ]
+    },
+        "saria": {
+        "id": "c1175",
+        "_id": "saria",
+        "name": "Saria",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
     }
 }
