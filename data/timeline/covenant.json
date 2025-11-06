@@ -10562,12 +10562,14 @@
       ],
       "c": [
          {
-            "id": "saria"
+            "id": "saria",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "verdant-awakening"
+            "id": "verdant-awakening",
+            "new": true
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1d91a37674d14c14b1fe33237bcf0d1d.jpg"
