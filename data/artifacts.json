@@ -142,6 +142,16 @@
             2
         ]
     },
+    "awakened-lead": {
+        "_id": "awakened-leaf",
+        "id": "art0230",
+        "identifier": "",
+        "name": "Awakened Leaf",
+        "rarity": 5,
+        "tags": [
+            0
+        ]
+    },
     "azure-comet": {
         "_id": "azure-comet",
         "id": "art0131",
@@ -1646,16 +1656,6 @@
             0,
             1,
             2
-        ]
-    },
-    "verdant-awakening": {
-        "_id": "verdant-awakening",
-        "id": "art0230",
-        "identifier": "",
-        "name": "Verdant Awakening",
-        "rarity": 5,
-        "tags": [
-            0
         ]
     },
     "victorious-flag": {
