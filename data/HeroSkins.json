@@ -412,5 +412,12 @@
             "_id": "politis-maiden-of-the-fox-shrine",
             "name": "Maiden of the Fox Shrine"
         }
+    ],
+    "spirit-eye-celine": [
+        {
+            "id": "c2103_s01",
+            "_id": "sentinel-of-twilight-spirit-eye-celine",
+            "name": "Sentinel of Twilight"
+        }
     ]
 }
