@@ -4605,7 +4605,7 @@
             1
         ]
     },
-        "witch-of-the-mere-tenebria": {
+    "witch-of-the-mere-tenebria": {
         "id": "c6050",
         "_id": "witch-of-the-mere-tenebria",
         "name": "Witch of the Mere Tenebria",
@@ -4618,7 +4618,7 @@
             0
         ]
     },
-        "aram": {
+    "aram": {
         "id": "c5175",
         "_id": "aram",
         "name": "Aram",
@@ -4632,7 +4632,7 @@
             1
         ]
     },
-        "lady-of-the-scales": {
+    "lady-of-the-scales": {
         "id": "c6005",
         "_id": "lady-of-the-scales",
         "name": "Lady of the Scales",
@@ -4645,7 +4645,7 @@
             0
         ]
     },
-        "genesis-ras": {
+    "genesis-ras": {
         "id": "c2001",
         "_id": "genesis-ras",
         "name": "Genesis Ras",
@@ -4657,7 +4657,7 @@
         "tags": [
         ]
     },
-        "setsuka": {
+    "setsuka": {
         "id": "c1176",
         "_id": "setsuka",
         "name": "Setsuka",
@@ -4669,9 +4669,8 @@
         "tags": [
             0
         ]
-    }
-    ,
-        "wretched-rose": {
+    },
+    "wretched-rose": {
         "id": "c6003",
         "_id": "wretched-rose",
         "name": "Wretched Rose",
@@ -4684,7 +4683,7 @@
             0
         ]
     },
-        "frieren": {
+    "frieren": {
         "id": "c1172",
         "_id": "frieren",
         "name": "Frieren",
@@ -4699,7 +4698,7 @@
             2
         ]
     },
-        "fern": {
+    "fern": {
         "id": "c1173",
         "_id": "fern",
         "name": "Fern",
@@ -4714,7 +4713,7 @@
             2
         ]
     },
-        "stark": {
+    "stark": {
         "id": "c1174",
         "_id": "stark",
         "name": "Stark",
@@ -4727,8 +4726,8 @@
             2
         ]
     },
-        "saria": {
-        "id": "c1175",
+    "saria": {
+        "id": "c1177",
         "_id": "saria",
         "name": "Saria",
         "rarity": 5,
@@ -4736,6 +4735,19 @@
         "role": "ranger",
         "sex": 2,
         "zodiac": "bull",
+        "tags": [
+            0
+        ]
+    },
+    "school-nurse-yulha": {
+        "id": "c2131",
+        "_id": "school-nurse-yulha",
+        "name": "School Nurse Yulha",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "crab",
         "tags": [
             0
         ]
