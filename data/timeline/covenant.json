@@ -10573,7 +10573,7 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/1d91a37674d14c14b1fe33237bcf0d1d.jpg"
-   }  ,
+   },
    {
       "nid": 11186129,
       "type": "covenant",
@@ -10592,5 +10592,26 @@
          }
       ],
       "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/73a57a8204e74b508620c525cf7cc650/438b1a839fb94dc180ef3032044b9fb4_1551868940.jpg"
+   },
+   {
+      "nid": 11186129,
+      "type": "limited",
+      "dt": [
+         "2025-11-27T03:00:00Z",
+         "2025-12-11T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "swift-flagbearer-sigret",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "glorious-flag",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    }     
 ]
