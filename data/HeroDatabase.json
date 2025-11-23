@@ -4751,5 +4751,19 @@
         "tags": [
             0
         ]
+    },
+    "swift-flagbearer-sigret": {
+        "id": "c5072",
+        "_id": "swift-flagbearer-sigret",
+        "name": "Swift Flagbearer Sigret",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "goat",
+        "tags": [
+            0,
+            1
+        ]
     }
 }

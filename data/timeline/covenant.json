@@ -10558,7 +10558,7 @@
       "type": "covenant",
       "dt": [
          "2025-11-06T09:00:00Z",
-         "2025-11-20T02:59:59Z"
+         "2025-11-27T02:59:59Z"
       ],
       "c": [
          {
@@ -10592,6 +10592,25 @@
          }
       ],
       "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/73a57a8204e74b508620c525cf7cc650/438b1a839fb94dc180ef3032044b9fb4_1551868940.jpg"
+   },
+   {
+      "nid": 11303339,
+      "type": "covenant",
+      "dt": [
+         "2025-11-20T03:00:00Z",
+         "2025-11-27T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tywin"
+         }
+      ],
+      "a": [
+         {
+            "id": "crown-of-glory"
+         }
+      ],
+      "thumbnail": "https://d3kxs6kpbh59hp.cloudfront.net/community/COMMUNITY/dee5c95958ca46d7b00c09b9c0aebc8a/f61d3ce98d41402c8da3713d2a46b83a_1597817767.jpg"
    },
    {
       "nid": 11186129,

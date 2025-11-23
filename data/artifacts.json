@@ -627,6 +627,18 @@
             2
         ]
     },
+    "glorious-flag": {
+        "_id": "glorious-flag",
+        "id": "art0233",
+        "identifier": "",
+        "name": "Glorious Flag",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "glowings-21": {
         "_id": "glowings-21",
         "id": "art0149",
