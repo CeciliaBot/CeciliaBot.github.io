@@ -4765,5 +4765,32 @@
             0,
             1
         ]
+    },
+    "sealed-eye-surin": {
+        "id": "c6065",
+        "_id": "sealed-eye-surin",
+        "name": "Sealed Eye Surin",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
+    },
+    "hecate": {
+        "id": "",
+        "_id": "hecate",
+        "name": "Hecate",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "goat",
+        "tags": [
+            0,
+            1
+        ]
     }
 }

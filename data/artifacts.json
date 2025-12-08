@@ -1590,6 +1590,18 @@
             0
         ]
     },
+    "tome-of-lifes-end": {
+        "_id": "tome-of-lifes-end",
+        "id": "",
+        "identifier": "",
+        "name": "Tome of Life's End",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "twilight-calamity": {
         "_id": "twilight-calamity",
         "id": "art0125",

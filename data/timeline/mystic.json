@@ -2316,5 +2316,49 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/92ed4551288a4016bf706d247ed4af3f.jpg"
+   },
+   {
+      "nid": 11303260,
+      "type": "mystic",
+      "dt": [
+         "2025-12-11T09:00:00Z",
+         "2026-01-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "new-moon-luna"
+         },
+         {
+            "id": "architect-laika"
+         },
+         {
+            "id": "conqueror-lilias"
+         },
+         {
+            "id": "specimen-sez"
+         },
+         {
+            "id": "sealed-eye-surin",
+            "new": true
+         }
+      ],
+      "a": [],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/92ed4551288a4016bf706d247ed4af3f.jpg"
+   },
+   {
+      "nid": 11303260,
+      "type": "mystic",
+      "dt": [
+         "2026-01-01T02:59:59Z",
+         "2026-01-22T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "dark-shepherd-diene",
+            "new": true
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
