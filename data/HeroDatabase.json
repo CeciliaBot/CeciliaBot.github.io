@@ -4780,7 +4780,7 @@
         ]
     },
     "hecate": {
-        "id": "",
+        "id": "c1178",
         "_id": "hecate",
         "name": "Hecate",
         "rarity": 5,
@@ -4791,6 +4791,45 @@
         "tags": [
             0,
             1
+        ]
+    },
+    "shepherd-of-the-dark-diene": {
+        "id": "c2076",
+        "_id": "shepherd-of-the-dark-diene",
+        "name": "Shepherd of the Dark Diene",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
+    },
+    "aki": {
+        "id": "c1179",
+        "_id": "aki",
+        "name": "Aki",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
+    },
+    "monarch-of-the-sword-iseria": {
+        "id": "npc1382",
+        "_id": "monarch-of-the-sword-iseria",
+        "name": "Monarch of the Sword Iseria",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
+        "tags": [
+            0
         ]
     }
 }

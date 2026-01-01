@@ -10657,7 +10657,7 @@
       "type": "limited",
       "dt": [
          "2025-12-18T06:00:00Z",
-         "2026-01-01T02:59:59Z"
+         "2026-01-08T02:59:59Z"
       ],
       "c": [
          {
@@ -10671,6 +10671,46 @@
             "new": true
          }
       ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/5c9efaf762df4cbc9373fad63575c09c.jpg"
+   },
+   {
+      "nid": 11594139,
+      "type": "covenant",
+      "dt": [
+         "2025-12-25T03:00:00Z",
+         "2026-01-01T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "fenne"
+         }
+      ],
+      "a": [
+         {
+            "id": "proof-of-love"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/45990034be464eba8f7160354fddcb95.jpg"
+   } ,
+   {
+      "nid": 11186129,
+      "type": "covenant",
+      "dt": [
+         "2025-01-08T06:00:00Z",
+         "2026-01-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aki",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "ritual-of-sealing-flames",
+            "new": true
+         }
+      ],
       "thumbnail": ""
-   }        
+   }         
 ]

@@ -297,14 +297,27 @@
     },
         {
         "nid": [
-            11095542
+            11095542,
+            11532347
         ],
         "type": "season",
         "dt": [
             1760349600000,
-            1766988000000
+            1767589199000
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/20f148d18ba04f5d9e0a264e8702da33.jpg",
         "name": "Arena 2025-4 Season (Season 24)"
+    },
+        {
+        "nid": [
+            11646395
+        ],
+        "type": "season",
+        "dt": [
+            1767589200000,
+            1774846799000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9c7b0bf53d8945f2a7e9314b51b4a033.jpg",
+        "name": "Arena 2026-1 Season (Season 25)"
     }
 ]

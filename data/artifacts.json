@@ -1129,6 +1129,17 @@
             0
         ]
     },
+    "ritual-of-sealing-flames": {
+        "_id": "ritual-of-sealing-flames",
+        "id": "art0234",
+        "identifier": "",
+        "name": "Ritual of Sealing Flames",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
     "rocket-punch-gauntlet": {
         "_id": "rocket-punch-gauntlet",
         "id": "art0170",
@@ -1592,7 +1603,7 @@
     },
     "tome-of-lifes-end": {
         "_id": "tome-of-lifes-end",
-        "id": "",
+        "id": "art0231",
         "identifier": "",
         "name": "Tome of Life's End",
         "rarity": 5,

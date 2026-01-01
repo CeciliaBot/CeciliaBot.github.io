@@ -2346,7 +2346,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/92ed4551288a4016bf706d247ed4af3f.jpg"
    },
    {
-      "nid": 11303260,
+      "nid": 11646395,
       "type": "mystic",
       "dt": [
          "2026-01-01T03:00:00Z",
@@ -2354,11 +2354,14 @@
       ],
       "c": [
          {
-            "id": "dark-shepherd-diene",
+            "id": "shepherd-of-the-dark-diene",
             "new": true
+         },
+         {
+            "id": "assassin-cartuja"
          }
       ],
       "a": [],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/562692bc7a4e40de91df0030afed51c1.jpg"
    }
 ]
