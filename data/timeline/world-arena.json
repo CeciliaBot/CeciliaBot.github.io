@@ -226,7 +226,7 @@
     {
         "nid": [
             11027271,
-            0
+            11242378
         ],
         "type": "season",
         "dt": [
@@ -235,5 +235,18 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/bf4147e83b8a4e71af905ee874ae800d.jpg",
         "name": "World Arena Fall 2025 Season (Season 18)"
+    },
+    {
+        "nid": [
+            11027271,
+            0
+        ],
+        "type": "season",
+        "dt": [
+            1765602000000,
+            1772247599000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3bf44a41727740de882aea1a617d0413.jpg",
+        "name": "World Arena Winter 2026 Season (Season 19)"
     }
 ]
