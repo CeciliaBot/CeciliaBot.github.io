@@ -10693,6 +10693,25 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/45990034be464eba8f7160354fddcb95.jpg"
    },
    {
+      "nid": 11646395,
+      "type": "covenant",
+      "dt": [
+         "2026-01-01T03:00:00Z",
+         "2026-01-08T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "violet"
+         }
+      ],
+      "a": [
+         {
+            "id": "violet-talisman"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c8210d333edd42288e74e5f08392bcd6.jpg"
+   },
+   {
       "nid": 11721109,
       "type": "covenant",
       "dt": [
