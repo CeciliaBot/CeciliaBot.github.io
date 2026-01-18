@@ -2363,5 +2363,32 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/562692bc7a4e40de91df0030afed51c1.jpg"
+   },
+   {
+      "nid": 11303260,
+      "type": "mystic",
+      "dt": [
+         "2026-01-22T03:00:00Z",
+         "2026-02-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "empyrean-ilynav"
+         },
+         {
+            "id": "requiem-roana"
+         },
+         {
+            "id": "remnant-violet"
+         },
+         {
+            "id": "death-dealer-ray"
+         },
+         {
+            "id": "moon-bunny-dominiel"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
