@@ -4825,9 +4825,9 @@
         "name": "Monarch of the Sword Iseria",
         "rarity": 5,
         "attribute": "light",
-        "role": "",
+        "role": "knight",
         "sex": 2,
-        "zodiac": "",
+        "zodiac": "bull",
         "tags": [
             0
         ]
