@@ -511,7 +511,7 @@
         "attribute": "light",
         "role": "warrior",
         "sex": 2,
-        "zodiac": "maiden",
+        "zodiac": "archer",
         "tags": [
             0
         ]
@@ -3586,7 +3586,7 @@
         "attribute": "fire",
         "role": "ranger",
         "sex": 1,
-        "zodiac": "goat",
+        "zodiac": "fish",
         "tags": [
             0
         ]
