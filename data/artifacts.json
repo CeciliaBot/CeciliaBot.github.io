@@ -627,6 +627,17 @@
             2
         ]
     },
+    "gifted-pen": {
+        "_id": "gifted-pen",
+        "id": "",
+        "identifier": "",
+        "name": "Gifted Pen",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
     "glorious-flag": {
         "_id": "glorious-flag",
         "id": "art0233",
@@ -634,6 +645,18 @@
         "name": "Glorious Flag",
         "rarity": 5,
         "role": "assassin",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "glorious-throne": {
+        "_id": "glorious-throne",
+        "id": "",
+        "identifier": "",
+        "name": "Glorious Throne",
+        "rarity": 5,
+        "role": "knight",
         "tags": [
             0,
             1
@@ -1657,6 +1680,14 @@
             0,
             1
         ]
+    },
+    "unleashed-axe-of-heavenly-mandate": {
+        "_id": "unleashed-axe-of-heavenly-mandate",
+        "id": "",
+        "identifier": "",
+        "name": "Unleashed Axe of Heavenly Mandate",
+        "rarity": 5,
+        "tags": []
     },
     "unseen-observer": {
         "_id": "unseen-observer",

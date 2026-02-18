@@ -2409,5 +2409,32 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 11859430,
+      "type": "mystic",
+      "dt": [
+         "2026-02-26T03:00:00Z",
+         "2026-03-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "harsetti"
+         },
+         {
+            "id": "dragon-bride-senya"
+         },
+         {
+            "id": "fallen-cecilia"
+         },
+         {
+            "id": "last-rider-krau"
+         },
+         {
+            "id": ""
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

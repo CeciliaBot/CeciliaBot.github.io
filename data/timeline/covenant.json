@@ -10836,6 +10836,59 @@
             "id": "sphere-of-sadism"
          }
       ],
-      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/COMMUNITY/1d57a0363ed44b91a5d96bb9f83f2aae/8625db85a2b14d88b9494c355e04ad64.jpg"
-   }         
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a73c966eb9044a30ae0c741b7bcd682f.jpg"
+   },
+   {
+      "nid": 12120925,
+      "type": "covenant",
+      "dt": [
+         "2026-02-19T09:00:00Z",
+         "2026-03-12T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ruiza"
+         }
+      ],
+      "a": [
+         {
+            "id": "gifted-pen"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/4b34049cb3dc470b90005c4cd62d9c32.png"
+   },
+   {
+      "nid": 11859430,
+      "type": "covenant",
+      "dt": [
+         "2026-02-26T09:00:00Z",
+         "2026-03-05T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "fenris"
+         }
+      ],
+      "a": [
+         {
+            "id": "renewed-will"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9aaf3691187f4f0c8d6d6bfb34c9c0f6.jpg"
+   },
+   {
+      "nid": 11859430,
+      "type": "limited",
+      "dt": [
+         "2026-03-05T03:00:00Z",
+         "2026-03-26T02:59:59Z"
+      ],
+      "a": [
+         {
+            "id": "gladius-throne"
+         }
+      ],
+      "name": "Knight Class Summon",
+      "thumbnail": ""
+   }        
 ]
