@@ -10847,12 +10847,14 @@
       ],
       "c": [
          {
-            "id": "ruiza"
+            "id": "ruiza",
+            "new": true
          }
       ],
       "a": [
          {
-            "id": "gifted-pen"
+            "id": "gifted-pen",
+            "new": true
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/4b34049cb3dc470b90005c4cd62d9c32.png"
@@ -10885,7 +10887,8 @@
       ],
       "a": [
          {
-            "id": "gladius-throne"
+            "id": "gladius-throne",
+            "new": true
          }
       ],
       "name": "Knight Class Summon",
