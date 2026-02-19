@@ -4833,7 +4833,7 @@
         ]
     },
     "ruiza": {
-        "id": "",
+        "id": "c1180",
         "_id": "ruiza",
         "name": "Ruiza",
         "rarity": 5,
@@ -4841,6 +4841,19 @@
         "role": "ranger",
         "sex": 2,
         "zodiac": "fish",
+        "tags": [
+            0
+        ]
+    },
+    "tactical-archetype-coli": {
+        "id": "npc1453",
+        "_id": "tactical-archetype-coli",
+        "name": "Tactical Archetype Coli",
+        "rarity": 5,
+        "attribute": "",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
         "tags": [
             0
         ]

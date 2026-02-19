@@ -629,7 +629,7 @@
     },
     "gifted-pen": {
         "_id": "gifted-pen",
-        "id": "",
+        "id": "art0235",
         "identifier": "",
         "name": "Gifted Pen",
         "rarity": 5,
@@ -652,7 +652,7 @@
     },
     "glorious-throne": {
         "_id": "glorious-throne",
-        "id": "",
+        "id": "art0240",
         "identifier": "",
         "name": "Glorious Throne",
         "rarity": 5,
@@ -1683,8 +1683,8 @@
     },
     "unleashed-axe-of-heavenly-mandate": {
         "_id": "unleashed-axe-of-heavenly-mandate",
-        "id": "",
-        "identifier": "",
+        "id": "art",
+        "identifier": "art0239",
         "name": "Unleashed Axe of Heavenly Mandate",
         "rarity": 5,
         "tags": []
