@@ -10893,5 +10893,26 @@
       ],
       "name": "Knight Class Summon",
       "thumbnail": ""
-   }        
+   },
+   {
+      "nid": 12120925,
+      "type": "covenant",
+      "dt": [
+         "2026-03-12T09:00:00Z",
+         "2026-04-02T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tactical-archetype-coli",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "shadow-winds-7",
+            "new": true
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/4b34049cb3dc470b90005c4cd62d9c32.png"
+   }       
 ]

@@ -4857,5 +4857,18 @@
         "tags": [
             0
         ]
+    },
+    "notos": {
+        "id": "npc1452",
+        "_id": "notos",
+        "name": "Notos",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "crab",
+        "tags": [
+            0
+        ]
     }
 }

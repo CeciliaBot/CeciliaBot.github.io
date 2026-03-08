@@ -1275,6 +1275,17 @@
             2
         ]
     },
+    "shadow-winds-7": {
+        "_id": "shadow-winds-7",
+        "id": "",
+        "identifier": "",
+        "name": "Shadow Winds 7",
+        "rarity": 5,
+        "role": "theif",
+        "tags": [
+            0
+        ]
+    },
     "sharpshooters-handgun": {
         "_id": "sharpshooters-handgun",
         "id": "art0159",
