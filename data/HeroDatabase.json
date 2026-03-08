@@ -4850,10 +4850,10 @@
         "_id": "tactical-archetype-coli",
         "name": "Tactical Archetype Coli",
         "rarity": 5,
-        "attribute": "",
-        "role": "",
+        "attribute": "ice",
+        "role": "assassin",
         "sex": 2,
-        "zodiac": "",
+        "zodiac": "goat",
         "tags": [
             0
         ]
