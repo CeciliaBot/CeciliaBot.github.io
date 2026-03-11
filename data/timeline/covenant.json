@@ -10895,7 +10895,7 @@
       "thumbnail": ""
    },
    {
-      "nid": 12120925,
+      "nid": 12378124,
       "type": "covenant",
       "dt": [
          "2026-03-12T09:00:00Z",
@@ -10913,6 +10913,44 @@
             "new": true
          }
       ],
-      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/4b34049cb3dc470b90005c4cd62d9c32.png"
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3a93e737962248c6943f6202e6e6e059.jpg"
+   },
+   {
+      "nid": 11859430,
+      "type": "covenant",
+      "dt": [
+         "2026-03-19T09:00:00Z",
+         "2026-03-26T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "jenua"
+         }
+      ],
+      "a": [
+         {
+            "id": "dark-blood-keeper"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e88430dda228499987c30f4eec5d4a6b.jpg"
+   },
+   {
+      "nid": 11859430,
+      "type": "covenant",
+      "dt": [
+         "2026-03-26T09:00:00Z",
+         "2026-04-02T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aria"
+         }
+      ],
+      "a": [
+         {
+            "id": "scroll-of-shadows"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/769e574f07394c2db96ce90e9d4bbd53.jpg"
    }       
 ]

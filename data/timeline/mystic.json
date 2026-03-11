@@ -2438,7 +2438,7 @@
       "thumbnail": ""
    },
    {
-      "nid": 11859430,
+      "nid": 12378124,
       "type": "mystic",
       "dt": [
          "2026-03-19T03:00:00Z",
@@ -2448,6 +2448,9 @@
          {
             "id": "notos",
             "new": true
+         },
+         {
+            "id": "blood-blade-karin"
          }
       ],
       "a": [],

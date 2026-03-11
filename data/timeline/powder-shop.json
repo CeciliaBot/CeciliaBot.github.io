@@ -1,5 +1,19 @@
 [
   {
+    "nid": 12378124,
+    "dt": [1773284400000, 1776913199000 ],
+    "a": [
+      { "id": "merciless-glutton" },
+      { "id": "crown-of-glory" },
+      { "id": "alabastron" },
+      { "id": "shimadra-staff" },
+      { "id": "strak-gauntlet" },
+      { "id": "steadfast-gatekeeper" },
+      { "id": "tagehels-ancient-book" },
+      { "id": "rosa-hargana" }
+    ]
+  },
+  {
     "nid": 11931896,
     "dt": [1769655600000, 1773284399000 ],
     "a": [
