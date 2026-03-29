@@ -3213,8 +3213,8 @@
         "tags": []
     },
     "verdant-adin": {
-        "_id": "verdant-adin",
         "id": "c4143",
+        "_id": "verdant-adin",
         "name": "Verdant Adin",
         "rarity": 3,
         "role": "assassin",
@@ -3224,8 +3224,8 @@
         "tags": []
     },
     "holy-flame-adin": {
-        "_id": "holy-flame-adin",
         "id": "c4141",
+        "_id": "holy-flame-adin",
         "name": "Holy Flame Adin",
         "rarity": 3,
         "role": "assassin",
@@ -3235,8 +3235,8 @@
         "tags": []
     },
     "serene-purity-adin": {
-        "_id": "serene-purity-adin",
         "id": "c4142",
+        "_id": "serene-purity-adin",
         "name": "Serene Purity Adin",
         "rarity": 3,
         "role": "assassin",
@@ -3313,8 +3313,8 @@
         ]
     },
     "summers-disciple-alexa": {
-        "_id": "summers-disciple-alexa",
         "id": "c4012",
+        "_id": "summers-disciple-alexa",
         "name": "Summer's Disciple Alexa",
         "rarity": 3,
         "role": "assassin",
@@ -3324,8 +3324,8 @@
         "tags": []
     },
     "sharun": {
-        "_id": "sharun",
         "id": "c1132",
+        "_id": "sharun",
         "name": "Sharun",
         "rarity": 5,
         "role": "manauser",
@@ -3337,8 +3337,8 @@
         ]
     },
     "summer-break-charlotte": {
-        "_id": "summer-break-charlotte",
         "id": "c5009",
+        "_id": "summer-break-charlotte",
         "name": "Summer Break Charlotte",
         "rarity": 5,
         "role": "knight",
@@ -3351,8 +3351,8 @@
         ]
     },
     "moon-bunny-dominiel": {
-        "_id": "moon-bunny-dominiel",
         "id": "c6037",
+        "_id": "moon-bunny-dominiel",
         "name": "Moon Bunny Dominiel",
         "rarity": 4,
         "role": "manauser",
@@ -4872,8 +4872,8 @@
         ]
     },
     "perfumer-byblis": {
+        "id": "ctemp_perfumer",
         "_id": "perfumer-byblis",
-        "id": "",
         "name": "Perfumer Byblis",
         "rarity": 5,
         "role": "manauser",
@@ -4883,6 +4883,19 @@
         "tags": [
             0,
             1
+        ]
+    },
+    "salome": {
+        "id": "ctemp_salome",
+        "_id": "salome",
+        "name": "Salome",
+        "rarity": 5,
+        "attribute": "",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
+        "tags": [
+            0
         ]
     }
 }
