@@ -1735,6 +1735,18 @@
             2
         ]
     },
+    "veritas": {
+        "_id": "veritas",
+        "id": "",
+        "identifier": "",
+        "name": "Veritas",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "victorious-flag": {
         "_id": "victorious-flag",
         "id": "art0087",

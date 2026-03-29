@@ -4870,5 +4870,19 @@
         "tags": [
             0
         ]
+    },
+    "perfumer-byblis": {
+        "_id": "perfumer-byblis",
+        "id": "",
+        "name": "Perfumer Byblis",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "maiden",
+        "tags": [
+            0,
+            1
+        ]
     }
 }
