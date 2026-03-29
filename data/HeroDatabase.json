@@ -4890,7 +4890,7 @@
         "_id": "salome",
         "name": "Salome",
         "rarity": 5,
-        "attribute": "",
+        "attribute": "light",
         "role": "",
         "sex": 2,
         "zodiac": "",
