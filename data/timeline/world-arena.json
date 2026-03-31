@@ -248,5 +248,18 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3bf44a41727740de882aea1a617d0413.jpg",
         "name": "World Arena Spring 2026 Season (Season 19)"
+    },
+    {
+        "nid": [
+            11027271,
+            12120954
+        ],
+        "type": "season",
+        "dt": [
+            1775278800000,
+            1783735199000
+        ],
+        "thumbnail": "",
+        "name": "World Arena Summer 2026 Season (Season 20)"
     }
 ]

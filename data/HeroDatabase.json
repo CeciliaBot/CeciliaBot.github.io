@@ -4876,8 +4876,8 @@
         "_id": "perfumer-byblis",
         "name": "Perfumer Byblis",
         "rarity": 5,
-        "role": "manauser",
         "attribute": "fire",
+        "role": "manauser",
         "sex": 2,
         "zodiac": "maiden",
         "tags": [
