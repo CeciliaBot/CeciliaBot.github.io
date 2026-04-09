@@ -10973,5 +10973,43 @@
          }
       ],
       "thumbnail": ""
+   },
+   {
+      "nid": 12954690,
+      "type": "covenant",
+      "dt": [
+         "2026-04-09T03:00:00Z",
+         "2026-04-16T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "pavel"
+         }
+      ],
+      "a": [
+         {
+            "id": "dux-noctis"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/efbe655bdbbd4d1a985a0a3156f381b9.jpg"
+   },
+   {
+      "nid": 11859430,
+      "type": "covenant",
+      "dt": [
+         "2026-04-16T03:00:00Z",
+         "2026-04-23T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ran"
+         }
+      ],
+      "a": [
+         {
+            "id": "sword-of-winter-shadow"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/001f79758ada4d16aabf98e7cd80384f.jpg"
    }      
 ]
