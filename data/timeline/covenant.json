@@ -11011,5 +11011,64 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/001f79758ada4d16aabf98e7cd80384f.jpg"
+   },
+   {
+      "nid": 12954690,
+      "type": "covenant",
+      "dt": [
+         "2026-04-23T03:00:00Z",
+         "2026-04-30T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "senya"
+         }
+      ],
+      "a": [
+         {
+            "id": "spear-of-a-new-dawn"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ee070e17d65845aa95d91523a0ae8175.jpg"
+   },
+   {
+      "nid": 12378124,
+      "type": "covenant",
+      "dt": [
+         "2026-04-30T03:00:00Z",
+         "2026-05-21T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "estelle",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "with-a-little-friend",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
+   },
+   {
+      "nid": 11859430,
+      "type": "covenant",
+      "dt": [
+         "2026-05-07T03:00:00Z",
+         "2026-05-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "abigail"
+         }
+      ],
+      "a": [
+         {
+            "id": "golden-rose"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d7e040b302264cfca434041f6d5d4211.jpg"
    }      
 ]

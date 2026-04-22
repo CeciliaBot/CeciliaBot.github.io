@@ -4897,5 +4897,18 @@
         "tags": [
             0
         ]
+    },
+    "estelle": {
+        "id": "",
+        "_id": "estelle",
+        "name": "Estelle",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
     }
 }
