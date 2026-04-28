@@ -1,6 +1,19 @@
 [
   {
     "nid": 12378124,
+    "dt": [1776913200000, 1780541999000 ],
+    "a": [
+      { "id": "spirits-breath" },
+      { "id": "airtosurface-missile-misha" },
+      { "id": "border-coin" },
+      { "id": "elbris-ritual-sword" },
+      { "id": "barthezs-orbuculum" },
+      { "id": "andres-crossbow" },
+      { "id": "dust-devil" },
+      { "id": "magarahas-tome" }
+    ]
+  },{
+    "nid": 12378124,
     "dt": [1773284400000, 1776913199000 ],
     "a": [
       { "id": "merciless-glutton" },
