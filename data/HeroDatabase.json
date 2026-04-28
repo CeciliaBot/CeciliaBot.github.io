@@ -4899,7 +4899,7 @@
         ]
     },
     "estelle": {
-        "id": "",
+        "id": "c1183",
         "_id": "estelle",
         "name": "Estelle",
         "rarity": 5,
@@ -4907,6 +4907,58 @@
         "role": "knight",
         "sex": 2,
         "zodiac": "archer",
+        "tags": [
+            0
+        ]
+    },
+    "ivana": {
+        "id": "c1182",
+        "_id": "ivana",
+        "name": "Ivana",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "bull",
+        "tags": [
+            0
+        ]
+    },
+    "aubade-ludwig": {
+        "id": "c5069",
+        "_id": "aubade-ludwig",
+        "name": "Aubade Ludwig",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "lion",
+        "tags": [
+            0
+        ]
+    },
+    "rhianna-and-luciella": {
+        "id": "c2185",
+        "_id": "rhianna-and-luciella",
+        "name": "Rhianna and Luciella",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "waterbearer",
+        "tags": [
+            0
+        ]
+    },
+    "acolyte-of-the-end-kayron": {
+        "id": "c6023",
+        "_id": "acolyte-of-the-end-kayron",
+        "name": "Acolyte of the End Kayron",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "",
+        "sex": 1,
+        "zodiac": "",
         "tags": [
             0
         ]
