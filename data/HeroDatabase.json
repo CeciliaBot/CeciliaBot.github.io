@@ -4886,14 +4886,14 @@
         ]
     },
     "salome": {
-        "id": "ctemp_salome",
+        "id": "c2184",
         "_id": "salome",
         "name": "Salome",
         "rarity": 5,
         "attribute": "light",
-        "role": "",
+        "role": "warrior",
         "sex": 2,
-        "zodiac": "",
+        "zodiac": "ram",
         "tags": [
             0
         ]
