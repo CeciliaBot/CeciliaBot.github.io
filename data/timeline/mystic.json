@@ -2489,5 +2489,32 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f749656c7f0f482e924155edcae32a96.jpg"
+   },
+   {
+      "nid": 11859430,
+      "type": "mystic",
+      "dt": [
+         "2026-05-14T09:00:00Z",
+         "2026-06-04T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "hellion-lua"
+         },
+         {
+            "id": "top-model-luluca"
+         },
+         {
+            "id": "pirate-captain-flan"
+         },
+         {
+            "id": "martial-artist-ken"
+         },
+         {
+            "id": "great-chief-khawana"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
