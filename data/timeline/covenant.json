@@ -11070,5 +11070,45 @@
          }
       ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d7e040b302264cfca434041f6d5d4211.jpg"
-   }      
+   },
+   {
+      "nid": 13253669,
+      "type": "covenant",
+      "dt": [
+         "2026-05-14T09:00:00Z",
+         "2026-05-21T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "schniel"
+         }
+      ],
+      "a": [
+         {
+            "id": "homage-to-tarman"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7415c59f53c14dd886da31cc50b69fb9.jpg"
+   },
+   {
+      "nid": 13177696,
+      "type": "covenant",
+      "dt": [
+         "2026-05-21T03:00:00Z",
+         "2026-05-28T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "ivana",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "excommunicants-censer",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
+   } 
 ]

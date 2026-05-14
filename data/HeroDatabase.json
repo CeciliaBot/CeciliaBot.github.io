@@ -4082,7 +4082,7 @@
         "attribute": "light",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "maiden",
+        "zodiac": "scorpion",
         "tags": [
             0
         ]
@@ -4231,7 +4231,7 @@
         "attribute": "ice",
         "role": "manauser",
         "sex": 2,
-        "zodiac": "maiden",
+        "zodiac": "scorpion",
         "tags": [
             0
         ]
@@ -4956,9 +4956,9 @@
         "name": "Acolyte of the End Kayron",
         "rarity": 5,
         "attribute": "dark",
-        "role": "",
+        "role": "mage",
         "sex": 1,
-        "zodiac": "",
+        "zodiac": "scorpion",
         "tags": [
             0
         ]

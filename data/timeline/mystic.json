@@ -2516,5 +2516,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 12449965,
+      "type": "mystic",
+      "dt": [
+         "2026-06-04T09:00:00Z",
+         "2026-06-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "rhianna-and-luciella",
+            "new": true
+         },
+         {
+            "id": ""
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

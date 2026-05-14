@@ -530,6 +530,17 @@
             0
         ]
     },
+    "excommunicants-censer": {
+        "_id": "excommunicants-censer",
+        "id": "",
+        "identifier": "",
+        "name": "Excommunicant's Censer",
+        "rarity": 5,
+        "role": "manauser",
+        "tags": [
+            0
+        ]
+    },
     "exif-detective-ed-gadget": {
         "_id": "exif-detective-ed-gadget",
         "id": "art0173",
