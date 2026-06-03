@@ -1,5 +1,19 @@
 [
   {
+    "nid": 13526329,
+    "dt": [1780542000000, 1784170799000 ],
+    "a": [
+      { "id": "sword-of-winter-shadow" },
+      { "id": "homage-to-tarman" },
+      { "id": "eticas-scepter" },
+      { "id": "dux-noctis" },
+      { "id": "moonlight-dreamblade" },
+      { "id": "eternus" },
+      { "id": "sepulcrum" },
+      { "id": "aurius" }
+    ]
+  },
+  {
     "nid": 13101810,
     "dt": [1776913200000, 1780541999000 ],
     "a": [
@@ -12,7 +26,8 @@
       { "id": "dust-devil" },
       { "id": "magarahas-tome" }
     ]
-  },{
+  },
+  {
     "nid": 12378124,
     "dt": [1773284400000, 1776913199000 ],
     "a": [

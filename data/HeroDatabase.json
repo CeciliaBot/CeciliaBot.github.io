@@ -4930,9 +4930,9 @@
         "name": "Aubade Ludwig",
         "rarity": 5,
         "attribute": "ice",
-        "role": "mage",
+        "role": "ranger",
         "sex": 1,
-        "zodiac": "lion",
+        "zodiac": "goat",
         "tags": [
             0
         ]

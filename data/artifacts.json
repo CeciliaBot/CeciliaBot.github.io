@@ -142,6 +142,16 @@
             2
         ]
     },
+    "aubade-orb": {
+        "_id": "aubade-orb",
+        "id": "",
+        "identifier": "",
+        "name": "Aubade Orb",
+        "rarity": 5,
+        "tags": [
+            0
+        ]
+    },
     "awakened-leaf": {
         "_id": "awakened-leaf",
         "id": "art0230",

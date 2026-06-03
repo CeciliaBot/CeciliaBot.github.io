@@ -10387,6 +10387,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/a86600c3bc444d4cbdd3a6dd821e1af8.jpg"
    },
    {
+      "nid": 11040906,
       "type": "covenant",
       "dt": [
          "2025-09-04T03:00:00Z",
@@ -10403,7 +10404,8 @@
             "id": "lethal-whispers",
             "new": true
          }
-      ]
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f71fd03a390d4ca8b808bdcc5bc57558.jpg"
    },
    {
       "type": "covenant",
@@ -11091,7 +11093,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7415c59f53c14dd886da31cc50b69fb9.jpg"
    },
    {
-      "nid": 13177696,
+      "nid": 13395416,
       "type": "covenant",
       "dt": [
          "2026-05-21T03:00:00Z",
@@ -11109,6 +11111,84 @@
             "new": true
          }
       ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/d9ab88ccf5e347569659bf9f0e518e01.jpg"
+   },
+   {
+      "nid": 13253669,
+      "type": "covenant",
+      "dt": [
+         "2026-05-28T03:00:00Z",
+         "2026-06-14T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "haste"
+         }
+      ],
+      "a": [
+         {
+            "id": "rhianna-luciella"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/c45d5ca4e7d947878c207ac619b5594b.png"
+   },
+   {
+      "nid": 13526329,
+      "type": "covenant",
+      "dt": [
+         "2026-06-04T09:00:00Z",
+         "2026-06-11T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "eligos"
+         }
+      ],
+      "a": [
+         {
+            "id": "an-offer-you-cant-refuse"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7c404fd77580488e88a68e5585168f88.jpg"
+   },
+   {
+      "nid": 13526329,
+      "type": "covenant",
+      "dt": [
+         "2026-05-21T03:00:00Z",
+         "2026-06-11T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aubade-ludwig",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "aubade-orb",
+            "new": true
+         }
+      ],
       "thumbnail": ""
+   },
+   {
+      "nid": 13526329,
+      "type": "covenant",
+      "dt": [
+         "2026-06-18T03:00:00Z",
+         "2026-06-25T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "setsuka"
+         }
+      ],
+      "a": [
+         {
+            "id": "lethal-whispers"
+         }
+      ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f71fd03a390d4ca8b808bdcc5bc57558.jpg"
    } 
 ]
