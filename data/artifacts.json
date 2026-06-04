@@ -144,10 +144,11 @@
     },
     "aubade-orb": {
         "_id": "aubade-orb",
-        "id": "",
+        "id": "art0243",
         "identifier": "",
         "name": "Aubade Orb",
         "rarity": 5,
+        "role": "ranger",
         "tags": [
             0
         ]
@@ -295,6 +296,16 @@
             0,
             1,
             2
+        ]
+    },
+    "butterflys-baptism": {
+        "_id": "butterflys-baptism",
+        "id": "art0244",
+        "identifier": "",
+        "name": "Butterfly's Baptism'",
+        "rarity": 5,
+        "role": "assassin",
+        "tags": [
         ]
     },
     "celestine": {
