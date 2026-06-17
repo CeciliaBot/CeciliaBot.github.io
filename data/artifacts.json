@@ -2267,6 +2267,18 @@
         "role": "",
         "tags": []
     },
+    "refracted-desire": {
+        "_id": "refracted-desire",
+        "id": "",
+        "identifier": "",
+        "name": "Refracted Desire",
+        "rarity": 5,
+        "role": "mage",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "reingar-festival-dumpling": {
         "_id": "reingar-festival-dumpling",
         "id": "art0220",

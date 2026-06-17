@@ -4962,5 +4962,46 @@
         "tags": [
             0
         ]
+    },
+    "eye-of-the-abyss-fumyr": {
+        "id": "temp_summerfumyr",
+        "_id": "eye-of-the-abyss-fumyr",
+        "name": "Eye of the Abyss Fumyr",
+        "rarity": 5,
+        "attribute": "earth",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "knight",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "aube": {
+        "id": "",
+        "_id": "aube",
+        "name": "Aube",
+        "rarity": 5,
+        "attribute": "",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
+        "tags": [
+            0,
+            1
+        ]
+    },
+    "tidal-rift-elvira": {
+        "id": "",
+        "_id": "tidal-rift-elvira",
+        "name": "Tidal Rift Elvira",
+        "rarity": 5,
+        "attribute": "",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
+        "tags": [
+            0
+        ]
     }
 }
