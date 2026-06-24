@@ -331,5 +331,17 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9c7b0bf53d8945f2a7e9314b51b4a033.jpg",
         "name": "Arena 2026-2 Season (Season 26)"
+    },
+        {
+        "nid": [
+            13683153
+        ],
+        "type": "season",
+        "dt": [
+            1782097200000,
+            1789405199000
+        ],
+        "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f0813c2c245a43c2a877a2c819c4e07a.jpg",
+        "name": "Arena 2026-3 Season (Season 27)"
     }
 ]
