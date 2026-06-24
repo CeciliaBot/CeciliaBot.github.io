@@ -271,5 +271,17 @@
         ],
         "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/dc1fca95dc7848be8db9d36636072560.jpg",
         "name": "Guild War 2026-1 Season (Season 21)"
+    },
+    {
+        "nid": [
+            12449965
+        ],
+        "type": "season",
+        "dt": [
+            1783738800000,
+            1790391599000
+        ],
+        "thumbnail": "",
+        "name": "Guild War 2026-2 Season (Season 22) - End Date TBD"
     }
 ]
