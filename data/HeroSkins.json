@@ -18,6 +18,11 @@
             "id": "c1046_s01",
             "_id": "lidica-bride-of-roses",
             "name": "Bride of Roses"
+        },
+        {
+        "id": "c1046_s02",
+            "_id": "alluring-wings-lidica",
+            "name": "Alluring Wings"
         }
     ],
     "specter-tenebria": [
@@ -418,6 +423,20 @@
             "id": "c2103_s01",
             "_id": "sentinel-of-twilight-spirit-eye-celine",
             "name": "Sentinel of Twilight"
+        }
+    ],
+    "sea-phantom-politis": [
+        {
+            "id": "c2103_s01",
+            "_id": "sorrowful-black-swan-sea-phantom-politis",
+            "name": "Sorrowful Black Swan"
+        }
+    ],
+    "empyrean-ilynav": [
+        {
+            "id": "c2113_s01",
+            "_id": "bunny-girl-dancer-empyrean-ilynav",
+            "name": "Bunny Girl Dancer"
         }
     ]
 }
