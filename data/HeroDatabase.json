@@ -4964,7 +4964,7 @@
         ]
     },
     "eye-of-the-abyss-fumyr": {
-        "id": "temp_summerfumyr",
+        "id": "c5147",
         "_id": "eye-of-the-abyss-fumyr",
         "name": "Eye of the Abyss Fumyr",
         "rarity": 5,
@@ -4978,7 +4978,7 @@
         ]
     },
     "aube": {
-        "id": "",
+        "id": "c5190",
         "_id": "aube",
         "name": "Aube",
         "rarity": 5,
@@ -4992,7 +4992,7 @@
         ]
     },
     "tidal-rift-elvira": {
-        "id": "",
+        "id": "c2148",
         "_id": "tidal-rift-elvira",
         "name": "Tidal Rift Elvira",
         "rarity": 5,
