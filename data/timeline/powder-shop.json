@@ -1,5 +1,19 @@
 [
   {
+    "nid": 13984282,
+    "dt": [1784170800000, 1787813999000 ],
+    "a": [
+      { "id": "golden-rose" },
+      { "id": "ancient-dragons-legacy" },
+      { "id": "dark-blood-keeper" },
+      { "id": "proof-of-love" },
+      { "id": "els-fist" },
+      { "id": "adamant-shield" },
+      { "id": "kaladra" },
+      { "id": "eternus" }
+    ]
+  },
+  {
     "nid": 13526329,
     "dt": [1780542000000, 1784170799000 ],
     "a": [

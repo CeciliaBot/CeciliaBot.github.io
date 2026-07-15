@@ -2562,5 +2562,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": 13984282,
+      "type": "mystic",
+      "dt": [
+         "2026-07-16T09:00:00Z",
+         "2026-08-06T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "tidal-rift-elvira",
+            "new": true
+         },
+         {
+            "id": "wanderer-silk"
+         }
+      ],
+      "a": [],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/bc1daeae2cb349038d09e8a3a7d78a5b.jpg"
    }
 ]

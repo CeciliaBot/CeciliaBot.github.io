@@ -829,6 +829,18 @@
             0
         ]
     },
+        "intoxicating-indulgence": {
+        "_id": "intoxicating-indulgence",
+        "id": "art0245",
+        "identifier": "",
+        "name": "Intoxicating Indulgence",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0,
+            1
+        ]
+    },
     "iron-fan": {
         "_id": "iron-fan",
         "id": "art0038",

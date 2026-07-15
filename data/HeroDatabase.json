@@ -4982,10 +4982,10 @@
         "_id": "aube",
         "name": "Aube",
         "rarity": 5,
-        "attribute": "",
-        "role": "",
+        "attribute": "ice",
+        "role": "ranger",
         "sex": 2,
-        "zodiac": "",
+        "zodiac": "fish",
         "tags": [
             0,
             1
@@ -4996,10 +4996,10 @@
         "_id": "tidal-rift-elvira",
         "name": "Tidal Rift Elvira",
         "rarity": 5,
-        "attribute": "",
-        "role": "",
+        "attribute": "dark",
+        "role": "mage",
         "sex": 2,
-        "zodiac": "",
+        "zodiac": "archer",
         "tags": [
             0
         ]

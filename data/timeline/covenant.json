@@ -11192,7 +11192,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f71fd03a390d4ca8b808bdcc5bc57558.jpg"
    },
    {
-      "nid": "",
+      "nid": "13753112",
       "type": "limited",
       "dt": [
          "2026-06-25T09:00:00Z",
@@ -11210,6 +11210,27 @@
             "new": true
          }
       ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7714f7dfdb5845ea94ecb8ab1a490385.jpg"
+   },
+   {
+      "nid": "",
+      "type": "limited",
+      "dt": [
+         "2026-07-23T09:00:00Z",
+         "2026-08-13T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "aube",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "intoxicating-indulgence",
+            "new": true
+         }
+      ],
       "thumbnail": ""
-   } 
+   }  
 ]
