@@ -2581,5 +2581,32 @@
       ],
       "a": [],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/bc1daeae2cb349038d09e8a3a7d78a5b.jpg"
+   },
+   {
+      "nid": 14207641,
+      "type": "mystic",
+      "dt": [
+         "2026-08-06T09:00:00Z",
+         "2026-08-27T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lone-wolf-peira"
+         },
+         {
+            "id": "dark-corvus"
+         },
+         {
+            "id": "sage-baal-sezan"
+         },
+         {
+            "id": "blood-moon-haste"
+         },
+         {
+            "id": "new-kid-adin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

@@ -427,7 +427,7 @@
     ],
     "sea-phantom-politis": [
         {
-            "id": "c2103_s01",
+            "id": "c2112_s01",
             "_id": "sorrowful-black-swan-sea-phantom-politis",
             "name": "Sorrowful Black Swan"
         }
@@ -437,6 +437,13 @@
             "id": "c2113_s01",
             "_id": "bunny-girl-dancer-empyrean-ilynav",
             "name": "Bunny Girl Dancer"
+        }
+    ],
+    "lua": [
+        {
+            "id": "c1126 _s01",
+            "_id": "silver-moon-nights-blossom-lua",
+            "name": "Silver Moon Night's Blossom Lua"
         }
     ]
 }

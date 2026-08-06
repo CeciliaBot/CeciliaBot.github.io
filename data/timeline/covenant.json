@@ -9957,7 +9957,8 @@
       ],
       "a": [
          {
-            "id": "moas"
+            "id": "moas",
+            "new": true
          }
       ],
       "name": "Knight Class Summon",
@@ -10794,7 +10795,7 @@
    },
    {
       "nid": 11931896,
-      "type": "covenant",
+      "type": "limited",
       "dt": [
          "2026-01-29T09:00:00Z",
          "2026-02-19T02:59:59Z"
@@ -10881,7 +10882,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/9aaf3691187f4f0c8d6d6bfb34c9c0f6.jpg"
    },
    {
-      "nid": 11859430,
+      "nid": 12304113,
       "type": "limited",
       "dt": [
          "2026-03-05T03:00:00Z",
@@ -10894,7 +10895,7 @@
          }
       ],
       "name": "Knight Class Summon",
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/3b24b51803aa4ba9963bf7c97b32378c.jpg"
    },
    {
       "nid": 12378124,
@@ -11192,7 +11193,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/f71fd03a390d4ca8b808bdcc5bc57558.jpg"
    },
    {
-      "nid": "13753112",
+      "nid": 13753112,
       "type": "limited",
       "dt": [
          "2026-06-25T09:00:00Z",
@@ -11232,5 +11233,60 @@
          }
       ],
       "thumbnail": ""
-   }  
+   },
+   {
+      "nid": "",
+      "type": "limited",
+      "dt": [
+         "2026-08-13T03:00:00Z",
+         "2026-09-03T02:59:59Z"
+      ],
+      "name": "Custom Triple RGB Group Summon",
+      "thumbnail": ""
+   },
+   {
+      "nid": 10698459,
+      "type": "limited",
+      "dt": [
+         "2026-08-13T03:00:00Z",
+         "2026-08-20T02:59:59Z"
+      ],
+      "a": [
+         {
+            "id": "moas"
+         }
+      ],
+      "name": "Knight Class Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/10a7d3eb0d3446e8a1d9cf75645a3642.jpg"
+   },
+   {
+      "nid": 10698459,
+      "type": "limited",
+      "dt": [
+         "2026-08-20T03:00:00Z",
+         "2026-08-27T02:59:59Z"
+      ],
+      "a": [
+         {
+            "id": "cureall-magic-wand"
+         }
+      ],
+      "name": "Soul Weaver Class Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/12236755e7ee41cb856ff09812475162.jpg"
+   },
+   {
+      "nid": 10698459,
+      "type": "limited",
+      "dt": [
+         "2026-08-27T09:00:00Z",
+         "2026-09-03T02:59:59Z"
+      ],
+      "a": [
+         {
+            "id": "master-of-the-nightmare"
+         }
+      ],
+      "name": "Thief Class Summon",
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2a8bf979245e451abeac63ec8793e575.jpg"
+   } 
 ]
