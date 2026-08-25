@@ -934,6 +934,17 @@
             0
         ]
     },
+    "light-and-darkness": {
+        "_id": "light-and-darkness",
+        "id": "",
+        "identifier": "",
+        "name": "Light and Darkness",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            0
+        ]
+    },
     "moas": {
         "_id": "moas",
         "id": "art0216",

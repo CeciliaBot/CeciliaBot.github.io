@@ -2608,5 +2608,24 @@
       ],
       "a": [],
       "thumbnail": ""
+   },
+   {
+      "nid": "",
+      "type": "mystic",
+      "dt": [
+         "2026-08-27T09:00:00Z",
+         "2026-09-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "lisette",
+            "new": true
+         },
+         {
+            "id": "last-piece-karin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]

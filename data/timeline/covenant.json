@@ -11214,7 +11214,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/7714f7dfdb5845ea94ecb8ab1a490385.jpg"
    },
    {
-      "nid": "",
+      "nid": 14059811,
       "type": "limited",
       "dt": [
          "2026-07-23T09:00:00Z",
@@ -11232,10 +11232,10 @@
             "new": true
          }
       ],
-      "thumbnail": ""
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/e70ef6edf10a4750be5a55cbfa6e273c.jpg"
    },
    {
-      "nid": "",
+      "nid": 14280132,
       "type": "limited",
       "dt": [
          "2026-08-13T03:00:00Z",
@@ -11245,7 +11245,7 @@
       "thumbnail": ""
    },
    {
-      "nid": 10698459,
+      "nid": 14280132,
       "type": "limited",
       "dt": [
          "2026-08-13T03:00:00Z",
@@ -11260,7 +11260,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/10a7d3eb0d3446e8a1d9cf75645a3642.jpg"
    },
    {
-      "nid": 10698459,
+      "nid": 14354612,
       "type": "limited",
       "dt": [
          "2026-08-20T03:00:00Z",
@@ -11288,5 +11288,26 @@
       ],
       "name": "Thief Class Summon",
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/2a8bf979245e451abeac63ec8793e575.jpg"
+   },
+   {
+      "nid": "",
+      "type": "covenant",
+      "dt": [
+         "2026-08-27T09:00:00Z",
+         "2026-09-17T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "uncharted-pioneer-politis",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "light-and-darkness",
+            "new": true
+         }
+      ],
+      "thumbnail": ""
    } 
 ]

@@ -5003,5 +5003,75 @@
         "tags": [
             0
         ]
+    },
+    "uncharted-pioneer-politis": {
+        "id": "temp_uppoli",
+        "_id": "uncharted-pioneer-politis",
+        "name": "Uncharted Pioneer Politis",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "fish",
+        "tags": [
+            0
+        ]
+    },
+    "lisette": {
+        "id": "temp_lisette",
+        "_id": "lisette",
+        "name": "Lisette",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "scales",
+        "tags": [
+            0
+        ]
+    },
+    "renoa": {
+        "id": "ctemp_renoa",
+        "_id": "renoa",
+        "name": "Renoa",
+        "rarity": 5,
+        "attribute": "Dark",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
+        "tags": [
+            1,
+            2
+        ]
+    },
+    "haru": {
+        "id": "ctemp_haru",
+        "_id": "haru",
+        "name": "Haru",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
+    "mei-lin": {
+        "id": "ctemp_meilin",
+        "_id": "mei-lin",
+        "name": "Mei Lin",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "",
+        "sex": 2,
+        "zodiac": "",
+        "tags": [
+            0,
+            1,
+            2
+        ]
     }
 }
