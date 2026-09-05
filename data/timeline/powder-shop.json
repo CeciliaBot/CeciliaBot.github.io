@@ -1,5 +1,19 @@
 [
   {
+    "nid": 14428517,
+    "dt": [1787814000000, 1791428399000 ],
+    "a": [
+      { "id": "black-hand-of-the-goddess" },
+      { "id": "sword-of-judgment" },
+      { "id": "tyrant's descent" },
+      { "id": "wings-of-light-and-shadow" },
+      { "id": "siraren" },
+      { "id": "sashe-ithanes" },
+      { "id": "silver-rain" },
+      { "id": "wondrous-potion-vial" }
+    ]
+  },
+  {
     "nid": 13984282,
     "dt": [1784170800000, 1787813999000 ],
     "a": [

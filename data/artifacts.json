@@ -912,6 +912,16 @@
             0
         ]
     },
+    "land-of-lingering-light": {
+        "_id": "land-of-lingering-light",
+        "id": "art0250",
+        "identifier": "",
+        "name": "Last Teatime",
+        "rarity": 5,
+        "role": "",
+        "tags": [
+        ]
+    },
     "last-teatime": {
         "_id": "last-teatime",
         "id": "art0108",
@@ -936,7 +946,7 @@
     },
     "light-and-darkness": {
         "_id": "light-and-darkness",
-        "id": "",
+        "id": "art0249",
         "identifier": "",
         "name": "Light and Darkness",
         "rarity": 5,
