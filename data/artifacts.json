@@ -416,6 +416,19 @@
             1
         ]
     },
+    "custommade-power-anchor": {
+        "_id": "custommade-power-anchor",
+        "id": "art0252",
+        "identifier": "",
+        "name": "Custom-Made Power Anchor",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
     "dark-blood-keeper": {
         "_id": "dark-blood-keeper",
         "id": "art0200",
@@ -1428,6 +1441,18 @@
         "role": "ranger",
         "tags": [
             0
+        ]
+    },
+    "sorrow-of-the-rose": {
+        "_id": "sorrow-of-the-rose",
+        "id": "art0251",
+        "identifier": "",
+        "name": "Sorrow of the Rose",
+        "rarity": 5,
+        "role": "ranger",
+        "tags": [
+            1,
+            2
         ]
     },
     "spatiotemporal-fan": {

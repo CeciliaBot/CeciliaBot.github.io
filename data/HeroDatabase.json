@@ -5036,9 +5036,9 @@
         "name": "Renoa",
         "rarity": 5,
         "attribute": "Dark",
-        "role": "",
+        "role": "ranger",
         "sex": 2,
-        "zodiac": "",
+        "zodiac": "waterbearer",
         "tags": [
             1,
             2
@@ -5050,9 +5050,9 @@
         "name": "Haru",
         "rarity": 5,
         "attribute": "ice",
-        "role": "",
+        "role": "warrior",
         "sex": 2,
-        "zodiac": "",
+        "zodiac": "goat",
         "tags": [
             0,
             1,
