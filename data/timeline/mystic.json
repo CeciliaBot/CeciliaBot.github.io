@@ -2629,9 +2629,7 @@
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/ebff9e48088c4439a7c5268e64c2d919.jpg"
    },
    {
-      "nid": [
-         11095542
-      ],
+      "nid": 14504497,
       "type": "mystic",
       "dt": [
          "2026-09-17T09:00:00Z",
@@ -2639,10 +2637,37 @@
       ],
       "c": [
          {
-            "id": ""
+            "id": "crimson-armin"
          }
       ],
       "name": "Special Mystic Summon 40% Off (Keeps the same pity count)",
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/%ED%8A%B9%EB%B3%84-%EC%8B%A0%EB%B9%84-%EC%86%8C%ED%99%98-EN.jpg"
+   },
+   {
+      "nid": 14207641,
+      "type": "mystic",
+      "dt": [
+         "2026-10-08T09:00:00Z",
+         "2026-10-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "successor-taeyou"
+         },
+         {
+            "id": "sylvan-sage-vivian"
+         },
+         {
+            "id": "urban-shadow-choux"
+         },
+         {
+            "id": "straze"
+         },
+         {
+            "id": ""
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
    }
 ]
