@@ -5031,7 +5031,7 @@
         ]
     },
     "renoa": {
-        "id": "ctemp_renoa",
+        "id": "c1193",
         "_id": "renoa",
         "name": "Renoa",
         "rarity": 5,
@@ -5045,7 +5045,7 @@
         ]
     },
     "haru": {
-        "id": "ctemp_haru",
+        "id": "c1192",
         "_id": "haru",
         "name": "Haru",
         "rarity": 5,
@@ -5060,12 +5060,12 @@
         ]
     },
     "mei-lin": {
-        "id": "ctemp_meilin",
+        "id": "c1119",
         "_id": "mei-lin",
         "name": "Mei Lin",
         "rarity": 5,
         "attribute": "fire",
-        "role": "",
+        "role": "c1191",
         "sex": 2,
         "zodiac": "",
         "tags": [

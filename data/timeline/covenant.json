@@ -11329,6 +11329,27 @@
             "new": true
          }
       ],
+      "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/%EC%8B%A0%EA%B7%9C%20%ED%95%9C%EC%A0%95%20%EC%98%81%EC%9B%85%20%ED%95%98%EB%A3%A8-EN_1789549162484.jpg"
+   },
+   {
+      "nid": 14488766,
+      "type": "covenant",
+      "dt": [
+         "2026-10-08T09:00:00Z",
+         "2026-10-29T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "mei-lin",
+            "new": true
+         }
+      ],
+      "a": [
+         {
+            "id": "",
+            "new": true
+         }
+      ],
       "thumbnail": "https://d2x8kymwjom7h7.cloudfront.net/live/application_no/96001/default/fadacd16bf604b93b4a52b61a82f13e2.jpg"
    } 
 ]
