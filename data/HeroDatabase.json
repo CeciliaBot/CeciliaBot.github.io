@@ -5035,7 +5035,7 @@
         "_id": "renoa",
         "name": "Renoa",
         "rarity": 5,
-        "attribute": "Dark",
+        "attribute": "dark",
         "role": "ranger",
         "sex": 2,
         "zodiac": "waterbearer",
