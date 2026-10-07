@@ -624,6 +624,19 @@
             1
         ]
     },
+    "flame-dragons-jewel": {
+        "_id": "flame-dragons-jewel",
+        "id": "art0247",
+        "identifier": "",
+        "name": "Flame Dragon's Jewel",
+        "rarity": 5,
+        "role": "warrior",
+        "tags": [
+            0,
+            1,
+            2
+        ]
+    },
     "flawless-garments": {
         "_id": "flawless-garments",
         "id": "art0140",
