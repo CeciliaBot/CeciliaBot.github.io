@@ -2664,6 +2664,25 @@
             "id": "straze"
          },
          {
+            "id": "crescent-moon-rin"
+         }
+      ],
+      "a": [],
+      "thumbnail": ""
+   },
+   {
+      "nid": 14504497,
+      "type": "mystic",
+      "dt": [
+         "2026-10-29T09:00:00Z",
+         "2026-11-19T02:59:59Z"
+      ],
+      "c": [
+         {
+            "id": "moro",
+            "new": true
+         },
+         {
             "id": ""
          }
       ],

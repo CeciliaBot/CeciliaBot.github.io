@@ -5073,5 +5073,18 @@
             1,
             2
         ]
+    },
+    "moro": {
+        "id": "",
+        "_id": "moro",
+        "name": "Moro",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "maiden",
+        "tags": [
+            0
+        ]
     }
 }

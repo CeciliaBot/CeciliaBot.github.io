@@ -630,7 +630,7 @@
         "identifier": "",
         "name": "Flame Dragon's Jewel",
         "rarity": 5,
-        "role": "warrior",
+        "role": "assassin",
         "tags": [
             0,
             1,
@@ -942,7 +942,7 @@
         "_id": "land-of-lingering-light",
         "id": "art0250",
         "identifier": "",
-        "name": "Last Teatime",
+        "name": "Land of Lingering Light",
         "rarity": 5,
         "role": "",
         "tags": [
