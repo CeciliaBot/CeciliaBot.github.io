@@ -418,6 +418,13 @@
             "name": "Maiden of the Fox Shrine"
         }
     ],
+    "harsetti": [
+        {
+            "id": "c1153_s01",
+            "_id": "warlord-of-anarchy-harsetti",
+            "name": "Warlord of Anarchy"
+        }
+    ],
     "spirit-eye-celine": [
         {
             "id": "c2103_s01",
