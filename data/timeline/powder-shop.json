@@ -1,5 +1,19 @@
 [
   {
+    "nid": 14638143,
+    "dt": [1795057200000, 1798685999000 ],
+    "a": [
+      { "id": "cradle-of-life" },
+      { "id": "bastion-of-perlutia" },
+      { "id": "sword-of-summer-twilight" },
+      { "id": "sacred-tree-branch" },
+      { "id": "strak-gauntlet" },
+      { "id": "steadfast-gatekeeper" },
+      { "id": "tagehels-ancient-book" },
+      { "id": "rosa-hargana" }
+    ]
+  },
+  {
     "nid": 14571414,
     "dt": [1791450000000, 1795057199000 ],
     "a": [

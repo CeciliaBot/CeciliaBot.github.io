@@ -12,6 +12,17 @@
             2
         ]
     },
+    "a-bosss-dignity": {
+        "_id": "a-bosss-dignity",
+        "id": "art0251",
+        "identifier": "",
+        "name": "A Boss's Dignity",
+        "rarity": 5,
+        "role": "knight",
+        "tags": [
+            0
+        ]
+    },
     "a-little-queens-huge-crown": {
         "_id": "a-little-queens-huge-crown",
         "id": "art0105",
@@ -347,6 +358,17 @@
         "name": "Circus Fantasia",
         "rarity": 5,
         "role": "warrior",
+        "tags": [
+            0
+        ]
+    },
+    "covert-service": {
+        "_id": "covert-service",
+        "id": "art0252",
+        "identifier": "",
+        "name": "Covert Service",
+        "rarity": 5,
+        "role": "manauser",
         "tags": [
             0
         ]

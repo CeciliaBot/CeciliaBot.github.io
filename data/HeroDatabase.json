@@ -5074,15 +5074,41 @@
             2
         ]
     },
-    "moro": {
-        "id": "",
-        "_id": "moro",
-        "name": "Moro",
+    "bunny-girl-great-detective-moro": {
+        "id": "c2187",
+        "_id": "bunny-girl-great-detective-moro",
+        "name": "Bunny Girl Great Detective Moro",
         "rarity": 5,
         "attribute": "light",
         "role": "assassin",
         "sex": 2,
         "zodiac": "maiden",
+        "tags": [
+            0
+        ]
+    },
+    "bunny-girl-mafia-yufine": {
+        "id": "c7016",
+        "_id": "uncharted-pioneer-politis",
+        "name": "Uncharted Pioneer Politis",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "archer",
+        "tags": [
+            0
+        ]
+    },
+    "bunny-girl-maid-cecilia": {
+        "id": "c5002",
+        "_id": "uncharted-pioneer-politis",
+        "name": "Uncharted Pioneer Politis",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish",
         "tags": [
             0
         ]
